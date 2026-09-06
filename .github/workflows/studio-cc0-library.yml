@@ -5,12 +5,12 @@ on:
     types: [opened, synchronize, reopened, ready_for_review]
     paths:
       - '.github/workflows/studio-cc0-library.yml'
-      - 'src/domains/creator/StudioCc0AssetLibraryPanel.tsx'
-      - 'src/domains/creator/studio-cc0-*.ts'
-      - 'src/domains/creator/useStudioModalSheet.ts'
+      - 'apps/web/src/domains/creator/StudioCc0AssetLibraryPanel.tsx'
+      - 'apps/web/src/domains/creator/studio-cc0-*.ts'
+      - 'apps/web/src/domains/creator/useStudioModalSheet.ts'
       - 'scripts/studio-cc0-lifecycle-checks.mjs'
       - 'scripts/verify-studio-cc0-curated-ui.mjs'
-      - 'public/assets/studio/cc0-20260906/**'
+      - 'apps/web/public/assets/studio/cc0-20260906/**'
       - 'package.json'
       - 'pnpm-lock.yaml'
   workflow_dispatch:
@@ -44,11 +44,11 @@ jobs:
           pnpm install --frozen-lockfile --ignore-scripts
       - name: Check the asset implementation without rewriting source
         run: |
-          pnpm exec eslint --max-warnings=0 src/domains/creator/studio-cc0-curation.ts src/domains/creator/studio-cc0-curation.test.ts src/domains/creator/StudioCc0AssetLibraryPanel.tsx scripts/verify-studio-cc0-curated-ui.mjs scripts/studio-cc0-lifecycle-checks.mjs
+          pnpm exec eslint --max-warnings=0 apps/web/src/domains/creator/studio-cc0-curation.ts apps/web/src/domains/creator/studio-cc0-curation.test.ts apps/web/src/domains/creator/StudioCc0AssetLibraryPanel.tsx scripts/verify-studio-cc0-curated-ui.mjs scripts/studio-cc0-lifecycle-checks.mjs
           pnpm exec tsc -p tsconfig.json --pretty false
       - name: Verify the catalog and existing asset contracts
         run: |
-          pnpm exec vitest run src/domains/creator/studio-cc0-curation.test.ts src/domains/creator/studio-cc0-asset-delivery.test.ts src/domains/creator/studio-original-free-asset-packs.test.ts src/domains/creator/StudioOriginalAssetMarketplacePanel.test.tsx src/domains/creator/studio-shared-asset-drag.test.ts src/domains/creator/vrm/studio-vrm-outfit-static-asset-audit.test.ts
+          pnpm exec vitest run apps/web/src/domains/creator/studio-cc0-curation.test.ts apps/web/src/domains/creator/studio-cc0-asset-delivery.test.ts apps/web/src/domains/creator/studio-original-free-asset-packs.test.ts apps/web/src/domains/creator/StudioOriginalAssetMarketplacePanel.test.tsx apps/web/src/domains/creator/studio-shared-asset-drag.test.ts apps/web/src/domains/creator/vrm/studio-vrm-outfit-static-asset-audit.test.ts
       - name: Install Chromium
         run: pnpm exec playwright install --with-deps chromium
       - name: Exercise actual assets and cancelled insertion recovery
@@ -59,7 +59,7 @@ jobs:
         run: |
           mkdir -p "$RUNNER_TEMP/studio-cc0-ui"
           git rev-parse HEAD > "$RUNNER_TEMP/studio-cc0-ui/tested-revision.txt"
-          git diff --exit-code -- src/domains/creator scripts
+          git diff --exit-code -- apps/web/src/domains/creator scripts
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         if: always()
         with:

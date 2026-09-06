@@ -1,0 +1,16 @@
+{
+  "common.backToHome": "ホームへ戻る",
+  "common.open": "開く",
+  "common.loading.short": "ロード",
+  "common.loading": "読み込み中…",
+  "common.retry.short": "再試行",
+  "common.search": "検索",
+  "common.close": "閉じる",
+  "common.retry": "再試行",
+  "common.backToTop": "トップへ戻る",
+  "common.notFoundWithQuery": "「{query}」の検索結果が見つかりません。",
+  "common.loading.empty": "レスポンスデータが空です。",
+  "common.openSearch": "全体検索で再検索 →",
+  "common.retry.all": "再試行するか、ホームへ移動してください。",
+  "common.loading.search": "検索中…"
+}

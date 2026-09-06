@@ -1,0 +1,16 @@
+{
+  "common.loading": "Laden",
+  "common.loading.short": "Loading",
+  "common.close": "Sluiten",
+  "common.open": "Openen",
+  "common.search": "Zoeken",
+  "common.retry": "Opnieuw proberen",
+  "common.retry.short": "Retry",
+  "common.backToTop": "Back to top",
+  "common.backToHome": "Naar home",
+  "common.loading.search": "Searching…",
+  "common.notFoundWithQuery": "No results for '{query}'.",
+  "common.openSearch": "Find it in Search →",
+  "common.loading.empty": "No data returned.",
+  "common.retry.all": "Try again or go back to home."
+}

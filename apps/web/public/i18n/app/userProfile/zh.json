@@ -1,0 +1,23 @@
+{
+  "userProfile.tabs.reviews": "评论",
+  "userProfile.tabs.series": "系列",
+  "userProfile.authorFallback": "用户",
+  "userProfile.follow": "跟随",
+  "userProfile.works.empty": "该用户还没有公开作品。",
+  "userProfile.following": "下列的",
+  "userProfile.stat.followers": "追随者",
+  "userProfile.stat.totalReviews": "评论",
+  "userProfile.stat.series": "系列",
+  "userProfile.stat.avgRating": "平均评分",
+  "userProfile.refresh": "刷新",
+  "userProfile.tabs.works": "创作作品",
+  "userProfile.eyebrow": "读者简介",
+  "userProfile.fetchError": "无法加载配置文件。",
+  "userProfile.bioFallback": "读者简介和已发表的作品",
+  "userProfile.series.empty": "该用户还没有系列。",
+  "userProfile.metaTemplate": "{author} 个人资料 · {reviews} 评论 · {works} 作品 · 平均评分 {avg} — ToonSpectrum。",
+  "userProfile.emptyReviews": "该用户尚未发表评论。",
+  "userProfile.tabsLabel": "简介内容",
+  "userProfile.stat.works": "创作作品",
+  "userProfile.followHint": "您可以在登录后关注用户。"
+}

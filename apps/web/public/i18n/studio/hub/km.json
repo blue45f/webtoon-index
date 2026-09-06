@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "ការបង្រៀនលក្ខណៈពិសេស",
+  "studio.hub.subtitle": "មុខងារមួយក្នុងពេលតែមួយដោយគ្មានបន្ទុកអ្វីទាំងអស់។ ខ្ញុំបានមើលនៅ {done}/{total}។",
+  "studio.hub.progressAriaLabel": "វឌ្ឍនភាពនៃការបង្រៀន",
+  "studio.hub.listAriaLabel": "បញ្ជីលក្ខណៈពិសេស",
+  "studio.hub.checked": "មើល",
+  "studio.hub.prev": "មុន",
+  "studio.hub.next": "បន្ទាប់",
+  "studio.hub.markComplete": "សម្គាល់ថាពេញលេញ",
+  "studio.hub.completed": "បានបញ្ចប់",
+  "studio.hub.tryLabelDefault": "ធ្វើតាម",
+  "studio.hub.stepAriaPrefix": "ជំហាន"
+}

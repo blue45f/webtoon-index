@@ -55,7 +55,7 @@ function writeJson(name, value) {
   writeFileSync(join(SCRATCH, name), `${JSON.stringify(value, null, 2)}\n`);
 }
 
-function validate(result, diagnostics) {
+function validate(result, diagnostics) { // NOSONAR javascript:S3776
   const failures = [];
   if (result.status !== "ok") failures.push(`unexpected status: ${result.status}`);
   if (!Array.isArray(result.cases) || result.cases.length !== 3) {
@@ -111,7 +111,7 @@ function validate(result, diagnostics) {
   }
 }
 
-async function main() {
+async function main() { // NOSONAR javascript:S3776
   mkdirSync(SCRATCH, { recursive: true });
   const port = await findFreePort();
   const origin = `http://127.0.0.1:${port}`;

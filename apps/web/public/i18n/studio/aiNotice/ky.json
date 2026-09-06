@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Генеративдик AI Image Guide",
+  "studio.aiNotice.description": "Бул функция генеративдик AI (OpenAI) аркылуу сүрөттөрдү түзөт. AI бейджиктери түзүлгөн натыйжаларда көрсөтүлөт.",
+  "studio.aiNotice.ruleCopyright": "Башкалардын чыгармаларын, каармандарын, чыныгы адамдардын жүзүн жаратпайбыз.",
+  "studio.aiNotice.ruleAccuracy": "AI натыйжалары так эмес же болжолдонгондон башкача болушу мүмкүн.",
+  "studio.aiNotice.ruleResponsibility": "Сиз жараткан сүрөттөрдү колдонуу үчүн жооптуусуз.",
+  "studio.aiNotice.cancel": "Жокко чыгаруу",
+  "studio.aiNotice.confirm": "Түшүнөм, түзөм"
+}

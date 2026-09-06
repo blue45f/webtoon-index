@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Barra de comandos rápidos",
+  "studio.commandBar.settings": "Definições da barra de comandos",
+  "studio.commandBar.settingsDescription": "Altere a disposição das ranhuras e a visibilidade da barra de comandos abaixo da barra de menus.",
+  "studio.commandBar.settingsTip": "Coloque os comandos que mais usa nas primeiras ranhuras para os alcançar mais depressa.",
+  "studio.commandBar.settingsClose": "Fechar as definições da barra de comandos",
+  "studio.commandBar.settingsStorageNote": "A disposição das ranhuras é guardada nas definições de espaço de trabalho deste navegador.",
+  "studio.commandBar.showSlots": "Mostrar ranhuras de comandos",
+  "studio.commandBar.slot": "Ranhura {index}",
+  "studio.commandBar.slotAria": "Ranhura de comando {index}",
+  "studio.commandBar.slotEmpty": "Ranhura vazia",
+  "studio.commandBar.resetDefaults": "Repor a disposição predefinida",
+  "studio.commandBar.command.undo": "Anular",
+  "studio.commandBar.command.redo": "Refazer",
+  "studio.commandBar.command.save": "Guardar rascunho",
+  "studio.commandBar.command.publish": "Publicar",
+  "studio.commandBar.command.download": "Transferir a página atual",
+  "studio.commandBar.command.export-open": "Opções de exportação",
+  "studio.commandBar.command.zoom-fit": "Ajustar à largura do ecrã",
+  "studio.commandBar.command.assets": "Modelos e recursos",
+  "studio.commandBar.command.bubbles": "Balão de fala",
+  "studio.commandBar.command.project": "Ferramentas do projeto"
+}

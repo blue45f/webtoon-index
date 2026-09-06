@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "forma të zgjuara",
+  "studio.quickShape.description.active": "Vizatoni me kohë linja, katrorë, rrathë dhe trekëndësha. Nëse e lëshoni, do të rregullohet vetë.",
+  "studio.quickShape.description.inactive": "Është në rregull ta shkruash atë. Nëse e ndizni, vizatimi juaj me dorë do të rafinohet në një formë të rregullt.",
+  "studio.quickShape.toggleHint": "Në momentin që lëshoni një formë të vizatuar përafërsisht me një stilolaps, ajo merr një formë të saktë. Edhe nëse bëni pauzë gjatë vizatimit, do të shfaqet një pamje paraprake.",
+  "studio.quickShape.toggleAria.on": "Forma të zgjuara në",
+  "studio.quickShape.toggleAria.off": "Format inteligjente janë jashtë",
+  "studio.quickShape.matchedSuffix": " Unë mund ta ndjej atë. Konfirmohet kur lëshoj dorën.",
+  "studio.quickShape.emptyStatus": "Vizatoni formën dhe lëreni, ose thjesht qëndroni në fund",
+  "studio.quickShape.openTutorial": "Shikoni tutorialin e formave të zgjuara",
+  "studio.quickShape.notice": "Vizatoni forma të zgjuara, vija, rrathë, katrorë, etj. dhe rafinojini ato kur t'i lëshoni (ndalojeni për ta parë paraprakisht)"
+}

@@ -483,7 +483,7 @@ replace_once(
                 "minimumRequired": config.face.minimum_semantic_shape_keys,''',
 )
 
-ts_path = "src/domains/creator/vrm/studio-vrm-blender-character-package.ts"
+ts_path = "apps/web/src/domains/creator/vrm/studio-vrm-blender-character-package.ts"
 replace_once(
     ts_path,
     '''      objects: readonly string[];
@@ -514,7 +514,7 @@ replace_once(
         })(),''',
 )
 
-ts_test = "src/domains/creator/vrm/studio-vrm-blender-character-package.test.ts"
+ts_test = "apps/web/src/domains/creator/vrm/studio-vrm-blender-character-package.test.ts"
 replace_once(
     ts_test,
     '''      objects: ["Face"],
@@ -610,9 +610,9 @@ contract_test = "tests/blender/test_contracts.py"
 replace_once(
     contract_test,
     '''        self.assertTrue(config.export.vrm)
-        self.assertEqual(config.input_path, "public/vrm/Avatar_Orion.vrm")''',
+        self.assertEqual(config.input_path, "apps/web/public/vrm/Avatar_Orion.vrm")''',
     '''        self.assertTrue(config.export.vrm)
-        self.assertEqual(config.input_path, "public/vrm/Avatar_Orion.vrm")
+        self.assertEqual(config.input_path, "apps/web/public/vrm/Avatar_Orion.vrm")
         self.assertEqual(config.face.minimum_semantic_shape_keys, 4)
         self.assertEqual(config.quality.max_boundary_edges, 12000)
         self.assertEqual(config.quality.max_non_manifold_edges, 0)''',

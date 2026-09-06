@@ -125,7 +125,7 @@ function html() {
 </html>`;
 }
 
-function validate(result, diagnostics) {
+function validate(result, diagnostics) { // NOSONAR javascript:S3776
   const failures = [];
   if (
     result?.status !== "ok"
@@ -232,7 +232,7 @@ function validate(result, diagnostics) {
   return failures;
 }
 
-async function main() {
+async function main() { // NOSONAR javascript:S3776
   mkdirSync(EVIDENCE_ROOT, { recursive: true });
   const port = await findFreePort();
   const viteServer = await createViteServer({

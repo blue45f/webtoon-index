@@ -1,9 +1,9 @@
-import { providerAvailability, upstreamRetrySeconds } from "../../../../../lib/creator-resource-workflow";
+import { providerAvailability, upstreamRetrySeconds } from "../../../../web/src/shared/lib/creator-resource-workflow";
 import {
   httpsUrl, isProvider, parseDeadline, parseResource, recordOf, textOf,
-} from "../../../../../lib/creator-resources";
+} from "../../../../web/src/shared/lib/creator-resources";
 
-import type { CreatorResource, ResourceProvider, ResourceSearchResult } from "../../../../../lib/creator-resources";
+import type { CreatorResource, ResourceProvider, ResourceSearchResult } from "../../../../web/src/shared/lib/creator-resources";
 
 type Fetcher = (url: string, init?: RequestInit) => Promise<Response>;
 export interface ResourceEngineOptions {

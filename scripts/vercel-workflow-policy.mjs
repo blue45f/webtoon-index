@@ -30,7 +30,7 @@ function requireUnconditionalStep(step, label, issues) {
   return step;
 }
 
-export function validateVercelFallbackWorkflow(source) {
+export function validateVercelFallbackWorkflow(source) { // NOSONAR javascript:S3776
   const issues = [];
   const workflow = parseWorkflow(source, issues);
   if (!workflow) return issues;

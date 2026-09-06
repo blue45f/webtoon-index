@@ -10,18 +10,18 @@ import {
   recoverProject,
 } from "@toonspectrum/studio-project-model";
 
-import { openStudioLocalDatabase } from "../../../src/domains/creator/studio-local-database";
-import { createSqliteJournalStore } from "../../../src/domains/creator/studio-sqlite-journal-store";
+import { openStudioLocalDatabase } from "../../../apps/web/src/domains/creator/studio-local-database";
+import { createSqliteJournalStore } from "../../../apps/web/src/domains/creator/studio-sqlite-journal-store";
 import {
   buildStudioV12RecoveryPackage,
   importStudioV12RecoveryPackage,
   restoreStudioV12RecoveryPackage,
-} from "../../../src/domains/creator/studio-v12-recovery-package";
+} from "../../../apps/web/src/domains/creator/studio-v12-recovery-package";
 
 import type {
   StudioLocalDatabase,
   StudioSqliteApiHandle,
-} from "../../../src/domains/creator/studio-local-database";
+} from "../../../apps/web/src/domains/creator/studio-local-database";
 
 interface Blake3Candidate {
   hash(input: Uint8Array): Uint8Array;

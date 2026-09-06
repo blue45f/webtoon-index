@@ -48,7 +48,7 @@ const TRACKED_RESULT = join(
   ROOT,
   "tests/benchmarks/results/vrm-surface-brush-browser.json",
 );
-const BUNDLED_VRM_FIXTURE = join(ROOT, "public/vrm/sample.vrm");
+const BUNDLED_VRM_FIXTURE = join(ROOT, "apps/web/public/vrm/sample.vrm");
 const PAGE_ALIAS = "virtual:vrm-surface-brush-browser-page";
 const CHROMIUM_ARGS = Object.freeze([
   "--no-sandbox",
@@ -100,7 +100,7 @@ export interface VrmSurfaceBrushBrowserArtifact {
     mode: "vite-production-build";
     assets: readonly string[];
     scratchDirectory: string;
-    bundledVrmFixture: "public/vrm/sample.vrm";
+    bundledVrmFixture: "apps/web/public/vrm/sample.vrm";
   }>;
   readonly validationIssues: readonly string[];
 }
@@ -756,7 +756,7 @@ export async function runVrmSurfaceBrushBrowserBenchmark(
       mode: "vite-production-build",
       assets,
       scratchDirectory: scratch,
-      bundledVrmFixture: "public/vrm/sample.vrm",
+      bundledVrmFixture: "apps/web/public/vrm/sample.vrm",
     },
     validationIssues,
   };
@@ -800,7 +800,7 @@ async function main(): Promise<void> {
         mode: "vite-production-build",
         assets: [],
         scratchDirectory: "unavailable",
-        bundledVrmFixture: "public/vrm/sample.vrm",
+        bundledVrmFixture: "apps/web/public/vrm/sample.vrm",
       },
       validationIssues: ["benchmark orchestrator failed"],
     };

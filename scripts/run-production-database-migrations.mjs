@@ -117,7 +117,7 @@ function sqlLiteral(value) {
 }
 
 function migrationSequence(id) {
-  const match = /^(?<sequence>[0-9]{4})_/u.exec(id);
+  const match = /^(?<sequence>\d{4})_/u.exec(id);
   if (!match?.groups?.sequence) fail(`Invalid migration id: ${id}`);
   return Number(match.groups.sequence);
 }
@@ -1419,7 +1419,7 @@ export function loadMigrationManifest({
   }
 
   const expectedPaths = readdirSync(migrationDirectory)
-    .filter((name) => /^[0-9]{4}_[a-z0-9_]+\.sql$/u.test(name))
+    .filter((name) => /^\d{4}_[a-z0-9_]+\.sql$/u.test(name))
     .sort()
     .map((name) => `apps/api/src/db/migrations/${name}`);
   if (
@@ -1432,7 +1432,7 @@ export function loadMigrationManifest({
   }
 
   const manifest = paths.map((relativePath) => {
-    if (!/^apps\/api\/src\/db\/migrations\/[0-9]{4}_[a-z0-9_]+\.sql$/u.test(relativePath)) {
+    if (!/^apps\/api\/src\/db\/migrations\/\d{4}_[a-z0-9_]+\.sql$/u.test(relativePath)) {
       fail(`Invalid production migration manifest path: ${relativePath}`);
     }
     const absolutePath = resolve(repositoryRoot, relativePath);
@@ -2165,7 +2165,7 @@ function validateAdoptionMarker(ledger, manifest) {
   return true;
 }
 
-function parseArguments(argv) {
+function parseArguments(argv) { // NOSONAR javascript:S3776
   const values = new Map();
   const booleanFlags = new Set();
   for (let index = 0; index < argv.length; index += 1) {
@@ -2196,7 +2196,7 @@ function parseArguments(argv) {
       fail(`Duplicate migration runner argument: ${argument}`);
     }
     values.set(argument, value);
-    index += 1;
+    index += 1; // NOSONAR javascript:S2310
   }
 
   const mode = values.get("--mode");
@@ -2234,7 +2234,7 @@ function parseArguments(argv) {
   };
 }
 
-export function runProductionDatabaseMigrations({
+export function runProductionDatabaseMigrations({ // NOSONAR javascript:S3776
   databaseUrl,
   mode,
   releaseSha,

@@ -6,7 +6,7 @@ import {
   StudioLiveAuthTicketResponseSchema,
   type StudioLiveAuthTicketRequest,
   type StudioLiveAuthTicketResponse,
-} from "../../../../../lib/studio-live-auth-ticket";
+} from "../../../../web/src/shared/lib/studio-live-auth-ticket";
 import {
   signStudioLiveAdmissionTicket,
   type VerifiedSessionToken,

@@ -22,7 +22,7 @@ import {
   CreatorMarketplaceStudioInstallConfirmationReceiptSchema,
   creatorMarketplaceLogicalPackIdFromPackageKeyHex,
   creatorMarketplacePackageIdentityPreimage,
-} from "../../../../../lib/creator-marketplace-cloud-library-contract";
+} from "../../../../web/src/shared/lib/creator-marketplace-cloud-library-contract";
 
 import {
   CREATOR_MARKETPLACE_LIBRARY_REPOSITORY,
@@ -50,7 +50,7 @@ import type {
   CreatorMarketplaceCloudLibraryItem,
   CreatorMarketplaceCloudLibraryPage,
   CreatorMarketplaceStudioInstallConfirmationReceipt,
-} from "../../../../../lib/creator-marketplace-cloud-library-contract";
+} from "../../../../web/src/shared/lib/creator-marketplace-cloud-library-contract";
 
 const CursorEnvelopeSchema = z
   .object({

@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Funktionshandledning",
+  "studio.hub.subtitle": "En funktion i taget utan någon börda. Jag tittade på {done}/{total}.",
+  "studio.hub.progressAriaLabel": "Handledningsframsteg",
+  "studio.hub.listAriaLabel": "Funktionslista",
+  "studio.hub.checked": "ta en titt",
+  "studio.hub.prev": "Föregående",
+  "studio.hub.next": "nästa",
+  "studio.hub.markComplete": "markera som komplett",
+  "studio.hub.completed": "Avslutad",
+  "studio.hub.tryLabelDefault": "Följ med",
+  "studio.hub.stepAriaPrefix": "steg"
+}

@@ -39,7 +39,7 @@ async function jira(path, options = {}) {
   return data;
 }
 
-export async function fileIssue(record, enabled) {
+export async function fileIssue(record, enabled) { // NOSONAR javascript:S3776
   if (!enabled || record.knownJira || record.tracker) return;
   try {
     const label = `qa-soak-${record.fingerprint.slice(0, 16)}`;

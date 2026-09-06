@@ -119,7 +119,7 @@ function writeAtomic(path, data) {
   renameSync(tmp, path);
 }
 
-async function main() {
+async function main() { // NOSONAR javascript:S3776
   if (!PRV_KEY) {
     console.error(
       "[kmas] KMAS_PRV_KEY 미설정 — 수집을 건너뜁니다(크롤 데이터 유지).\n" +

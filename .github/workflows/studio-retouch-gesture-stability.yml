@@ -4,16 +4,16 @@ on:
   push:
     branches: [main]
     paths:
-      - 'src/domains/creator/studio-retouch-raster-gesture*.ts'
-      - 'src/domains/creator/studio-selection-tools.ts'
-      - 'src/domains/creator/studio-liquify-contract.ts'
+      - 'apps/web/src/domains/creator/studio-retouch-raster-gesture*.ts'
+      - 'apps/web/src/domains/creator/studio-selection-tools.ts'
+      - 'apps/web/src/domains/creator/studio-liquify-contract.ts'
       - '.github/workflows/studio-retouch-gesture-stability.yml'
   pull_request:
     branches: [main]
     paths:
-      - 'src/domains/creator/studio-retouch-raster-gesture*.ts'
-      - 'src/domains/creator/studio-selection-tools.ts'
-      - 'src/domains/creator/studio-liquify-contract.ts'
+      - 'apps/web/src/domains/creator/studio-retouch-raster-gesture*.ts'
+      - 'apps/web/src/domains/creator/studio-selection-tools.ts'
+      - 'apps/web/src/domains/creator/studio-liquify-contract.ts'
       - '.github/workflows/studio-retouch-gesture-stability.yml'
   workflow_dispatch:
 
@@ -50,15 +50,15 @@ jobs:
         run: |
           set -o pipefail
           pnpm exec vitest run \
-            src/domains/creator/studio-retouch-raster-gesture.test.ts \
-            src/domains/creator/studio-retouch-raster-gesture-stability.test.ts \
+            apps/web/src/domains/creator/studio-retouch-raster-gesture.test.ts \
+            apps/web/src/domains/creator/studio-retouch-raster-gesture-stability.test.ts \
             2>&1 | tee /tmp/studio-retouch-evidence/tests.log
       - name: Strict lint for the changed product and tests
         run: |
           set -o pipefail
           pnpm exec eslint --max-warnings=0 \
-            src/domains/creator/studio-retouch-raster-gesture.ts \
-            src/domains/creator/studio-retouch-raster-gesture-stability.test.ts \
+            apps/web/src/domains/creator/studio-retouch-raster-gesture.ts \
+            apps/web/src/domains/creator/studio-retouch-raster-gesture-stability.test.ts \
             2>&1 | tee /tmp/studio-retouch-evidence/lint.log
       - name: Complete frontend TypeScript check
         run: |

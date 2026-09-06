@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "moj font",
+  "studio.customFonts.importButton": "Uvezi iz datoteke",
+  "studio.customFonts.importing": "Provjera…",
+  "studio.customFonts.importAria": "Uvezite datoteku fonta",
+  "studio.customFonts.storageAria": "Upotreba biblioteke fontova",
+  "studio.customFonts.emptyTitle": "Još uvijek nema uključenih fontova.",
+  "studio.customFonts.unknownFileName": "Nema naziva datoteke",
+  "studio.customFonts.apply": "Prijavite se",
+  "studio.customFonts.applyToText": "Primijenite ovaj font na odabrani tekst",
+  "studio.customFonts.selectTextFirst": "Prvo odaberite tekst ili oblačić za govor",
+  "studio.customFonts.delete": "izbrisati font"
+}

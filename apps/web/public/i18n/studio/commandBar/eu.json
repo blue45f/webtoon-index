@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Komando bizkorren barra",
+  "studio.commandBar.settings": "Komando-barraren ezarpenak",
+  "studio.commandBar.settingsDescription": "Aldatu menu-barraren azpiko komando-barraren zirrikitu-antolaketa eta ikusgaitasuna.",
+  "studio.commandBar.settingsTip": "Jarri gehien erabiltzen dituzun komandoak lehen zirrikituetan, azkarrago iristeko.",
+  "studio.commandBar.settingsClose": "Itxi komando-barraren ezarpenak",
+  "studio.commandBar.settingsStorageNote": "Zirrikituen antolaketa nabigatzaile honen laneko espazioaren ezarpenetan gordetzen da.",
+  "studio.commandBar.showSlots": "Erakutsi komando-zirrikituak",
+  "studio.commandBar.slot": "{index}. zirrikitua",
+  "studio.commandBar.slotAria": "{index}. komando-zirrikitua",
+  "studio.commandBar.slotEmpty": "Zirrikitu hutsa",
+  "studio.commandBar.resetDefaults": "Berrezarri lehenetsitako antolaketa",
+  "studio.commandBar.command.undo": "Desegin",
+  "studio.commandBar.command.redo": "Berregin",
+  "studio.commandBar.command.save": "Gorde zirriborroa",
+  "studio.commandBar.command.publish": "Argitaratu",
+  "studio.commandBar.command.download": "Deskargatu uneko orria",
+  "studio.commandBar.command.export-open": "Esportatzeko aukerak",
+  "studio.commandBar.command.zoom-fit": "Doitu pantailaren zabalerara",
+  "studio.commandBar.command.assets": "Txantiloiak eta baliabideak",
+  "studio.commandBar.command.bubbles": "Bunbuiloa",
+  "studio.commandBar.command.project": "Proiektuaren tresnak"
+}

@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "அம்சம் பயிற்சி",
+  "studio.hub.subtitle": "எந்த சுமையும் இல்லாமல் ஒரு நேரத்தில் ஒரு செயல்பாடு. நான் {done}/{total} ஐப் பார்த்தேன்.",
+  "studio.hub.progressAriaLabel": "பயிற்சி முன்னேற்றம்",
+  "studio.hub.listAriaLabel": "அம்சங்களின் பட்டியல்",
+  "studio.hub.checked": "பாருங்கள்",
+  "studio.hub.prev": "முந்தைய",
+  "studio.hub.next": "அடுத்தது",
+  "studio.hub.markComplete": "முழுமையானதாகக் குறிக்கவும்",
+  "studio.hub.completed": "முடிக்கப்பட்டது",
+  "studio.hub.tryLabelDefault": "பின் தொடருங்கள்",
+  "studio.hub.stepAriaPrefix": "படி"
+}

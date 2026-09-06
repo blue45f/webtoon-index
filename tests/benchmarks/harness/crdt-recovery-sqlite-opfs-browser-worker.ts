@@ -437,10 +437,10 @@ async function expectedDigest(
 
 async function loadProductModules() {
   const [localDatabase, runtime, recovery, protocol] = await Promise.all([
-    import("../../../src/domains/creator/studio-local-database"),
-    import("../../../src/domains/creator/studio-local-database-runtime"),
-    import("../../../src/domains/creator/live/studio-crdt-recovery-vault.test.ts"),
-    import("../../../src/domains/creator/live/studio-crdt-protocol.test.ts"),
+    import("../../../apps/web/src/domains/creator/studio-local-database"),
+    import("../../../apps/web/src/domains/creator/studio-local-database-runtime"),
+    import("../../../apps/web/src/domains/creator/live/studio-crdt-recovery-vault.test.ts"),
+    import("../../../apps/web/src/domains/creator/live/studio-crdt-protocol.test.ts"),
   ]);
   return { localDatabase, runtime, recovery, protocol };
 }

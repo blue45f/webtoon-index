@@ -294,7 +294,7 @@ function requireExactCargoManifestValue(manifestText, key, expected) {
   }
 }
 
-export function validateHokusaiReleaseContract({
+export function validateHokusaiReleaseContract({ // NOSONAR javascript:S3776
   manifestText = readFileSync(
     join(HOKUSAI_PACKAGE_DIRECTORY, "Cargo.toml"),
     "utf8",

@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Eiginleikakennsla",
+  "studio.hub.subtitle": "Ein aðgerð í einu án nokkurrar byrði. Ég horfði á {done}/{total}.",
+  "studio.hub.progressAriaLabel": "Framvinda kennslu",
+  "studio.hub.listAriaLabel": "Eiginleikalisti",
+  "studio.hub.checked": "kíkja",
+  "studio.hub.prev": "Fyrri",
+  "studio.hub.next": "næst",
+  "studio.hub.markComplete": "merktu sem lokið",
+  "studio.hub.completed": "Lokið",
+  "studio.hub.tryLabelDefault": "Fylgstu með",
+  "studio.hub.stepAriaPrefix": "skref"
+}

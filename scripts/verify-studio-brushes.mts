@@ -52,8 +52,8 @@ import {
   type Page,
 } from "playwright";
 
-import { isStudioBrushEraserAliasId } from "../src/domains/creator/brush/studio-brush-alias-profile";
-import { studioBrushPresetUsesIntentionalDiscreteCarrier } from "../src/domains/creator/brush/studio-brush-carrier-quality";
+import { isStudioBrushEraserAliasId } from "../apps/web/src/domains/creator/brush/studio-brush-alias-profile";
+import { studioBrushPresetUsesIntentionalDiscreteCarrier } from "../apps/web/src/domains/creator/brush/studio-brush-carrier-quality";
 import {
   STUDIO_ALL_BRUSH_CATALOG_ITEMS,
   STUDIO_ERASER_BRUSH_CATALOG_ITEMS,
@@ -62,28 +62,28 @@ import {
   STUDIO_LISTED_PAINT_BRUSH_CATALOG_ITEMS,
   STUDIO_PAINT_BRUSH_CATALOG_ITEMS,
   type StudioBrushCatalogItem,
-} from "../src/domains/creator/brush/studio-brush-catalog";
-import { studioBrushCatalogIdIsIntentionallyDiscontinuous } from "../src/domains/creator/brush/studio-brush-continuity-audit";
-import { serializeStudioBrushDynamicsSettingsCanonical } from "../src/domains/creator/brush/studio-brush-dynamics";
-import { DEFAULT_STUDIO_BRUSH_SNAPSHOT } from "../src/domains/creator/brush/studio-brush-library";
-import { studioBrushPackDescriptorById } from "../src/domains/creator/brush/studio-brush-pack-index";
+} from "../apps/web/src/domains/creator/brush/studio-brush-catalog";
+import { studioBrushCatalogIdIsIntentionallyDiscontinuous } from "../apps/web/src/domains/creator/brush/studio-brush-continuity-audit";
+import { serializeStudioBrushDynamicsSettingsCanonical } from "../apps/web/src/domains/creator/brush/studio-brush-dynamics";
+import { DEFAULT_STUDIO_BRUSH_SNAPSHOT } from "../apps/web/src/domains/creator/brush/studio-brush-library";
+import { studioBrushPackDescriptorById } from "../apps/web/src/domains/creator/brush/studio-brush-pack-index";
 import {
   resolveStudioBrushRuntimeContract,
-} from "../src/domains/creator/brush/studio-brush-runtime-contract";
+} from "../apps/web/src/domains/creator/brush/studio-brush-runtime-contract";
 import {
   materializeStudioBrushCatalogSelection,
   type StudioBrushCatalogSelection,
-} from "../src/domains/creator/brush/studio-brush-selection";
-import { captureStudioDrawPointerPressureContract } from "../src/domains/creator/brush/studio-draw-pointer-pressure-contract";
-import { classifyStudioDryMediaCatalogIdV1 } from "../src/domains/creator/brush/studio-dry-media-anisotropic-grain-v1";
-import { studioWetInkBrushDepositsPigment } from "../src/domains/creator/brush/studio-wet-ink-brush-runtime";
-import { STUDIO_APP_SETTINGS_STORAGE_KEY } from "../src/domains/creator/studio-app-settings";
-import { studioAutosaveKey } from "../src/domains/creator/studio-autosave";
-import { BRUSH_PRESETS } from "../src/domains/creator/studio-brush";
+} from "../apps/web/src/domains/creator/brush/studio-brush-selection";
+import { captureStudioDrawPointerPressureContract } from "../apps/web/src/domains/creator/brush/studio-draw-pointer-pressure-contract";
+import { classifyStudioDryMediaCatalogIdV1 } from "../apps/web/src/domains/creator/brush/studio-dry-media-anisotropic-grain-v1";
+import { studioWetInkBrushDepositsPigment } from "../apps/web/src/domains/creator/brush/studio-wet-ink-brush-runtime";
+import { STUDIO_APP_SETTINGS_STORAGE_KEY } from "../apps/web/src/domains/creator/studio-app-settings";
+import { studioAutosaveKey } from "../apps/web/src/domains/creator/studio-autosave";
+import { BRUSH_PRESETS } from "../apps/web/src/domains/creator/studio-brush";
 import {
   resolveStudioCc0MypaintStampTuning,
   studioCc0MypaintPresetUsesIntentionalDiscreteCarrier,
-} from "../src/domains/creator/studio-cc0-mypaint-preset-import-v1";
+} from "../apps/web/src/domains/creator/studio-cc0-mypaint-preset-import-v1";
 
 import { DIST_DIR } from "./lib/repo-paths.mjs";
 import {
@@ -2432,7 +2432,7 @@ function resolveBuiltAutosaveSqliteModulePath(): string {
     string,
     { file?: unknown }
   >;
-  const entry = manifest["src/domains/creator/studio-autosave-sqlite-store.ts"];
+  const entry = manifest["apps/web/src/domains/creator/studio-autosave-sqlite-store.ts"];
   invariant(
     entry && typeof entry.file === "string" && entry.file.length > 0,
     "production manifest is missing the Studio autosave SQLite module",

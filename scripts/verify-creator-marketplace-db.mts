@@ -7,13 +7,13 @@ import { creatorMarketplaceReporterKey } from "../apps/api/src/modules/creator-m
 import {
   creatorMarketplacePackageIdentityPreimage,
   creatorMarketplaceLogicalPackIdFromPackageKeyHex,
-} from "../lib/creator-marketplace-cloud-library-contract";
+} from "../apps/web/src/shared/lib/creator-marketplace-cloud-library-contract";
 import {
   CREATOR_MARKETPLACE_RUNTIME_BY_KIND,
   CreatorMarketplaceResourceManifestSchema,
   canonicalizeCreatorMarketplaceJson,
   creatorMarketplaceJsonByteSize,
-} from "../lib/creator-marketplace-resource-contract";
+} from "../apps/web/src/shared/lib/creator-marketplace-resource-contract";
 
 import {
   VITEST_VALIDATED_REMOTE_DATABASE_MARKER,
@@ -24,7 +24,7 @@ import type {
   CreatorMarketplaceJsonValue,
   CreatorMarketplaceResourceKind,
   CreatorMarketplaceResourceManifest,
-} from "../lib/creator-marketplace-resource-contract";
+} from "../apps/web/src/shared/lib/creator-marketplace-resource-contract";
 
 function sha256(value: unknown): string {
   return createHash("sha256")

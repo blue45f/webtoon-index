@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "мій шрифт",
+  "studio.customFonts.importButton": "Імпортувати з файлу",
+  "studio.customFonts.importing": "Перевірка…",
+  "studio.customFonts.importAria": "Імпорт файлу шрифту",
+  "studio.customFonts.storageAria": "Використання бібліотеки шрифтів",
+  "studio.customFonts.emptyTitle": "Ще немає включених шрифтів.",
+  "studio.customFonts.unknownFileName": "Немає імені файлу",
+  "studio.customFonts.apply": "Застосувати",
+  "studio.customFonts.applyToText": "Застосувати цей шрифт до виділеного тексту",
+  "studio.customFonts.selectTextFirst": "Спочатку виберіть текст або спливаючу підказку",
+  "studio.customFonts.delete": "видалити шрифт"
+}

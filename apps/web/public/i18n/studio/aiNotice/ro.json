@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Ghid de imagine generativă AI",
+  "studio.aiNotice.description": "Această funcție creează imagini folosind AI generativ (OpenAI). Insigne AI sunt afișate pe rezultatele create.",
+  "studio.aiNotice.ruleCopyright": "Nu creăm lucrări ale altora, personaje sau chipuri ale unor oameni reali.",
+  "studio.aiNotice.ruleAccuracy": "Rezultatele AI pot fi inexacte sau diferite de ceea ce s-a dorit.",
+  "studio.aiNotice.ruleResponsibility": "Sunteți responsabil pentru utilizarea imaginilor pe care le creați.",
+  "studio.aiNotice.cancel": "Anulează",
+  "studio.aiNotice.confirm": "Înțeleg, creează"
+}

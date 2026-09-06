@@ -1,0 +1,7 @@
+{
+  "error.reloading": "Chargement de la dernière version…",
+  "error.chunkRetryFailed": "La page a été rafraîchie, mais le problème persiste. Veuillez vérifier votre connexion et réessayer.",
+  "error.reloadButton": "Rafraîchir la page",
+  "error.goHome": "Retour à l'accueil",
+  "error.retryDesc": "Veuillez réessayer ou retourner à l'accueil."
+}

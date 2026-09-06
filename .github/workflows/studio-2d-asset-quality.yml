@@ -3,30 +3,30 @@ on:
   push:
     branches: [main, 'feat/studio-2d-assets-*']
     paths:
-      - 'src/domains/creator/studio-bg*'
-      - 'src/domains/creator/studio-2d*'
-      - 'src/domains/creator/Studio2d*'
-      - 'src/domains/creator/StudioSceneToolPopoverBody.tsx'
-      - 'src/domains/creator/studio-page-lazy-ui.ts'
-      - 'src/domains/creator/studio-tool-belt-lazy-ui-boundary.test.ts'
-      - 'src/domains/creator/StudioToolBeltContent.tsx'
-      - 'src/domains/creator/StudioCuttoonEditorHost.tsx'
+      - 'apps/web/src/domains/creator/studio-bg*'
+      - 'apps/web/src/domains/creator/studio-2d*'
+      - 'apps/web/src/domains/creator/Studio2d*'
+      - 'apps/web/src/domains/creator/StudioSceneToolPopoverBody.tsx'
+      - 'apps/web/src/domains/creator/studio-page-lazy-ui.ts'
+      - 'apps/web/src/domains/creator/studio-tool-belt-lazy-ui-boundary.test.ts'
+      - 'apps/web/src/domains/creator/StudioToolBeltContent.tsx'
+      - 'apps/web/src/domains/creator/StudioCuttoonEditorHost.tsx'
       - 'scripts/studio-2d*'
-      - 'public/assets/studio/backgrounds/**'
+      - 'apps/web/public/assets/studio/backgrounds/**'
       - '.github/workflows/studio-2d-asset-quality.yml'
   pull_request:
     branches: [main]
     paths:
-      - 'src/domains/creator/studio-bg*'
-      - 'src/domains/creator/studio-2d*'
-      - 'src/domains/creator/Studio2d*'
-      - 'src/domains/creator/StudioSceneToolPopoverBody.tsx'
-      - 'src/domains/creator/studio-page-lazy-ui.ts'
-      - 'src/domains/creator/studio-tool-belt-lazy-ui-boundary.test.ts'
-      - 'src/domains/creator/StudioToolBeltContent.tsx'
-      - 'src/domains/creator/StudioCuttoonEditorHost.tsx'
+      - 'apps/web/src/domains/creator/studio-bg*'
+      - 'apps/web/src/domains/creator/studio-2d*'
+      - 'apps/web/src/domains/creator/Studio2d*'
+      - 'apps/web/src/domains/creator/StudioSceneToolPopoverBody.tsx'
+      - 'apps/web/src/domains/creator/studio-page-lazy-ui.ts'
+      - 'apps/web/src/domains/creator/studio-tool-belt-lazy-ui-boundary.test.ts'
+      - 'apps/web/src/domains/creator/StudioToolBeltContent.tsx'
+      - 'apps/web/src/domains/creator/StudioCuttoonEditorHost.tsx'
       - 'scripts/studio-2d*'
-      - 'public/assets/studio/backgrounds/**'
+      - 'apps/web/public/assets/studio/backgrounds/**'
       - '.github/workflows/studio-2d-asset-quality.yml'
 permissions:
   contents: read
@@ -58,9 +58,9 @@ jobs:
           node scripts/studio-2d-asset-audit.mjs | tee artifacts/studio-2d/asset-audit.json
           node --test scripts/studio-2d-asset-quality.test.mjs | tee artifacts/studio-2d/file-tests.txt
       - name: Test filtering, accessible insertion and original aspect ratio
-        run: pnpm exec vitest run src/domains/creator/studio-2d-lazy-boundary.test.ts src/domains/creator/studio-tool-belt-lazy-ui-boundary.test.ts src/domains/creator/studio-2d-asset-quality.test.ts src/domains/creator/studio-2d-source-size.test.ts src/domains/creator/studio-2d-review-content.test.ts src/domains/creator/studio-2d-content-discovery.test.ts src/domains/creator/Studio2dContentFilters.test.tsx src/domains/creator/Studio2dSceneBrowser.test.tsx src/domains/creator/Studio2dSceneResilience.test.tsx scripts/studio-2d-image-readiness.test.mjs scripts/studio-2d-asset-quality.test.mjs src/domains/creator/studio-assets.test.ts src/domains/creator/studio-host-architecture-ratchet.test.ts | tee artifacts/studio-2d/component-tests.txt
+        run: pnpm exec vitest run apps/web/src/domains/creator/studio-2d-lazy-boundary.test.ts apps/web/src/domains/creator/studio-tool-belt-lazy-ui-boundary.test.ts apps/web/src/domains/creator/studio-2d-asset-quality.test.ts apps/web/src/domains/creator/studio-2d-source-size.test.ts apps/web/src/domains/creator/studio-2d-review-content.test.ts apps/web/src/domains/creator/studio-2d-content-discovery.test.ts apps/web/src/domains/creator/Studio2dContentFilters.test.tsx apps/web/src/domains/creator/Studio2dSceneBrowser.test.tsx apps/web/src/domains/creator/Studio2dSceneResilience.test.tsx scripts/studio-2d-image-readiness.test.mjs scripts/studio-2d-asset-quality.test.mjs apps/web/src/domains/creator/studio-assets.test.ts apps/web/src/domains/creator/studio-host-architecture-ratchet.test.ts | tee artifacts/studio-2d/component-tests.txt
       - name: Lint changed modules
-        run: pnpm exec eslint src/domains/creator/studio-2d-*.ts src/domains/creator/Studio2d*.tsx src/domains/creator/studio-bg-scenes.ts src/domains/creator/StudioSceneToolPopoverBody.tsx src/domains/creator/studio-page-lazy-ui.ts scripts/studio-2d-*.mjs
+        run: pnpm exec eslint apps/web/src/domains/creator/studio-2d-*.ts apps/web/src/domains/creator/Studio2d*.tsx apps/web/src/domains/creator/studio-bg-scenes.ts apps/web/src/domains/creator/StudioSceneToolPopoverBody.tsx apps/web/src/domains/creator/studio-page-lazy-ui.ts scripts/studio-2d-*.mjs
       - run: pnpm exec playwright install --with-deps chromium
       - name: Validate actual component with original images in Chromium
         run: node scripts/studio-2d-browser-smoke.mjs

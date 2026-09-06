@@ -15,9 +15,9 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { gunzipSync } from "node:zlib";
 
-import { universeFor } from "../lib/title-universe";
+import { universeFor } from "../apps/web/src/shared/lib/title-universe";
 
-import type { Title } from "../lib/types";
+import type { Title } from "../apps/web/src/shared/lib/types";
 
 const SITE = process.env.WEBDEX_SITE_URL ?? "https://www.toonstudio.cloud";
 const WEBHOOK = process.env.DISCORD_WEBHOOK_URL ?? "";

@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Flýtiskipanastika",
+  "studio.commandBar.settings": "Stillingar skipanastiku",
+  "studio.commandBar.settingsDescription": "Breyttu hólfaskipan og sýnileika skipanastikunnar undir valmyndastikunni.",
+  "studio.commandBar.settingsTip": "Settu skipanirnar sem þú notar mest í fyrstu hólfin svo þær séu fljótlegastar að ná í.",
+  "studio.commandBar.settingsClose": "Loka stillingum skipanastiku",
+  "studio.commandBar.settingsStorageNote": "Hólfaskipanin er vistuð í vinnusvæðisstillingum þessa vafra.",
+  "studio.commandBar.showSlots": "Sýna skipanahólf",
+  "studio.commandBar.slot": "Hólf {index}",
+  "studio.commandBar.slotAria": "Skipanahólf {index}",
+  "studio.commandBar.slotEmpty": "Tómt hólf",
+  "studio.commandBar.resetDefaults": "Endurstilla á sjálfgefna skipan",
+  "studio.commandBar.command.undo": "Afturkalla",
+  "studio.commandBar.command.redo": "Endurtaka",
+  "studio.commandBar.command.save": "Vista drög",
+  "studio.commandBar.command.publish": "Birta",
+  "studio.commandBar.command.download": "Sækja núverandi síðu",
+  "studio.commandBar.command.export-open": "Útflutningsvalkostir",
+  "studio.commandBar.command.zoom-fit": "Laga að skjábreidd",
+  "studio.commandBar.command.assets": "Sniðmát og efni",
+  "studio.commandBar.command.bubbles": "Talblaðra",
+  "studio.commandBar.command.project": "Verkefnisverkfæri"
+}

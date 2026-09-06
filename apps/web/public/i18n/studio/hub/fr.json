@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Tutoriel sur les fonctionnalités",
+  "studio.hub.subtitle": "Une fonction à la fois sans aucun fardeau. J'ai regardé {done}/{total}.",
+  "studio.hub.progressAriaLabel": "Progression du didacticiel",
+  "studio.hub.listAriaLabel": "Liste des fonctionnalités",
+  "studio.hub.checked": "jetez un oeil",
+  "studio.hub.prev": "Précédent",
+  "studio.hub.next": "suivant",
+  "studio.hub.markComplete": "marquer comme terminé",
+  "studio.hub.completed": "Terminé",
+  "studio.hub.tryLabelDefault": "Suivez-le",
+  "studio.hub.stepAriaPrefix": "étape"
+}

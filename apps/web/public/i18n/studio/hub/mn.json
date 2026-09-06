@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Онцлох заавар",
+  "studio.hub.subtitle": "Ямар ч ачаалалгүйгээр нэг функц. Би {done}/{total}-г харлаа.",
+  "studio.hub.progressAriaLabel": "Хичээлийн явц",
+  "studio.hub.listAriaLabel": "Онцлогын жагсаалт",
+  "studio.hub.checked": "хараарай",
+  "studio.hub.prev": "Өмнөх",
+  "studio.hub.next": "дараагийн",
+  "studio.hub.markComplete": "дууссан гэж тэмдэглэнэ",
+  "studio.hub.completed": "Дууссан",
+  "studio.hub.tryLabelDefault": "Дагаад яв",
+  "studio.hub.stepAriaPrefix": "алхам"
+}

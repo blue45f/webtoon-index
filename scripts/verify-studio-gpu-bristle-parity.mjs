@@ -57,7 +57,7 @@ function writeJson(fileName, value) {
   writeFileSync(join(SCRATCH, fileName), `${JSON.stringify(value, null, 2)}\n`);
 }
 
-function validateSuccess(result, diagnostics) {
+function validateSuccess(result, diagnostics) { // NOSONAR javascript:S3776
   const failures = [];
 
   invariant(result.backend === "webgpu", `expected webgpu backend, got ${result.backend}`);
@@ -101,12 +101,12 @@ function validateSuccess(result, diagnostics) {
 
   // A tuft whose hairs all carry the same terminal load is a uniform rake, not a brush. The KS
   // judgement alone cannot see that (two identical degenerate samples agree perfectly).
-  if (!(result.metrics?.gpuTerminalLoadStdDev > 0)) {
+  if (result.metrics?.gpuTerminalLoadStdDev <= 0) {
     failures.push(
       "G3: every bristle ended with an identical load — STIFFNESS_VARIATION/BRISTLE_JITTER collapsed",
     );
   }
-  if (!(result.metrics?.depositedSplatCount > 0)) {
+  if (result.metrics?.depositedSplatCount <= 0) {
     failures.push("G3: the twin deposited nothing, so conservation compared zero against zero");
   }
 

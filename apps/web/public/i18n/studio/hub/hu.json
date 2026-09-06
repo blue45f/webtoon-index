@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Feature Tutorial",
+  "studio.hub.subtitle": "Egyszerre egy funkciót teher nélkül. Megnéztem {done}/{total}.",
+  "studio.hub.progressAriaLabel": "Az oktatóprogram előrehaladása",
+  "studio.hub.listAriaLabel": "Funkciólista",
+  "studio.hub.checked": "nézd meg",
+  "studio.hub.prev": "Előző",
+  "studio.hub.next": "következő",
+  "studio.hub.markComplete": "jelölje meg teljesnek",
+  "studio.hub.completed": "Befejezve",
+  "studio.hub.tryLabelDefault": "Kövesd",
+  "studio.hub.stepAriaPrefix": "lépést"
+}

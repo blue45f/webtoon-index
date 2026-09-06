@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "वैशिष्ट्य ट्यूटोरियल",
+  "studio.hub.subtitle": "कोणत्याही ओझेशिवाय एका वेळी एक कार्य. मी {done}/{total} कडे पाहिले.",
+  "studio.hub.progressAriaLabel": "ट्यूटोरियल प्रगती",
+  "studio.hub.listAriaLabel": "वैशिष्ट्य सूची",
+  "studio.hub.checked": "एक नजर टाका",
+  "studio.hub.prev": "मागील",
+  "studio.hub.next": "पुढील",
+  "studio.hub.markComplete": "पूर्ण म्हणून चिन्हांकित करा",
+  "studio.hub.completed": "पूर्ण झाले",
+  "studio.hub.tryLabelDefault": "सोबत अनुसरण करा",
+  "studio.hub.stepAriaPrefix": "पाऊल"
+}

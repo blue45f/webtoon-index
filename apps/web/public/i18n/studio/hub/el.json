@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Εκμάθηση χαρακτηριστικών",
+  "studio.hub.subtitle": "Μία λειτουργία τη φορά χωρίς καμία επιβάρυνση. Κοίταξα {done}/{total}.",
+  "studio.hub.progressAriaLabel": "Πρόοδος του φροντιστηρίου",
+  "studio.hub.listAriaLabel": "Λίστα χαρακτηριστικών",
+  "studio.hub.checked": "ρίξτε μια ματιά",
+  "studio.hub.prev": "Προηγούμενο",
+  "studio.hub.next": "επόμενο",
+  "studio.hub.markComplete": "επισημάνετε ως ολοκληρωμένο",
+  "studio.hub.completed": "Ολοκληρώθηκε",
+  "studio.hub.tryLabelDefault": "Ακολουθήστε",
+  "studio.hub.stepAriaPrefix": "βήμα"
+}

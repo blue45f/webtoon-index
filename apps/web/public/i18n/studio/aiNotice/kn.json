@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "ಜನರೇಟಿವ್ AI ಇಮೇಜ್ ಗೈಡ್",
+  "studio.aiNotice.description": "ಈ ಕಾರ್ಯವು ಉತ್ಪಾದಕ AI (OpenAI) ಬಳಸಿಕೊಂಡು ಚಿತ್ರಗಳನ್ನು ರಚಿಸುತ್ತದೆ. ರಚಿಸಿದ ಫಲಿತಾಂಶಗಳಲ್ಲಿ AI ಬ್ಯಾಡ್ಜ್‌ಗಳನ್ನು ಪ್ರದರ್ಶಿಸಲಾಗುತ್ತದೆ.",
+  "studio.aiNotice.ruleCopyright": "ನಾವು ಇತರ ಜನರ ಕೃತಿಗಳು, ಪಾತ್ರಗಳು ಅಥವಾ ನಿಜವಾದ ಜನರ ಮುಖಗಳನ್ನು ರಚಿಸುವುದಿಲ್ಲ.",
+  "studio.aiNotice.ruleAccuracy": "AI ಫಲಿತಾಂಶಗಳು ನಿಖರವಾಗಿಲ್ಲದಿರಬಹುದು ಅಥವಾ ಉದ್ದೇಶಿಸಿದ್ದಕ್ಕಿಂತ ಭಿನ್ನವಾಗಿರಬಹುದು.",
+  "studio.aiNotice.ruleResponsibility": "ನೀವು ರಚಿಸುವ ಚಿತ್ರಗಳನ್ನು ಬಳಸಲು ನೀವು ಜವಾಬ್ದಾರರಾಗಿರುತ್ತೀರಿ.",
+  "studio.aiNotice.cancel": "ರದ್ದುಮಾಡು",
+  "studio.aiNotice.confirm": "ನಾನು ಅರ್ಥಮಾಡಿಕೊಂಡಿದ್ದೇನೆ, ರಚಿಸಿ"
+}

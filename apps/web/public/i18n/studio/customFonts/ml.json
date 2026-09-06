@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "എൻ്റെ ഫോണ്ട്",
+  "studio.customFonts.importButton": "ഫയലിൽ നിന്ന് ഇറക്കുമതി ചെയ്യുക",
+  "studio.customFonts.importing": "പരിശോധിക്കുന്നു...",
+  "studio.customFonts.importAria": "ഫോണ്ട് ഫയൽ ഇറക്കുമതി ചെയ്യുക",
+  "studio.customFonts.storageAria": "ഫോണ്ട് ലൈബ്രറി ഉപയോഗം",
+  "studio.customFonts.emptyTitle": "ഇതുവരെ ഫോണ്ടുകളൊന്നും ഉൾപ്പെടുത്തിയിട്ടില്ല.",
+  "studio.customFonts.unknownFileName": "ഫയലിൻ്റെ പേരില്ല",
+  "studio.customFonts.apply": "അപേക്ഷിക്കുക",
+  "studio.customFonts.applyToText": "തിരഞ്ഞെടുത്ത വാചകത്തിൽ ഈ ഫോണ്ട് പ്രയോഗിക്കുക",
+  "studio.customFonts.selectTextFirst": "ആദ്യം ടെക്സ്റ്റ് അല്ലെങ്കിൽ സ്പീച്ച് ബബിൾ തിരഞ്ഞെടുക്കുക",
+  "studio.customFonts.delete": "ഫോണ്ട് ഇല്ലാതാക്കുക"
+}

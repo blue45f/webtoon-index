@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "జనరేటివ్ AI ఇమేజ్ గైడ్",
+  "studio.aiNotice.description": "ఈ ఫంక్షన్ జెనరేటివ్ AI (OpenAI) ఉపయోగించి చిత్రాలను సృష్టిస్తుంది. సృష్టించిన ఫలితాలపై AI బ్యాడ్జ్‌లు ప్రదర్శించబడతాయి.",
+  "studio.aiNotice.ruleCopyright": "మేము ఇతరుల రచనలు, పాత్రలు లేదా నిజమైన వ్యక్తుల ముఖాలను సృష్టించము.",
+  "studio.aiNotice.ruleAccuracy": "AI ఫలితాలు తప్పుగా ఉండవచ్చు లేదా ఉద్దేశించిన వాటికి భిన్నంగా ఉండవచ్చు.",
+  "studio.aiNotice.ruleResponsibility": "మీరు సృష్టించిన చిత్రాలను ఉపయోగించాల్సిన బాధ్యత మీదే.",
+  "studio.aiNotice.cancel": "రద్దు చేయి",
+  "studio.aiNotice.confirm": "నేను అర్థం చేసుకున్నాను, సృష్టించు"
+}

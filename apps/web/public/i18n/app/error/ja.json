@@ -1,0 +1,7 @@
+{
+  "error.reloading": "最新バージョンへ更新中…",
+  "error.chunkRetryFailed": "再読み込みを行いましたが問題が解決しませんでした。ネットワーク接続をご確認の上、再試行してください。",
+  "error.reloadButton": "再読み込み",
+  "error.goHome": "ホームへ戻る",
+  "error.retryDesc": "再試行するかホームにお戻りください。"
+}

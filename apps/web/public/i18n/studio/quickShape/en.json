@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "Smart Shape",
+  "studio.quickShape.description.active": "Draw line/oval/triangle/circle and it will refine into a clean shape.",
+  "studio.quickShape.description.inactive": "It’s okay to rough sketch. When enabled, it converts hand drawing into clean shape strokes.",
+  "studio.quickShape.toggleHint": "Hand-drawn shape snaps into a clean form the moment you lift the pen. A preview appears even if you pause briefly.",
+  "studio.quickShape.toggleAria.on": "Smart shape enabled",
+  "studio.quickShape.toggleAria.off": "Smart shape disabled",
+  "studio.quickShape.matchedSuffix": " looks like this · finalize when you release",
+  "studio.quickShape.emptyStatus": "Draw and release, or pause briefly at the end to preview.",
+  "studio.quickShape.openTutorial": "Open Smart Shape tutorial",
+  "studio.quickShape.notice": "Hand-drawn shape refines into clean lines/ovals/rectangles when you release. Pause briefly to preview."
+}

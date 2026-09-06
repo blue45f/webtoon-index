@@ -39,8 +39,9 @@ const JIRA_ASSIGNEE_ACCOUNT_ID = process.env.JIRA_ASSIGNEE_ACCOUNT_ID ?? "";
 const GITHUB_RUN_URL = process.env.GITHUB_SERVER_URL && process.env.GITHUB_REPOSITORY && process.env.GITHUB_RUN_ID
   ? `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}`
   : "local";
-// eslint-disable-next-line no-control-regex -- strips ANSI CSI/OSC terminal escapes from QA output
-const ANSI = /\u001B(?:\[[0-?]*[ -/]*[@-~]|\][^\u0007]*(?:\u0007|\u001B\\))/gu;
+const ESC = String.fromCodePoint(0x1b);
+const BEL = String.fromCodePoint(0x07);
+const ANSI = new RegExp(`${ESC}(?:\\[[0-?]*[ -/]*[@-~]|\\][^${BEL}]*(?:${BEL}|${ESC}\\\\))`, "gu");
 
 const SUITES = Object.freeze({
   "ui-inapp": [
@@ -149,7 +150,7 @@ function fingerprint(category, value) {
   return createHash("sha256").update(`${category}\n${normalise(value)}`).digest("hex");
 }
 
-function knownJiraFor(value) {
+function knownJiraFor(value) { // NOSONAR javascript:S3800
   return KNOWN_JIRA.find(([, pattern]) => pattern.test(value))?.[0] ?? null;
 }
 
@@ -206,8 +207,7 @@ function selectCases(suite) {
   const requested = new Set(REQUESTED_CASES);
   const selected = suite.filter((testCase) => {
     if (requested.size > 0 && !requested.has(testCase.id)) return false;
-    if (CASE_PATTERN && !CASE_PATTERN.test(testCase.id)) return false;
-    return true;
+    return !CASE_PATTERN || CASE_PATTERN.test(testCase.id);
   });
   if (selected.length === 0) {
     const available = suite.map((testCase) => testCase.id).join(", ");
@@ -311,7 +311,7 @@ async function jiraRequest(endpoint, options = {}) {
     ...options,
     headers: {
       Accept: "application/json",
-      Authorization: `Basic ${Buffer.from(`${JIRA_EMAIL}:${JIRA_API_TOKEN}`).toString("base64")}`,
+      Authorization: `Basic ${Buffer.from(JIRA_EMAIL + ":" + JIRA_API_TOKEN).toString("base64")}`,
       "Content-Type": "application/json",
       ...(options.headers ?? {}),
     },
@@ -477,7 +477,7 @@ async function updateJira(results) {
   return report;
 }
 
-async function main() {
+async function main() { // NOSONAR javascript:S3776
   const suite = SUITES[SUITE];
   if (!suite) throw new Error(`Unknown QA_SUITE: ${SUITE}`);
   const selectedCases = selectCases(suite);

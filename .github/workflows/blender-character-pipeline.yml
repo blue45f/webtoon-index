@@ -12,7 +12,7 @@ on:
       - "scripts/import-blender-character-package.mts"
       - "scripts/setup-toonstudio-blender-pipeline.mts"
       - "scripts/verify-blender-character-pipeline.mjs"
-      - "src/domains/creator/vrm/studio-vrm-blender-character-package*"
+      - "apps/web/src/domains/creator/vrm/studio-vrm-blender-character-package*"
       - "tests/blender/**"
       - "tools/blender/toonstudio_blender_kit/**"
   pull_request:
@@ -24,7 +24,7 @@ on:
       - "scripts/import-blender-character-package.mts"
       - "scripts/setup-toonstudio-blender-pipeline.mts"
       - "scripts/verify-blender-character-pipeline.mjs"
-      - "src/domains/creator/vrm/studio-vrm-blender-character-package*"
+      - "apps/web/src/domains/creator/vrm/studio-vrm-blender-character-package*"
       - "tests/blender/**"
       - "tools/blender/toonstudio_blender_kit/**"
   workflow_dispatch:
@@ -79,13 +79,13 @@ jobs:
           scripts/import-blender-character-package.mts
           scripts/setup-toonstudio-blender-pipeline.mts
           scripts/verify-blender-character-pipeline.mjs
-          src/domains/creator/vrm/studio-vrm-blender-character-package.ts
-          src/domains/creator/vrm/studio-vrm-blender-character-package.test.ts
+          apps/web/src/domains/creator/vrm/studio-vrm-blender-character-package.ts
+          apps/web/src/domains/creator/vrm/studio-vrm-blender-character-package.test.ts
 
       - name: Test ToonStudio package admission boundary
         run: >-
           pnpm exec vitest run
-          src/domains/creator/vrm/studio-vrm-blender-character-package.test.ts
+          apps/web/src/domains/creator/vrm/studio-vrm-blender-character-package.test.ts
 
       - name: Type-check the web workspace
         run: pnpm exec tsc -p tsconfig.json --noEmit --incremental false
@@ -172,7 +172,7 @@ jobs:
           --project-root "$GITHUB_WORKSPACE"
 
       - name: Record the exact Orion source digest
-        run: sha256sum public/vrm/Avatar_Orion.vrm
+        run: sha256sum apps/web/public/vrm/Avatar_Orion.vrm
 
       - name: Upgrade the audited Orion source to authored hair and semantic face controls
         run: >-

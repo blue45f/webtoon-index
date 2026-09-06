@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Hurtig kommandolinje",
+  "studio.commandBar.settings": "Kommandolinjeindstillinger",
+  "studio.commandBar.settingsDescription": "Skift pladsopsætning og synlighed for kommandolinjen under menulinjen.",
+  "studio.commandBar.settingsTip": "Placer de kommandoer, du bruger mest, i de første pladser, så er de hurtigst at nå.",
+  "studio.commandBar.settingsClose": "Luk kommandolinjeindstillinger",
+  "studio.commandBar.settingsStorageNote": "Pladsopsætningen gemmes i denne browsers arbejdsområdeindstillinger.",
+  "studio.commandBar.showSlots": "Vis kommandopladser",
+  "studio.commandBar.slot": "Plads {index}",
+  "studio.commandBar.slotAria": "Kommandoplads {index}",
+  "studio.commandBar.slotEmpty": "Tom plads",
+  "studio.commandBar.resetDefaults": "Nulstil til standardopsætning",
+  "studio.commandBar.command.undo": "Fortryd",
+  "studio.commandBar.command.redo": "Gentag",
+  "studio.commandBar.command.save": "Gem kladde",
+  "studio.commandBar.command.publish": "Udgiv",
+  "studio.commandBar.command.download": "Hent den aktuelle side",
+  "studio.commandBar.command.export-open": "Eksportindstillinger",
+  "studio.commandBar.command.zoom-fit": "Tilpas til skærmbredden",
+  "studio.commandBar.command.assets": "Skabeloner og materialer",
+  "studio.commandBar.command.bubbles": "Taleboble",
+  "studio.commandBar.command.project": "Projektværktøjer"
+}

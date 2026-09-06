@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "ഫീച്ചർ ട്യൂട്ടോറിയൽ",
+  "studio.hub.subtitle": "ഒരു ഭാരവുമില്ലാതെ ഒരു സമയം ഒരു പ്രവർത്തനം. ഞാൻ {done}/{total} നോക്കി.",
+  "studio.hub.progressAriaLabel": "ട്യൂട്ടോറിയൽ പുരോഗതി",
+  "studio.hub.listAriaLabel": "ഫീച്ചർ ലിസ്റ്റ്",
+  "studio.hub.checked": "ഒന്നു നോക്കൂ",
+  "studio.hub.prev": "മുമ്പത്തെ",
+  "studio.hub.next": "അടുത്തത്",
+  "studio.hub.markComplete": "പൂർത്തിയായതായി അടയാളപ്പെടുത്തുക",
+  "studio.hub.completed": "പൂർത്തിയാക്കി",
+  "studio.hub.tryLabelDefault": "കൂടെ പിന്തുടരുക",
+  "studio.hub.stepAriaPrefix": "പടി"
+}

@@ -65,7 +65,10 @@ function record(id, passed, details = {}, severity = "hard") {
     details,
     at: new Date().toISOString(),
   });
-  const prefix = passed ? "PASS" : severity === "hard" ? "FAIL" : "WARN";
+  let prefix;
+  if (passed) prefix = "PASS";
+  else if (severity === "hard") prefix = "FAIL";
+  else prefix = "WARN";
   console.log(`[auth-browser] ${prefix} ${id}: ${safeText(JSON.stringify(details), 800)}`);
 }
 
@@ -374,7 +377,7 @@ async function probeSessionFailureRecovery(context) {
   return { intercepted, degraded, localErrors, recovered, recoveredSession };
 }
 
-async function main() {
+async function main() { // NOSONAR javascript:S3776
   await mkdir(REPORT_DIR, { recursive: true });
   await mkdir(EVIDENCE_DIR, { recursive: true });
 

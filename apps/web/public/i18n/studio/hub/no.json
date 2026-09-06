@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Funksjonsveiledning",
+  "studio.hub.subtitle": "En funksjon om gangen uten noen belastning. Jeg så på {done}/{total}.",
+  "studio.hub.progressAriaLabel": "Opplæringsfremgang",
+  "studio.hub.listAriaLabel": "Funksjonsliste",
+  "studio.hub.checked": "ta en titt",
+  "studio.hub.prev": "Forrige",
+  "studio.hub.next": "neste",
+  "studio.hub.markComplete": "merk som komplett",
+  "studio.hub.completed": "Fullført",
+  "studio.hub.tryLabelDefault": "Følg med",
+  "studio.hub.stepAriaPrefix": "trinn"
+}

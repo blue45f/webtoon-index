@@ -9,23 +9,23 @@
 import {
   combineStudioDualTipExactCoverageV2,
   compositeStudioDualTipExactDepositionV2,
-} from "../src/domains/creator/studio-dual-brush-tip-engine";
+} from "../apps/web/src/domains/creator/studio-dual-brush-tip-engine";
 import {
   buildStudioDynamicDualTipExactPlanV2,
   createStudioDynamicDualTipExactWebGpuRuntimeV2,
-} from "../src/domains/creator/studio-dynamic-dual-tip-webgpu-runtime-v2";
+} from "../apps/web/src/domains/creator/studio-dynamic-dual-tip-webgpu-runtime-v2";
 
 import type {
   StudioDualTipExactBlendFamily,
   StudioDualTipExactDepositionPixel,
   StudioDualTipPremultipliedLinearRgba,
-} from "../src/domains/creator/studio-dual-brush-tip-engine";
+} from "../apps/web/src/domains/creator/studio-dual-brush-tip-engine";
 import type {
   StudioDynamicDualTipExactDepositionInputV2,
   StudioDynamicDualTipExactPlanV2,
   StudioDynamicDualTipExactWebGpuReceiptV2,
   StudioDynamicDualTipExactWebGpuRuntimeV2,
-} from "../src/domains/creator/studio-dynamic-dual-tip-webgpu-runtime-v2";
+} from "../apps/web/src/domains/creator/studio-dynamic-dual-tip-webgpu-runtime-v2";
 
 const WIDTH = 80;
 const HEIGHT = 32;

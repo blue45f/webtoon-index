@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "বৈশিষ্ট্য টিউটোৰিয়েল",
+  "studio.hub.subtitle": "কোনো বোজা নোহোৱাকৈ এটা এটাকৈ এটা কাম। মই {done}/{total} লৈ চালোঁ।",
+  "studio.hub.progressAriaLabel": "টিউটোৰিয়েলৰ অগ্ৰগতি",
+  "studio.hub.listAriaLabel": "বৈশিষ্ট্য তালিকা",
+  "studio.hub.checked": "এবাৰ চাওকচোন",
+  "studio.hub.prev": "পূৰ্বৰ",
+  "studio.hub.next": "পৰৱৰ্তী",
+  "studio.hub.markComplete": "সম্পূৰ্ণ বুলি চিহ্নিত কৰক",
+  "studio.hub.completed": "সম্পূৰ্ণ হ’ল",
+  "studio.hub.tryLabelDefault": "অনুসৰণ কৰক",
+  "studio.hub.stepAriaPrefix": "ষ্টেপ"
+}

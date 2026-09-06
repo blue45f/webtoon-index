@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Upau wa amri za haraka",
+  "studio.commandBar.settings": "Mipangilio ya upau wa amri",
+  "studio.commandBar.settingsDescription": "Badilisha mpangilio wa nafasi na uonekano wa upau wa amri chini ya upau wa menyu.",
+  "studio.commandBar.settingsTip": "Weka amri unazotumia zaidi katika nafasi za kwanza ili zifikike haraka zaidi.",
+  "studio.commandBar.settingsClose": "Funga mipangilio ya upau wa amri",
+  "studio.commandBar.settingsStorageNote": "Mpangilio wa nafasi huhifadhiwa katika mipangilio ya eneo la kazi la kivinjari hiki.",
+  "studio.commandBar.showSlots": "Onyesha nafasi za amri",
+  "studio.commandBar.slot": "Nafasi {index}",
+  "studio.commandBar.slotAria": "Nafasi ya amri {index}",
+  "studio.commandBar.slotEmpty": "Nafasi tupu",
+  "studio.commandBar.resetDefaults": "Rejesha mpangilio chaguo-msingi",
+  "studio.commandBar.command.undo": "Tendua",
+  "studio.commandBar.command.redo": "Rudia",
+  "studio.commandBar.command.save": "Hifadhi rasimu",
+  "studio.commandBar.command.publish": "Chapisha",
+  "studio.commandBar.command.download": "Pakua ukurasa wa sasa",
+  "studio.commandBar.command.export-open": "Chaguo za kuhamisha",
+  "studio.commandBar.command.zoom-fit": "Toshesha upana wa skrini",
+  "studio.commandBar.command.assets": "Violezo na rasilimali",
+  "studio.commandBar.command.bubbles": "Kiputo cha maneno",
+  "studio.commandBar.command.project": "Zana za mradi"
+}

@@ -12,7 +12,7 @@ import {
 import {
   TOONSPECTRUM_CSRF_HEADER,
   TOONSPECTRUM_CSRF_HEADER_VALUE,
-} from "../../../../../lib/csrf";
+} from "../../../../web/src/shared/lib/csrf";
 import { isAllowedCsrfOrigin, isSameRequestOrigin } from "../../csrf-middleware";
 
 import { TrafficAnalyticsService } from "./traffic-analytics.service";

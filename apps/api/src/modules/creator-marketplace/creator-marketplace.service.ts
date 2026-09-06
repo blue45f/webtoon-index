@@ -30,8 +30,8 @@ import {
   CreatorMarketplaceStoredResourceManifestSchema,
   canonicalizeCreatorMarketplaceJson,
   creatorMarketplaceJsonByteSize,
-} from "../../../../../lib/creator-marketplace-resource-contract";
-import { findStarterMarketplaceResourceById } from "../../../../../lib/creator-marketplace-starter-catalog";
+} from "../../../../web/src/shared/lib/creator-marketplace-resource-contract";
+import { findStarterMarketplaceResourceById } from "../../../../web/src/shared/lib/creator-marketplace-starter-catalog";
 
 import {
   CREATOR_MARKETPLACE_PUBLISH_GATE,
@@ -82,7 +82,7 @@ import type {
   CreatorMarketplaceResourceRecord,
   CreatorMarketplaceResourceRelistReceipt,
   CreatorMarketplaceResourceReportReceipt,
-} from "../../../../../lib/creator-marketplace-resource-contract";
+} from "../../../../web/src/shared/lib/creator-marketplace-resource-contract";
 
 interface CreatorMarketplaceCursorEnvelope {
   version: 3;

@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "જનરેટિવ AI છબી માર્ગદર્શિકા",
+  "studio.aiNotice.description": "આ ફંક્શન જનરેટિવ AI (OpenAI) નો ઉપયોગ કરીને છબીઓ બનાવે છે. બનાવેલ પરિણામો પર AI બેજેસ પ્રદર્શિત થાય છે.",
+  "studio.aiNotice.ruleCopyright": "અમે અન્ય લોકોના કાર્યો, પાત્રો અથવા વાસ્તવિક લોકોના ચહેરા બનાવતા નથી.",
+  "studio.aiNotice.ruleAccuracy": "AI પરિણામો અચોક્કસ અથવા હેતુથી અલગ હોઈ શકે છે.",
+  "studio.aiNotice.ruleResponsibility": "તમે બનાવો છો તે છબીઓનો ઉપયોગ કરવા માટે તમે જવાબદાર છો.",
+  "studio.aiNotice.cancel": "રદ કરો",
+  "studio.aiNotice.confirm": "હું સમજું છું, બનાવો"
+}

@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "мој фонт",
+  "studio.customFonts.importButton": "Увези из датотеке",
+  "studio.customFonts.importing": "Проверава се…",
+  "studio.customFonts.importAria": "Увезите датотеку фонта",
+  "studio.customFonts.storageAria": "Коришћење библиотеке фонтова",
+  "studio.customFonts.emptyTitle": "Још увек нема укључених фонтова.",
+  "studio.customFonts.unknownFileName": "Нема имена датотеке",
+  "studio.customFonts.apply": "Пријавите се",
+  "studio.customFonts.applyToText": "Примените овај фонт на изабрани текст",
+  "studio.customFonts.selectTextFirst": "Прво изаберите текст или облачић са говором",
+  "studio.customFonts.delete": "избрисати фонт"
+}

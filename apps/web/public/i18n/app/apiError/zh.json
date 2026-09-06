@@ -1,0 +1,9 @@
+{
+  "apiError.loginRequired": "需要先登录。",
+  "apiError.adminRequired": "无法验证管理员权限。",
+  "apiError.adminOnlyPage": "此页面仅限管理员访问。",
+  "apiError.notFound": "未找到目标项目。",
+  "apiError.unsupportedType": "不支持的内容类型。",
+  "apiError.inactiveAccount": "未激活的账号无法使用管理员权限。",
+  "apiError.settlementFailed": "结算处理失败。"
+}

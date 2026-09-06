@@ -4,7 +4,7 @@ import {
   type StudioBrushMediaPixelPoint,
 } from "./studio-brush-media-pixel-quality";
 
-import type { StudioBrushMaterialGroup } from "../src/domains/creator/brush/studio-brush-visual";
+import type { StudioBrushMaterialGroup } from "../apps/web/src/domains/creator/brush/studio-brush-visual";
 
 /** 예전 "paint" 미디어 그룹의 재질 축 대응 집합 (수채·유화·에어브러시). */
 const SOFT_WET_MATERIAL_GROUPS: ReadonlySet<StudioBrushMaterialGroup> = new Set([

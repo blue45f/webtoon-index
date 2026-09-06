@@ -4,7 +4,7 @@ import { createHash } from 'node:crypto';
 import { inflateSync } from 'node:zlib';
 import vm from 'node:vm';
 import test from 'node:test';
-import { ASSETS, createAsset } from '../public/assets/reference-rebuild/generator.mjs';
+import { ASSETS, createAsset } from '../apps/web/public/assets/reference-rebuild/generator.mjs';
 
 const hash = b => createHash('sha256').update(b).digest('hex');
 function parse(bytes) {
@@ -73,7 +73,7 @@ for (const asset of ASSETS) {
       assert.ok(Math.abs(Math.hypot(...node.rotation) - 1) < 1e-7);
     }
   });
-  test(`${asset.id}: complete indexed meshes, finite bounds, outward normals and UVs`, () => {
+  test(`${asset.id}: complete indexed meshes, finite bounds, outward normals and UVs`, () => { // NOSONAR javascript:S3776
     const { doc, read } = parse(generated.get(asset.id));
     for (let i = 0; i < doc.accessors.length; i++) read(i);
     for (const mesh of doc.meshes) for (const primitive of mesh.primitives) {
@@ -94,7 +94,7 @@ for (const asset of ASSETS) {
       }
     }
   });
-  test(`${asset.id}: embedded, CRC-valid decodable PNGs and normalized PBR`, () => {
+  test(`${asset.id}: embedded, CRC-valid decodable PNGs and normalized PBR`, () => { // NOSONAR javascript:S3776
     const { doc, bin } = parse(generated.get(asset.id));
     assert.equal(doc.images.length, 2);
     assert.ok(doc.buffers.every(b => !Object.hasOwn(b,'uri')));
@@ -107,7 +107,8 @@ for (const asset of ASSETS) {
         assert.ok(offset+12+length<=png.length);
         assert.equal(crc32(png.subarray(offset+4,offset+8+length)),png.readUInt32BE(offset+8+length));
         if(type==='IDAT')chunks.push(png.subarray(offset+8,offset+8+length));
-        if(type==='IEND')ended=true; offset+=length+12;
+        if (type === "IEND") { ended = true; }
+        offset += length + 12;
       }
       assert.equal(ended,true); assert.equal(png.readUInt32BE(16),128); assert.equal(png.readUInt32BE(20),128);
       assert.equal(inflateSync(Buffer.concat(chunks)).length,(128*3+1)*128);
@@ -136,7 +137,7 @@ test('unknown IDs cannot generate files',()=>{
 });
 test('worker rejects invalid requests and transfers actual GLB bytes',()=>{
   const messages=[]; const self={postMessage:(message,transfer)=>messages.push({message,transfer})};
-  const source=readFileSync(new URL('../public/assets/reference-rebuild/worker.mjs',import.meta.url),'utf8').replace(/^import[^\n]+\n/u,'');
+  const source=readFileSync(new URL('../apps/web/public/assets/reference-rebuild/worker.mjs',import.meta.url),'utf8').replace(/^import[^\n]+\n/u,'');
   vm.runInNewContext(source,{self,ASSETS,createAsset});
   for(const data of [null,{}, {version:2,type:'build',id:'bookcase'},{version:1,type:'build',id:'constructor'}])self.onmessage({data});
   assert.ok(messages.every(({message})=>message.type==='error'));

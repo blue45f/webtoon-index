@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "機能のチュートリアル",
+  "studio.hub.subtitle": "一度に 1 つの特徴を取り上げます。 {done}/{total} を確認しました。",
+  "studio.hub.progressAriaLabel": "チュートリアルの進行状況",
+  "studio.hub.listAriaLabel": "機能一覧",
+  "studio.hub.checked": "レビュー済み",
+  "studio.hub.prev": "前の",
+  "studio.hub.next": "次",
+  "studio.hub.markComplete": "完了としてマークを付ける",
+  "studio.hub.completed": "完了しました",
+  "studio.hub.tryLabelDefault": "試す",
+  "studio.hub.stepAriaPrefix": "ステップ"
+}

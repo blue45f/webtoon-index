@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "فیچر ٹیوٹوریل",
+  "studio.hub.subtitle": "ایک وقت میں ایک فنکشن بغیر کسی بوجھ کے۔ میں نے {done}/{total} کو دیکھا۔",
+  "studio.hub.progressAriaLabel": "سبق کی پیشرفت",
+  "studio.hub.listAriaLabel": "خصوصیت کی فہرست",
+  "studio.hub.checked": "ایک نظر ڈالیں",
+  "studio.hub.prev": "پچھلا",
+  "studio.hub.next": "اگلا",
+  "studio.hub.markComplete": "مکمل کے طور پر نشان زد کریں",
+  "studio.hub.completed": "مکمل",
+  "studio.hub.tryLabelDefault": "ساتھ ساتھ عمل کریں",
+  "studio.hub.stepAriaPrefix": "قدم"
+}

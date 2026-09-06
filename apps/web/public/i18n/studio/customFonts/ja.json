@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "カスタムフォント",
+  "studio.customFonts.importButton": "フォントファイルをインポートする",
+  "studio.customFonts.importing": "フォントをインポート中…",
+  "studio.customFonts.importAria": "カスタムフォントファイルを選択してください",
+  "studio.customFonts.storageAria": "カスタムフォントストレージの使用量",
+  "studio.customFonts.emptyTitle": "カスタム フォントはまだありません",
+  "studio.customFonts.unknownFileName": "不明なファイル",
+  "studio.customFonts.apply": "適用する",
+  "studio.customFonts.applyToText": "このフォントを選択したテキストに適用します",
+  "studio.customFonts.selectTextFirst": "最初にテキストまたは吹き出しを選択してください",
+  "studio.customFonts.delete": "フォントの削除"
+}

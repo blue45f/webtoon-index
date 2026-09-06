@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Tezkor buyruqlar paneli",
+  "studio.commandBar.settings": "Buyruqlar paneli sozlamalari",
+  "studio.commandBar.settingsDescription": "Menyu panelidan pastdagi buyruqlar panelining uyalar joylashuvi va ko'rinishini o'zgartiring.",
+  "studio.commandBar.settingsTip": "Eng ko'p ishlatadigan buyruqlarni birinchi uyalarga qo'ysangiz, ularga eng tez yetasiz.",
+  "studio.commandBar.settingsClose": "Buyruqlar paneli sozlamalarini yopish",
+  "studio.commandBar.settingsStorageNote": "Uyalar joylashuvi shu brauzerning ish maydoni sozlamalarida saqlanadi.",
+  "studio.commandBar.showSlots": "Buyruq uyalarini ko'rsatish",
+  "studio.commandBar.slot": "Uya {index}",
+  "studio.commandBar.slotAria": "Buyruq uyasi {index}",
+  "studio.commandBar.slotEmpty": "Bo'sh uya",
+  "studio.commandBar.resetDefaults": "Standart joylashuvga qaytarish",
+  "studio.commandBar.command.undo": "Bekor qilish",
+  "studio.commandBar.command.redo": "Qaytarish",
+  "studio.commandBar.command.save": "Qoralamani saqlash",
+  "studio.commandBar.command.publish": "Nashr qilish",
+  "studio.commandBar.command.download": "Joriy sahifani yuklab olish",
+  "studio.commandBar.command.export-open": "Eksport parametrlari",
+  "studio.commandBar.command.zoom-fit": "Ekran kengligiga moslashtirish",
+  "studio.commandBar.command.assets": "Shablonlar va resurslar",
+  "studio.commandBar.command.bubbles": "Nutq pufagi",
+  "studio.commandBar.command.project": "Loyiha vositalari"
+}

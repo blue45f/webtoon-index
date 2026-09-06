@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Хурдан командын мөр",
+  "studio.commandBar.settings": "Командын мөрний тохиргоо",
+  "studio.commandBar.settingsDescription": "Цэсний мөрний доорх командын мөрний нүдний байрлал болон харагдацыг өөрчилнө.",
+  "studio.commandBar.settingsTip": "Хамгийн их хэрэглэдэг командуудаа эхний нүднүүдэд байрлуулбал хамгийн хурдан гар хүрнэ.",
+  "studio.commandBar.settingsClose": "Командын мөрний тохиргоог хаах",
+  "studio.commandBar.settingsStorageNote": "Нүдний байрлал энэ хөтчийн ажлын талбарын тохиргоонд хадгалагдана.",
+  "studio.commandBar.showSlots": "Командын нүднүүдийг харуулах",
+  "studio.commandBar.slot": "{index}-р нүд",
+  "studio.commandBar.slotAria": "{index}-р командын нүд",
+  "studio.commandBar.slotEmpty": "Хоосон нүд",
+  "studio.commandBar.resetDefaults": "Өгөгдмөл байрлалд буцаах",
+  "studio.commandBar.command.undo": "Буцаах",
+  "studio.commandBar.command.redo": "Дахин хийх",
+  "studio.commandBar.command.save": "Ноорог хадгалах",
+  "studio.commandBar.command.publish": "Нийтлэх",
+  "studio.commandBar.command.download": "Одоогийн хуудсыг татах",
+  "studio.commandBar.command.export-open": "Экспортын сонголтууд",
+  "studio.commandBar.command.zoom-fit": "Дэлгэцийн өргөнд тохируулах",
+  "studio.commandBar.command.assets": "Загвар ба нөөц",
+  "studio.commandBar.command.bubbles": "Ярианы бөмбөлөг",
+  "studio.commandBar.command.project": "Төслийн хэрэгслүүд"
+}

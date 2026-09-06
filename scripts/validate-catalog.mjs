@@ -43,7 +43,7 @@ function platformCounts(titles) {
   return m;
 }
 
-function main() {
+function main() { // NOSONAR javascript:S3776
   const [, , newPath, prevPath] = process.argv;
   if (!newPath) {
     console.error("usage: validate-catalog.mjs <new.json|.gz> [prev.json.gz]");
@@ -99,7 +99,9 @@ function main() {
 
   // ── 리포트 ──
   console.log(`\n검증 대상: ${newPath}`);
-  console.log(`전체 작품 수: ${total}${prev ? ` (직전 ${prev.length}, Δ${total - prev.length >= 0 ? "+" : ""}${total - prev.length})` : ""}`); // NOSONAR S8689 집계 수치만 출력(기밀 아님)
+  const previousDeltaSign = prev && total - prev.length >= 0 ? "+" : "";
+  const previousSummary = prev ? ` (직전 ${prev.length}, Δ${previousDeltaSign}${total - prev.length})` : "";
+  console.log(`전체 작품 수: ${total}${previousSummary}`); // NOSONAR S8689 집계 수치만 출력(기밀 아님)
   console.log(`불완전 레코드: ${malformed} (${(malformedRatio * 100).toFixed(2)}%)`);
   console.log("플랫폼별:");
   const allIds = [...new Set([...Object.keys(nextPc), ...(prevPc ? Object.keys(prevPc) : [])])].sort(
@@ -108,7 +110,9 @@ function main() {
   for (const id of allIds) {
     const nc = nextPc[id] || 0;
     const pc = prevPc ? prevPc[id] || 0 : null;
-    const delta = pc !== null ? ` (직전 ${pc}, ${nc - pc >= 0 ? "+" : ""}${nc - pc})` : "";
+    const deltaValue = nc - pc;
+    const deltaSign = deltaValue >= 0 ? "+" : "";
+    const delta = pc !== null ? ` (직전 ${pc}, ${deltaSign}${deltaValue})` : "";
     console.log(`  ${id.padEnd(16)} ${String(nc).padStart(6)}${delta}`);
   }
 

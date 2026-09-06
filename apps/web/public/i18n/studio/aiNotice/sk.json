@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Generatívny sprievodca obrazom AI",
+  "studio.aiNotice.description": "Táto funkcia vytvára obrázky pomocou generatívnej AI (OpenAI). Na vytvorených výsledkoch sa zobrazujú odznaky AI.",
+  "studio.aiNotice.ruleCopyright": "Nevytvárame cudzie diela, postavy ani tváre skutočných ľudí.",
+  "studio.aiNotice.ruleAccuracy": "Výsledky AI môžu byť nepresné alebo odlišné od toho, čo bolo zamýšľané.",
+  "studio.aiNotice.ruleResponsibility": "Ste zodpovedný za používanie obrázkov, ktoré vytvoríte.",
+  "studio.aiNotice.cancel": "Zrušiť",
+  "studio.aiNotice.confirm": "Rozumiem, tvorím"
+}

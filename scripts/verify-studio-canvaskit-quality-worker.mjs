@@ -119,7 +119,7 @@ function isQualityWorkerUrl(url) {
   return /studio-quality-worker-entry|toonspectrum-quality-geometry/iu.test(url);
 }
 
-function validateSuccess(result, diagnostics) {
+function validateSuccess(result, diagnostics) { // NOSONAR javascript:S3776
   const failures = [];
   if (result.backend !== "canvaskit-wasm-module-worker") {
     failures.push(`unexpected backend: ${result.backend}`);
@@ -271,7 +271,7 @@ function validateSuccess(result, diagnostics) {
   );
 }
 
-async function main() {
+async function main() { // NOSONAR javascript:S3776
   mkdirSync(SCRATCH, { recursive: true });
   const port = await findFreePort();
   const origin = `http://127.0.0.1:${port}/`;

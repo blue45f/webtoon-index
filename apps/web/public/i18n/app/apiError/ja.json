@@ -1,0 +1,9 @@
+{
+  "apiError.loginRequired": "ログインが必要です。",
+  "apiError.adminRequired": "管理者権限を確認できませんでした。",
+  "apiError.adminOnlyPage": "管理者専用ページです。",
+  "apiError.notFound": "対象が見つかりませんでした。",
+  "apiError.unsupportedType": "サポートされていないコンテンツタイプです。",
+  "apiError.inactiveAccount": "非アクティブなアカウントは管理者機能を利用できません。",
+  "apiError.settlementFailed": "精算処理に失敗しました。"
+}

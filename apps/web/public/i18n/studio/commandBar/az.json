@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Sürətli əmr paneli",
+  "studio.commandBar.settings": "Əmr paneli parametrləri",
+  "studio.commandBar.settingsDescription": "Menyu panelinin altındakı əmr panelinin yuva düzümünü və görünüşünü dəyişin.",
+  "studio.commandBar.settingsTip": "Ən çox işlətdiyiniz əmrləri ilk yuvalara qoyun ki, əlinizə ən tez çatsın.",
+  "studio.commandBar.settingsClose": "Əmr paneli parametrlərini bağla",
+  "studio.commandBar.settingsStorageNote": "Yuva düzümü bu brauzerin iş sahəsi parametrlərində saxlanılır.",
+  "studio.commandBar.showSlots": "Əmr yuvalarını göstər",
+  "studio.commandBar.slot": "Yuva {index}",
+  "studio.commandBar.slotAria": "Əmr yuvası {index}",
+  "studio.commandBar.slotEmpty": "Boş yuva",
+  "studio.commandBar.resetDefaults": "Susmaya görə düzümə qaytar",
+  "studio.commandBar.command.undo": "Geri al",
+  "studio.commandBar.command.redo": "Qaytar",
+  "studio.commandBar.command.save": "Qaralamanı saxla",
+  "studio.commandBar.command.publish": "Dərc et",
+  "studio.commandBar.command.download": "Cari səhifəni endir",
+  "studio.commandBar.command.export-open": "İxrac seçimləri",
+  "studio.commandBar.command.zoom-fit": "Ekran eninə uyğunlaşdır",
+  "studio.commandBar.command.assets": "Şablonlar və resurslar",
+  "studio.commandBar.command.bubbles": "Danışıq buludu",
+  "studio.commandBar.command.project": "Layihə alətləri"
+}

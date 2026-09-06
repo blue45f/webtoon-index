@@ -11,13 +11,13 @@ const cleanupPath = fileURLToPath(new URL("./studio-live-gateway-cleanup.ts", im
 const creatorModulePath = fileURLToPath(new URL("./creator.module.ts", import.meta.url));
 const clientPresencePath = fileURLToPath(
   new URL(
-    "../../../../../src/domains/creator/live/studio-live-socket-transport-presence.ts",
+    "../../../../web/src/domains/creator/live/studio-live-socket-transport-presence.ts",
     import.meta.url
   )
 );
 const clientVoicePath = fileURLToPath(
   new URL(
-    "../../../../../src/domains/creator/live/studio-live-socket-transport-voice.ts",
+    "../../../../web/src/domains/creator/live/studio-live-socket-transport-voice.ts",
     import.meta.url
   )
 );

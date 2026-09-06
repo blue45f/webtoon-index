@@ -21,11 +21,11 @@ import {
   STUDIO_MAIN_MENU_COMPOSITE_GROUPS,
   STUDIO_MAIN_MENU_PRESENTATION_ORDER,
   studioMainMenuPresentedTitleFor,
-} from "../src/domains/creator/studio-main-menu-presentation";
+} from "../apps/web/src/domains/creator/studio-main-menu-presentation";
 
 import { findFreePort, waitForServer } from "./lib/studio-verify-preview-harness.mjs";
 
-import type { StudioMainMenuCompositeGroupId } from "../src/domains/creator/studio-main-menu-presentation";
+import type { StudioMainMenuCompositeGroupId } from "../apps/web/src/domains/creator/studio-main-menu-presentation";
 
 const QUICKSTART_KEY = "toonspectrum-studio-quick-start-dismissed";
 

@@ -1,10 +1,7 @@
 # ToonSpectrum 배포 가이드
 
-현재 production은 workload 별로 권위를 분리합니다. Vercel은 정적 SPA와 bounded
-NestJS HTTP API를, Neon/호환 PostgreSQL은 동적 데이터와 migration 원장을, Cloudflare
-Durable Objects는 Studio ephemeral realtime을, Upstash는 분산 제한·coordination을,
-Supabase private Storage는 원본·파생·export object를 담당합니다. 한 provider가 다른
-provider의 전체 폴백이 되지 않으며, 반드시 같은 목적의 전체 계약을 증명해야 합니다.
+현재 운영 환경은 작업 유형별로 권위를 분리합니다. Vercel은 정적 SPA와 제한된 NestJS HTTP API를, Neon/호환 PostgreSQL은 동적 데이터와 migration 원장을, Cloudflare Durable Objects는 Studio의 임시 실시간 상태를, Upstash는 분산 제한·조정을, Supabase 비공개 Storage는 원본·파생·내보내기 객체를 담당합니다.
+한 제공자가 다른 제공자의 전체 폴백이 되지는 않으며, 각 제공자가 같은 목적의 전체 계약을 충족하는지 반드시 증명해야 합니다.
 
 | 레이어 | 스택 | 기본 호스트 | 배포 산출물 |
 | --- | --- | --- | --- |
@@ -113,7 +110,7 @@ Google Identity Services의 승인된 JavaScript origin에는
 - 표지 프록시(`/api/cover?u=...`)가 이미지를 반환하거나 안전하게 폴백하는지 확인.
 - 로그인/리뷰/커뮤니티 기능이 DB 연결로 동작하는지 확인.
 
-## 6. Studio realtime 권위와 선택형 Socket.IO 폴백
+## 6. Studio 실시간 권위와 선택형 Socket.IO 폴백
 
 현재 ephemeral realtime production 권위는 Cloudflare Durable Objects `workers.dev`
 origin입니다. `realtime.toonstudio.cloud`는 DNS zone·custom hostname·TLS가 완료되기 전에

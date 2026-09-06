@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Generatiivinen AI-kuvaopas",
+  "studio.aiNotice.description": "Tämä toiminto luo kuvia käyttämällä generatiivista tekoälyä (OpenAI). AI-merkit näkyvät luoduissa tuloksissa.",
+  "studio.aiNotice.ruleCopyright": "Emme luo muiden ihmisten teoksia, hahmoja tai oikeiden ihmisten kasvoja.",
+  "studio.aiNotice.ruleAccuracy": "AI-tulokset voivat olla epätarkkoja tai erilaisia ​​kuin oli tarkoitettu.",
+  "studio.aiNotice.ruleResponsibility": "Olet vastuussa luomiesi kuvien käytöstä.",
+  "studio.aiNotice.cancel": "Peruuta",
+  "studio.aiNotice.confirm": "Ymmärrän, luon"
+}

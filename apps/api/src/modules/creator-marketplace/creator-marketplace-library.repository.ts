@@ -15,11 +15,11 @@ import {
 import {
   creatorMarketplaceLogicalPackIdFromPackageKeyHex,
   creatorMarketplacePackageIdentityPreimage,
-} from "../../../../../lib/creator-marketplace-cloud-library-contract";
+} from "../../../../web/src/shared/lib/creator-marketplace-cloud-library-contract";
 import {
   CreatorMarketplacePackageModerationStateSchema,
   CreatorMarketplaceResourceKindSchema,
-} from "../../../../../lib/creator-marketplace-resource-contract";
+} from "../../../../web/src/shared/lib/creator-marketplace-resource-contract";
 import { db, users } from "../../db";
 import { creatorMarketplaceLibraryItems } from "../../db/creator-marketplace-library.schema";
 import { creatorMarketplacePackageModeration } from "../../db/creator-marketplace-package-moderation.schema";

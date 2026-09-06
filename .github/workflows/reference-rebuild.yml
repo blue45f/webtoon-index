@@ -2,15 +2,15 @@ name: Reference-rebuilt scene pack
 on:
   pull_request:
     paths:
-      - 'public/assets/reference-rebuild/**'
+      - 'apps/web/public/assets/reference-rebuild/**'
       - 'scripts/*reference-rebuild*'
-      - 'src/domains/creator/bg3d/StudioReferenceRebuildPresets.tsx'
-      - 'src/domains/creator/bg3d/StudioBg3dAssetLibraryPanel*.tsx'
+      - 'apps/web/src/domains/creator/bg3d/StudioReferenceRebuildPresets.tsx'
+      - 'apps/web/src/domains/creator/bg3d/StudioBg3dAssetLibraryPanel*.tsx'
       - '.github/workflows/reference-rebuild.yml'
   push:
     branches: [main]
     paths:
-      - 'public/assets/reference-rebuild/**'
+      - 'apps/web/public/assets/reference-rebuild/**'
       - 'scripts/*reference-rebuild*'
       - '.github/workflows/reference-rebuild.yml'
 permissions:
@@ -27,7 +27,7 @@ jobs:
         with:
           persist-credentials: false
           sparse-checkout: |
-            public/assets/reference-rebuild
+            apps/web/public/assets/reference-rebuild
             scripts/export-reference-rebuild.mjs
             scripts/verify-reference-rebuild.mjs
           sparse-checkout-cone-mode: false

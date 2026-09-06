@@ -4,14 +4,14 @@ on:
   pull_request:
     branches: [main]
     paths:
-      - 'src/domains/creator/StudioMainMenu*.tsx'
-      - 'src/domains/creator/studio-main-menu-viewport*.ts'
+      - 'apps/web/src/domains/creator/StudioMainMenu*.tsx'
+      - 'apps/web/src/domains/creator/studio-main-menu-viewport*.ts'
       - '.github/workflows/studio-menu-viewport.yml'
   push:
     branches: [main]
     paths:
-      - 'src/domains/creator/StudioMainMenu*.tsx'
-      - 'src/domains/creator/studio-main-menu-viewport*.ts'
+      - 'apps/web/src/domains/creator/StudioMainMenu*.tsx'
+      - 'apps/web/src/domains/creator/studio-main-menu-viewport*.ts'
       - '.github/workflows/studio-menu-viewport.yml'
 
 permissions:
@@ -36,6 +36,6 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - name: Lint the production menu and regression tests
-        run: pnpm exec eslint --max-warnings=0 src/domains/creator/StudioMainMenu.tsx src/domains/creator/studio-main-menu-viewport.ts src/domains/creator/studio-main-menu-viewport.test.ts src/domains/creator/StudioMainMenu.viewport.test.tsx
+        run: pnpm exec eslint --max-warnings=0 apps/web/src/domains/creator/StudioMainMenu.tsx apps/web/src/domains/creator/studio-main-menu-viewport.ts apps/web/src/domains/creator/studio-main-menu-viewport.test.ts apps/web/src/domains/creator/StudioMainMenu.viewport.test.tsx
       - name: Run the existing menu contracts and new viewport tests
-        run: pnpm exec vitest run src/domains/creator/StudioMainMenu.test.tsx src/domains/creator/studio-main-menu-viewport.test.ts src/domains/creator/StudioMainMenu.viewport.test.tsx
+        run: pnpm exec vitest run apps/web/src/domains/creator/StudioMainMenu.test.tsx apps/web/src/domains/creator/studio-main-menu-viewport.test.ts apps/web/src/domains/creator/StudioMainMenu.viewport.test.tsx

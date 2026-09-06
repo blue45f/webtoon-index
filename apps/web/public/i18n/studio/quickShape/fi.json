@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "älykkäitä muotoja",
+  "studio.quickShape.description.active": "Piirrä rauhallisesti viivoja, neliöitä, ympyröitä ja kolmioita. Jos päästät irti, se järjestyy itsestään.",
+  "studio.quickShape.description.inactive": "Se on hyvä raaputtaa se alas. Jos laitat sen päälle, käsinpiirustus jalostuu siistiin muotoon.",
+  "studio.quickShape.toggleHint": "Kun päästät irti karkeasti piirretystä muodosta kynällä, se napsahtaa tarkaan muotoon. Vaikka keskeytät piirtämisen, esikatselu tulee näkyviin.",
+  "studio.quickShape.toggleAria.on": "Älykkäät muodot päällä",
+  "studio.quickShape.toggleAria.off": "Älykkäät muodot pois",
+  "studio.quickShape.matchedSuffix": " Voin tuntea sen. Se vahvistuu, kun vapautan käteni.",
+  "studio.quickShape.emptyStatus": "Piirrä muoto ja päästä irti tai pysy vain lopussa",
+  "studio.quickShape.openTutorial": "Katso älykkäiden muotojen opetusohjelma",
+  "studio.quickShape.notice": "Piirrä älykkäitä muotoja, viivoja, ympyröitä, neliöitä jne. ja tarkenna niitä, kun päästät irti (keskeytä esikatselu)"
+}

@@ -251,7 +251,7 @@ for root `components`/`lib`, colocated `*.test.ts(x)` under Vitest `environment:
 `@testing-library/react` only if already present — otherwise test pure logic and `renderToString`),
 no new dependencies, no files added to `eslint.legacy-exceptions.json`, Korean UI copy, OKLCH tokens
 (`bg-panel`, `text-fg-2`, `border-line`, `bg-accent-soft`, …), `buttonClass` from
-`@/components/ui/button-utils`, `cn` from `@/lib/utils`, `lucide-react` icons at size 16/18.
+`@/shared/components/ui/button-utils`, `cn` from `@/shared/lib/utils`, `lucide-react` icons at size 16/18.
 
 ## 12. Verification gates for this wave
 

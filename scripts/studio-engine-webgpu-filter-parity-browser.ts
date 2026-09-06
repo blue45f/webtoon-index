@@ -16,21 +16,21 @@ import {
   planStudioCanonicalFilterExecution,
   rebuildStudioCanonicalFilterRecipe,
   studioCanonicalFilterGaussianRadius,
-} from "../src/domains/creator/render/studio-engine-canonical-filter-plan";
+} from "../apps/web/src/domains/creator/render/studio-engine-canonical-filter-plan";
 import {
   STUDIO_ENGINE_WEBGPU_FILTER_KERNELS,
   STUDIO_ENGINE_WEBGPU_FILTER_TEXTURE_FORMAT,
   StudioEngineWebGpuFilterRuntime,
-} from "../src/domains/creator/render/studio-engine-webgpu-filter-runtime";
+} from "../apps/web/src/domains/creator/render/studio-engine-webgpu-filter-runtime";
 
 import type {
   StudioCanonicalFilterLinearImage,
   StudioCanonicalFilterOperationNode,
   StudioCanonicalFilterRecipe,
-} from "../src/domains/creator/render/studio-engine-canonical-filter-plan";
+} from "../apps/web/src/domains/creator/render/studio-engine-canonical-filter-plan";
 import type {
   StudioEngineWebGpuFilterReceipt,
-} from "../src/domains/creator/render/studio-engine-webgpu-filter-runtime";
+} from "../apps/web/src/domains/creator/render/studio-engine-webgpu-filter-runtime";
 
 const WIDTH = 13;
 const HEIGHT = 11;

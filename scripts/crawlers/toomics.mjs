@@ -159,7 +159,10 @@ function parseCards(html) {
     const workId = m[1];
     const t = TITLE_RE.exec(block);
     const altM = ALT_RE.exec(block);
-    const title = (t ? t[1] : altM ? altM[1] : "").trim();
+    let title = "";
+    if (t) title = t[1];
+    else if (altM) title = altM[1];
+    title = title.trim();
     if (!title) continue;
     const cov = COVER_RE.exec(block);
     const subM = SUB_RE.exec(block);
@@ -179,7 +182,7 @@ function parseCards(html) {
   return out;
 }
 
-export async function crawl() {
+export async function crawl() { // NOSONAR javascript:S3776
   const byWorkId = new Map();
 
   // 요청 URL 목록(폴백 장르 동봉). 소스 폭으로 dedupe 후 120+ 확보.

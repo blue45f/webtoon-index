@@ -5,7 +5,7 @@ import path from "node:path";
 import {
   parseStudioVrmBlenderCharacterPackage,
   selectStudioVrmBlenderRuntimeAsset,
-} from "../src/domains/creator/vrm/studio-vrm-blender-character-package";
+} from "../apps/web/src/domains/creator/vrm/studio-vrm-blender-character-package";
 
 function option(args: readonly string[], name: string): string | undefined {
   const index = args.indexOf(name);

@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "o meu tipo de letra",
+  "studio.customFonts.importButton": "Importar dende o ficheiro",
+  "studio.customFonts.importing": "Comprobando…",
+  "studio.customFonts.importAria": "Importar ficheiro de fontes",
+  "studio.customFonts.storageAria": "Uso da biblioteca de fontes",
+  "studio.customFonts.emptyTitle": "Aínda non hai fontes incluídas.",
+  "studio.customFonts.unknownFileName": "Sen nome de ficheiro",
+  "studio.customFonts.apply": "Solicitar",
+  "studio.customFonts.applyToText": "Aplica esta fonte ao texto seleccionado",
+  "studio.customFonts.selectTextFirst": "Primeiro selecciona texto ou burbulla de voz",
+  "studio.customFonts.delete": "eliminar fonte"
+}

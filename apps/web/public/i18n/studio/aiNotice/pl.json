@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Przewodnik po obrazie generatywnej sztucznej inteligencji",
+  "studio.aiNotice.description": "Ta funkcja tworzy obrazy przy użyciu generatywnej sztucznej inteligencji (OpenAI). Odznaki AI są wyświetlane na utworzonych wynikach.",
+  "studio.aiNotice.ruleCopyright": "Nie tworzymy cudzych dzieł, postaci i twarzy prawdziwych ludzi.",
+  "studio.aiNotice.ruleAccuracy": "Wyniki sztucznej inteligencji mogą być niedokładne lub różnić się od zamierzonych.",
+  "studio.aiNotice.ruleResponsibility": "Jesteś odpowiedzialny za wykorzystanie tworzonych przez siebie obrazów.",
+  "studio.aiNotice.cancel": "Anuluj",
+  "studio.aiNotice.confirm": "Rozumiem, stwórz"
+}

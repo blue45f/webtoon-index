@@ -4,10 +4,10 @@ import { stripTypeScriptTypes } from "node:module";
 
 const { test } = process.env.VITEST ? await import("vitest") : await import("node:test");
 // Execute the production controller verbatim, without a separate copied model or a DOM package.
-const source = readFileSync(new URL("../src/domains/creator/studio-2d-image-readiness.ts", import.meta.url), "utf8");
+const source = readFileSync(new URL("../apps/web/src/domains/creator/studio-2d-image-readiness.ts", import.meta.url), "utf8");
 const moduleUrl = `data:text/javascript;base64,${Buffer.from(stripTypeScriptTypes(source)).toString("base64")}`;
 const { observeStudio2dImage } = process.env.VITEST
-  ? await import("../src/domains/creator/studio-2d-image-readiness.ts")
+  ? await import("../apps/web/src/domains/creator/studio-2d-image-readiness.ts")
   : await import(/* @vite-ignore */ moduleUrl);
 class FakeImage extends EventTarget {
   src = "/test.png";
@@ -104,7 +104,7 @@ test("error and duplicate load events cannot authorize or repeatedly decode a fi
 });
 test("lazy offscreen images have no deadline until they approach the viewport", async () => {
   const original = globalThis.IntersectionObserver; let intersect; let disconnects = 0;
-  globalThis.IntersectionObserver = class { constructor(callback) { intersect = callback; } observe() {} disconnect() { disconnects++; } };
+  globalThis.IntersectionObserver = class { constructor(callback) { intersect = callback; } observe() { return undefined; } disconnect() { disconnects++; } };
   const image = new FakeImage(); image.loading = "lazy"; const run = setup(image, undefined, 10);
   try {
     await new Promise((resolve) => setTimeout(resolve, 30)); assert.equal(run.latest().status, "loading");

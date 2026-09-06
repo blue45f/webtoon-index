@@ -12,7 +12,7 @@ import {
   normalizeStudioFilterLibraryPreset,
   studioFilterPresetToSqlRecord,
   type StudioFilterLibraryPreset,
-} from "../../../src/domains/creator/filter/studio-filter-library-sqlite-repository";
+} from "../../../apps/web/src/domains/creator/filter/studio-filter-library-sqlite-repository";
 import {
   openStudioLocalDatabase,
   probeSqliteSupport,
@@ -23,7 +23,7 @@ import {
   type StudioSqliteApiHandle,
   type StudioSqliteDatabaseHandle,
   type StudioSqlitePoolUtilHandle,
-} from "../../../src/domains/creator/studio-local-database";
+} from "../../../apps/web/src/domains/creator/studio-local-database";
 
 const REPORT_SCHEMA_VERSION = 1;
 const PRESET_COUNT = 10_000;

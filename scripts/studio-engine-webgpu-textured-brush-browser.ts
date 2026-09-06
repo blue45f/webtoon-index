@@ -10,29 +10,29 @@
 import {
   hydrateStudioBrushR8GrainAsset,
   resetStudioBrushR8GrainRegistry,
-} from "../src/domains/creator/brush/studio-brush-r8-grain-runtime";
+} from "../apps/web/src/domains/creator/brush/studio-brush-r8-grain-runtime";
 import {
   buildStudioEngineWebGpuTexturedBrushPlan,
   fingerprintStudioEngineWebGpuTexturedBrushPlanSemantics,
   type StudioEngineWebGpuTexturedBrushAssetRequest,
   type StudioEngineWebGpuTexturedBrushPlan,
-} from "../src/domains/creator/render/studio-engine-webgpu-textured-brush-plan";
+} from "../apps/web/src/domains/creator/render/studio-engine-webgpu-textured-brush-plan";
 import {
   createStudioEngineWebGpuTexturedBrushRuntime,
   packStudioEngineWebGpuTexturedBrushDabs,
   type StudioEngineWebGpuTexturedBrushReceipt,
   type StudioEngineWebGpuTexturedBrushRuntime,
-} from "../src/domains/creator/render/studio-engine-webgpu-textured-brush-runtime";
+} from "../apps/web/src/domains/creator/render/studio-engine-webgpu-textured-brush-runtime";
 import {
   parseStudioCanonicalBrushPlan,
   type StudioCanonicalBrushGrain,
-} from "../src/domains/creator/studio-canonical-brush-plan";
+} from "../apps/web/src/domains/creator/studio-canonical-brush-plan";
 import {
   parseStudioProfessionalBrushDynamicsPlan,
-} from "../src/domains/creator/studio-professional-brush-dynamics";
-import { sha256HexPortable } from "../src/domains/creator/studio-sha256";
+} from "../apps/web/src/domains/creator/studio-professional-brush-dynamics";
+import { sha256HexPortable } from "../apps/web/src/domains/creator/studio-sha256";
 
-import type { StudioBrushR8TextureGrainSource } from "../src/domains/creator/brush/studio-brush-r8-grain-asset-contract";
+import type { StudioBrushR8TextureGrainSource } from "../apps/web/src/domains/creator/brush/studio-brush-r8-grain-asset-contract";
 
 const WIDTH = 64;
 const HEIGHT = 48;

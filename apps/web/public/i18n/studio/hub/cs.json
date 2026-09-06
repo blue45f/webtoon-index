@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Výukový program funkcí",
+  "studio.hub.subtitle": "Jedna funkce po druhé bez jakékoli zátěže. Podíval jsem se na {done}/{total}.",
+  "studio.hub.progressAriaLabel": "Průběh výuky",
+  "studio.hub.listAriaLabel": "Seznam funkcí",
+  "studio.hub.checked": "podívejte se",
+  "studio.hub.prev": "Předchozí",
+  "studio.hub.next": "další",
+  "studio.hub.markComplete": "označit jako dokončené",
+  "studio.hub.completed": "Dokončeno",
+  "studio.hub.tryLabelDefault": "Následujte",
+  "studio.hub.stepAriaPrefix": "krok"
+}

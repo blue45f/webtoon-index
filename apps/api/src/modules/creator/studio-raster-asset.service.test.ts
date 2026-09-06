@@ -10,7 +10,7 @@ import {
 } from "@nestjs/common";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
-import { STUDIO_RASTER_ASSET_ADMISSION_OPT_IN_TOKEN } from "../../../../../lib/studio-raster-asset-contract";
+import { STUDIO_RASTER_ASSET_ADMISSION_OPT_IN_TOKEN } from "../../../../web/src/shared/lib/studio-raster-asset-contract";
 
 import {
   StudioRasterAssetCleanupOwnershipError,
@@ -29,8 +29,8 @@ import {
 
 import type { DrizzleStudioCrdtTransaction } from "./studio-crdt.repository";
 import type { StudioRasterAssetRepository } from "./studio-raster-asset.repository";
-import type { StudioRasterAssetReference } from "../../../../../lib/studio-crdt-raster-ops";
-import type { StudioRasterAssetManifest } from "../../../../../lib/studio-raster-asset-contract";
+import type { StudioRasterAssetReference } from "../../../../web/src/shared/lib/studio-crdt-raster-ops";
+import type { StudioRasterAssetManifest } from "../../../../web/src/shared/lib/studio-raster-asset-contract";
 
 const { inflateSyncSpy } = vi.hoisted(() => ({
   inflateSyncSpy: vi.fn(),

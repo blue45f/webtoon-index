@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Panel rychlých příkazů",
+  "studio.commandBar.settings": "Nastavení panelu příkazů",
+  "studio.commandBar.settingsDescription": "Změňte rozložení slotů a viditelnost panelu příkazů pod řádkem nabídek.",
+  "studio.commandBar.settingsTip": "Nejčastěji používané příkazy dejte do prvních slotů, budete je mít nejrychleji po ruce.",
+  "studio.commandBar.settingsClose": "Zavřít nastavení panelu příkazů",
+  "studio.commandBar.settingsStorageNote": "Rozložení slotů se ukládá do nastavení pracovního prostoru tohoto prohlížeče.",
+  "studio.commandBar.showSlots": "Zobrazit sloty příkazů",
+  "studio.commandBar.slot": "Slot {index}",
+  "studio.commandBar.slotAria": "Slot příkazu {index}",
+  "studio.commandBar.slotEmpty": "Prázdný slot",
+  "studio.commandBar.resetDefaults": "Obnovit výchozí rozložení",
+  "studio.commandBar.command.undo": "Zpět",
+  "studio.commandBar.command.redo": "Znovu",
+  "studio.commandBar.command.save": "Uložit koncept",
+  "studio.commandBar.command.publish": "Publikovat",
+  "studio.commandBar.command.download": "Stáhnout aktuální stránku",
+  "studio.commandBar.command.export-open": "Možnosti exportu",
+  "studio.commandBar.command.zoom-fit": "Přizpůsobit šířce obrazovky",
+  "studio.commandBar.command.assets": "Šablony a materiály",
+  "studio.commandBar.command.bubbles": "Bublina s replikou",
+  "studio.commandBar.command.project": "Nástroje projektu"
+}

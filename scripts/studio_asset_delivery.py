@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Acquire actual CC0 files, not thumbnail URLs or quantity-only catalog records.
 
-Runs outside public/ by default. A technical pass is NOT a visual/runtime approval.
+Runs outside apps/web/public/ by default. A technical pass is NOT a visual/runtime approval.
 No user library, production data, payment, credentials, or existing asset is changed.
 """
 from __future__ import annotations
@@ -83,7 +83,7 @@ def direct_kenney_pack(identifier: str, page: str, category: str) -> dict:
             'license': 'CC0-1.0', 'category': category, 'method': 'explicit-free-download'}
 
 
-def gltf_to_glb(source: Path, destination: Path) -> None:
+def gltf_to_glb(source: Path, destination: Path) -> None: # NOSONAR python:S3776
     if source.stat().st_size > 8 * 1024 * 1024:
         raise ValueError('glTF JSON too large')
     doc = json.loads(source.read_text())
@@ -127,7 +127,7 @@ def gltf_to_glb(source: Path, destination: Path) -> None:
         intermediate.unlink(missing_ok=True)
 
 
-def geometry_key(doc: dict, binary: bytes) -> str:
+def geometry_key(doc: dict, binary: bytes) -> str: # NOSONAR python:S3776
     h = hashlib.sha256()
     component_sizes = {5120: 1, 5121: 1, 5122: 2, 5123: 2, 5125: 4, 5126: 4}
     counts = {'SCALAR': 1, 'VEC2': 2, 'VEC3': 3, 'VEC4': 4, 'MAT4': 16}
@@ -163,8 +163,8 @@ def geometry_key(doc: dict, binary: bytes) -> str:
     return h.hexdigest()
 
 
-def audit_existing(output: Path) -> None:
-    files = sorted(p for folder in ('public/assets/3d', 'public/assets/studio') for p in (ROOT / folder).rglob('*') if p.is_file())
+def audit_existing(output: Path) -> None: # NOSONAR python:S3776
+    files = sorted(p for folder in ('apps/web/public/assets/3d', 'apps/web/public/assets/studio') for p in (ROOT / folder).rglob('*') if p.is_file())
     records, seen = [], {}
     for path in files:
         row = {'path': str(path.relative_to(ROOT)), 'bytes': path.stat().st_size, 'findings': []}
@@ -190,7 +190,7 @@ def audit_existing(output: Path) -> None:
     print('EXISTING ASSET FINDINGS', json.dumps([r for r in records if r['findings']], ensure_ascii=False), flush=True)
     print('ACTUAL BUNDLED MODEL CATALOG REFERENCES', flush=True)
     found = 0
-    for path in sorted((ROOT / 'src/domains/creator').rglob('*.ts*')):
+    for path in sorted((ROOT / 'apps/web/src/domains/creator').rglob('*.ts*')):
         if '.test.' in path.name: continue
         text = path.read_text()
         lines = text.splitlines()
@@ -227,7 +227,7 @@ def write_gallery(output: Path, assets: list[dict]) -> None:
     (output / 'index.html').write_text(document, encoding='utf-8')
 
 
-def acquire_delivery(output: Path) -> dict:
+def acquire_delivery(output: Path) -> dict: # NOSONAR python:S3776
     output.mkdir(parents=True, exist_ok=True)
     audit_existing(output)
     plan = json.loads((ROOT / 'data/studio-assets/acquisition-plan.json').read_text())

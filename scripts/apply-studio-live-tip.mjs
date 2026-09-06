@@ -1,6 +1,6 @@
 import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
-const file = 'src/domains/creator/live/studio-live-retained-media-overlay.ts';
+const file = 'apps/web/src/domains/creator/live/studio-live-retained-media-overlay.ts';
 let text = fs.readFileSync(file, 'utf8');
 function replace(before, after) {
   if (text.split(before).length !== 2) throw new Error(`Expected exactly one reviewed anchor: ${before.slice(0, 120)}`);
@@ -74,11 +74,11 @@ fs.writeFileSync(file, text);
 // Existing commit hooks, push hooks and protected-branch checks remain enabled.
 const checkedFiles = [
   file,
-  'src/domains/creator/live/studio-live-pencil-paint-program.ts',
-  'src/domains/creator/live/studio-live-pencil-pass-compositing.test.ts',
-  'src/domains/creator/live/studio-live-retained-media-stability.test.ts',
-  'src/domains/creator/live/studio-live-transient-tip.test.ts',
-  'src/domains/creator/live/studio-live-transient-tip.ts',
+  'apps/web/src/domains/creator/live/studio-live-pencil-paint-program.ts',
+  'apps/web/src/domains/creator/live/studio-live-pencil-pass-compositing.test.ts',
+  'apps/web/src/domains/creator/live/studio-live-retained-media-stability.test.ts',
+  'apps/web/src/domains/creator/live/studio-live-transient-tip.test.ts',
+  'apps/web/src/domains/creator/live/studio-live-transient-tip.ts',
 ];
 execFileSync('pnpm', ['exec', 'eslint', ...checkedFiles, '--fix'], { stdio: 'inherit' });
 execFileSync('pnpm', ['exec', 'eslint', ...checkedFiles], { stdio: 'inherit' });

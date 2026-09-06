@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "mitt typsnitt",
+  "studio.customFonts.importButton": "Importera från fil",
+  "studio.customFonts.importing": "Kontrollerar...",
+  "studio.customFonts.importAria": "Importera teckensnittsfil",
+  "studio.customFonts.storageAria": "Användning av teckensnittsbibliotek",
+  "studio.customFonts.emptyTitle": "Det finns inga typsnitt inkluderade ännu.",
+  "studio.customFonts.unknownFileName": "Inget filnamn",
+  "studio.customFonts.apply": "Ansök",
+  "studio.customFonts.applyToText": "Använd detta teckensnitt på vald text",
+  "studio.customFonts.selectTextFirst": "Välj först text eller pratbubbla",
+  "studio.customFonts.delete": "ta bort teckensnitt"
+}

@@ -45,26 +45,26 @@ jobs:
           node scripts/marketplace/integrate-authoring-detail-action.mjs
           node scripts/marketplace/integrate-brush-recipe-lab.mjs
           sha256sum \
-            src/domains/market/pages/MarketPublishPage.tsx \
-            src/domains/market/components/MarketResourceDetailArticle.tsx \
-            src/domains/market/components/MarketplaceAuthoringWorkshop.tsx \
-            src/domains/creator/StudioBrushStudio.tsx > /tmp/first.sha
+            apps/web/src/domains/market/pages/MarketPublishPage.tsx \
+            apps/web/src/domains/market/components/MarketResourceDetailArticle.tsx \
+            apps/web/src/domains/market/components/MarketplaceAuthoringWorkshop.tsx \
+            apps/web/src/domains/creator/StudioBrushStudio.tsx > /tmp/first.sha
           node scripts/marketplace/integrate-creator-authoring.mjs
           node scripts/marketplace/integrate-authoring-detail-action.mjs
           node scripts/marketplace/integrate-brush-recipe-lab.mjs
           sha256sum \
-            src/domains/market/pages/MarketPublishPage.tsx \
-            src/domains/market/components/MarketResourceDetailArticle.tsx \
-            src/domains/market/components/MarketplaceAuthoringWorkshop.tsx \
-            src/domains/creator/StudioBrushStudio.tsx > /tmp/second.sha
+            apps/web/src/domains/market/pages/MarketPublishPage.tsx \
+            apps/web/src/domains/market/components/MarketResourceDetailArticle.tsx \
+            apps/web/src/domains/market/components/MarketplaceAuthoringWorkshop.tsx \
+            apps/web/src/domains/creator/StudioBrushStudio.tsx > /tmp/second.sha
           diff -u /tmp/first.sha /tmp/second.sha
       - run: pnpm install --frozen-lockfile
       - name: Focused tests
         run: >-
           pnpm exec vitest run
-          lib/creator-marketplace-authoring-workshop.test.ts
-          src/domains/market/components/MarketplaceAuthoringWorkshop.test.tsx
-          src/domains/market/components/MarketplaceBrushRecipeAccelerator.test.tsx
+          apps/web/src/shared/lib/creator-marketplace-authoring-workshop.test.ts
+          apps/web/src/domains/market/components/MarketplaceAuthoringWorkshop.test.tsx
+          apps/web/src/domains/market/components/MarketplaceBrushRecipeAccelerator.test.tsx
           --reporter=verbose
       - run: pnpm exec tsc -p tsconfig.json --noEmit
       - run: pnpm run lint:quick
@@ -77,10 +77,10 @@ jobs:
             scripts/marketplace/integrate-creator-authoring.mjs \
             scripts/marketplace/integrate-authoring-detail-action.mjs \
             scripts/marketplace/integrate-brush-recipe-lab.mjs \
-            src/domains/market/pages/MarketPublishPage.tsx \
-            src/domains/market/components/MarketResourceDetailArticle.tsx \
-            src/domains/market/components/MarketplaceAuthoringWorkshop.tsx \
-            src/domains/creator/StudioBrushStudio.tsx \
+            apps/web/src/domains/market/pages/MarketPublishPage.tsx \
+            apps/web/src/domains/market/components/MarketResourceDetailArticle.tsx \
+            apps/web/src/domains/market/components/MarketplaceAuthoringWorkshop.tsx \
+            apps/web/src/domains/creator/StudioBrushStudio.tsx \
             marketplace-authoring-idempotency-report.json \
             marketplace-authoring-integration-report.json \
             marketplace-authoring-detail-integration-report.json \

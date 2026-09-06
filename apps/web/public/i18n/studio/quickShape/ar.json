@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "الأشكال الذكية",
+  "studio.quickShape.description.active": "ارسم الخطوط والمربعات والدوائر والمثلثات على مهل. إذا تركتها، فسوف يتم ترتيبها من تلقاء نفسها.",
+  "studio.quickShape.description.inactive": "لا بأس في تدوينها. إذا قمت بتشغيله، سيتم تحسين رسم يدك إلى شكل أنيق.",
+  "studio.quickShape.toggleHint": "في اللحظة التي تترك فيها شكلًا مرسومًا تقريبًا بالقلم، فإنه يتحول إلى شكل دقيق. حتى لو توقفت مؤقتًا أثناء الرسم، ستظهر معاينة.",
+  "studio.quickShape.toggleAria.on": "الأشكال الذكية على",
+  "studio.quickShape.toggleAria.off": "الأشكال الذكية معطلة",
+  "studio.quickShape.matchedSuffix": " أستطيع أن أشعر به. تم تأكيد ذلك عندما أفرج عن يدي.",
+  "studio.quickShape.emptyStatus": "ارسم الشكل واتركه، أو ابق في النهاية",
+  "studio.quickShape.openTutorial": "شاهد البرنامج التعليمي للأشكال الذكية",
+  "studio.quickShape.notice": "ارسم أشكالًا وخطوطًا ودوائر ومربعات ذكية وما إلى ذلك وقم بتحسينها عند تركها (توقف مؤقتًا للمعاينة)"
+}

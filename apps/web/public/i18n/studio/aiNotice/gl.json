@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Guía de imaxe xerativa AI",
+  "studio.aiNotice.description": "Esta función crea imaxes usando IA xerativa (OpenAI). As insignias de IA móstranse nos resultados creados.",
+  "studio.aiNotice.ruleCopyright": "Non creamos obras doutras persoas, personaxes ou rostros de persoas reais.",
+  "studio.aiNotice.ruleAccuracy": "Os resultados da IA ​​poden ser inexactos ou diferentes do que se pretendía.",
+  "studio.aiNotice.ruleResponsibility": "Vostede é o responsable de usar as imaxes que cree.",
+  "studio.aiNotice.cancel": "Cancelar",
+  "studio.aiNotice.confirm": "Entendo, crear"
+}

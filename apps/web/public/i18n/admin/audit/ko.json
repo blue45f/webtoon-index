@@ -1,0 +1,10 @@
+{
+  "admin.audit.close": "닫기",
+  "admin.audit.desc": "관리자 권한으로 수행된 모든 주요 조치 및 권한/설정 변경 이력을 추적합니다.",
+  "admin.audit.empty": "기록된 감사 로그가 없습니다.",
+  "admin.audit.loading": "감사 로그 로딩 중...",
+  "admin.audit.modalTitle": "감사 로그 상세",
+  "admin.audit.searchPlaceholder": "검색 (이메일/작업)...",
+  "admin.audit.title": "관리자 감사 로그 (Audit Logs)",
+  "admin.audit.viewDetails": "보기"
+}

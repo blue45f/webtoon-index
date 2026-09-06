@@ -2624,7 +2624,7 @@ export const UNAVAILABLE_COMPOSITION_ROWS: readonly UnavailableCompositionRow[] 
       "Only the concrete Three.js hit/UV adapter is unavailable inside packages/. " +
       "executeSurfaceBrushStroke now provides deterministic UV operations and real " +
       "RGBA8 output through SurfaceProjectionProvider; the app-owned adapter remains at " +
-      "src/domains/creator/studio-vrm-texture-uv.ts (computeStudioVrmBarycentric, " +
+      "apps/web/src/domains/creator/studio-vrm-texture-uv.ts (computeStudioVrmBarycentric, " +
       "resolveStudioVrmTriangleUv, resolveStudioVrmTextureHit) and " +
       "studio-vrm-texture-paint-ops.ts (applyStudioVrmTexturePaintOp, the 2D dab " +
       "engine reused on the UV atlas). packages/* must not import src/*; hosts adapt " +

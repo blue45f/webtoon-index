@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Generative AI Image Guide",
+  "studio.aiNotice.description": "Lumilikha ang function na ito ng mga imahe gamit ang generative AI (OpenAI). Ang mga badge ng AI ay ipinapakita sa mga ginawang resulta.",
+  "studio.aiNotice.ruleCopyright": "Hindi kami gumagawa ng mga gawa, karakter, o mukha ng mga totoong tao ng ibang tao.",
+  "studio.aiNotice.ruleAccuracy": "Ang mga resulta ng AI ay maaaring hindi tumpak o naiiba sa kung ano ang nilayon.",
+  "studio.aiNotice.ruleResponsibility": "Ikaw ang may pananagutan sa paggamit ng mga larawang iyong nilikha.",
+  "studio.aiNotice.cancel": "Kanselahin",
+  "studio.aiNotice.confirm": "Naiintindihan ko, lumikha"
+}

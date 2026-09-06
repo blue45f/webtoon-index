@@ -12,7 +12,7 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 import {
   canonicalizeCreatorMarketplaceJson,
   creatorMarketplaceJsonByteSize,
-} from "../../../../../lib/creator-marketplace-resource-contract";
+} from "../../../../web/src/shared/lib/creator-marketplace-resource-contract";
 
 import {
   creatorMarketplacePublisherGateKey,
@@ -38,7 +38,7 @@ import type {
 } from "./creator-marketplace.repository-contract";
 import type {
   CreatorMarketplaceResourceManifest,
-} from "../../../../../lib/creator-marketplace-resource-contract";
+} from "../../../../web/src/shared/lib/creator-marketplace-resource-contract";
 
 function digest(value: unknown): string {
   return createHash("sha256")

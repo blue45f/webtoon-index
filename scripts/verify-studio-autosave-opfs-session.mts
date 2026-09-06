@@ -339,19 +339,19 @@ export function createStudioAutosaveOpfsBrowserHarnessSource(
 ): string {
   const sessionImport = browserHarnessImport(
     repositoryRoot,
-    "src/domains/creator/studio-autosave-opfs-session.ts",
+    "apps/web/src/domains/creator/studio-autosave-opfs-session.ts",
   );
   const autosaveImport = browserHarnessImport(
     repositoryRoot,
-    "src/domains/creator/studio-autosave.ts",
+    "apps/web/src/domains/creator/studio-autosave.ts",
   );
   const sqliteStoreImport = browserHarnessImport(
     repositoryRoot,
-    "src/domains/creator/studio-autosave-sqlite-store.ts",
+    "apps/web/src/domains/creator/studio-autosave-sqlite-store.ts",
   );
   const sqliteRuntimeImport = browserHarnessImport(
     repositoryRoot,
-    "src/domains/creator/studio-local-database-runtime.ts",
+    "apps/web/src/domains/creator/studio-local-database-runtime.ts",
   );
   return `
 globalThis.__zod_globalConfig ??= {};

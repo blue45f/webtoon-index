@@ -6,17 +6,17 @@ on:
     paths:
       - .github/workflows/character-contact-naturalness.yml
       - scripts/verify-character-contact-naturalness.mjs
-      - src/domains/creator/vrm/studio-vrm-contact-refinement.ts
-      - src/domains/creator/vrm/studio-vrm-portrait-framing.ts
-      - src/domains/creator/vrm/StudioVrmGripContactRefine.tsx
+      - apps/web/src/domains/creator/vrm/studio-vrm-contact-refinement.ts
+      - apps/web/src/domains/creator/vrm/studio-vrm-portrait-framing.ts
+      - apps/web/src/domains/creator/vrm/StudioVrmGripContactRefine.tsx
   push:
     branches: [main]
     paths:
       - .github/workflows/character-contact-naturalness.yml
       - scripts/verify-character-contact-naturalness.mjs
-      - src/domains/creator/vrm/studio-vrm-contact-refinement.ts
-      - src/domains/creator/vrm/studio-vrm-portrait-framing.ts
-      - src/domains/creator/vrm/StudioVrmGripContactRefine.tsx
+      - apps/web/src/domains/creator/vrm/studio-vrm-contact-refinement.ts
+      - apps/web/src/domains/creator/vrm/studio-vrm-portrait-framing.ts
+      - apps/web/src/domains/creator/vrm/StudioVrmGripContactRefine.tsx
 
 permissions:
   contents: read
@@ -37,8 +37,8 @@ jobs:
           sparse-checkout: |
             /package.json
             /scripts/verify-character-contact-naturalness.mjs
-            /src/domains/creator/vrm/studio-vrm-contact-refinement.ts
-            /src/domains/creator/vrm/studio-vrm-portrait-framing.ts
+            /apps/web/src/domains/creator/vrm/studio-vrm-contact-refinement.ts
+            /apps/web/src/domains/creator/vrm/studio-vrm-portrait-framing.ts
       - uses: actions/setup-node@v6
         with:
           node-version: 24

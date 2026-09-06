@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "द्रुत कमाण्ड बार",
+  "studio.commandBar.settings": "कमाण्ड बार सेटिङ",
+  "studio.commandBar.settingsDescription": "मेनु बारमुनिको कमाण्ड बारको स्लट मिलान र देखिने अवस्था बदल्नुहोस्।",
+  "studio.commandBar.settingsTip": "सबैभन्दा बढी प्रयोग गर्ने कमाण्डहरू अगाडिका स्लटमा राख्नुहोस्, त्यसो गर्दा सबैभन्दा छिटो पुगिन्छ।",
+  "studio.commandBar.settingsClose": "कमाण्ड बार सेटिङ बन्द गर्नुहोस्",
+  "studio.commandBar.settingsStorageNote": "स्लट मिलान यही ब्राउजरको कार्यक्षेत्र सेटिङमा सुरक्षित हुन्छ।",
+  "studio.commandBar.showSlots": "कमाण्ड स्लट देखाउनुहोस्",
+  "studio.commandBar.slot": "स्लट {index}",
+  "studio.commandBar.slotAria": "कमाण्ड स्लट {index}",
+  "studio.commandBar.slotEmpty": "खाली स्लट",
+  "studio.commandBar.resetDefaults": "पूर्वनिर्धारित मिलानमा फर्काउनुहोस्",
+  "studio.commandBar.command.undo": "पूर्ववत गर्नुहोस्",
+  "studio.commandBar.command.redo": "पुनः गर्नुहोस्",
+  "studio.commandBar.command.save": "मस्यौदा सुरक्षित गर्नुहोस्",
+  "studio.commandBar.command.publish": "प्रकाशित गर्नुहोस्",
+  "studio.commandBar.command.download": "हालको पृष्ठ डाउनलोड गर्नुहोस्",
+  "studio.commandBar.command.export-open": "निर्यात विकल्प",
+  "studio.commandBar.command.zoom-fit": "स्क्रिनको चौडाइमा मिलाउनुहोस्",
+  "studio.commandBar.command.assets": "टेम्प्लेट र सामग्री",
+  "studio.commandBar.command.bubbles": "संवाद बबल",
+  "studio.commandBar.command.project": "परियोजना उपकरण"
+}

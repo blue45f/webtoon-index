@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "जेनरेटिव एआई इमेज गाइड",
+  "studio.aiNotice.description": "यह फ़ंक्शन जेनरेटिव एआई (ओपनएआई) का उपयोग करके छवियां बनाता है। निर्मित परिणामों पर एआई बैज प्रदर्शित होते हैं।",
+  "studio.aiNotice.ruleCopyright": "हम अन्य लोगों के काम, चरित्र या वास्तविक लोगों के चेहरे नहीं बनाते हैं।",
+  "studio.aiNotice.ruleAccuracy": "एआई परिणाम गलत या इच्छित उद्देश्य से भिन्न हो सकते हैं।",
+  "studio.aiNotice.ruleResponsibility": "आप अपने द्वारा बनाई गई छवियों का उपयोग करने के लिए जिम्मेदार हैं।",
+  "studio.aiNotice.cancel": "रद्द करें",
+  "studio.aiNotice.confirm": "मैं समझता हूं, बनाओ"
+}

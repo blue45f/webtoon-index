@@ -14,11 +14,11 @@ import { createRequire } from "node:module";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { STUDIO_BRUSH_ENGINE_LANE_CATALOG_ROWS } from "../../../src/domains/creator/brush/studio-brush-engine-lane-catalog";
-import { STUDIO_BRUSH_RUNTIME_CONTRACT } from "../../../src/domains/creator/brush/studio-brush-runtime-contract";
-import { materializeStudioBrushCatalogSelection } from "../../../src/domains/creator/brush/studio-brush-selection";
-import { captureStudioDrawPointerPressureContract } from "../../../src/domains/creator/brush/studio-draw-pointer-pressure-contract";
-import { exportPageToSvg } from "../../../src/domains/creator/export/studio-svg-export";
+import { STUDIO_BRUSH_ENGINE_LANE_CATALOG_ROWS } from "../../../apps/web/src/domains/creator/brush/studio-brush-engine-lane-catalog";
+import { STUDIO_BRUSH_RUNTIME_CONTRACT } from "../../../apps/web/src/domains/creator/brush/studio-brush-runtime-contract";
+import { materializeStudioBrushCatalogSelection } from "../../../apps/web/src/domains/creator/brush/studio-brush-selection";
+import { captureStudioDrawPointerPressureContract } from "../../../apps/web/src/domains/creator/brush/studio-draw-pointer-pressure-contract";
+import { exportPageToSvg } from "../../../apps/web/src/domains/creator/export/studio-svg-export";
 
 const CELL_W = 700;
 const CELL_H = 140;

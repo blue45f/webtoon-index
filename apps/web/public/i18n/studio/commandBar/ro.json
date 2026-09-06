@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Bară de comenzi rapide",
+  "studio.commandBar.settings": "Setări bară de comenzi",
+  "studio.commandBar.settingsDescription": "Schimbă aranjarea sloturilor și vizibilitatea barei de comenzi de sub bara de meniu.",
+  "studio.commandBar.settingsTip": "Pune comenzile pe care le folosești cel mai des în primele sloturi, ca să ajungi cel mai repede la ele.",
+  "studio.commandBar.settingsClose": "Închide setările barei de comenzi",
+  "studio.commandBar.settingsStorageNote": "Aranjarea sloturilor se salvează în setările spațiului de lucru din acest browser.",
+  "studio.commandBar.showSlots": "Afișează sloturile de comenzi",
+  "studio.commandBar.slot": "Slotul {index}",
+  "studio.commandBar.slotAria": "Slotul de comandă {index}",
+  "studio.commandBar.slotEmpty": "Slot gol",
+  "studio.commandBar.resetDefaults": "Revino la aranjarea implicită",
+  "studio.commandBar.command.undo": "Anulează",
+  "studio.commandBar.command.redo": "Refă",
+  "studio.commandBar.command.save": "Salvează ciorna",
+  "studio.commandBar.command.publish": "Publică",
+  "studio.commandBar.command.download": "Descarcă pagina curentă",
+  "studio.commandBar.command.export-open": "Opțiuni de export",
+  "studio.commandBar.command.zoom-fit": "Potrivește la lățimea ecranului",
+  "studio.commandBar.command.assets": "Șabloane și resurse",
+  "studio.commandBar.command.bubbles": "Bulă de dialog",
+  "studio.commandBar.command.project": "Instrumente de proiect"
+}

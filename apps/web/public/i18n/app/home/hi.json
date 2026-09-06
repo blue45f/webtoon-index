@@ -1,0 +1,17 @@
+{
+  "home.hero.eyebrow": "WEBTOON × WEBNOVEL",
+  "home.hero.titleLine1": "Scattered stories,",
+  "home.hero.titleShimmer": "A single index",
+  "home.hero.titleSuffix": ".",
+  "home.hero.description": "Search across Naver Webtoon, Series, and Kakao Webtoon, then quickly narrow down what to read using real-time signals and reader preferences.",
+  "home.hero.searchButton": "Search titles, creators, tags",
+  "home.hero.rankingButton": "View unified ranking",
+  "home.hero.studioLink": "Creator studio",
+  "home.hero.createLink": "Creator board",
+  "home.hero.stats.titles": "Titles",
+  "home.hero.stats.platforms": "Publishing platforms",
+  "home.hero.stats.genres": "Genre spectrum",
+  "home.hero.stats.reviews": "Reader reviews",
+  "home.loadError": "Could not load home data.",
+  "home.creatorTitle": "From an idea to your first scene"
+}

@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "fontul meu",
+  "studio.customFonts.importButton": "Import din fișier",
+  "studio.customFonts.importing": "Se verifică…",
+  "studio.customFonts.importAria": "Importați fișierul fontului",
+  "studio.customFonts.storageAria": "Utilizarea bibliotecii de fonturi",
+  "studio.customFonts.emptyTitle": "Nu există fonturi incluse încă.",
+  "studio.customFonts.unknownFileName": "Fără nume de fișier",
+  "studio.customFonts.apply": "Aplicați",
+  "studio.customFonts.applyToText": "Aplicați acest font textului selectat",
+  "studio.customFonts.selectTextFirst": "Mai întâi selectați textul sau balonul vocal",
+  "studio.customFonts.delete": "șterge fontul"
+}

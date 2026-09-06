@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Leitfaden für generative KI-Bilder",
+  "studio.aiNotice.description": "Diese Funktion erstellt Bilder mithilfe generativer KI (OpenAI). KI-Abzeichen werden auf den erstellten Ergebnissen angezeigt.",
+  "studio.aiNotice.ruleCopyright": "Wir erschaffen keine Werke, Charaktere oder Gesichter realer Menschen von anderen.",
+  "studio.aiNotice.ruleAccuracy": "KI-Ergebnisse können ungenau sein oder von den beabsichtigten Ergebnissen abweichen.",
+  "studio.aiNotice.ruleResponsibility": "Sie sind für die Verwendung der von Ihnen erstellten Bilder verantwortlich.",
+  "studio.aiNotice.cancel": "Abbrechen",
+  "studio.aiNotice.confirm": "Ich verstehe, erschaffe"
+}

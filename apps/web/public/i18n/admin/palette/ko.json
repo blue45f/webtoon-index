@@ -1,0 +1,10 @@
+{
+  "admin.palette.empty": "검색 결과가 없습니다.",
+  "admin.palette.exportRevenue": "정산 원장 CSV 다운로드",
+  "admin.palette.exportUsers": "전체 회원 데이터 CSV 다운로드",
+  "admin.palette.groupNav": "콘솔 메뉴 바로가기",
+  "admin.palette.groupQuick": "빠른 작업 & 내보내기",
+  "admin.palette.maintenance": "시스템 비상 점검 모드 제어",
+  "admin.palette.placeholder": "어드민 커맨드 검색 (메뉴 이동, CSV 다운로드, 점검 모드)...",
+  "admin.palette.trigger": "빠른 이동 및 작업 검색..."
+}

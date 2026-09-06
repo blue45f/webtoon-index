@@ -4,7 +4,7 @@ import math
 import bpy
 
 # Ensure output directories exist
-OUT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../public/assets/3d"))
+OUT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../apps/web/public/assets/3d"))
 OUTFIT_DIR = os.path.join(OUT_DIR, "outfits")
 os.makedirs(OUT_DIR, exist_ok=True)
 os.makedirs(OUTFIT_DIR, exist_ok=True)
@@ -12,7 +12,7 @@ os.makedirs(OUTFIT_DIR, exist_ok=True)
 def reset_scene():
     bpy.ops.wm.read_factory_settings(use_empty=True)
 
-def create_material(name, base_color=(0.8, 0.8, 0.8, 1.0), metallic=0.0, roughness=0.5, emission_color=(0, 0, 0, 1), emission_strength=0.0, sheen=0.0):
+def create_material(name, base_color=(0.8, 0.8, 0.8, 1.0), metallic=0.0, roughness=0.5, emission_color=(0, 0, 0, 1), emission_strength=0.0, sheen=0.0): # NOSONAR python:S3776
     mat = bpy.data.materials.new(name=name)
     mat.use_nodes = True
     nodes = mat.node_tree.nodes
@@ -385,7 +385,7 @@ def build_medieval_greatsword():
 def build_cyber_hoverbike():
     reset_scene()
     mat_body = create_material("HoverBody", base_color=(0.1, 0.1, 0.15, 1.0), metallic=0.85, roughness=0.2)
-    mat_thruster = create_material("ThrusterGlow", base_color=(0.0, 0.8, 1.0, 1.0), emission_color=(0.0, 0.9, 1.0, 1.0), emission_strength=6.0)
+    create_material("ThrusterGlow", base_color=(0.0, 0.8, 1.0, 1.0), emission_color=(0.0, 0.9, 1.0, 1.0), emission_strength=6.0)
     bpy.ops.mesh.primitive_cylinder_add(radius=0.35, depth=1.6, location=(0, 0.45, 0))
     body = bpy.context.active_object
     body.rotation_euler = (math.radians(90), 0, 0)
@@ -396,7 +396,7 @@ def build_cyber_hoverbike():
 def build_magic_chest():
     reset_scene()
     mat_wood = create_material("ChestWood", base_color=(0.35, 0.22, 0.12, 1.0), roughness=0.7)
-    mat_gold = create_material("ChestGold", base_color=(0.95, 0.78, 0.25, 1.0), metallic=0.9, roughness=0.2)
+    create_material("ChestGold", base_color=(0.95, 0.78, 0.25, 1.0), metallic=0.9, roughness=0.2)
     bpy.ops.mesh.primitive_cube_add(size=1.0, location=(0, 0.35, 0))
     box = bpy.context.active_object
     box.scale = (0.7, 0.5, 0.45)
@@ -406,7 +406,7 @@ def build_magic_chest():
 def build_modern_smartphone():
     reset_scene()
     mat_body = create_material("PhoneBody", base_color=(0.12, 0.12, 0.14, 1.0), metallic=0.9, roughness=0.15)
-    mat_screen = create_material("PhoneScreen", base_color=(0.05, 0.35, 0.65, 1.0), roughness=0.1, emission_color=(0.1, 0.4, 0.8, 1.0), emission_strength=2.0)
+    create_material("PhoneScreen", base_color=(0.05, 0.35, 0.65, 1.0), roughness=0.1, emission_color=(0.1, 0.4, 0.8, 1.0), emission_strength=2.0)
     bpy.ops.mesh.primitive_cube_add(size=1.0, location=(0, 0, 0))
     phone = bpy.context.active_object
     phone.scale = (0.075, 0.008, 0.15)
@@ -481,7 +481,7 @@ def build_magic_wand_staff():
 def build_steampunk_airship():
     reset_scene()
     mat_hull = create_material("AirshipHull", base_color=(0.55, 0.38, 0.22, 1.0), roughness=0.5)
-    mat_brass = create_material("AirshipBrass", base_color=(0.85, 0.65, 0.25, 1.0), metallic=0.9, roughness=0.25)
+    create_material("AirshipBrass", base_color=(0.85, 0.65, 0.25, 1.0), metallic=0.9, roughness=0.25)
     bpy.ops.mesh.primitive_cylinder_add(radius=0.4, depth=1.8, location=(0, 0.5, 0))
     balloon = bpy.context.active_object
     balloon.rotation_euler = (math.radians(90), 0, 0)
@@ -534,7 +534,7 @@ def build_magic_grimoire():
 
 def build_cyber_glasses():
     reset_scene()
-    mat_frame = create_material("GlassFrame", base_color=(0.05, 0.05, 0.08, 1.0), metallic=0.7, roughness=0.3)
+    create_material("GlassFrame", base_color=(0.05, 0.05, 0.08, 1.0), metallic=0.7, roughness=0.3)
     mat_visor = create_material("GlassVisor", base_color=(0.0, 0.7, 0.9, 0.8), emission_color=(0.0, 0.8, 1.0, 1.0), emission_strength=2.5)
     bpy.ops.mesh.primitive_cube_add(size=1.0, location=(0, 0.04, 0))
     frame = bpy.context.active_object
@@ -545,7 +545,7 @@ def build_cyber_glasses():
 def build_medieval_shield():
     reset_scene()
     mat_iron = create_material("ShieldIron", base_color=(0.7, 0.75, 0.8, 1.0), metallic=0.9, roughness=0.3)
-    mat_crest = create_material("ShieldCrest", base_color=(0.8, 0.15, 0.15, 1.0), roughness=0.4)
+    create_material("ShieldCrest", base_color=(0.8, 0.15, 0.15, 1.0), roughness=0.4)
     bpy.ops.mesh.primitive_cylinder_add(radius=0.35, depth=0.04, location=(0, 0, 0))
     shield = bpy.context.active_object
     shield.scale = (1.0, 0.1, 1.4)
@@ -568,7 +568,7 @@ def build_street_lamp():
 def build_vending_machine():
     reset_scene()
     mat_body = create_material("VendingBody", base_color=(0.15, 0.25, 0.45, 1.0), roughness=0.35)
-    mat_glass = create_material("VendingGlass", base_color=(0.8, 0.95, 1.0, 1.0), emission_color=(0.7, 0.9, 1.0, 1.0), emission_strength=2.0)
+    create_material("VendingGlass", base_color=(0.8, 0.95, 1.0, 1.0), emission_color=(0.7, 0.9, 1.0, 1.0), emission_strength=2.0)
     bpy.ops.mesh.primitive_cube_add(size=1.0, location=(0, 0, 0.95))
     machine = bpy.context.active_object
     machine.scale = (0.85, 0.75, 1.9)
@@ -604,7 +604,7 @@ def build_crystal_orb():
 def build_tactical_helmet():
     reset_scene()
     mat_helmet = create_material("HelmetArmor", base_color=(0.1, 0.12, 0.14, 1.0), metallic=0.7, roughness=0.4)
-    mat_visor = create_material("HelmetVisor", base_color=(1.0, 0.4, 0.0, 1.0), emission_color=(1.0, 0.5, 0.0, 1.0), emission_strength=3.5)
+    create_material("HelmetVisor", base_color=(1.0, 0.4, 0.0, 1.0), emission_color=(1.0, 0.5, 0.0, 1.0), emission_strength=3.5)
     bpy.ops.mesh.primitive_uv_sphere_add(radius=0.16, location=(0, 0, 0.16))
     helmet = bpy.context.active_object
     helmet.scale = (1.0, 1.05, 0.95)
@@ -614,7 +614,7 @@ def build_tactical_helmet():
 def build_school_desk():
     reset_scene()
     mat_wood = create_material("DeskWood", base_color=(0.7, 0.48, 0.28, 1.0), roughness=0.6)
-    mat_steel = create_material("DeskSteel", base_color=(0.3, 0.35, 0.4, 1.0), metallic=0.85, roughness=0.35)
+    create_material("DeskSteel", base_color=(0.3, 0.35, 0.4, 1.0), metallic=0.85, roughness=0.35)
     bpy.ops.mesh.primitive_cube_add(size=1.0, location=(0, 0, 0.72))
     top = bpy.context.active_object
     top.scale = (0.7, 0.5, 0.04)

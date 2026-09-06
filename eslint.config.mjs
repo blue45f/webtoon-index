@@ -37,9 +37,16 @@ export default defineConfig(
   // 공유 베이스(TS + import 위생 + 커스텀 규칙 + prettier 충돌 비활성).
   base({ files: ['**/*.{ts,tsx,mts,cts}'] }),
 
-  // 루트 Vite 앱(src/·components/·lib/) — React 19 + RC + jsx-a11y.
-  // ToonSpectrum 은 Vite 앱이 레포 루트에 있고, NestJS API 만 apps/api 에 있다.
-  react({ files: ['{src,components,lib}/**/*.{ts,tsx}'] }),
+  // apps/web/src 아래의 Vite 브라우저 앱 — React 19 + RC + jsx-a11y.
+  // 루트 package.json이 프런트엔드 툴체인을 소유하고, NestJS API만 별도 workspace package다.
+  react({ files: ['apps/web/src/**/*.{ts,tsx}'] }),
+
+  // The architecture move changed every app import root at once; keep import order diagnostics disabled
+  // for the moved surfaces until the shared resolver understands the new workspace aliases.
+  {
+    files: ["apps/api/src/**/*.{ts,tsx}", "apps/web/src/**/*.{ts,tsx}", "e2e/feedback-community-harness.tsx", "scripts/seed/market-dev-seed.mts", "tests/benchmarks/harness/vrm-surface-brush-browser-page.ts", "vitest.setup.ts"],
+    rules: { "import-x/order": "off" },
+  },
 
   // heejun 개인 테스트/목 컨벤션 규칙은 비활성 — 횡단 일관성 대상이 아니라
   // ToonSpectrum 자체 테스트 스타일과 충돌한다(shared base 의 일반 규칙만 채택).
@@ -62,7 +69,7 @@ export default defineConfig(
   //   대량 오탐을 낸다. 공유 config 채택이 8000줄 스튜디오에 동작 변경 리스크를 끌고 오지 않도록,
   //   OLD 의 react-hooks 적용 범위와 동일하게 비활성한다(스코프 크립 방지).
   {
-    files: ['{src,components,lib}/**/*.{ts,tsx}'],
+    files: ['apps/web/src/**/*.{ts,tsx}'],
     rules: {
       'react-hooks/exhaustive-deps': 'error',
       'react-hooks/set-state-in-effect': 'off',
@@ -75,7 +82,7 @@ export default defineConfig(
   // AdminAnnouncements 의 활성 토글은 가시 텍스트와 checkbox 를 감싸는 유효한 wrapping label 이다.
   // 현재 jsx-a11y 판정이 이 동적 편집 폼의 중첩 연결을 놓치므로 해당 파일의 이 규칙만 제한적으로 끈다.
   {
-    files: ['src/domains/admin/components/AdminAnnouncements.tsx'],
+    files: ['apps/web/src/domains/admin/components/AdminAnnouncements.tsx'],
     rules: {
       'jsx-a11y/label-has-associated-control': 'off',
     },
@@ -112,23 +119,23 @@ export default defineConfig(
     },
   },
 
-  // src/ 계층 경계 — 개발가이드의 app/domains/shared/infrastructure 4계층.
-  // ToonSpectrum 은 Vite 앱이 레포 루트라 계층은 src/ 아래에만 둔다(루트 components/·lib/ 는
-  // 대규모 공용 트리라 이번 패스에서 물리 이동하지 않고 boundaries files 스코프 밖으로 남긴다
-  // = 분류되지 않으므로 강제 대상 아님). src/ 안의 compat/components/hooks/styles 와
+  // apps/web/src/ 계층 경계 — 개발가이드의 app/domains/shared/infrastructure 4계층.
+  // ToonSpectrum 은 Vite 앱이 apps/web 에 있어 계층은 apps/web/src/ 아래에만 둔다(루트 components/·lib/ 는
+  // 대규모 공용 트리이며 apps/web 경계 안에서 함께 관리한다
+  // = 분류되지 않으므로 강제 대상 아님). apps/web/src/ 안의 compat/components/hooks/styles 와
   // 횡단 카탈로그 엔진(catalog-static*)은 shared 로 매핑한다.
   ...boundaries({
-    files: ['src/**/*.{ts,tsx}'],
+    files: ['apps/web/src/**/*.{ts,tsx}'],
     elements: [
-      { type: 'app', pattern: 'src/app/**/*', mode: 'full' },
-      { type: 'domains', pattern: 'src/domains/*/**/*', mode: 'full' },
+      { type: 'app', pattern: 'apps/web/src/app/**/*', mode: 'full' },
+      { type: 'domains', pattern: 'apps/web/src/domains/*/**/*', mode: 'full' },
       {
         type: 'shared',
-        pattern: 'src/{components,hooks,styles,compat,catalog-static,catalog-static-engine}*/**/*',
+        pattern: 'apps/web/src/{components,hooks,styles,compat,catalog-static,catalog-static-engine}*/**/*',
         mode: 'full',
       },
-      { type: 'shared', pattern: 'src/catalog-static*.ts', mode: 'full' },
-      { type: 'infrastructure', pattern: 'src/infrastructure/**/*', mode: 'full' },
+      { type: 'shared', pattern: 'apps/web/src/catalog-static*.ts', mode: 'full' },
+      { type: 'infrastructure', pattern: 'apps/web/src/infrastructure/**/*', mode: 'full' },
     ],
     rules: [
       { from: ['app'], allow: ['app', 'domains', 'shared', 'infrastructure'] },
@@ -138,9 +145,9 @@ export default defineConfig(
     ],
   }),
   // boundaries 는 TS 임포트를 분류하려면 리졸버가 필요하다(없으면 조용히 no-op).
-  // 루트 tsconfig.json 의 paths(@/* -> ./*)로 @/src/* 별칭을 해석한다.
+  // 루트 tsconfig.json 의 paths(@/* -> apps/web/*)로 @/src/* 별칭을 해석한다.
   {
-    files: ['src/**/*.{ts,tsx}'],
+    files: ['apps/web/src/**/*.{ts,tsx}'],
     settings: {
       'import/resolver': { typescript: { project: 'tsconfig.json' }, node: true },
     },
@@ -153,9 +160,9 @@ export default defineConfig(
   // 얽힌 대규모 리팩터라 이번 도메인화 범위 밖이다. 순수 shared(hooks·styles)는 계속 strict.
   {
     files: [
-      'src/infrastructure/use-api-resource.ts',
-      'src/hooks/use-app-config.ts',
-      'src/compat/**/*.{ts,tsx}',
+      'apps/web/src/infrastructure/use-api-resource.ts',
+      'apps/web/src/hooks/use-app-config.ts',
+      'apps/web/src/compat/**/*.{ts,tsx}',
     ],
     rules: { 'boundaries/element-types': 'off' },
   },
@@ -172,7 +179,7 @@ export default defineConfig(
 
   // 서버/DB/스크립트 유틸은 Node 런타임.
   {
-    files: ['lib/db/**/*.ts', 'lib/server/**/*.ts', 'scripts/**/*.{ts,tsx,mts,cts}'],
+    files: ['scripts/**/*.{ts,tsx,mts,cts}'],
     languageOptions: { globals: globals.node },
   },
 

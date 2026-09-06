@@ -1,0 +1,22 @@
+{
+  "admin.dashboard.campaigns": "Campaigns",
+  "admin.dashboard.communityActiveUsers": "Active Users",
+  "admin.dashboard.communityPosts": "Fan Posts",
+  "admin.dashboard.communityReplies": "Fan Replies",
+  "admin.dashboard.communityReviewReplies": "Review Replies",
+  "admin.dashboard.communityReviews": "Reviews",
+  "admin.dashboard.groupCommunity": "Community",
+  "admin.dashboard.groupMonetization": "Revenue",
+  "admin.dashboard.groupUsers": "Users",
+  "admin.dashboard.loadError": "Failed to load metrics",
+  "admin.dashboard.paidAmount": "Settled Amount",
+  "admin.dashboard.pendingAmount": "Pending Amount",
+  "admin.dashboard.pendingSettlements": "Pending Settlements",
+  "admin.dashboard.period": "Last {days} days · As of {date}",
+  "admin.dashboard.planRatio": "Active / Total Plans",
+  "admin.dashboard.userActive30d": "30-day Active",
+  "admin.dashboard.userActive7d": "7-day Active",
+  "admin.dashboard.userAdmins": "Admins",
+  "admin.dashboard.userCreators": "Creators",
+  "admin.dashboard.userTotal": "Total"
+}

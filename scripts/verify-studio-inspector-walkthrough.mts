@@ -479,7 +479,7 @@ async function restoreWorkspace(page: Page, target: WorkspaceIdentity): Promise<
 /**
  * 게시 작업공간 프리셋으로 게시 준비 모드를 연다.
  *
- * `src/domains/creator/studio-workspaces.ts` 의 `id: "publish"`(이름 '게시')는
+ * `apps/web/src/domains/creator/studio-workspaces.ts` 의 `id: "publish"`(이름 '게시')는
  * `createBuiltinLayout({ primary: "publish", ... })` 이고, 인스펙터는
  * `publishMode = layout.primary === "publish"` 로 배너를 켠다. 즉 이 전환은 로그인도
  * 검색 색인도 타지 않는 순수 배치 전환이며, 이 워크스루가 이미 읽고 있는

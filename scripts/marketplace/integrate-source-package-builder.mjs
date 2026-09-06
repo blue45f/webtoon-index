@@ -2,7 +2,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 const root = process.cwd();
-const target = resolve(root, "src/domains/market/components/MarketplaceAuthoringWorkshop.tsx");
+const target = resolve(root, "apps/web/src/domains/market/components/MarketplaceAuthoringWorkshop.tsx");
 let source = readFileSync(target, "utf8");
 
 function replaceOnce(before, after, label) {
@@ -12,7 +12,7 @@ function replaceOnce(before, after, label) {
 }
 
 if (!source.includes("creator-marketplace-package-builder")) {
-  source = `import { buildCreatorMarketplaceSourcePackage } from "@/lib/creator-marketplace-package-builder";\n\n${source}`;
+  source = `import { buildCreatorMarketplaceSourcePackage } from "@/shared/lib/creator-marketplace-package-builder";\n\n${source}`;
 }
 source = source.replace("  buildCreatorMarketplaceAuthoringManifest,\n", "");
 
@@ -139,5 +139,5 @@ source = source.replace(
 writeFileSync(target, source);
 writeFileSync(
   resolve(root, "marketplace-source-package-integration-report.json"),
-  `${JSON.stringify({ target: "src/domains/market/components/MarketplaceAuthoringWorkshop.tsx", status: "integrated" }, null, 2)}\n`,
+  `${JSON.stringify({ target: "apps/web/src/domains/market/components/MarketplaceAuthoringWorkshop.tsx", status: "integrated" }, null, 2)}\n`,
 );

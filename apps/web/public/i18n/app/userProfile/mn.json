@@ -1,0 +1,23 @@
+{
+  "userProfile.eyebrow": "Reader profile",
+  "userProfile.tabs.reviews": "Reviews",
+  "userProfile.tabs.works": "Created works",
+  "userProfile.tabs.series": "Series",
+  "userProfile.works.empty": "This user has no public works yet.",
+  "userProfile.series.empty": "This user has no series yet.",
+  "userProfile.fetchError": "Unable to load profile.",
+  "userProfile.authorFallback": "User",
+  "userProfile.metaTemplate": "{author} profile · {reviews} reviews · {works} works · avg rating {avg} — ToonSpectrum.",
+  "userProfile.bioFallback": "Reader profile and published works",
+  "userProfile.followHint": "You can follow users after signing in.",
+  "userProfile.follow": "Follow",
+  "userProfile.following": "Following",
+  "userProfile.stat.followers": "Followers",
+  "userProfile.stat.totalReviews": "Reviews",
+  "userProfile.stat.avgRating": "Average rating",
+  "userProfile.stat.works": "Created works",
+  "userProfile.stat.series": "Series",
+  "userProfile.tabsLabel": "Profile content",
+  "userProfile.refresh": "Refresh",
+  "userProfile.emptyReviews": "No reviews published by this user yet."
+}

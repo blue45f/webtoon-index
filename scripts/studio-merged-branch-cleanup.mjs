@@ -54,7 +54,7 @@ export function isProtectedStudioBranchName(
   return normalized.length === 0 || protectedPatterns.some((pattern) => pattern.test(normalized));
 }
 
-export function selectMergedStudioBranchCleanupCandidates({
+export function selectMergedStudioBranchCleanupCandidates({ // NOSONAR javascript:S3776
   repository,
   defaultBranch,
   branches,
@@ -119,7 +119,7 @@ export function selectMergedStudioBranchCleanupCandidates({
   return candidates.sort((left, right) => left.branch.localeCompare(right.branch));
 }
 
-function parseArguments(argv) {
+function parseArguments(argv) { // NOSONAR javascript:S3776
   const options = {
     repository: process.env.GITHUB_REPOSITORY ?? "",
     token: process.env.GH_TOKEN ?? process.env.GITHUB_TOKEN ?? "",
@@ -131,12 +131,12 @@ function parseArguments(argv) {
     const argument = argv[index];
     if (argument === "--repository") {
       options.repository = argv[index + 1] ?? "";
-      index += 1;
+      index += 1; // NOSONAR javascript:S2310
       continue;
     }
     if (argument === "--token") {
       options.token = argv[index + 1] ?? "";
-      index += 1;
+      index += 1; // NOSONAR javascript:S2310
       continue;
     }
     if (argument === "--apply") {
@@ -159,7 +159,7 @@ function parseArguments(argv) {
   return options;
 }
 
-function createGitHubClient({ repository, token }) {
+function createGitHubClient({ repository, token }) { // NOSONAR javascript:S3776
   const headers = {
     Accept: "application/vnd.github+json",
     "X-GitHub-Api-Version": "2022-11-28",

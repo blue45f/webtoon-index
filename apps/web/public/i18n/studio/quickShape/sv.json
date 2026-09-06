@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "smarta former",
+  "studio.quickShape.description.active": "Rita lugnt linjer, fyrkanter, cirklar och trianglar. Om du släpper taget kommer det att städa av sig självt.",
+  "studio.quickShape.description.inactive": "Det är okej att klottra ner det. Om du slår på den kommer din handritning att förfinas till en snygg form.",
+  "studio.quickShape.toggleHint": "I samma ögonblick som du släpper taget om en grovt ritad form med en penna, knäpper den till en exakt form. Även om du pausar medan du ritar, kommer en förhandsvisning att visas.",
+  "studio.quickShape.toggleAria.on": "Smarta former på",
+  "studio.quickShape.toggleAria.off": "Smarta former av",
+  "studio.quickShape.matchedSuffix": " Jag kan känna det. Det bekräftas när jag släpper min hand.",
+  "studio.quickShape.emptyStatus": "Rita formen och släpp taget, eller bara stanna vid slutet",
+  "studio.quickShape.openTutorial": "Titta på handledningen om smarta former",
+  "studio.quickShape.notice": "Rita smarta former, linjer, cirklar, fyrkanter etc. och förfina dem när du släpper taget (pausa för att förhandsgranska)"
+}

@@ -1,12 +1,12 @@
-import { emptyWorkspace } from "../lib/creator-resources";
+import { emptyWorkspace } from "../apps/web/src/shared/lib/creator-resources";
 import {
   applyStoryDraft, browserWorkspaceLock, changedStoryFields, createCreatorWorkspaceStorage,
   createStoryDraft, editStoryDraft, parseStoryDraft, resolveStoryConflict,
   storyDraftConflicts, storyDraftView, WorkspaceConflictError, workspaceWriteError,
-} from "../lib/creator-workspace-persistence";
+} from "../apps/web/src/shared/lib/creator-workspace-persistence";
 
 import type { CreatorResourceCase } from "./creator-resources-cases";
-import type { WorkspaceLock } from "../lib/creator-workspace-persistence";
+import type { WorkspaceLock } from "../apps/web/src/shared/lib/creator-workspace-persistence";
 
 function ok(value: unknown): asserts value { if (!value) throw new Error("Assertion failed"); }
 function equal(actual: unknown, expected: unknown) {

@@ -34,8 +34,8 @@ function replaceUnique(source, anchor, replacement, label) {
 }
 
 function integratePublishPage() {
-  const page = resolve(root, "src/domains/market/pages/MarketPublishPage.tsx");
-  const workshop = resolve(root, "src/domains/market/components/MarketplaceAuthoringWorkshop.tsx");
+  const page = resolve(root, "apps/web/src/domains/market/pages/MarketPublishPage.tsx");
+  const workshop = resolve(root, "apps/web/src/domains/market/components/MarketplaceAuthoringWorkshop.tsx");
   invariant(existsSync(page), "MarketPublishPage.tsx is missing");
   invariant(existsSync(workshop), "MarketplaceAuthoringWorkshop.tsx is missing");
 
@@ -62,8 +62,8 @@ function integratePublishPage() {
 }
 
 function integrateBrushStudio() {
-  const studio = resolve(root, "src/domains/creator/brush/StudioBrushStudio.tsx");
-  const bridge = resolve(root, "src/domains/creator/MarketplaceBrushStudioBridge.tsx");
+  const studio = resolve(root, "apps/web/src/domains/creator/brush/StudioBrushStudio.tsx");
+  const bridge = resolve(root, "apps/web/src/domains/creator/MarketplaceBrushStudioBridge.tsx");
   invariant(existsSync(studio), "StudioBrushStudio.tsx is missing");
   invariant(existsSync(bridge), "MarketplaceBrushStudioBridge.tsx is missing");
 

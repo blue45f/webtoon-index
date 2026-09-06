@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Samouczek funkcji",
+  "studio.hub.subtitle": "Jedna funkcja na raz, bez żadnego obciążenia. Spojrzałem na {done}/{total}.",
+  "studio.hub.progressAriaLabel": "Postęp samouczka",
+  "studio.hub.listAriaLabel": "Lista funkcji",
+  "studio.hub.checked": "spójrz",
+  "studio.hub.prev": "Poprzedni",
+  "studio.hub.next": "następny",
+  "studio.hub.markComplete": "oznaczyć jako ukończone",
+  "studio.hub.completed": "Ukończono",
+  "studio.hub.tryLabelDefault": "Podążaj dalej",
+  "studio.hub.stepAriaPrefix": "krok"
+}

@@ -8,16 +8,16 @@ import {
   STUDIO_CRDT_RASTER_SURFACES_ROOT,
   STUDIO_CRDT_RASTER_UNDO_ACKS_ROOT,
   STUDIO_CRDT_RASTER_UNDO_OPERATIONS_ROOT,
-} from "../../../../../lib/studio-crdt-raster-document-contract";
+} from "../../../../web/src/shared/lib/studio-crdt-raster-document-contract";
 import {
   STUDIO_RASTER_CRDT_VERSION,
   STUDIO_RASTER_KERNEL,
   canonicalStudioRasterJson,
-} from "../../../../../lib/studio-crdt-raster-ops";
+} from "../../../../web/src/shared/lib/studio-crdt-raster-ops";
 import {
   STUDIO_RASTER_ASSET_MAX_ASSETS_PER_WORK,
   STUDIO_RASTER_ASSET_MAX_TOTAL_BYTES_PER_WORK,
-} from "../../../../../lib/studio-raster-asset-contract";
+} from "../../../../web/src/shared/lib/studio-raster-asset-contract";
 import { creatorWorkRasterAssets } from "../../db/studio-raster-asset.schema";
 
 import {

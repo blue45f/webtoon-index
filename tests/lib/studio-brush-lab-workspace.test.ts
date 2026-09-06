@@ -2,8 +2,8 @@ import assert from "node:assert/strict";
 
 import { describe, it } from "vitest";
 
-import { createBrushLabRecipe, updateBrushLabSlot } from "../../src/domains/creator/brush-lab/brush-lab-recipe";
-import { readBrushLabWorkspace, writeBrushLabWorkspace } from "../../src/domains/creator/brush-lab/brush-lab-workspace";
+import { createBrushLabRecipe, updateBrushLabSlot } from "../../apps/web/src/domains/creator/brush-lab/brush-lab-recipe";
+import { readBrushLabWorkspace, writeBrushLabWorkspace } from "../../apps/web/src/domains/creator/brush-lab/brush-lab-workspace";
 
 const workspace = () => ({
   brush: JSON.stringify({ marker: "native validation occurs at runtime", name: "현재" }),

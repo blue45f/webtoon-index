@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "bentuk pintar",
+  "studio.quickShape.description.active": "Lukis garisan, segi empat sama, bulatan dan segi tiga dengan santai. Jika dilepaskan, ia akan kemas sendiri.",
+  "studio.quickShape.description.inactive": "Tidak mengapa untuk mencoretnya. Jika anda menghidupkannya, lukisan tangan anda akan diperhalusi menjadi bentuk yang kemas.",
+  "studio.quickShape.toggleHint": "Sebaik sahaja anda melepaskan bentuk yang dilukis secara kasar dengan pen, ia akan menjadi bentuk yang tepat. Walaupun anda berhenti seketika semasa melukis, pratonton akan muncul.",
+  "studio.quickShape.toggleAria.on": "Bentuk pintar dihidupkan",
+  "studio.quickShape.toggleAria.off": "Bentuk pintar dimatikan",
+  "studio.quickShape.matchedSuffix": " Saya dapat merasakannya. Ia disahkan apabila saya melepaskan tangan saya.",
+  "studio.quickShape.emptyStatus": "Lukis bentuk dan lepaskan, atau hanya tinggal di hujung",
+  "studio.quickShape.openTutorial": "Tonton tutorial bentuk pintar",
+  "studio.quickShape.notice": "Lukis bentuk pintar, garisan, bulatan, segi empat sama, dsb. dan haluskannya apabila anda melepaskannya (jeda untuk pratonton)"
+}

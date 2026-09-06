@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "บทช่วยสอนคุณสมบัติ",
+  "studio.hub.subtitle": "ทีละฟังก์ชันโดยไม่มีภาระใดๆ ฉันดูที่ {done}/{total}",
+  "studio.hub.progressAriaLabel": "ความคืบหน้าการสอน",
+  "studio.hub.listAriaLabel": "รายการคุณสมบัติ",
+  "studio.hub.checked": "ลองดู",
+  "studio.hub.prev": "ก่อนหน้า",
+  "studio.hub.next": "ถัดไป",
+  "studio.hub.markComplete": "ทำเครื่องหมายว่าเสร็จสมบูรณ์",
+  "studio.hub.completed": "เสร็จสิ้น",
+  "studio.hub.tryLabelDefault": "ตามมาครับ",
+  "studio.hub.stepAriaPrefix": "ขั้นตอน"
+}

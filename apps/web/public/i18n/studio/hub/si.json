@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "විශේෂාංග නිබන්ධනය",
+  "studio.hub.subtitle": "කිසිදු බරක් නොමැතිව වරකට එක් කාර්යයක්. මම {done}/{total} බැලුවා.",
+  "studio.hub.progressAriaLabel": "නිබන්ධන ප්‍රගතිය",
+  "studio.hub.listAriaLabel": "විශේෂාංග ලැයිස්තුව",
+  "studio.hub.checked": "බලන්න",
+  "studio.hub.prev": "පෙර",
+  "studio.hub.next": "ඊළඟට",
+  "studio.hub.markComplete": "සම්පූර්ණ ලෙස සලකුණු කරන්න",
+  "studio.hub.completed": "සම්පූර්ණ කළා",
+  "studio.hub.tryLabelDefault": "අනුගමනය කරන්න",
+  "studio.hub.stepAriaPrefix": "පියවර"
+}

@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "ہوشیار شکلیں",
+  "studio.quickShape.description.active": "آرام سے لکیریں، مربع، دائرے اور مثلث کھینچیں۔ اگر آپ جانے دیں گے تو یہ خود ہی ٹھیک ہو جائے گا۔",
+  "studio.quickShape.description.inactive": "اسے نیچے لکھنا ٹھیک ہے۔ اگر آپ اسے آن کرتے ہیں، تو آپ کی ہینڈ ڈرائنگ ایک صاف ستھرا شکل میں بدل جائے گی۔",
+  "studio.quickShape.toggleHint": "جس لمحے آپ قلم کے ساتھ تقریباً کھینچی ہوئی شکل کو جانے دیتے ہیں، یہ بالکل درست شکل میں آجاتا ہے۔ یہاں تک کہ اگر آپ ڈرائنگ کے دوران توقف کرتے ہیں، ایک پیش نظارہ ظاہر ہوگا۔",
+  "studio.quickShape.toggleAria.on": "اسمارٹ شکلیں آن",
+  "studio.quickShape.toggleAria.off": "اسمارٹ شکلیں بند",
+  "studio.quickShape.matchedSuffix": " میں اسے محسوس کر سکتا ہوں۔ جب میں اپنا ہاتھ چھوڑتا ہوں تو اس کی تصدیق ہوتی ہے۔",
+  "studio.quickShape.emptyStatus": "شکل کھینچیں اور جانے دیں، یا صرف آخر میں رہیں",
+  "studio.quickShape.openTutorial": "سمارٹ شکلیں ٹیوٹوریل دیکھیں",
+  "studio.quickShape.notice": "سمارٹ شکلیں، لکیریں، دائرے، چوکور وغیرہ بنائیں اور جب آپ جانے دیں تو انہیں بہتر کریں (پیش نظارہ کے لیے روک دیں)"
+}

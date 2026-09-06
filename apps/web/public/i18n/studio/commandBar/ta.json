@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "விரைவு கட்டளைப் பட்டி",
+  "studio.commandBar.settings": "கட்டளைப் பட்டி அமைப்புகள்",
+  "studio.commandBar.settingsDescription": "மெனு பட்டிக்குக் கீழுள்ள கட்டளைப் பட்டியின் இட அமைப்பையும் தெரிவுநிலையையும் மாற்றவும்.",
+  "studio.commandBar.settingsTip": "அதிகம் பயன்படுத்தும் கட்டளைகளை முதல் இடங்களில் வைத்தால் விரைவாக எட்டலாம்.",
+  "studio.commandBar.settingsClose": "கட்டளைப் பட்டி அமைப்புகளை மூடு",
+  "studio.commandBar.settingsStorageNote": "இட அமைப்பு இந்த உலாவியின் பணியிட அமைப்புகளில் சேமிக்கப்படுகிறது.",
+  "studio.commandBar.showSlots": "கட்டளை இடங்களைக் காட்டு",
+  "studio.commandBar.slot": "இடம் {index}",
+  "studio.commandBar.slotAria": "கட்டளை இடம் {index}",
+  "studio.commandBar.slotEmpty": "காலி இடம்",
+  "studio.commandBar.resetDefaults": "இயல்புநிலை அமைப்புக்கு மீட்டமை",
+  "studio.commandBar.command.undo": "செயல்தவிர்",
+  "studio.commandBar.command.redo": "மீண்டும் செய்",
+  "studio.commandBar.command.save": "வரைவைச் சேமி",
+  "studio.commandBar.command.publish": "வெளியிடு",
+  "studio.commandBar.command.download": "தற்போதைய பக்கத்தைப் பதிவிறக்கு",
+  "studio.commandBar.command.export-open": "ஏற்றுமதி விருப்பங்கள்",
+  "studio.commandBar.command.zoom-fit": "திரையின் அகலத்திற்குப் பொருத்து",
+  "studio.commandBar.command.assets": "வார்ப்புருக்கள் மற்றும் சொத்துகள்",
+  "studio.commandBar.command.bubbles": "பேச்சுக் குமிழ்",
+  "studio.commandBar.command.project": "திட்டக் கருவிகள்"
+}

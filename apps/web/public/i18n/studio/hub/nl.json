@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Functie-tutorial",
+  "studio.hub.subtitle": "Eén functie tegelijk, zonder enige last. Ik keek naar {done}/{total}.",
+  "studio.hub.progressAriaLabel": "Vooruitgang van de tutorial",
+  "studio.hub.listAriaLabel": "Functielijst",
+  "studio.hub.checked": "kijk eens",
+  "studio.hub.prev": "Vorige",
+  "studio.hub.next": "volgende",
+  "studio.hub.markComplete": "markeren als voltooid",
+  "studio.hub.completed": "Voltooid",
+  "studio.hub.tryLabelDefault": "Volg mee",
+  "studio.hub.stepAriaPrefix": "stap"
+}

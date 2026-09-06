@@ -4,13 +4,13 @@ on:
   pull_request:
     branches: [main]
     paths:
-      - 'src/domains/creator/studio-quality-*.ts'
-      - 'src/domains/creator/studio-finish-quality*.ts'
-      - 'src/domains/creator/StudioContinuityPanel*.tsx'
-      - 'src/domains/creator/StudioFinishQualityView*.tsx'
-      - 'src/domains/creator/StudioLazyPanelStack*.tsx'
-      - 'src/domains/creator/studio-main-menu-items-production.ts'
-      - 'src/domains/creator/hybrid-dcc/StudioHybridDccCameraRig*.tsx'
+      - 'apps/web/src/domains/creator/studio-quality-*.ts'
+      - 'apps/web/src/domains/creator/studio-finish-quality*.ts'
+      - 'apps/web/src/domains/creator/StudioContinuityPanel*.tsx'
+      - 'apps/web/src/domains/creator/StudioFinishQualityView*.tsx'
+      - 'apps/web/src/domains/creator/StudioLazyPanelStack*.tsx'
+      - 'apps/web/src/domains/creator/studio-main-menu-items-production.ts'
+      - 'apps/web/src/domains/creator/hybrid-dcc/StudioHybridDccCameraRig*.tsx'
       - 'scripts/verify-studio-menus.mts'
       - 'scripts/studio-quality-bundle-leaves.test.mjs'
       - 'vite.config.ts'
@@ -18,13 +18,13 @@ on:
   push:
     branches: [main]
     paths:
-      - 'src/domains/creator/studio-quality-*.ts'
-      - 'src/domains/creator/studio-finish-quality*.ts'
-      - 'src/domains/creator/StudioContinuityPanel*.tsx'
-      - 'src/domains/creator/StudioFinishQualityView*.tsx'
-      - 'src/domains/creator/StudioLazyPanelStack*.tsx'
-      - 'src/domains/creator/studio-main-menu-items-production.ts'
-      - 'src/domains/creator/hybrid-dcc/StudioHybridDccCameraRig*.tsx'
+      - 'apps/web/src/domains/creator/studio-quality-*.ts'
+      - 'apps/web/src/domains/creator/studio-finish-quality*.ts'
+      - 'apps/web/src/domains/creator/StudioContinuityPanel*.tsx'
+      - 'apps/web/src/domains/creator/StudioFinishQualityView*.tsx'
+      - 'apps/web/src/domains/creator/StudioLazyPanelStack*.tsx'
+      - 'apps/web/src/domains/creator/studio-main-menu-items-production.ts'
+      - 'apps/web/src/domains/creator/hybrid-dcc/StudioHybridDccCameraRig*.tsx'
       - 'scripts/verify-studio-menus.mts'
       - 'scripts/studio-quality-bundle-leaves.test.mjs'
       - 'vite.config.ts'
@@ -105,24 +105,24 @@ jobs:
           set -euo pipefail
           node --test scripts/studio-quality-bundle-leaves.test.mjs 2>&1 | tee "$RUNNER_TEMP/finishing-quality/bundle-models.log"
           pnpm exec vitest run \
-            src/domains/creator/studio-quality-inspection.test.ts \
-            src/domains/creator/studio-quality-inspection-hardening.test.ts \
-            src/domains/creator/studio-quality-raster-inspection.test.ts \
-            src/domains/creator/studio-quality-finish-bridge.test.ts \
-            src/domains/creator/studio-finish-quality.test.ts \
-            src/domains/creator/studio-finish-quality-integration.test.ts \
-            src/domains/creator/StudioFinishQualityView.test.tsx \
-            src/domains/creator/StudioContinuityPanel.test.tsx \
-            src/domains/creator/StudioContinuityPanel.hardening.test.tsx \
-            src/domains/creator/StudioLazyPanelStack.test.tsx \
-            src/domains/creator/StudioMenubarContent.test.tsx \
-            src/domains/creator/studio-review-entry-point-viewports.test.tsx \
-            src/domains/creator/StudioToolBeltContent.hints.test.ts \
-            src/domains/creator/studio-router/StudioRouteCollaborationGateway.test.tsx \
-            src/domains/creator/studio-router/studio-production-command-center-boundary.test.ts \
-            src/domains/creator/studio-adjustment-stack.test.ts \
-            src/domains/creator/studio-ux-convergence-boundary.test.ts \
-            src/domains/creator/hybrid-dcc/StudioHybridDccCameraRig.test.tsx \
+            apps/web/src/domains/creator/studio-quality-inspection.test.ts \
+            apps/web/src/domains/creator/studio-quality-inspection-hardening.test.ts \
+            apps/web/src/domains/creator/studio-quality-raster-inspection.test.ts \
+            apps/web/src/domains/creator/studio-quality-finish-bridge.test.ts \
+            apps/web/src/domains/creator/studio-finish-quality.test.ts \
+            apps/web/src/domains/creator/studio-finish-quality-integration.test.ts \
+            apps/web/src/domains/creator/StudioFinishQualityView.test.tsx \
+            apps/web/src/domains/creator/StudioContinuityPanel.test.tsx \
+            apps/web/src/domains/creator/StudioContinuityPanel.hardening.test.tsx \
+            apps/web/src/domains/creator/StudioLazyPanelStack.test.tsx \
+            apps/web/src/domains/creator/StudioMenubarContent.test.tsx \
+            apps/web/src/domains/creator/studio-review-entry-point-viewports.test.tsx \
+            apps/web/src/domains/creator/StudioToolBeltContent.hints.test.ts \
+            apps/web/src/domains/creator/studio-router/StudioRouteCollaborationGateway.test.tsx \
+            apps/web/src/domains/creator/studio-router/studio-production-command-center-boundary.test.ts \
+            apps/web/src/domains/creator/studio-adjustment-stack.test.ts \
+            apps/web/src/domains/creator/studio-ux-convergence-boundary.test.ts \
+            apps/web/src/domains/creator/hybrid-dcc/StudioHybridDccCameraRig.test.tsx \
             --reporter=verbose 2>&1 | tee "$RUNNER_TEMP/finishing-quality/tests.log"
       - name: Build the production browser surface with types and CSP checks
         run: |

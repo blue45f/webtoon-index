@@ -81,7 +81,7 @@ __pycache__/
 *.db-journal
 
 # 정적 카탈로그 빌드 산출물 (git 소스는 apps/api/data/catalog.json.gz). pnpm catalog:gen 으로 생성.
-/public/data/
+/apps/web/public/data/
 *.db-wal
 *.db-shm
 
@@ -94,7 +94,7 @@ __pycache__/
 
 # 로컬 테스트 계정 자격증명(절대 커밋 금지)
 test-accounts.local.*
-/public/sitemap.xml
+/apps/web/public/sitemap.xml
 
 # Grok Build TUI / AI agent session data (로컬 전용, 절대 커밋 금지)
 .grok/
@@ -113,3 +113,11 @@ crates/*/target/
 
 # tsc --generateTrace output (pnpm run typecheck:trace); regenerated, never committed
 /.tstrace/
+
+# generated QA reports (keep in CI artifacts, not source control)
+/qa-results/
+*.tmp
+*.bak
+*.swp
+*.swo
+*~

@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "maumbo smart",
+  "studio.quickShape.description.active": "Kwa burudani chora mistari, miraba, miduara na pembetatu. Ukiiruhusu iende, itajipanga yenyewe.",
+  "studio.quickShape.description.inactive": "Ni sawa kuiandika chini. Ukiiwasha, mchoro wako wa mkono utaboreshwa kuwa umbo nadhifu.",
+  "studio.quickShape.toggleHint": "Mara tu unapoachilia sura iliyochorwa takriban na kalamu, inaingia kwenye umbo kamili. Hata kama utasitisha unapochora, onyesho la kukagua litaonekana.",
+  "studio.quickShape.toggleAria.on": "Umewasha maumbo mahiri",
+  "studio.quickShape.toggleAria.off": "Maumbo mahiri yamezimwa",
+  "studio.quickShape.matchedSuffix": " Naweza kuhisi. Inathibitishwa ninapoachilia mkono wangu.",
+  "studio.quickShape.emptyStatus": "Chora sura na uiruhusu, au kaa tu mwisho",
+  "studio.quickShape.openTutorial": "Tazama mafunzo ya maumbo mahiri",
+  "studio.quickShape.notice": "Chora maumbo mahiri, mistari, miduara, miraba, n.k. na uyaboreshe unapoachilia (sitisha ili uhakikishe)"
+}

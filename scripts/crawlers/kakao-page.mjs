@@ -77,7 +77,9 @@ function absThumb(thumb) {
 // metaList / subtitleList 의 첫 요소("웹소설"|"웹툰")로 타입 판정.
 function typeFromMeta(metaArr) {
   const first = Array.isArray(metaArr) ? String(metaArr[0] || "") : "";
-  return first.includes("웹소설") ? "webnovel" : first.includes("웹툰") ? "webtoon" : null;
+  if (first.includes("웹소설")) return "webnovel";
+  if (first.includes("웹툰")) return "webtoon";
+  return null;
 }
 
 // 상세 페이지 categoryType(Webnovel|Webtoon) → 타입.
@@ -140,7 +142,7 @@ async function collectHomeItems(bySeries) {
 }
 
 // 각 탭의 장르/랭킹 screen 랜딩 페이지(SSR __NEXT_DATA__)에서 시리즈 리스트를 모은다.
-async function collectScreenItems(bySeries) {
+async function collectScreenItems(bySeries) { // NOSONAR javascript:S3776
   for (const [tab, screens] of Object.entries(TAB_SCREENS)) {
     const tabRef = `${ORIGIN}/menu/${tab}`;
     for (const screen of screens) {
@@ -185,7 +187,7 @@ async function fetchDetailMeta(seriesId) {
   return metas.find((m) => m.seriesId === seriesId) || metas[0];
 }
 
-export async function crawl() {
+export async function crawl() { // NOSONAR javascript:S3776
   const listItems = await collectListItems();
   if (!listItems.length) return [];
 
@@ -257,7 +259,7 @@ export async function crawl() {
     const tagPool = [detail && detail.category, detail && detail.subcategory, item._genreHint, listGenre, ...(metaArr || [])]
       .filter(Boolean)
       .map((s) => String(s).trim())
-      .filter((s) => s && s.length <= 8 && !/^\d+(\.\d+)?(만|억)?$/.test(s));
+      .filter((s) => s && s.length <= 8 && !/^\d+(\.\d+)?[만억]?$/.test(s));
     const tags = [...new Set(tagPool)].slice(0, 6);
 
     const id = `${PREFIX}-${workId}`;

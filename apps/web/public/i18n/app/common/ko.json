@@ -1,0 +1,16 @@
+{
+  "common.loading": "불러오는 중",
+  "common.loading.short": "로딩",
+  "common.close": "닫기",
+  "common.open": "열기",
+  "common.search": "검색",
+  "common.retry": "재시도",
+  "common.retry.short": "재시도",
+  "common.backToTop": "맨 위로 이동",
+  "common.backToHome": "홈으로",
+  "common.loading.search": "검색 중…",
+  "common.notFoundWithQuery": "'{query}' 검색 결과가 없습니다.",
+  "common.openSearch": "전체 검색에서 다시 찾기 →",
+  "common.loading.empty": "응답 데이터가 비어 있습니다.",
+  "common.retry.all": "다시 시도하거나 홈으로 이동해 주세요."
+}

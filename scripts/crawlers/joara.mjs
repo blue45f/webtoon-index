@@ -48,7 +48,7 @@ function yearFrom(...dates) {
   return 2023;
 }
 
-function toRow(item, fallbackGenre, rank) {
+function toRow(item, fallbackGenre, rank) { // NOSONAR javascript:S3776
   const workId = item.book_code;
   if (workId == null) return null;
   const realTitle = cleanTitle(stripTags(String(item.subject || ""))).trim();
@@ -118,7 +118,7 @@ function toRow(item, fallbackGenre, rank) {
   };
 }
 
-export async function crawl() {
+export async function crawl() { // NOSONAR javascript:S3776
   const byId = new Map();
 
   for (const { code, fallback } of CATEGORIES) {

@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "smarte former",
+  "studio.quickShape.description.active": "Tegn roligt linjer, firkanter, cirkler og trekanter. Hvis du giver slip, vil det rydde op af sig selv.",
+  "studio.quickShape.description.inactive": "Det er okay at skrive det ned. Hvis du tænder for det, vil din håndtegning blive forfinet til en pæn form.",
+  "studio.quickShape.toggleHint": "I det øjeblik du giver slip på en groft tegnet form med en kuglepen, klikker den i en nøjagtig form. Selvom du holder pause, mens du tegner, vises en forhåndsvisning.",
+  "studio.quickShape.toggleAria.on": "Smarte former på",
+  "studio.quickShape.toggleAria.off": "Smarte former af",
+  "studio.quickShape.matchedSuffix": " Jeg kan mærke det. Det er bekræftet, når jeg slipper hånden.",
+  "studio.quickShape.emptyStatus": "Tegn formen og slip, eller bliv bare ved enden",
+  "studio.quickShape.openTutorial": "Se selvstudiet om smarte former",
+  "studio.quickShape.notice": "Tegn smarte figurer, linjer, cirkler, firkanter osv. og forfin dem, når du giver slip (pause for at se forhåndsvisning)"
+}

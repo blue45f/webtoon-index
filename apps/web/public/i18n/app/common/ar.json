@@ -1,0 +1,16 @@
+{
+  "common.loading": "تحميل",
+  "common.loading.short": "Loading",
+  "common.close": "إغلاق",
+  "common.open": "فتح",
+  "common.search": "بحث",
+  "common.retry": "إعادة المحاولة",
+  "common.retry.short": "Retry",
+  "common.backToTop": "Back to top",
+  "common.backToHome": "العودة للرئيسية",
+  "common.loading.search": "Searching…",
+  "common.notFoundWithQuery": "No results for '{query}'.",
+  "common.openSearch": "Find it in Search →",
+  "common.loading.empty": "No data returned.",
+  "common.retry.all": "Try again or go back to home."
+}

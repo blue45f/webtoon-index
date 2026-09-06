@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "فوری کمانڈ بار",
+  "studio.commandBar.settings": "کمانڈ بار سیٹنگز",
+  "studio.commandBar.settingsDescription": "مینو بار کے نیچے کمانڈ بار کی سلاٹ ترتیب اور نمائش تبدیل کریں۔",
+  "studio.commandBar.settingsTip": "جو کمانڈز سب سے زیادہ استعمال کرتے ہیں انہیں پہلی سلاٹس میں رکھیں تاکہ فوراً ہاتھ آئیں۔",
+  "studio.commandBar.settingsClose": "کمانڈ بار سیٹنگز بند کریں",
+  "studio.commandBar.settingsStorageNote": "سلاٹ ترتیب اسی براؤزر کی ورک اسپیس سیٹنگز میں محفوظ ہوتی ہے۔",
+  "studio.commandBar.showSlots": "کمانڈ سلاٹس دکھائیں",
+  "studio.commandBar.slot": "سلاٹ {index}",
+  "studio.commandBar.slotAria": "کمانڈ سلاٹ {index}",
+  "studio.commandBar.slotEmpty": "خالی سلاٹ",
+  "studio.commandBar.resetDefaults": "ڈیفالٹ ترتیب پر واپس لائیں",
+  "studio.commandBar.command.undo": "کالعدم کریں",
+  "studio.commandBar.command.redo": "دوبارہ کریں",
+  "studio.commandBar.command.save": "مسودہ محفوظ کریں",
+  "studio.commandBar.command.publish": "شائع کریں",
+  "studio.commandBar.command.download": "موجودہ صفحہ ڈاؤن لوڈ کریں",
+  "studio.commandBar.command.export-open": "ایکسپورٹ کے اختیارات",
+  "studio.commandBar.command.zoom-fit": "اسکرین کی چوڑائی کے مطابق کریں",
+  "studio.commandBar.command.assets": "ٹیمپلیٹس اور اثاثے",
+  "studio.commandBar.command.bubbles": "گفتگو کا بلبلہ",
+  "studio.commandBar.command.project": "پروجیکٹ ٹولز"
+}

@@ -4,7 +4,7 @@ on:
   pull_request:
     branches: [main]
     paths:
-      - "src/domains/creator/bg3d/**"
+      - "apps/web/src/domains/creator/bg3d/**"
       - "e2e/studio-3d-visual-verification.spec.ts"
       - "e2e/studio-bg3d-*"
       - "playwright.config.ts"
@@ -17,7 +17,7 @@ on:
   push:
     branches: [main]
     paths:
-      - "src/domains/creator/bg3d/**"
+      - "apps/web/src/domains/creator/bg3d/**"
       - "e2e/studio-3d-visual-verification.spec.ts"
       - "e2e/studio-bg3d-*"
       - "playwright.config.ts"
@@ -64,18 +64,18 @@ jobs:
             playwright.bg3d-runtime.config.ts scripts/studio-bg3d-runtime-reporter.ts \
             scripts/studio-bg3d-runtime-reporter.test.ts scripts/studio-bg3d-runtime-discovery.test.ts \
             scripts/studio-bg3d-runtime-release-wiring.test.ts scripts/studio-bg3d-runtime-setup.mts \
-            src/domains/creator/bg3d/studio-bg3d-engine-selection.ts \
-            src/domains/creator/bg3d/studio-bg3d-engine-selection-notice.test.ts \
-            src/domains/creator/bg3d/studio-bg3d-webgpu-capability.ts \
-            src/domains/creator/bg3d/studio-bg3d-webgpu-capability-late.test.ts \
-            src/domains/creator/bg3d/useStudioBg3dEngineRuntime.ts \
-            src/domains/creator/bg3d/useStudioBg3dEngineRuntime.late.test.tsx \
-            src/domains/creator/bg3d/studio-bg3d-three-webgpu-renderer.ts \
-            src/domains/creator/bg3d/studio-bg3d-three-webgpu-renderer-ownership.test.ts \
-            src/domains/creator/bg3d/studio-bg3d-render-policy.ts \
-            src/domains/creator/bg3d/studio-bg3d-render-policy.test.ts \
-            src/domains/creator/bg3d/studio-bg3d-frame-scheduling.test.tsx \
-            src/domains/creator/bg3d/StudioBg3dSceneNodes.tsx
+            apps/web/src/domains/creator/bg3d/studio-bg3d-engine-selection.ts \
+            apps/web/src/domains/creator/bg3d/studio-bg3d-engine-selection-notice.test.ts \
+            apps/web/src/domains/creator/bg3d/studio-bg3d-webgpu-capability.ts \
+            apps/web/src/domains/creator/bg3d/studio-bg3d-webgpu-capability-late.test.ts \
+            apps/web/src/domains/creator/bg3d/useStudioBg3dEngineRuntime.ts \
+            apps/web/src/domains/creator/bg3d/useStudioBg3dEngineRuntime.late.test.tsx \
+            apps/web/src/domains/creator/bg3d/studio-bg3d-three-webgpu-renderer.ts \
+            apps/web/src/domains/creator/bg3d/studio-bg3d-three-webgpu-renderer-ownership.test.ts \
+            apps/web/src/domains/creator/bg3d/studio-bg3d-render-policy.ts \
+            apps/web/src/domains/creator/bg3d/studio-bg3d-render-policy.test.ts \
+            apps/web/src/domains/creator/bg3d/studio-bg3d-frame-scheduling.test.tsx \
+            apps/web/src/domains/creator/bg3d/StudioBg3dSceneNodes.tsx
       - name: Typecheck browser verification and application interfaces
         run: |
           pnpm exec tsc --project tsconfig.bg3d-runtime.json
@@ -83,7 +83,7 @@ jobs:
       - name: Test the entire BG3D domain and release verification contracts
         run: |
           mkdir -p test-results
-          pnpm exec vitest run src/domains/creator/bg3d \
+          pnpm exec vitest run apps/web/src/domains/creator/bg3d \
             scripts/studio-bg3d-runtime-reporter.test.ts \
             scripts/studio-bg3d-runtime-discovery.test.ts \
             scripts/studio-bg3d-runtime-release-wiring.test.ts \

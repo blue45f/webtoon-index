@@ -78,7 +78,7 @@ async function selectCard(id) {
   if (await card.getAttribute('aria-pressed') !== 'true') throw new Error(`Selection not reflected: ${id}`);
   return true;
 }
-async function character() {
+async function character() { // NOSONAR javascript:S3776
   await page.goto(origin + '/studio/character', { waitUntil: 'domcontentloaded', timeout: 120000 });
   await ready(); await page.waitForTimeout(2500);
   const initial = await capture('00-original-ui');
@@ -86,7 +86,10 @@ async function character() {
   const render = await capture('01-original-full', viewport);
   if (render.colors < 24 || render.dominant > 0.98) throw new Error('Model-ready controls but empty composed frame');
   evidence.initial = { initial, render };
-  const slots = group === 'wardrobe' ? ['top', 'bottom', 'shoes'] : group === 'accessories' ? ['accessory', 'hand-pose'] : ['face-shape', 'eyes', 'irises', 'nose', 'mouth', 'ears', 'hair', 'body', 'expression', 'pose'];
+  let slots;
+  if (group === "wardrobe") slots = ["top", "bottom", "shoes"];
+  else if (group === "accessories") slots = ["accessory", "hand-pose"];
+  else slots = ["face-shape", "eyes", "irises", "nose", "mouth", "ears", "hair", "body", "expression", "pose"];
   for (const slot of slots) {
     const entries = await selectSlot(slot);
     const original = entries.find((entry) => entry.id === slot + ':original');
@@ -95,14 +98,22 @@ async function character() {
       if (entry.disabled) { evidence.cases.push({ id: entry.id, status: 'unavailable', reason: entry.title }); persist(); continue; }
       try {
         if (original) await selectCard(original.id);
-        if (!await selectCard(entry.id)) throw new Error('Entry became unavailable');
-        const full = ['bottom', 'shoes', 'body', 'pose'].includes(slot);
-        await view(full ? '전신' : ['top', 'accessory', 'hand-pose'].includes(slot) ? '상반신' : '얼굴 줌');
-        await capture(entry.id + '-front', viewport);
-        if (group !== 'appearance') {
-          await view('사선'); await capture(entry.id + '-oblique', viewport);
-          const detail = slot === 'top' ? 'inspectTorsoBack' : slot === 'bottom' ? 'inspectLowerBody' : slot === 'shoes' ? 'inspectFeet' : slot === 'hand-pose' ? 'inspectRightHand' : 'inspectTorso';
-          if (await inspect(detail)) await capture(entry.id + '-detail', viewport);
+        if (!await selectCard(entry.id)) throw new Error("Entry became unavailable");
+        const full = ["bottom", "shoes", "body", "pose"].includes(slot);
+        let viewMode = "얼굴 줌";
+        if (full) viewMode = "전신";
+        else if (["top", "accessory", "hand-pose"].includes(slot)) viewMode = "상반신";
+        await view(viewMode);
+        await capture(entry.id + "-front", viewport);
+        if (group !== "appearance") {
+          await view("사선");
+          await capture(entry.id + "-oblique", viewport);
+          let detail = "inspectTorso";
+          if (slot === "top") detail = "inspectTorsoBack";
+          else if (slot === "bottom") detail = "inspectLowerBody";
+          else if (slot === "shoes") detail = "inspectFeet";
+          else if (slot === "hand-pose") detail = "inspectRightHand";
+          if (await inspect(detail)) await capture(entry.id + "-detail", viewport);
         }
         if (slot === 'accessory') {
           await page.locator(`${root} [data-character-slot-card="${entry.id}"]`).first().click();

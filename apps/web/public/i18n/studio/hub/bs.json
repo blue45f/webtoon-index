@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Vodič za funkcije",
+  "studio.hub.subtitle": "Jedna po jedna funkcija bez ikakvog opterećenja. Pogledao sam {done}/{total}.",
+  "studio.hub.progressAriaLabel": "Napredak tutorijala",
+  "studio.hub.listAriaLabel": "Lista funkcija",
+  "studio.hub.checked": "pogledajte",
+  "studio.hub.prev": "Prethodno",
+  "studio.hub.next": "sljedeći",
+  "studio.hub.markComplete": "označi kao kompletan",
+  "studio.hub.completed": "Završeno",
+  "studio.hub.tryLabelDefault": "Pratite nas",
+  "studio.hub.stepAriaPrefix": "korak"
+}

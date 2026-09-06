@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Generative AI ရုပ်ပုံလမ်းညွှန်",
+  "studio.aiNotice.description": "ဤလုပ်ဆောင်ချက်သည် generative AI (OpenAI) ကို အသုံးပြု၍ ပုံများကို ဖန်တီးသည်။ ဖန်တီးထားသောရလဒ်များတွင် AI တံဆိပ်များကို ပြသထားသည်။",
+  "studio.aiNotice.ruleCopyright": "ကျွန်ုပ်တို့သည် အခြားသူများ၏ လက်ရာများ၊ ဇာတ်ကောင်များ၊ သို့မဟုတ် တကယ့်လူများ၏ မျက်နှာများကို ဖန်တီးထားခြင်းမရှိပါ။",
+  "studio.aiNotice.ruleAccuracy": "AI ရလဒ်များသည် ရည်ရွယ်ထားသည့်အရာနှင့် ကွဲလွဲနေနိုင်သည်။",
+  "studio.aiNotice.ruleResponsibility": "သင်ဖန်တီးထားသော ပုံများကို အသုံးပြုရန် သင့်တွင် တာဝန်ရှိပါသည်။",
+  "studio.aiNotice.cancel": "မလုပ်တော့",
+  "studio.aiNotice.confirm": "နားလည်တယ်၊ ဖန်တီးတယ်။"
+}

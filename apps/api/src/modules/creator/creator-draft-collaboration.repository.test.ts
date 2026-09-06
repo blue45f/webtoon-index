@@ -5,7 +5,7 @@ import { describe, expect, it } from "vitest";
 import {
   StudioLinked3dPassAssetFenceError,
   type StudioLinked3dPassAssetRow,
-} from "../../../../../lib/studio-linked-3d-pass-asset-fence";
+} from "../../../../web/src/shared/lib/studio-linked-3d-pass-asset-fence";
 
 import {
   CREATOR_DRAFT_COLLABORATION_ACTIVE_ROOM_LIMIT,

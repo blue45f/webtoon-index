@@ -21,7 +21,7 @@ class BlenderPipelineRegressionTests(unittest.TestCase):
         quality_role = source.index('outputs["qualityReport"] = "quality-report.json"')
         manifest_role = source.index('outputs["manifest"] = "character-package.json"')
         report_build = source.index("report = PipelineReport(", quality_role)
-        report_write = source.index('write_json(output_dir / "quality-report.json"', report_build)
+        report_write = source.index('write_json(output_dir / QUALITY_REPORT_FILENAME', report_build)
         manifest_build = source.index("manifest = _build_manifest(", report_write)
         manifest_write = source.index('write_json(output_dir / "character-package.json"', manifest_build)
 
@@ -30,7 +30,7 @@ class BlenderPipelineRegressionTests(unittest.TestCase):
         self.assertLess(report_build, report_write)
         self.assertLess(report_write, manifest_build)
         self.assertLess(manifest_build, manifest_write)
-        self.assertEqual(source.count('write_json(output_dir / "quality-report.json"'), 1)
+        self.assertEqual(source.count('write_json(output_dir / QUALITY_REPORT_FILENAME'), 1)
         self.assertNotIn("replace(report", source)
 
 

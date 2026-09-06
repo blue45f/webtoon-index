@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "త్వరిత కమాండ్ బార్",
+  "studio.commandBar.settings": "కమాండ్ బార్ సెట్టింగ్‌లు",
+  "studio.commandBar.settingsDescription": "మెనూ బార్ కింది కమాండ్ బార్ స్లాట్ అమరిక మరియు కనిపించే స్థితిని మార్చండి.",
+  "studio.commandBar.settingsTip": "ఎక్కువగా వాడే కమాండ్‌లను మొదటి స్లాట్‌లలో ఉంచితే అత్యంత వేగంగా అందుతాయి.",
+  "studio.commandBar.settingsClose": "కమాండ్ బార్ సెట్టింగ్‌లను మూసివేయి",
+  "studio.commandBar.settingsStorageNote": "స్లాట్ అమరిక ఈ బ్రౌజర్ వర్క్‌స్పేస్ సెట్టింగ్‌లలో సేవ్ అవుతుంది.",
+  "studio.commandBar.showSlots": "కమాండ్ స్లాట్‌లను చూపించు",
+  "studio.commandBar.slot": "స్లాట్ {index}",
+  "studio.commandBar.slotAria": "కమాండ్ స్లాట్ {index}",
+  "studio.commandBar.slotEmpty": "ఖాళీ స్లాట్",
+  "studio.commandBar.resetDefaults": "డిఫాల్ట్ అమరికకు రీసెట్ చేయి",
+  "studio.commandBar.command.undo": "రద్దు చేయి",
+  "studio.commandBar.command.redo": "మళ్లీ చేయి",
+  "studio.commandBar.command.save": "డ్రాఫ్ట్ సేవ్ చేయి",
+  "studio.commandBar.command.publish": "ప్రచురించు",
+  "studio.commandBar.command.download": "ప్రస్తుత పేజీని డౌన్‌లోడ్ చేయి",
+  "studio.commandBar.command.export-open": "ఎగుమతి ఎంపికలు",
+  "studio.commandBar.command.zoom-fit": "స్క్రీన్ వెడల్పుకు సరిపోల్చు",
+  "studio.commandBar.command.assets": "టెంప్లేట్‌లు మరియు ఆస్తులు",
+  "studio.commandBar.command.bubbles": "సంభాషణ బుడగ",
+  "studio.commandBar.command.project": "ప్రాజెక్ట్ సాధనాలు"
+}

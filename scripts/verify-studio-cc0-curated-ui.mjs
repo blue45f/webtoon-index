@@ -15,11 +15,11 @@ import { verifyCc0InsertionCancellation } from './studio-cc0-lifecycle-checks.mj
 const root = process.cwd();
 const output = path.resolve(process.argv[2] ?? '/tmp/studio-cc0-ui');
 await mkdir(output, {recursive:true});
-const manifest = JSON.parse(await readFile(path.join(root,'public/assets/studio/cc0-20260906/manifest.json'),'utf8'));
+const manifest = JSON.parse(await readFile(path.join(root,'apps/web/public/assets/studio/cc0-20260906/manifest.json'),'utf8'));
 const htmlName = 'cc0-curation-private-test.html';
 const entryName = 'cc0-curation-private-test.tsx';
 for (const file of [htmlName,entryName]) if (existsSync(path.join(root,file))) throw new Error('Test fixture path already exists');
-const mainPath = path.join(root,'src/app/main.tsx');
+const mainPath = path.join(root,'apps/web/src/app/main.tsx');
 const mainSource = await readFile(mainPath,'utf8');
 const cssImports = [...mainSource.matchAll(/import\s*["']([^"']+\.css)["']/g)].map(match => {
   const resolved = path.resolve(path.dirname(mainPath),match[1]);
@@ -30,7 +30,7 @@ await writeFile(path.join(root,htmlName),'<!doctype html><html lang="ko"><meta c
 await writeFile(path.join(root,entryName),`${cssImports}
 import React from 'react';
 import {createRoot} from 'react-dom/client';
-import {StudioCc0AssetLibraryPanel} from './src/domains/creator/StudioCc0AssetLibraryPanel';
+import {StudioCc0AssetLibraryPanel} from './apps/web/src/domains/creator/StudioCc0AssetLibraryPanel';
 window.__cc0Accept=true;
 window.__cc0Used=null;
 window.__cc0UseCount=0;

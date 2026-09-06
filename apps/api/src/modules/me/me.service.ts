@@ -5,7 +5,7 @@ import {
   normalizeCollectionClientId,
   normalizeCollectionEmoji,
   normalizeCollectionName,
-} from "../../../../../lib/collection-contract";
+} from "../../../../web/src/shared/lib/collection-contract";
 import { db, ratings, reviews, reviewLikes, reads, subscriptions } from "../../db";
 import { deleteMyAccount, loadMe, updateProfile, type UpdateProfileInput } from "../../server/me";
 
@@ -17,7 +17,7 @@ export {
   MAX_COLLECTION_NAME_LENGTH,
   normalizeCollectionEmoji,
   normalizeCollectionName,
-} from "../../../../../lib/collection-contract";
+} from "../../../../web/src/shared/lib/collection-contract";
 
 type MergeMapValue = Record<string, unknown>;
 

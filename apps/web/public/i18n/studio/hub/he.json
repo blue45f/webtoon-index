@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "מדריך תכונה",
+  "studio.hub.subtitle": "פונקציה אחת בכל פעם ללא כל עומס. הסתכלתי על {done}/{total}.",
+  "studio.hub.progressAriaLabel": "התקדמות ההדרכה",
+  "studio.hub.listAriaLabel": "רשימת תכונות",
+  "studio.hub.checked": "להסתכל",
+  "studio.hub.prev": "הקודם",
+  "studio.hub.next": "הבא",
+  "studio.hub.markComplete": "לסמן כהשלמה",
+  "studio.hub.completed": "הושלם",
+  "studio.hub.tryLabelDefault": "עקבו אחרי",
+  "studio.hub.stepAriaPrefix": "צעד"
+}

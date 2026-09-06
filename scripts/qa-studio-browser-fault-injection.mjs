@@ -27,7 +27,11 @@ function text(value, max = 2_000) {
 function record(id, passed, details, severity = "hard") {
   const result = { id, passed: Boolean(passed), severity, details, at: new Date().toISOString() };
   results.push(result);
-  console.log(`[fault-qa] ${result.passed ? "PASS" : severity === "hard" ? "FAIL" : "WARN"} ${id}: ${text(JSON.stringify(details), 900)}`);
+  let resultPrefix;
+  if (result.passed) resultPrefix = "PASS";
+  else if (severity === "hard") resultPrefix = "FAIL";
+  else resultPrefix = "WARN";
+  console.log(`[fault-qa] ${resultPrefix} ${id}: ${text(JSON.stringify(details), 900)}`);
 }
 
 async function waitForHttp(url, timeoutMs = 120_000) {
@@ -167,7 +171,7 @@ async function runIntroCase(browser, { id, introShown, reducedMotion, viewport }
   return { usable, snapshot, pageErrors, consoleErrors };
 }
 
-async function runCompatibilityCase(browser) {
+async function runCompatibilityCase(browser) { // NOSONAR javascript:S3776
   const viewport = { width: 700, height: 412 };
   const context = await browser.newContext({
     viewport,

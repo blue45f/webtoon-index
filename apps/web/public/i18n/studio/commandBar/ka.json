@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "სწრაფი ბრძანებების ზოლი",
+  "studio.commandBar.settings": "ბრძანებების ზოლის პარამეტრები",
+  "studio.commandBar.settingsDescription": "შეცვალეთ მენიუს ზოლის ქვემოთ არსებული ბრძანებების ზოლის სლოტების განლაგება და ხილვადობა.",
+  "studio.commandBar.settingsTip": "ყველაზე ხშირად გამოყენებული ბრძანებები პირველ სლოტებში მოათავსეთ, რომ სწრაფად მისწვდეთ.",
+  "studio.commandBar.settingsClose": "ბრძანებების ზოლის პარამეტრების დახურვა",
+  "studio.commandBar.settingsStorageNote": "სლოტების განლაგება ინახება ამ ბრაუზერის სამუშაო სივრცის პარამეტრებში.",
+  "studio.commandBar.showSlots": "ბრძანებების სლოტების ჩვენება",
+  "studio.commandBar.slot": "სლოტი {index}",
+  "studio.commandBar.slotAria": "ბრძანების სლოტი {index}",
+  "studio.commandBar.slotEmpty": "ცარიელი სლოტი",
+  "studio.commandBar.resetDefaults": "ნაგულისხმევ განლაგებაზე დაბრუნება",
+  "studio.commandBar.command.undo": "დაბრუნება",
+  "studio.commandBar.command.redo": "გამეორება",
+  "studio.commandBar.command.save": "მონახაზის შენახვა",
+  "studio.commandBar.command.publish": "გამოქვეყნება",
+  "studio.commandBar.command.download": "მიმდინარე გვერდის ჩამოტვირთვა",
+  "studio.commandBar.command.export-open": "ექსპორტის პარამეტრები",
+  "studio.commandBar.command.zoom-fit": "ეკრანის სიგანეზე მორგება",
+  "studio.commandBar.command.assets": "შაბლონები და რესურსები",
+  "studio.commandBar.command.bubbles": "სასაუბრო ბუშტი",
+  "studio.commandBar.command.project": "პროექტის ხელსაწყოები"
+}

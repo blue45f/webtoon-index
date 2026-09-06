@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "formas inteligentes",
+  "studio.quickShape.description.active": "Dibuja tranquilamente líneas, cuadrados, círculos y triángulos. Si lo sueltas, se arreglará solo.",
+  "studio.quickShape.description.inactive": "Está bien garabatearlo. Si lo enciendes, tu dibujo a mano se refinará y adquirirá una forma ordenada.",
+  "studio.quickShape.toggleHint": "En el momento en que sueltas una forma toscamente dibujada con un bolígrafo, adopta una forma exacta. Incluso si haces una pausa mientras dibujas, aparecerá una vista previa.",
+  "studio.quickShape.toggleAria.on": "Formas inteligentes activadas",
+  "studio.quickShape.toggleAria.off": "Formas inteligentes apagadas",
+  "studio.quickShape.matchedSuffix": " Puedo sentirlo. Se confirma cuando suelto mi mano.",
+  "studio.quickShape.emptyStatus": "Dibuja la forma y suéltala, o simplemente quédate en el final.",
+  "studio.quickShape.openTutorial": "Mira el tutorial de formas inteligentes",
+  "studio.quickShape.notice": "Dibuja formas, líneas, círculos, cuadrados, etc. inteligentes y refínelos cuando los sueltes (pausa para obtener una vista previa)"
+}

@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Ģeneratīvā AI attēlu ceļvedis",
+  "studio.aiNotice.description": "Šī funkcija veido attēlus, izmantojot ģeneratīvo AI (OpenAI). AI emblēmas tiek parādītas izveidotajos rezultātos.",
+  "studio.aiNotice.ruleCopyright": "Mēs neradām citu cilvēku darbus, tēlus vai reālu cilvēku sejas.",
+  "studio.aiNotice.ruleAccuracy": "AI rezultāti var būt neprecīzi vai atšķirties no paredzētajiem.",
+  "studio.aiNotice.ruleResponsibility": "Jūs esat atbildīgs par izveidoto attēlu izmantošanu.",
+  "studio.aiNotice.cancel": "Atcelt",
+  "studio.aiNotice.confirm": "Es saprotu, radu"
+}

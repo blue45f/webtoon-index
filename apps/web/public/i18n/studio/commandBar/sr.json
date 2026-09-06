@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Трака брзих команди",
+  "studio.commandBar.settings": "Подешавања траке са командама",
+  "studio.commandBar.settingsDescription": "Промените распоред места и видљивост траке са командама испод траке менија.",
+  "studio.commandBar.settingsTip": "Најчешће коришћене команде ставите на прва места да вам буду најбрже при руци.",
+  "studio.commandBar.settingsClose": "Затвори подешавања траке са командама",
+  "studio.commandBar.settingsStorageNote": "Распоред места се чува у подешавањима радног простора овог прегледача.",
+  "studio.commandBar.showSlots": "Прикажи места за команде",
+  "studio.commandBar.slot": "Место {index}",
+  "studio.commandBar.slotAria": "Место за команду {index}",
+  "studio.commandBar.slotEmpty": "Празно место",
+  "studio.commandBar.resetDefaults": "Врати подразумевани распоред",
+  "studio.commandBar.command.undo": "Опозови",
+  "studio.commandBar.command.redo": "Понови",
+  "studio.commandBar.command.save": "Сачувај нацрт",
+  "studio.commandBar.command.publish": "Објави",
+  "studio.commandBar.command.download": "Преузми тренутну страницу",
+  "studio.commandBar.command.export-open": "Опције извоза",
+  "studio.commandBar.command.zoom-fit": "Прилагоди ширини екрана",
+  "studio.commandBar.command.assets": "Шаблони и ресурси",
+  "studio.commandBar.command.bubbles": "Облачић за говор",
+  "studio.commandBar.command.project": "Алатке пројекта"
+}

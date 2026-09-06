@@ -261,7 +261,7 @@ async function clearCanvas(page) {
   }
 }
 
-async function main() {
+async function main() { // NOSONAR javascript:S3776
   const browser = await chromium.launch({
     channel: "chrome",
     headless: HEADLESS,

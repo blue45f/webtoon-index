@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Падручнік па функцыях",
+  "studio.hub.subtitle": "Адна функцыя за раз без нагрузкі. Я паглядзеў {done}/{total}.",
+  "studio.hub.progressAriaLabel": "Прагрэс падручніка",
+  "studio.hub.listAriaLabel": "Спіс функцый",
+  "studio.hub.checked": "паглядзіце",
+  "studio.hub.prev": "Папярэдні",
+  "studio.hub.next": "наступны",
+  "studio.hub.markComplete": "пазначыць як завершанае",
+  "studio.hub.completed": "Завершана",
+  "studio.hub.tryLabelDefault": "Выконвайце",
+  "studio.hub.stepAriaPrefix": "крок"
+}

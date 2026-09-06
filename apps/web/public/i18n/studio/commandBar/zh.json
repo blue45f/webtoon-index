@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "快速命令栏",
+  "studio.commandBar.settings": "命令栏设置",
+  "studio.commandBar.settingsDescription": "更改菜单栏下方命令栏的插槽布局与显示。",
+  "studio.commandBar.settingsTip": "把最常用的命令放在靠前的插槽，最容易顺手点到。",
+  "studio.commandBar.settingsClose": "关闭命令栏设置",
+  "studio.commandBar.settingsStorageNote": "插槽布局保存在此浏览器的工作区设置中。",
+  "studio.commandBar.showSlots": "显示命令插槽",
+  "studio.commandBar.slot": "插槽 {index}",
+  "studio.commandBar.slotAria": "命令插槽 {index}",
+  "studio.commandBar.slotEmpty": "空插槽",
+  "studio.commandBar.resetDefaults": "恢复默认布局",
+  "studio.commandBar.command.undo": "撤销",
+  "studio.commandBar.command.redo": "重做",
+  "studio.commandBar.command.save": "保存草稿",
+  "studio.commandBar.command.publish": "发布",
+  "studio.commandBar.command.download": "下载当前页面",
+  "studio.commandBar.command.export-open": "导出选项",
+  "studio.commandBar.command.zoom-fit": "适应屏幕宽度",
+  "studio.commandBar.command.assets": "模板与素材",
+  "studio.commandBar.command.bubbles": "对话气泡",
+  "studio.commandBar.command.project": "项目工具"
+}

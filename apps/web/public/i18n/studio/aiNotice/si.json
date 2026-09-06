@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "උත්පාදක AI රූප මාර්ගෝපදේශය",
+  "studio.aiNotice.description": "මෙම කාර්යය උත්පාදක AI (OpenAI) භාවිතයෙන් රූප නිර්මාණය කරයි. සාදන ලද ප්‍රතිඵල මත AI ලාංඡන දර්ශනය වේ.",
+  "studio.aiNotice.ruleCopyright": "අපි අන් අයගේ නිර්මාණ, චරිත හෝ සැබෑ මිනිසුන්ගේ මුහුණු නිර්මාණය නොකරමු.",
+  "studio.aiNotice.ruleAccuracy": "AI ප්‍රතිඵල සාවද්‍ය හෝ අදහස් කළ දේට වඩා වෙනස් විය හැක.",
+  "studio.aiNotice.ruleResponsibility": "ඔබ නිර්මාණය කරන පින්තූර භාවිතා කිරීම සඳහා ඔබ වගකිව යුතුය.",
+  "studio.aiNotice.cancel": "අවලංගු කරන්න",
+  "studio.aiNotice.confirm": "මට තේරෙනවා, නිර්මාණය කරන්න"
+}

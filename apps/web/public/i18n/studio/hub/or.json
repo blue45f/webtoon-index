@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "ବ T ଶିଷ୍ଟ୍ୟ ଟ୍ୟୁଟୋରିଆଲ୍",
+  "studio.hub.subtitle": "କ any ଣସି ବୋ without ବିନା ଏକ ସମୟରେ ଗୋଟିଏ କାର୍ଯ୍ୟ | ମୁଁ {done} / {total} କୁ ଦେଖିଲି |",
+  "studio.hub.progressAriaLabel": "ଟ୍ୟୁଟୋରିଆଲ୍ ଅଗ୍ରଗତି |",
+  "studio.hub.listAriaLabel": "ବ list ଶିଷ୍ଟ୍ୟ ତାଲିକା |",
+  "studio.hub.checked": "ଦେଖ",
+  "studio.hub.prev": "ପୂର୍ବ",
+  "studio.hub.next": "ପରବର୍ତ୍ତୀ",
+  "studio.hub.markComplete": "ସମ୍ପୂର୍ଣ୍ଣ ଭାବରେ ଚିହ୍ନିତ କର |",
+  "studio.hub.completed": "ସମାପ୍ତ",
+  "studio.hub.tryLabelDefault": "ସାଙ୍ଗରେ ଅନୁସରଣ କରନ୍ତୁ |",
+  "studio.hub.stepAriaPrefix": "ପଦାଙ୍କ"
+}

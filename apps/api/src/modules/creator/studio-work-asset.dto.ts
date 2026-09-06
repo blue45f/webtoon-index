@@ -1,7 +1,7 @@
 import { createZodDto } from "nestjs-zod";
 import { z } from "zod";
 
-import { StudioWorkAssetTypeSchema } from "../../../../../lib/studio-work-asset-contract";
+import { StudioWorkAssetTypeSchema } from "../../../../web/src/shared/lib/studio-work-asset-contract";
 
 const ExactAssetIdSchema = z
   .string()

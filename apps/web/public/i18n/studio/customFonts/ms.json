@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "fon saya",
+  "studio.customFonts.importButton": "Import daripada fail",
+  "studio.customFonts.importing": "Menyemak…",
+  "studio.customFonts.importAria": "Import fail fon",
+  "studio.customFonts.storageAria": "Penggunaan perpustakaan fon",
+  "studio.customFonts.emptyTitle": "Belum ada fon yang disertakan.",
+  "studio.customFonts.unknownFileName": "Tiada nama fail",
+  "studio.customFonts.apply": "Mohon",
+  "studio.customFonts.applyToText": "Gunakan fon ini pada teks yang dipilih",
+  "studio.customFonts.selectTextFirst": "Mula-mula pilih teks atau gelembung pertuturan",
+  "studio.customFonts.delete": "padam fon"
+}

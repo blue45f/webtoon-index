@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "ස්මාර්ට් හැඩතල",
+  "studio.quickShape.description.active": "විවේකීව රේඛා, කොටු, රවුම් සහ ත්‍රිකෝණ අඳින්න. ඔබ යන්න දුන්නොත්, එය තනිවම පිළිවෙළකට ගෙන එයි.",
+  "studio.quickShape.description.inactive": "එය ලියා තැබීමට කමක් නැත. ඔබ එය ක්‍රියාත්මක කළහොත්, ඔබේ අත් ඇඳීම පිළිවෙලට හැඩයට පිරිපහදු කරනු ලැබේ.",
+  "studio.quickShape.toggleHint": "ඔබ පෑනකින් දළ වශයෙන් අඳින ලද හැඩයක් අතහැර දැමූ මොහොතේ, එය නියම හැඩයට පත් වේ. ඔබ ඇඳීම අතරතුර විරාමයක් තැබුවද, පෙරදසුනක් දිස්වනු ඇත.",
+  "studio.quickShape.toggleAria.on": "ස්මාර්ට් හැඩතල ක්‍රියාත්මකයි",
+  "studio.quickShape.toggleAria.off": "ස්මාර්ට් හැඩතල අක්‍රියයි",
+  "studio.quickShape.matchedSuffix": " මට ඒක දැනෙනවා. මම මගේ අත මුදා හරින විට එය තහවුරු වේ.",
+  "studio.quickShape.emptyStatus": "හැඩය අඳින්න සහ යන්න දෙන්න, නැතහොත් අවසානයේ රැඳී සිටින්න",
+  "studio.quickShape.openTutorial": "ස්මාර්ට් හැඩතල නිබන්ධනය නරඹන්න",
+  "studio.quickShape.notice": "ස්මාර්ට් හැඩතල, රේඛා, කව, කොටු, ආදිය අඳින්න සහ ඔබ යන්නට ඉඩ දෙන විට ඒවා ශෝධනය කරන්න (පෙරදසුන සඳහා විරාම කරන්න)"
+}

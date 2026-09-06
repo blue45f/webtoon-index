@@ -1,0 +1,22 @@
+{
+  "admin.dashboard.campaigns": "캠페인",
+  "admin.dashboard.communityActiveUsers": "활동 사용자",
+  "admin.dashboard.communityPosts": "펜카페 글",
+  "admin.dashboard.communityReplies": "펜카페 댓글",
+  "admin.dashboard.communityReviewReplies": "리뷰 댓글",
+  "admin.dashboard.communityReviews": "리뷰",
+  "admin.dashboard.groupCommunity": "커뮤니티",
+  "admin.dashboard.groupMonetization": "수익",
+  "admin.dashboard.groupUsers": "사용자",
+  "admin.dashboard.loadError": "지표를 불러오지 못했어요",
+  "admin.dashboard.paidAmount": "정산 완료액",
+  "admin.dashboard.pendingAmount": "대기 금액",
+  "admin.dashboard.pendingSettlements": "대기 정산건",
+  "admin.dashboard.period": "최근 {days}일 · {date} 기준",
+  "admin.dashboard.planRatio": "활성/전체 플랜",
+  "admin.dashboard.userActive30d": "30일 활성",
+  "admin.dashboard.userActive7d": "7일 활성",
+  "admin.dashboard.userAdmins": "관리자",
+  "admin.dashboard.userCreators": "크리에이터",
+  "admin.dashboard.userTotal": "전체"
+}

@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "મારા ફોન્ટ",
+  "studio.customFonts.importButton": "ફાઇલમાંથી આયાત કરો",
+  "studio.customFonts.importing": "તપાસી રહ્યું છે...",
+  "studio.customFonts.importAria": "ફોન્ટ ફાઇલ આયાત કરો",
+  "studio.customFonts.storageAria": "ફોન્ટ લાઇબ્રેરીનો ઉપયોગ",
+  "studio.customFonts.emptyTitle": "હજી સુધી કોઈ ફોન્ટ્સ શામેલ નથી.",
+  "studio.customFonts.unknownFileName": "કોઈ ફાઇલનું નામ નથી",
+  "studio.customFonts.apply": "અરજી કરો",
+  "studio.customFonts.applyToText": "પસંદ કરેલ ટેક્સ્ટ પર આ ફોન્ટ લાગુ કરો",
+  "studio.customFonts.selectTextFirst": "પ્રથમ ટેક્સ્ટ અથવા સ્પીચ બબલ પસંદ કરો",
+  "studio.customFonts.delete": "ફોન્ટ કાઢી નાખો"
+}

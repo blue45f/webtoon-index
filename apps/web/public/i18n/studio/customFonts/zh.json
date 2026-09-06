@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "我的字体",
+  "studio.customFonts.importButton": "从文件导入",
+  "studio.customFonts.importing": "正在检查...",
+  "studio.customFonts.importAria": "导入字体文件",
+  "studio.customFonts.storageAria": "字体库使用",
+  "studio.customFonts.emptyTitle": "尚未包含任何字体。",
+  "studio.customFonts.unknownFileName": "无文件名",
+  "studio.customFonts.apply": "申请",
+  "studio.customFonts.applyToText": "将此字体应用于选定的文本",
+  "studio.customFonts.selectTextFirst": "首先选择文本或语音气泡",
+  "studio.customFonts.delete": "删除字体"
+}

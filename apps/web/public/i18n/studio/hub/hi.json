@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "फ़ीचर ट्यूटोरियल",
+  "studio.hub.subtitle": "बिना किसी बोझ के एक समय में एक कार्य। मैंने {done}/{total} को देखा।",
+  "studio.hub.progressAriaLabel": "ट्यूटोरियल प्रगति",
+  "studio.hub.listAriaLabel": "फ़ीचर सूची",
+  "studio.hub.checked": "देख लो",
+  "studio.hub.prev": "पिछला",
+  "studio.hub.next": "अगला",
+  "studio.hub.markComplete": "पूर्ण के रूप में चिह्नित करें",
+  "studio.hub.completed": "पूरा हुआ",
+  "studio.hub.tryLabelDefault": "साथ चलो",
+  "studio.hub.stepAriaPrefix": "कदम"
+}

@@ -1,4 +1,4 @@
-import { projectStudioAiProvenanceForPublish } from "../../../../src/domains/creator/ai/studio-ai-provenance";
+import { projectStudioAiProvenanceForPublish } from "../../../web/src/domains/creator/ai/studio-ai-provenance";
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);

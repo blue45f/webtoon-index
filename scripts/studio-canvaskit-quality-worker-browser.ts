@@ -11,17 +11,17 @@ import {
   StudioQualityWorkerClientError,
   createStudioQualityModuleWorker,
   type StudioQualityWorkerLike,
-} from "../src/domains/creator/studio-quality-worker-client";
+} from "../apps/web/src/domains/creator/studio-quality-worker-client";
 import {
   STUDIO_QUALITY_WORKER_BUDGETS,
   STUDIO_QUALITY_WORKER_PROTOCOL_REVISION,
   type StudioQualityWorkerInboundMessage,
-} from "../src/domains/creator/studio-quality-worker-protocol";
+} from "../apps/web/src/domains/creator/studio-quality-worker-protocol";
 
 import type {
   StudioQualityPathOp,
   StudioStrokeToPathStyle,
-} from "../src/domains/creator/render/studio-canvaskit-adapter";
+} from "../apps/web/src/domains/creator/render/studio-canvaskit-adapter";
 
 const MAIN_WORKER_EPOCH = 7_001;
 const INVALID_WORKER_EPOCH = 7_002;

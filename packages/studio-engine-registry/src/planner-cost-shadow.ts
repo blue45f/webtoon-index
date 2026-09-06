@@ -104,7 +104,7 @@ export function costLaneForRuntime(runtime: ProviderRuntime): CostLane {
  * So every coefficient is now expressed in **milliseconds on the reference
  * host** and carries a provenance class (see {@link COST_MODEL_PROVENANCE}).
  * The shape deliberately mirrors the measured model
- * (`src/domains/creator/filter/studio-filter-lane-cost-model.ts`):
+ * (`apps/web/src/domains/creator/filter/studio-filter-lane-cost-model.ts`):
  *
  *     cost(MP) = fixedMs + perMegapixelMs × megapixels
  *

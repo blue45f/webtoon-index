@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "ਤੇਜ਼ ਕਮਾਂਡ ਬਾਰ",
+  "studio.commandBar.settings": "ਕਮਾਂਡ ਬਾਰ ਸੈਟਿੰਗਾਂ",
+  "studio.commandBar.settingsDescription": "ਮੀਨੂ ਬਾਰ ਹੇਠਲੇ ਕਮਾਂਡ ਬਾਰ ਦੀ ਸਲਾਟ ਤਰਤੀਬ ਅਤੇ ਦਿੱਖ ਬਦਲੋ।",
+  "studio.commandBar.settingsTip": "ਜੋ ਕਮਾਂਡਾਂ ਸਭ ਤੋਂ ਵੱਧ ਵਰਤਦੇ ਹੋ, ਉਹ ਪਹਿਲੀਆਂ ਸਲਾਟਾਂ ਵਿੱਚ ਰੱਖੋ ਤਾਂ ਜੋ ਸਭ ਤੋਂ ਛੇਤੀ ਪਹੁੰਚ ਹੋਵੇ।",
+  "studio.commandBar.settingsClose": "ਕਮਾਂਡ ਬਾਰ ਸੈਟਿੰਗਾਂ ਬੰਦ ਕਰੋ",
+  "studio.commandBar.settingsStorageNote": "ਸਲਾਟ ਤਰਤੀਬ ਇਸੇ ਬਰਾਊਜ਼ਰ ਦੀਆਂ ਵਰਕਸਪੇਸ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਸੰਭਾਲੀ ਜਾਂਦੀ ਹੈ।",
+  "studio.commandBar.showSlots": "ਕਮਾਂਡ ਸਲਾਟ ਵਿਖਾਓ",
+  "studio.commandBar.slot": "ਸਲਾਟ {index}",
+  "studio.commandBar.slotAria": "ਕਮਾਂਡ ਸਲਾਟ {index}",
+  "studio.commandBar.slotEmpty": "ਖਾਲੀ ਸਲਾਟ",
+  "studio.commandBar.resetDefaults": "ਮੂਲ ਤਰਤੀਬ ਉੱਤੇ ਵਾਪਸ ਲਿਆਓ",
+  "studio.commandBar.command.undo": "ਵਾਪਸ ਲਓ",
+  "studio.commandBar.command.redo": "ਮੁੜ ਕਰੋ",
+  "studio.commandBar.command.save": "ਡਰਾਫ਼ਟ ਸੰਭਾਲੋ",
+  "studio.commandBar.command.publish": "ਪ੍ਰਕਾਸ਼ਿਤ ਕਰੋ",
+  "studio.commandBar.command.download": "ਮੌਜੂਦਾ ਸਫ਼ਾ ਡਾਊਨਲੋਡ ਕਰੋ",
+  "studio.commandBar.command.export-open": "ਐਕਸਪੋਰਟ ਵਿਕਲਪ",
+  "studio.commandBar.command.zoom-fit": "ਸਕਰੀਨ ਦੀ ਚੌੜਾਈ ਵਿੱਚ ਫਿੱਟ ਕਰੋ",
+  "studio.commandBar.command.assets": "ਟੈਂਪਲੇਟ ਅਤੇ ਐਸੇਟ",
+  "studio.commandBar.command.bubbles": "ਸੰਵਾਦ ਬੁਲਬੁਲਾ",
+  "studio.commandBar.command.project": "ਪ੍ਰੋਜੈਕਟ ਟੂਲ"
+}

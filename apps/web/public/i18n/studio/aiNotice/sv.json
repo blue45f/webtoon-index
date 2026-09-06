@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Generativ AI-bildguide",
+  "studio.aiNotice.description": "Den här funktionen skapar bilder med generativ AI (OpenAI). AI-märken visas på de skapade resultaten.",
+  "studio.aiNotice.ruleCopyright": "Vi skapar inte andras verk, karaktärer eller ansikten av riktiga människor.",
+  "studio.aiNotice.ruleAccuracy": "AI-resultat kan vara felaktiga eller annorlunda än vad som var tänkt.",
+  "studio.aiNotice.ruleResponsibility": "Du är ansvarig för att använda de bilder du skapar.",
+  "studio.aiNotice.cancel": "Avbryt",
+  "studio.aiNotice.confirm": "Jag förstår, skapa"
+}

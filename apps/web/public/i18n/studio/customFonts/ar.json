@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "الخط الخاص بي",
+  "studio.customFonts.importButton": "استيراد من ملف",
+  "studio.customFonts.importing": "جارٍ التحقق…",
+  "studio.customFonts.importAria": "استيراد ملف الخط",
+  "studio.customFonts.storageAria": "استخدام مكتبة الخطوط",
+  "studio.customFonts.emptyTitle": "لا توجد الخطوط المدرجة حتى الآن.",
+  "studio.customFonts.unknownFileName": "لا يوجد اسم الملف",
+  "studio.customFonts.apply": "تطبيق",
+  "studio.customFonts.applyToText": "تطبيق هذا الخط على النص المحدد",
+  "studio.customFonts.selectTextFirst": "حدد أولاً النص أو فقاعة الكلام",
+  "studio.customFonts.delete": "حذف الخط"
+}

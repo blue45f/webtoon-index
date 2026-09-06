@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Udhëzues gjenerues i imazhit të AI",
+  "studio.aiNotice.description": "Ky funksion krijon imazhe duke përdorur AI gjeneruese (OpenAI). Shenjat e AI shfaqen në rezultatet e krijuara.",
+  "studio.aiNotice.ruleCopyright": "Ne nuk krijojmë vepra të njerëzve të tjerë, personazhe apo fytyra të njerëzve të vërtetë.",
+  "studio.aiNotice.ruleAccuracy": "Rezultatet e AI mund të jenë të pasakta ose të ndryshme nga ajo që ishte menduar.",
+  "studio.aiNotice.ruleResponsibility": "Ju jeni përgjegjës për përdorimin e imazheve që krijoni.",
+  "studio.aiNotice.cancel": "Anulo",
+  "studio.aiNotice.confirm": "Unë kuptoj, krijoj"
+}

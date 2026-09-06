@@ -3,15 +3,15 @@ import { createHash } from "node:crypto";
 import {
   normalizeStudioBrushR8TextureGrainSource,
   STUDIO_BRUSH_R8_GRAIN_ASSET_LIMITS,
-} from "../../../../../lib/studio-brush-r8-grain-asset-contract";
+} from "../../../../web/src/shared/lib/studio-brush-r8-grain-asset-contract";
 import {
   STUDIO_WORK_ASSET_MAX_ASSETS_PER_WORK,
   STUDIO_WORK_ASSET_MAX_IMAGE_DECODED_BYTES,
-} from "../../../../../lib/studio-work-asset-contract";
+} from "../../../../web/src/shared/lib/studio-work-asset-contract";
 
 import type { StudioWorkAssetContent } from "./studio-work-asset.repository";
-import type { StudioBrushR8TextureGrainSource } from "../../../../../lib/studio-brush-r8-grain-asset-contract";
-import type { StudioWorkAssetManifest } from "../../../../../lib/studio-work-asset-contract";
+import type { StudioBrushR8TextureGrainSource } from "../../../../web/src/shared/lib/studio-brush-r8-grain-asset-contract";
+import type { StudioWorkAssetManifest } from "../../../../web/src/shared/lib/studio-work-asset-contract";
 
 /**
  * A single admission may bind many strokes to the same source, but it may never make the server

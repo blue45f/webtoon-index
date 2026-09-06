@@ -79,16 +79,16 @@ jobs:
         run: |
           set -euo pipefail
           targets=(
-            src/domains/market/pages/MarketPublishPage.tsx
-            src/domains/market/components/MarketResourceDetailArticle.tsx
-            src/domains/market/components/MarketplaceAuthoringWorkshop.tsx
-            src/domains/market/components/MarketplaceAuthoringInstallAction.tsx
-            src/domains/creator/MarketplaceBrushStudioBridge.tsx
-            src/domains/creator/MarketplaceBrushPublishShortcut.tsx
-            src/domains/creator/brush/StudioBrushStudio.tsx
-            lib/creator-marketplace-authoring-workshop.ts
-            lib/creator-marketplace-authoring-safety.ts
-            lib/creator-marketplace-package-builder.ts
+            apps/web/src/domains/market/pages/MarketPublishPage.tsx
+            apps/web/src/domains/market/components/MarketResourceDetailArticle.tsx
+            apps/web/src/domains/market/components/MarketplaceAuthoringWorkshop.tsx
+            apps/web/src/domains/market/components/MarketplaceAuthoringInstallAction.tsx
+            apps/web/src/domains/creator/MarketplaceBrushStudioBridge.tsx
+            apps/web/src/domains/creator/MarketplaceBrushPublishShortcut.tsx
+            apps/web/src/domains/creator/brush/StudioBrushStudio.tsx
+            apps/web/src/shared/lib/creator-marketplace-authoring-workshop.ts
+            apps/web/src/shared/lib/creator-marketplace-authoring-safety.ts
+            apps/web/src/shared/lib/creator-marketplace-package-builder.ts
             .github/workflows/marketplace-authoring.yml
           )
           sha256sum "${targets[@]}" > /tmp/marketplace-first.sha
@@ -109,9 +109,9 @@ jobs:
           for script in "${scripts[@]}"; do node "scripts/marketplace/$script" >/dev/null; done
           sha256sum "${targets[@]}" > /tmp/marketplace-second.sha
           diff -u /tmp/marketplace-first.sha /tmp/marketplace-second.sha
-          grep -Fq '<MarketplaceAuthoringWorkshop />' src/domains/market/pages/MarketPublishPage.tsx
-          grep -Fq '<MarketplaceBrushStudioBridge snapshot={currentSnapshot} visible={open} />' src/domains/creator/brush/StudioBrushStudio.tsx
-          grep -Fq '<MarketplaceAuthoringInstallAction record={record} />' src/domains/market/components/MarketResourceDetailArticle.tsx
+          grep -Fq '<MarketplaceAuthoringWorkshop />' apps/web/src/domains/market/pages/MarketPublishPage.tsx
+          grep -Fq '<MarketplaceBrushStudioBridge snapshot={currentSnapshot} visible={open} />' apps/web/src/domains/creator/brush/StudioBrushStudio.tsx
+          grep -Fq '<MarketplaceAuthoringInstallAction record={record} />' apps/web/src/domains/market/components/MarketResourceDetailArticle.tsx
 
       - name: Remove one-time migration machinery
         shell: bash
@@ -166,32 +166,32 @@ jobs:
         run: |
           set -euo pipefail
           pnpm exec eslint --fix \
-            src/domains/market/pages/MarketPublishPage.tsx \
-            src/domains/market/components/MarketResourceDetailArticle.tsx \
-            src/domains/market/components/MarketplaceAuthoringWorkshop.tsx \
-            src/domains/market/components/MarketplaceAuthoringInstallAction.tsx \
-            src/domains/market/components/MarketplaceAssetQualityMatrix.test.tsx \
-            src/domains/market/components/MarketplaceAuthoringWorkshop.test.tsx \
-            src/domains/market/components/MarketplaceBrushRecipeAccelerator.test.tsx \
-            src/domains/creator/MarketplaceBrushStudioBridge.tsx \
-            src/domains/creator/MarketplaceBrushStudioBridge.test.tsx \
-            src/domains/creator/brush/StudioBrushStudio.tsx
+            apps/web/src/domains/market/pages/MarketPublishPage.tsx \
+            apps/web/src/domains/market/components/MarketResourceDetailArticle.tsx \
+            apps/web/src/domains/market/components/MarketplaceAuthoringWorkshop.tsx \
+            apps/web/src/domains/market/components/MarketplaceAuthoringInstallAction.tsx \
+            apps/web/src/domains/market/components/MarketplaceAssetQualityMatrix.test.tsx \
+            apps/web/src/domains/market/components/MarketplaceAuthoringWorkshop.test.tsx \
+            apps/web/src/domains/market/components/MarketplaceBrushRecipeAccelerator.test.tsx \
+            apps/web/src/domains/creator/MarketplaceBrushStudioBridge.tsx \
+            apps/web/src/domains/creator/MarketplaceBrushStudioBridge.test.tsx \
+            apps/web/src/domains/creator/brush/StudioBrushStudio.tsx
 
       - name: Run authoring and package contracts
         run: >-
           pnpm exec vitest run
-          lib/creator-marketplace-authoring-safety.test.ts
-          lib/creator-marketplace-authoring-workshop.test.ts
-          lib/creator-marketplace-package-builder.test.ts
-          lib/creator-marketplace-quality-validation.test.ts
-          src/domains/creator/MarketplaceBrushStudioBridge.test.tsx
-          src/domains/market/components/MarketplaceAuthoringWorkshop.test.tsx
-          src/domains/market/components/MarketplaceBrushRecipeAccelerator.test.tsx
-          src/domains/market/components/MarketplaceAssetQualityMatrix.test.tsx
+          apps/web/src/shared/lib/creator-marketplace-authoring-safety.test.ts
+          apps/web/src/shared/lib/creator-marketplace-authoring-workshop.test.ts
+          apps/web/src/shared/lib/creator-marketplace-package-builder.test.ts
+          apps/web/src/shared/lib/creator-marketplace-quality-validation.test.ts
+          apps/web/src/domains/creator/MarketplaceBrushStudioBridge.test.tsx
+          apps/web/src/domains/market/components/MarketplaceAuthoringWorkshop.test.tsx
+          apps/web/src/domains/market/components/MarketplaceBrushRecipeAccelerator.test.tsx
+          apps/web/src/domains/market/components/MarketplaceAssetQualityMatrix.test.tsx
           --reporter=verbose
 
       - name: Run existing marketplace regressions
-        run: pnpm exec vitest run src/domains/market --reporter=verbose
+        run: pnpm exec vitest run apps/web/src/domains/market --reporter=verbose
 
       - name: Type-check, lint, architecture, and build
         shell: bash
@@ -219,7 +219,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git restore --worktree -- public/data 2>/dev/null || true
+          git restore --worktree -- apps/web/public/data 2>/dev/null || true
           rm -rf playwright-report test-results coverage dist
           mkdir -p marketplace-benchmark
           cat > marketplace-benchmark/creator-authoring-verification.json <<JSON

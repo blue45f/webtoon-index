@@ -16,12 +16,12 @@ import {
   evaluateStudioGpuBristleProbe,
   proveStudioGpuBristleAdmission,
   STUDIO_GPU_BRISTLE_PROBE,
-} from "../src/domains/creator/render/studio-gpu-bristle-admission";
+} from "../apps/web/src/domains/creator/render/studio-gpu-bristle-admission";
 import {
   STUDIO_GPU_BRISTLE_COMPONENTS_PER_SPLAT,
   STUDIO_GPU_BRISTLE_LIMITS,
   studioFluidPaintRgbToRyb,
-} from "../src/domains/creator/render/studio-gpu-bristle-contract";
+} from "../apps/web/src/domains/creator/render/studio-gpu-bristle-contract";
 import {
   judgeStudioGpuBristleConstraintSatisfaction,
   judgeStudioGpuBristlePigmentConservation,
@@ -31,29 +31,29 @@ import {
   studioGpuBristleStandardDeviation,
   studioGpuBristleTerminalLoads,
   studioGpuBristleTipLag,
-} from "../src/domains/creator/render/studio-gpu-bristle-metrics";
+} from "../apps/web/src/domains/creator/render/studio-gpu-bristle-metrics";
 import {
   advanceStudioGpuBristleReference,
   createStudioGpuBristleReference,
   packStudioGpuBristleSplats,
   packStudioGpuBristleState,
   resolveStudioGpuBristleConfig,
-} from "../src/domains/creator/render/studio-gpu-bristle-reference";
-import { createStudioGpuBristleRuntime } from "../src/domains/creator/render/studio-gpu-bristle-runtime";
+} from "../apps/web/src/domains/creator/render/studio-gpu-bristle-reference";
+import { createStudioGpuBristleRuntime } from "../apps/web/src/domains/creator/render/studio-gpu-bristle-runtime";
 import {
   acquireStudioGpuDevice,
   disposeStudioGpuFabric,
-} from "../src/domains/creator/render/studio-gpu-fabric";
+} from "../apps/web/src/domains/creator/render/studio-gpu-fabric";
 
-import type { StudioGpuBristleJudgement } from "../src/domains/creator/render/studio-gpu-bristle-metrics";
+import type { StudioGpuBristleJudgement } from "../apps/web/src/domains/creator/render/studio-gpu-bristle-metrics";
 import type {
   StudioGpuBristleStation,
   StudioGpuBristleTuftOptions,
-} from "../src/domains/creator/render/studio-gpu-bristle-reference";
+} from "../apps/web/src/domains/creator/render/studio-gpu-bristle-reference";
 import type {
   StudioGpuBristleRuntime,
   StudioGpuBristleSurface,
-} from "../src/domains/creator/render/studio-gpu-bristle-runtime";
+} from "../apps/web/src/domains/creator/render/studio-gpu-bristle-runtime";
 
 const SURFACE: StudioGpuBristleSurface = {
   widthPx: 256,

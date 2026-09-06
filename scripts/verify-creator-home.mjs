@@ -9,9 +9,9 @@ const origin = process.env.CREATOR_HOME_ORIGIN || "http://127.0.0.1:4173";
 const output = "artifacts/creator-home";
 mkdirSync(output, { recursive: true });
 const results = [];
-const manifest = JSON.parse(readFileSync("public/brand/film-manifest.json", "utf8"));
+const manifest = JSON.parse(readFileSync("apps/web/public/brand/film-manifest.json", "utf8"));
 for (const [format, entry] of Object.entries(manifest.assets)) {
-  const path = `public${entry.src}`;
+  const path = `apps/web/public${entry.src}`;
   assert.equal(createHash("sha256").update(readFileSync(path)).digest("hex"), entry.sha256);
   const probe = JSON.parse(execFileSync("ffprobe", ["-v", "error", "-show_streams", "-show_format", "-of", "json", path], { encoding: "utf8" }));
   const video = probe.streams.find((stream) => stream.codec_type === "video");
@@ -98,12 +98,15 @@ try {
     if (name === "desktop") {
       await page.getByTestId("creator-film-play").click();
       const video = page.locator("video");
-      await video.evaluate((element) => new Promise((resolve, reject) => {
-        if (element.readyState >= 2) return resolve(true);
-        const timer = setTimeout(() => reject(new Error("Video readiness timeout")), 20000);
-        element.addEventListener("loadeddata", () => { clearTimeout(timer); resolve(true); }, { once: true });
-        element.addEventListener("error", () => { clearTimeout(timer); reject(new Error("Video decoding failed")); }, { once: true });
-      }));
+      // Poll current media state instead of relying on one loadeddata event. Fast decoders can
+      // emit that event between the click and listener registration, producing a false timeout.
+      await expect.poll(
+        () => video.evaluate((element) => element.error ? -element.error.code : element.readyState),
+        {
+          message: "Brand film reaches HAVE_CURRENT_DATA without a media error",
+          timeout: 30000,
+        },
+      ).toBeGreaterThanOrEqual(2);
       await page.waitForFunction(() => document.querySelector("video")?.currentTime > 0.2);
       assert(Math.abs(await video.evaluate((element) => element.duration) - 24) < 0.1);
       await page.locator(".ch-film-chapters button").nth(2).click();

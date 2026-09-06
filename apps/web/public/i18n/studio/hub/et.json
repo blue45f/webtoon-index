@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Funktsioonide õpetus",
+  "studio.hub.subtitle": "Üks funktsioon korraga ilma igasuguse koormuseta. Vaatasin {done}/{total}.",
+  "studio.hub.progressAriaLabel": "Õpetuse edenemine",
+  "studio.hub.listAriaLabel": "Funktsioonide loend",
+  "studio.hub.checked": "viska pilk peale",
+  "studio.hub.prev": "Eelmine",
+  "studio.hub.next": "järgmiseks",
+  "studio.hub.markComplete": "märgi lõpetatuks",
+  "studio.hub.completed": "Lõpetatud",
+  "studio.hub.tryLabelDefault": "Jälgi kaasa",
+  "studio.hub.stepAriaPrefix": "samm"
+}

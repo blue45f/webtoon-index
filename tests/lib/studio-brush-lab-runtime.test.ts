@@ -2,15 +2,15 @@ import assert from "node:assert/strict";
 
 import { describe, it } from "vitest";
 
-import { studioCoreBrushCatalogSelection } from "../../src/domains/creator/brush/studio-brush-selection";
-import { createBrushLabRecipe } from "../../src/domains/creator/brush-lab/brush-lab-recipe";
+import { studioCoreBrushCatalogSelection } from "../../apps/web/src/domains/creator/brush/studio-brush-selection";
+import { createBrushLabRecipe } from "../../apps/web/src/domains/creator/brush-lab/brush-lab-recipe";
 import {
   brushLabDocumentFromSelection, brushLabSnapshotKey, compileBrushLabRecipe,
   createInitialBrushLabDocument, readBrushLabJson, writeBrushLabJson,
-} from "../../src/domains/creator/brush-lab/brush-lab-runtime";
-import { BRUSH_PRESETS } from "../../src/domains/creator/studio-brush";
+} from "../../apps/web/src/domains/creator/brush-lab/brush-lab-runtime";
+import { BRUSH_PRESETS } from "../../apps/web/src/domains/creator/studio-brush";
 
-import type { StudioBrushEngineProgramSet } from "../../src/domains/creator/brush/studio-brush-engine-program-set";
+import type { StudioBrushEngineProgramSet } from "../../apps/web/src/domains/creator/brush/studio-brush-engine-program-set";
 
 const programs: StudioBrushEngineProgramSet = {
   version: 1, oil: { bristlePhysics: true, bristleLoadDynamics: false, impastoRelief: true },

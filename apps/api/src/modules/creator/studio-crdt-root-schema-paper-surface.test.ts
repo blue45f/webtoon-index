@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import * as Y from "yjs";
 
-import { PAPER_GRAIN_KINDS } from "../../../../../src/domains/creator/brush/studio-paper-texture";
+import { PAPER_GRAIN_KINDS } from "../../../../web/src/domains/creator/brush/studio-paper-texture";
 
 import { hasValidStudioCrdtRootSchema } from "./studio-crdt-root-schema";
 

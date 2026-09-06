@@ -1,4 +1,4 @@
-import { TOONSPECTRUM_CSRF_HEADER } from "../../../../lib/csrf";
+import { TOONSPECTRUM_CSRF_HEADER } from "../../../web/src/shared/lib/csrf";
 
 import type { INestApplication } from "@nestjs/common";
 import type { CorsOptions } from "@nestjs/common/interfaces/external/cors-options.interface";

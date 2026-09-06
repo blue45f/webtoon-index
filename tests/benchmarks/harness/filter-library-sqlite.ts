@@ -14,11 +14,11 @@ import sqliteWasm from "@sqlite.org/sqlite-wasm";
 import {
   createSqliteFilterLibraryRepository,
   type StudioFilterLibraryPreset,
-} from "../../../src/domains/creator/filter/studio-filter-library-sqlite-repository";
+} from "../../../apps/web/src/domains/creator/filter/studio-filter-library-sqlite-repository";
 import {
   openStudioLocalDatabase,
   type StudioSqliteApiHandle,
-} from "../../../src/domains/creator/studio-local-database";
+} from "../../../apps/web/src/domains/creator/studio-local-database";
 
 const REPO_ROOT = new URL("../../..", import.meta.url).pathname;
 const RESULTS_DIR = join(REPO_ROOT, "tests", "benchmarks", "results");

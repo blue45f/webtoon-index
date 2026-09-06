@@ -28,8 +28,8 @@ from mathutils import Matrix, Quaternion, Vector
 REPOSITORY = Path(__file__).resolve().parents[2]
 # Kate (100Avatars R1 #038, CC0) replaced the retired procedural reference character. HEAD/EYE fit
 # scales below were calibrated on that former rig and are approximate for this model.
-REFERENCE_VRM = REPOSITORY / "public/vrm/Kate.vrm"
-ASSET_DIRECTORY = REPOSITORY / "public/assets/3d"
+REFERENCE_VRM = REPOSITORY / "apps/web/public/vrm/Kate.vrm"
+ASSET_DIRECTORY = REPOSITORY / "apps/web/public/assets/3d"
 HEAD_FIT_SCALE = 0.185916 / 0.18
 EYE_FIT_SCALE = (0.185916 * 0.355) / 0.064
 

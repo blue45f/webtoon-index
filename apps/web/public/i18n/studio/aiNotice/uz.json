@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Generativ AI tasvir qo'llanmasi",
+  "studio.aiNotice.description": "Bu funksiya generativ AI (OpenAI) yordamida tasvirlarni yaratadi. Yaratilgan natijalarda AI nishonlari ko'rsatiladi.",
+  "studio.aiNotice.ruleCopyright": "Biz boshqa odamlarning asarlarini, personajlarini yoki haqiqiy odamlarning yuzlarini yaratmaymiz.",
+  "studio.aiNotice.ruleAccuracy": "AI natijalari noto'g'ri yoki mo'ljallanganidan farq qilishi mumkin.",
+  "studio.aiNotice.ruleResponsibility": "Siz yaratgan rasmlardan foydalanish uchun javobgarsiz.",
+  "studio.aiNotice.cancel": "Bekor qilish",
+  "studio.aiNotice.confirm": "Men tushunaman, yarataman"
+}

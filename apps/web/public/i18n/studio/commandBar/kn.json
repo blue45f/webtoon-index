@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "ತ್ವರಿತ ಕಮಾಂಡ್ ಬಾರ್",
+  "studio.commandBar.settings": "ಕಮಾಂಡ್ ಬಾರ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳು",
+  "studio.commandBar.settingsDescription": "ಮೆನು ಬಾರ್‌ನ ಕೆಳಗಿನ ಕಮಾಂಡ್ ಬಾರ್‌ನ ಸ್ಲಾಟ್ ಜೋಡಣೆ ಮತ್ತು ಗೋಚರತೆಯನ್ನು ಬದಲಿಸಿ.",
+  "studio.commandBar.settingsTip": "ಹೆಚ್ಚು ಬಳಸುವ ಕಮಾಂಡ್‌ಗಳನ್ನು ಮೊದಲ ಸ್ಲಾಟ್‌ಗಳಲ್ಲಿ ಇಟ್ಟರೆ ಬೇಗ ತಲುಪಬಹುದು.",
+  "studio.commandBar.settingsClose": "ಕಮಾಂಡ್ ಬಾರ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಮುಚ್ಚಿ",
+  "studio.commandBar.settingsStorageNote": "ಸ್ಲಾಟ್ ಜೋಡಣೆ ಈ ಬ್ರೌಸರ್‌ನ ಕಾರ್ಯಕ್ಷೇತ್ರ ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಉಳಿಸಲಾಗುತ್ತದೆ.",
+  "studio.commandBar.showSlots": "ಕಮಾಂಡ್ ಸ್ಲಾಟ್‌ಗಳನ್ನು ತೋರಿಸಿ",
+  "studio.commandBar.slot": "ಸ್ಲಾಟ್ {index}",
+  "studio.commandBar.slotAria": "ಕಮಾಂಡ್ ಸ್ಲಾಟ್ {index}",
+  "studio.commandBar.slotEmpty": "ಖಾಲಿ ಸ್ಲಾಟ್",
+  "studio.commandBar.resetDefaults": "ಪೂರ್ವನಿಯೋಜಿತ ಜೋಡಣೆಗೆ ಮರುಹೊಂದಿಸಿ",
+  "studio.commandBar.command.undo": "ರದ್ದುಗೊಳಿಸಿ",
+  "studio.commandBar.command.redo": "ಮತ್ತೆ ಮಾಡಿ",
+  "studio.commandBar.command.save": "ಕರಡು ಉಳಿಸಿ",
+  "studio.commandBar.command.publish": "ಪ್ರಕಟಿಸಿ",
+  "studio.commandBar.command.download": "ಪ್ರಸ್ತುತ ಪುಟವನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ",
+  "studio.commandBar.command.export-open": "ರಫ್ತು ಆಯ್ಕೆಗಳು",
+  "studio.commandBar.command.zoom-fit": "ಪರದೆಯ ಅಗಲಕ್ಕೆ ಹೊಂದಿಸಿ",
+  "studio.commandBar.command.assets": "ಟೆಂಪ್ಲೇಟ್‌ಗಳು ಮತ್ತು ಸಂಪನ್ಮೂಲಗಳು",
+  "studio.commandBar.command.bubbles": "ಸಂಭಾಷಣೆ ಗುಳ್ಳೆ",
+  "studio.commandBar.command.project": "ಯೋಜನಾ ಪರಿಕರಗಳು"
+}

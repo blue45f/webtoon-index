@@ -5,8 +5,8 @@
  */
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { refineStudioVrmContact, sameStudioVrmContactValues, planStudioVrmContactReplay, releaseStudioVrmContactReplay } from '../src/domains/creator/vrm/studio-vrm-contact-refinement.ts';
-import { resolveStudioVrmPortraitBounds } from '../src/domains/creator/vrm/studio-vrm-portrait-framing.ts';
+import { refineStudioVrmContact, sameStudioVrmContactValues, planStudioVrmContactReplay, releaseStudioVrmContactReplay } from '../apps/web/src/domains/creator/vrm/studio-vrm-contact-refinement.ts';
+import { resolveStudioVrmPortraitBounds } from '../apps/web/src/domains/creator/vrm/studio-vrm-portrait-framing.ts';
 
 function rig(initial, evaluate, overrides = {}) {
   let angles = [...initial];

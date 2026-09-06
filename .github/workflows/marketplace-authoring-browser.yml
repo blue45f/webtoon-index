@@ -7,9 +7,9 @@ on:
     paths:
       - ".github/workflows/marketplace-authoring-browser.yml"
       - "e2e/marketplace-authoring-workshop.spec.ts"
-      - "src/domains/market/components/MarketplaceAuthoringWorkshop.tsx"
-      - "src/domains/market/pages/MarketPublishPage.tsx"
-      - "src/domains/creator/MarketplaceBrushStudioBridge.tsx"
+      - "apps/web/src/domains/market/components/MarketplaceAuthoringWorkshop.tsx"
+      - "apps/web/src/domains/market/pages/MarketPublishPage.tsx"
+      - "apps/web/src/domains/creator/MarketplaceBrushStudioBridge.tsx"
   workflow_dispatch:
 
 permissions:

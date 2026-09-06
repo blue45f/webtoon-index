@@ -3,7 +3,7 @@ import { randomUUID } from "node:crypto";
 import {
   assertStudioLinked3dPassAssetRows,
   extractStudioLinked3dPassAssetRequirements,
-} from "../../../../../lib/studio-linked-3d-pass-asset-fence";
+} from "../../../../web/src/shared/lib/studio-linked-3d-pass-asset-fence";
 import { assertCreatorDraftCollaborationStatusMutationAllowed } from "../../server/creator-provisional-work-status";
 import {
   CREATOR_WORK_REVISION_MAX,

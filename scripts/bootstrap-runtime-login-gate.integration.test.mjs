@@ -31,7 +31,6 @@ test.runIf(Boolean(DATABASE_URL))(
     runtimeUrl.password = runtimePassword;
     const admin = new Client({ connectionString: DATABASE_URL });
     let roleCreated = false;
-    let loginGated = false;
 
     await admin.connect();
     try {
@@ -80,7 +79,6 @@ test.runIf(Boolean(DATABASE_URL))(
           runtimeDatabaseRole: runtimeRole,
         }),
       );
-      loginGated = true;
       await admin.query(
         buildRuntimeLoginGateVerificationSql({
           databaseName: target.databaseName,
@@ -98,18 +96,15 @@ test.runIf(Boolean(DATABASE_URL))(
           runtimeDatabaseRole: runtimeRole,
         }),
       );
-      loginGated = false;
 
       const afterRestore = new Client({ connectionString: runtimeUrl.toString() });
       await afterRestore.connect();
       await afterRestore.end();
     } finally {
       if (roleCreated) {
-        if (loginGated) {
-          await admin
-            .query(`ALTER ROLE ${runtimeRole} LOGIN`)
-            .catch(() => undefined);
-        }
+        await admin
+          .query(`ALTER ROLE ${runtimeRole} LOGIN`)
+          .catch(() => undefined);
         await admin.query(`DROP ROLE IF EXISTS ${runtimeRole}`);
       }
       await admin.end();

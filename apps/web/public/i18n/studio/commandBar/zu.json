@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Ibha yemiyalo esheshayo",
+  "studio.commandBar.settings": "Izilungiselelo zebha yemiyalo",
+  "studio.commandBar.settingsDescription": "Shintsha ukuhleleka kwezikhala nokubonakala kwebha yemiyalo engaphansi kwebha yemenyu.",
+  "studio.commandBar.settingsTip": "Beka imiyalo oyisebenzisa kakhulu ezikhaleni zokuqala ukuze ifinyeleleke ngokushesha.",
+  "studio.commandBar.settingsClose": "Vala izilungiselelo zebha yemiyalo",
+  "studio.commandBar.settingsStorageNote": "Ukuhleleka kwezikhala kugcinwa kuzilungiselelo zendawo yokusebenza yalesi siphequluli.",
+  "studio.commandBar.showSlots": "Bonisa izikhala zemiyalo",
+  "studio.commandBar.slot": "Isikhala {index}",
+  "studio.commandBar.slotAria": "Isikhala somyalo {index}",
+  "studio.commandBar.slotEmpty": "Isikhala esingenalutho",
+  "studio.commandBar.resetDefaults": "Buyisela ekuhlelekeni okuzenzakalelayo",
+  "studio.commandBar.command.undo": "Hlehlisa",
+  "studio.commandBar.command.redo": "Yenza futhi",
+  "studio.commandBar.command.save": "Londoloza uhlaka",
+  "studio.commandBar.command.publish": "Shicilela",
+  "studio.commandBar.command.download": "Landa ikhasi lamanje",
+  "studio.commandBar.command.export-open": "Izinketho zokuthumela ngaphandle",
+  "studio.commandBar.command.zoom-fit": "Linganisa nobubanzi besikrini",
+  "studio.commandBar.command.assets": "Amathempulethi nezinsiza",
+  "studio.commandBar.command.bubbles": "Ibhamuza lenkulumo",
+  "studio.commandBar.command.project": "Amathuluzi ephrojekthi"
+}

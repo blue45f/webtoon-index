@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "forme intelligenti",
+  "studio.quickShape.description.active": "Disegna tranquillamente linee, quadrati, cerchi e triangoli. Se lo lasci andare, si riordinerà da solo.",
+  "studio.quickShape.description.inactive": "Va bene scarabocchiarlo. Se lo accendi, il disegno della tua mano verrà rifinito in una forma ordinata.",
+  "studio.quickShape.toggleHint": "Nel momento in cui lasci andare una forma approssimativamente disegnata con una penna, questa assume una forma esatta. Anche se ti fermi mentre disegni, verrà visualizzata un'anteprima.",
+  "studio.quickShape.toggleAria.on": "Forme intelligenti attivate",
+  "studio.quickShape.toggleAria.off": "Forme intelligenti disattivate",
+  "studio.quickShape.matchedSuffix": " Lo sento. Ciò è confermato quando rilascio la mano.",
+  "studio.quickShape.emptyStatus": "Disegna la forma e lascia andare, oppure rimani semplicemente alla fine",
+  "studio.quickShape.openTutorial": "Guarda il tutorial sulle forme intelligenti",
+  "studio.quickShape.notice": "Disegna forme intelligenti, linee, cerchi, quadrati, ecc. e perfezionali quando lasci andare (pausa per visualizzare l'anteprima)"
+}

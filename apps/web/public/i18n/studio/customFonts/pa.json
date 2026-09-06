@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "ਮੇਰਾ ਫੌਂਟ",
+  "studio.customFonts.importButton": "ਫਾਈਲ ਤੋਂ ਆਯਾਤ ਕਰੋ",
+  "studio.customFonts.importing": "ਜਾਂਚ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ...",
+  "studio.customFonts.importAria": "ਫੌਂਟ ਫਾਈਲ ਆਯਾਤ ਕਰੋ",
+  "studio.customFonts.storageAria": "ਫੌਂਟ ਲਾਇਬ੍ਰੇਰੀ ਦੀ ਵਰਤੋਂ",
+  "studio.customFonts.emptyTitle": "ਅਜੇ ਤੱਕ ਕੋਈ ਫੋਂਟ ਸ਼ਾਮਲ ਨਹੀਂ ਕੀਤੇ ਗਏ ਹਨ।",
+  "studio.customFonts.unknownFileName": "ਕੋਈ ਫਾਈਲ ਨਾਮ ਨਹੀਂ",
+  "studio.customFonts.apply": "ਲਾਗੂ ਕਰੋ",
+  "studio.customFonts.applyToText": "ਇਸ ਫੌਂਟ ਨੂੰ ਚੁਣੇ ਟੈਕਸਟ 'ਤੇ ਲਾਗੂ ਕਰੋ",
+  "studio.customFonts.selectTextFirst": "ਪਹਿਲਾਂ ਟੈਕਸਟ ਜਾਂ ਸਪੀਚ ਬਬਲ ਚੁਣੋ",
+  "studio.customFonts.delete": "ਫੌਂਟ ਮਿਟਾਓ"
+}

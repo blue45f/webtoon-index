@@ -13,9 +13,9 @@ import {
 
 import {
   CREATOR_ASSET_LEGACY_FULL_MAX_PAGE_SIZE,
-} from "../../../../../lib/creator-asset-contract";
-import { rateLimit } from "../../../../../lib/rate-limit";
-import { StudioLinked3dPassAssetFenceError } from "../../../../../lib/studio-linked-3d-pass-asset-fence";
+} from "../../../../web/src/shared/lib/creator-asset-contract";
+import { rateLimit } from "../../../../web/src/shared/lib/rate-limit";
+import { StudioLinked3dPassAssetFenceError } from "../../../../web/src/shared/lib/studio-linked-3d-pass-asset-fence";
 import { StudioRealtimeRevocationService } from "../../infrastructure/studio-realtime-revocation/studio-realtime-revocation.client";
 import {
   addComment,

@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "мой шрифт",
+  "studio.customFonts.importButton": "Импорт из файла",
+  "studio.customFonts.importing": "Проверка…",
+  "studio.customFonts.importAria": "Импортировать файл шрифта",
+  "studio.customFonts.storageAria": "Использование библиотеки шрифтов",
+  "studio.customFonts.emptyTitle": "Шрифты пока не включены.",
+  "studio.customFonts.unknownFileName": "Нет имени файла",
+  "studio.customFonts.apply": "Применить",
+  "studio.customFonts.applyToText": "Применить этот шрифт к выделенному тексту",
+  "studio.customFonts.selectTextFirst": "Сначала выберите текстовый или речевой пузырь",
+  "studio.customFonts.delete": "удалить шрифт"
+}

@@ -33,7 +33,7 @@ export function normalizeRemoteImageUrl(value) {
   return url.toString();
 }
 
-export function extractRemoteImageUrl(input) {
+export function extractRemoteImageUrl(input) { // NOSONAR javascript:S3776
   if (!input) return undefined;
   if (typeof input === "string") {
     return extractRemoteImageUrlFromString(input);

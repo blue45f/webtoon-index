@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "aqlli shakllar",
+  "studio.quickShape.description.active": "Bemalol chiziqlar, kvadratlar, doiralar va uchburchaklar chizing. Qo‘yib yuborsang, o‘z-o‘zidan yig‘ishtirib qo‘yadi.",
+  "studio.quickShape.description.inactive": "Uni yozib qo'yish yaxshi. Agar siz uni yoqsangiz, qo'l bilan chizgan rasmingiz toza shaklga aylanadi.",
+  "studio.quickShape.toggleHint": "Qalam bilan chizilgan shaklni qo'yib yuborsangiz, u aniq shaklga kiradi. Chizish paytida pauza qilsangiz ham, oldindan ko'rish paydo bo'ladi.",
+  "studio.quickShape.toggleAria.on": "Aqlli shakllar yoqilgan",
+  "studio.quickShape.toggleAria.off": "Aqlli shakllar o'chirilgan",
+  "studio.quickShape.matchedSuffix": " Men buni his qila olaman. Bu qo'limni bo'shatganimda tasdiqlanadi.",
+  "studio.quickShape.emptyStatus": "Shaklni chizib, qo'yib yuboring yoki faqat oxirida qoling",
+  "studio.quickShape.openTutorial": "Aqlli shakllar qo'llanmasini tomosha qiling",
+  "studio.quickShape.notice": "Aqlli shakllar, chiziqlar, doiralar, kvadratlar va hokazolarni chizing va qo'yib yuborganingizda ularni aniqlang (oldindan ko'rish uchun pauza)"
+}

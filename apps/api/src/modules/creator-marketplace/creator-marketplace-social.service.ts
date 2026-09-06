@@ -20,7 +20,7 @@ import {
 import {
   CREATOR_MARKETPLACE_STUDIO_CONFIRMABLE_KINDS,
   creatorMarketplacePackageIdentityPreimage,
-} from "../../../../../lib/creator-marketplace-cloud-library-contract";
+} from "../../../../web/src/shared/lib/creator-marketplace-cloud-library-contract";
 import {
   CREATOR_MARKETPLACE_SOCIAL_COMMENT_MAX_CHARACTERS,
   CREATOR_MARKETPLACE_SOCIAL_COMMENT_PAGE_SIZE,
@@ -31,7 +31,7 @@ import {
   CREATOR_MARKETPLACE_SOCIAL_ROLE_MAX_CHARACTERS,
   CREATOR_MARKETPLACE_SOCIAL_TAG_MAX_CHARACTERS,
   CreatorMarketplaceSocialPageSchema,
-} from "../../../../../lib/creator-marketplace-social-contract";
+} from "../../../../web/src/shared/lib/creator-marketplace-social-contract";
 import {
   db,
   reviewLikes,
@@ -44,7 +44,7 @@ import { isAdminUser } from "../../server/app-config";
 
 import { CreatorMarketplaceService } from "./creator-marketplace.service";
 
-import type { CreatorMarketplaceResourceRecord } from "../../../../../lib/creator-marketplace-resource-contract";
+import type { CreatorMarketplaceResourceRecord } from "../../../../web/src/shared/lib/creator-marketplace-resource-contract";
 import type {
   CreateCreatorMarketplaceSocialComment,
   CreatorMarketplaceSocialAuthor,
@@ -52,7 +52,7 @@ import type {
   CreatorMarketplaceSocialPage,
   CreatorMarketplaceSocialReviewQualification,
   UpsertCreatorMarketplaceSocialReview,
-} from "../../../../../lib/creator-marketplace-social-contract";
+} from "../../../../web/src/shared/lib/creator-marketplace-social-contract";
 
 const MARKET_SOCIAL_KEY_PREFIX = "toonspectrum:market-package:";
 const MARKET_REVIEW_STORAGE_SCHEMA = "toonspectrum.market-review.v2";

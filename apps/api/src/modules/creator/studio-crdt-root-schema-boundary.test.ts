@@ -54,11 +54,11 @@ describe("Studio CRDT root schema ownership boundary", () => {
     expect(service.valueImports).toContain("./studio-crdt-root-schema");
     expect(schema.valueImports).toEqual([
       "yjs",
-      "../../../../../lib/studio-brush-r8-grain-asset-contract",
-      "../../../../../lib/studio-crdt-raster-document-contract",
-      "../../../../../lib/studio-filter-mask-surface-contract",
-      "../../../../../lib/studio-ink-input-contract",
-      "../../../../../lib/studio-work-asset-contract",
+      "../../../../web/src/shared/lib/studio-brush-r8-grain-asset-contract",
+      "../../../../web/src/shared/lib/studio-crdt-raster-document-contract",
+      "../../../../web/src/shared/lib/studio-filter-mask-surface-contract",
+      "../../../../web/src/shared/lib/studio-ink-input-contract",
+      "../../../../web/src/shared/lib/studio-work-asset-contract",
     ]);
     expect(schema.valueImports).not.toContain("./studio-crdt.service");
     expect(schema.valueImports).not.toContain("./studio-crdt.repository");

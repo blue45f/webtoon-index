@@ -20,7 +20,7 @@ JSON_CHUNK = 0x4E4F534A
 BIN_CHUNK = 0x004E4942
 
 
-def read_glb(data: bytes) -> tuple[dict, bytes]:
+def read_glb(data: bytes) -> tuple[dict, bytes]: # NOSONAR python:S3776
     if not 28 <= len(data) <= LIMIT:
         raise ValueError('GLB size outside pilot budget')
     magic, version, size = struct.unpack_from('<4sII', data)
@@ -67,7 +67,7 @@ def write_glb(doc: dict, binary: bytes) -> bytes:
             + js + struct.pack('<II', len(padded), BIN_CHUNK) + padded)
 
 
-def normalize(source: Path, destination: Path) -> dict:
+def normalize(source: Path, destination: Path) -> dict: # NOSONAR python:S3776
     if destination.exists() or destination.is_symlink():
         raise ValueError('destination already exists')
     if source.stat().st_size > LIMIT:

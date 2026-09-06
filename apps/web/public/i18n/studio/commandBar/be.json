@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Хуткая панэль каманд",
+  "studio.commandBar.settings": "Налады панэлі каманд",
+  "studio.commandBar.settingsDescription": "Змяніце размяшчэнне слотаў і бачнасць панэлі каманд пад радком меню.",
+  "studio.commandBar.settingsTip": "Змясціце найбольш ужываныя каманды ў першых слотах — да іх будзе хутчэй дацягнуцца.",
+  "studio.commandBar.settingsClose": "Закрыць налады панэлі каманд",
+  "studio.commandBar.settingsStorageNote": "Размяшчэнне слотаў захоўваецца ў наладах працоўнай прасторы гэтага браўзера.",
+  "studio.commandBar.showSlots": "Паказаць слоты каманд",
+  "studio.commandBar.slot": "Слот {index}",
+  "studio.commandBar.slotAria": "Слот каманды {index}",
+  "studio.commandBar.slotEmpty": "Пусты слот",
+  "studio.commandBar.resetDefaults": "Вярнуць стандартнае размяшчэнне",
+  "studio.commandBar.command.undo": "Адрабіць",
+  "studio.commandBar.command.redo": "Паўтарыць",
+  "studio.commandBar.command.save": "Захаваць чарнавік",
+  "studio.commandBar.command.publish": "Апублікаваць",
+  "studio.commandBar.command.download": "Спампаваць бягучую старонку",
+  "studio.commandBar.command.export-open": "Параметры экспарту",
+  "studio.commandBar.command.zoom-fit": "Па шырыні экрана",
+  "studio.commandBar.command.assets": "Шаблоны і рэсурсы",
+  "studio.commandBar.command.bubbles": "Маўленчая бурбалка",
+  "studio.commandBar.command.project": "Інструменты праекта"
+}

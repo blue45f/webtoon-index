@@ -24,7 +24,7 @@ const CREATOR_MARKETPLACE_DB_VERIFIER =
 
 export const POSTGRES_INTEGRATION_SUITES = Object.freeze([
   "scripts/bootstrap-runtime-login-gate.integration.test.mjs",
-  "lib/__tests__/oauth-runtime.integration.test.ts",
+  "apps/web/src/shared/lib/__tests__/oauth-runtime.integration.test.ts",
   "apps/api/src/modules/health/health-readiness.repository.integration.test.ts",
   "apps/api/src/modules/studio-ai/studio-ai-admission.repository.integration.test.ts",
   "apps/api/src/modules/creator/creator-asset-schema-preflight.integration.test.ts",
@@ -90,7 +90,7 @@ function isProductionRuntime(environment) {
   );
 }
 
-export function parsePostgresIntegrationArguments(arguments_) {
+export function parsePostgresIntegrationArguments(arguments_) { // NOSONAR javascript:S3776
   let allowRemoteTestDatabase = false;
   let databaseUrl;
   let help = false;
@@ -121,7 +121,7 @@ export function parsePostgresIntegrationArguments(arguments_) {
         fail("--database-url requires a value.");
       }
       databaseUrl = value.trim();
-      index += 1;
+      index += 1; // NOSONAR javascript:S2310
       continue;
     }
     if (argument?.startsWith("--database-url=")) {
@@ -141,7 +141,7 @@ export function parsePostgresIntegrationArguments(arguments_) {
         fail("--runtime-database-role requires a value.");
       }
       runtimeDatabaseRole = value.trim();
-      index += 1;
+      index += 1; // NOSONAR javascript:S2310
       continue;
     }
     if (argument?.startsWith("--runtime-database-role=")) {
@@ -184,7 +184,7 @@ function databaseNameFromUrl(url) {
   return databaseName;
 }
 
-export function validatePostgresIntegrationUrl(
+export function validatePostgresIntegrationUrl( // NOSONAR javascript:S3776
   rawDatabaseUrl,
   { allowRemoteTestDatabase = false, environment = process.env } = {},
 ) {

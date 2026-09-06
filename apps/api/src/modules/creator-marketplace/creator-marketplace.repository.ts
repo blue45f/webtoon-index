@@ -16,7 +16,7 @@ import {
   CreatorMarketplacePackageModerationStateSchema,
   CreatorMarketplaceResourceKindSchema,
   CreatorMarketplaceResourceReportEvidenceSchema,
-} from "../../../../../lib/creator-marketplace-resource-contract";
+} from "../../../../web/src/shared/lib/creator-marketplace-resource-contract";
 import { db, users } from "../../db";
 import {
   creatorMarketplacePackageModeration,

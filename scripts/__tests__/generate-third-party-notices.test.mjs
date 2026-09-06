@@ -312,15 +312,12 @@ describe("generated third-party notice inventory", () => {
       for (const path of requiredFiles) {
         writeFileSync(join(directory, path), `${path}\n`, "utf8");
       }
+      const sortedRequiredFiles = [...requiredFiles].sort();
       writeFileSync(
         join(directory, "THIRD_PARTY_NOTICES.sha256"),
-        `${requiredFiles
-          .sort()
-          .map(
-            (path) =>
-              `${sha256(readFileSync(join(directory, path)))}  ${path}`,
-          )
-          .join("\n")}\n`,
+        `${sortedRequiredFiles.map(
+          (path) => `${sha256(readFileSync(join(directory, path)))}  ${path}`,
+        ).join("\n")}\n`,
         "utf8",
       );
       expect(validateLockedNoticeFiles(directory, requiredFiles).size).toBe(3);

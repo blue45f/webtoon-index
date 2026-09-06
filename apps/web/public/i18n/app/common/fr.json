@@ -1,0 +1,16 @@
+{
+  "common.loading": "Chargement",
+  "common.loading.short": "Loading",
+  "common.close": "Fermer",
+  "common.open": "Ouvrir",
+  "common.search": "Rechercher",
+  "common.retry": "Réessayer",
+  "common.retry.short": "Retry",
+  "common.backToTop": "Back to top",
+  "common.backToHome": "Accueil",
+  "common.loading.search": "Searching…",
+  "common.notFoundWithQuery": "No results for '{query}'.",
+  "common.openSearch": "Find it in Search →",
+  "common.loading.empty": "No data returned.",
+  "common.retry.all": "Try again or go back to home."
+}

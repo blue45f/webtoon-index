@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "slimme vormen",
+  "studio.quickShape.description.active": "Teken op je gemak lijnen, vierkanten, cirkels en driehoeken. Als je het loslaat, ruimt het zichzelf op.",
+  "studio.quickShape.description.inactive": "Het is oké om het op te schrijven. Als u deze inschakelt, wordt uw handtekening verfijnd tot een nette vorm.",
+  "studio.quickShape.toggleHint": "Op het moment dat je een grof getekende vorm met een pen loslaat, springt deze in een exacte vorm. Zelfs als u pauzeert tijdens het tekenen, verschijnt er een voorbeeld.",
+  "studio.quickShape.toggleAria.on": "Slimme vormen aan",
+  "studio.quickShape.toggleAria.off": "Slimme vormen uit",
+  "studio.quickShape.matchedSuffix": " Ik kan het voelen. Het wordt bevestigd als ik mijn hand loslaat.",
+  "studio.quickShape.emptyStatus": "Teken de vorm en laat los, of blijf gewoon aan het einde",
+  "studio.quickShape.openTutorial": "Bekijk de tutorial over slimme vormen",
+  "studio.quickShape.notice": "Teken slimme vormen, lijnen, cirkels, vierkanten, enz. en verfijn ze wanneer je ze loslaat (pauzeer om een voorbeeld te bekijken)"
+}

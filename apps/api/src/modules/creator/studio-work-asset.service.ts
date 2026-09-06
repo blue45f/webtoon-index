@@ -15,7 +15,7 @@ import {
 import {
   normalizeStudioBrushR8TextureGrainSource,
   serializeStudioBrushR8TextureGrainSourceCanonical,
-} from "../../../../../lib/studio-brush-r8-grain-asset-contract";
+} from "../../../../web/src/shared/lib/studio-brush-r8-grain-asset-contract";
 import {
   parseStudioWorkAssetDescriptor,
   isStudioWorkAssetAdmissionOptedIn,
@@ -30,7 +30,7 @@ import {
   StudioWorkAssetManifestSchema,
   StudioWorkAssetReferenceSchema,
   serializeStudioWorkAssetDescriptorCanonical,
-} from "../../../../../lib/studio-work-asset-contract";
+} from "../../../../web/src/shared/lib/studio-work-asset-contract";
 import {
   SUPABASE_OBJECT_STORAGE_CONTRACT_VERSION,
   SupabaseObjectReferenceSchema,
@@ -71,7 +71,7 @@ import type {
   StudioWorkAssetStorageReference,
   StudioWorkAssetWrite,
 } from "./studio-work-asset.repository";
-import type { StudioBrushR8TextureGrainSource } from "../../../../../lib/studio-brush-r8-grain-asset-contract";
+import type { StudioBrushR8TextureGrainSource } from "../../../../web/src/shared/lib/studio-brush-r8-grain-asset-contract";
 import type {
   StudioWorkAssetDescriptor,
   StudioWorkAssetLayerLiftBatchMetadata,
@@ -80,7 +80,7 @@ import type {
   StudioWorkAssetIntrinsicImage,
   StudioWorkAssetReference,
   StudioWorkAssetType,
-} from "../../../../../lib/studio-work-asset-contract";
+} from "../../../../web/src/shared/lib/studio-work-asset-contract";
 
 const GLB_HEADER_BYTES = 12;
 const GLB_CHUNK_HEADER_BYTES = 8;

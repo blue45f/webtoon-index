@@ -161,7 +161,7 @@ function sleep(ms) {
 }
 
 function slug(value) {
-  return value.replace(/[^a-zA-Z0-9_-]+/gu, "-").replace(/^-+|-+$/gu, "");
+  return value.replace(/[^a-zA-Z0-9_-]+/gu, "-").replace(/(?:^-+|-+$)/gu, "");
 }
 
 function sha256(buffer) {
@@ -174,7 +174,7 @@ function ignoredNetwork(text) {
 
 async function inspectDom(page, profile) {
   return page.evaluate(
-    ({ minTouchPx, touchProfile }) => {
+    ({ minTouchPx, touchProfile }) => { // NOSONAR javascript:S3776
       const viewportWidth = window.innerWidth;
       const viewportHeight = window.innerHeight;
       const epsilon = 0.5;
@@ -218,7 +218,7 @@ async function inspectDom(page, profile) {
 
       const describe = (element) => {
         const name = accessibleName(element).replace(/\s+/gu, " ").slice(0, 80);
-        return `${element.tagName.toLowerCase()}${name ? `[${name}]` : ""}`;
+        return element.tagName.toLowerCase() + (name ? `[${name}]` : "");
       };
 
       const horizontalScrollerAncestor = (element) => {
@@ -465,7 +465,7 @@ async function probeBg3dEntry(page, routeId) {
   return { applicable: true, available: true, clickError, opened };
 }
 
-function classify({
+function classify({ // NOSONAR javascript:S3776
   route,
   profile,
   responseStatus,

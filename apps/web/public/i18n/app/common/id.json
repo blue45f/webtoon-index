@@ -1,0 +1,16 @@
+{
+  "common.loading": "Memuat",
+  "common.loading.short": "Loading",
+  "common.close": "Tutup",
+  "common.open": "Buka",
+  "common.search": "Cari",
+  "common.retry": "Coba lagi",
+  "common.retry.short": "Retry",
+  "common.backToTop": "Back to top",
+  "common.backToHome": "Ke Beranda",
+  "common.loading.search": "Searching…",
+  "common.notFoundWithQuery": "No results for '{query}'.",
+  "common.openSearch": "Find it in Search →",
+  "common.loading.empty": "No data returned.",
+  "common.retry.all": "Try again or go back to home."
+}

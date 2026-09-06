@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "bentuk cerdas",
+  "studio.quickShape.description.active": "Gambarlah garis, kotak, lingkaran, dan segitiga dengan santai. Jika dibiarkan, ia akan beres dengan sendirinya.",
+  "studio.quickShape.description.inactive": "Tidak apa-apa untuk mencoret-coretnya. Jika Anda menyalakannya, gambar tangan Anda akan diperhalus menjadi bentuk yang rapi.",
+  "studio.quickShape.toggleHint": "Saat Anda melepaskan bentuk yang digambar secara kasar dengan pena, bentuk itu akan berubah menjadi bentuk yang tepat. Meskipun Anda berhenti sejenak saat menggambar, pratinjau akan muncul.",
+  "studio.quickShape.toggleAria.on": "Bentuk cerdas aktif",
+  "studio.quickShape.toggleAria.off": "Bentuk cerdas mati",
+  "studio.quickShape.matchedSuffix": " Saya bisa merasakannya. Itu dikonfirmasi ketika aku melepaskan tanganku.",
+  "studio.quickShape.emptyStatus": "Gambarlah bentuknya dan lepaskan, atau diam saja di bagian akhir",
+  "studio.quickShape.openTutorial": "Tonton tutorial bentuk cerdas",
+  "studio.quickShape.notice": "Gambarlah bentuk, garis, lingkaran, kotak, dll dengan cerdas, lalu perbaiki saat Anda melepaskannya (jeda untuk melihat pratinjau)"
+}

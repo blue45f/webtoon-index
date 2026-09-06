@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Príručka funkcií",
+  "studio.hub.subtitle": "Jedna funkcia naraz bez akejkoľvek záťaže. Pozrel som sa na {done}/{total}.",
+  "studio.hub.progressAriaLabel": "Priebeh tutoriálu",
+  "studio.hub.listAriaLabel": "Zoznam funkcií",
+  "studio.hub.checked": "pozri sa",
+  "studio.hub.prev": "Predchádzajúce",
+  "studio.hub.next": "ďalšie",
+  "studio.hub.markComplete": "označiť ako dokončené",
+  "studio.hub.completed": "Dokončené",
+  "studio.hub.tryLabelDefault": "Nasledujte",
+  "studio.hub.stepAriaPrefix": "krok"
+}

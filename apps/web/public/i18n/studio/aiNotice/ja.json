@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "AI画像生成のお知らせ",
+  "studio.aiNotice.description": "生成AI（OpenAI）で画像を作成する機能です。生成された結果にはバッジが表示されます。",
+  "studio.aiNotice.ruleCopyright": "他人の著作権で保護された作品、キャラクター、生きている人の顔を作成しないでください。",
+  "studio.aiNotice.ruleAccuracy": "AI の出力は不正確である可能性があり、意図と異なる場合があります。",
+  "studio.aiNotice.ruleResponsibility": "生成された画像の使用方法はお客様の責任となります。",
+  "studio.aiNotice.cancel": "キャンセル",
+  "studio.aiNotice.confirm": "理解しました、生成します"
+}

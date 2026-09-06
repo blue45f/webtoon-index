@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 import {
   StudioRealtimeTicketRequestSchema as ClientTicketRequestSchema,
   StudioRealtimeTicketSchema as ClientTicketResponseSchema,
-} from "../../../../../src/domains/creator/studio-realtime-provider-protocol";
+} from "../../../../web/src/domains/creator/studio-realtime-provider-protocol";
 
 import {
   IssueStudioRealtimeTicketSchema,

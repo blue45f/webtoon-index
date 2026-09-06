@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "моят шрифт",
+  "studio.customFonts.importButton": "Импортиране от файл",
+  "studio.customFonts.importing": "Проверка...",
+  "studio.customFonts.importAria": "Импортиране на файл с шрифтове",
+  "studio.customFonts.storageAria": "Използване на библиотека с шрифтове",
+  "studio.customFonts.emptyTitle": "Все още няма включени шрифтове.",
+  "studio.customFonts.unknownFileName": "Няма име на файл",
+  "studio.customFonts.apply": "Кандидатствайте",
+  "studio.customFonts.applyToText": "Приложете този шрифт към избран текст",
+  "studio.customFonts.selectTextFirst": "Първо изберете текст или балонче с реч",
+  "studio.customFonts.delete": "изтриване на шрифт"
+}

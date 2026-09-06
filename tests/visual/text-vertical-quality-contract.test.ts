@@ -367,11 +367,11 @@ describe("V12 vertical text quality evidence contract", () => {
     const [harness, browserHarness, textNodes, bubbleNode, svgExport, verticalCore, rubyCore, rustCore] = await Promise.all([
       readFile(join(ROOT, "tests/benchmarks/harness/text-vertical-quality.ts"), "utf8"),
       readFile(join(ROOT, "tests/benchmarks/harness/text-vertical-quality-browser.ts"), "utf8"),
-      readFile(join(ROOT, "src/domains/creator/StudioKonvaTextNodes.tsx"), "utf8"),
-      readFile(join(ROOT, "src/domains/creator/StudioKonvaBubbleNode.tsx"), "utf8"),
-      readFile(join(ROOT, "src/domains/creator/export/studio-svg-export.ts"), "utf8"),
-      readFile(join(ROOT, "src/domains/creator/studio-vertical-text.ts"), "utf8"),
-      readFile(join(ROOT, "src/domains/creator/lettering/studio-dialogue-ruby-layout.ts"), "utf8"),
+      readFile(join(ROOT, "apps/web/src/domains/creator/StudioKonvaTextNodes.tsx"), "utf8"),
+      readFile(join(ROOT, "apps/web/src/domains/creator/StudioKonvaBubbleNode.tsx"), "utf8"),
+      readFile(join(ROOT, "apps/web/src/domains/creator/export/studio-svg-export.ts"), "utf8"),
+      readFile(join(ROOT, "apps/web/src/domains/creator/studio-vertical-text.ts"), "utf8"),
+      readFile(join(ROOT, "apps/web/src/domains/creator/lettering/studio-dialogue-ruby-layout.ts"), "utf8"),
       readFile(join(ROOT, "crates/studio-engine-vello/src/text_vertical.rs"), "utf8"),
     ]);
     expect(browserHarness).toContain("layoutVerticalText(");

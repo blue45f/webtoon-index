@@ -166,7 +166,7 @@ def dispatch(command: str, payload: Mapping[str, Any] | None = None) -> dict[str
                 "manifest": execution.package_manifest,
             }
         raise McpCommandError(f"command {command!r} has no implementation")
-    except (ContractError, PipelineFailure, OSError, RuntimeError, ValueError) as error:
+    except (OSError, RuntimeError, ValueError) as error:
         return {
             "ok": False,
             "command": command,

@@ -5,7 +5,7 @@ import { BlockList, isIP } from "node:net";
 
 import { Injectable } from "@nestjs/common";
 
-import { StudioRemoteReferenceImageRequestSchema } from "../../../../../lib/studio-remote-reference-image-contract";
+import { StudioRemoteReferenceImageRequestSchema } from "../../../../web/src/shared/lib/studio-remote-reference-image-contract";
 
 import type { LookupFunction } from "node:net";
 

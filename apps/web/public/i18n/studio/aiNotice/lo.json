@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "ຄູ່ມືການຜະລິດ AI ຮູບພາບ",
+  "studio.aiNotice.description": "ຟັງຊັນນີ້ສ້າງຮູບພາບໂດຍໃຊ້ AI ທົ່ວໄປ (OpenAI). ປ້າຍ AI ຖືກສະແດງຢູ່ໃນຜົນໄດ້ຮັບທີ່ສ້າງຂຶ້ນ.",
+  "studio.aiNotice.ruleCopyright": "ພວກເຮົາບໍ່ໄດ້ສ້າງຜົນງານຂອງຄົນອື່ນ, ລັກສະນະ, ຫຼືໃບຫນ້າຂອງຄົນທີ່ແທ້ຈິງ.",
+  "studio.aiNotice.ruleAccuracy": "ຜົນໄດ້ຮັບຂອງ AI ອາດຈະບໍ່ຖືກຕ້ອງ ຫຼືແຕກຕ່າງຈາກສິ່ງທີ່ຕັ້ງໃຈໄວ້.",
+  "studio.aiNotice.ruleResponsibility": "ທ່ານມີຄວາມຮັບຜິດຊອບໃນການນໍາໃຊ້ຮູບພາບທີ່ທ່ານສ້າງ.",
+  "studio.aiNotice.cancel": "ຍົກເລີກ",
+  "studio.aiNotice.confirm": "ຂ້ອຍເຂົ້າໃຈ, ສ້າງ"
+}

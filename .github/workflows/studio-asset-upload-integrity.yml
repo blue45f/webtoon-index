@@ -6,20 +6,20 @@ on:
     paths:
       - scripts/upload-toonstudio-3d-assets.mts
       - scripts/upload-toonstudio-3d-assets.test.mjs
-      - src/domains/creator/StudioContinuityPanel.hardening.test.tsx
-      - src/domains/creator/StudioContinuityPanel.test.tsx
-      - src/domains/creator/StudioContinuityPanel.tsx
-      - src/domains/creator/quality-review-store.ts
+      - apps/web/src/domains/creator/StudioContinuityPanel.hardening.test.tsx
+      - apps/web/src/domains/creator/StudioContinuityPanel.test.tsx
+      - apps/web/src/domains/creator/StudioContinuityPanel.tsx
+      - apps/web/src/domains/creator/quality-review-store.ts
       - .github/workflows/studio-asset-upload-integrity.yml
   push:
     branches: [main]
     paths:
       - scripts/upload-toonstudio-3d-assets.mts
       - scripts/upload-toonstudio-3d-assets.test.mjs
-      - src/domains/creator/StudioContinuityPanel.hardening.test.tsx
-      - src/domains/creator/StudioContinuityPanel.test.tsx
-      - src/domains/creator/StudioContinuityPanel.tsx
-      - src/domains/creator/quality-review-store.ts
+      - apps/web/src/domains/creator/StudioContinuityPanel.hardening.test.tsx
+      - apps/web/src/domains/creator/StudioContinuityPanel.test.tsx
+      - apps/web/src/domains/creator/StudioContinuityPanel.tsx
+      - apps/web/src/domains/creator/quality-review-store.ts
       - .github/workflows/studio-asset-upload-integrity.yml
 
 permissions:
@@ -48,7 +48,7 @@ jobs:
       - uses: pnpm/action-setup@v6
       - run: pnpm install --frozen-lockfile
       - name: Scoped zero-warning lint
-        run: pnpm exec eslint scripts/upload-toonstudio-3d-assets.mts scripts/upload-toonstudio-3d-assets.test.mjs src/domains/creator/StudioContinuityPanel.hardening.test.tsx src/domains/creator/StudioContinuityPanel.test.tsx src/domains/creator/quality-review-store.ts --max-warnings=0
+        run: pnpm exec eslint scripts/upload-toonstudio-3d-assets.mts scripts/upload-toonstudio-3d-assets.test.mjs apps/web/src/domains/creator/StudioContinuityPanel.hardening.test.tsx apps/web/src/domains/creator/StudioContinuityPanel.test.tsx apps/web/src/domains/creator/quality-review-store.ts --max-warnings=0
       - name: Register and execute the same contracts with root Vitest
         run: pnpm exec vitest run scripts/upload-toonstudio-3d-assets.test.mjs
       - name: Repeat quality-review teardown and upload regressions in shuffled order
@@ -59,8 +59,8 @@ jobs:
           for seed in 7791 7792 7793 7794 7795; do
             pnpm exec vitest run \
               scripts/upload-toonstudio-3d-assets.test.mjs \
-              src/domains/creator/StudioContinuityPanel.test.tsx \
-              src/domains/creator/StudioContinuityPanel.hardening.test.tsx \
+              apps/web/src/domains/creator/StudioContinuityPanel.test.tsx \
+              apps/web/src/domains/creator/StudioContinuityPanel.hardening.test.tsx \
               --sequence.shuffle --sequence.seed="$seed" \
               --reporter=default --reporter=json \
               --outputFile="test-results/upload-review/seed-$seed.json"

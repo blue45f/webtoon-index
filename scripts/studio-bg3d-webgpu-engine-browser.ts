@@ -13,27 +13,27 @@ import * as THREE from "three";
 import {
   registerStudioBg3dCaptureExcludedObject,
   registerStudioBg3dDepthExcludedObject,
-} from "../src/domains/creator/bg3d/studio-bg3d-capture-exclusion";
+} from "../apps/web/src/domains/creator/bg3d/studio-bg3d-capture-exclusion";
 import {
   EMPTY_STUDIO_BG3D_ENGINE_WEBGL_ONLY_FEATURES,
   selectStudioBg3dEngine,
-} from "../src/domains/creator/bg3d/studio-bg3d-engine-selection";
-import { classifyStudioBg3dInAppBrowser } from "../src/domains/creator/bg3d/studio-bg3d-inapp-browser";
-import { createStudioBg3dKtx2RendererRuntime } from "../src/domains/creator/bg3d/studio-bg3d-ktx2-renderer-runtime";
-import { createStudioBg3dThreeWebglCaptureAdapter } from "../src/domains/creator/bg3d/studio-bg3d-three-webgl-capture";
+} from "../apps/web/src/domains/creator/bg3d/studio-bg3d-engine-selection";
+import { classifyStudioBg3dInAppBrowser } from "../apps/web/src/domains/creator/bg3d/studio-bg3d-inapp-browser";
+import { createStudioBg3dKtx2RendererRuntime } from "../apps/web/src/domains/creator/bg3d/studio-bg3d-ktx2-renderer-runtime";
+import { createStudioBg3dThreeWebglCaptureAdapter } from "../apps/web/src/domains/creator/bg3d/studio-bg3d-three-webgl-capture";
 import {
   createStudioBg3dThreeWebGpuCaptureAdapter,
   createStudioBg3dThreeWebGpuRenderer,
   MToonNodeMaterial,
-} from "../src/domains/creator/bg3d/studio-bg3d-three-webgpu-entry";
-import { probeStudioBg3dWebGpuCapability } from "../src/domains/creator/bg3d/studio-bg3d-webgpu-capability";
+} from "../apps/web/src/domains/creator/bg3d/studio-bg3d-three-webgpu-entry";
+import { probeStudioBg3dWebGpuCapability } from "../apps/web/src/domains/creator/bg3d/studio-bg3d-webgpu-capability";
 import {
   loadStudioVrmAsset,
   readStudioVrmMaterialVariant,
   type StudioVrmMaterialVariant,
-} from "../src/domains/creator/vrm/studio-vrm-asset-runtime";
+} from "../apps/web/src/domains/creator/vrm/studio-vrm-asset-runtime";
 
-import type { StudioBg3dCaptureAdapter } from "../src/domains/creator/bg3d/studio-bg3d-capture-adapter";
+import type { StudioBg3dCaptureAdapter } from "../apps/web/src/domains/creator/bg3d/studio-bg3d-capture-adapter";
 
 declare global {
   interface Window {

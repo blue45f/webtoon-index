@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Schnellbefehlsleiste",
+  "studio.commandBar.settings": "Befehlsleisteneinstellungen",
+  "studio.commandBar.settingsDescription": "Ändere die Slot-Belegung und Sichtbarkeit der Befehlsleiste unter der Menüleiste.",
+  "studio.commandBar.settingsTip": "Lege die am häufigsten genutzten Befehle auf die vorderen Slots – dann sind sie am schnellsten erreichbar.",
+  "studio.commandBar.settingsClose": "Befehlsleisteneinstellungen schließen",
+  "studio.commandBar.settingsStorageNote": "Die Slot-Belegung wird in den Arbeitsbereichseinstellungen dieses Browsers gespeichert.",
+  "studio.commandBar.showSlots": "Befehlsslots anzeigen",
+  "studio.commandBar.slot": "Slot {index}",
+  "studio.commandBar.slotAria": "Befehlsslot {index}",
+  "studio.commandBar.slotEmpty": "Leerer Slot",
+  "studio.commandBar.resetDefaults": "Auf Standardbelegung zurücksetzen",
+  "studio.commandBar.command.undo": "Rückgängig",
+  "studio.commandBar.command.redo": "Wiederholen",
+  "studio.commandBar.command.save": "Entwurf speichern",
+  "studio.commandBar.command.publish": "Veröffentlichen",
+  "studio.commandBar.command.download": "Aktuelle Seite herunterladen",
+  "studio.commandBar.command.export-open": "Exportoptionen",
+  "studio.commandBar.command.zoom-fit": "An Bildschirmbreite anpassen",
+  "studio.commandBar.command.assets": "Vorlagen und Assets",
+  "studio.commandBar.command.bubbles": "Sprechblase",
+  "studio.commandBar.command.project": "Projektwerkzeuge"
+}

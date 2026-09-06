@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "دليل صور الذكاء الاصطناعي التوليدي",
+  "studio.aiNotice.description": "تقوم هذه الوظيفة بإنشاء صور باستخدام الذكاء الاصطناعي التوليدي (OpenAI). يتم عرض شارات الذكاء الاصطناعي على النتائج التي تم إنشاؤها.",
+  "studio.aiNotice.ruleCopyright": "نحن لا نصنع أعمال الآخرين أو شخصياتهم أو وجوههم لأشخاص حقيقيين.",
+  "studio.aiNotice.ruleAccuracy": "قد تكون نتائج الذكاء الاصطناعي غير دقيقة أو مختلفة عما كان مقصودًا.",
+  "studio.aiNotice.ruleResponsibility": "أنت مسؤول عن استخدام الصور التي تقوم بإنشائها.",
+  "studio.aiNotice.cancel": "إلغاء",
+  "studio.aiNotice.confirm": "أنا أفهم، خلق"
+}

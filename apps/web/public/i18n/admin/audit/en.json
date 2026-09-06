@@ -1,0 +1,10 @@
+{
+  "admin.audit.close": "Close",
+  "admin.audit.desc": "Track all administrative actions, permission shifts, and configuration changes.",
+  "admin.audit.empty": "No recorded audit logs.",
+  "admin.audit.loading": "Loading audit logs...",
+  "admin.audit.modalTitle": "Audit Log Details",
+  "admin.audit.searchPlaceholder": "Search (email/action)...",
+  "admin.audit.title": "Admin Audit Logs",
+  "admin.audit.viewDetails": "View"
+}

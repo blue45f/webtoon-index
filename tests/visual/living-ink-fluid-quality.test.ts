@@ -8,15 +8,15 @@ import {
   depositStudioInkwashFluidStamp,
   stepStudioInkwashFluid,
   studioInkwashFluidProject,
-} from "../../src/domains/creator/brush/studio-inkwash-fluid";
+} from "../../apps/web/src/domains/creator/brush/studio-inkwash-fluid";
 import {
   STUDIO_LIVING_INK_EXECUTION_LIMITS,
   STUDIO_LIVING_INK_FLUID_AXES,
   STUDIO_LIVING_INK_FLUID_DEFAULTS,
   studioLivingInkCoarseVelocityGrid,
   studioLivingInkFluidPlan,
-} from "../../src/domains/creator/studio-living-ink-execution-protocol";
-import { DEFAULT_STUDIO_LIVING_INK_MATERIAL_CONTROLS } from "../../src/domains/creator/studio-living-ink-gpu-protocol";
+} from "../../apps/web/src/domains/creator/studio-living-ink-execution-protocol";
+import { DEFAULT_STUDIO_LIVING_INK_MATERIAL_CONTROLS } from "../../apps/web/src/domains/creator/studio-living-ink-gpu-protocol";
 import {
   createStudioLivingInkFluidReference,
   depositStudioLivingInkReference,
@@ -29,7 +29,7 @@ import {
   studioLivingInkReferenceEnstrophy,
   type StudioLivingInkFluidReferenceField,
   type StudioLivingInkFluidReferenceStepParams,
-} from "../../src/domains/creator/studio-living-ink-wgsl-shaders";
+} from "../../apps/web/src/domains/creator/studio-living-ink-wgsl-shaders";
 import { grainMetrics } from "../benchmarks/harness/brush-texture-lab";
 
 /**

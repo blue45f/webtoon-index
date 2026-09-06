@@ -12,9 +12,9 @@ import {
   moveBrushLabHistory,
   resolveBrushLabTraits,
   updateBrushLabSlot,
-} from "../../src/domains/creator/brush-lab/brush-lab-recipe";
+} from "../../apps/web/src/domains/creator/brush-lab/brush-lab-recipe";
 
-import type { BrushLabHistory, BrushLabRecipe } from "../../src/domains/creator/brush-lab/brush-lab-recipe";
+import type { BrushLabHistory, BrushLabRecipe } from "../../apps/web/src/domains/creator/brush-lab/brush-lab-recipe";
 
 const seeded = (): BrushLabRecipe => {
   const recipe = createBrushLabRecipe("ink-particle", 42);

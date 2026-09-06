@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "formas intelixentes",
+  "studio.quickShape.description.active": "Debuxa de xeito pausado liñas, cadrados, círculos e triángulos. Se o soltas, ordenarase por si só.",
+  "studio.quickShape.description.inactive": "Está ben garabatelo. Se o activas, o teu debuxo da man quedará refinado nunha forma ordenada.",
+  "studio.quickShape.toggleHint": "No momento en que soltas unha forma aproximadamente debuxada cun bolígrafo, colle unha forma exacta. Aínda que fas unha pausa mentres debuxa, aparecerá unha vista previa.",
+  "studio.quickShape.toggleAria.on": "Formas intelixentes activadas",
+  "studio.quickShape.toggleAria.off": "Desactivar as formas intelixentes",
+  "studio.quickShape.matchedSuffix": " Podo sentilo. Confírmase cando solto a man.",
+  "studio.quickShape.emptyStatus": "Debuxa a forma e solta, ou simplemente quédate ao final",
+  "studio.quickShape.openTutorial": "Mira o tutorial de formas intelixentes",
+  "studio.quickShape.notice": "Debuxa formas, liñas, círculos, cadrados, etc. intelixentes e refíreos cando o soltas (pausa para previsualizar)"
+}

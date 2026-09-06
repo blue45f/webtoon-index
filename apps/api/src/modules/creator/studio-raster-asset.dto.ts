@@ -6,7 +6,7 @@ import {
   STUDIO_RASTER_ASSET_MAX_BYTES,
   StudioRasterAssetIdSchema,
   StudioRasterAssetMediaTypeSchema,
-} from "../../../../../lib/studio-raster-asset-contract";
+} from "../../../../web/src/shared/lib/studio-raster-asset-contract";
 
 export const StudioRasterAssetParamsSchema = z
   .object({

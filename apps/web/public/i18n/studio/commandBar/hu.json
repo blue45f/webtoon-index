@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Gyorsparancssáv",
+  "studio.commandBar.settings": "Parancssáv beállításai",
+  "studio.commandBar.settingsDescription": "Módosítsd a menüsor alatti parancssáv helykiosztását és láthatóságát.",
+  "studio.commandBar.settingsTip": "A leggyakrabban használt parancsokat tedd az első helyekre, így érhetők el a leggyorsabban.",
+  "studio.commandBar.settingsClose": "Parancssáv beállításainak bezárása",
+  "studio.commandBar.settingsStorageNote": "A helykiosztás ennek a böngészőnek a munkaterület-beállításaiba mentődik.",
+  "studio.commandBar.showSlots": "Parancshelyek megjelenítése",
+  "studio.commandBar.slot": "{index}. hely",
+  "studio.commandBar.slotAria": "{index}. parancshely",
+  "studio.commandBar.slotEmpty": "Üres hely",
+  "studio.commandBar.resetDefaults": "Visszaállítás az alapértelmezett kiosztásra",
+  "studio.commandBar.command.undo": "Visszavonás",
+  "studio.commandBar.command.redo": "Ismétlés",
+  "studio.commandBar.command.save": "Piszkozat mentése",
+  "studio.commandBar.command.publish": "Közzététel",
+  "studio.commandBar.command.download": "Aktuális oldal letöltése",
+  "studio.commandBar.command.export-open": "Exportálási beállítások",
+  "studio.commandBar.command.zoom-fit": "Igazítás a képernyő szélességéhez",
+  "studio.commandBar.command.assets": "Sablonok és elemek",
+  "studio.commandBar.command.bubbles": "Szövegbuborék",
+  "studio.commandBar.command.project": "Projekteszközök"
+}

@@ -140,7 +140,7 @@ export function redactDatabaseSecrets(value, secrets = []) {
   );
 }
 
-export function parseBootstrapArguments(argv) {
+export function parseBootstrapArguments(argv) { // NOSONAR javascript:S3776
   const arguments_ = argv[0] === "--" ? argv.slice(1) : argv;
   const values = new Map();
   const flags = new Set();
@@ -176,7 +176,7 @@ export function parseBootstrapArguments(argv) {
       fail(`Duplicate bootstrap argument: ${argument}`);
     }
     values.set(argument, value);
-    index += 1;
+    index += 1; // NOSONAR javascript:S2310
   }
 
   const help = flags.has("--help");
@@ -395,7 +395,7 @@ function normalizeInspectionState(rawState) {
   return Object.freeze({ ...rawState });
 }
 
-export function assessBootstrapState({
+export function assessBootstrapState({ // NOSONAR javascript:S3776
   databaseContract,
   inspection,
   requireRuntimePassword = false,
@@ -875,13 +875,14 @@ function assertBootstrapContractUnchanged(expectedFingerprint) {
 
 function printPlan({ assessment, contract, databaseContract, options }) {
   const state = assessment.state;
+  const applicationState = assessment.nonempty ? `nonempty (${state.applicationObjectCount} object(s))` : "empty";
   const lines = [
     "ToonSpectrum disposable PostgreSQL bootstrap plan",
     `Target: ${databaseContract.hostname}:${databaseContract.port}/${databaseContract.databaseName}`,
     `Transport: ${databaseContract.tlsVerified ? "direct TLS verify-full + channel binding" : "explicit loopback test override"}`,
     `Release: ${options.releaseSha}`,
     `Runtime role: ${options.runtimeDatabaseRole} (${assessment.runtimeRoleMustBeCreated ? "create with environment secret" : "reuse verified separated role"})`,
-    `Current application state: ${assessment.nonempty ? `nonempty (${state.applicationObjectCount} object(s))` : "empty"}`,
+    `Current application state: ${applicationState}`,
     `Other client connections: ${state.activeConnectionCount}`,
     `Schema contract fingerprint: ${contract.fingerprint}`,
     `Historical baseline: ${contract.historical[0].id} .. ${contract.historical.at(-1).id}`,

@@ -1,0 +1,17 @@
+{
+  "ageGate.birthDateLabel": "出生日期",
+  "ageGate.birthYearLabel": "出生年份",
+  "ageGate.birthYearPlaceholder": "年",
+  "ageGate.birthMonthLabel": "出生月份",
+  "ageGate.title": "成人內容檢查",
+  "ageGate.yearSuffix": "",
+  "ageGate.monthSuffix": "",
+  "ageGate.daySuffix": "",
+  "ageGate.birthMonthPlaceholder": "月",
+  "ageGate.birthDayLabel": "生日",
+  "ageGate.description": "輸入您的出生日期以驗證您已年滿 19 歲。",
+  "ageGate.confirm": "確認",
+  "ageGate.cancel": "取消",
+  "ageGate.deniedMessage": "您不符合年齡要求。",
+  "ageGate.birthDayPlaceholder": "天"
+}

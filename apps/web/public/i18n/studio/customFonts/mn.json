@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "миний фонт",
+  "studio.customFonts.importButton": "Файлаас импортлох",
+  "studio.customFonts.importing": "Шалгаж байна...",
+  "studio.customFonts.importAria": "Фонтын файл импортлох",
+  "studio.customFonts.storageAria": "Фонтын сангийн хэрэглээ",
+  "studio.customFonts.emptyTitle": "Одоогоор ямар ч фонт ороогүй байна.",
+  "studio.customFonts.unknownFileName": "Файлын нэр байхгүй",
+  "studio.customFonts.apply": "Өргөдөл гаргах",
+  "studio.customFonts.applyToText": "Сонгосон текстэнд энэ фонтыг хэрэглээрэй",
+  "studio.customFonts.selectTextFirst": "Эхлээд текст эсвэл ярианы хөөс сонгоно уу",
+  "studio.customFonts.delete": "фонтыг устгах"
+}

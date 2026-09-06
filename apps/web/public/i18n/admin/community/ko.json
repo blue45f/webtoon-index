@@ -1,0 +1,22 @@
+{
+  "admin.community.approveAsset": "문제 없음",
+  "admin.community.assetReportsDesc": "사용권·권리침해·유해 콘텐츠 신고를 검토하고 공개 상태를 결정합니다.",
+  "admin.community.assetReportsTitle": "공유 에셋 신고 검수",
+  "admin.community.clearAttachments": "첨부 제거",
+  "admin.community.deletePost": "완전 삭제",
+  "admin.community.desc": "신고·권리침해 대응 — 게시글 숨김(가역), 첨부 이미지 제거, 완전 삭제(비가역)를 처리합니다.",
+  "admin.community.eyebrow": "ADMIN · COMMUNITY",
+  "admin.community.hidePost": "숨기기",
+  "admin.community.noAssetReports": "처리할 에셋 신고가 없습니다.",
+  "admin.community.noPosts": "조건에 맞는 게시글이 없어요.",
+  "admin.community.notePlaceholder": "검수 메모(선택)",
+  "admin.community.previewData": "미리보기로 전환",
+  "admin.community.refreshReports": "신고 갱신",
+  "admin.community.rejectAsset": "게시 거절",
+  "admin.community.reviewAsset": "검수 중 숨김",
+  "admin.community.searchPostPlaceholder": "제목·본문·보드·작성자 검색",
+  "admin.community.title": "커뮤니티 글 관리",
+  "admin.community.unhidePost": "노출 복구",
+  "admin.community.verifyOriginal": "검증된 원본 확인",
+  "admin.community.verifying": "원본 검증 중…"
+}

@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Bilah perintah cepat",
+  "studio.commandBar.settings": "Pengaturan bilah perintah",
+  "studio.commandBar.settingsDescription": "Ubah tata letak slot dan tampilan bilah perintah di bawah bilah menu.",
+  "studio.commandBar.settingsTip": "Letakkan perintah yang paling sering dipakai di slot pertama agar paling cepat dijangkau.",
+  "studio.commandBar.settingsClose": "Tutup pengaturan bilah perintah",
+  "studio.commandBar.settingsStorageNote": "Tata letak slot disimpan di pengaturan ruang kerja peramban ini.",
+  "studio.commandBar.showSlots": "Tampilkan slot perintah",
+  "studio.commandBar.slot": "Slot {index}",
+  "studio.commandBar.slotAria": "Slot perintah {index}",
+  "studio.commandBar.slotEmpty": "Slot kosong",
+  "studio.commandBar.resetDefaults": "Kembalikan ke tata letak bawaan",
+  "studio.commandBar.command.undo": "Urungkan",
+  "studio.commandBar.command.redo": "Ulangi",
+  "studio.commandBar.command.save": "Simpan draf",
+  "studio.commandBar.command.publish": "Terbitkan",
+  "studio.commandBar.command.download": "Unduh halaman saat ini",
+  "studio.commandBar.command.export-open": "Opsi ekspor",
+  "studio.commandBar.command.zoom-fit": "Sesuaikan dengan lebar layar",
+  "studio.commandBar.command.assets": "Templat dan aset",
+  "studio.commandBar.command.bubbles": "Balon dialog",
+  "studio.commandBar.command.project": "Alat proyek"
+}

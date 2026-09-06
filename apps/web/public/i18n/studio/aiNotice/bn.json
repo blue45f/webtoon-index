@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "জেনারেটিভ এআই ইমেজ গাইড",
+  "studio.aiNotice.description": "এই ফাংশনটি জেনারেটিভ এআই (ওপেনএআই) ব্যবহার করে ছবি তৈরি করে। AI ব্যাজগুলি তৈরি করা ফলাফলগুলিতে প্রদর্শিত হয়।",
+  "studio.aiNotice.ruleCopyright": "আমরা অন্য লোকের কাজ, চরিত্র বা আসল মানুষের মুখ তৈরি করি না।",
+  "studio.aiNotice.ruleAccuracy": "AI ফলাফল ভুল হতে পারে বা যা উদ্দেশ্য ছিল তার থেকে ভিন্ন।",
+  "studio.aiNotice.ruleResponsibility": "আপনি যে ছবিগুলি তৈরি করেন তা ব্যবহার করার জন্য আপনি দায়ী৷",
+  "studio.aiNotice.cancel": "বাতিল করুন",
+  "studio.aiNotice.confirm": "আমি বুঝি, তৈরি করি"
+}

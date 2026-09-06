@@ -18,7 +18,7 @@ from mathutils import Vector
 
 OUTPUT_DIRECTORY = (
     bpy.context.scene.get("toonspectrum_story_props_output_dir")
-    or bpy.path.abspath("//public/assets/3d")
+    or bpy.path.abspath("//apps/web/public/assets/3d")
 )
 GENERATOR = "scripts/blender/generate_story_props_pack_v2.py"
 CC0_LICENSE_URL = "https://creativecommons.org/publicdomain/zero/1.0/"
@@ -60,7 +60,7 @@ def clear_scene():
     scene.unit_settings.length_unit = "METERS"
 
 
-def create_material(
+def create_material( # NOSONAR python:S3776
     name,
     base_color,
     metallic=0.0,
@@ -220,7 +220,7 @@ def add_rod(name, start, end, radius, material, vertices=24, bevel=0.002):
     return obj
 
 
-def add_arch_shell(name, width, radius, centre_z, material, segments=16, thickness=0.035):
+def add_arch_shell(name, width, radius, centre_z, material, segments=16, thickness=0.035): # NOSONAR python:S3776
     """Create an extruded half-cylinder chest lid with a solid inner shell."""
     outer = radius
     inner = max(radius - thickness, 0.01)

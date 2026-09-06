@@ -1,0 +1,9 @@
+{
+  "avatar.select": "イメージを変更する",
+  "avatar.processing": "処理…",
+  "avatar.remove": "画像を削除",
+  "avatar.error.invalidType": "サポートされていない画像タイプです。",
+  "avatar.uploadHint": "JPG、PNG、WEBP 画像のみがサポートされており、プレビュー用にトリミングされます。",
+  "avatar.error.processFailed": "画像の処理に失敗しました。",
+  "avatar.changeAria": "プロフィール画像を変更する"
+}

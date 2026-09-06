@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "Intelligente Formen",
+  "studio.quickShape.description.active": "Zeichnen Sie in aller Ruhe Linien, Quadrate, Kreise und Dreiecke. Wenn Sie loslassen, räumt es von selbst auf.",
+  "studio.quickShape.description.inactive": "Es ist in Ordnung, es aufzuschreiben. Wenn Sie es einschalten, wird Ihre Handzeichnung in eine saubere Form gebracht.",
+  "studio.quickShape.toggleHint": "Sobald Sie eine grob gezeichnete Form mit einem Stift loslassen, rastet sie in eine exakte Form ein. Auch wenn Sie während des Zeichnens eine Pause einlegen, wird eine Vorschau angezeigt.",
+  "studio.quickShape.toggleAria.on": "Intelligente Formen an",
+  "studio.quickShape.toggleAria.off": "Smarte Formen aus",
+  "studio.quickShape.matchedSuffix": " Ich kann es fühlen. Es wird bestätigt, wenn ich meine Hand loslasse.",
+  "studio.quickShape.emptyStatus": "Zeichnen Sie die Form und lassen Sie sie los, oder bleiben Sie einfach am Ende",
+  "studio.quickShape.openTutorial": "Sehen Sie sich das Tutorial zu intelligenten Formen an",
+  "studio.quickShape.notice": "Zeichnen Sie intelligente Formen, Linien, Kreise, Quadrate usw. und verfeinern Sie sie, wenn Sie loslassen (Pause zur Vorschau)."
+}

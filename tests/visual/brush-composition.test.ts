@@ -227,7 +227,7 @@ describe("V12 §12.2 composition brush programs (real engine chain)", () => {
     // not a vague "not implemented" — zero silent loss applies to the record.
     expect(UNAVAILABLE_COMPOSITION_ROWS[0]?.name).toBe("3D 표면 브러시");
     expect(UNAVAILABLE_COMPOSITION_ROWS[0]?.missing).toContain(
-      "src/domains/creator/studio-vrm-texture-uv.ts",
+      "apps/web/src/domains/creator/studio-vrm-texture-uv.ts",
     );
   });
 

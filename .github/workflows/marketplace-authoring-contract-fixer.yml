@@ -43,12 +43,12 @@ jobs:
       - name: Verify authoring contracts
         run: |
           pnpm exec vitest run \
-            lib/creator-marketplace-authoring-workshop.test.ts \
-            lib/creator-marketplace-package-builder.test.ts \
-            lib/creator-marketplace-quality-validation.test.ts \
-            src/domains/market/components/MarketplaceAuthoringWorkshop.test.tsx \
-            src/domains/market/components/MarketplaceBrushRecipeAccelerator.test.tsx \
-            src/domains/market/components/MarketplaceAssetQualityMatrix.test.tsx
+            apps/web/src/shared/lib/creator-marketplace-authoring-workshop.test.ts \
+            apps/web/src/shared/lib/creator-marketplace-package-builder.test.ts \
+            apps/web/src/shared/lib/creator-marketplace-quality-validation.test.ts \
+            apps/web/src/domains/market/components/MarketplaceAuthoringWorkshop.test.tsx \
+            apps/web/src/domains/market/components/MarketplaceBrushRecipeAccelerator.test.tsx \
+            apps/web/src/domains/market/components/MarketplaceAssetQualityMatrix.test.tsx
           pnpm exec tsc -p tsconfig.json --noEmit
 
       - name: Commit verified repairs
@@ -56,9 +56,9 @@ jobs:
         run: |
           set -euo pipefail
           git add \
-            lib/creator-marketplace-authoring-workshop.ts \
-            lib/creator-marketplace-package-builder.ts \
-            lib/creator-marketplace-quality-validation.test.ts
+            apps/web/src/shared/lib/creator-marketplace-authoring-workshop.ts \
+            apps/web/src/shared/lib/creator-marketplace-package-builder.ts \
+            apps/web/src/shared/lib/creator-marketplace-quality-validation.test.ts
           if git diff --cached --quiet; then
             echo "No contract repair was required."
             exit 0

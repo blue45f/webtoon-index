@@ -4,7 +4,7 @@
  * Shared durable-autosave access for the `scripts/verify-studio-*` browser verifiers.
  *
  * Studio's autosave authority is the browser-owned OPFS recovery journal
- * (`src/domains/creator/studio-autosave-opfs-session.ts`). The legacy
+ * (`apps/web/src/domains/creator/studio-autosave-opfs-session.ts`). The legacy
  * `toonspectrum-studio-autosave*` localStorage JSON slot is no longer written and is
  * tombstoned on every durable save — `verify:studio-lifecycle` asserts that zero browser
  * compatibility records survive a save — so a verifier that enumerates localStorage reads

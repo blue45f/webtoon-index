@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Vinnige opdragbalk",
+  "studio.commandBar.settings": "Opdragbalkinstellings",
+  "studio.commandBar.settingsDescription": "Verander die gleufuitleg en sigbaarheid van die opdragbalk onder die kieslysbalk.",
+  "studio.commandBar.settingsTip": "Sit die opdragte wat jy die meeste gebruik in die eerste gleuwe, dan is hulle die vinnigste bereikbaar.",
+  "studio.commandBar.settingsClose": "Sluit opdragbalkinstellings",
+  "studio.commandBar.settingsStorageNote": "Die gleufuitleg word in hierdie blaaier se werkruimte-instellings gestoor.",
+  "studio.commandBar.showSlots": "Wys opdraggleuwe",
+  "studio.commandBar.slot": "Gleuf {index}",
+  "studio.commandBar.slotAria": "Opdraggleuf {index}",
+  "studio.commandBar.slotEmpty": "Leë gleuf",
+  "studio.commandBar.resetDefaults": "Stel terug na verstekuitleg",
+  "studio.commandBar.command.undo": "Ontdoen",
+  "studio.commandBar.command.redo": "Herdoen",
+  "studio.commandBar.command.save": "Stoor konsep",
+  "studio.commandBar.command.publish": "Publiseer",
+  "studio.commandBar.command.download": "Laai huidige bladsy af",
+  "studio.commandBar.command.export-open": "Uitvoeropsies",
+  "studio.commandBar.command.zoom-fit": "Pas by skermwydte",
+  "studio.commandBar.command.assets": "Sjablone en bates",
+  "studio.commandBar.command.bubbles": "Spraakborrel",
+  "studio.commandBar.command.project": "Projekgereedskap"
+}

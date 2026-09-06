@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "ağıllı formalar",
+  "studio.quickShape.description.active": "Yavaş-yavaş xətlər, kvadratlar, dairələr və üçbucaqlar çəkin. Buraxsanız, öz-özünə səliqəyə salacaq.",
+  "studio.quickShape.description.inactive": "Onu cızmaq yaxşıdır. Onu yandırsanız, əl rəsminiz səliqəli bir forma çevriləcək.",
+  "studio.quickShape.toggleHint": "Qələmlə təqribən çəkilmiş formanı buraxdığınız anda o, dəqiq bir formaya girir. Rəsm edərkən fasilə etsəniz belə, önizləmə görünəcək.",
+  "studio.quickShape.toggleAria.on": "Ağıllı formalar aktivdir",
+  "studio.quickShape.toggleAria.off": "Ağıllı formalar söndürülür",
+  "studio.quickShape.matchedSuffix": " Mən bunu hiss edirəm. Əlimi buraxanda bu təsdiqlənir.",
+  "studio.quickShape.emptyStatus": "Formanı çəkin və buraxın və ya sadəcə sonunda qalın",
+  "studio.quickShape.openTutorial": "Ağıllı formalar təlimatına baxın",
+  "studio.quickShape.notice": "Ağıllı formalar, xətlər, dairələr, kvadratlar və s. çəkin və buraxdığınız zaman onları dəqiqləşdirin (öncədən baxmaq üçün fasilə verin)"
+}

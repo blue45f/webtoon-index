@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "স্মাৰ্ট আকৃতি",
+  "studio.quickShape.description.active": "আৰামত ৰেখা, বৰ্গ, বৃত্ত আৰু ত্ৰিভুজ আঁকক। এৰি দিলে নিজাববীয়াকৈ পৰিপাটি হৈ যাব।",
+  "studio.quickShape.description.inactive": "লিখি থোৱাটো ঠিকেই আছে৷ যদি আপুনি ইয়াক অন কৰে তেন্তে আপোনাৰ হাতৰ অংকনটো পৰিপাটি আকৃতিলৈ পৰিশোধন কৰা হ’ব।",
+  "studio.quickShape.toggleHint": "কলমেৰে মোটামুটিভাৱে অংকন কৰা আকৃতি এটা এৰি দিয়াৰ মুহূৰ্তত ই এটা সঠিক আকৃতিত ছিটিকি পৰে। যদিও আপুনি অংকন কৰাৰ সময়ত থমকি ৰয়, এটা পূৰ্বদৰ্শন ওলাব।",
+  "studio.quickShape.toggleAria.on": "স্মাৰ্ট আকৃতি অন",
+  "studio.quickShape.toggleAria.off": "স্মাৰ্ট শ্বেপছ অফ",
+  "studio.quickShape.matchedSuffix": " অনুভৱ কৰিব পাৰিছো। হাতখন এৰি দিলেই নিশ্চিত হয়।",
+  "studio.quickShape.emptyStatus": "আকৃতিটো আঁকক আৰু এৰি দিয়ক, বা মাত্ৰ শেষত থাকক",
+  "studio.quickShape.openTutorial": "স্মাৰ্ট শ্বেপছ টিউটোৰিয়েল চাওক",
+  "studio.quickShape.notice": "স্মাৰ্ট আকৃতি, ৰেখা, বৃত্ত, বৰ্গ আদি আঁকক আৰু আপুনি এৰি দিলে সিহতক পৰিশোধন কৰক (পূৰ্বদৰ্শন কৰিবলৈ থমকি ৰওক)"
+}

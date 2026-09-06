@@ -11,7 +11,7 @@ origin in X/Y and rests on the floor plane at Z=0 before Blender's glTF Y-up exp
 import bpy
 
 
-OUTPUT_DIRECTORY = bpy.path.abspath("//public/assets/3d")
+OUTPUT_DIRECTORY = bpy.path.abspath("//apps/web/public/assets/3d")
 ASSET_BUILDERS = (
     ("blackboard", "blackboard.glb"),
     ("desk", "desk.glb"),

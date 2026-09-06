@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "gudras formas",
+  "studio.quickShape.description.active": "Nesteidzīgi zīmējiet līnijas, kvadrātus, apļus un trīsstūrus. Ja atlaidīsi, tas sakārtosies pats no sevis.",
+  "studio.quickShape.description.inactive": "Ir pareizi to uzrakstīt. Ja to ieslēdzat, jūsu roku zīmējums tiks pilnveidots glītā formā.",
+  "studio.quickShape.toggleHint": "Brīdī, kad ar pildspalvu atlaižat aptuveni novilktu formu, tā iegūst precīzu formu. Pat ja zīmēšanas laikā pauzēsit, tiks parādīts priekšskatījums.",
+  "studio.quickShape.toggleAria.on": "Viedās formas ieslēgtas",
+  "studio.quickShape.toggleAria.off": "Viedās formas izslēgtas",
+  "studio.quickShape.matchedSuffix": " Es to jūtu. Tas apstiprinās, kad atlaižu roku.",
+  "studio.quickShape.emptyStatus": "Uzzīmējiet formu un atlaidiet to vai vienkārši palieciet beigās",
+  "studio.quickShape.openTutorial": "Skatieties viedo formu pamācību",
+  "studio.quickShape.notice": "Zīmējiet gudras formas, līnijas, apļus, kvadrātus u.c. un uzlabojiet tos, kad to atlaidat (apturiet priekšskatīšanai)"
+}

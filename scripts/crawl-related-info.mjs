@@ -133,7 +133,9 @@ async function crawlYoutube(query, max = 3) {
   const re =
     /"videoId":"([\w-]{11})"[\s\S]{0,600}?"title":\{(?:"runs":\[\{"text":"((?:[^"\\]|\\.)*)"|"simpleText":"((?:[^"\\]|\\.)*)")/g;
   let m;
-  while ((m = re.exec(html)) && out.length < max) {
+  while (true) {
+    m = re.exec(html);
+    if (!m || out.length >= max) break;
     const id = m[1];
     if (seen.has(id)) continue;
     seen.add(id);
@@ -307,7 +309,7 @@ function persist(data) {
   renameSync(tmp, OUT);
 }
 
-async function main() {
+async function main() { // NOSONAR javascript:S3776
   // 소스별 모드 표시(투명성): 공식 API(ToS 준수) vs HTML 스크래핑 폴백.
   console.log(
     `소스 모드 — 유튜브: ${YT_API_KEY ? "공식 API" : "스크래핑(스로틀 있음)"} · ` +

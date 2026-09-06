@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "ငါ့ဖောင့်",
+  "studio.customFonts.importButton": "ဖိုင်မှတင်သွင်းပါ။",
+  "studio.customFonts.importing": "စစ်ဆေးနေသည်...",
+  "studio.customFonts.importAria": "ဖောင့်ဖိုင်ကို ထည့်သွင်းပါ။",
+  "studio.customFonts.storageAria": "ဖောင့်ဒစ်ဂျစ်တိုက်အသုံးပြုမှု",
+  "studio.customFonts.emptyTitle": "ဖောင့်များ မပါဝင်သေးပါ။",
+  "studio.customFonts.unknownFileName": "ဖိုင်အမည်မရှိပါ။",
+  "studio.customFonts.apply": "လျှောက်ထားပါ။",
+  "studio.customFonts.applyToText": "ရွေးချယ်ထားသော စာသားတွင် ဤဖောင့်ကို အသုံးပြုပါ။",
+  "studio.customFonts.selectTextFirst": "ပထမဦးစွာ စာသား သို့မဟုတ် စကားပြောပူဖောင်းကို ရွေးချယ်ပါ။",
+  "studio.customFonts.delete": "ဖောင့်ကိုဖျက်ပါ။"
+}

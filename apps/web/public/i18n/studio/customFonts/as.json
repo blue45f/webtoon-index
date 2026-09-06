@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "মোৰ ফন্ট",
+  "studio.customFonts.importButton": "ফাইলৰ পৰা আমদানি কৰক",
+  "studio.customFonts.importing": "চেক কৰি আছে...",
+  "studio.customFonts.importAria": "ফন্ট ফাইল আমদানি কৰক",
+  "studio.customFonts.storageAria": "ফন্ট লাইব্ৰেৰী ব্যৱহাৰ",
+  "studio.customFonts.emptyTitle": "এতিয়াও কোনো ফন্ট অন্তৰ্ভুক্ত কৰা হোৱা নাই।",
+  "studio.customFonts.unknownFileName": "কোনো ফাইলৰ নাম নাই",
+  "studio.customFonts.apply": "আবেদন কৰক",
+  "studio.customFonts.applyToText": "এই ফন্ট নিৰ্বাচিত লিখনিত প্ৰয়োগ কৰক",
+  "studio.customFonts.selectTextFirst": "প্ৰথমে লিখনী বা বাক্যৰ বুদবুদ নিৰ্বাচন কৰক",
+  "studio.customFonts.delete": "ফন্ট মচি পেলাওক"
+}

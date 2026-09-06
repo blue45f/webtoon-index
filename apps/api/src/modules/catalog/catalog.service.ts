@@ -9,10 +9,10 @@ import {
 } from "@nestjs/common";
 import { desc, eq, inArray, sql } from "drizzle-orm";
 
-import { fromDb } from "../../../../../lib/api-helpers";
-import { rateLimit } from "../../../../../lib/rate-limit";
-import { buildTasteProfile, recommendForTaste, similarTitles } from "../../../../../lib/recommend";
-import { searchTitles, sortTitles, suggest, type SearchFilters, type SortKey } from "../../../../../lib/search";
+import { fromDb } from "../../../../web/src/shared/lib/api-helpers";
+import { rateLimit } from "../../../../web/src/shared/lib/rate-limit";
+import { buildTasteProfile, recommendForTaste, similarTitles } from "../../../../web/src/shared/lib/recommend";
+import { searchTitles, sortTitles, suggest, type SearchFilters, type SortKey } from "../../../../web/src/shared/lib/search";
 import {
   activeTags,
   getAuthorData,
@@ -45,7 +45,7 @@ import { getTitleDetail as getTitleDetailFromLib } from "../../server/title";
 // (웹 앱·API가 공유). API 는 lib/* 와 동일한 deep-climb(rootDir=레포루트) 로 참조한다 — tsc 가 dist 로 함께
 // 컴파일해 상대 require 로 런타임 해석되도록(bare 패키지 지정자는 plain-node 가 .ts exports 를 못 풀어 부적합).
 
-import type { AgeRating, PlatformId, ReadState, SerialStatus, Title, WorkType } from "../../../../../lib/types";
+import type { AgeRating, PlatformId, ReadState, SerialStatus, Title, WorkType } from "../../../../web/src/shared/lib/types";
 import type { OnModuleInit } from "@nestjs/common";
 
 type QueryRecord = Record<string, string>;

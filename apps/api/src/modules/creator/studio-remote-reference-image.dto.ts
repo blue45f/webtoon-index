@@ -3,7 +3,7 @@ import { createZodDto } from "nestjs-zod";
 import {
   StudioRemoteReferenceImageRequestSchema,
   StudioRemoteReferenceImageResponseSchema,
-} from "../../../../../lib/studio-remote-reference-image-contract";
+} from "../../../../web/src/shared/lib/studio-remote-reference-image-contract";
 
 export class StudioRemoteReferenceImageRequestDto extends createZodDto(
   StudioRemoteReferenceImageRequestSchema

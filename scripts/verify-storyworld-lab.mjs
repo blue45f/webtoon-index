@@ -11,7 +11,7 @@ import { fileURLToPath } from "node:url";
 const require = createRequire(import.meta.url);
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, "..");
-const sourceDir = join(root, "src/domains/creator/storyworld");
+const sourceDir = join(root, "apps/web/src/domains/creator/storyworld");
 const outDir = mkdtempSync(join(tmpdir(), "toonspectrum-storyworld-"));
 let checks = 0;
 

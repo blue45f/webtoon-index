@@ -1,0 +1,7 @@
+{
+  "error.reloading": "최신 버전으로 새로고침하는 중이에요…",
+  "error.chunkRetryFailed": "새로고침을 한 번 시도했지만 문제가 이어지고 있어요. 네트워크 연결을 확인한 뒤 다시 시도해 주세요.",
+  "error.reloadButton": "새로고침",
+  "error.goHome": "홈으로",
+  "error.retryDesc": "다시 시도하거나 홈으로 이동해 주세요."
+}

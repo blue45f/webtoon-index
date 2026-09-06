@@ -33,7 +33,7 @@ describe("Studio p5.brush permanent real-runtime gate", () => {
     );
     expect(browser).toContain('type: "module"');
     expect(worker).toContain(
-      'from "../src/domains/creator/brush/studio-p5-brush-standalone-runtime-adapter"',
+      'from "../apps/web/src/domains/creator/brush/studio-p5-brush-standalone-runtime-adapter"',
     );
     expect(worker).toContain(
       "createStudioP5BrushStandaloneAdapterLoader()",

@@ -1,0 +1,16 @@
+{
+  "common.open": "打开",
+  "common.backToTop": "返回顶部",
+  "common.search": "搜索",
+  "common.backToHome": "返回首页",
+  "common.close": "关闭",
+  "common.retry": "重试",
+  "common.loading": "加载中…",
+  "common.retry.short": "重试",
+  "common.loading.search": "搜索中…",
+  "common.loading.short": "加载",
+  "common.loading.empty": "暂无数据。",
+  "common.retry.all": "请重试或返回首页。",
+  "common.notFoundWithQuery": "未找到 “{query}” 的相关结果。",
+  "common.openSearch": "在全局搜索中查找 →"
+}

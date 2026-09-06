@@ -27,10 +27,10 @@ jobs:
           import fs from 'node:fs';
           import {createHash} from 'node:crypto';
           import validator from 'gltf-validator';
-          const assets=JSON.parse(fs.readFileSync('public/assets/3d/wearable-v5-manifest.json','utf8')).assets;
+          const assets=JSON.parse(fs.readFileSync('apps/web/public/assets/3d/wearable-v5-manifest.json','utf8')).assets;
           const reports=[];
           for(const asset of assets){
-            const bytes=fs.readFileSync('public/assets/3d/'+asset.file);
+            const bytes=fs.readFileSync('apps/web/public/assets/3d/'+asset.file);
             if(createHash('sha256').update(bytes).digest('hex')!==asset.sha256)throw new Error('Committed asset hash mismatch: '+asset.id);
             const result=await validator.validateBytes(new Uint8Array(bytes),{uri:asset.file,maxIssues:30});
             reports.push({id:asset.id,issues:result.issues,info:result.info});
@@ -39,7 +39,7 @@ jobs:
           fs.writeFileSync('.artifacts/wearable-glb-validation.json',JSON.stringify(reports,null,2));
           if(reports.some(report=>report.issues.numErrors))throw new Error('GLB validation errors');
           EOF
-          pnpm exec vitest run src/domains/creator/vrm/studio-vrm-wearable-v5.test.ts src/domains/creator/vrm/studio-vrm-props.test.ts src/domains/creator/studio-everyday-props-pack-v4.test.ts
+          pnpm exec vitest run apps/web/src/domains/creator/vrm/studio-vrm-wearable-v5.test.ts apps/web/src/domains/creator/vrm/studio-vrm-props.test.ts apps/web/src/domains/creator/studio-everyday-props-pack-v4.test.ts
       - name: Inspect standalone and worn production renderers
         run: pnpm exec tsx scripts/verify-studio-wearable-v5.mts
       - uses: actions/upload-artifact@v4

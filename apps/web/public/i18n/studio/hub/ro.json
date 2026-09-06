@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Tutorial de caracteristici",
+  "studio.hub.subtitle": "O funcție pe rând, fără nicio povară. M-am uitat la {done}/{total}.",
+  "studio.hub.progressAriaLabel": "Progresul tutorialului",
+  "studio.hub.listAriaLabel": "Lista de caracteristici",
+  "studio.hub.checked": "arunca o privire",
+  "studio.hub.prev": "Anterior",
+  "studio.hub.next": "în continuare",
+  "studio.hub.markComplete": "marcați ca fiind complet",
+  "studio.hub.completed": "Terminat",
+  "studio.hub.tryLabelDefault": "Urmăriți",
+  "studio.hub.stepAriaPrefix": "pas"
+}

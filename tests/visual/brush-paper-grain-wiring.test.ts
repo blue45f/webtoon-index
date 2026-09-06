@@ -4,7 +4,7 @@ import {
   DEFAULT_STUDIO_PAPER_SURFACE,
   acquireStudioPaperGranulationTile,
   clearStudioPaperGranulationTileCache,
-} from "../../src/domains/creator/brush/studio-paper-granulation-runtime";
+} from "../../apps/web/src/domains/creator/brush/studio-paper-granulation-runtime";
 import {
   PAPER_LAB_BRUSHES,
   loadCanvasKit,

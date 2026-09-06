@@ -131,7 +131,7 @@ def _scene_bounds(objects: Sequence[bpy.types.Object]) -> tuple[Vector, Vector]:
     return minimum, maximum
 
 
-def infer_head_frame(
+def infer_head_frame( # NOSONAR python:S3776
     armature: bpy.types.Object | None,
     mesh_objects: Sequence[bpy.types.Object],
 ) -> HeadFrame:
@@ -357,7 +357,7 @@ def _guide(
     ]
 
 
-def _style_guides(
+def _style_guides( # NOSONAR python:S3776
     frame: HeadFrame, options: HairOptions, *, lod: int
 ) -> list[tuple[list[Vector], float, float, float]]:
     spec = HAIR_STYLE_PRESETS[options.style]
@@ -365,9 +365,21 @@ def _style_guides(
     side_length = float(spec["sideLength"]) * options.length
     symmetry_break = float(spec["symmetryBreak"])
     density = max(0.5, options.clump_density)
-    guide_count = max(3, round((7 if lod == 0 else 5 if lod == 1 else 3) * density))
+    if lod == 0:
+        guide_base = 7
+    elif lod == 1:
+        guide_base = 5
+    else:
+        guide_base = 3
+    guide_count = max(3, round(guide_base * density))
     guides: list[tuple[list[Vector], float, float, float]] = []
-    root_width = frame.radius_x * (0.24 if lod == 0 else 0.29 if lod == 1 else 0.36)
+    if lod == 0:
+        root_width_factor = 0.24
+    elif lod == 1:
+        root_width_factor = 0.29
+    else:
+        root_width_factor = 0.36
+    root_width = frame.radius_x * root_width_factor
     root_depth = frame.radius_z * 0.18
 
     # Back curtain / layered silhouette.
@@ -529,7 +541,12 @@ def build_authored_hair(
     lod_count = 3 if options.generate_lods else 1
     for lod in range(lod_count):
         accumulator = MeshAccumulator()
-        detail = (32, 18, 16) if lod == 0 else (22, 12, 11) if lod == 1 else (14, 8, 7)
+        if lod == 0:
+            detail = (32, 18, 16)
+        elif lod == 1:
+            detail = (22, 12, 11)
+        else:
+            detail = (14, 8, 7)
         spec = HAIR_STYLE_PRESETS[options.style]
         add_scalp_shell(
             accumulator,

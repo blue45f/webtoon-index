@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Kenmerkhandleiding",
+  "studio.hub.subtitle": "Een funksie op 'n slag sonder enige las. Ek het na {done}/{total} gekyk.",
+  "studio.hub.progressAriaLabel": "Tutoriaal vordering",
+  "studio.hub.listAriaLabel": "Kenmerklys",
+  "studio.hub.checked": "gaan kyk",
+  "studio.hub.prev": "Vorige",
+  "studio.hub.next": "volgende",
+  "studio.hub.markComplete": "merk as voltooi",
+  "studio.hub.completed": "Voltooi",
+  "studio.hub.tryLabelDefault": "Volg saam",
+  "studio.hub.stepAriaPrefix": "stap"
+}

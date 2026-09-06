@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Generative Image Guide AI",
+  "studio.aiNotice.description": "Αυτή η λειτουργία δημιουργεί εικόνες χρησιμοποιώντας γενετικό AI (OpenAI). Τα σήματα AI εμφανίζονται στα αποτελέσματα που δημιουργούνται.",
+  "studio.aiNotice.ruleCopyright": "Δεν δημιουργούμε έργα άλλων ανθρώπων, χαρακτήρες ή πρόσωπα πραγματικών ανθρώπων.",
+  "studio.aiNotice.ruleAccuracy": "Τα αποτελέσματα της τεχνητής νοημοσύνης μπορεί να είναι ανακριβή ή διαφορετικά από αυτά που είχαν προβλεφθεί.",
+  "studio.aiNotice.ruleResponsibility": "Είστε υπεύθυνοι για τη χρήση των εικόνων που δημιουργείτε.",
+  "studio.aiNotice.cancel": "Ακύρωση",
+  "studio.aiNotice.confirm": "Καταλαβαίνω, δημιουργώ"
+}

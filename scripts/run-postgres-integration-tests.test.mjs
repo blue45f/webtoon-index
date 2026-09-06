@@ -246,7 +246,7 @@ describe("PostgreSQL integration test runner", () => {
       "scripts/bootstrap-runtime-login-gate.integration.test.mjs",
     );
     expect(POSTGRES_INTEGRATION_SUITES).toContain(
-      "lib/__tests__/oauth-runtime.integration.test.ts",
+      "apps/web/src/shared/lib/__tests__/oauth-runtime.integration.test.ts",
     );
     expect(
       POSTGRES_INTEGRATION_SUITES.every((suite) =>

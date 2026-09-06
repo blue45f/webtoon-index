@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Γραμμή γρήγορων εντολών",
+  "studio.commandBar.settings": "Ρυθμίσεις γραμμής εντολών",
+  "studio.commandBar.settingsDescription": "Αλλάξτε τη διάταξη των θέσεων και την ορατότητα της γραμμής εντολών κάτω από τη γραμμή μενού.",
+  "studio.commandBar.settingsTip": "Βάλτε τις εντολές που χρησιμοποιείτε πιο συχνά στις πρώτες θέσεις για να τις φτάνετε γρηγορότερα.",
+  "studio.commandBar.settingsClose": "Κλείσιμο ρυθμίσεων γραμμής εντολών",
+  "studio.commandBar.settingsStorageNote": "Η διάταξη των θέσεων αποθηκεύεται στις ρυθμίσεις χώρου εργασίας αυτού του προγράμματος περιήγησης.",
+  "studio.commandBar.showSlots": "Εμφάνιση θέσεων εντολών",
+  "studio.commandBar.slot": "Θέση {index}",
+  "studio.commandBar.slotAria": "Θέση εντολής {index}",
+  "studio.commandBar.slotEmpty": "Κενή θέση",
+  "studio.commandBar.resetDefaults": "Επαναφορά προεπιλεγμένης διάταξης",
+  "studio.commandBar.command.undo": "Αναίρεση",
+  "studio.commandBar.command.redo": "Επανάληψη",
+  "studio.commandBar.command.save": "Αποθήκευση προχείρου",
+  "studio.commandBar.command.publish": "Δημοσίευση",
+  "studio.commandBar.command.download": "Λήψη τρέχουσας σελίδας",
+  "studio.commandBar.command.export-open": "Επιλογές εξαγωγής",
+  "studio.commandBar.command.zoom-fit": "Προσαρμογή στο πλάτος οθόνης",
+  "studio.commandBar.command.assets": "Πρότυπα και στοιχεία",
+  "studio.commandBar.command.bubbles": "Συννεφάκι διαλόγου",
+  "studio.commandBar.command.project": "Εργαλεία έργου"
+}

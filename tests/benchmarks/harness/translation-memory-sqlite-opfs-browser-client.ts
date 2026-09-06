@@ -10,7 +10,7 @@ import {
   type StudioSqliteApiHandle,
   type StudioSqliteDatabaseHandle,
   type StudioSqlitePoolUtilHandle,
-} from "../../../src/domains/creator/studio-local-database";
+} from "../../../apps/web/src/domains/creator/studio-local-database";
 import {
   createStudioTranslationMemoryEntry,
   exportStudioTranslationMemory,
@@ -18,12 +18,12 @@ import {
   STUDIO_TRANSLATION_MEMORY_STORAGE_KEY,
   upsertStudioTranslationMemoryEntry,
   type StudioTranslationMemoryEntry,
-} from "../../../src/domains/creator/studio-translation-memory";
+} from "../../../apps/web/src/domains/creator/studio-translation-memory";
 import {
   createStudioTranslationMemorySqlitePersistence,
   STUDIO_TRANSLATION_MEMORY_SQLITE_KEY,
   STUDIO_TRANSLATION_MEMORY_SQLITE_NAMESPACE,
-} from "../../../src/domains/creator/studio-translation-memory-sqlite-persistence";
+} from "../../../apps/web/src/domains/creator/studio-translation-memory-sqlite-persistence";
 
 const REPORT_SCHEMA_VERSION = 1;
 const ENTRY_COUNT = 512;

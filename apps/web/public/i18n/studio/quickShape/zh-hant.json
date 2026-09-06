@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "智慧形狀",
+  "studio.quickShape.description.active": "悠閒地畫直線、正方形、圓形和三角形。如果你放手，它會自己收拾好。",
+  "studio.quickShape.description.inactive": "寫下來就可以了。如果你打開它，你的手繪圖將會被細化為整齊的形狀。",
+  "studio.quickShape.toggleHint": "當你放開用筆畫出的粗略形狀時，它就會變成精確的形狀。即使您在繪圖時暫停，也會出現預覽。",
+  "studio.quickShape.toggleAria.on": "智慧形狀開啟",
+  "studio.quickShape.toggleAria.off": "智慧形狀關閉",
+  "studio.quickShape.matchedSuffix": " 我能感覺到。當我鬆開手時就確認了。",
+  "studio.quickShape.emptyStatus": "畫出形狀然後放手，或只是停留在最後",
+  "studio.quickShape.openTutorial": "觀看智能形狀教程",
+  "studio.quickShape.notice": "繪製智慧形狀、線條、圓形、正方形等，並在鬆開時進行細化（暫停預覽）"
+}

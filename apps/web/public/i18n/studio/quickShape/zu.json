@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "amajamo ahlakaniphile",
+  "studio.quickShape.description.active": "Dweba imigqa, izikwele, imibuthano kanye nonxantathu ngokukhululekile. Uma uyidedela, izozilungisela yona yodwa.",
+  "studio.quickShape.description.inactive": "Kulungile ukuyibhala phansi. Uma uyivula, umdwebo wakho wesandla uzocwengwa ube yisimo esicocekile.",
+  "studio.quickShape.toggleHint": "Umzuzwana nje udedela umumo ocishe udwebe ngepeni, uhlohla ube yisimo esiqondile. Ngisho noma ume kancane ngenkathi udweba, ukubuka kuqala kuzovela.",
+  "studio.quickShape.toggleAria.on": "Umumo ohlakaniphile uvuliwe",
+  "studio.quickShape.toggleAria.off": "Umumo ohlakaniphile uvaliwe",
+  "studio.quickShape.matchedSuffix": " Ngiyakuzwa. Kuyaqinisekiswa uma ngikhulula isandla sami.",
+  "studio.quickShape.emptyStatus": "Dweba umumo bese uyeke, noma vele uhlale ekugcineni",
+  "studio.quickShape.openTutorial": "Buka okokufundisa komumo ohlakaniphile",
+  "studio.quickShape.notice": "Dweba izimo ezihlakaniphile, imigqa, imibuthano, izikwele, njll. futhi uzicwenge lapho uzidedela (yima kancane ukuze uhlole kuqala)"
+}

@@ -1,0 +1,12 @@
+{
+  "control.language.label": "语言",
+  "control.theme.dark": "切换到灯光模式",
+  "control.theme.light": "切换到深色模式",
+  "control.settings.open": "打开设置",
+  "control.settings.close": "关闭设置",
+  "control.cluster.open": "打开设置",
+  "control.cluster.settings": "声音、主题、语言控制",
+  "control.cluster.tooltip": "声音、主题和语言设置",
+  "control.sound.enable": "启用音效",
+  "control.sound.disable": "禁用音效"
+}

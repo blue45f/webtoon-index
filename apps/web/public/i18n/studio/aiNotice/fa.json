@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "راهنمای تصویر هوش مصنوعی مولد",
+  "studio.aiNotice.description": "این تابع تصاویر را با استفاده از هوش مصنوعی (OpenAI) تولید می کند. نشان های هوش مصنوعی روی نتایج ایجاد شده نمایش داده می شوند.",
+  "studio.aiNotice.ruleCopyright": "ما آثار دیگران، شخصیت ها یا چهره افراد واقعی را خلق نمی کنیم.",
+  "studio.aiNotice.ruleAccuracy": "نتایج هوش مصنوعی ممکن است نادرست یا متفاوت از آنچه در نظر گرفته شده است باشد.",
+  "studio.aiNotice.ruleResponsibility": "شما مسئول استفاده از تصاویری هستید که ایجاد می کنید.",
+  "studio.aiNotice.cancel": "لغو کنید",
+  "studio.aiNotice.confirm": "می فهمم، ایجاد کن"
+}

@@ -8,7 +8,7 @@ import {
   STUDIO_WORK_ASSET_MAX_ASSETS_PER_WORK,
   STUDIO_WORK_ASSET_MAX_TOMBSTONES_PER_WORK,
   STUDIO_WORK_ASSET_MAX_TOTAL_BYTES_PER_WORK,
-} from "../../../../../lib/studio-work-asset-contract";
+} from "../../../../web/src/shared/lib/studio-work-asset-contract";
 import {
   creatorAssetStorageObjects,
   creatorWorkAssetStorageReferences,

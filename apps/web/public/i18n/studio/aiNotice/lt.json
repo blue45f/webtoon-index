@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Generatyvus AI vaizdo vadovas",
+  "studio.aiNotice.description": "Ši funkcija sukuria vaizdus naudojant generatyvųjį AI (OpenAI). AI ženkleliai rodomi ant sukurtų rezultatų.",
+  "studio.aiNotice.ruleCopyright": "Mes nekuriame kitų darbų, personažų ar tikrų žmonių veidų.",
+  "studio.aiNotice.ruleAccuracy": "AI rezultatai gali būti netikslūs arba skirtis nuo numatytų.",
+  "studio.aiNotice.ruleResponsibility": "Jūs esate atsakingi už savo sukurtų vaizdų naudojimą.",
+  "studio.aiNotice.cancel": "Atšaukti",
+  "studio.aiNotice.confirm": "Suprantu, kurti"
+}

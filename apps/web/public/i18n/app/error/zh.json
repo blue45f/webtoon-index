@@ -1,0 +1,7 @@
+{
+  "error.reloading": "正在刷新至最新版本…",
+  "error.chunkRetryFailed": "已尝试刷新一次，但问题仍然存在。请检查网络连接后重试。",
+  "error.reloadButton": "刷新页面",
+  "error.goHome": "返回首页",
+  "error.retryDesc": "请重试或返回首页。"
+}

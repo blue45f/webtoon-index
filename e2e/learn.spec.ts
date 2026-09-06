@@ -1,7 +1,7 @@
 import { expect, test } from "@playwright/test";
 
-import { LESSONS, TERMS } from "../src/domains/learn/learning-content";
-import { STORAGE_KEY } from "../src/domains/learn/learning-model";
+import { LESSONS, TERMS } from "../apps/web/src/domains/learn/learning-content";
+import { STORAGE_KEY } from "../apps/web/src/domains/learn/learning-model";
 
 test.beforeEach(async ({ page }) => {
   await page.addInitScript(() => sessionStorage.setItem("toonspectrum-compat-dismissed", "true"));

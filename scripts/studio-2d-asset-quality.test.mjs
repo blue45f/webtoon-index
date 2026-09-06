@@ -8,6 +8,7 @@ import { auditStudio2dAssets, readImageDimensions, readPngDimensions, STUDIO_2D_
 const { test } = process.env.VITEST ? await import("vitest") : await import("node:test");
 const root = fileURLToPath(new URL("../", import.meta.url));
 const original = JSON.parse(readFileSync(path.join(root, STUDIO_2D_MANIFEST_PATH), "utf8"));
+const webPublic = path.join(root, "apps", "web", "public");
 const modified = (change) => {
   const manifest = structuredClone(original);
   change(manifest);
@@ -29,7 +30,7 @@ test("JPEG originals use .jpg while all 25 legacy .png aliases preserve identica
   for (const asset of aliases) {
     assert.equal(asset.mediaType, "image/jpeg");
     assert.ok(asset.src.endsWith(".jpg"));
-    assert.deepEqual(readFileSync(path.join(root, "public", asset.src)), readFileSync(path.join(root, "public", asset.legacySrc)));
+    assert.deepEqual(readFileSync(path.join(webPublic, asset.src)), readFileSync(path.join(webPublic, asset.legacySrc)));
   }
 });
 
@@ -82,14 +83,14 @@ test("truncated and hostile raster headers fail closed", () => {
   }
   assert.throws(() => readPngDimensions(Buffer.alloc(33)));
   const pngAsset = original.assets.find((asset) => asset.mediaType === "image/png");
-  const png = Buffer.from(readFileSync(path.join(root, "public", pngAsset.src)));
+  const png = Buffer.from(readFileSync(path.join(webPublic, pngAsset.src)));
   png.writeUInt32BE(0xffff_ffff, 16);
   assert.throws(() => readPngDimensions(png), /budget/u);
 });
 
 test("format detector reads both existing PNG and JPEG frames", () => {
   for (const asset of original.assets) {
-    const dimensions = readImageDimensions(readFileSync(path.join(root, "public", asset.src)));
+    const dimensions = readImageDimensions(readFileSync(path.join(webPublic, asset.src)));
     assert.deepEqual(dimensions, { width: asset.width, height: asset.height, mediaType: asset.mediaType });
   }
 });

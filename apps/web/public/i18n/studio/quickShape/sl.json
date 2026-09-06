@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "pametne oblike",
+  "studio.quickShape.description.active": "Sproščeno rišite črte, kvadrate, kroge in trikotnike. Če ga spustite, se bo pospravil sam.",
+  "studio.quickShape.description.inactive": "V redu je, da ga načečkate. Če ga vklopite, bo vaša ročna risba prečiščena v lepo obliko.",
+  "studio.quickShape.toggleHint": "V trenutku, ko s peresom izpustite grobo narisano obliko, se zaskoči v natančno obliko. Tudi če se med risanjem ustavite, se prikaže predogled.",
+  "studio.quickShape.toggleAria.on": "Vklopljene pametne oblike",
+  "studio.quickShape.toggleAria.off": "Pametne oblike izklopljene",
+  "studio.quickShape.matchedSuffix": " Lahko čutim. Potrjeno je, ko spustim roko.",
+  "studio.quickShape.emptyStatus": "Narišite obliko in jo spustite ali ostanite na koncu",
+  "studio.quickShape.openTutorial": "Oglejte si vadnico o pametnih oblikah",
+  "studio.quickShape.notice": "Narišite pametne oblike, črte, kroge, kvadrate itd. in jih izboljšajte, ko jih spustite (začasno ustavite za predogled)"
+}

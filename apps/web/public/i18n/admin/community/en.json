@@ -1,0 +1,22 @@
+{
+  "admin.community.approveAsset": "Approve Asset",
+  "admin.community.assetReportsDesc": "Review reports for license infringement, harmful content, and decide visibility.",
+  "admin.community.assetReportsTitle": "Shared Asset Reports Review",
+  "admin.community.clearAttachments": "Clear Attachments",
+  "admin.community.deletePost": "Delete Permanently",
+  "admin.community.desc": "Dispute & report moderation: Hide posts, clear image attachments, or delete.",
+  "admin.community.eyebrow": "ADMIN · COMMUNITY",
+  "admin.community.hidePost": "Hide",
+  "admin.community.noAssetReports": "No pending asset reports to process.",
+  "admin.community.noPosts": "No posts found matching the criteria.",
+  "admin.community.notePlaceholder": "Reviewer note (Optional)",
+  "admin.community.previewData": "Switch to Preview",
+  "admin.community.refreshReports": "Refresh Reports",
+  "admin.community.rejectAsset": "Reject Asset",
+  "admin.community.reviewAsset": "Hide Under Review",
+  "admin.community.searchPostPlaceholder": "Search title, content, board, or author",
+  "admin.community.title": "Community Posts Management",
+  "admin.community.unhidePost": "Unhide",
+  "admin.community.verifyOriginal": "Inspect Verified Original",
+  "admin.community.verifying": "Verifying original…"
+}

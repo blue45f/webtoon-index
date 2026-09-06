@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "իմ տառատեսակը",
+  "studio.customFonts.importButton": "Ներմուծում ֆայլից",
+  "studio.customFonts.importing": "Ստուգվում է…",
+  "studio.customFonts.importAria": "Ներմուծեք տառատեսակի ֆայլ",
+  "studio.customFonts.storageAria": "Տառատեսակների գրադարանի օգտագործումը",
+  "studio.customFonts.emptyTitle": "Դեռևս ներառված տառատեսակներ չկան:",
+  "studio.customFonts.unknownFileName": "Ֆայլի անուն չկա",
+  "studio.customFonts.apply": "Դիմել",
+  "studio.customFonts.applyToText": "Կիրառեք այս տառատեսակը ընտրված տեքստի վրա",
+  "studio.customFonts.selectTextFirst": "Նախ ընտրեք տեքստի կամ խոսքի պղպջակը",
+  "studio.customFonts.delete": "ջնջել տառատեսակը"
+}

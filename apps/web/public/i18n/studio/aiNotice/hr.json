@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Vodič za generativne AI slike",
+  "studio.aiNotice.description": "Ova funkcija stvara slike pomoću generativne umjetne inteligencije (OpenAI). AI značke prikazane su na stvorenim rezultatima.",
+  "studio.aiNotice.ruleCopyright": "Ne stvaramo tuđa djela, likove ili lica stvarnih ljudi.",
+  "studio.aiNotice.ruleAccuracy": "Rezultati umjetne inteligencije mogu biti netočni ili drugačiji od očekivanih.",
+  "studio.aiNotice.ruleResponsibility": "Vi ste odgovorni za korištenje slika koje ste izradili.",
+  "studio.aiNotice.cancel": "Odustani",
+  "studio.aiNotice.confirm": "Razumijem, stvori"
+}

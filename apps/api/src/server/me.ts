@@ -1,7 +1,7 @@
 import { and, eq, inArray, notLike } from "drizzle-orm";
 
-import { fromDb } from "../../../../lib/api-helpers";
-import { CREATOR_MARKETPLACE_SOCIAL_THREAD_PREFIX } from "../../../../lib/creator-marketplace-social-namespace";
+import { fromDb } from "../../../web/src/shared/lib/api-helpers";
+import { CREATOR_MARKETPLACE_SOCIAL_THREAD_PREFIX } from "../../../web/src/shared/lib/creator-marketplace-social-namespace";
 import { findCreatorMarketplaceSocialInteractionIds } from "../common/creator-marketplace-social-boundary";
 import {
   db,

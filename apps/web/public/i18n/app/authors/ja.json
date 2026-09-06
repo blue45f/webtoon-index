@@ -1,0 +1,16 @@
+{
+  "authors.people": "",
+  "authors.title": "著者",
+  "authors.allOf": "の",
+  "authors.views": "ビュー",
+  "authors.works": "作品",
+  "authors.noName": "クリエイター",
+  "authors.error": "著者リストを読み込めませんでした。",
+  "authors.topOf": "・トップ",
+  "authors.pencafe": "クリエイターファンカフェ",
+  "authors.eyebrow": "著者ディレクトリ",
+  "authors.stats": "{total} 人の著者中上位 {shown}",
+  "authors.search": "著者名を検索する",
+  "authors.empty": "— 一致する著者がいません。",
+  "authors.desc": "作家を作品数順にランキングしたものです。著者をタップすると、タイトル、評価、ファン カフェが 1 か所に表示されます。"
+}

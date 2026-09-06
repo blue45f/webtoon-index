@@ -1,0 +1,9 @@
+{
+  "apiError.loginRequired": "Connexion requise.",
+  "apiError.adminRequired": "Impossible de vérifier les autorisations d'administrateur.",
+  "apiError.adminOnlyPage": "Cette page est réservée aux administrateurs.",
+  "apiError.notFound": "L'élément demandé est introuvable.",
+  "apiError.unsupportedType": "Type de contenu non pris en charge.",
+  "apiError.inactiveAccount": "Les comptes inactifs ne peuvent pas utiliser les fonctions d'administrateur.",
+  "apiError.settlementFailed": "Échec du traitement du règlement."
+}

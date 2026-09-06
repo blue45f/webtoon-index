@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "formes intel·ligents",
+  "studio.quickShape.description.active": "Dibuixa amb calma línies, quadrats, cercles i triangles. Si el deixes anar, s'ordenarà tot sol.",
+  "studio.quickShape.description.inactive": "Està bé gargotejar-lo. Si l'enceneu, el vostre dibuix a mà es perfeccionarà en una forma ordenada.",
+  "studio.quickShape.toggleHint": "En el moment que deixes anar una forma aproximadament dibuixada amb un llapis, agafa una forma exacta. Fins i tot si feu una pausa mentre dibuixeu, apareixerà una vista prèvia.",
+  "studio.quickShape.toggleAria.on": "Formes intel·ligents activades",
+  "studio.quickShape.toggleAria.off": "Formes intel·ligents desactivades",
+  "studio.quickShape.matchedSuffix": " Ho puc sentir. Es confirma quan allibero la mà.",
+  "studio.quickShape.emptyStatus": "Dibuixa la forma i deixa anar, o simplement queda't al final",
+  "studio.quickShape.openTutorial": "Mireu el tutorial de formes intel·ligents",
+  "studio.quickShape.notice": "Dibuixa formes, línies, cercles, quadrats, etc. intel·ligents i perfecciona-los quan els deixes anar (pausa per previsualitzar)"
+}

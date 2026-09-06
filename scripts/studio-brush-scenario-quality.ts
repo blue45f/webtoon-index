@@ -459,7 +459,7 @@ export function judgeStudioBrushScenarioPerf(
  * How many stacked passes the build-up ladder must still be climbing, and by how much.
  *
  * Mirrors the planner-side contract pinned in
- * `src/domains/creator/brush/studio-pencil-alias-passes.test.ts` ("stacking the same stroke gets
+ * `apps/web/src/domains/creator/brush/studio-pencil-alias-passes.test.ts` ("stacking the same stroke gets
  * monotonically darker for at least the first 5 passes"). One 8-bit code value is the smallest
  * difference a pixel can carry, so a pass that adds less than that added nothing an artist can see.
  */

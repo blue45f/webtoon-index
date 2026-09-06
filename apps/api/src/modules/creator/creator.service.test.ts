@@ -10,7 +10,7 @@ import {
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 import { StudioLinked3dPassAssetFenceError } from
-  "../../../../../lib/studio-linked-3d-pass-asset-fence";
+  "../../../../web/src/shared/lib/studio-linked-3d-pass-asset-fence";
 import { CreatorDraftCollaborationStatusLockedError } from "../../server/creator-provisional-work-status";
 import {
   CreatorWorkRevisionConflictError,

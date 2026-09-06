@@ -1,0 +1,16 @@
+{
+  "admin.security.title": "Login Security & IP Blacklist Policy",
+  "admin.security.desc": "Manage IP ban rules and execute emergency global session revocations.",
+  "admin.security.revokeAll": "Revoke All Sessions Immediately",
+  "admin.security.revoking": "Processing...",
+  "admin.security.addIp": "Add Banned IP",
+  "admin.security.loading": "Loading IP blacklist...",
+  "admin.security.empty": "No banned IPs currently registered.",
+  "admin.security.confirmRevokeSessions": "⚠️ Warning: Update global session version to log out all users immediately?",
+  "admin.security.confirmDeleteIp": "Unblock this IP address?",
+  "admin.security.modalTitle": "Add IP Ban Rule",
+  "admin.security.inputIp": "IP Address",
+  "admin.security.inputReason": "Ban Reason",
+  "admin.security.submit": "Add Ban",
+  "admin.security.submitting": "Adding..."
+}

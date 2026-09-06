@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "แบบอักษรของฉัน",
+  "studio.customFonts.importButton": "นำเข้าจากไฟล์",
+  "studio.customFonts.importing": "กำลังตรวจสอบ...",
+  "studio.customFonts.importAria": "นำเข้าไฟล์ฟอนต์",
+  "studio.customFonts.storageAria": "การใช้ไลบรารีแบบอักษร",
+  "studio.customFonts.emptyTitle": "ยังไม่มีแบบอักษรรวมอยู่ด้วย",
+  "studio.customFonts.unknownFileName": "ไม่มีชื่อไฟล์",
+  "studio.customFonts.apply": "สมัคร",
+  "studio.customFonts.applyToText": "ใช้แบบอักษรนี้กับข้อความที่เลือก",
+  "studio.customFonts.selectTextFirst": "ขั้นแรกเลือกข้อความหรือกรอบคำพูด",
+  "studio.customFonts.delete": "ลบแบบอักษร"
+}

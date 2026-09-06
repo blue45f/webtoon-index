@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "minun fonttini",
+  "studio.customFonts.importButton": "Tuo tiedostosta",
+  "studio.customFonts.importing": "Tarkistetaan…",
+  "studio.customFonts.importAria": "Tuo fonttitiedosto",
+  "studio.customFonts.storageAria": "Fonttikirjaston käyttö",
+  "studio.customFonts.emptyTitle": "Mukana ei ole vielä fontteja.",
+  "studio.customFonts.unknownFileName": "Ei tiedostonimeä",
+  "studio.customFonts.apply": "Käytä",
+  "studio.customFonts.applyToText": "Käytä tätä fonttia valittuun tekstiin",
+  "studio.customFonts.selectTextFirst": "Valitse ensin teksti tai puhekupla",
+  "studio.customFonts.delete": "poista fontti"
+}

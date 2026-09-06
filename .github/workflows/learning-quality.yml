@@ -3,10 +3,10 @@ name: Learning quality
 on:
   pull_request:
     branches: [main]
-    paths: ['src/domains/learn/**', 'e2e/learn*.spec.ts', 'tsconfig.learning.json', '.github/workflows/learning-quality.yml', 'src/domains/creator/studio-impasto-relief-shading-v1*.ts']
+    paths: ['apps/web/src/domains/learn/**', 'e2e/learn*.spec.ts', 'tsconfig.learning.json', '.github/workflows/learning-quality.yml', 'apps/web/src/domains/creator/studio-impasto-relief-shading-v1*.ts']
   push:
     branches: [main]
-    paths: ['src/domains/learn/**', 'e2e/learn*.spec.ts', 'tsconfig.learning.json', '.github/workflows/learning-quality.yml', 'src/domains/creator/studio-impasto-relief-shading-v1*.ts']
+    paths: ['apps/web/src/domains/learn/**', 'e2e/learn*.spec.ts', 'tsconfig.learning.json', '.github/workflows/learning-quality.yml', 'apps/web/src/domains/creator/studio-impasto-relief-shading-v1*.ts']
 
 permissions:
   contents: read
@@ -36,10 +36,10 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm exec tsc -p tsconfig.learning.json
-      - run: pnpm exec eslint src/domains/learn e2e/learn.spec.ts e2e/learn-resilience.spec.ts src/domains/creator/studio-impasto-relief-shading-v1.ts src/domains/creator/studio-impasto-relief-shading-v1.light-constants.test.ts --max-warnings=0
+      - run: pnpm exec eslint apps/web/src/domains/learn e2e/learn.spec.ts e2e/learn-resilience.spec.ts apps/web/src/domains/creator/studio-impasto-relief-shading-v1.ts apps/web/src/domains/creator/studio-impasto-relief-shading-v1.light-constants.test.ts --max-warnings=0
       # Directory discovery includes the accessibility suite instead of silently omitting it.
       - name: Learning and shading output regressions
-        run: pnpm exec vitest run src/domains/learn src/domains/creator/studio-impasto-relief-shading-v1.light-constants.test.ts
+        run: pnpm exec vitest run apps/web/src/domains/learn apps/web/src/domains/creator/studio-impasto-relief-shading-v1.light-constants.test.ts
       # Re-run the actual previously failing budget, without changing its threshold or fixtures.
       # This is additional evidence; the required core/verify gates remain unchanged.
       - name: Existing full performance budgets

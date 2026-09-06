@@ -12,31 +12,31 @@ import * as THREE from "three";
 
 import {
   resolveStudioMediaPipeVisionWasmFileset,
-} from "../src/domains/creator/studio-mediapipe-vision-assets";
+} from "../apps/web/src/domains/creator/studio-mediapipe-vision-assets";
 import {
   loadStudioMediaPipeVisionModule,
   runStudioMediaPipeVisionTaskCreation,
-} from "../src/domains/creator/studio-mediapipe-vision-init-arbiter";
+} from "../apps/web/src/domains/creator/studio-mediapipe-vision-init-arbiter";
 import {
   disposeStudioVrmAsset,
   loadStudioVrmAsset,
-} from "../src/domains/creator/vrm/studio-vrm-asset-runtime.ts";
+} from "../apps/web/src/domains/creator/vrm/studio-vrm-asset-runtime.ts";
 import {
   createStudioVrmAvatarForgeFaceController,
-} from "../src/domains/creator/vrm/studio-vrm-avatar-forge-face-controller.ts";
+} from "../apps/web/src/domains/creator/vrm/studio-vrm-avatar-forge-face-controller.ts";
 import {
   AVATAR_FORGE_PRESETS,
   createAvatarForgeState,
   type AvatarForgeState,
-} from "../src/domains/creator/vrm/studio-vrm-avatar-forge.ts";
+} from "../apps/web/src/domains/creator/vrm/studio-vrm-avatar-forge.ts";
 import {
   STUDIO_VRM_AVATAR_REFERENCE_MODEL_BYTE_LENGTH,
   STUDIO_VRM_AVATAR_REFERENCE_MODEL_SHA256,
   type StudioVrmAvatarReferenceEmbedding,
-} from "../src/domains/creator/vrm/studio-vrm-avatar-reference-recommendation.ts";
+} from "../apps/web/src/domains/creator/vrm/studio-vrm-avatar-reference-recommendation.ts";
 import {
   StudioVrmAvatarForge,
-} from "../src/domains/creator/vrm/StudioVrmAvatarForge.tsx";
+} from "../apps/web/src/domains/creator/vrm/StudioVrmAvatarForge.tsx";
 
 import type { ImageEmbedder as MediaPipeImageEmbedder } from "@mediapipe/tasks-vision";
 import type { VRM } from "@pixiv/three-vrm";

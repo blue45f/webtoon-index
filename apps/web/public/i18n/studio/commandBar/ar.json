@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "شريط الأوامر السريعة",
+  "studio.commandBar.settings": "إعدادات شريط الأوامر",
+  "studio.commandBar.settingsDescription": "غيّر ترتيب الفتحات وظهور شريط الأوامر أسفل شريط القوائم.",
+  "studio.commandBar.settingsTip": "ضع الأوامر التي تستخدمها كثيرًا في الفتحات الأولى ليكون الوصول إليها أسرع.",
+  "studio.commandBar.settingsClose": "إغلاق إعدادات شريط الأوامر",
+  "studio.commandBar.settingsStorageNote": "يُحفظ ترتيب الفتحات في إعدادات مساحة العمل الخاصة بهذا المتصفح.",
+  "studio.commandBar.showSlots": "إظهار فتحات الأوامر",
+  "studio.commandBar.slot": "الفتحة {index}",
+  "studio.commandBar.slotAria": "فتحة الأوامر {index}",
+  "studio.commandBar.slotEmpty": "فتحة فارغة",
+  "studio.commandBar.resetDefaults": "إعادة التعيين إلى الترتيب الافتراضي",
+  "studio.commandBar.command.undo": "تراجع",
+  "studio.commandBar.command.redo": "إعادة",
+  "studio.commandBar.command.save": "حفظ المسودة",
+  "studio.commandBar.command.publish": "نشر",
+  "studio.commandBar.command.download": "تنزيل الصفحة الحالية",
+  "studio.commandBar.command.export-open": "خيارات التصدير",
+  "studio.commandBar.command.zoom-fit": "ملاءمة عرض الشاشة",
+  "studio.commandBar.command.assets": "القوالب والعناصر",
+  "studio.commandBar.command.bubbles": "فقاعة كلام",
+  "studio.commandBar.command.project": "أدوات المشروع"
+}

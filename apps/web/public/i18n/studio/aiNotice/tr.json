@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Üretken Yapay Zeka Görüntü Kılavuzu",
+  "studio.aiNotice.description": "Bu işlev, üretken yapay zeka (OpenAI) kullanarak görüntüler oluşturur. AI rozetleri oluşturulan sonuçlarda görüntülenir.",
+  "studio.aiNotice.ruleCopyright": "Başkalarının eserlerini, karakterlerini veya gerçek kişilerin yüzlerini yaratmıyoruz.",
+  "studio.aiNotice.ruleAccuracy": "AI sonuçları hatalı veya amaçlanandan farklı olabilir.",
+  "studio.aiNotice.ruleResponsibility": "Oluşturduğunuz görsellerin kullanımından siz sorumlusunuz.",
+  "studio.aiNotice.cancel": "İptal",
+  "studio.aiNotice.confirm": "anlıyorum, yarat"
+}

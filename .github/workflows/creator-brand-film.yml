@@ -37,10 +37,10 @@ jobs:
         with:
           name: toonstudio-brand-film-${{ inputs.format }}-${{ github.sha }}
           path: |
-            public/brand/toonstudio-*.mp4
-            public/brand/toonstudio-film-poster.jpg
-            public/brand/toonstudio-og.png
-            public/brand/film-manifest.json
-            public/brand/toonstudio-intro.*.vtt
+            apps/web/public/brand/toonstudio-*.mp4
+            apps/web/public/brand/toonstudio-film-poster.jpg
+            apps/web/public/brand/toonstudio-og.png
+            apps/web/public/brand/film-manifest.json
+            apps/web/public/brand/toonstudio-intro.*.vtt
           retention-days: 30
           if-no-files-found: error

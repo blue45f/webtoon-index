@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Sorkuntzako AI Irudien Gida",
+  "studio.aiNotice.description": "Funtzio honek irudiak sortzen ditu AI sortzailea erabiliz (OpenAI). Sortutako emaitzetan AI bereizgarriak bistaratzen dira.",
+  "studio.aiNotice.ruleCopyright": "Ez ditugu besteen lanak, pertsonaiak edo benetako pertsonen aurpegiak sortzen.",
+  "studio.aiNotice.ruleAccuracy": "AIren emaitzak okerrak edo aurreikusitakoaren desberdinak izan daitezke.",
+  "studio.aiNotice.ruleResponsibility": "Sortzen dituzun irudiak erabiltzeaz arduratzen zara.",
+  "studio.aiNotice.cancel": "Utzi",
+  "studio.aiNotice.confirm": "Ulertzen dut, sortu"
+}

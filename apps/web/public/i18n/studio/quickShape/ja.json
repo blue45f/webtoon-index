@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "スマートシェイプ",
+  "studio.quickShape.description.active": "線・楕円・三角・円を描くと綺麗な形に仕上がります。",
+  "studio.quickShape.description.inactive": "ラフスケッチでも大丈夫です。有効にすると、手描きがきれいな形状のストロークに変換されます。",
+  "studio.quickShape.toggleHint": "手描きの形は、ペンを持ち上げた瞬間にきれいなフォルムになります。一時停止してもプレビューが表示されます。",
+  "studio.quickShape.toggleAria.on": "スマートシェイプが有効になりました",
+  "studio.quickShape.toggleAria.off": "スマートシェイプが無効になっています",
+  "studio.quickShape.matchedSuffix": "このようになります · リリース時にファイナライズします",
+  "studio.quickShape.emptyStatus": "描いて放すか、最後に少し停止してプレビューします。",
+  "studio.quickShape.openTutorial": "スマート シェイプ チュートリアルを開く",
+  "studio.quickShape.notice": "手を離すと、手描きの形状がきれいな線/楕円/長方形に修正されます。プレビューするには少し停止します。"
+}

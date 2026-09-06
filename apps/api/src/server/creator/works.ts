@@ -5,7 +5,7 @@ import {
   assertStudioLinked3dPassAssetRows,
   extractStudioLinked3dPassAssetRequirements,
   type CreatorWorkLinked3dJsonEnvelope,
-} from "../../../../../lib/studio-linked-3d-pass-asset-fence";
+} from "../../../../web/src/shared/lib/studio-linked-3d-pass-asset-fence";
 import {
   creatorChallenges,
   creatorDraftCollaborationRooms,

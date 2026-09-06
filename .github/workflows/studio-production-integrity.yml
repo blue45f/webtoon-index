@@ -4,20 +4,20 @@ on:
   pull_request:
     branches: [main]
     paths:
-      - 'src/domains/creator/studio-production/**'
-      - 'src/domains/creator/studio-router/**'
-      - 'src/domains/creator/StudioInspector*'
-      - 'src/domains/creator/studio-batch-rename*'
+      - 'apps/web/src/domains/creator/studio-production/**'
+      - 'apps/web/src/domains/creator/studio-router/**'
+      - 'apps/web/src/domains/creator/StudioInspector*'
+      - 'apps/web/src/domains/creator/studio-batch-rename*'
       - '.github/workflows/ci.yml'
       - '.github/workflows/studio-production-integrity.yml'
       - 'scripts/ci-executed-gates.test.mjs'
   push:
     branches: [main]
     paths:
-      - 'src/domains/creator/studio-production/**'
-      - 'src/domains/creator/studio-router/**'
-      - 'src/domains/creator/StudioInspector*'
-      - 'src/domains/creator/studio-batch-rename*'
+      - 'apps/web/src/domains/creator/studio-production/**'
+      - 'apps/web/src/domains/creator/studio-router/**'
+      - 'apps/web/src/domains/creator/StudioInspector*'
+      - 'apps/web/src/domains/creator/studio-batch-rename*'
       - '.github/workflows/ci.yml'
       - '.github/workflows/studio-production-integrity.yml'
       - 'scripts/ci-executed-gates.test.mjs'
@@ -55,16 +55,16 @@ jobs:
       - name: Verify actual production routes and Inspector integration
         run: |
           pnpm exec vitest run \
-            src/domains/creator/studio-production/studio-production-scope.test.ts \
-            src/domains/creator/studio-production/StudioProductionHubPage.scope.test.tsx \
-            src/domains/creator/studio-router/studio-route-manifest.test.ts \
-            src/domains/creator/studio-router/StudioRouteCollaborationGateway.test.tsx \
-            src/domains/creator/studio-router/studio-production-command-center-boundary.test.ts \
-            src/domains/creator/studio-router/StudioRouteEntryContracts.test.tsx \
-            src/domains/creator/studio-batch-rename.test.ts \
-            src/domains/creator/StudioInspectorBatchRenameSection.test.tsx \
-            src/domains/creator/studio-inspector-multi-selection-boundary.test.ts \
-            src/domains/creator/StudioInspectorOrderAlignSection.test.tsx
+            apps/web/src/domains/creator/studio-production/studio-production-scope.test.ts \
+            apps/web/src/domains/creator/studio-production/StudioProductionHubPage.scope.test.tsx \
+            apps/web/src/domains/creator/studio-router/studio-route-manifest.test.ts \
+            apps/web/src/domains/creator/studio-router/StudioRouteCollaborationGateway.test.tsx \
+            apps/web/src/domains/creator/studio-router/studio-production-command-center-boundary.test.ts \
+            apps/web/src/domains/creator/studio-router/StudioRouteEntryContracts.test.tsx \
+            apps/web/src/domains/creator/studio-batch-rename.test.ts \
+            apps/web/src/domains/creator/StudioInspectorBatchRenameSection.test.tsx \
+            apps/web/src/domains/creator/studio-inspector-multi-selection-boundary.test.ts \
+            apps/web/src/domains/creator/StudioInspectorOrderAlignSection.test.tsx
       - name: Build and inspect actual production browser
         run: |
           pnpm run build

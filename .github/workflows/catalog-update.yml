@@ -1,7 +1,7 @@
 name: catalog-update
 
 # 카탈로그 갱신 파이프라인 — 크롤 → 검증 게이트 → gz 스냅샷 커밋 → 변경 알림.
-# 전체 데이터는 Neon 이 아니라 git 의 gz 파일이 소스다(빌드 시 public/data 재생성).
+# 전체 데이터는 Neon 이 아니라 git 의 gz 파일이 소스다(빌드 시 apps/web/public/data 재생성).
 #
 # 게이트(scripts/validate-catalog.mjs): 전체 바닥값 + 직전 대비 회귀 + "플랫폼 단위 급락"을 본다.
 #   합계로는 -5%라 통과하는 플랫폼 붕괴(예: bookcube 1545→50)도 잡아, 망가진 스냅샷이 라이브로

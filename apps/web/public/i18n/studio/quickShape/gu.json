@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "સ્માર્ટ આકારો",
+  "studio.quickShape.description.active": "આરામથી રેખાઓ, ચોરસ, વર્તુળો અને ત્રિકોણ દોરો. જો તમે જવા દો, તો તે તેની જાતે વ્યવસ્થિત થઈ જશે.",
+  "studio.quickShape.description.inactive": "તેને નીચે લખવું ઠીક છે. જો તમે તેને ચાલુ કરો છો, તો તમારા હાથનું ચિત્ર સુઘડ આકારમાં શુદ્ધ થઈ જશે.",
+  "studio.quickShape.toggleHint": "જે ક્ષણે તમે પેન વડે આશરે દોરેલા આકારને જવા દો છો, તે ચોક્કસ આકારમાં આવી જાય છે. જો તમે ડ્રોઇંગ કરતી વખતે થોભો તો પણ, એક પૂર્વાવલોકન દેખાશે.",
+  "studio.quickShape.toggleAria.on": "સ્માર્ટ આકારો ચાલુ",
+  "studio.quickShape.toggleAria.off": "સ્માર્ટ આકારો બંધ",
+  "studio.quickShape.matchedSuffix": " હું તેને અનુભવી શકું છું. જ્યારે હું મારો હાથ છોડું છું ત્યારે તેની પુષ્ટિ થાય છે.",
+  "studio.quickShape.emptyStatus": "આકાર દોરો અને જવા દો, અથવા ફક્ત અંતમાં રહો",
+  "studio.quickShape.openTutorial": "સ્માર્ટ આકારો ટ્યુટોરીયલ જુઓ",
+  "studio.quickShape.notice": "સ્માર્ટ આકારો, રેખાઓ, વર્તુળો, ચોરસ વગેરે દોરો અને જ્યારે તમે જવા દો ત્યારે તેમને રિફાઇન કરો (પૂર્વાવલોકન માટે થોભો)"
+}

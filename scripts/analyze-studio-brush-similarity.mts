@@ -7,8 +7,8 @@ import {
   curateStudioBrushCandidates,
   type StudioBrushCurationCandidate,
   type StudioBrushMarkFingerprint,
-} from "../src/domains/creator/brush/studio-brush-quality-curation";
-import { STUDIO_BEGINNER_BRUSH_IDS } from "../src/domains/creator/studio-creative-ux";
+} from "../apps/web/src/domains/creator/brush/studio-brush-quality-curation";
+import { STUDIO_BEGINNER_BRUSH_IDS } from "../apps/web/src/domains/creator/studio-creative-ux";
 
 const INPUT_ROOT = process.env.TOONSPECTRUM_ALL_BRUSH_INPUT_DIR
   ?? "artifacts/all-brush-long-stroke-input";

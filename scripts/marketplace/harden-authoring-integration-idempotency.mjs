@@ -25,7 +25,7 @@ function keepSingle(relativePath, pattern, label, normalize) {
 
 const report = [
   keepSingle(
-    "src/domains/market/pages/MarketPublishPage.tsx",
+    "apps/web/src/domains/market/pages/MarketPublishPage.tsx",
     /\s*\{\/\* marketplace-authoring-workshop \*\/\}\s*<MarketplaceAuthoringWorkshop\s*\/>/gu,
     "MarketplaceAuthoringWorkshop",
     (source) => source.replace(
@@ -34,7 +34,7 @@ const report = [
     ),
   ),
   keepSingle(
-    "src/domains/creator/brush/StudioBrushStudio.tsx",
+    "apps/web/src/domains/creator/brush/StudioBrushStudio.tsx",
     /\s*\{\/\* brush-studio-marketplace-shortcut \*\/\}\s*<MarketplaceBrushStudioBridge\s+snapshot=\{currentSnapshot\}\s+visible=\{open\}\s*\/>/gu,
     "MarketplaceBrushStudioBridge",
     (source) => source.replace(
@@ -43,7 +43,7 @@ const report = [
     ),
   ),
   keepSingle(
-    "src/domains/market/components/MarketResourceDetailArticle.tsx",
+    "apps/web/src/domains/market/components/MarketResourceDetailArticle.tsx",
     /\s*<MarketplaceAuthoringInstallAction\s+record=\{record\}\s*\/>/gu,
     "MarketplaceAuthoringInstallAction",
     (source) => source.replace(
@@ -52,7 +52,7 @@ const report = [
     ),
   ),
   keepSingle(
-    "src/domains/market/components/MarketplaceAuthoringWorkshop.tsx",
+    "apps/web/src/domains/market/components/MarketplaceAuthoringWorkshop.tsx",
     /\s*<MarketplaceBrushRecipeAccelerator\s+draft=\{normalized\}\s+onChange=\{setDraft\}\s*\/>/gu,
     "MarketplaceBrushRecipeAccelerator",
     (source) => source.replace(
@@ -61,7 +61,7 @@ const report = [
     ),
   ),
   keepSingle(
-    "src/domains/market/components/MarketplaceAuthoringWorkshop.tsx",
+    "apps/web/src/domains/market/components/MarketplaceAuthoringWorkshop.tsx",
     /\s*<MarketplaceAssetQualityMatrix\s+draft=\{normalized\}\s+onChange=\{setDraft\}\s*\/>/gu,
     "MarketplaceAssetQualityMatrix",
     (source) => source.replace(

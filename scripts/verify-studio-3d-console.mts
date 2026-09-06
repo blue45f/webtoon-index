@@ -24,17 +24,17 @@ import {
   STUDIO_BG3D_NORMAL_PROFILE,
   STUDIO_BG3D_STABLE_ID_PROFILE,
   type StudioBg3dArtifactCaptureRequestV2,
-} from "../src/domains/creator/bg3d/studio-bg3d-artifact-capture-v2";
+} from "../apps/web/src/domains/creator/bg3d/studio-bg3d-artifact-capture-v2";
 import {
   resolveStudioBg3dCaptureFrame,
   resolveStudioBg3dCaptureFrameCameraSettings,
-} from "../src/domains/creator/bg3d/studio-bg3d-capture-frame-geometry";
-import { STUDIO_BG3D_LT_RENDER_WORKER_PROTOCOL_VERSION } from "../src/domains/creator/bg3d/studio-bg3d-lt-render-worker-protocol";
+} from "../apps/web/src/domains/creator/bg3d/studio-bg3d-capture-frame-geometry";
+import { STUDIO_BG3D_LT_RENDER_WORKER_PROTOCOL_VERSION } from "../apps/web/src/domains/creator/bg3d/studio-bg3d-lt-render-worker-protocol";
 import {
   DEFAULT_STUDIO_BG3D_SCENE_DOCUMENT,
   normalizeStudioBg3dSceneDocument,
   serializeStudioBg3dSceneDocument,
-} from "../src/domains/creator/bg3d/studio-bg3d-scene-document";
+} from "../apps/web/src/domains/creator/bg3d/studio-bg3d-scene-document";
 
 import { DIST_DIR } from "./lib/repo-paths.mjs";
 import { findFreePort, waitForServer } from "./lib/studio-verify-preview-harness.mjs";
@@ -2129,9 +2129,9 @@ async function runMagicLayerProductionAlignmentProof(
           readonly width: number;
         }[];
       };
-      readonly captureStudioBg3dMagicObjectIds?: typeof import("../src/domains/creator/bg3d/studio-bg3d-magic-object-id-capture"
+      readonly captureStudioBg3dMagicObjectIds?: typeof import("../apps/web/src/domains/creator/bg3d/studio-bg3d-magic-object-id-capture"
       ).captureStudioBg3dMagicObjectIds;
-      readonly createStudioBg3dRuntimeSnapshot?: typeof import("../src/domains/creator/bg3d/studio-bg3d-runtime-adapter"
+      readonly createStudioBg3dRuntimeSnapshot?: typeof import("../apps/web/src/domains/creator/bg3d/studio-bg3d-runtime-adapter"
       ).createStudioBg3dRuntimeSnapshot;
     };
 
@@ -2262,13 +2262,13 @@ async function runMagicLayerProductionAlignmentProof(
 
     const threeModule = await import(threeModuleUrl) as Record<string, unknown>;
     const threeCaptureModule = await import(threeCaptureUrl) as Pick<
-      typeof import("../src/domains/creator/bg3d/studio-bg3d-three-webgl-capture"),
+      typeof import("../apps/web/src/domains/creator/bg3d/studio-bg3d-three-webgl-capture"),
       "createStudioBg3dThreeWebglCaptureAdapter"
     >;
     const productionProofEntry =
       await import(productionProofEntryUrl) as ProductionProofEntry;
     const babylonEntry = await import(babylonEntryUrl) as Pick<
-      typeof import("../src/domains/creator/bg3d/studio-bg3d-babylon-specialist-entry"),
+      typeof import("../apps/web/src/domains/creator/bg3d/studio-bg3d-babylon-specialist-entry"),
       "createStudioBg3dBabylonSpecialist"
     >;
     if (
@@ -2813,15 +2813,15 @@ async function runMagicLayerProductionAlignmentProof(
         const controller = new AbortController();
         const canonicalDocument = JSON.parse(
           scenario.babylonCanonicalDocumentJson,
-        ) as import("../src/domains/creator/bg3d/studio-bg3d-scene-document"
+        ) as import("../apps/web/src/domains/creator/bg3d/studio-bg3d-scene-document"
         ).StudioBg3dSceneDocument;
         const trustedSnapshot = productionProofEntry.createStudioBg3dRuntimeSnapshot(
           canonicalDocument,
           new Map(),
         );
-        type MagicBackend = import("../src/domains/creator/bg3d/studio-bg3d-magic-object-id-capture"
+        type MagicBackend = import("../apps/web/src/domains/creator/bg3d/studio-bg3d-magic-object-id-capture"
         ).StudioBg3dMagicBabylonBackend;
-        type MagicCapture = import("../src/domains/creator/bg3d/studio-bg3d-magic-object-id-capture"
+        type MagicCapture = import("../apps/web/src/domains/creator/bg3d/studio-bg3d-magic-object-id-capture"
         ).StudioBg3dMagicObjectIdCaptureResult;
 
         // Exercise the shipped Magic coordinator, not a specialist runtime shortcut. WebGPU and

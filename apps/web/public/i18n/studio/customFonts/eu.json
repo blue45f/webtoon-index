@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "nire letra-tipoa",
+  "studio.customFonts.importButton": "Inportatu fitxategitik",
+  "studio.customFonts.importing": "Egiaztatzen…",
+  "studio.customFonts.importAria": "Inportatu letra-fitxategia",
+  "studio.customFonts.storageAria": "Letra-liburuen erabilera",
+  "studio.customFonts.emptyTitle": "Oraindik ez dago letra-tiporik sartuta.",
+  "studio.customFonts.unknownFileName": "Ez dago fitxategi-izenik",
+  "studio.customFonts.apply": "Aplikatu",
+  "studio.customFonts.applyToText": "Aplikatu letra-tipo hau hautatutako testuari",
+  "studio.customFonts.selectTextFirst": "Lehenik eta behin, hautatu testua edo hizketa-burbuila",
+  "studio.customFonts.delete": "letra-tipoa ezabatu"
+}

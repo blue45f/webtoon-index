@@ -9,7 +9,7 @@ import { fileURLToPath } from "node:url";
 const require = createRequire(import.meta.url);
 const ts = require("typescript");
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const source = join(root, "src/domains/creator/hybrid-dcc");
+const source = join(root, "apps/web/src/domains/creator/hybrid-dcc");
 const temporary = mkdtempSync(join(tmpdir(), "studio-dcc-selection-"));
 try {
   const config = join(temporary, "tsconfig.json");

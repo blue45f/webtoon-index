@@ -1,0 +1,19 @@
+{
+  "studio.mobileDock.label": "스튜디오 모바일 도구막대",
+  "studio.mobileDock.drawingTools": "드로잉 도구",
+  "studio.mobileDock.workspaceTools": "작업 공간",
+  "studio.mobileDock.workspaceToggle": "작업",
+  "studio.mobileDock.expandWorkspaceTools": "작업 공간 도구 펼치기",
+  "studio.mobileDock.collapseWorkspaceTools": "작업 공간 도구 접기",
+  "studio.mobileDock.brushSettings": "브러시 설정 (굵기·색·프리셋)",
+  "studio.mobileDock.tool.pixel": "픽셀",
+  "studio.mobileDock.tool.shape": "도형",
+  "studio.mobileDock.tool.pages": "페이지",
+  "studio.mobileDock.tool.export": "내보내기",
+  "studio.mobileDock.tool.search": "찾기",
+  "studio.mobileDock.tool.search.title": "기능·설정 찾기 · CSP·Photoshop 용어로도 검색",
+  "studio.mobileDock.pagesOpen": "페이지 목록 열기",
+  "studio.mobileDock.pagesClose": "페이지 목록 닫기",
+  "studio.mobileDock.tool.undo": "되돌리기",
+  "studio.mobileDock.tool.redo": "다시"
+}

@@ -86,11 +86,11 @@ export const trustedBootstrapAuditSchema = z
       .min(1)
       .refine(
         (source) =>
-          (source.startsWith("packages/") || source.startsWith("src/")) &&
+          (source.startsWith("packages/") || source.startsWith("apps/web/src/")) &&
           !source.startsWith("/") &&
           !source.includes("\\") &&
           !source.split("/").includes(".."),
-        "bootstrap source must be a checked-in repository-relative packages/ or src/ path",
+        "bootstrap source must be a checked-in repository-relative packages/ or apps/web/src/ path",
       ),
     owner: z.string().trim().min(1),
     justification: z.string().trim().min(1),

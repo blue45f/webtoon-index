@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "הגופן שלי",
+  "studio.customFonts.importButton": "ייבוא מהקובץ",
+  "studio.customFonts.importing": "בודק...",
+  "studio.customFonts.importAria": "ייבוא קובץ גופנים",
+  "studio.customFonts.storageAria": "שימוש בספריית גופנים",
+  "studio.customFonts.emptyTitle": "עדיין אין גופנים כלולים.",
+  "studio.customFonts.unknownFileName": "אין שם קובץ",
+  "studio.customFonts.apply": "הגש בקשה",
+  "studio.customFonts.applyToText": "החל את הגופן הזה על הטקסט שנבחר",
+  "studio.customFonts.selectTextFirst": "תחילה בחר טקסט או בועת דיבור",
+  "studio.customFonts.delete": "למחוק גופן"
+}

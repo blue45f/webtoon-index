@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "formas inteligentes",
+  "studio.quickShape.description.active": "Desenhe linhas, quadrados, círculos e triângulos sem pressa. Se você soltar, ele se arrumará sozinho.",
+  "studio.quickShape.description.inactive": "Não há problema em rabiscar. Se você ativá-lo, seu desenho à mão será refinado e terá um formato elegante.",
+  "studio.quickShape.toggleHint": "No momento em que você solta uma forma desenhada grosseiramente com uma caneta, ela assume uma forma exata. Mesmo se você pausar enquanto desenha, uma visualização aparecerá.",
+  "studio.quickShape.toggleAria.on": "Formas inteligentes ativadas",
+  "studio.quickShape.toggleAria.off": "Formas inteligentes desativadas",
+  "studio.quickShape.matchedSuffix": " Eu posso sentir isso. Está confirmado quando eu solto minha mão.",
+  "studio.quickShape.emptyStatus": "Desenhe a forma e solte, ou apenas fique no final",
+  "studio.quickShape.openTutorial": "Assista ao tutorial de formas inteligentes",
+  "studio.quickShape.notice": "Desenhe formas inteligentes, linhas, círculos, quadrados, etc. e refine-os ao soltá-los (pausa para visualizar)"
+}

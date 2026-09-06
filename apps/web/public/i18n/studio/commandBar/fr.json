@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Barre de commandes rapides",
+  "studio.commandBar.settings": "Réglages de la barre de commandes",
+  "studio.commandBar.settingsDescription": "Modifiez la disposition des emplacements et la visibilité de la barre de commandes sous la barre de menus.",
+  "studio.commandBar.settingsTip": "Placez les commandes que vous utilisez le plus dans les premiers emplacements : elles seront les plus rapides à atteindre.",
+  "studio.commandBar.settingsClose": "Fermer les réglages de la barre de commandes",
+  "studio.commandBar.settingsStorageNote": "La disposition des emplacements est enregistrée dans les réglages d'espace de travail de ce navigateur.",
+  "studio.commandBar.showSlots": "Afficher les emplacements de commandes",
+  "studio.commandBar.slot": "Emplacement {index}",
+  "studio.commandBar.slotAria": "Emplacement de commande {index}",
+  "studio.commandBar.slotEmpty": "Emplacement vide",
+  "studio.commandBar.resetDefaults": "Rétablir la disposition par défaut",
+  "studio.commandBar.command.undo": "Annuler",
+  "studio.commandBar.command.redo": "Rétablir",
+  "studio.commandBar.command.save": "Enregistrer le brouillon",
+  "studio.commandBar.command.publish": "Publier",
+  "studio.commandBar.command.download": "Télécharger la page actuelle",
+  "studio.commandBar.command.export-open": "Options d'exportation",
+  "studio.commandBar.command.zoom-fit": "Ajuster à la largeur de l'écran",
+  "studio.commandBar.command.assets": "Modèles et ressources",
+  "studio.commandBar.command.bubbles": "Bulle de dialogue",
+  "studio.commandBar.command.project": "Outils du projet"
+}

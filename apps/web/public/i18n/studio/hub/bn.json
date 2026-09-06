@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "ফিচার টিউটোরিয়াল",
+  "studio.hub.subtitle": "কোনো বোঝা ছাড়া এক সময়ে একটি ফাংশন. আমি {done}/{total} এর দিকে তাকালাম।",
+  "studio.hub.progressAriaLabel": "টিউটোরিয়াল অগ্রগতি",
+  "studio.hub.listAriaLabel": "বৈশিষ্ট্য তালিকা",
+  "studio.hub.checked": "একবার দেখে নিন",
+  "studio.hub.prev": "আগের",
+  "studio.hub.next": "পরবর্তী",
+  "studio.hub.markComplete": "সম্পূর্ণ হিসাবে চিহ্নিত করুন",
+  "studio.hub.completed": "সম্পন্ন",
+  "studio.hub.tryLabelDefault": "বরাবর অনুসরণ করুন",
+  "studio.hub.stepAriaPrefix": "পদক্ষেপ"
+}

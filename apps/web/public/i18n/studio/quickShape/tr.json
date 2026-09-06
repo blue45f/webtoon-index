@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "akıllı şekiller",
+  "studio.quickShape.description.active": "Yavaşça çizgiler, kareler, daireler ve üçgenler çizin. Bırakırsanız kendi kendine düzelecektir.",
+  "studio.quickShape.description.inactive": "Bunu karalamakta sorun yok. Bu özelliği açarsanız el çiziminiz düzgün bir şekle dönüştürülecektir.",
+  "studio.quickShape.toggleHint": "Kalemle kabaca çizilmiş bir şekli bıraktığınız anda, tam bir şekil alır. Çizim yaparken duraklasanız bile bir önizleme görünecektir.",
+  "studio.quickShape.toggleAria.on": "Akıllı şekiller açık",
+  "studio.quickShape.toggleAria.off": "Akıllı şekiller kapalı",
+  "studio.quickShape.matchedSuffix": " Bunu hissedebiliyorum. Elimi bıraktığımda onaylanıyor.",
+  "studio.quickShape.emptyStatus": "Şekli çizin ve bırakın ya da sadece sonunda kalın",
+  "studio.quickShape.openTutorial": "Akıllı şekiller eğiticisini izleyin",
+  "studio.quickShape.notice": "Akıllı şekiller, çizgiler, daireler, kareler vb. çizin ve bıraktığınızda bunları iyileştirin (önizlemeyi duraklatın)"
+}

@@ -12,6 +12,8 @@ import zipfile
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import studio_asset_curation as c
+
+CC0_LICENSE = 'CC0-1.0'
 import acquire_studio_asset_pilot as a
 
 
@@ -33,7 +35,7 @@ class CurationTests(unittest.TestCase):
         preview = self.ref(name + ".png", {"syntheticPreview": True})
         rights = self.ref(name + "-rights.json", {
             "payloadSha256": payload["sha256"], "provider": "fixture",
-            "sourceUrl": "https://example.org/source", "license": "CC0-1.0",
+            "sourceUrl": "https://example.org/source", "license": CC0_LICENSE,
             "redistribution": True, "reviewer": "rights-fixture-reviewer",
         })
         runtime = self.ref(name + "-runtime.json", {"payloadSha256": payload["sha256"],
@@ -43,7 +45,7 @@ class CurationTests(unittest.TestCase):
                 "keywordsKo": ["학교", "교실"], "phase": "reviewed", "payload": payload,
                 "preview": preview, "rightsEvidence": rights, "runtimeEvidence": runtime,
                 "source": {"url": "https://example.org/source", "licenseUrl": "https://example.org/license",
-                    "license": "CC0-1.0", "redistribution": True, "rightsReviewer": "rights-fixture-reviewer",
+                    "license": CC0_LICENSE, "redistribution": True, "rightsReviewer": "rights-fixture-reviewer",
                     "checkedAt": "2025-01-01"},
                 "reviews": [{"reviewer": who, "decision": "approve", "payloadSha256": payload["sha256"],
                     "evidence": self.ref(name + "-" + who + ".json", {"syntheticReview": True}),
@@ -109,7 +111,7 @@ class CurationTests(unittest.TestCase):
         self.assertBlocked("missing-attribution")
 
     def test_noncommercial_and_unknown_licenses_fail(self):
-        for license_id in ["CC-BY-NC-4.0", "royalty-free", "CC-BY-SA-4.0", None, ["CC0-1.0"]]:
+        for license_id in ["CC-BY-NC-4.0", "royalty-free", "CC-BY-SA-4.0", None, [CC0_LICENSE]]:
             with self.subTest(license_id=license_id):
                 self.item["source"]["license"] = license_id
                 self.assertBlocked("license-needs-separate-review")

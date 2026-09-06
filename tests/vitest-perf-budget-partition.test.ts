@@ -44,12 +44,12 @@ describe("wall-clock budget partition", () => {
   it("does not leave a calibrated-budget file behind in the parallel run", () => {
     // The partition is a hand-maintained list, and the failure mode is silent: a new calibrated
     // budget lands in the main run, passes on a quiet machine, and reddens main weeks later.
-    const brushDir = path.join(root, "src/domains/creator/brush");
+    const brushDir = path.join(root, "apps/web/src/domains/creator/brush");
     const stragglers = readdirSync(brushDir)
       .filter((name) => name.endsWith(".test.ts"))
       .filter((name) =>
         readFileSync(path.join(brushDir, name), "utf8").includes("evaluateStudioCalibrated"))
-      .map((name) => `src/domains/creator/brush/${name}`)
+      .map((name) => `apps/web/src/domains/creator/brush/${name}`)
       .filter((file) => !PERF_BUDGET_TEST_FILES.includes(file));
 
     expect(stragglers, "add these to vitest.perf-budget-files.mjs").toEqual([]);

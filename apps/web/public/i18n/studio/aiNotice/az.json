@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Generativ AI Şəkil Bələdçisi",
+  "studio.aiNotice.description": "Bu funksiya generativ AI (OpenAI) istifadə edərək şəkillər yaradır. Yaradılmış nəticələrdə AI nişanları göstərilir.",
+  "studio.aiNotice.ruleCopyright": "Biz başqalarının əsərlərini, personajlarını və ya real insanların simasını yaratmırıq.",
+  "studio.aiNotice.ruleAccuracy": "AI nəticələri qeyri-dəqiq və ya nəzərdə tutulandan fərqli ola bilər.",
+  "studio.aiNotice.ruleResponsibility": "Yaratdığınız şəkillərdən istifadəyə görə məsuliyyət daşıyırsınız.",
+  "studio.aiNotice.cancel": "Ləğv et",
+  "studio.aiNotice.confirm": "Başa düşürəm, yaradıram"
+}

@@ -40,13 +40,13 @@ const report = JSON.parse(readFileSync(
   "utf8",
 )) as FilterLibraryReport;
 const repositorySource = readFileSync(
-  new URL("../../src/domains/creator/filter/studio-filter-library-sqlite-repository.ts",
+  new URL("../../apps/web/src/domains/creator/filter/studio-filter-library-sqlite-repository.ts",
     import.meta.url,
   ),
   "utf8",
 );
 const dialogSource = readFileSync(
-  new URL("../../src/domains/creator/filter/StudioFilterDialog.tsx", import.meta.url),
+  new URL("../../apps/web/src/domains/creator/filter/StudioFilterDialog.tsx", import.meta.url),
   "utf8",
 );
 

@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Generative AI Image Guide",
+  "studio.aiNotice.description": "Тази функция създава изображения с помощта на генериращ AI (OpenAI). Значките за AI се показват върху създадените резултати.",
+  "studio.aiNotice.ruleCopyright": "Ние не създаваме чужди произведения, герои или лица на реални хора.",
+  "studio.aiNotice.ruleAccuracy": "Резултатите от AI може да са неточни или различни от предвиденото.",
+  "studio.aiNotice.ruleResponsibility": "Вие носите отговорност за използването на изображенията, които създавате.",
+  "studio.aiNotice.cancel": "Отказ",
+  "studio.aiNotice.confirm": "Разбирам, създавай"
+}

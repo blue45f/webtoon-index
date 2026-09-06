@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "আমার ফন্ট",
+  "studio.customFonts.importButton": "ফাইল থেকে আমদানি করুন",
+  "studio.customFonts.importing": "পরীক্ষা করা হচ্ছে...",
+  "studio.customFonts.importAria": "ফন্ট ফাইল আমদানি করুন",
+  "studio.customFonts.storageAria": "ফন্ট লাইব্রেরি ব্যবহার",
+  "studio.customFonts.emptyTitle": "কোন ফন্ট এখনো অন্তর্ভুক্ত করা হয়.",
+  "studio.customFonts.unknownFileName": "কোন ফাইলের নাম নেই",
+  "studio.customFonts.apply": "আবেদন করুন",
+  "studio.customFonts.applyToText": "নির্বাচিত পাঠ্যে এই ফন্টটি প্রয়োগ করুন",
+  "studio.customFonts.selectTextFirst": "প্রথমে টেক্সট বা স্পিচ বাবল নির্বাচন করুন",
+  "studio.customFonts.delete": "ফন্ট মুছে দিন"
+}

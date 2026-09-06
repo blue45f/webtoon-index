@@ -1,0 +1,17 @@
+{
+  "ageGate.birthYearLabel": "出生年份",
+  "ageGate.birthDateLabel": "出生日期",
+  "ageGate.yearSuffix": "",
+  "ageGate.monthSuffix": "",
+  "ageGate.daySuffix": "",
+  "ageGate.birthYearPlaceholder": "年",
+  "ageGate.birthMonthPlaceholder": "月",
+  "ageGate.description": "输入您的出生日期以验证您已年满 19 岁。",
+  "ageGate.birthDayLabel": "生日",
+  "ageGate.birthDayPlaceholder": "天",
+  "ageGate.cancel": "取消",
+  "ageGate.confirm": "确认",
+  "ageGate.title": "成人内容检查",
+  "ageGate.deniedMessage": "您不符合年龄要求。",
+  "ageGate.birthMonthLabel": "出生月份"
+}

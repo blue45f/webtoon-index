@@ -4,20 +4,20 @@ on:
   push:
     branches: [main]
     paths:
-      - 'src/domains/creator/brush/**'
-      - 'src/domains/creator/filter/**'
-      - 'src/domains/creator/studio-image-filter*'
-      - 'src/domains/creator/studio-detail*'
+      - 'apps/web/src/domains/creator/brush/**'
+      - 'apps/web/src/domains/creator/filter/**'
+      - 'apps/web/src/domains/creator/studio-image-filter*'
+      - 'apps/web/src/domains/creator/studio-detail*'
       - 'scripts/verify-studio-brushes.mts'
       - 'scripts/verify-studio-filter-dialog.mts'
       - '.github/workflows/studio-brush-filter-stability.yml'
   pull_request:
     branches: [main]
     paths:
-      - 'src/domains/creator/brush/**'
-      - 'src/domains/creator/filter/**'
-      - 'src/domains/creator/studio-image-filter*'
-      - 'src/domains/creator/studio-detail*'
+      - 'apps/web/src/domains/creator/brush/**'
+      - 'apps/web/src/domains/creator/filter/**'
+      - 'apps/web/src/domains/creator/studio-image-filter*'
+      - 'apps/web/src/domains/creator/studio-detail*'
       - 'scripts/verify-studio-brushes.mts'
       - 'scripts/verify-studio-filter-dialog.mts'
       - '.github/workflows/studio-brush-filter-stability.yml'
@@ -54,13 +54,13 @@ jobs:
           mkdir -p /tmp/studio-stability-unit-evidence
           git rev-parse HEAD > /tmp/studio-stability-unit-evidence/commit.txt
           pnpm exec vitest run \
-            src/domains/creator/studio-image-filter-worker-client.test.ts \
-            src/domains/creator/studio-image-filter-worker-stability.test.ts \
-            src/domains/creator/brush/studio-brush-r8-grain-hydrator.test.ts \
-            src/domains/creator/brush/studio-brush-r8-png-decoder.test.ts \
-            src/domains/creator/brush/studio-brush-browser-harness-boundary.test.ts \
-            src/domains/creator/studio-detail.test.ts \
-            src/domains/creator/studio-detail-median-stability.test.ts \
+            apps/web/src/domains/creator/studio-image-filter-worker-client.test.ts \
+            apps/web/src/domains/creator/studio-image-filter-worker-stability.test.ts \
+            apps/web/src/domains/creator/brush/studio-brush-r8-grain-hydrator.test.ts \
+            apps/web/src/domains/creator/brush/studio-brush-r8-png-decoder.test.ts \
+            apps/web/src/domains/creator/brush/studio-brush-browser-harness-boundary.test.ts \
+            apps/web/src/domains/creator/studio-detail.test.ts \
+            apps/web/src/domains/creator/studio-detail-median-stability.test.ts \
             2>&1 | tee /tmp/studio-stability-unit-evidence/tests.log
       - name: Preserve focused regression results
         if: always()

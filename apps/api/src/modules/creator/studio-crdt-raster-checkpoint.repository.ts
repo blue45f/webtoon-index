@@ -2,7 +2,7 @@ import { createHash, timingSafeEqual } from "node:crypto";
 
 import { and, eq, inArray } from "drizzle-orm";
 
-import { canonicalStudioRasterJson } from "../../../../../lib/studio-crdt-raster-ops";
+import { canonicalStudioRasterJson } from "../../../../web/src/shared/lib/studio-crdt-raster-ops";
 import {
   creatorWorkCrdtUpdateReceipts,
   creatorWorkCrdtUpdates,
@@ -19,8 +19,8 @@ import {
 } from "./studio-crdt.repository";
 
 import type { DrizzleStudioCrdtTransaction, StudioCrdtHydrationState } from "./studio-crdt.repository";
-import type { StudioRasterCompactionOrderKey } from "../../../../../lib/studio-crdt-raster-compaction";
-import type { StudioRasterAssetReference } from "../../../../../lib/studio-crdt-raster-ops";
+import type { StudioRasterCompactionOrderKey } from "../../../../web/src/shared/lib/studio-crdt-raster-compaction";
+import type { StudioRasterAssetReference } from "../../../../web/src/shared/lib/studio-crdt-raster-ops";
 
 export const STUDIO_CRDT_RASTER_CHECKPOINT_REPOSITORY = Symbol(
   "STUDIO_CRDT_RASTER_CHECKPOINT_REPOSITORY"

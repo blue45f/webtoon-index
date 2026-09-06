@@ -50,17 +50,17 @@ import { join } from "node:path";
 import { chromium, type Browser, type BrowserContext, type Page } from "@playwright/test";
 import { decodeJpeg, decodePng } from "image-js";
 
-import { studioBrushPresetUsesIntentionalDiscreteCarrier } from "../src/domains/creator/brush/studio-brush-carrier-quality";
+import { studioBrushPresetUsesIntentionalDiscreteCarrier } from "../apps/web/src/domains/creator/brush/studio-brush-carrier-quality";
 import {
   STUDIO_ERASER_BRUSH_CATALOG_ITEMS,
   STUDIO_LISTED_ALL_BRUSH_CATALOG_ITEMS,
   type StudioBrushCatalogItem,
-} from "../src/domains/creator/brush/studio-brush-catalog";
-import { studioBrushPackDescriptorById } from "../src/domains/creator/brush/studio-brush-pack-index";
-import { materializeStudioBrushCatalogSelection } from "../src/domains/creator/brush/studio-brush-selection";
-import { classifyStudioDryMediaCatalogIdV1 } from "../src/domains/creator/brush/studio-dry-media-anisotropic-grain-v1";
-import { studioWetInkBrushDepositsPigment } from "../src/domains/creator/brush/studio-wet-ink-brush-runtime";
-import { STUDIO_APP_SETTINGS_STORAGE_KEY } from "../src/domains/creator/studio-app-settings";
+} from "../apps/web/src/domains/creator/brush/studio-brush-catalog";
+import { studioBrushPackDescriptorById } from "../apps/web/src/domains/creator/brush/studio-brush-pack-index";
+import { materializeStudioBrushCatalogSelection } from "../apps/web/src/domains/creator/brush/studio-brush-selection";
+import { classifyStudioDryMediaCatalogIdV1 } from "../apps/web/src/domains/creator/brush/studio-dry-media-anisotropic-grain-v1";
+import { studioWetInkBrushDepositsPigment } from "../apps/web/src/domains/creator/brush/studio-wet-ink-brush-runtime";
+import { STUDIO_APP_SETTINGS_STORAGE_KEY } from "../apps/web/src/domains/creator/studio-app-settings";
 
 import { enabledStudioHistoryControl } from "./lib/studio-verify-history-controls.mjs";
 import {

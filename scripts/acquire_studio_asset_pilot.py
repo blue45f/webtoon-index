@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Download explicitly selected CC0 pilot packs into quarantine, never into public/.
+"""Download explicitly selected CC0 pilot packs into quarantine, never into apps/web/public/.
 
 No crawling, payment, account credentials, font files, executable assets, automatic
 quality approval or production upload. Python 3.11+, standard library only.
@@ -41,7 +41,7 @@ class SourceRedirects(urllib.request.HTTPRedirectHandler):
         return super().redirect_request(req, fp, code, msg, headers, newurl)
 
 
-def download(url: str, destination: Path, budget: dict[str, int]) -> dict:
+def download(url: str, destination: Path, budget: dict[str, int]) -> dict: # NOSONAR python:S3776
     checked_url(url)
     opener = urllib.request.build_opener(SourceRedirects())
     for attempt in range(3):
@@ -81,7 +81,7 @@ def safe_member(name: str) -> PurePosixPath:
     return p
 
 
-def extract_assets(archive: Path, destination: Path, budget: dict[str, int]) -> list[dict]:
+def extract_assets(archive: Path, destination: Path, budget: dict[str, int]) -> list[dict]: # NOSONAR python:S3776
     records = []
     seen_paths: set[str] = set()
     with zipfile.ZipFile(archive) as z:

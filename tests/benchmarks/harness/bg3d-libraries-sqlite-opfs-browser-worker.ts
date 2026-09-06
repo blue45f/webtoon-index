@@ -232,13 +232,13 @@ async function loadProductModules() {
     localDatabase,
     runtime,
   ] = await Promise.all([
-    import("../../../src/domains/creator/bg3d/bg3d-model-library.ts"),
-    import("../../../src/domains/creator/bg3d/bg3d-template-library.test.ts"),
-    import("../../../src/domains/creator/bg3d/studio-bg3d-asset-metadata-store.ts"),
-    import("../../../src/domains/creator/bg3d/studio-bg3d-scene-document.test.ts"),
-    import("../../../src/domains/creator/bg3d/studio-bg3d-libraries-sqlite-opfs-authority.ts"),
-    import("../../../src/domains/creator/studio-local-database"),
-    import("../../../src/domains/creator/studio-local-database-runtime"),
+    import("../../../apps/web/src/domains/creator/bg3d/bg3d-model-library.ts"),
+    import("../../../apps/web/src/domains/creator/bg3d/bg3d-template-library.test.ts"),
+    import("../../../apps/web/src/domains/creator/bg3d/studio-bg3d-asset-metadata-store.ts"),
+    import("../../../apps/web/src/domains/creator/bg3d/studio-bg3d-scene-document.test.ts"),
+    import("../../../apps/web/src/domains/creator/bg3d/studio-bg3d-libraries-sqlite-opfs-authority.ts"),
+    import("../../../apps/web/src/domains/creator/studio-local-database"),
+    import("../../../apps/web/src/domains/creator/studio-local-database-runtime"),
   ]);
   return { models, templates, metadata, scene, authority, localDatabase, runtime };
 }

@@ -1,0 +1,1507 @@
+@import "tailwindcss";
+
+/* Studio 모바일 앱 셸은 페이지가 아니라 캔버스 스크롤 영역만 움직인다. React가 사이트
+   헤더·푸터를 언마운트하고 이 속성은 배경 문서의 바운스/스크롤 체이닝까지 막는다. */
+html[data-studio-mobile-immersive="true"],
+html[data-studio-mobile-immersive="true"] body,
+html[data-studio-canvas-only="true"],
+html[data-studio-canvas-only="true"] body {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+/* 창작 편집기는 작은 버튼의 눌림 축소가 시선을 캔버스에서 떼고 펜/터치 조작의
+   정밀 피드백과도 충돌한다. Studio 범위에서만 transform 기반 클릭 효과를 끄고,
+   일반 사이트의 버튼·카드 피드백은 그대로 유지한다. 필요한 특수 조작은 명시적으로
+   data-studio-allow-press-feedback="true"를 달아 다시 허용할 수 있다. */
+[data-studio-editor="true"] button:active:not([data-studio-allow-press-feedback="true"]) {
+  transform: none !important;
+}
+
+/* ============================================================
+   툰스펙트럼 — 활자와 스펙트럼 (Type & Spectrum)
+   따뜻한 잉크-블랙 위의 에디토리얼 다크. OKLCH 토큰.
+   ============================================================ */
+
+@theme {
+  /* 중립 — 따뜻한 잉크(hue ~70), #000/#fff 금지 */
+  --color-canvas: oklch(0.155 0.008 70);
+  --color-panel: oklch(0.185 0.009 68);
+  --color-card: oklch(0.208 0.01 66);
+  --color-raised: oklch(0.247 0.011 64);
+  --color-line: oklch(0.305 0.012 64);
+  --color-line-strong: oklch(0.42 0.013 64);
+  --color-fg: oklch(0.95 0.01 85);
+  --color-fg-2: oklch(0.745 0.012 78); /* 실측 8.6:1(canvas)·7.1:1(raised) — AA 여유 */
+  --color-fg-3: oklch(0.655 0.012 76); /* 실측(0.64) 4.8:1(raised)로 AA 통과지만 마진이 얇아 0.655로 상향(≈5.1:1) */
+
+  /* 악센트 — persimmon(감/주홍). 라이브·액티브·프라이머리 전용 */
+  --color-accent: oklch(0.72 0.185 42);
+  --color-accent-2: oklch(0.66 0.2 38);
+  --color-accent-soft: oklch(0.72 0.185 42 / 0.14);
+  --color-on-accent: oklch(0.2 0.02 60);
+
+  /* 보조·시맨틱 */
+  --color-cool: oklch(0.8 0.11 232);
+  --color-good: oklch(0.8 0.15 150);
+  --color-warn: oklch(0.82 0.15 80);
+  /* `warning`/`warning-soft`은 warn 의 별칭 — 스튜디오 컴포넌트들이 두 이름을 혼용해
+     text-warning/bg-warning-soft 류 17곳이 무색으로 렌더되던 회귀를 복구한다. */
+  --color-warning: var(--color-warn);
+  --color-warning-soft: oklch(0.82 0.15 80 / 0.14);
+  --color-bad: oklch(0.66 0.2 25);
+
+  /* 타이포 — grotesque=데이터/serif=문학/sans=한국어UI */
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", system-ui, sans-serif;
+  --font-display: var(--font-space-grotesk), "Space Grotesk", var(--font-sans);
+  --font-serif: "Nanum Myeongjo", "Pretendard Variable", ui-serif, Georgia, serif;
+
+  /* 모션 */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* 반경 */
+  --radius-xl: 1.1rem;
+  --radius-2xl: 1.4rem;
+
+  /* 애니메이션 */
+  --animate-shimmer: shimmer 1.6s linear infinite;
+  --animate-fade-up: fade-up 0.5s var(--ease-out-expo) both;
+  --animate-fade-in: fade-in 0.18s var(--ease-out-expo) both;
+  --animate-hud-in: hud-in 0.2s var(--ease-out-expo) both;
+  --animate-pulse-soft: pulse-soft 2.4s ease-in-out infinite;
+}
+
+/* ── 주간(light) 테마 — 따뜻한 종이 위 잉크. persimmon 악센트·온도(hue~70) 유지. ── */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --color-canvas: oklch(0.972 0.008 85);
+  --color-panel: oklch(0.992 0.006 85);
+  --color-card: oklch(0.998 0.004 85);
+  --color-raised: oklch(0.945 0.009 82);
+  --color-line: oklch(0.88 0.012 80);
+  --color-line-strong: oklch(0.78 0.014 78);
+  --color-fg: oklch(0.26 0.02 60);
+  --color-fg-2: oklch(0.42 0.018 66); /* 실측 7.8:1(canvas)·7.2:1(raised) — AA 여유 */
+  --color-fg-3: oklch(0.49 0.016 70); /* 실측 5.8:1(canvas)·5.3:1(raised) — warm-white card 에서 작은 본문도 AA 여유 */
+  --color-accent: oklch(0.5 0.2 41); /* 밝은 배경 위 강조 텍스트(타이틀·링크)와 흰글자 버튼 양쪽 WCAG AA(≈4.5:1) 위해 진하게 */
+  --color-accent-2: oklch(0.47 0.2 36);
+  --color-accent-soft: oklch(0.62 0.2 40 / 0.12);
+  --color-on-accent: oklch(0.99 0.01 85);
+  --color-cool: oklch(0.52 0.13 232);
+  --color-good: oklch(0.5 0.15 150);
+  --color-warn: oklch(0.5 0.15 80);
+  --color-warning: var(--color-warn);
+  --color-warning-soft: oklch(0.5 0.15 80 / 0.14);
+  --color-bad: oklch(0.51 0.21 25);
+}
+
+/* ── 고대비 선호(prefers-contrast: more) — OS 접근성 설정 존중. ──────────────
+   경계선을 또렷하게 올리고 muted 텍스트를 AAA(≥7:1) 수준으로 상향한다. */
+@media (prefers-contrast: more) {
+  :root {
+    --color-line: oklch(0.46 0.012 64);
+    --color-line-strong: oklch(0.56 0.013 64);
+    --color-fg-2: oklch(0.84 0.012 78); /* 실측 9.9:1(raised) */
+    --color-fg-3: oklch(0.76 0.012 76); /* 실측 7.5:1(raised) — AAA */
+    --color-accent-soft: oklch(0.72 0.185 42 / 0.24);
+  }
+  :root[data-theme="light"] {
+    --color-line: oklch(0.7 0.012 80);
+    --color-line-strong: oklch(0.58 0.014 78);
+    --color-fg-2: oklch(0.34 0.018 66); /* 실측 10.0:1(raised) */
+    --color-fg-3: oklch(0.4 0.016 70); /* 실측 7.9:1(raised) — AAA */
+    --color-accent-soft: oklch(0.62 0.2 40 / 0.2);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hud-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+/* ── 시그니처 데이터 모션 ──────────────────────────────── */
+
+/* 도넛 스윕(시계방향 그리기) — conic 각도를 애니메이션. 레이아웃 무관. */
+@property --donut-sweep {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+@keyframes donut-sweep {
+  from {
+    --donut-sweep: 0deg;
+  }
+  to {
+    --donut-sweep: 360deg;
+  }
+}
+
+/* 라인 차트 노드-드로우 — stroke-dashoffset 로 좌→우 그리기. */
+@keyframes draw-line {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* 데이터 도트 팝-인 (transform/opacity 만). */
+@keyframes dot-in {
+  from {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 히어로 배너 자동회전 진행 표시(scaleX). 슬라이드 전환 시 key 변경으로 재시작. */
+@keyframes hero-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* 히어로 persimmon 글로 — 아주 느린 호흡(브랜드 맥동). warm-ink 축 유지, opacity/scale 만. */
+@keyframes hero-bloom {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.06);
+  }
+}
+
+/* 헤드라인 라인 진입 — clip 마스크로 아래에서 위로 드러난다(에디토리얼 와이프). */
+@keyframes line-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(0.5em);
+    clip-path: inset(0 0 105% 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    clip-path: inset(0 0 -15% 0);
+  }
+}
+
+/* 스펙트럼 틱 시머 — 시그니처 스펙트럼 바를 따라 흐르는 미세한 하이라이트. */
+@keyframes spectrum-sheen {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+/* 스펙트럼 라인 fill-in — 좌→우로 그려지는 진입(scaleX origin-left). */
+@keyframes spectrum-grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* 라우트 진입 — 페이지는 또렷하게 안착하고, 얇은 스펙트럼 광막이 대각선으로 한 번 훑는다. */
+@keyframes route-stage-in {
+  from {
+    opacity: 0.35;
+    transform: translateY(18px) scale(0.992);
+    filter: blur(4px) saturate(1.25);
+  }
+  to {
+    /* transform/filter를 identity 값(translateY(0) scale(1) 등)이 아니라 리터럴 none으로 끝내야 한다 —
+       animation-fill-mode: both가 이 최종 프레임을 애니메이션 종료 후에도 계속 유지하는데, transform이나
+       filter가 none이 아니면(설령 identity여도) 이 요소가 새로운 containing block이 되어 자손의 모든
+       position: fixed가 뷰포트가 아니라 이 요소(라우트 전체 콘텐츠, 뷰포트보다 훨씬 길 수 있음) 기준으로
+       배치된다 — 스튜디오의 모바일 바텀시트가 화면 밖 엉뚱한 위치(문서 하단)에 렌더되던 버그의 원인. */
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+@keyframes route-spectrum-wipe {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) skewX(-18deg);
+  }
+  18% {
+    opacity: 0.72;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(380%, 0, 0) skewX(-18deg);
+  }
+}
+
+@keyframes dialog-materialize {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+    filter: blur(7px) saturate(1.25);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    filter: blur(0) saturate(1);
+  }
+}
+
+@keyframes sheet-rise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 48px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* 히어로 표지 Ken Burns — 배경 표지 레이어가 아주 느리게 확대·팬(왕복). scale 1.1 시작이라
+   비애니메이션(reduced-motion) 기본 상태(scale-110)와 이어지고, 팬 폭(≤2%)은 확대 여유(≥5%)
+   안이라 컨테이너(overflow-hidden) 밖 여백이 드러나지 않는다. transform 만 사용(합성 전용). */
+@keyframes kenburns-drift {
+  from {
+    transform: scale(1.1) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.18) translate3d(-1.8%, 1.2%, 0);
+  }
+}
+
+/* 랭킹 Top3 메달 글로 — 순위 배지가 은은히 맥동. 톤은 --medal-glow(금/은/동)로 행에서 주입.
+   box-shadow 만 애니메이션(레이아웃 무관). 전역 reduced-motion 가드가 무한 반복을 무효화한다. */
+@keyframes rank-medal-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 2px 0 transparent;
+  }
+  50% {
+    box-shadow: 0 0 13px 2px var(--medal-glow, oklch(0.72 0.185 42 / 0.4));
+  }
+}
+
+/* 카드 표지 호버 빛 스윕 — 비스듬한 반투명 띠가 표지를 좌→우로 한 번 스친다.
+   group-hover(+motion-safe)로만 발화 — Tailwind v4 hover 계열은 (hover: hover) 게이트라
+   터치 기기에선 붙지 않는다. 띠 폭 45% 기준 translateX(340%)면 컨테이너 오른쪽 밖까지 완주. */
+@keyframes card-sheen {
+  from {
+    transform: translateX(0) skewX(-18deg);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(340%) skewX(-18deg);
+    opacity: 1;
+  }
+}
+
+/* ============================================================
+   Base
+   ============================================================ */
+@layer base {
+  html {
+    color-scheme: dark;
+    -webkit-text-size-adjust: 100%;
+    scrollbar-color: var(--color-line-strong) transparent;
+    /* 가로 오버플로 전역 가드 — body 의 overflow-x 는 스크롤포트(html)로 전파되지 않아
+       단독으로는 가로 스크롤을 막지 못한다. html 에 clip 을 둬 어떤 stray 오버플로도
+       가로 스크롤바를 만들지 못하게 한다(clip 은 hidden 과 달리 스크롤 컨테이너를 만들지
+       않아 자손의 position:sticky 를 보존). */
+    overflow-x: clip;
+  }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: clip;
+  }
+
+  ::selection {
+    background-color: oklch(0.72 0.185 42 / 0.3);
+    color: var(--color-fg);
+  }
+
+  /* 포커스 가시성 — 접근성 */
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* 얇은 스크롤바 (절제) */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-line);
+    border-radius: 99px;
+    border: 3px solid var(--color-canvas);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-line-strong);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* ============================================================
+   시그니처 유틸리티
+   ============================================================ */
+
+/* 라우터 전환 효과. pseudo-element는 포인터를 가로채지 않고 1회만 재생된다. */
+.route-stage {
+  position: relative;
+  isolation: isolate;
+  min-width: 0;
+  animation: route-stage-in 560ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* route-stage-in의 fill-mode(both)가 애니메이션 종료 후에도 to 프레임의 계산된 transform/filter를
+   유지하는데(키프레임에 none이라 적어도 Chrome이 identity matrix로 정규화해 반환), transform/filter가
+   none이 아닌 한 이 요소는 계속 새 containing block이 되어 자손의 position: fixed를 뷰포트가 아니라
+   이 요소(라우트 전체 콘텐츠 — 뷰포트보다 훨씬 길 수 있음) 기준으로 밀어버린다. AppRouter가
+   route-stage-in의 animationend에서 이 클래스를 붙여 애니메이션 자체를 끊고 transform/filter를
+   확실히 none으로 되돌린다. ::before(스펙트럼 와이프)는 .route-stage 클래스 자체로 계속 붙어 있으니
+   영향 없음. */
+.route-stage--settled {
+  animation: none;
+  transform: none;
+  filter: none;
+}
+
+/* 편집기는 캔버스 위치를 즉시 안정시키고 라우트 장식이 첫 스트로크를 덮지 않게 한다. */
+.route-stage.route-stage--instant::before {
+  content: none;
+  animation: none;
+}
+
+.route-stage::before {
+  content: "";
+  position: fixed;
+  z-index: 80;
+  top: -18vh;
+  bottom: -18vh;
+  left: -48vw;
+  width: 42vw;
+  min-width: 180px;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    oklch(0.72 0.185 42 / 0.34) 22%,
+    oklch(0.78 0.16 290 / 0.28) 50%,
+    oklch(0.8 0.11 232 / 0.24) 72%,
+    transparent
+  );
+  filter: blur(16px);
+  animation: route-spectrum-wipe 760ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* 공통 모달/팝업 진입. 바텀 시트는 같은 효과를 아래 방향 문법으로 특화한다. */
+[role="dialog"][aria-modal="true"] {
+  transform-origin: 50% 35%;
+  animation: dialog-materialize 420ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+[role="dialog"][aria-modal="true"][data-popup-kind="sheet"] {
+  transform-origin: 50% 100%;
+  animation-name: sheet-rise;
+  animation-duration: 460ms;
+}
+
+/* 숫자는 tabular */
+@utility tnum {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* ledger 그리드 해어라인 — 색인/대장 텍스처 */
+@utility bg-ledger {
+  background-image:
+    linear-gradient(to right, oklch(0.95 0.01 85 / 0.022) 1px, transparent 1px),
+    linear-gradient(to bottom, oklch(0.95 0.01 85 / 0.022) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* 미세 상단 하이라이트 (다크 표면 깊이감) */
+@utility surface-hl {
+  box-shadow: inset 0 1px 0 0 oklch(1 0 0 / 0.04);
+}
+
+/* 필름 그레인 노이즈 — 타이포그래픽 커버의 에디토리얼 질감 */
+@utility noise {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* 디스플레이 넘버럴 */
+@utility numeral {
+  font-family: var(--font-display);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+/* 영문 라벨 (대문자 트래킹) */
+@utility eyebrow {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 600;
+  font-size: 0.7rem;
+}
+
+/* 스켈레톤 시머 */
+@utility skeleton {
+  background: linear-gradient(
+    100deg,
+    var(--color-raised) 30%,
+    oklch(0.3 0.011 64) 50%,
+    var(--color-raised) 70%
+  );
+  background-size: 200% 100%;
+  animation: var(--animate-shimmer);
+  border-radius: 0.5rem;
+}
+
+/* 텍스트 밸런스/클램프 */
+@utility text-balance {
+  text-wrap: balance;
+}
+
+/* 스크롤 진입 리빌 — "이미 보이는 기본 상태를 강화"하는 방식.
+   기본은 opacity:1 (콘텐츠는 항상 보인다). 스크롤 타임라인을 지원하고 동작 허용 시에만,
+   진입 구간(entry) 동안 살짝 아래→제자리로 끌어올리는 진입 모션을 *추가* 입힌다.
+   타임라인이 못 돌거나(headless·비스크롤·미지원) 동작 최소화 선호 시엔 그대로 보인다 — 빈 화면 방지. */
+.reveal-children > * {
+  opacity: 1;
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal-children > * {
+      /* forwards 만(both/backwards 금지) — 진입 전에는 기본 상태(opacity:1)를 유지하고
+         진입 구간을 지난 뒤에만 최종 프레임을 굳힌다. 진입 전 backwards-fill 로 인한
+         "영구 투명" 빈 화면을 방지한다. */
+      animation: reveal-rise linear forwards;
+      animation-timeline: view();
+      animation-range: entry 5% entry 60%;
+    }
+  }
+}
+@keyframes reveal-rise {
+  from {
+    opacity: 0.001;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 가로 스크롤 레일 (스크롤바 숨김) */
+@utility rail {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.rail::-webkit-scrollbar {
+  display: none;
+}
+
+/* 에디토리얼 헤더 리드(prose) — 좁은 화면(<640px)에선 2줄로 클램프해 콘텐츠를 폴드 위로 끌어올리고,
+   sm+ 에선 전문을 펼친다. 페이지마다 반복되는 무거운 산문 헤더가 첫 360×760 뷰포트를 다 잡아먹는
+   문제(콘텐츠 first 약화)를 해소한다. 구조는 그대로 두고 모바일에서만 시각적으로 압축. */
+@utility lede {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+@media (min-width: 640px) {
+  .lede {
+    display: block;
+    overflow: visible;
+    -webkit-line-clamp: unset;
+  }
+}
+
+/* ============================================================
+   Studio draw-app chrome v3 — refined commercial surfaces
+   Goal: less “dev tool”, more CSP/Procreate/Sketchbook polish.
+   Still warm-ink + persimmon; canvas remains the hero.
+   ============================================================ */
+[data-studio-editor="true"] {
+  --studio-chrome-h: 2.75rem;
+  --studio-rail-w: 3rem;
+  --studio-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --studio-chrome-glow: inset 0 1px 0 oklch(0.97 0.012 85 / 0.06);
+  --studio-chrome-edge: oklch(0.34 0.014 64 / 0.75);
+  --studio-surface-0: oklch(0.155 0.008 70);
+  --studio-surface-1: oklch(0.178 0.009 68);
+  --studio-surface-2: oklch(0.205 0.01 66);
+  --studio-surface-3: oklch(0.235 0.011 64);
+  /* Stacking scale — see studio-z-index.ts */
+  --studio-z-canvas-hud: 10;
+  --studio-z-tool-rail: 20;
+  --studio-z-tool-belt: 30;
+  --studio-z-options: 40;
+  --studio-z-menubar: 50;
+  --studio-z-menubar-menu: 100;
+  --studio-z-tool-popover: 70;
+  --studio-z-modal: 80;
+  --studio-z-confirm: 90;
+  --studio-z-workspace: 100;
+  --studio-z-help: 110;
+  color-scheme: dark;
+  font-feature-settings: "ss01" on, "cv11" on;
+  /* Own stacking context so studio menus never fight site header isolation rules. */
+  isolation: isolate;
+  position: relative;
+  z-index: 1;
+}
+
+/* Site route-stage rainbow band must not paint over studio menus (was fixed z-80). */
+html[data-studio-app="true"] .route-stage::before,
+body[data-studio-app="true"] .route-stage::before,
+[data-studio-app="true"] .route-stage::before {
+  display: none !important;
+}
+
+/* Chrome layer stacking — menubar MUST exceed options or File menu paints under the strip */
+[data-studio-tool-belt="true"] {
+  z-index: var(--studio-z-tool-belt, 30);
+}
+[data-studio-main-menu="true"] {
+  position: relative;
+  z-index: 1;
+}
+/* Portaled main-menu panels attach to body — must beat chrome without fighting site isolation */
+[data-studio-main-menu-panel="true"] {
+  z-index: var(--studio-z-workspace, 100) !important;
+}
+/* Export / project panels also portal to body (menubar overflow clips absolute children). */
+[data-studio-export-menu-panel="true"],
+[data-studio-project-actions-menu="true"] {
+  z-index: var(--studio-z-workspace, 100) !important;
+}
+/* Fixed tool popovers (assets / bg / AI) */
+[data-studio-tool-popover="true"] {
+  z-index: var(--studio-z-tool-popover, 70) !important;
+}
+
+/* Soften default editor text rendering */
+[data-studio-editor="true"],
+[data-studio-app-shell="true"] {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+[data-studio-app-menubar="true"] {
+  position: relative;
+  z-index: var(--studio-z-menubar, 50);
+  background:
+    linear-gradient(
+      180deg,
+      oklch(0.218 0.011 66 / 0.98) 0%,
+      oklch(0.178 0.009 68 / 0.99) 100%
+    );
+  border-bottom-color: var(--studio-chrome-edge);
+  box-shadow:
+    var(--studio-chrome-glow),
+    0 1px 0 oklch(0.1 0.01 70 / 0.35);
+}
+
+[data-studio-draw-options="true"],
+[data-studio-select-options="true"] {
+  position: relative;
+  z-index: var(--studio-z-options, 40);
+  background:
+    linear-gradient(
+      180deg,
+      oklch(0.208 0.0105 67 / 0.97) 0%,
+      oklch(0.168 0.009 68 / 0.98) 100%
+    );
+  border-bottom-color: oklch(0.32 0.013 64 / 0.7);
+  box-shadow: var(--studio-chrome-glow);
+}
+
+/* Tool identity — refined pill */
+[data-studio-tool-identity="true"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 2rem;
+  padding: 0.2rem 0.65rem 0.2rem 0.3rem;
+  border-radius: 0.7rem;
+  border: 1px solid oklch(0.38 0.014 64 / 0.55);
+  background:
+    linear-gradient(
+      145deg,
+      oklch(0.255 0.012 64 / 0.85) 0%,
+      oklch(0.2 0.01 66 / 0.65) 100%
+    );
+  box-shadow:
+    inset 0 1px 0 oklch(0.97 0.01 85 / 0.07),
+    0 1px 2px oklch(0.08 0.01 70 / 0.25);
+}
+
+[data-studio-tool-rail="true"] {
+  position: relative;
+  z-index: var(--studio-z-tool-rail, 20);
+  background:
+    linear-gradient(
+      180deg,
+      oklch(0.192 0.0095 68) 0%,
+      oklch(0.162 0.009 68) 100%
+    );
+  border-right-color: var(--studio-chrome-edge);
+  box-shadow:
+    inset -1px 0 0 oklch(0.1 0.01 70 / 0.22),
+    2px 0 16px oklch(0.08 0.01 70 / 0.12);
+}
+
+/* Floating status — premium glass (Sketchbook / Concepts HUD) */
+[data-studio-status-bar="true"] {
+  z-index: var(--studio-z-canvas-hud, 10);
+  backdrop-filter: blur(18px) saturate(1.2);
+  -webkit-backdrop-filter: blur(18px) saturate(1.2);
+  background:
+    linear-gradient(
+      160deg,
+      oklch(0.24 0.012 66 / 0.88) 0%,
+      oklch(0.17 0.009 68 / 0.9) 100%
+    );
+  border: 1px solid oklch(0.42 0.014 64 / 0.55);
+  box-shadow:
+    0 12px 40px oklch(0.06 0.01 70 / 0.55),
+    0 0 0 1px oklch(0.1 0.01 70 / 0.25),
+    inset 0 1px 0 oklch(0.97 0.01 85 / 0.08);
+}
+
+/* A wrapped HUD can cover several canvas rows on phones. Keep it one line and avoid a costly
+   full-surface backdrop pass while the artist is drawing on a thermally constrained device. */
+@media (max-width: 639px) {
+  [data-studio-status-bar="true"] {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: oklch(0.185 0.009 68 / 0.98);
+    box-shadow:
+      0 4px 18px oklch(0.06 0.01 70 / 0.38),
+      inset 0 1px 0 oklch(0.97 0.01 85 / 0.06);
+  }
+}
+
+/* Krita/Fresco options cluster — glass tool groups */
+[data-studio-draw-options="true"] .studio-opt-cluster,
+[data-studio-quick-actions="true"].studio-opt-cluster,
+.studio-opt-cluster {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0.15rem;
+  border-radius: 0.75rem;
+  border: 1px solid oklch(0.36 0.013 64 / 0.55);
+  background:
+    linear-gradient(
+      160deg,
+      oklch(0.23 0.011 66 / 0.55) 0%,
+      oklch(0.18 0.009 68 / 0.4) 100%
+    );
+  box-shadow: inset 0 1px 0 oklch(0.97 0.01 85 / 0.05);
+}
+
+/* CSP/Photopea dual color well */
+[data-studio-dual-color-well="true"] {
+  padding: 0.15rem 0.25rem 0.15rem 0.35rem;
+  border-radius: 0.75rem;
+  border: 1px solid oklch(0.36 0.013 64 / 0.45);
+  background: oklch(0.16 0.008 70 / 0.45);
+}
+[data-studio-color-stack="true"] {
+  filter: drop-shadow(0 1px 2px oklch(0.08 0.01 70 / 0.4));
+}
+
+/* Document title in Magma-style top bar */
+[data-studio-app-menubar="true"] h1 {
+  letter-spacing: -0.02em;
+  font-feature-settings: "ss01" on;
+}
+
+/* Commercial brush tray tiles (Picsart/Ibis/CSP) */
+[data-studio-brush-tray="true"] [data-studio-brush-chip] {
+  transition:
+    border-color 150ms var(--studio-ease),
+    background 150ms var(--studio-ease),
+    box-shadow 150ms var(--studio-ease),
+    transform 140ms var(--studio-ease);
+}
+[data-studio-brush-tray="true"] [data-studio-brush-chip]:hover:not([aria-selected="true"]) {
+  transform: translateY(-1px);
+}
+[data-studio-brush-tray="true"] [data-studio-brush-chip][aria-selected="true"] {
+  transform: translateY(0);
+}
+
+/* Bubble style visual grid */
+[data-studio-bubble-style-presets="true"] [data-studio-bubble-swatch] {
+  overflow: visible;
+}
+
+/* ---- Creative UI graphic system v4 (Magma/CSP/Photopea/Canva surfaces) ---- */
+[data-studio-asset-grid="true"] {
+  scrollbar-width: thin;
+  scrollbar-color: oklch(0.4 0.02 70 / 0.45) transparent;
+}
+[data-studio-asset-card="true"]:active {
+  transform: translateY(0) scale(0.99);
+}
+[data-studio-layer-row="true"][data-studio-layer-selected="true"] {
+  background:
+    linear-gradient(
+      90deg,
+      oklch(0.72 0.185 42 / 0.14) 0%,
+      oklch(0.22 0.01 66 / 0.35) 100%
+    );
+}
+[data-studio-selection-badge="true"] {
+  letter-spacing: -0.01em;
+}
+[data-studio-empty-state="true"] {
+  box-shadow: inset 0 1px 0 oklch(0.97 0.01 85 / 0.04);
+}
+[data-studio-swatch-chip="true"][aria-pressed="true"],
+[data-studio-swatch-chip="true"].border-accent {
+  box-shadow:
+    0 1px 4px oklch(0.72 0.185 42 / 0.12),
+    inset 0 1px 0 oklch(0.97 0.01 85 / 0.06);
+}
+/* Popover chrome shared by tool groups */
+[data-studio-tool-popover="true"],
+[data-studio-menu-popover="true"] {
+  border-radius: 0.9rem;
+  border-color: oklch(0.36 0.013 64 / 0.65);
+  background:
+    linear-gradient(
+      180deg,
+      oklch(0.21 0.01 66 / 0.98) 0%,
+      oklch(0.175 0.009 68 / 0.99) 100%
+    );
+  box-shadow:
+    0 16px 48px oklch(0.06 0.01 70 / 0.55),
+    0 0 0 1px oklch(0.3 0.012 64 / 0.4),
+    inset 0 1px 0 oklch(0.97 0.01 85 / 0.05);
+  backdrop-filter: blur(12px) saturate(1.08);
+  -webkit-backdrop-filter: blur(12px) saturate(1.08);
+}
+/* Inspector dock polish */
+[data-studio-inspector="true"],
+[data-studio-layer-navigator="true"] {
+  background:
+    linear-gradient(
+      180deg,
+      oklch(0.185 0.009 68 / 0.98) 0%,
+      oklch(0.16 0.008 70 / 0.99) 100%
+    );
+}
+
+/* Rail active spine */
+[data-studio-tool-rail="true"] button[aria-pressed="true"] {
+  position: relative;
+}
+[data-studio-tool-rail="true"] button[aria-pressed="true"]::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 18%;
+  bottom: 18%;
+  width: 2.5px;
+  border-radius: 999px;
+  background: var(--color-accent);
+  box-shadow: 0 0 10px oklch(0.72 0.185 42 / 0.5);
+}
+[data-studio-tool-rail="true"] button {
+  transition:
+    background-color 160ms var(--studio-ease),
+    color 160ms var(--studio-ease),
+    transform 160ms var(--studio-ease),
+    box-shadow 160ms var(--studio-ease);
+}
+[data-studio-tool-rail="true"] button:hover:not(:disabled) {
+  transform: translateY(-0.5px);
+}
+[data-studio-tool-rail="true"] button:active:not(:disabled) {
+  transform: translateY(0.5px) scale(0.97);
+}
+
+/* Premium range track */
+[data-studio-editor="true"] input[type="range"].studio-range,
+[data-studio-draw-options="true"] input[type="range"] {
+  appearance: none;
+  height: 0.28rem;
+  border-radius: 999px;
+  background:
+    linear-gradient(
+      90deg,
+      oklch(0.72 0.185 42 / 0.35) 0%,
+      oklch(0.3 0.012 64) 42%,
+      oklch(0.26 0.012 64) 100%
+    );
+  outline: none;
+  transition: filter 150ms var(--studio-ease);
+}
+[data-studio-editor="true"] input[type="range"].studio-range:hover,
+[data-studio-draw-options="true"] input[type="range"]:hover {
+  filter: brightness(1.08);
+}
+[data-studio-editor="true"] input[type="range"].studio-range::-webkit-slider-thumb,
+[data-studio-draw-options="true"] input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 0.95rem;
+  height: 0.95rem;
+  border-radius: 999px;
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      oklch(0.98 0.01 85) 0%,
+      oklch(0.9 0.012 80) 100%
+    );
+  border: 2px solid oklch(0.72 0.185 42 / 0.7);
+  box-shadow:
+    0 2px 6px oklch(0.08 0.01 70 / 0.55),
+    inset 0 1px 0 oklch(1 0 0 / 0.45);
+  cursor: pointer;
+  transition: transform 120ms var(--studio-ease);
+}
+[data-studio-editor="true"] input[type="range"].studio-range::-webkit-slider-thumb:hover,
+[data-studio-draw-options="true"] input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.08);
+}
+[data-studio-editor="true"] input[type="range"].studio-range::-moz-range-thumb,
+[data-studio-draw-options="true"] input[type="range"]::-moz-range-thumb {
+  width: 0.95rem;
+  height: 0.95rem;
+  border-radius: 999px;
+  background: oklch(0.94 0.012 85);
+  border: 2px solid oklch(0.72 0.185 42 / 0.7);
+  cursor: pointer;
+}
+
+/* Main menu dropdown — soft panel */
+[data-studio-main-menu="true"] [role="menu"] {
+  border-radius: 0.9rem;
+  border-color: oklch(0.38 0.014 64 / 0.65) !important;
+  background:
+    linear-gradient(
+      180deg,
+      oklch(0.21 0.01 66 / 0.98) 0%,
+      oklch(0.175 0.009 68 / 0.99) 100%
+    ) !important;
+  box-shadow:
+    0 18px 50px oklch(0.06 0.01 70 / 0.62),
+    0 0 0 1px oklch(0.32 0.012 64 / 0.55),
+    inset 0 1px 0 oklch(0.97 0.01 85 / 0.06);
+  backdrop-filter: blur(14px) saturate(1.1);
+  -webkit-backdrop-filter: blur(14px) saturate(1.1);
+  padding: 0.4rem !important;
+}
+[data-studio-main-menu="true"] [role="menuitem"] {
+  border-radius: 0.55rem !important;
+  transition:
+    background-color 140ms var(--studio-ease),
+    color 140ms var(--studio-ease);
+}
+[data-studio-main-menu="true"] button[aria-haspopup="menu"] {
+  border-radius: 0.55rem;
+  letter-spacing: -0.01em;
+  transition:
+    background-color 140ms var(--studio-ease),
+    color 140ms var(--studio-ease),
+    box-shadow 140ms var(--studio-ease);
+}
+
+/* Grouped control clusters */
+.studio-opt-cluster {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  border-radius: 0.7rem;
+  border: 1px solid oklch(0.36 0.013 64 / 0.55);
+  background:
+    linear-gradient(
+      180deg,
+      oklch(0.24 0.011 66 / 0.72) 0%,
+      oklch(0.2 0.01 66 / 0.55) 100%
+    );
+  padding: 0.18rem;
+  box-shadow:
+    inset 0 1px 0 oklch(0.97 0.01 85 / 0.05),
+    0 1px 2px oklch(0.08 0.01 70 / 0.18);
+}
+
+/* HUD pills */
+[data-studio-hud-pill="true"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 1.55rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid oklch(0.4 0.014 64 / 0.5);
+  background:
+    linear-gradient(
+      180deg,
+      oklch(0.25 0.012 66 / 0.75) 0%,
+      oklch(0.2 0.01 66 / 0.65) 100%
+    );
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.015em;
+  box-shadow: inset 0 1px 0 oklch(0.97 0.01 85 / 0.05);
+}
+
+/* Brush tray tiles */
+[data-studio-brush-tray="true"] [role="option"] {
+  box-shadow: inset 0 1px 0 oklch(0.97 0.01 85 / 0.04);
+  transition:
+    background-color 140ms var(--studio-ease),
+    border-color 140ms var(--studio-ease),
+    color 140ms var(--studio-ease),
+    transform 140ms var(--studio-ease),
+    box-shadow 140ms var(--studio-ease);
+}
+[data-studio-brush-tray="true"] [role="option"]:hover {
+  transform: translateY(-1px);
+}
+[data-studio-brush-tray="true"] [role="option"][aria-selected="true"] {
+  box-shadow:
+    0 2px 8px oklch(0.72 0.185 42 / 0.28),
+    inset 0 1px 0 oklch(0.97 0.01 85 / 0.16);
+}
+
+/* Canvas work surface */
+[data-studio-canvas-viewport] {
+  background:
+    radial-gradient(
+      110% 90% at 50% 38%,
+      oklch(0.185 0.01 70 / 0.65) 0%,
+      oklch(0.148 0.008 70) 48%,
+      oklch(0.125 0.008 70) 100%
+    );
+  scrollbar-width: thin;
+  scrollbar-color: oklch(0.35 0.012 64 / 0.55) transparent;
+}
+[data-studio-canvas-viewport]::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+[data-studio-canvas-viewport]::-webkit-scrollbar-thumb {
+  background: oklch(0.35 0.012 64 / 0.55);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+[data-studio-canvas-viewport]::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.45 0.014 64 / 0.65);
+  background-clip: padding-box;
+}
+
+/* Comment mode keeps the hotspot exact while making the active tool unmistakable. The compact
+   32px cursor mirrors the on-canvas pin rather than falling back to an ambiguous system crosshair. */
+@media (pointer: fine) {
+  [data-studio-comment-placement-active="true"][data-studio-canvas-cursor="crosshair"] canvas {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ccircle cx='9' cy='9' r='7.5' fill='%23f27d45' stroke='%23fff8ef' stroke-width='2'/%3E%3Cpath d='M5.5 6.5h7a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H9.7l-2.6 2.1v-2.1H5.5a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2Z' fill='%23291b15'/%3E%3Cpath d='M9 20v9M20 9h9' stroke='%23f27d45' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") 9 9, crosshair !important;
+  }
+}
+
+/* App shell: subtle vignette so chrome feels layered */
+[data-studio-app-shell="true"] {
+  background:
+    radial-gradient(
+      140% 100% at 50% 0%,
+      oklch(0.2 0.01 66 / 0.35) 0%,
+      transparent 45%
+    ),
+    var(--color-canvas, oklch(0.155 0.008 70));
+}
+
+/* One shared safe-area contract for every mobile surface that sits above the editing dock. */
+@media (max-width: 63.999rem) {
+  [data-studio-editor="true"] {
+    --studio-mobile-dock-compact-height: calc(3.5rem + env(safe-area-inset-bottom));
+    --studio-mobile-dock-expanded-height: calc(7rem + env(safe-area-inset-bottom));
+    --studio-canvas-bottom-inset: var(--studio-mobile-dock-expanded-height);
+  }
+
+  /* 평소에는 한 행만 스크롤 안전 여백으로 쓰고, 댓글·페이지·레이어·줌 행을 펼쳤을
+     때만 두 행 높이를 쓴다. 도크는 캔버스 위에 떠 있으므로 flex 레이아웃 높이를
+     줄이지 않는다. :has() 미지원 브라우저는 안전한 7rem 기본값으로 폴백한다. */
+  [data-studio-editor="true"]:has(
+      [data-studio-mobile-editing-dock="true"][data-studio-mobile-dock-expanded="false"]
+    ) {
+    --studio-canvas-bottom-inset: var(--studio-mobile-dock-compact-height);
+  }
+
+  [data-studio-mobile-canvas-workspace="true"] {
+    padding-bottom: 0 !important;
+  }
+
+  /* The dock is an overlay, but the scroll plane still needs a real trailing spacer so the
+     last canvas pixels can be panned above either the compact or expanded thumb controls.
+     Keeping this on the scrollport (not its flex ancestors) recovers 168px at 320/390px while
+     preserving reachable content and keyboard scroll alignment. */
+  [data-studio-canvas-viewport][data-studio-mobile-dock-safe-area="true"] {
+    padding-bottom: var(--studio-canvas-bottom-inset);
+    scroll-padding-bottom: calc(var(--studio-canvas-bottom-inset) + 0.75rem);
+  }
+
+  [data-studio-editor="true"][data-studio-mobile-immersive="true"] {
+    min-height: 100svh;
+    height: 100dvh;
+    max-height: 100dvh;
+    --studio-immersive-menubar-block: calc(0.375rem + 2.75rem + 0.5rem + 2px);
+  }
+
+  [data-studio-mobile-dock-scroll="primary"] {
+    scroll-padding-inline-end: 3rem;
+  }
+
+
+  /* 몰입 헤더는 44px 접근성 타깃을 보존하되 레이아웃 높이를 점유하지 않는 작은 플로팅
+     컨트롤로 만든다. 상태 메시지가 실제로 있을 때만 그 아래 공간을 다시 확보한다.
+     셸이 이미 safe-area padding을 주므로 top/left는 0(이중 인셋 방지). */
+  [data-studio-editor="true"][data-studio-mobile-immersive="true"]
+    [data-studio-app-menubar="true"] {
+    position: absolute;
+    top: 0.375rem;
+    left: 0.375rem;
+    /* 콘텐츠 기반 컴팩트 폭 — 고정 14rem 캡은 종료·임시저장·게시하기 묶음보다 ~2px 좁아
+       마지막 버튼이 overflow-hidden 레인에 잘렸다. 라벨이 바뀌어도 잘리지 않게 맞춤 폭 사용. */
+    width: fit-content;
+    height: auto;
+    min-height: 2.75rem;
+    max-width: calc(100vw - env(safe-area-inset-left) - env(safe-area-inset-right) - 0.75rem);
+    border: 1px solid color-mix(in oklab, var(--color-line) 80%, transparent);
+    border-radius: 9999px;
+    background: color-mix(in oklab, var(--color-panel) 92%, transparent);
+    box-shadow:
+      0 10px 28px oklch(0.06 0.01 70 / 0.32),
+      0 0 0 1px oklch(1 0 0 / 0.04) inset;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  [data-studio-editor="true"][data-studio-mobile-immersive="true"]
+    [data-studio-app-menubar-scroll="true"] {
+    /* Match the pill: no hard clip on the action cluster, real gaps between 44px targets. */
+    height: auto;
+    min-height: 2.75rem;
+    gap: 0.25rem;
+    padding: 0.25rem 0.375rem;
+    overflow: visible;
+  }
+
+  [data-studio-editor="true"][data-studio-mobile-immersive="true"]
+    [data-studio-menubar-actions="true"] {
+    width: auto;
+    max-width: 100%;
+  }
+
+  [data-studio-editor="true"][data-studio-mobile-immersive="true"]
+    [data-studio-global-status-rail]:not(:empty) {
+    padding-top: 2.75rem;
+  }
+
+  /* 프레즌스 도크(동기화 상태·같이 그리기)는 캔버스 스크롤포트 우상단에 sticky 로 붙고,
+     몰입형 메뉴 알약은 셸에 absolute 로 뜬다. 서로 다른 포지셔닝 컨텍스트라 어느 쪽도
+     상대 폭을 알 수 없어서, 320~430px 에서 도크가 알약의 게시하기 버튼을 덮어 탭이
+     도크로 새어 나갔다(verify:studio-mobile-top 의 hit-test 유실). 가로로는 둘 다 들어갈
+     자리가 없으므로 — 320px 에서 알약만으로 폭이 거의 찬다 — 세로로 분리해 겹침 자체를
+     구조적으로 없앤다. 데스크톱은 알약이 없으니 그대로 둔다. */
+  [data-studio-editor="true"][data-studio-mobile-immersive="true"]
+    [data-studio-presence-dock="true"] {
+    /* 호스트가 이미 상단 0.5rem 을 쓰므로 그만큼 빼고, 알약 아래 0.25rem 숨통을 남긴다.
+       폴백은 필수다 — 변수가 사라지면 calc() 가 무효가 되어 margin-top 이 0 으로 돌아가고
+       겹침이 조용히 되살아난다. */
+    margin-top: calc(
+      var(--studio-immersive-menubar-block, calc(0.375rem + 2.75rem + 0.5rem + 2px))
+        - 0.5rem + 0.25rem
+    );
+  }
+
+  [data-studio-mobile-immersive="true"] [data-studio-status-bar="true"] {
+    display: none;
+  }
+}
+
+/* End cluster on draw options — cleaner sticky dock */
+[data-studio-draw-options-dock="true"] {
+  container-name: studio-draw-options;
+  container-type: inline-size;
+}
+
+[data-studio-draw-options-end="true"] {
+  border-left-color: oklch(0.36 0.013 64 / 0.55) !important;
+  background:
+    linear-gradient(
+      90deg,
+      oklch(0.175 0.009 68 / 0.2) 0%,
+      oklch(0.175 0.009 68 / 0.96) 18%,
+      oklch(0.175 0.009 68 / 0.98) 100%
+    ) !important;
+  box-shadow: -12px 0 18px -10px oklch(0.08 0.01 70 / 0.55);
+}
+
+/* Adaptive canvas chrome. Core controls own an explicit, keyboard-navigable horizontal viewport;
+   its permanently styled track keeps overflow discoverable while color, disclosure and utilities
+   stay pinned at the end. Secondary decoration progressively yields to drawable canvas width. */
+[data-studio-draw-options-primary="true"] {
+  scroll-padding-inline: 0.5rem;
+  scrollbar-width: auto;
+  scrollbar-color: oklch(0.55 0.035 64 / 0.82) oklch(0.13 0.008 68 / 0.82);
+}
+
+[data-studio-draw-options-primary="true"]::-webkit-scrollbar {
+  height: 0.5rem;
+}
+
+[data-studio-draw-options-primary="true"]::-webkit-scrollbar-track {
+  border-radius: 999px;
+  background: oklch(0.13 0.008 68 / 0.82);
+  box-shadow: inset 0 0 0 1px oklch(0.42 0.014 64 / 0.34);
+}
+
+[data-studio-draw-options-primary="true"]::-webkit-scrollbar-thumb {
+  min-width: 2.75rem;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: oklch(0.55 0.035 64 / 0.82);
+  background-clip: padding-box;
+}
+
+[data-studio-draw-options-primary="true"]:focus-within {
+  border-radius: 0.375rem;
+  outline: 2px solid color-mix(in oklab, var(--color-accent) 88%, white);
+  outline-offset: -2px;
+}
+
+/* 320px 도크는 타깃을 44px 아래로 줄이지 않고 행 자체만 짧게 수평 이동한다.
+   컨테이너 가장자리에서도 포커스 링이 잘리지 않도록 이 두 툴바에만 안쪽 오프셋을 쓴다. */
+[data-studio-mobile-dock-scroll] :focus-visible {
+  outline-offset: -2px;
+}
+
+@container studio-draw-options (max-width: 60rem) {
+  [data-studio-draw-options="true"] [data-studio-recent-color="true"],
+  [data-studio-draw-options="true"] [data-studio-draw-secondary-action="favorite"],
+  [data-studio-draw-options="true"] [data-studio-draw-size-preview="true"] {
+    display: none;
+  }
+}
+
+@container studio-draw-options (max-width: 46rem) {
+  [data-studio-draw-options="true"] [data-studio-brush-active-pill="true"] {
+    max-width: 6.75rem;
+  }
+
+  [data-studio-draw-options="true"] [data-studio-draw-primary-control="size"] input[type="range"],
+  [data-studio-draw-options="true"] [data-studio-draw-primary-control="opacity"] input[type="range"] {
+    width: 3.5rem;
+  }
+}
+
+/* Motion-coach hints: meaningful SVG demos with a quiet commercial entrance. */
+.studio-tool-hint-compact {
+  pointer-events: auto;
+  position: fixed;
+  z-index: 200;
+  width: min(15rem, calc(100vw - 1.25rem));
+  padding: 0.625rem;
+  border: 1px solid color-mix(in oklab, var(--color-line) 80%, transparent);
+  border-radius: var(--radius-lg, 0.5rem);
+  background: color-mix(in oklab, var(--color-panel) 98%, transparent);
+  box-shadow: 0 20px 56px oklch(0.06 0.01 70 / 0.66);
+  text-align: left;
+  backdrop-filter: blur(24px);
+}
+
+@keyframes studio-tool-hint-enter {
+  from {
+    opacity: 0;
+    transform: translateY(3px) scale(0.975);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes studio-tool-hint-preview-enter {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[data-studio-tool-hint="true"] {
+  animation: studio-tool-hint-enter 160ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  scrollbar-width: thin;
+  scrollbar-color: oklch(0.42 0.02 70 / 0.5) transparent;
+}
+
+[data-studio-tool-hint="true"][data-side="right"] {
+  transform-origin: left center;
+}
+
+[data-studio-tool-hint="true"][data-side="left"] {
+  transform-origin: right center;
+}
+
+[data-studio-tool-hint="true"][data-side="bottom"] {
+  transform-origin: center top;
+}
+
+[data-studio-tool-hint="true"][data-side="top"] {
+  transform-origin: center bottom;
+}
+
+[data-studio-tool-hint-preview-frame="true"] {
+  animation: studio-tool-hint-preview-enter 180ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+[data-studio-tool-hint="true"] [data-studio-tool-hint-preview] {
+  max-height: 9rem;
+}
+
+@media (max-height: 34rem) {
+  [data-studio-tool-hint="true"][data-studio-tool-hint-expanded="true"]
+    [data-studio-tool-hint-preview-frame="true"],
+  [data-studio-tool-hint="true"][data-studio-tool-hint-expanded="true"]
+    [data-studio-tool-hint-tip="true"] {
+    display: none;
+  }
+}
+
+/* The desktop draw dock floats above the canvas. Reserve the measured dock
+   height inside the scrollport so the final pixels and utility controls can
+   always be brought above it, including the expanded two-row state. */
+@media (min-width: 64rem) {
+  [data-studio-canvas-viewport][data-studio-draw-dock-safe-area="true"] {
+    padding-bottom: calc(var(--studio-draw-options-height, 3.75rem) + 1rem);
+    scroll-padding-bottom: calc(var(--studio-draw-options-height, 3.75rem) + 1rem);
+  }
+}
+
+/* The bottom context dock is intentionally detached from the canvas scroll plane. */
+[data-studio-draw-options-dock="true"] [data-studio-draw-options="true"] {
+  border-color: oklch(0.42 0.014 64 / 0.62);
+  background:
+    linear-gradient(180deg, oklch(0.235 0.012 66 / 0.97), oklch(0.175 0.009 68 / 0.98));
+  box-shadow:
+    0 18px 52px oklch(0.06 0.01 70 / 0.62),
+    0 0 0 1px oklch(0.1 0.01 70 / 0.28),
+    inset 0 1px 0 oklch(0.97 0.01 85 / 0.075);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  [data-studio-tool-rail="true"] button,
+  [data-studio-brush-tray="true"] [role="option"],
+  [data-studio-main-menu="true"] [role="menuitem"],
+  [data-studio-tool-hint="true"],
+  [data-studio-tool-hint-preview-frame="true"],
+  [data-studio-editor="true"] input[type="range"].studio-range::-webkit-slider-thumb {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+
+/* STUDIO_UX_CONVERGENCE_2026_09_05 */
+[data-studio-skip-nav="true"] {
+  position: fixed;
+  inset-block-start: max(0.5rem, env(safe-area-inset-top));
+  inset-inline-start: max(0.5rem, env(safe-area-inset-left));
+  z-index: 1000;
+  max-inline-size: calc(100vw - 1rem);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(calc(-100% - 1rem));
+  transition: opacity 120ms ease, transform 160ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+[data-studio-skip-nav="true"]:focus-within {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+[data-studio-skip-nav="true"] > div {
+  display: flex;
+  max-inline-size: min(46rem, calc(100vw - 1rem));
+  gap: 0.25rem;
+  overflow-x: auto;
+  padding: 0.375rem;
+  border: 1px solid var(--color-line, CanvasText);
+  border-radius: 0.875rem;
+  background: var(--color-panel, Canvas);
+  box-shadow: 0 12px 34px oklch(0.08 0.01 70 / 0.45);
+}
+[data-studio-skip-link="true"] {
+  min-block-size: 2.75rem;
+  flex: 0 0 auto;
+  border-radius: 0.625rem;
+  padding-inline: 0.75rem;
+  color: var(--color-fg, CanvasText);
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+[data-studio-skip-link="true"]:hover,
+[data-studio-skip-link="true"]:focus-visible {
+  background: var(--color-raised, Highlight);
+  outline: 2px solid var(--color-accent, Highlight);
+  outline-offset: 2px;
+}
+[data-studio-editor="true"] :is(
+  #studio-menubar,
+  #studio-tool-belt,
+  #studio-tool-rail,
+  #studio-canvas-workspace,
+  #studio-inspector,
+  #studio-status-bar
+) {
+  scroll-margin: 4rem 1rem;
+}
+[data-studio-editor="true"][data-studio-input-modality="keyboard"] :is(
+  #studio-menubar,
+  #studio-tool-belt,
+  #studio-tool-rail,
+  #studio-canvas-workspace,
+  #studio-inspector,
+  #studio-status-bar
+):focus {
+  outline: 2px solid var(--color-accent, Highlight);
+  outline-offset: -2px;
+}
+[data-studio-editor="true"] :is(button, [role="button"], input, select, textarea) {
+  touch-action: manipulation;
+}
+[data-studio-project-actions-menu="true"] [data-project-center-section="true"] {
+  grid-column: 1 / -1;
+}
+[data-studio-project-actions-menu="true"] button[hidden] {
+  display: none !important;
+}
+[data-studio-project-actions-menu="true"] button:not([data-project-center-control="true"]) {
+  border: 1px solid transparent;
+  border-radius: 0.75rem;
+  transition: border-color 140ms ease, background-color 140ms ease, transform 140ms ease;
+}
+[data-studio-project-actions-menu="true"] button:not([data-project-center-control="true"]):hover {
+  border-color: var(--color-line, CanvasText);
+  transform: translateY(-1px);
+}
+[data-studio-project-actions-menu="true"] button:not([data-project-center-control="true"]):focus-visible {
+  outline: 2px solid var(--color-accent, Highlight);
+  outline-offset: 2px;
+}
+[data-studio-editor="true"][data-studio-reduce-motion="true"],
+[data-studio-editor="true"][data-studio-reduce-motion="true"] * {
+  scroll-behavior: auto !important;
+  transition-duration: 0.001ms !important;
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-studio-skip-nav="true"] {
+    transition: none;
+  }
+  [data-studio-project-actions-menu="true"] button:not([data-project-center-control="true"]) {
+    transform: none !important;
+  }
+}
+@media (forced-colors: active) {
+  [data-studio-skip-nav="true"] > div,
+  [data-studio-surface-state] {
+    border: 1px solid CanvasText;
+    forced-color-adjust: auto;
+  }
+  [data-studio-editor="true"] :focus-visible {
+    outline: 2px solid Highlight !important;
+    outline-offset: 2px;
+  }
+}

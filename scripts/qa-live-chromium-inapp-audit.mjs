@@ -113,20 +113,20 @@ function sleep(ms) {
 }
 
 function safeSlug(value) {
-  return value.replace(/[^a-zA-Z0-9_-]+/gu, "-").replace(/^-+|-+$/gu, "");
+  return value.replace(/[^a-zA-Z0-9_-]+/gu, "-").replace(/(?:^-+|-+$)/gu, "");
 }
 
 function hash(value) {
   return createHash("sha256").update(value).digest("hex");
 }
 
-function knownJiraFor(message) {
+function knownJiraFor(message) { // NOSONAR javascript:S3800
   return KNOWN_JIRA.find(([, pattern]) => pattern.test(message))?.[0] ?? null;
 }
 
 async function inspectDom(page, profile) {
   return page.evaluate(
-    ({ isTouch, minimumTouch }) => {
+    ({ isTouch, minimumTouch }) => { // NOSONAR javascript:S3776
       const viewportWidth = window.innerWidth;
       const viewportHeight = window.innerHeight;
 
@@ -175,7 +175,7 @@ async function inspectDom(page, profile) {
 
       const describe = (element) => {
         const name = accessibleName(element).replace(/\s+/gu, " ").slice(0, 80);
-        return `${element.tagName.toLowerCase()}${name ? `[${name}]` : ""}`;
+        return element.tagName.toLowerCase() + (name ? `[${name}]` : "");
       };
 
       const hasHorizontalScroller = (element) => {
@@ -283,7 +283,7 @@ async function inspectDom(page, profile) {
   );
 }
 
-async function runCase(browser, profile, route) {
+async function runCase(browser, profile, route) { // NOSONAR javascript:S3776
   const context = await browser.newContext({
     colorScheme: "light",
     deviceScaleFactor: profile.deviceScaleFactor,

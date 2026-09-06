@@ -1,0 +1,23 @@
+{
+  "userProfile.eyebrow": "독자 프로필",
+  "userProfile.tabs.reviews": "리뷰",
+  "userProfile.tabs.works": "창작 작품",
+  "userProfile.tabs.series": "시리즈",
+  "userProfile.works.empty": "이 회원이 아직 공개한 창작 작품이 없습니다.",
+  "userProfile.series.empty": "이 회원이 아직 만든 연재 시리즈가 없습니다.",
+  "userProfile.fetchError": "프로필을 불러오지 못했습니다.",
+  "userProfile.authorFallback": "사용자",
+  "userProfile.metaTemplate": "{author} 님의 리뷰 {reviews}편 · 작품 {works}편 · 평균 별점 {avg} — 툰스펙트럼.",
+  "userProfile.bioFallback": "독자가 남긴 리뷰와 창작 활동",
+  "userProfile.followHint": "로그인 후 팔로우할 수 있습니다.",
+  "userProfile.follow": "팔로우",
+  "userProfile.following": "팔로잉",
+  "userProfile.stat.followers": "팔로워",
+  "userProfile.stat.totalReviews": "작성한 리뷰",
+  "userProfile.stat.avgRating": "평균 별점",
+  "userProfile.stat.works": "창작 작품",
+  "userProfile.stat.series": "연재 시리즈",
+  "userProfile.tabsLabel": "프로필 콘텐츠",
+  "userProfile.refresh": "갱신",
+  "userProfile.emptyReviews": "이 회원이 아직 작성한 리뷰가 없습니다."
+}

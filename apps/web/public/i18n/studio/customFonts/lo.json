@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "ຕົວອັກສອນຂອງຂ້ອຍ",
+  "studio.customFonts.importButton": "ນໍາເຂົ້າຈາກໄຟລ໌",
+  "studio.customFonts.importing": "ກຳລັງກວດສອບ...",
+  "studio.customFonts.importAria": "ນໍາເຂົ້າໄຟລ໌ຟອນ",
+  "studio.customFonts.storageAria": "ການນໍາໃຊ້ຫ້ອງສະຫມຸດຕົວອັກສອນ",
+  "studio.customFonts.emptyTitle": "ຍັງ​ບໍ່​ທັນ​ມີ​ຕົວ​ອັກ​ສອນ​ລວມ​.",
+  "studio.customFonts.unknownFileName": "ບໍ່ມີຊື່ໄຟລ໌",
+  "studio.customFonts.apply": "ສະໝັກ",
+  "studio.customFonts.applyToText": "ນຳໃຊ້ຟອນນີ້ໃສ່ຂໍ້ຄວາມທີ່ເລືອກ",
+  "studio.customFonts.selectTextFirst": "ທໍາອິດເລືອກຂໍ້ຄວາມຫຼືຟອງສຽງເວົ້າ",
+  "studio.customFonts.delete": "ລຶບຟອນ"
+}

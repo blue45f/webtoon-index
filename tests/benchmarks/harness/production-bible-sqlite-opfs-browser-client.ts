@@ -10,11 +10,11 @@ import {
   type StudioSqliteApiHandle,
   type StudioSqliteDatabaseHandle,
   type StudioSqlitePoolUtilHandle,
-} from "../../../src/domains/creator/studio-local-database";
+} from "../../../apps/web/src/domains/creator/studio-local-database";
 import {
   acquireStudioLocalDatabase,
   closeStudioLocalDatabaseRuntime,
-} from "../../../src/domains/creator/studio-local-database-runtime";
+} from "../../../apps/web/src/domains/creator/studio-local-database-runtime";
 import {
   addStudioProductionBibleEntry,
   createEmptyStudioProductionBible,
@@ -22,11 +22,11 @@ import {
   studioProductionBibleLegacyStorageKey,
   studioProductionBibleStorageKey,
   type StudioProductionBible,
-} from "../../../src/domains/creator/studio-production-bible";
+} from "../../../apps/web/src/domains/creator/studio-production-bible";
 import {
   createStudioProductionBibleSqlitePersistence,
   STUDIO_PRODUCTION_BIBLE_SQLITE_NAMESPACE,
-} from "../../../src/domains/creator/studio-production-bible-sqlite-persistence";
+} from "../../../apps/web/src/domains/creator/studio-production-bible-sqlite-persistence";
 
 const REPORT_SCHEMA_VERSION = 1;
 const SAVE_SAMPLE_COUNT = 60;

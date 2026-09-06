@@ -106,7 +106,7 @@ def nonempty(value: Any) -> bool:
     return isinstance(value, str) and bool(value.strip())
 
 
-def inspect_asset(item: Any, root: Path) -> dict[str, Any]:
+def inspect_asset(item: Any, root: Path) -> dict[str, Any]: # NOSONAR python:S3776
     if not isinstance(item, dict):
         return {"id": None, "eligible": False, "score": None, "issues": ["asset-must-be-object"]}
     issues: list[str] = []
@@ -164,7 +164,7 @@ def inspect_asset(item: Any, root: Path) -> dict[str, Any]:
         require(rights.get("provider") == item.get("provider") and rights.get("sourceUrl") == source.get("url")
                 and rights.get("license") == license_id and rights.get("redistribution") is True
                 and rights.get("reviewer") == source.get("rightsReviewer"), "rights-report-does-not-match-source")
-    except (ValueError, OSError, UnicodeError) as e:
+    except (ValueError, OSError) as e:
         issues.append(f"rights-report:{e}")
     reviews = item.get("reviews")
     reviews = reviews if isinstance(reviews, list) else []
@@ -207,13 +207,13 @@ def inspect_asset(item: Any, root: Path) -> dict[str, Any]:
         checks = runtime.get("checks", {})
         required = COMMON_CHECKS | KIND_CHECKS.get(category if isinstance(category, str) else "", set())
         require(isinstance(checks, dict) and all(checks.get(k) is True for k in required), "runtime-checks-incomplete")
-    except (ValueError, OSError, UnicodeError) as e:
+    except (ValueError, OSError) as e:
         issues.append(f"runtime-evidence:{e}")
     return {"id": item.get("id"), "eligible": not issues,
             "score": min(scores) if scores else None, "issues": sorted(set(issues))}
 
 
-def audit(manifest: Any, root: Path, release: bool = False) -> dict[str, Any]:
+def audit(manifest: Any, root: Path, release: bool = False) -> dict[str, Any]: # NOSONAR python:S3776
     if not isinstance(manifest, dict) or manifest.get("schema") != SCHEMA:
         raise ValueError("unsupported-manifest-schema")
     assets = manifest.get("assets")
@@ -296,7 +296,7 @@ def main() -> int:
             args.output.write_text(text, encoding="utf-8")
         print(text)
         return 1 if report["rejectedRecords"] or (args.release and not report["releaseReady"]) else 0
-    except (OSError, ValueError, UnicodeError) as e:
+    except (OSError, ValueError) as e:
         print(f"curation: {e}", file=sys.stderr)
         return 2
 

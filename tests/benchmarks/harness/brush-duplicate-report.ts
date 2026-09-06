@@ -15,7 +15,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { exportPageToSvg } from "../../../src/domains/creator/export/studio-svg-export";
+import { exportPageToSvg } from "../../../apps/web/src/domains/creator/export/studio-svg-export";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../../..");
 const RESULTS = resolve(ROOT, "tests/benchmarks/results");
@@ -70,7 +70,7 @@ function wiringFor(id: string) {
   try {
     lines = execFileSync(
       "grep",
-      ["-rnE", `["']${id.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}["']`, "src/domains/creator"],
+      ["-rnE", `["']${id.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}["']`, "apps/web/src/domains/creator"],
       { cwd: ROOT, encoding: "utf8" },
     ).split("\n").filter(Boolean);
   } catch {
@@ -78,7 +78,7 @@ function wiringFor(id: string) {
   }
   const hits = new Map<string, number>();
   for (const line of lines) {
-    const file = line.slice(0, line.indexOf(":")).replace("src/domains/creator/", "");
+    const file = line.slice(0, line.indexOf(":")).replace("apps/web/src/domains/creator/", "");
     if (/\.test\.tsx?$/.test(file) || COSMETIC.test(file) || DECLARATION.test(file)
       || GOVERNANCE.test(file)) continue;
     hits.set(file, (hits.get(file) ?? 0) + 1);

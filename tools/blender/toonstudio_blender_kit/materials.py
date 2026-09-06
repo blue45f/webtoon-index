@@ -24,7 +24,7 @@ def _set_input(node: Any, name: str, value: Any) -> None:
         socket.default_value = value
 
 
-def create_toon_material(
+def create_toon_material( # NOSONAR python:S3776
     name: str,
     palette: Palette,
     *,

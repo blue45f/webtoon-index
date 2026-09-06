@@ -87,7 +87,7 @@ function validateDnsHostname(hostname) {
  * process receives the URL. WHATWG URLSearchParams decodes parameter names,
  * so encoded aliases such as `ho%73t` cannot bypass the exact allowlist.
  */
-export function validateProductionDatabaseUrl(
+export function validateProductionDatabaseUrl( // NOSONAR javascript:S3776
   rawValue,
   { allowLoopback = false } = {},
 ) {

@@ -12,11 +12,11 @@ import {
 } from "@nestjs/common";
 import { ZodSerializerDto } from "nestjs-zod";
 
-import { STUDIO_LIVE_GUEST_CREDENTIAL_TTL_MS } from "../../../../../lib/studio-live-auth-ticket";
+import { STUDIO_LIVE_GUEST_CREDENTIAL_TTL_MS } from "../../../../web/src/shared/lib/studio-live-auth-ticket";
 import {
   isStudioLiveJamScope,
   studioRealtimeJamGuestActorId,
-} from "../../../../../lib/studio-live-jam-scope";
+} from "../../../../web/src/shared/lib/studio-live-jam-scope";
 import {
   getSessionAuthenticationPrincipal,
   getSessionAuthenticationSource,

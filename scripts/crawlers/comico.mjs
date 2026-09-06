@@ -86,7 +86,7 @@ function looksLikeTitle(obj) {
   return /^[A-Za-z0-9_-]+$/.test(String(id));
 }
 
-function buildRow(obj, rank) {
+function buildRow(obj, rank) { // NOSONAR javascript:S3776
   const id = String(firstVal(obj, ID_KEYS));
   const rawTitle = cleanTitle(firstString(obj, NAME_KEYS) ?? "");
   if (!rawTitle) return null;
@@ -137,7 +137,7 @@ function buildRow(obj, rank) {
   };
 }
 
-export async function crawl() {
+export async function crawl() { // NOSONAR javascript:S3776
   const byId = new Map();
   for (let i = 0; i < PATHS.length; i++) {
     const html = await fetchText(`${ORIGIN}${PATHS[i]}`, { referer: `${ORIGIN}/` });

@@ -3,7 +3,7 @@ import { Inject, Injectable } from "@nestjs/common";
 import {
   STUDIO_LIVE_GUEST_CREDENTIAL_TTL_MS,
   StudioLiveGuestCredentialSchema,
-} from "../../../../../lib/studio-live-auth-ticket";
+} from "../../../../web/src/shared/lib/studio-live-auth-ticket";
 
 import {
   STUDIO_LIVE_SESSION_AUTHENTICATOR,

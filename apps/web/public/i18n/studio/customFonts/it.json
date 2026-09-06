@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "il mio carattere",
+  "studio.customFonts.importButton": "Importa da file",
+  "studio.customFonts.importing": "Controllo…",
+  "studio.customFonts.importAria": "Importa file di caratteri",
+  "studio.customFonts.storageAria": "Utilizzo della libreria di caratteri",
+  "studio.customFonts.emptyTitle": "Non ci sono ancora font inclusi.",
+  "studio.customFonts.unknownFileName": "Nessun nome file",
+  "studio.customFonts.apply": "Applicare",
+  "studio.customFonts.applyToText": "Applica questo carattere al testo selezionato",
+  "studio.customFonts.selectTextFirst": "Seleziona prima il testo o il fumetto",
+  "studio.customFonts.delete": "eliminare il carattere"
+}

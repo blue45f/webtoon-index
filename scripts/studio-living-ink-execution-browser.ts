@@ -2,13 +2,13 @@ import {
   canonicalStudioLivingInkDisplayRgba8,
   canonicalStudioLivingInkDisplayRgba8BottomUp,
   isStudioLivingInkExecutionReadbackProvenance,
-} from "../src/domains/creator/studio-living-ink-execution-protocol";
-import { DEFAULT_STUDIO_LIVING_INK_MATERIAL_CONTROLS } from "../src/domains/creator/studio-living-ink-gpu-protocol";
+} from "../apps/web/src/domains/creator/studio-living-ink-execution-protocol";
+import { DEFAULT_STUDIO_LIVING_INK_MATERIAL_CONTROLS } from "../apps/web/src/domains/creator/studio-living-ink-gpu-protocol";
 import {
   createStudioLivingInkExecutionProvider,
   StudioLivingInkExecutionProvider,
   type StudioLivingInkWorkerLike,
-} from "../src/domains/creator/studio-living-ink-provider";
+} from "../apps/web/src/domains/creator/studio-living-ink-provider";
 
 import type {
   StudioLivingInkExecutionConfig,
@@ -16,13 +16,13 @@ import type {
   StudioLivingInkExecutionProviderId,
   StudioLivingInkExecutionReceipt,
   StudioLivingInkWorkerRequest,
-} from "../src/domains/creator/studio-living-ink-execution-protocol";
+} from "../apps/web/src/domains/creator/studio-living-ink-execution-protocol";
 import type {
   StudioLivingInkDepositOperation,
   StudioLivingInkOperation,
   StudioLivingInkSelectionMask,
-} from "../src/domains/creator/studio-living-ink-field";
-import type { StudioLivingInkDisplayMode } from "../src/domains/creator/studio-living-ink-gpu-protocol";
+} from "../apps/web/src/domains/creator/studio-living-ink-field";
+import type { StudioLivingInkDisplayMode } from "../apps/web/src/domains/creator/studio-living-ink-gpu-protocol";
 
 declare global {
   interface Window {
@@ -68,7 +68,7 @@ class CrashableLivingInkWorker implements StudioLivingInkWorkerLike {
   onerror: ((event: ErrorEvent) => void) | null = null;
 
   private readonly worker = new Worker(
-    new URL("../src/domains/creator/studio-living-ink.worker.ts", import.meta.url),
+    new URL("../apps/web/src/domains/creator/studio-living-ink.worker.ts", import.meta.url),
     { type: "module", name: "studio-living-ink-crash-recovery-qa" },
   );
 

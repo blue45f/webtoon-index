@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Vadnica za funkcije",
+  "studio.hub.subtitle": "Ena funkcija naenkrat brez kakršnega koli bremena. Pogledal sem {done}/{total}.",
+  "studio.hub.progressAriaLabel": "Napredek vadnice",
+  "studio.hub.listAriaLabel": "Seznam funkcij",
+  "studio.hub.checked": "poglej si",
+  "studio.hub.prev": "Prejšnja",
+  "studio.hub.next": "naslednji",
+  "studio.hub.markComplete": "označi kot dokončano",
+  "studio.hub.completed": "Dokončano",
+  "studio.hub.tryLabelDefault": "Sledite",
+  "studio.hub.stepAriaPrefix": "korak"
+}

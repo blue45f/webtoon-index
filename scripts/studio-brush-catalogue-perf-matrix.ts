@@ -12,7 +12,7 @@ import { pathToFileURL } from "node:url";
 
 import {
   STUDIO_PAINT_BRUSH_CATALOG_ITEMS,
-} from "../src/domains/creator/brush/studio-brush-catalog";
+} from "../apps/web/src/domains/creator/brush/studio-brush-catalog";
 import {
   normalizeStudioBrushDynamicsSettings,
   planNormalizedStudioDynamicBrushDabs,
@@ -20,30 +20,30 @@ import {
   studioBrushDynamicsSettingsForBrushId,
   type NormalizedStudioBrushDynamicsSettings,
   type StudioDynamicBrushDab,
-} from "../src/domains/creator/brush/studio-brush-dynamics";
+} from "../apps/web/src/domains/creator/brush/studio-brush-dynamics";
 import {
   materializeAllStudioBrushPackSelections,
   type StudioBrushPackSelection,
-} from "../src/domains/creator/brush/studio-brush-pack-runtime";
+} from "../apps/web/src/domains/creator/brush/studio-brush-pack-runtime";
 import {
   STUDIO_DYNAMIC_BRUSH_CAUSAL_CONTINUATION_MARK_BUDGET,
   STUDIO_DYNAMIC_BRUSH_CAUSAL_STAMP_GRID,
-} from "../src/domains/creator/brush/studio-brush-render-budget";
-import { resolveStudioBrushRuntimeContract } from "../src/domains/creator/brush/studio-brush-runtime-contract";
+} from "../apps/web/src/domains/creator/brush/studio-brush-render-budget";
+import { resolveStudioBrushRuntimeContract } from "../apps/web/src/domains/creator/brush/studio-brush-runtime-contract";
 import {
   computeStudioBrushPlanDigest,
   type StudioBrushQualityBenchMeasurement,
-} from "../src/domains/creator/brush/studio-brush-variant-group-manifest";
+} from "../apps/web/src/domains/creator/brush/studio-brush-variant-group-manifest";
 import {
   resolveStudioDynamicBrushMaterialIdentity,
   type StudioDynamicBrushMaterialIdentity,
-} from "../src/domains/creator/brush/studio-dry-media-dynamic-bridge";
-import { studioDryMediaUnionRibbonCarrierOwnsMaterial } from "../src/domains/creator/brush/studio-dry-media-union-ribbon-carrier";
-import { planStudioCausalDynamicBrushDepositSegmentsV3 } from "../src/domains/creator/studio-causal-dynamic-brush-deposit-v2";
+} from "../apps/web/src/domains/creator/brush/studio-dry-media-dynamic-bridge";
+import { studioDryMediaUnionRibbonCarrierOwnsMaterial } from "../apps/web/src/domains/creator/brush/studio-dry-media-union-ribbon-carrier";
+import { planStudioCausalDynamicBrushDepositSegmentsV3 } from "../apps/web/src/domains/creator/studio-causal-dynamic-brush-deposit-v2";
 import {
   planStudioDynamicBrushCoverageMarks,
   type StudioDynamicBrushCoverageMark,
-} from "../src/domains/creator/studio-dynamic-brush-coverage-renderer";
+} from "../apps/web/src/domains/creator/studio-dynamic-brush-coverage-renderer";
 
 export const STUDIO_BRUSH_CATALOGUE_PERF_MATRIX_VERSION = 2 as const;
 

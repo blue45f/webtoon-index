@@ -4,8 +4,8 @@ on:
   pull_request:
     branches: [main]
     paths:
-      - 'src/domains/market/**'
-      - 'lib/creator-marketplace*'
+      - 'apps/web/src/domains/market/**'
+      - 'apps/web/src/shared/lib/creator-marketplace*'
       - 'apps/api/src/db/creator-marketplace*'
       - 'apps/api/src/db/migrations/*creator_marketplace*'
       - 'apps/api/src/modules/creator-marketplace/**'
@@ -15,8 +15,8 @@ on:
   push:
     branches: [main]
     paths:
-      - 'src/domains/market/**'
-      - 'lib/creator-marketplace*'
+      - 'apps/web/src/domains/market/**'
+      - 'apps/web/src/shared/lib/creator-marketplace*'
       - 'apps/api/src/db/creator-marketplace*'
       - 'apps/api/src/db/migrations/*creator_marketplace*'
       - 'apps/api/src/modules/creator-marketplace/**'
@@ -65,16 +65,16 @@ jobs:
       - name: Strict marketplace lint
         run: >-
           pnpm exec eslint --max-warnings=0
-          src/domains/market
+          apps/web/src/domains/market
           apps/api/src/db/creator-marketplace-library.schema.ts
           apps/api/src/db/creator-marketplace-report.schema.ts
           apps/api/src/modules/creator-marketplace/creator-marketplace-3d-asset-parity.test.ts
           scripts/verify-marketplace-3d-parity.mjs
       - name: Actual marketplace, API and migration unit regressions
         run: >-
-          pnpm exec vitest run src/domains/market
+          pnpm exec vitest run apps/web/src/domains/market
           apps/api/src/modules/creator-marketplace
-          lib/creator-marketplace
+          apps/web/src/shared/lib/creator-marketplace
           scripts/run-production-database-migrations.test.mjs
           scripts/bootstrap-empty-production-database.test.mjs
           --reporter=default

@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Snelle opdrachtbalk",
+  "studio.commandBar.settings": "Opdrachtbalkinstellingen",
+  "studio.commandBar.settingsDescription": "Wijzig de slotindeling en zichtbaarheid van de opdrachtbalk onder de menubalk.",
+  "studio.commandBar.settingsTip": "Zet de opdrachten die je het meest gebruikt in de eerste slots, dan zijn ze het snelst bereikbaar.",
+  "studio.commandBar.settingsClose": "Opdrachtbalkinstellingen sluiten",
+  "studio.commandBar.settingsStorageNote": "De slotindeling wordt opgeslagen in de werkruimte-instellingen van deze browser.",
+  "studio.commandBar.showSlots": "Opdrachtslots tonen",
+  "studio.commandBar.slot": "Slot {index}",
+  "studio.commandBar.slotAria": "Opdrachtslot {index}",
+  "studio.commandBar.slotEmpty": "Leeg slot",
+  "studio.commandBar.resetDefaults": "Terugzetten naar de standaardindeling",
+  "studio.commandBar.command.undo": "Ongedaan maken",
+  "studio.commandBar.command.redo": "Opnieuw",
+  "studio.commandBar.command.save": "Concept opslaan",
+  "studio.commandBar.command.publish": "Publiceren",
+  "studio.commandBar.command.download": "Huidige pagina downloaden",
+  "studio.commandBar.command.export-open": "Exportopties",
+  "studio.commandBar.command.zoom-fit": "Aanpassen aan schermbreedte",
+  "studio.commandBar.command.assets": "Sjablonen en assets",
+  "studio.commandBar.command.bubbles": "Tekstballon",
+  "studio.commandBar.command.project": "Projectgereedschap"
+}

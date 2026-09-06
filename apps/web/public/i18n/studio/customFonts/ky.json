@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "менин шрифтим",
+  "studio.customFonts.importButton": "Файлдан импорттоо",
+  "studio.customFonts.importing": "Текшерилүүдө…",
+  "studio.customFonts.importAria": "Арип файлын импорттоо",
+  "studio.customFonts.storageAria": "Шрифт китепканасын колдонуу",
+  "studio.customFonts.emptyTitle": "Азырынча ариптер камтылган эмес.",
+  "studio.customFonts.unknownFileName": "Файлдын аты жок",
+  "studio.customFonts.apply": "Колдонуу",
+  "studio.customFonts.applyToText": "Бул шрифтти тандалган текстке колдонуңуз",
+  "studio.customFonts.selectTextFirst": "Алгач текстти же кеп көбүгүн тандаңыз",
+  "studio.customFonts.delete": "шрифти жок кылуу"
+}

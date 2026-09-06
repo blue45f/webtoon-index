@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Feature tutorials",
+  "studio.hub.subtitle": "Take one feature at a time. {done}/{total} reviewed.",
+  "studio.hub.progressAriaLabel": "Tutorial progress",
+  "studio.hub.listAriaLabel": "Feature list",
+  "studio.hub.checked": "Reviewed",
+  "studio.hub.prev": "Previous",
+  "studio.hub.next": "Next",
+  "studio.hub.markComplete": "Mark complete",
+  "studio.hub.completed": "Completed",
+  "studio.hub.tryLabelDefault": "Try",
+  "studio.hub.stepAriaPrefix": "Step"
+}

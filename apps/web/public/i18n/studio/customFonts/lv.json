@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "mans fonts",
+  "studio.customFonts.importButton": "Importēt no faila",
+  "studio.customFonts.importing": "Notiek pārbaude…",
+  "studio.customFonts.importAria": "Importēt fonta failu",
+  "studio.customFonts.storageAria": "Fontu bibliotēkas lietošana",
+  "studio.customFonts.emptyTitle": "Pagaidām nav iekļauti fonti.",
+  "studio.customFonts.unknownFileName": "Nav faila nosaukuma",
+  "studio.customFonts.apply": "Pieteikties",
+  "studio.customFonts.applyToText": "Lietojiet šo fontu atlasītajam tekstam",
+  "studio.customFonts.selectTextFirst": "Vispirms atlasiet teksta vai runas burbuli",
+  "studio.customFonts.delete": "dzēst fontu"
+}

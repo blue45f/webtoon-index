@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "forma adimendunak",
+  "studio.quickShape.description.active": "Marraztu astiro lerroak, karratuak, zirkuluak eta triangeluak. Askatzen baduzu, bere kabuz txukunduko da.",
+  "studio.quickShape.description.inactive": "Ondo dago marraztea. Aktibatzen baduzu, zure eskuko marrazkia forma txukun batean findu egingo da.",
+  "studio.quickShape.toggleHint": "Luma batekin gutxi gorabehera marraztutako forma bat askatzen duzun unean, forma zehatz batean sartzen da. Marrazten ari zaren bitartean pausatzen baduzu ere, aurrebista bat agertuko da.",
+  "studio.quickShape.toggleAria.on": "Forma adimendunak aktibatuta",
+  "studio.quickShape.toggleAria.off": "Forma adimendunak desaktibatuta",
+  "studio.quickShape.matchedSuffix": " Senti dezaket. Eskua askatzen dudanean baieztatzen da.",
+  "studio.quickShape.emptyStatus": "Marraztu forma eta askatu, edo besterik gabe geratu amaieran",
+  "studio.quickShape.openTutorial": "Ikusi forma adimendunen tutoriala",
+  "studio.quickShape.notice": "Marraztu forma adimendunak, lerroak, zirkuluak, karratuak, etab. eta findu itzazu askatzen dituzunean (pausatu aurrebistarako)"
+}

@@ -1,0 +1,17 @@
+{
+  "ageGate.title": "성인 작품 열람 확인",
+  "ageGate.description": "만 19세 이상인지 확인할 수 있는 생년월일을 입력해 주세요.",
+  "ageGate.birthDateLabel": "생년월일",
+  "ageGate.birthYearLabel": "출생 연도",
+  "ageGate.birthYearPlaceholder": "연도",
+  "ageGate.birthMonthLabel": "출생 월",
+  "ageGate.birthMonthPlaceholder": "월",
+  "ageGate.birthDayLabel": "출생 일",
+  "ageGate.birthDayPlaceholder": "일",
+  "ageGate.yearSuffix": "년",
+  "ageGate.monthSuffix": "월",
+  "ageGate.daySuffix": "일",
+  "ageGate.deniedMessage": "연령 기준을 통과하지 못했습니다.",
+  "ageGate.cancel": "취소",
+  "ageGate.confirm": "확인"
+}

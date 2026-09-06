@@ -20,7 +20,7 @@ export function isGatewayResponseContentType(value) {
   const version = parameters
     .map((parameter) => parameter.split("=", 2).map((part) => part.trim()))
     .find(([name]) => name?.toLowerCase() === "version")?.[1]
-    ?.replace(/^"|"$/gu, "");
+    ?.replace(/(?:^"|"$)/gu, "");
   return version === "1";
 }
 

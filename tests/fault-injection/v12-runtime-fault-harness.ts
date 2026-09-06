@@ -12,11 +12,11 @@ import {
   solidPaint,
 } from "@toonspectrum/studio-project-model";
 
-import { StudioCrdtDocument } from "../../src/domains/creator/live/studio-crdt-document";
+import { StudioCrdtDocument } from "../../apps/web/src/domains/creator/live/studio-crdt-document";
 import {
   SerializedStudioCrdtOutbox,
   SqliteStudioCrdtOutbox,
-} from "../../src/domains/creator/live/studio-crdt-outbox";
+} from "../../apps/web/src/domains/creator/live/studio-crdt-outbox";
 import {
   STUDIO_CRDT_PROTOCOL_VERSION,
   decodeStudioCrdtStateVector,
@@ -28,61 +28,61 @@ import {
   type StudioCrdtTransportMessage,
   type StudioCrdtUpdateAck,
   type StudioCrdtUpdateRequest,
-} from "../../src/domains/creator/live/studio-crdt-protocol";
+} from "../../apps/web/src/domains/creator/live/studio-crdt-protocol";
 import {
   PersistentStudioCrdtRecoveryVault,
   createStudioCrdtRecoverySqlitePersistence,
-} from "../../src/domains/creator/live/studio-crdt-recovery-vault";
-import { StudioCrdtRoomBinding } from "../../src/domains/creator/live/studio-crdt-room-binding";
-import { StudioLiveRoom } from "../../src/domains/creator/live/studio-live-collaboration-room";
+} from "../../apps/web/src/domains/creator/live/studio-crdt-recovery-vault";
+import { StudioCrdtRoomBinding } from "../../apps/web/src/domains/creator/live/studio-crdt-room-binding";
+import { StudioLiveRoom } from "../../apps/web/src/domains/creator/live/studio-live-collaboration-room";
 import {
   createStudioEngineWorkerSession,
   type StudioEngineWorkerLike,
-} from "../../src/domains/creator/render/studio-engine-worker-client";
+} from "../../apps/web/src/domains/creator/render/studio-engine-worker-client";
 import {
   STUDIO_ENGINE_EXECUTION_PROFILE,
   STUDIO_ENGINE_WORKER_BUDGETS,
   STUDIO_ENGINE_WORKER_PROTOCOL_REVISION,
   type StudioEngineCapabilitySnapshot,
   type StudioEngineHelloAckMessage,
-} from "../../src/domains/creator/render/studio-engine-worker-protocol";
+} from "../../apps/web/src/domains/creator/render/studio-engine-worker-protocol";
 import {
   acquireStudioGpuDevice,
   activeStudioGpuDeviceLeaseCount,
   disposeStudioGpuFabric,
   onStudioGpuDeviceLost,
-} from "../../src/domains/creator/render/studio-gpu-fabric";
+} from "../../apps/web/src/domains/creator/render/studio-gpu-fabric";
 import {
   createDeviceLossRecovery,
   type StudioDeviceLossClock,
   type StudioDeviceLossTournamentPort,
   type StudioGpuDeviceLike,
-} from "../../src/domains/creator/studio-device-loss-recovery";
+} from "../../apps/web/src/domains/creator/studio-device-loss-recovery";
 import {
   requireStudioCrdtOutboxDatabase,
   openStudioLocalDatabase,
   type StudioLocalDatabase,
-} from "../../src/domains/creator/studio-local-database";
+} from "../../apps/web/src/domains/creator/studio-local-database";
 import {
   createStudioOpfsAssetStore,
   STUDIO_OPFS_QUOTA_RESERVE_BYTES,
-} from "../../src/domains/creator/studio-opfs-asset-store";
+} from "../../apps/web/src/domains/creator/studio-opfs-asset-store";
 import {
   createStudioOpfsMemoryFileSystem,
   StudioOpfsError,
-} from "../../src/domains/creator/studio-opfs-filesystem";
-import { createSqliteJournalStore } from "../../src/domains/creator/studio-sqlite-journal-store";
+} from "../../apps/web/src/domains/creator/studio-opfs-filesystem";
+import { createSqliteJournalStore } from "../../apps/web/src/domains/creator/studio-sqlite-journal-store";
 import {
   createStudioVrmTexturePaintGpuUploadPlan,
   executeStudioVrmTexturePaintGpuUpload,
   type StudioVrmTexturePaintGpuUploadExecutionResult,
-} from "../../src/domains/creator/vrm/studio-vrm-texture-paint-gpu-upload";
+} from "../../apps/web/src/domains/creator/vrm/studio-vrm-texture-paint-gpu-upload";
 
-import type { StudioCrdtDrawStrokePayload } from "../../src/domains/creator/live/studio-crdt-document";
+import type { StudioCrdtDrawStrokePayload } from "../../apps/web/src/domains/creator/live/studio-crdt-document";
 import type {
   StudioLiveTransport,
   StudioLiveTransportControlEvent,
-} from "../../src/domains/creator/live/studio-live-collaboration-transport";
+} from "../../apps/web/src/domains/creator/live/studio-live-collaboration-transport";
 import type {
   CommandIR,
   SceneNodeIR,

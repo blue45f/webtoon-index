@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "اشکال هوشمند",
+  "studio.quickShape.description.active": "به آرامی خطوط، مربع، دایره و مثلث بکشید. اگر رها کنی، خود به خود مرتب می شود.",
+  "studio.quickShape.description.inactive": "اشکالی ندارد که آن را خط بکشید. اگر آن را روشن کنید، نقاشی دستی شما به شکل مرتبی اصلاح می شود.",
+  "studio.quickShape.toggleHint": "لحظه ای که یک شکل تقریباً کشیده شده را با خودکار رها می کنید، به شکل دقیقی در می آید. حتی اگر هنگام طراحی مکث کنید، یک پیش نمایش ظاهر می شود.",
+  "studio.quickShape.toggleAria.on": "اشکال هوشمند در",
+  "studio.quickShape.toggleAria.off": "اشکال هوشمند خاموش است",
+  "studio.quickShape.matchedSuffix": " من می توانم آن را احساس کنم. وقتی دستم را رها می کنم تایید می شود.",
+  "studio.quickShape.emptyStatus": "شکل را بکشید و رها کنید یا فقط در انتها بمانید",
+  "studio.quickShape.openTutorial": "آموزش اشکال هوشمند را تماشا کنید",
+  "studio.quickShape.notice": "شکل‌ها، خطوط، دایره‌ها، مربع‌ها و غیره هوشمند را رسم کنید و زمانی که رها کردید آن‌ها را اصلاح کنید (مکث برای پیش‌نمایش)"
+}

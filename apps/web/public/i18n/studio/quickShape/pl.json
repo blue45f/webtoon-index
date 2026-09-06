@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "inteligentne kształty",
+  "studio.quickShape.description.active": "Spokojnie rysuj linie, kwadraty, koła i trójkąty. Jeśli puścisz, samo się uporządkuje.",
+  "studio.quickShape.description.inactive": "Można to zapisać. Jeśli ją włączysz, Twój rysunek odręczny zostanie dopracowany do schludnego kształtu.",
+  "studio.quickShape.toggleHint": "W momencie, gdy puścisz z grubsza narysowany długopisem kształt, przybierze on dokładny kształt. Nawet jeśli zatrzymasz się w trakcie rysowania, pojawi się podgląd.",
+  "studio.quickShape.toggleAria.on": "Inteligentne kształty włączone",
+  "studio.quickShape.toggleAria.off": "Inteligentne kształty wyłączone",
+  "studio.quickShape.matchedSuffix": " Czuję to. Potwierdza się to, gdy puszczam rękę.",
+  "studio.quickShape.emptyStatus": "Narysuj kształt i puść lub po prostu zostań na końcu",
+  "studio.quickShape.openTutorial": "Obejrzyj samouczek dotyczący inteligentnych kształtów",
+  "studio.quickShape.notice": "Rysuj inteligentne kształty, linie, okręgi, kwadraty itp. i doprecyzuj je, gdy puścisz (wstrzymaj, aby wyświetlić podgląd)"
+}

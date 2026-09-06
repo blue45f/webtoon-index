@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Tutorial de funcións",
+  "studio.hub.subtitle": "Unha función á vez sen ningunha carga. Mirei {done}/{total}.",
+  "studio.hub.progressAriaLabel": "Progreso do titorial",
+  "studio.hub.listAriaLabel": "Lista de características",
+  "studio.hub.checked": "bótalle un ollo",
+  "studio.hub.prev": "Anterior",
+  "studio.hub.next": "seguinte",
+  "studio.hub.markComplete": "marcar como completo",
+  "studio.hub.completed": "Completado",
+  "studio.hub.tryLabelDefault": "Segue",
+  "studio.hub.stepAriaPrefix": "paso"
+}

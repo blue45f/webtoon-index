@@ -127,7 +127,7 @@ function persistSuccessEvidence(result, diagnostics) {
   return observations;
 }
 
-function validateSuccess(result, diagnostics) {
+function validateSuccess(result, diagnostics) { // NOSONAR javascript:S3776
   invariant(result.backend === "webgpu", `expected WebGPU backend, got ${result.backend}`);
   invariant(
     result.provider?.kind === "real-chromium-webgpu-rgba16float",

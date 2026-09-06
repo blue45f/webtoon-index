@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "मेरो फन्ट",
+  "studio.customFonts.importButton": "फाइलबाट आयात गर्नुहोस्",
+  "studio.customFonts.importing": "जाँच गर्दै...",
+  "studio.customFonts.importAria": "फन्ट फाइल आयात गर्नुहोस्",
+  "studio.customFonts.storageAria": "फन्ट लाइब्रेरी प्रयोग",
+  "studio.customFonts.emptyTitle": "अझै सम्म कुनै फन्टहरू समावेश गरिएको छैन।",
+  "studio.customFonts.unknownFileName": "कुनै फाइल नाम छैन",
+  "studio.customFonts.apply": "आवेदन दिनुहोस्",
+  "studio.customFonts.applyToText": "चयन गरिएको पाठमा यो फन्ट लागू गर्नुहोस्",
+  "studio.customFonts.selectTextFirst": "पहिले पाठ वा स्पीच बबल चयन गर्नुहोस्",
+  "studio.customFonts.delete": "फन्ट मेटाउनुहोस्"
+}

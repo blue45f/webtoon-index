@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Guia de imagens de IA generativa",
+  "studio.aiNotice.description": "Esta função cria imagens usando IA generativa (OpenAI). Os emblemas de IA são exibidos nos resultados criados.",
+  "studio.aiNotice.ruleCopyright": "Não criamos obras, personagens ou rostos de pessoas reais de outras pessoas.",
+  "studio.aiNotice.ruleAccuracy": "Os resultados da IA ​​podem ser imprecisos ou diferentes do pretendido.",
+  "studio.aiNotice.ruleResponsibility": "Você é responsável por usar as imagens que cria.",
+  "studio.aiNotice.cancel": "Cancelar",
+  "studio.aiNotice.confirm": "eu entendo, crio"
+}

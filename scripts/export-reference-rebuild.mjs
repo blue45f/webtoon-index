@@ -1,7 +1,7 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
-import { ASSETS, createAsset } from '../public/assets/reference-rebuild/generator.mjs';
+import { ASSETS, createAsset } from '../apps/web/public/assets/reference-rebuild/generator.mjs';
 const out = path.resolve(process.argv[2] ?? 'reference-rebuild-output');
 await mkdir(out, { recursive: true });
 const rows = [];

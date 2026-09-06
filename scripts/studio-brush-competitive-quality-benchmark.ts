@@ -1,38 +1,38 @@
 import {
   mapStudioBrushAliasPressureSamples,
   studioBrushAliasEffectiveDiameter,
-} from "../src/domains/creator/brush/studio-brush-alias-profile";
+} from "../apps/web/src/domains/creator/brush/studio-brush-alias-profile";
 import {
   STUDIO_BRUSH_CATALOG_COUNTS,
-} from "../src/domains/creator/brush/studio-brush-catalog-core";
+} from "../apps/web/src/domains/creator/brush/studio-brush-catalog-core";
 import {
   auditStudioBrushContinuity,
   type StudioBrushContinuityAuditResult,
   type StudioBrushContinuityRenderStrategy,
-} from "../src/domains/creator/brush/studio-brush-continuity-audit";
+} from "../apps/web/src/domains/creator/brush/studio-brush-continuity-audit";
 import {
   planNormalizedStudioDynamicBrushDabs,
   studioDynamicBrushDepositPipelineUsesContinuation,
   type StudioDynamicBrushDab,
-} from "../src/domains/creator/brush/studio-brush-dynamics";
+} from "../apps/web/src/domains/creator/brush/studio-brush-dynamics";
 import {
   profileStudioBrushMaterialResponse,
-} from "../src/domains/creator/brush/studio-brush-material-response";
+} from "../apps/web/src/domains/creator/brush/studio-brush-material-response";
 import {
   type StudioBrushPlannerQualityCandidate,
-} from "../src/domains/creator/brush/studio-brush-planner-quality-audit";
+} from "../apps/web/src/domains/creator/brush/studio-brush-planner-quality-audit";
 import {
   planStudioStampBrushDabs,
   resolveStudioStampBrushKind,
   resolveStudioStampBrushStyle,
   type StudioStampBrushDab,
-} from "../src/domains/creator/brush/studio-brush-stamp-engine";
+} from "../apps/web/src/domains/creator/brush/studio-brush-stamp-engine";
 import {
   planStudioCalligraphyRibbon,
-} from "../src/domains/creator/brush/studio-calligraphy-ribbon";
+} from "../apps/web/src/domains/creator/brush/studio-calligraphy-ribbon";
 import {
   buildCalligraphySegments,
-} from "../src/domains/creator/studio-brush";
+} from "../apps/web/src/domains/creator/studio-brush";
 import {
   appendStudioCausalDynamicBrushDepositsV2,
   appendStudioCausalDynamicBrushDepositsV3,
@@ -43,14 +43,14 @@ import {
   STUDIO_CAUSAL_DYNAMIC_BRUSH_MAX_DABS,
   STUDIO_CAUSAL_DYNAMIC_BRUSH_MAX_TOTAL_DABS,
   type StudioCausalDynamicBrushSampleV2,
-} from "../src/domains/creator/studio-causal-dynamic-brush-deposit-v2";
+} from "../apps/web/src/domains/creator/studio-causal-dynamic-brush-deposit-v2";
 import {
   captureStudioOutlineStrokeContractV1,
   planStudioPerfectFreehandRender,
-} from "../src/domains/creator/studio-outline-stroke-contract";
+} from "../apps/web/src/domains/creator/studio-outline-stroke-contract";
 import {
   peekStudioPerfectFreehandStroker,
-} from "../src/domains/creator/studio-perfect-freehand";
+} from "../apps/web/src/domains/creator/studio-perfect-freehand";
 
 export const STUDIO_COMPETITIVE_BRUSH_QUALITY_SCHEMA_VERSION = 1 as const;
 export const STUDIO_COMPETITIVE_BRUSH_INPUT_RATES_HZ = [60, 120, 240] as const;

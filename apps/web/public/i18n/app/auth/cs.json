@@ -1,0 +1,21 @@
+{
+  "auth.menu.triggerLabel": "Account menu",
+  "auth.menu.adminPanel": "Admin console",
+  "auth.menu.profile": "My profile",
+  "auth.menu.settings": "Settings",
+  "auth.menu.signOut": "Sign out",
+  "auth.menu.fallbackName": "Reader",
+  "auth.callback.message.working": "Finalizing sign-in…",
+  "auth.callback.error.badState": "Invalid state parameter.",
+  "auth.callback.error.noCode": "Missing authorization code.",
+  "auth.callback.error.oauthFailed": "OAuth exchange failed.",
+  "auth.callback.error.unsupported": "Unsupported sign-in provider.",
+  "auth.callback.error.accessDenied": "Sign-in was cancelled.",
+  "auth.callback.error.generic": "Sign-in failed.",
+  "auth.callback.error.noUser": "Unable to verify user information.",
+  "auth.callback.error.invalidAccess": "Invalid access.",
+  "auth.callback.error.failed": "An error occurred while signing in.",
+  "auth.callback.message.done": "Sign-in completed. Redirecting shortly.",
+  "auth.callback.message.doneDemo": "Demo sign-in completed. Redirecting shortly.",
+  "auth.callback.demo.message": "You are signed in with a demo account. Some features may be limited."
+}

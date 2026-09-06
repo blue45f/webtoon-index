@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Generative AI ምስል መመሪያ",
+  "studio.aiNotice.description": "ይህ ተግባር አመንጭ AI (OpenAI) በመጠቀም ምስሎችን ይፈጥራል. የ AI ባጆች በተፈጠሩት ውጤቶች ላይ ይታያሉ.",
+  "studio.aiNotice.ruleCopyright": "እኛ የሌሎች ሰዎችን ስራዎች፣ ገጸ-ባህሪያት ወይም የእውነተኛ ሰዎች ፊት አንፈጥርም።",
+  "studio.aiNotice.ruleAccuracy": "የ AI ውጤቶች ትክክል ላይሆኑ ወይም ከታሰበው የተለየ ሊሆኑ ይችላሉ።",
+  "studio.aiNotice.ruleResponsibility": "እርስዎ የሚፈጥሯቸውን ምስሎች የመጠቀም ኃላፊነት አለብዎት።",
+  "studio.aiNotice.cancel": "ሰርዝ",
+  "studio.aiNotice.confirm": "ተረድቻለሁ፣ ፍጠር"
+}

@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "סרגל פקודות מהיר",
+  "studio.commandBar.settings": "הגדרות סרגל הפקודות",
+  "studio.commandBar.settingsDescription": "שנה את סידור המשבצות ואת הצגת סרגל הפקודות שמתחת לשורת התפריטים.",
+  "studio.commandBar.settingsTip": "מקם את הפקודות שאתה משתמש בהן הכי הרבה במשבצות הראשונות, כדי להגיע אליהן הכי מהר.",
+  "studio.commandBar.settingsClose": "סגור את הגדרות סרגל הפקודות",
+  "studio.commandBar.settingsStorageNote": "סידור המשבצות נשמר בהגדרות סביבת העבודה של הדפדפן הזה.",
+  "studio.commandBar.showSlots": "הצג את משבצות הפקודות",
+  "studio.commandBar.slot": "משבצת {index}",
+  "studio.commandBar.slotAria": "משבצת פקודה {index}",
+  "studio.commandBar.slotEmpty": "משבצת ריקה",
+  "studio.commandBar.resetDefaults": "אפס לסידור ברירת המחדל",
+  "studio.commandBar.command.undo": "בטל",
+  "studio.commandBar.command.redo": "בצע שוב",
+  "studio.commandBar.command.save": "שמור טיוטה",
+  "studio.commandBar.command.publish": "פרסם",
+  "studio.commandBar.command.download": "הורד את העמוד הנוכחי",
+  "studio.commandBar.command.export-open": "אפשרויות ייצוא",
+  "studio.commandBar.command.zoom-fit": "התאם לרוחב המסך",
+  "studio.commandBar.command.assets": "תבניות ונכסים",
+  "studio.commandBar.command.bubbles": "בועת דיבור",
+  "studio.commandBar.command.project": "כלי הפרויקט"
+}

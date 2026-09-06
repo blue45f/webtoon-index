@@ -1,0 +1,9 @@
+{
+  "apiError.loginRequired": "需要先登入。",
+  "apiError.adminRequired": "無法驗證管理員權限。",
+  "apiError.adminOnlyPage": "此頁面僅限管理員訪問。",
+  "apiError.notFound": "未找到目標項目。",
+  "apiError.unsupportedType": "不支援的內容類型。",
+  "apiError.inactiveAccount": "未啟用的帳號無法使用管理員權限。",
+  "apiError.settlementFailed": "結算處理失敗。"
+}

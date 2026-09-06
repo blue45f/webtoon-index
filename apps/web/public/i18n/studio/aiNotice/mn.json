@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Хиймэл хиймэл оюун ухааны зургийн гарын авлага",
+  "studio.aiNotice.description": "Энэ функц нь үүсгэгч AI (OpenAI) ашиглан зураг үүсгэдэг. Үүсгэсэн үр дүн дээр AI тэмдгийг харуулдаг.",
+  "studio.aiNotice.ruleCopyright": "Бид бусдын бүтээл, дүр, бодит хүмүүсийн царайг бүтээдэггүй.",
+  "studio.aiNotice.ruleAccuracy": "AI-ийн үр дүн буруу эсвэл төлөвлөснөөс өөр байж болно.",
+  "studio.aiNotice.ruleResponsibility": "Та бүтээсэн зургуудаа ашиглах үүрэгтэй.",
+  "studio.aiNotice.cancel": "Цуцлах",
+  "studio.aiNotice.confirm": "Би ойлгож байна, бүтээ"
+}

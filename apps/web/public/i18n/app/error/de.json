@@ -1,0 +1,7 @@
+{
+  "error.reloading": "Wird auf die neueste Version aktualisiert…",
+  "error.chunkRetryFailed": "Aktualisierung versucht, aber das Problem besteht weiterhin. Bitte überprüfen Sie Ihre Verbindung und versuchen Sie es erneut.",
+  "error.reloadButton": "Seite neu laden",
+  "error.goHome": "Zur Startseite",
+  "error.retryDesc": "Bitte versuchen Sie es erneut oder kehren Sie zur Startseite zurück."
+}

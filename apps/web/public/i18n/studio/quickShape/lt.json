@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "protingos formos",
+  "studio.quickShape.description.active": "Ramiai pieškite linijas, kvadratus, apskritimus ir trikampius. Jei paleisi, susitvarkys savaime.",
+  "studio.quickShape.description.inactive": "Tai gerai, kad jį užrašysite. Jei jį įjungsite, jūsų rankos piešinys bus išgrynintas į tvarkingą formą.",
+  "studio.quickShape.toggleHint": "Tą akimirką, kai rašikliu paleidžiate grubiai nupieštą figūrą, ji įgauna tikslią formą. Net jei piešdami pristabdysite, bus rodoma peržiūra.",
+  "studio.quickShape.toggleAria.on": "Išmanios formos",
+  "studio.quickShape.toggleAria.off": "Išjungtos išmaniosios formos",
+  "studio.quickShape.matchedSuffix": " Aš tai jaučiu. Tai patvirtina, kai paleidžiu ranką.",
+  "studio.quickShape.emptyStatus": "Nupieškite figūrą ir paleiskite arba tiesiog pasilikite pabaigoje",
+  "studio.quickShape.openTutorial": "Peržiūrėkite išmaniųjų formų mokymo programą",
+  "studio.quickShape.notice": "Nubrėžkite sumanias figūras, linijas, apskritimus, kvadratus ir kt. ir patikslinkite juos atleidę (pristabdykite peržiūrai)"
+}

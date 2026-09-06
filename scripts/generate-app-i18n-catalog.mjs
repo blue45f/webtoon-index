@@ -2,19 +2,19 @@
 //
 // The catalog is the app shell's only compiled knowledge about locales it does not bundle:
 // which ones have an asset, and how much of each asset is actually translated. Both facts are
-// measured here from public/i18n/app/*.json — never authored by hand — so the language picker
+// measured here from apps/web/public/i18n/app/<namespace>/<locale>.json — never authored by hand — so the language picker
 // cannot advertise a locale as translated when it renders English.
 //
 //   node scripts/generate-app-i18n-catalog.mjs
 //
-// lib/__tests__/i18n-locale-assets.test.ts fails when the committed catalog drifts from disk.
+// apps/web/src/shared/lib/__tests__/i18n-locale-assets.test.ts fails when the committed catalog drifts from disk.
 
 import { readFileSync, readdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
 const repoRoot = path.resolve(import.meta.dirname, "..");
-const assetDirectory = path.join(repoRoot, "public", "i18n", "app");
-const catalogPath = path.join(repoRoot, "lib", "i18n-locale-catalog.ts");
+const assetDirectory = path.join(repoRoot, "apps", "web", "public", "i18n", "app");
+const catalogPath = path.join(repoRoot, "apps", "web", "lib", "i18n-locale-catalog.ts");
 
 /** Locales compiled into the app shell so the fallback chain never awaits I/O. */
 const BUILT_IN_LOCALES = ["ko", "en"];
@@ -69,14 +69,14 @@ export function buildCatalogSource(dictionaries) {
   const lines = [
     "// GENERATED FILE — do not hand-edit.",
     "//",
-    "// Source of truth: public/i18n/app/<locale>.json.",
+    "// Source of truth: apps/web/public/i18n/app/<namespace>/<locale>.json.",
     "// Regenerate with `node scripts/generate-app-i18n-catalog.mjs`.",
-    "// lib/__tests__/i18n-locale-assets.test.ts fails when this catalog drifts from the assets.",
+    "// apps/web/src/shared/lib/__tests__/i18n-locale-assets.test.ts fails when this catalog drifts from the assets.",
     "",
     "/** Locales compiled into the app shell so the fallback chain never awaits I/O. */",
     `export const APP_I18N_BUILT_IN_LOCALES = [${BUILT_IN_LOCALES.map((locale) => JSON.stringify(locale)).join(", ")}] as const;`,
     "",
-    "/** Every locale that has a `public/i18n/app/<locale>.json` asset. */",
+    "/** Every locale that has a `apps/web/public/i18n/app/<namespace>/<locale>.json` asset. */",
     "export const APP_I18N_ASSET_LOCALES = [",
     ...locales.map((locale) => `  ${JSON.stringify(locale)},`),
     "] as const;",

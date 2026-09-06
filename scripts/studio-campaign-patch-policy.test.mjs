@@ -25,8 +25,8 @@ const change = (path, additions = 10, deletions = 0, extra = {}) => ({
 
 test("accepts a bounded source change accompanied by a focused test", () => {
   const result = evaluateStudioCampaignPatch(config, [
-    change("src/domains/creator/studio-smart-shape-edit.ts", 80, 3),
-    change("src/domains/creator/studio-smart-shape-edit.test.ts", 70, 0, { status: "A" }),
+    change("apps/web/src/domains/creator/studio-smart-shape-edit.ts", 80, 3),
+    change("apps/web/src/domains/creator/studio-smart-shape-edit.test.ts", 70, 0, { status: "A" }),
   ]);
 
   assert.equal(result.ok, true);
@@ -39,7 +39,7 @@ test("accepts a bounded source change accompanied by a focused test", () => {
 
 test("rejects source changes without a focused test", () => {
   const result = evaluateStudioCampaignPatch(config, [
-    change("src/domains/creator/studio-new-engine.ts", 120, 0, { status: "A" }),
+    change("apps/web/src/domains/creator/studio-new-engine.ts", 120, 0, { status: "A" }),
   ]);
 
   assert.equal(result.ok, false);
@@ -112,8 +112,8 @@ test("rejects patches that exceed changed-file or changed-line budgets", () => {
 
 test("rejects file deletion and binary payload mutations", () => {
   const result = evaluateStudioCampaignPatch(config, [
-    change("src/domains/creator/legacy.ts", 0, 40, { status: "D", newMode: "000000" }),
-    change("public/assets/external-model.glb", 0, 0, { status: "A", binary: true }),
+    change("apps/web/src/domains/creator/legacy.ts", 0, 40, { status: "D", newMode: "000000" }),
+    change("apps/web/public/assets/external-model.glb", 0, 0, { status: "A", binary: true }),
   ]);
 
   assert.equal(result.ok, false);
@@ -123,7 +123,7 @@ test("rejects file deletion and binary payload mutations", () => {
 
 test("rejects symbolic links and submodules even inside allowed source paths", () => {
   const result = evaluateStudioCampaignPatch(config, [
-    change("src/domains/creator/external-link.ts", 1, 0, {
+    change("apps/web/src/domains/creator/external-link.ts", 1, 0, {
       status: "A",
       oldMode: "000000",
       newMode: "120000",
@@ -133,7 +133,7 @@ test("rejects symbolic links and submodules even inside allowed source paths", (
       oldMode: "000000",
       newMode: "160000",
     }),
-    change("src/domains/creator/external-link.test.ts", 20, 0, { status: "A" }),
+    change("apps/web/src/domains/creator/external-link.test.ts", 20, 0, { status: "A" }),
     change("docs/third-party/studio-reuse-registry.json", 20, 1),
   ]);
 

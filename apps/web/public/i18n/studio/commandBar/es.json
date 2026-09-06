@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Barra de comandos rápidos",
+  "studio.commandBar.settings": "Configuración de la barra de comandos",
+  "studio.commandBar.settingsDescription": "Cambia la disposición de ranuras y la visibilidad de la barra de comandos bajo la barra de menús.",
+  "studio.commandBar.settingsTip": "Pon los comandos que más usas en las primeras ranuras para tenerlos más a mano.",
+  "studio.commandBar.settingsClose": "Cerrar la configuración de la barra de comandos",
+  "studio.commandBar.settingsStorageNote": "La disposición de ranuras se guarda en la configuración del espacio de trabajo de este navegador.",
+  "studio.commandBar.showSlots": "Mostrar ranuras de comandos",
+  "studio.commandBar.slot": "Ranura {index}",
+  "studio.commandBar.slotAria": "Ranura de comando {index}",
+  "studio.commandBar.slotEmpty": "Ranura vacía",
+  "studio.commandBar.resetDefaults": "Restablecer la disposición predeterminada",
+  "studio.commandBar.command.undo": "Deshacer",
+  "studio.commandBar.command.redo": "Rehacer",
+  "studio.commandBar.command.save": "Guardar borrador",
+  "studio.commandBar.command.publish": "Publicar",
+  "studio.commandBar.command.download": "Descargar la página actual",
+  "studio.commandBar.command.export-open": "Opciones de exportación",
+  "studio.commandBar.command.zoom-fit": "Ajustar al ancho de la pantalla",
+  "studio.commandBar.command.assets": "Plantillas y recursos",
+  "studio.commandBar.command.bubbles": "Bocadillo",
+  "studio.commandBar.command.project": "Herramientas del proyecto"
+}

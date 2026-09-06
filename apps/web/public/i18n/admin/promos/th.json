@@ -1,0 +1,14 @@
+{
+  "admin.promos.title": "Subscription Promotion & Coupon Management",
+  "admin.promos.desc": "Issue and manage percentage and fixed-amount promotion codes for subscriptions.",
+  "admin.promos.new": "Issue New Promo Code",
+  "admin.promos.loading": "Loading promos...",
+  "admin.promos.empty": "No issued promotion coupons.",
+  "admin.promos.confirmDelete": "Are you sure you want to delete this promo coupon?",
+  "admin.promos.tableCode": "Coupon Code",
+  "admin.promos.tableDiscount": "Discount",
+  "admin.promos.tableUsage": "Usage / Limit",
+  "admin.promos.tableStatus": "Status",
+  "admin.promos.tableExpires": "Expires",
+  "admin.promos.tableActions": "Actions"
+}

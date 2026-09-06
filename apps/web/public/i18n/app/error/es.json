@@ -1,0 +1,7 @@
+{
+  "error.reloading": "Cargando la última versión…",
+  "error.chunkRetryFailed": "Se ha intentado recargar, pero el problema persiste. Compruebe su conexión e inténtelo de nuevo.",
+  "error.reloadButton": "Recargar página",
+  "error.goHome": "Ir al inicio",
+  "error.retryDesc": "Por favor, inténtelo de nuevo o regrese al inicio."
+}

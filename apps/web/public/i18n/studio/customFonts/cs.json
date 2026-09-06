@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "můj font",
+  "studio.customFonts.importButton": "Importovat ze souboru",
+  "studio.customFonts.importing": "Kontrola…",
+  "studio.customFonts.importAria": "Import souboru písma",
+  "studio.customFonts.storageAria": "Využití knihovny písem",
+  "studio.customFonts.emptyTitle": "Zatím nejsou zahrnuta žádná písma.",
+  "studio.customFonts.unknownFileName": "Žádný název souboru",
+  "studio.customFonts.apply": "Použít",
+  "studio.customFonts.applyToText": "Použít toto písmo na vybraný text",
+  "studio.customFonts.selectTextFirst": "Nejprve vyberte text nebo bublinu",
+  "studio.customFonts.delete": "odstranit písmo"
+}

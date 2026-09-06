@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Tutorial de recursos",
+  "studio.hub.subtitle": "Uma função de cada vez sem nenhum fardo. Eu olhei para {done}/{total}.",
+  "studio.hub.progressAriaLabel": "Progresso do tutorial",
+  "studio.hub.listAriaLabel": "Lista de recursos",
+  "studio.hub.checked": "dê uma olhada",
+  "studio.hub.prev": "Anterior",
+  "studio.hub.next": "próximo",
+  "studio.hub.markComplete": "marcar como concluído",
+  "studio.hub.completed": "Concluído",
+  "studio.hub.tryLabelDefault": "Acompanhe",
+  "studio.hub.stepAriaPrefix": "passo"
+}

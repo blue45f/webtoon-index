@@ -14,7 +14,7 @@ import {
   type StudioEngineTileProviderBaseTile,
   type StudioEngineTileProviderDelta,
   type StudioEngineTileProviderInput,
-} from "../src/domains/creator/render/studio-engine-tile-authority";
+} from "../apps/web/src/domains/creator/render/studio-engine-tile-authority";
 import {
   STUDIO_ENGINE_WEBGPU_TILE_BYTE_LENGTH,
   STUDIO_ENGINE_WEBGPU_TILE_PROVIDER_VERSION,
@@ -24,13 +24,13 @@ import {
   type StudioEngineWebGpuTileProviderRequest,
   type StudioEngineWebGpuTileProviderResult,
   type StudioEngineWebGpuTileProviderV1,
-} from "../src/domains/creator/render/studio-engine-webgpu-tile-provider-v1";
+} from "../apps/web/src/domains/creator/render/studio-engine-webgpu-tile-provider-v1";
 import {
   lowerStudioCanonicalBrushPlanToWebGpuDabs,
   type StudioCanonicalWebGpuAnalyticDab,
-} from "../src/domains/creator/studio-canonical-brush-webgpu-lowering";
+} from "../apps/web/src/domains/creator/studio-canonical-brush-webgpu-lowering";
 
-import type { StudioCanonicalBrushPlan } from "../src/domains/creator/studio-canonical-brush-plan";
+import type { StudioCanonicalBrushPlan } from "../apps/web/src/domains/creator/studio-canonical-brush-plan";
 
 const REQUEST_EPOCH = 41;
 const INITIAL_DEVICE_EPOCH = 1;

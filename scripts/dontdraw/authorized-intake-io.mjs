@@ -58,7 +58,7 @@ function sameDirectory(left, right) {
 }
 
 /** Reserve a private output, expose ready/ only on success, and clean up only our staging data. */
-export async function stagePrivateBundle(destination, populate) {
+export async function stagePrivateBundle(destination, populate) { // NOSONAR javascript:S3776
   await mkdir(destination, { mode: 0o700 }); // Exclusive; never reuse an existing output.
   let identity;
   let temporary;

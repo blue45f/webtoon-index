@@ -1,0 +1,12 @@
+{
+  "admin.stats.activeVisitors": "5-min active visitors",
+  "admin.stats.degraded": "Degraded",
+  "admin.stats.health": "System Health",
+  "admin.stats.healthy": "Healthy",
+  "admin.stats.maintenance": "Maintenance Mode",
+  "admin.stats.maintenanceOff": "Normal Operation (OFF)",
+  "admin.stats.maintenanceOn": "Emergency Maintenance (ON)",
+  "admin.stats.revenueEvents": "Total Transactions / Settlements",
+  "admin.stats.usersCommunity": "Total Members / Posts",
+  "admin.stats.views5m": "5-min page views"
+}

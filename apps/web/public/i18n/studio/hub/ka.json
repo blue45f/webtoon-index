@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "მხატვრული გაკვეთილი",
+  "studio.hub.subtitle": "ერთი ფუნქცია ერთდროულად ყოველგვარი ტვირთის გარეშე. მე ვუყურე {done}/{total}.",
+  "studio.hub.progressAriaLabel": "გაკვეთილის პროგრესი",
+  "studio.hub.listAriaLabel": "ფუნქციების სია",
+  "studio.hub.checked": "შეხედე",
+  "studio.hub.prev": "წინა",
+  "studio.hub.next": "შემდეგი",
+  "studio.hub.markComplete": "მონიშვნა დასრულებულად",
+  "studio.hub.completed": "დასრულებული",
+  "studio.hub.tryLabelDefault": "მიჰყევით",
+  "studio.hub.stepAriaPrefix": "ნაბიჯი"
+}

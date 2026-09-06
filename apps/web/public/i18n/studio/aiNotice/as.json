@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "জেনেৰেটিভ AI ইমেজ গাইড",
+  "studio.aiNotice.description": "এই ফাংচনে জেনেৰেটিভ AI (OpenAI) ব্যৱহাৰ কৰি ছবি সৃষ্টি কৰে। সৃষ্টি কৰা ফলাফলত AI বেজ প্ৰদৰ্শিত হয়।",
+  "studio.aiNotice.ruleCopyright": "আমি আনৰ সৃষ্টি, চৰিত্ৰ, বা প্ৰকৃত মানুহৰ মুখ সৃষ্টি নকৰো।",
+  "studio.aiNotice.ruleAccuracy": "এআইৰ ফলাফল ভুল হ’ব পাৰে বা উদ্দেশ্য কৰাতকৈ পৃথক হ’ব পাৰে।",
+  "studio.aiNotice.ruleResponsibility": "আপুনি সৃষ্টি কৰা ছবিসমূহ ব্যৱহাৰ কৰাৰ বাবে আপুনি দায়বদ্ধ।",
+  "studio.aiNotice.cancel": "বাতিল কৰক",
+  "studio.aiNotice.confirm": "মই বুজি পাওঁ, সৃষ্টি কৰক"
+}

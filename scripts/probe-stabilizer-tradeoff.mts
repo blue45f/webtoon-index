@@ -13,7 +13,7 @@ import {
   stabilizeStudioStrokeSample,
   STUDIO_STABILIZER_MODES,
   type StudioStabilizerMode,
-} from "../src/domains/creator/brush/studio-stroke-stabilizer";
+} from "../apps/web/src/domains/creator/brush/studio-stroke-stabilizer";
 
 const TREMOR_AMPLITUDE_PX = 1.5;
 const SAMPLE_INTERVAL_MS = 1000 / 120;

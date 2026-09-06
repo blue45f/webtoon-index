@@ -174,7 +174,7 @@ export function validateIsolatedMarketApiTarget({
 }
 
 export async function requireUnusedApiTarget(target) {
-  const host = new URL(target.apiOrigin).hostname.replace(/^\[|\]$/gu, "");
+  const host = new URL(target.apiOrigin).hostname.replace(/(?:^\[|\]$)/gu, "");
   await new Promise((resolvePromise, rejectPromise) => {
     const socket = createConnection({ host, port: target.apiPort });
     let settled = false;

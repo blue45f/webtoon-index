@@ -59,7 +59,7 @@ else:
         operator.report({"ERROR"}, str(result.get("error", "unknown pipeline error")))
         return {"CANCELLED"}
 
-    class TOONSTUDIO_OT_run_character_pipeline(Operator):
+    class ToonstudioOtRunCharacterPipeline(Operator):
         bl_idname = "toonstudio.run_character_pipeline"
         bl_label = "Run Character Pipeline"
         bl_options = {"REGISTER", "UNDO"}
@@ -67,7 +67,7 @@ else:
         def execute(self, _context):
             return _run_operator(self, "run_pipeline")
 
-    class TOONSTUDIO_OT_inspect_character(Operator):
+    class ToonstudioOtInspectCharacter(Operator):
         bl_idname = "toonstudio.inspect_character"
         bl_label = "Inspect Current Character"
         bl_options = {"REGISTER"}
@@ -75,7 +75,7 @@ else:
         def execute(self, _context):
             return _run_operator(self, "inspect_character")
 
-    class TOONSTUDIO_OT_build_authored_hair(Operator):
+    class ToonstudioOtBuildAuthoredHair(Operator):
         bl_idname = "toonstudio.build_authored_hair"
         bl_label = "Build Authored Toon Hair"
         bl_options = {"REGISTER", "UNDO"}
@@ -83,7 +83,7 @@ else:
         def execute(self, _context):
             return _run_operator(self, "build_authored_hair")
 
-    class TOONSTUDIO_OT_create_semantic_face_shapes(Operator):
+    class ToonstudioOtCreateSemanticFaceShapes(Operator):
         bl_idname = "toonstudio.create_semantic_face_shapes"
         bl_label = "Create Semantic Face Shapes"
         bl_options = {"REGISTER", "UNDO"}
@@ -91,7 +91,7 @@ else:
         def execute(self, _context):
             return _run_operator(self, "create_semantic_face_shapes")
 
-    class TOONSTUDIO_OT_validate_character(Operator):
+    class ToonstudioOtValidateCharacter(Operator):
         bl_idname = "toonstudio.validate_character"
         bl_label = "Validate Character"
         bl_options = {"REGISTER"}
@@ -99,7 +99,7 @@ else:
         def execute(self, _context):
             return _run_operator(self, "validate_character")
 
-    class TOONSTUDIO_PT_character_pipeline(Panel):
+    class ToonstudioPtCharacterPipeline(Panel):
         bl_label = "Character Pipeline"
         bl_idname = "TOONSTUDIO_PT_character_pipeline"
         bl_space_type = "VIEW_3D"
@@ -122,12 +122,12 @@ else:
                 box.label(text="Last result stored on scene", icon="INFO")
 
     _CLASSES = (
-        TOONSTUDIO_OT_run_character_pipeline,
-        TOONSTUDIO_OT_inspect_character,
-        TOONSTUDIO_OT_build_authored_hair,
-        TOONSTUDIO_OT_create_semantic_face_shapes,
-        TOONSTUDIO_OT_validate_character,
-        TOONSTUDIO_PT_character_pipeline,
+        ToonstudioOtRunCharacterPipeline,
+        ToonstudioOtInspectCharacter,
+        ToonstudioOtBuildAuthoredHair,
+        ToonstudioOtCreateSemanticFaceShapes,
+        ToonstudioOtValidateCharacter,
+        ToonstudioPtCharacterPipeline,
     )
 
     def register() -> None:

@@ -80,7 +80,7 @@ def main() -> int:
 if __name__ == "__main__":
     try:
         raise SystemExit(main())
-    except (ContractError, PipelineFailure, OSError, RuntimeError, ValueError) as error:
+    except (OSError, RuntimeError, ValueError) as error:
         print(
             "TOONSTUDIO_CHARACTER_PIPELINE_FAILED "
             + json.dumps(

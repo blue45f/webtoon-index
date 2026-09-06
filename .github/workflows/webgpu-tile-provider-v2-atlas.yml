@@ -5,13 +5,13 @@ on:
     branches:
       - feat/webgpu-tile-provider-v2-atlas-clean-20260904
     paths:
-      - "src/domains/creator/render/studio-engine-webgpu-tile-provider-v2-atlas.ts"
-      - "src/domains/creator/render/studio-engine-webgpu-tile-provider-v2-atlas.test.ts"
+      - "apps/web/src/domains/creator/render/studio-engine-webgpu-tile-provider-v2-atlas.ts"
+      - "apps/web/src/domains/creator/render/studio-engine-webgpu-tile-provider-v2-atlas.test.ts"
       - ".github/workflows/webgpu-tile-provider-v2-atlas.yml"
   pull_request:
     paths:
-      - "src/domains/creator/render/studio-engine-webgpu-tile-provider-v2-atlas.ts"
-      - "src/domains/creator/render/studio-engine-webgpu-tile-provider-v2-atlas.test.ts"
+      - "apps/web/src/domains/creator/render/studio-engine-webgpu-tile-provider-v2-atlas.ts"
+      - "apps/web/src/domains/creator/render/studio-engine-webgpu-tile-provider-v2-atlas.test.ts"
       - ".github/workflows/webgpu-tile-provider-v2-atlas.yml"
   workflow_dispatch:
 
@@ -49,14 +49,14 @@ jobs:
       - name: Focused unit tests
         run: >-
           pnpm exec vitest run
-          src/domains/creator/render/studio-engine-webgpu-tile-provider-v1.test.ts
-          src/domains/creator/render/studio-engine-webgpu-tile-provider-v2-atlas.test.ts
+          apps/web/src/domains/creator/render/studio-engine-webgpu-tile-provider-v1.test.ts
+          apps/web/src/domains/creator/render/studio-engine-webgpu-tile-provider-v2-atlas.test.ts
 
       - name: Focused lint
         run: >-
           pnpm exec eslint --max-warnings=0
-          src/domains/creator/render/studio-engine-webgpu-tile-provider-v2-atlas.ts
-          src/domains/creator/render/studio-engine-webgpu-tile-provider-v2-atlas.test.ts
+          apps/web/src/domains/creator/render/studio-engine-webgpu-tile-provider-v2-atlas.ts
+          apps/web/src/domains/creator/render/studio-engine-webgpu-tile-provider-v2-atlas.test.ts
 
       - name: Typecheck
         env:

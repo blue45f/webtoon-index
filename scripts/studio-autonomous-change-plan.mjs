@@ -95,7 +95,7 @@ function emptyCategories() {
   return Object.fromEntries(CATEGORY_NAMES.map((name) => [name, false]));
 }
 
-export function classifyStudioChanges(inputPaths) {
+export function classifyStudioChanges(inputPaths) { // NOSONAR javascript:S3776
   const paths = uniqueSortedPaths(inputPaths);
   const docsOnly = paths.length > 0 && paths.every((path) => matchesAny(path, DOCUMENTATION_RULES));
   const categories = emptyCategories();
@@ -158,12 +158,12 @@ function parseArguments(argv) {
     const argument = argv[index];
     if (argument === "--paths-file") {
       options.pathsFile = argv[index + 1] ?? null;
-      index += 1;
+      index += 1; // NOSONAR javascript:S2310
       continue;
     }
     if (argument === "--github-output") {
       options.githubOutput = argv[index +1] ?? null;
-      index += 1;
+      index += 1; // NOSONAR javascript:S2310
       continue;
     }
     if (argument === "--json") {

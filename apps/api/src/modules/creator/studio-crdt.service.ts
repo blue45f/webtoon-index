@@ -13,10 +13,10 @@ import {
   conflictsWithStudioCrdtRasterRootSnapshot,
   preservesStudioCrdtRasterRoots,
   snapshotStudioCrdtRasterRoots,
-} from "../../../../../lib/studio-crdt-raster-document-contract";
+} from "../../../../web/src/shared/lib/studio-crdt-raster-document-contract";
 import {
   STUDIO_WORK_ASSET_MAX_ASSETS_PER_WORK,
-} from "../../../../../lib/studio-work-asset-contract";
+} from "../../../../web/src/shared/lib/studio-work-asset-contract";
 
 import {
   STUDIO_CRDT_CLUSTER_LOAD_REPOSITORY,
@@ -50,12 +50,12 @@ import type {
   StudioCrdtRepository,
   StudioCrdtUpdateRecord,
 } from "./studio-crdt.repository";
-import type { StudioBrushR8TextureGrainSource } from "../../../../../lib/studio-brush-r8-grain-asset-contract";
+import type { StudioBrushR8TextureGrainSource } from "../../../../web/src/shared/lib/studio-brush-r8-grain-asset-contract";
 import type {
   StudioRasterAssetReference,
   StudioRasterOperation,
-} from "../../../../../lib/studio-crdt-raster-ops";
-import type { StudioWorkAssetReference } from "../../../../../lib/studio-work-asset-contract";
+} from "../../../../web/src/shared/lib/studio-crdt-raster-ops";
+import type { StudioWorkAssetReference } from "../../../../web/src/shared/lib/studio-work-asset-contract";
 
 export { hasValidStudioCrdtRootSchema };
 

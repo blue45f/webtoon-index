@@ -1,0 +1,16 @@
+{
+  "common.open": "開啟",
+  "common.search": "搜尋",
+  "common.loading.search": "搜尋中…",
+  "common.backToHome": "返回首頁",
+  "common.close": "關閉",
+  "common.loading": "載入中…",
+  "common.retry": "重試",
+  "common.retry.short": "重試",
+  "common.loading.short": "載入",
+  "common.backToTop": "返回頂部",
+  "common.notFoundWithQuery": "未找到 「{query}」 的相關結果。",
+  "common.openSearch": "在全域搜尋中查找 →",
+  "common.retry.all": "請重試或返回首頁。",
+  "common.loading.empty": "暫無數據。"
+}

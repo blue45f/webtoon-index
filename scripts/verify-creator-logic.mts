@@ -7,7 +7,7 @@
  *
  * Output is meant to be captured to {SCRATCH}/creator-logic.log
  */
-import { challengeDday } from "../src/infrastructure/creator-client.js";
+import { challengeDday } from "../apps/web/src/infrastructure/creator-client.js";
 
 async function main() {
   // Ensure env so that apps/api/src/server/creator loads without the top-level throw

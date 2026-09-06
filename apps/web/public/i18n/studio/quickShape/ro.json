@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "forme inteligente",
+  "studio.quickShape.description.active": "Desenați pe îndelete linii, pătrate, cercuri și triunghiuri. Dacă dai drumul, se va face de la sine.",
+  "studio.quickShape.description.inactive": "Este în regulă să-l mâzgăliți. Dacă îl porniți, desenul dvs. de mână va fi rafinat într-o formă îngrijită.",
+  "studio.quickShape.toggleHint": "În momentul în care renunți la o formă desenată aproximativ cu un stilou, aceasta se fixează într-o formă exactă. Chiar dacă faceți pauză în timp ce desenați, va apărea o previzualizare.",
+  "studio.quickShape.toggleAria.on": "Forme inteligente activate",
+  "studio.quickShape.toggleAria.off": "Formele inteligente dezactivate",
+  "studio.quickShape.matchedSuffix": " Pot să simt asta. Se confirmă când îmi eliberez mâna.",
+  "studio.quickShape.emptyStatus": "Desenați forma și lăsați-l, sau rămâneți la sfârșit",
+  "studio.quickShape.openTutorial": "Urmărește tutorialul cu forme inteligente",
+  "studio.quickShape.notice": "Desenați forme inteligente, linii, cercuri, pătrate etc. și rafinați-le când dați drumul (pauză pentru previzualizare)"
+}

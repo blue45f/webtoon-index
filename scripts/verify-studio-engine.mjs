@@ -144,8 +144,8 @@ const test = spawnSync(
     "packages/studio-format-gateway",
     "tests/visual",
     "tests/fault-injection",
-    "src/domains/creator/studio-surface-plan-shadow.test.ts",
-    "src/domains/creator/filter/studio-filter-island-plan.test.ts",
+    "apps/web/src/domains/creator/studio-surface-plan-shadow.test.ts",
+    "apps/web/src/domains/creator/filter/studio-filter-island-plan.test.ts",
   ],
   { cwd: ROOT, stdio: "inherit" },
 );

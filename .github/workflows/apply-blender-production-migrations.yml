@@ -86,12 +86,12 @@ jobs:
           pnpm run validate:architecture
           pnpm exec tsx scripts/verify-blender-character-pipeline.mjs
           pnpm exec eslint --max-warnings=0 \
-            src/domains/creator/vrm/studio-vrm-blender-character-package.ts \
-            src/domains/creator/vrm/studio-vrm-blender-character-package.test.ts \
-            src/domains/creator/vrm/studio-vrm-blender-character-loader.test.ts
+            apps/web/src/domains/creator/vrm/studio-vrm-blender-character-package.ts \
+            apps/web/src/domains/creator/vrm/studio-vrm-blender-character-package.test.ts \
+            apps/web/src/domains/creator/vrm/studio-vrm-blender-character-loader.test.ts
           pnpm exec vitest run \
-            src/domains/creator/vrm/studio-vrm-blender-character-package.test.ts \
-            src/domains/creator/vrm/studio-vrm-blender-character-loader.test.ts
+            apps/web/src/domains/creator/vrm/studio-vrm-blender-character-package.test.ts \
+            apps/web/src/domains/creator/vrm/studio-vrm-blender-character-loader.test.ts
           pnpm exec tsc -p tsconfig.json --noEmit --incremental false
 
       - name: Commit verified product migration

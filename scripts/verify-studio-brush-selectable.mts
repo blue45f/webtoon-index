@@ -31,8 +31,8 @@ import {
   STUDIO_ERASER_BRUSH_CATALOG_ITEMS,
   STUDIO_LISTED_ALL_BRUSH_CATALOG_ITEMS,
   type StudioBrushCatalogItem,
-} from "../src/domains/creator/brush/studio-brush-catalog";
-import { STUDIO_BRUSH_MATERIAL_GROUP_LABELS } from "../src/domains/creator/brush/studio-brush-material-group";
+} from "../apps/web/src/domains/creator/brush/studio-brush-catalog";
+import { STUDIO_BRUSH_MATERIAL_GROUP_LABELS } from "../apps/web/src/domains/creator/brush/studio-brush-material-group";
 
 const OUT = process.env.TOONSPECTRUM_SELECTABLE_OUT?.trim()
   || "/tmp/studio-brush-selectable.json";

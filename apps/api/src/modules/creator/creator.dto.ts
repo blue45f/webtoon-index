@@ -5,7 +5,7 @@ import {
   CREATOR_ASSET_CATALOG_MAX_PAGE_SIZE,
   CREATOR_ASSET_MODERATION_MAX_PAGE_SIZE,
   CREATOR_ASSET_PREVIEW_MAX_DATA_URL_CHARACTERS,
-} from "../../../../../lib/creator-asset-contract";
+} from "../../../../web/src/shared/lib/creator-asset-contract";
 
 import {
   CREATOR_DRAFT_COLLABORATION_FINAL_STATUSES,

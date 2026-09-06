@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-import { creatorMarketplaceJsonByteSize } from "../lib/creator-marketplace-resource-contract";
+import { creatorMarketplaceJsonByteSize } from "../apps/web/src/shared/lib/creator-marketplace-resource-contract";
 
 /**
  * Mock 공개 프로필 캐시를 사용하는 브라우저 인터랙션 및 런타임 오류 감사 스위트

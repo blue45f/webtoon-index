@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Արագ հրամանների վահանակ",
+  "studio.commandBar.settings": "Հրամանների վահանակի կարգավորումներ",
+  "studio.commandBar.settingsDescription": "Փոխեք մենյուի տողի տակ գտնվող հրամանների վահանակի բջիջների դասավորությունը և տեսանելիությունը։",
+  "studio.commandBar.settingsTip": "Ամենից հաճախ օգտագործվող հրամանները տեղադրեք առաջին բջիջներում՝ դրանք ամենաարագը հասանելի կլինեն։",
+  "studio.commandBar.settingsClose": "Փակել հրամանների վահանակի կարգավորումները",
+  "studio.commandBar.settingsStorageNote": "Բջիջների դասավորությունը պահվում է այս զննարկչի աշխատատարածքի կարգավորումներում։",
+  "studio.commandBar.showSlots": "Ցուցադրել հրամանների բջիջները",
+  "studio.commandBar.slot": "Բջիջ {index}",
+  "studio.commandBar.slotAria": "Հրամանի բջիջ {index}",
+  "studio.commandBar.slotEmpty": "Դատարկ բջիջ",
+  "studio.commandBar.resetDefaults": "Վերականգնել լռելյայն դասավորությունը",
+  "studio.commandBar.command.undo": "Հետարկել",
+  "studio.commandBar.command.redo": "Կրկնել",
+  "studio.commandBar.command.save": "Պահել սևագիրը",
+  "studio.commandBar.command.publish": "Հրապարակել",
+  "studio.commandBar.command.download": "Ներբեռնել ընթացիկ էջը",
+  "studio.commandBar.command.export-open": "Արտահանման ընտրանքներ",
+  "studio.commandBar.command.zoom-fit": "Հարմարեցնել էկրանի լայնությանը",
+  "studio.commandBar.command.assets": "Կաղապարներ և ռեսուրսներ",
+  "studio.commandBar.command.bubbles": "Խոսքի պղպջակ",
+  "studio.commandBar.command.project": "Նախագծի գործիքներ"
+}

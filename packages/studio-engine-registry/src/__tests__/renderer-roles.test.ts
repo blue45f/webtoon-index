@@ -214,14 +214,14 @@ describe("renderer role ledger evidence", () => {
 
 describe("lab engines have zero product import sites", () => {
   it("classifies test and story files out of the product scan", () => {
-    expect(isRendererRoleProductSourceFile("src/a/b.ts")).toBe(true);
-    expect(isRendererRoleProductSourceFile("src/a/b.tsx")).toBe(true);
-    expect(isRendererRoleProductSourceFile("src/a/b.mts")).toBe(true);
-    expect(isRendererRoleProductSourceFile("src/a/b.test.ts")).toBe(false);
-    expect(isRendererRoleProductSourceFile("src/a/b.test.mts")).toBe(false);
-    expect(isRendererRoleProductSourceFile("src/a/b.stories.tsx")).toBe(false);
-    expect(isRendererRoleProductSourceFile("src/__tests__/b.ts")).toBe(false);
-    expect(isRendererRoleProductSourceFile("src/a/b.json")).toBe(false);
+    expect(isRendererRoleProductSourceFile("apps/web/src/a/b.ts")).toBe(true);
+    expect(isRendererRoleProductSourceFile("apps/web/src/a/b.tsx")).toBe(true);
+    expect(isRendererRoleProductSourceFile("apps/web/src/a/b.mts")).toBe(true);
+    expect(isRendererRoleProductSourceFile("apps/web/src/a/b.test.ts")).toBe(false);
+    expect(isRendererRoleProductSourceFile("apps/web/src/a/b.test.mts")).toBe(false);
+    expect(isRendererRoleProductSourceFile("apps/web/src/a/b.stories.tsx")).toBe(false);
+    expect(isRendererRoleProductSourceFile("apps/web/src/__tests__/b.ts")).toBe(false);
+    expect(isRendererRoleProductSourceFile("apps/web/src/a/b.json")).toBe(false);
   });
 
   it("finds a planted violation with an injected filesystem", () => {

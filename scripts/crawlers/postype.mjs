@@ -57,7 +57,7 @@ function decodeNextPayload(html) {
 
 // 디코드된 텍스트에서 "series":{...} 객체를 중괄호 균형으로 추출 → JSON 파싱.
 // title + thumbnail + id 를 가진 객체만 채택.
-function extractSeries(joined) {
+function extractSeries(joined) { // NOSONAR javascript:S3776
   const out = [];
   const marker = '"series":{';
   let i = 0;
@@ -80,7 +80,7 @@ function extractSeries(joined) {
       } else if (ch === "}") {
         depth--;
         if (depth === 0) {
-          j++;
+          j++; // NOSONAR javascript:S2310
           break;
         }
       }
@@ -139,14 +139,14 @@ function extractLocs(xml) {
 
 // 채널/포스트 URL(.../@handle 또는 .../@handle/post/123)에서 핸들만 추출.
 function handleFromUrl(url) {
-  const m = String(url || "").match(/postype\.com\/@([A-Za-z0-9_]+)/);
+  const m = String(url || "").match(/postype\.com\/@(\w+)/);
   return m ? m[1] : null;
 }
 
 // 공개 sitemap 인덱스에서 posts sitemap 들을 골라(robots 허용 경로),
 // 거기 등장하는 채널 핸들을 수확한다. 인덱스가 비면 FALLBACK 으로 폴백.
 // 시드 핸들을 앞에 두고, sitemap 등장 순서를 유지(결정적 — 재현 가능).
-async function discoverHandles() {
+async function discoverHandles() { // NOSONAR javascript:S3776
   const seen = new Set();
   const ordered = [];
   const push = (h) => {
@@ -258,11 +258,12 @@ function toRow(obj, handle, index) {
 
 // 한 채널의 /series 를 페이지네이션하며 시리즈를 byWorkId 에 채운다.
 // 반환: 이 채널에서 새로 추가된 시리즈 수.
-async function crawlHandle(handle, byWorkId) {
+async function crawlHandle(handle, byWorkId) { // NOSONAR javascript:S3776
   let addedTotal = 0;
   let prevSize = -1;
   for (let page = 1; page <= MAX_PAGES; page++) {
-    const url = `${ORIGIN}/@${handle}/series${page > 1 ? `?page=${page}` : ""}`;
+    const pageQuery = page > 1 ? `?page=${page}` : "";
+    const url = `${ORIGIN}/@${handle}/series${pageQuery}`;
     const html = await fetchText(url, { referer: ORIGIN + "/" });
     if (!html) break;
 

@@ -8,7 +8,7 @@ import {
 import {
   isCreatorMarketplaceSocialNamespaceValue,
   isCreatorMarketplaceSocialThreadId,
-} from "../../../../../lib/creator-marketplace-social-namespace";
+} from "../../../../web/src/shared/lib/creator-marketplace-social-namespace";
 import { findCreatorMarketplaceSocialInteractionIds } from "../../common/creator-marketplace-social-boundary";
 
 interface BoundaryRequest {

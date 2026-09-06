@@ -189,7 +189,7 @@ class PipelineConfig:
     quality: QualityBudget = field(default_factory=QualityBudget)
     provenance: Mapping[str, str] = field(default_factory=dict)
 
-    def validate(self) -> None:
+    def validate(self) -> None: # NOSONAR python:S3776
         if self.version != PIPELINE_VERSION:
             raise ContractError(
                 f"config version {self.version!r} is unsupported; expected {PIPELINE_VERSION}"

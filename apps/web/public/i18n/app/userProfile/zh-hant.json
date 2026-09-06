@@ -1,0 +1,23 @@
+{
+  "userProfile.eyebrow": "讀者簡介",
+  "userProfile.tabs.reviews": "評論",
+  "userProfile.tabs.works": "創作作品",
+  "userProfile.tabs.series": "系列",
+  "userProfile.fetchError": "無法載入設定檔。",
+  "userProfile.authorFallback": "使用者",
+  "userProfile.metaTemplate": "{author} 個人資料 · {reviews} 評論 · {works} 作品 · 平均評分 {avg} — ToonSpectrum。",
+  "userProfile.follow": "跟隨",
+  "userProfile.following": "下列的",
+  "userProfile.works.empty": "該用戶還沒有公開作品。",
+  "userProfile.series.empty": "該用戶還沒有系列。",
+  "userProfile.followHint": "您可以在登入後關注用戶。",
+  "userProfile.stat.followers": "追隨者",
+  "userProfile.stat.totalReviews": "評論",
+  "userProfile.stat.works": "創作作品",
+  "userProfile.stat.avgRating": "平均評分",
+  "userProfile.stat.series": "系列",
+  "userProfile.refresh": "重新整理",
+  "userProfile.tabsLabel": "簡介內容",
+  "userProfile.bioFallback": "讀者簡介與已發表的作品",
+  "userProfile.emptyReviews": "該用戶尚未發表評論。"
+}

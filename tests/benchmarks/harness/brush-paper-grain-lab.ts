@@ -74,8 +74,8 @@ import {
   studioBrushDynamicsSettingsForBrushId,
   type NormalizedStudioBrushDynamicsSettings,
   type StudioDynamicBrushDab,
-} from "../../../src/domains/creator/brush/studio-brush-dynamics";
-import { resolveStudioPaperBrushResponse } from "../../../src/domains/creator/brush/studio-paper-brush-response";
+} from "../../../apps/web/src/domains/creator/brush/studio-brush-dynamics";
+import { resolveStudioPaperBrushResponse } from "../../../apps/web/src/domains/creator/brush/studio-paper-brush-response";
 import {
   acquireStudioPaperGranulationTile,
   clearStudioPaperGranulationTileCache,
@@ -85,12 +85,12 @@ import {
   DEFAULT_STUDIO_PAPER_SURFACE,
   type StudioPaperGranulationSettings,
   type StudioPaperSurfaceSettings,
-} from "../../../src/domains/creator/brush/studio-paper-granulation-runtime";
+} from "../../../apps/web/src/domains/creator/brush/studio-paper-granulation-runtime";
 import {
   planStudioDynamicBrushCoverageMarks,
   renderStudioDynamicBrushCoverageMark,
   type StudioDynamicBrushCoverageMark,
-} from "../../../src/domains/creator/studio-dynamic-brush-coverage-renderer";
+} from "../../../apps/web/src/domains/creator/studio-dynamic-brush-coverage-renderer";
 
 import {
   PRESSURE_LANE,
@@ -1095,10 +1095,10 @@ async function main(): Promise<void> {
       metrics:
         "tests/benchmarks/harness/brush-texture-lab.ts (grainMetrics / edgeMetrics / rippleMetrics / pressureResponseMetrics, TEXTURE_LANE + PRESSURE_LANE geometry) — imported, not reimplemented",
       dabPath:
-        "src/domains/creator/studio-brush-dynamics.ts -> studio-dynamic-brush-coverage-renderer.ts (planStudioDynamicBrushCoverageMarks + renderStudioDynamicBrushCoverageMark)",
+        "apps/web/src/domains/creator/studio-brush-dynamics.ts -> studio-dynamic-brush-coverage-renderer.ts (planStudioDynamicBrushCoverageMarks + renderStudioDynamicBrushCoverageMark)",
       paperKernel:
-        "src/domains/creator/studio-paper-texture.ts (createPaperHeightField + createPaperGranulationGain) via studio-paper-granulation-runtime.ts",
-      policy: "src/domains/creator/studio-paper-brush-response.ts",
+        "apps/web/src/domains/creator/studio-paper-texture.ts (createPaperHeightField + createPaperGranulationGain) via studio-paper-granulation-runtime.ts",
+      policy: "apps/web/src/domains/creator/studio-paper-brush-response.ts",
       rasteriser: "canvaskit-wasm 2-D canvas via @toonspectrum/studio-engine-skia/node",
       paperSurface: DEFAULT_STUDIO_PAPER_SURFACE,
     },

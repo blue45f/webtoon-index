@@ -1,0 +1,19 @@
+{
+  "studio.mobileDock.label": "Studio mobile toolbar",
+  "studio.mobileDock.drawingTools": "Drawing tools",
+  "studio.mobileDock.workspaceTools": "Workspace",
+  "studio.mobileDock.workspaceToggle": "Tools",
+  "studio.mobileDock.expandWorkspaceTools": "Expand workspace tools",
+  "studio.mobileDock.collapseWorkspaceTools": "Collapse workspace tools",
+  "studio.mobileDock.brushSettings": "Brush settings (size, color, presets)",
+  "studio.mobileDock.tool.pixel": "pixel ဘောပင်",
+  "studio.mobileDock.tool.shape": "ပုံသဏ္ဍာန်များ",
+  "studio.mobileDock.tool.pages": "စာမျက်နှာများ",
+  "studio.mobileDock.tool.export": "Export",
+  "studio.mobileDock.tool.search": "Find",
+  "studio.mobileDock.tool.search.title": "Find features & settings · also by CSP/Photoshop terms",
+  "studio.mobileDock.pagesOpen": "Open page list",
+  "studio.mobileDock.pagesClose": "Close page list",
+  "studio.mobileDock.tool.undo": "နေလည်း",
+  "studio.mobileDock.tool.redo": "ပြန်ပြေး"
+}

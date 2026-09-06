@@ -31,11 +31,11 @@ import { pathToFileURL } from "node:url";
 
 import { loadCanvasKitNode } from "@toonspectrum/studio-engine-skia/node";
 
-import { convertStudioHighBitLinearGamut } from "../../../src/domains/creator/studio-highbit-colorspace";
+import { convertStudioHighBitLinearGamut } from "../../../apps/web/src/domains/creator/studio-highbit-colorspace";
 import {
   studioHighBitLinearToSrgb,
   studioHighBitSrgbToLinear,
-} from "../../../src/domains/creator/studio-highbit-transfer";
+} from "../../../apps/web/src/domains/creator/studio-highbit-transfer";
 
 import type { CanvasKit, Surface } from "canvaskit-wasm";
 
@@ -722,8 +722,8 @@ async function main(): Promise<void> {
     },
     grid: { steps: GRID_STEPS, colors: gridColors.length, codes: [...GRID_CODES] },
     studioTargets: [
-      "src/domains/creator/studio-highbit-transfer.ts (studioHighBitSrgbToLinear / studioHighBitLinearToSrgb)",
-      "src/domains/creator/studio-highbit-colorspace.ts (convertStudioHighBitLinearGamut — STUDIO_HIGHBIT_SRGB_TO_DISPLAY_P3 / _DISPLAY_P3_TO_SRGB)",
+      "apps/web/src/domains/creator/studio-highbit-transfer.ts (studioHighBitSrgbToLinear / studioHighBitLinearToSrgb)",
+      "apps/web/src/domains/creator/studio-highbit-colorspace.ts (convertStudioHighBitLinearGamut — STUDIO_HIGHBIT_SRGB_TO_DISPLAY_P3 / _DISPLAY_P3_TO_SRGB)",
     ],
     measurements: {
       quantization8bitFloorDeltaE00: roundStats(quantizationFloor),

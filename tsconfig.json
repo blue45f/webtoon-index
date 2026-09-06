@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -15,32 +19,44 @@
     "jsx": "react-jsx",
     "incremental": true,
     "paths": {
-      "@/*": ["./*"],
-      "canvaskit-wasm": ["./src/types/canvaskit-wasm-shim.d.ts"],
-      "canvaskit-wasm/bin/canvaskit.wasm?url": ["./src/types/canvaskit-wasm-url-shim.d.ts"],
-      "@toonspectrum/studio-engine-skia": ["./src/types/studio-engine-skia-shim.d.ts"]
+      "@/*": [
+        "./apps/web/*"
+      ],
+      "@/shared/*": [
+        "./apps/web/src/shared/*"
+      ],
+      "@/domains/*": [
+        "./apps/web/src/domains/*"
+      ],
+      "canvaskit-wasm": [
+        "./apps/web/src/types/canvaskit-wasm-shim.d.ts"
+      ],
+      "canvaskit-wasm/bin/canvaskit.wasm?url": [
+        "./apps/web/src/types/canvaskit-wasm-url-shim.d.ts"
+      ],
+      "@toonspectrum/studio-engine-skia": [
+        "./apps/web/src/types/studio-engine-skia-shim.d.ts"
+      ]
     }
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "components/**/*.ts",
-    "components/**/*.tsx",
-    "lib/**/*.ts",
-    "lib/**/*.tsx",
-    "tools/**/*.ts",
-    "tools/**/*.tsx",
+    "apps/web/src/**/*.ts",
+    "apps/web/src/**/*.tsx",
     "vite.config.ts",
     "drizzle.config.ts",
     "eslint.config.mjs",
     "postcss.config.mjs",
     "**/*.mts",
     "scripts/studio-gpu-committed-parity-browser.ts",
-    "scripts/studio-bg3d-webgpu-engine-browser.ts"
+    "scripts/studio-bg3d-webgpu-engine-browser.ts",
+    "apps/web/tests/**/*.ts",
+    "apps/web/tests/**/*.tsx",
+    "apps/web/tools/**/*.ts",
+    "apps/web/tools/**/*.tsx"
   ],
   "exclude": [
     "node_modules",
-    "apps/**",
+    "apps/api/**",
     "dist/**",
     "**/__diag*"
   ]

@@ -8,7 +8,7 @@ import { join } from "node:path";
 
 import pg from "pg";
 
-import { verifyPassword } from "../lib/auth-crypto.ts";
+import { verifyPassword } from "../apps/web/src/shared/lib/auth-crypto.ts";
 import {
   startIsolatedMarketApi,
   stopIsolatedMarketApi,

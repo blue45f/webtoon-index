@@ -1,6 +1,6 @@
 """Rebuild the seven remaining low-density live GLB assets at pack-peer quality.
 
-An August 2026 triangle census of every GLB under ``public/assets/3d`` found
+An August 2026 triangle census of every GLB under ``apps/web/public/assets/3d`` found
 seven assets still in the live graph below 2k triangles while their own
 generation-wave peers sit between 20k and 130k:
 
@@ -33,7 +33,7 @@ import os
 
 import bpy
 
-OUT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../public/assets/3d"))
+OUT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../apps/web/public/assets/3d"))
 GENERATOR = "scripts/blender/generate_quality_upgrade_pack_v7.py"
 
 os.makedirs(OUT_DIR, exist_ok=True)
@@ -207,7 +207,7 @@ def bolt_ring(prefix, count, radius, z, material, head_r=0.008, head_h=0.006, ce
         )
 
 
-def export(name, filename):
+def export(filename):
     bpy.ops.object.select_all(action="SELECT")
     bpy.ops.export_scene.gltf(
         filepath=os.path.join(OUT_DIR, filename),
@@ -273,7 +273,7 @@ def build_hanging_sign():
                 ring=10,
             )
             stud.scale = (1, 0.55, 1)
-    export("hanging_sign", "hanging_sign.glb")
+    export("hanging_sign.glb")
 
 
 def build_traffic_light():
@@ -324,7 +324,7 @@ def build_traffic_light():
                      rot=(math.pi / 2, 0, 0))
         hard(visor, width=0.003, segments=2)
         torus(f"Signal_VisorLip{name}", 0.096, 0.005, (0.36, -0.212, z + 0.012), visor_m, rot=(math.pi / 2, 0, 0))
-    export("traffic_light", "traffic_light.glb")
+    export("traffic_light.glb")
 
 
 def build_mailbox():
@@ -377,7 +377,7 @@ def build_mailbox():
     for i, dx in enumerate((-0.055, -0.01, 0.035)):
         n = box(f"Mailbox_Numeral_{i}", (0.026, 0.004, 0.04), (dx, -0.085, 0.9), steel_m)
         hard(n, width=0.0015, segments=2)
-    export("mailbox", "mailbox.glb")
+    export("mailbox.glb")
 
 
 def build_blackboard():
@@ -435,8 +435,8 @@ def build_blackboard():
             )
             cyl(f"Blackboard_CasterHub_{x:.2f}_{sy}", 0.008, 0.018, (x, sy * 0.075, 0.030), leg_m, verts=14,
                 rot=(0, math.pi / 2, 0))
-    crossbar = tube("Blackboard_CrossBar", 0.018, 1.4, (0, 0, 0.42), leg_m, verts=20, rot=(0, math.pi / 2, 0))
-    export("blackboard", "blackboard.glb")
+    tube("Blackboard_CrossBar", 0.018, 1.4, (0, 0, 0.42), leg_m, verts=20, rot=(0, math.pi / 2, 0))
+    export("blackboard.glb")
 
 
 def build_desk():
@@ -455,13 +455,13 @@ def build_desk():
     hard(top, width=0.008, segments=4)
     band = box("Desk_TopEdgeBand", (1.2, 0.6, 0.014), (0, 0, 0.712), edge_m)
     hard(band, width=0.006, segments=3)
-    grommet = torus("Desk_CableGrommet", 0.032, 0.008, (0.42, 0.21, 0.746), leg_m, rot=(0, 0, 0))
+    torus("Desk_CableGrommet", 0.032, 0.008, (0.42, 0.21, 0.746), leg_m, rot=(0, 0, 0))
     cyl("Desk_GrommetInner", 0.028, 0.006, (0.42, 0.21, 0.742), carcass_m, verts=24)
 
     # Modesty panel and stretcher.
     panel = box("Desk_ModestyPanel", (1.02, 0.018, 0.28), (0, 0.235, 0.55), edge_m)
     hard(panel, width=0.005, segments=3)
-    rail = tube("Desk_StretcherRail", 0.016, 0.98, (-0.05, 0.2, 0.16), leg_m, verts=20, rot=(0, math.pi / 2, 0))
+    tube("Desk_StretcherRail", 0.016, 0.98, (-0.05, 0.2, 0.16), leg_m, verts=20, rot=(0, math.pi / 2, 0))
 
     # Tapered legs with levelling feet.
     for x, y in ((-0.55, -0.25), (-0.55, 0.25), (0.55, -0.25), (0.55, 0.25)):
@@ -481,11 +481,11 @@ def build_desk():
         hard(front, width=0.006, segments=3)
         reveal = box(f"Desk_DrawerReveal_{i}", (0.28, 0.008, 0.1), (0.37, -0.266, z), carcass_m)
         hard(reveal, width=0.003, segments=2)
-        pull = tube(f"Desk_DrawerPull_{i}", 0.008, 0.15, (0.37, -0.283, z), handle_m, verts=16, rot=(0, math.pi / 2, 0))
+        tube(f"Desk_DrawerPull_{i}", 0.008, 0.15, (0.37, -0.283, z), handle_m, verts=16, rot=(0, math.pi / 2, 0))
         for sx in (-1, 1):
-            post = cyl(f"Desk_PullPost_{i}_{sx}", 0.006, 0.024, (0.37 + sx * 0.07, -0.272, z), handle_m, verts=12,
+            cyl(f"Desk_PullPost_{i}_{sx}", 0.006, 0.024, (0.37 + sx * 0.07, -0.272, z), handle_m, verts=12,
                        rot=(math.pi / 2, 0, 0))
-    export("desk", "desk.glb")
+    export("desk.glb")
 
 
 def build_chair():
@@ -525,13 +525,13 @@ def build_chair():
             glide = cyl(f"Chair_Glide_{x:.2f}_{y:.2f}", 0.017, 0.01, (x, y, 0.005), glide_m, verts=16)
             hard(glide, width=0.002, segments=2)
     for y in (-0.16, 0.16):
-        s = tube(f"Chair_StretcherX_{y:.2f}", 0.013, 0.33, (0, y, 0.15), frame_m, verts=16, rot=(0, math.pi / 2, 0))
+        tube(f"Chair_StretcherX_{y:.2f}", 0.013, 0.33, (0, y, 0.15), frame_m, verts=16, rot=(0, math.pi / 2, 0))
     for x in (-0.167, 0.167):
-        s = tube(f"Chair_StretcherY_{x:.2f}", 0.012, 0.31, (x, 0, 0.2), frame_m, verts=16, rot=(math.pi / 2, 0, 0))
+        tube(f"Chair_StretcherY_{x:.2f}", 0.012, 0.31, (x, 0, 0.2), frame_m, verts=16, rot=(math.pi / 2, 0, 0))
     for sx in (-1, 1):
         blk = box(f"Chair_CornerBlock_{sx}", (0.05, 0.05, 0.03), (sx * 0.145, 0.14, 0.4), frame_m, rot=(0, 0, sx * 0.78))
         hard(blk, width=0.005, segments=2)
-    export("chair", "chair.glb")
+    export("chair.glb")
 
 
 def build_sofa():
@@ -583,7 +583,7 @@ def build_sofa():
             cyl(f"Sofa_LegCollar_{x:.2f}_{y:.2f}", 0.032, 0.016, (x, y, 0.135), leg_m, verts=20)
             glide = cyl(f"Sofa_Glide_{x:.2f}_{y:.2f}", 0.015, 0.008, (x, y, 0.004), glide_m, verts=14)
             hard(glide, width=0.002, segments=2)
-    export("sofa", "sofa.glb")
+    export("sofa.glb")
 
 
 
@@ -645,7 +645,7 @@ def build_bubble_tea():
     hard(straw, width=0.0015, segments=2)
     band = cyl("Boba_Band", 0.0305, 0.030, (0, 0, 0.070), band_m, verts=48)
     hard(band, width=0.002, segments=2)
-    export("bubble_tea", "bubble_tea.glb")
+    export("bubble_tea.glb")
 
 
 def build_ice_cream_cone():
@@ -668,7 +668,7 @@ def build_ice_cream_cone():
             ridge = box(f"Cone_Waffle_{direction}_{i}", (0.062, 0.0022, 0.0022),
                         (0, 0, 0.054), waffle_m, rot=(0, 0, a))
             ridge.rotation_euler = (direction * 0.9, 0, a)
-    rim = torus("Cone_Rim", 0.0292, 0.0035, (0, 0, 0.106), cone_m, rot=(0, 0, 0))
+    torus("Cone_Rim", 0.0292, 0.0035, (0, 0, 0.106), cone_m, rot=(0, 0, 0))
     for i, (z, r, m) in enumerate(((0.128, 0.0285, s_m), (0.168, 0.0265, v_m), (0.203, 0.0235, c_m))):
         scoop = sphere(f"Cone_Scoop_{i}", r, (0, 0, z), m, seg=40, ring=22)
         scoop.scale = (1.0, 1.0, 0.92)
@@ -677,10 +677,10 @@ def build_ice_cream_cone():
             a = k / 6.0 * math.tau + i * 0.4
             sphere(f"Cone_Lobe_{i}_{k}", r * 0.42,
                    (math.cos(a) * r * 0.72, math.sin(a) * r * 0.72, z - r * 0.22), m, seg=16, ring=10)
-    drip = cone("Cone_Drip", 0.010, 0.002, 0.030, (0.020, 0.012, 0.108), s_m, verts=16, rot=(math.pi, 0, 0))
+    cone("Cone_Drip", 0.010, 0.002, 0.030, (0.020, 0.012, 0.108), s_m, verts=16, rot=(math.pi, 0, 0))
     sphere("Cone_Cherry", 0.0092, (0, 0, 0.231), cherry_m, seg=20, ring=12)
-    stem = cyl("Cone_CherryStem", 0.0018, 0.016, (0.002, 0, 0.240), stem_m, verts=8, rot=(0.3, 0.2, 0))
-    export("ice_cream_cone", "ice_cream_cone.glb")
+    cyl("Cone_CherryStem", 0.0018, 0.016, (0.002, 0, 0.240), stem_m, verts=8, rot=(0.3, 0.2, 0))
+    export("ice_cream_cone.glb")
 
 
 def build_fox_mask():
@@ -701,13 +701,13 @@ def build_fox_mask():
     muzzle.scale = (0.040, 0.036, 0.030)
     bpy.context.view_layer.objects.active = muzzle
     bpy.ops.object.transform_apply(scale=True)
-    nose = sphere("FoxMask_Nose", 0.011, (0, -0.078, -0.024), black_m, seg=18, ring=12)
+    sphere("FoxMask_Nose", 0.011, (0, -0.078, -0.024), black_m, seg=18, ring=12)
     # Ears.
     for sx in (-1, 1):
         ear = cone(f"FoxMask_Ear_{sx}", 0.030, 0.002, 0.078, (sx * 0.058, 0.020, 0.140), white_m, verts=24,
                    rot=(-0.18, sx * 0.22, 0))
         hard(ear, width=0.002, segments=2)
-        inner = cone(f"FoxMask_EarInner_{sx}", 0.018, 0.001, 0.050, (sx * 0.058, 0.006, 0.138), red_m, verts=20,
+        cone(f"FoxMask_EarInner_{sx}", 0.018, 0.001, 0.050, (sx * 0.058, 0.006, 0.138), red_m, verts=20,
                      rot=(-0.18, sx * 0.22, 0))
     # Eye openings with a painted rim: the read that makes it a mask.
     for sx in (-1, 1):
@@ -726,10 +726,10 @@ def build_fox_mask():
     torus("FoxMask_ForeheadSeal", 0.014, 0.004, (0, -0.050, 0.128), gold_m, rot=(math.pi / 2, 0, 0))
     # Side cords, which is why the baseline bbox reaches below the plate.
     for sx in (-1, 1):
-        tube_pts = cyl(f"FoxMask_Cord_{sx}", 0.004, 0.135, (sx * 0.086, 0.030, -0.052), cord_m, verts=12,
+        cyl(f"FoxMask_Cord_{sx}", 0.004, 0.135, (sx * 0.086, 0.030, -0.052), cord_m, verts=12,
                        rot=(0.18, sx * 0.18, 0))
-        knot = sphere(f"FoxMask_CordKnot_{sx}", 0.009, (sx * 0.082, 0.026, 0.012), cord_m, seg=16, ring=10)
-    export("fox_mask", "fox_mask.glb")
+        sphere(f"FoxMask_CordKnot_{sx}", 0.009, (sx * 0.082, 0.026, 0.012), cord_m, seg=16, ring=10)
+    export("fox_mask.glb")
 
 
 def build_robot_pet():
@@ -773,11 +773,11 @@ def build_robot_pet():
     # Four legs: hip block, thigh, shin, paw.
     for sx in (-1, 1):
         for sy, tag in ((-0.078, "F"), (0.086, "R")):
-            hip = sphere(f"Pet_Hip_{tag}_{sx}", 0.026, (sx * 0.062, sy, 0.286), joint_m, seg=18, ring=12)
+            sphere(f"Pet_Hip_{tag}_{sx}", 0.026, (sx * 0.062, sy, 0.286), joint_m, seg=18, ring=12)
             thigh = cyl(f"Pet_Thigh_{tag}_{sx}", 0.019, 0.110, (sx * 0.072, sy - 0.012, 0.232), shell_m,
                         verts=18, rot=(0.22, 0, sx * 0.10))
             hard(thigh, width=0.004, segments=2)
-            knee = sphere(f"Pet_Knee_{tag}_{sx}", 0.020, (sx * 0.078, sy - 0.024, 0.176), joint_m, seg=16, ring=10)
+            sphere(f"Pet_Knee_{tag}_{sx}", 0.020, (sx * 0.078, sy - 0.024, 0.176), joint_m, seg=16, ring=10)
             shin = cyl(f"Pet_Shin_{tag}_{sx}", 0.014, 0.140, (sx * 0.078, sy - 0.010, 0.104), dark_m,
                        verts=16, rot=(-0.18, 0, 0))
             hard(shin, width=0.003, segments=2)
@@ -788,11 +788,11 @@ def build_robot_pet():
 
     # Tail, antenna and a rear status light.
     for i, (y, z, r) in enumerate(((0.116, 0.320, 0.013), (0.150, 0.356, 0.011), (0.172, 0.400, 0.008))):
-        seg_obj = sphere(f"Pet_Tail_{i}", r, (0, y, z), joint_m, seg=16, ring=10)
+        sphere(f"Pet_Tail_{i}", r, (0, y, z), joint_m, seg=16, ring=10)
     sphere("Pet_TailTip", 0.012, (0, 0.182, 0.424), accent_m, seg=18, ring=12)
-    ant = cyl("Pet_Antenna", 0.003, 0.052, (0.030, -0.104, 0.410), joint_m, verts=10, rot=(0.2, 0.18, 0))
+    cyl("Pet_Antenna", 0.003, 0.052, (0.030, -0.104, 0.410), joint_m, verts=10, rot=(0.2, 0.18, 0))
     sphere("Pet_AntennaBead", 0.008, (0.036, -0.098, 0.434), accent_m, seg=14, ring=10)
-    export("robot_pet", "robot_pet.glb")
+    export("robot_pet.glb")
 
 
 BUILDERS = {

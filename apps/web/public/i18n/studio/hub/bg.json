@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Урок за функции",
+  "studio.hub.subtitle": "Една функция наведнъж без никакво натоварване. Погледнах {done}/{total}.",
+  "studio.hub.progressAriaLabel": "Напредък на урока",
+  "studio.hub.listAriaLabel": "Списък с функции",
+  "studio.hub.checked": "разгледайте",
+  "studio.hub.prev": "Предишен",
+  "studio.hub.next": "следващ",
+  "studio.hub.markComplete": "маркирайте като завършен",
+  "studio.hub.completed": "Завършено",
+  "studio.hub.tryLabelDefault": "Следвайте",
+  "studio.hub.stepAriaPrefix": "стъпка"
+}

@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Funkciju apmācība",
+  "studio.hub.subtitle": "Viena funkcija vienlaikus bez jebkādas slodzes. Es paskatījos {done}/{total}.",
+  "studio.hub.progressAriaLabel": "Apmācības norise",
+  "studio.hub.listAriaLabel": "Funkciju saraksts",
+  "studio.hub.checked": "paskaties",
+  "studio.hub.prev": "Iepriekšējais",
+  "studio.hub.next": "nākamais",
+  "studio.hub.markComplete": "atzīmēt kā pabeigtu",
+  "studio.hub.completed": "Pabeigts",
+  "studio.hub.tryLabelDefault": "Sekojiet līdzi",
+  "studio.hub.stepAriaPrefix": "solis"
+}

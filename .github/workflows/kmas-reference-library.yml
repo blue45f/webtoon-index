@@ -3,14 +3,14 @@ on:
   pull_request:
     branches: [main]
     paths:
-      - 'lib/kmas-reference.ts'
-      - 'lib/__tests__/kmas-reference*.test.ts'
+      - 'apps/web/src/shared/lib/kmas-reference.ts'
+      - 'apps/web/src/shared/lib/__tests__/kmas-reference*.test.ts'
       - 'apps/api/src/server/kmas-reference.ts'
       - 'apps/api/src/modules/catalog/**'
-      - 'src/domains/catalog/references/**'
-      - 'src/app/routes/**'
-      - 'src/domains/legal/SitemapPage.tsx'
-      - 'components/site-footer.tsx'
+      - 'apps/web/src/domains/catalog/references/**'
+      - 'apps/web/src/app/routes/**'
+      - 'apps/web/src/domains/legal/SitemapPage.tsx'
+      - 'apps/web/src/shared/components/site-footer.tsx'
       - 'e2e/kmas-references.spec.ts'
       - 'playwright.references.config.ts'
       - '.github/workflows/kmas-reference-library.yml'
@@ -35,9 +35,9 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - name: Reference contract tests
-        run: pnpm exec vitest run lib/__tests__/kmas-reference.test.ts lib/__tests__/kmas-reference-hardening.test.ts lib/__tests__/kmas-reference-recovery.test.ts lib/__tests__/kmas-reference-merge-readiness.test.ts
+        run: pnpm exec vitest run apps/web/src/shared/lib/__tests__/kmas-reference.test.ts apps/web/src/shared/lib/__tests__/kmas-reference-hardening.test.ts apps/web/src/shared/lib/__tests__/kmas-reference-recovery.test.ts apps/web/src/shared/lib/__tests__/kmas-reference-merge-readiness.test.ts
       - name: Zero-warning reference lint
-        run: pnpm exec eslint lib/kmas-reference.ts lib/__tests__/kmas-reference.test.ts lib/__tests__/kmas-reference-hardening.test.ts lib/__tests__/kmas-reference-recovery.test.ts lib/__tests__/kmas-reference-merge-readiness.test.ts apps/api/src/server/kmas-reference.ts apps/api/src/modules/catalog/kmas-reference.controller.ts apps/api/src/modules/catalog/catalog.module.ts src/domains/catalog/references src/app/routes/reference-labels.ts src/app/routes/groups/reference.routes.tsx src/app/routes/groups/app-routes.tsx src/app/routes/route-titles.ts components/site-footer.tsx src/app/routes/route-manifest.ts src/domains/legal/SitemapPage.tsx e2e/kmas-references.spec.ts --max-warnings=0
+        run: pnpm exec eslint apps/web/src/shared/lib/kmas-reference.ts apps/web/src/shared/lib/__tests__/kmas-reference.test.ts apps/web/src/shared/lib/__tests__/kmas-reference-hardening.test.ts apps/web/src/shared/lib/__tests__/kmas-reference-recovery.test.ts apps/web/src/shared/lib/__tests__/kmas-reference-merge-readiness.test.ts apps/api/src/server/kmas-reference.ts apps/api/src/modules/catalog/kmas-reference.controller.ts apps/api/src/modules/catalog/catalog.module.ts apps/web/src/domains/catalog/references apps/web/src/app/routes/reference-labels.ts apps/web/src/app/routes/groups/reference.routes.tsx apps/web/src/app/routes/groups/app-routes.tsx apps/web/src/app/routes/route-titles.ts apps/web/src/shared/components/site-footer.tsx apps/web/src/app/routes/route-manifest.ts apps/web/src/domains/legal/SitemapPage.tsx e2e/kmas-references.spec.ts --max-warnings=0
       - run: pnpm run catalog:gen && pnpm run build:bundle
       - run: pnpm exec playwright install --with-deps chromium
       - name: Chromium route and interaction verification

@@ -1,0 +1,7 @@
+{
+  "admin.gate.errorTitle": "콘솔을 불러오지 못했어요",
+  "admin.gate.forbiddenBody": "이 계정에는 관리자 권한이 없습니다. 권한이 필요하면 운영자에게 문의하세요. (ADMIN_EMAILS 또는 users.role=admin)",
+  "admin.gate.forbiddenTitle": "관리자 권한이 없어요",
+  "admin.gate.guestBody": "관리자 콘솔은 로그인 후 이용할 수 있습니다. 우측 상단에서 로그인해 주세요.",
+  "admin.gate.guestTitle": "로그인이 필요해요"
+}

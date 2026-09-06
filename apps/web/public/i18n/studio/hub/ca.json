@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Tutorial de funcions",
+  "studio.hub.subtitle": "Una funció a la vegada sense cap càrrega. Vaig mirar {done}/{total}.",
+  "studio.hub.progressAriaLabel": "Progrés del tutorial",
+  "studio.hub.listAriaLabel": "Llista de funcions",
+  "studio.hub.checked": "fes una ullada",
+  "studio.hub.prev": "Anterior",
+  "studio.hub.next": "següent",
+  "studio.hub.markComplete": "marca com a complet",
+  "studio.hub.completed": "Completat",
+  "studio.hub.tryLabelDefault": "Seguiu",
+  "studio.hub.stepAriaPrefix": "pas"
+}

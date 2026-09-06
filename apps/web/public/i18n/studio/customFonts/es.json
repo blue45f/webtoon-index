@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "mi fuente",
+  "studio.customFonts.importButton": "Importar desde archivo",
+  "studio.customFonts.importing": "Comprobando…",
+  "studio.customFonts.importAria": "Importar archivo de fuente",
+  "studio.customFonts.storageAria": "Uso de la biblioteca de fuentes",
+  "studio.customFonts.emptyTitle": "Aún no se incluyen fuentes.",
+  "studio.customFonts.unknownFileName": "Sin nombre de archivo",
+  "studio.customFonts.apply": "Aplicar",
+  "studio.customFonts.applyToText": "Aplicar esta fuente al texto seleccionado",
+  "studio.customFonts.selectTextFirst": "Primero seleccione texto o bocadillo",
+  "studio.customFonts.delete": "eliminar fuente"
+}

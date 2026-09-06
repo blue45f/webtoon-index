@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "ફીચર ટ્યુટોરીયલ",
+  "studio.hub.subtitle": "કોઈપણ બોજ વગર એક સમયે એક કાર્ય. મેં {done}/{total} પર જોયું.",
+  "studio.hub.progressAriaLabel": "ટ્યુટોરીયલ પ્રગતિ",
+  "studio.hub.listAriaLabel": "લક્ષણ યાદી",
+  "studio.hub.checked": "એક નજર",
+  "studio.hub.prev": "ગત",
+  "studio.hub.next": "આગળ",
+  "studio.hub.markComplete": "પૂર્ણ તરીકે ચિહ્નિત કરો",
+  "studio.hub.completed": "પૂર્ણ થયું",
+  "studio.hub.tryLabelDefault": "સાથે અનુસરો",
+  "studio.hub.stepAriaPrefix": "પગલું"
+}

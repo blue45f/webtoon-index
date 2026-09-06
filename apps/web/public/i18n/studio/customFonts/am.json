@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "የእኔ ቅርጸ-ቁምፊ",
+  "studio.customFonts.importButton": "ከፋይል አስመጣ",
+  "studio.customFonts.importing": "በማጣራት ላይ…",
+  "studio.customFonts.importAria": "የቅርጸ-ቁምፊ ፋይል አስመጣ",
+  "studio.customFonts.storageAria": "የቅርጸ-ቁምፊ ቤተ-መጽሐፍት አጠቃቀም",
+  "studio.customFonts.emptyTitle": "እስካሁን ምንም የተካተቱ ቅርጸ-ቁምፊዎች የሉም።",
+  "studio.customFonts.unknownFileName": "የፋይል ስም የለም።",
+  "studio.customFonts.apply": "ያመልክቱ",
+  "studio.customFonts.applyToText": "ይህንን ቅርጸ-ቁምፊ በተመረጠው ጽሑፍ ላይ ይተግብሩ",
+  "studio.customFonts.selectTextFirst": "መጀመሪያ የጽሑፍ ወይም የንግግር አረፋ ይምረጡ",
+  "studio.customFonts.delete": "ቅርጸ-ቁምፊን ሰርዝ"
+}

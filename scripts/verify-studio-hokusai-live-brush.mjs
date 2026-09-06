@@ -59,7 +59,7 @@ canvas{display:block;width:100%;height:auto}
 </div><script type="module" src="${ENTRY}"></script></body></html>`;
 }
 
-function validate(result, diagnostics) {
+function validate(result, diagnostics) { // NOSONAR javascript:S3776
   const failures = [];
   if (result?.status !== "ok") return [`browser harness failed: ${result?.message ?? "unknown"}`];
   if (result.backend !== "real-chromium-dedicated-worker-hokusai-wasm-dirty-delta-live-v1") {
@@ -230,7 +230,7 @@ function validate(result, diagnostics) {
   return failures;
 }
 
-async function main() {
+async function main() { // NOSONAR javascript:S3776
   mkdirSync(EVIDENCE_ROOT, { recursive: true });
   const port = await freePort();
   const vite = await createViteServer({

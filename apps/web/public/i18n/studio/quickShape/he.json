@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "צורות חכמות",
+  "studio.quickShape.description.active": "צייר בנחת קווים, ריבועים, עיגולים ומשולשים. אם תשחרר, זה יסדר לבד.",
+  "studio.quickShape.description.inactive": "זה בסדר לשרבט את זה. אם תפעיל אותו, ציור היד שלך יעודן לצורה מסודרת.",
+  "studio.quickShape.toggleHint": "ברגע שאתה משחרר צורה מצויירת גס עם עט, היא נצמדת לצורה מדויקת. גם אם תשהה בזמן הציור, תופיע תצוגה מקדימה.",
+  "studio.quickShape.toggleAria.on": "צורות חכמות על",
+  "studio.quickShape.toggleAria.off": "צורות חכמות כבוי",
+  "studio.quickShape.matchedSuffix": " אני יכול להרגיש את זה. זה מאושר כשאני משחרר את היד שלי.",
+  "studio.quickShape.emptyStatus": "צייר את הצורה ושחרר, או פשוט הישאר בסוף",
+  "studio.quickShape.openTutorial": "צפו במדריך הצורות החכמות",
+  "studio.quickShape.notice": "צייר צורות חכמות, קווים, עיגולים, ריבועים וכו' וחדד אותם כשאתה מרפה (השהה לתצוגה מקדימה)"
+}

@@ -7,12 +7,40 @@ on:
       - '**/*.md'
       - 'docs/**'
       - '.github/ISSUE_TEMPLATE/**'
+      - '**/*lock*'
+      - '**/data/catalog*.json*'
+      - '**/qa-results/**'
+      - '**/*.glb'
+      - '**/*.wasm'
+      - '**/public/**/*.svg'
+      - '**/public/**/*.ico'
+      - '**/public/**/*.avif'
+      - '**/public/**/*.webp'
+      - '**/public/**/*.jpeg'
+      - '**/public/**/*.jpg'
+      - '**/public/**/*.png'
+      - '**/public/assets/**'
+      - '**/i18n/**/*.json'
   pull_request:
     branches: [main]
     paths-ignore:
       - '**/*.md'
       - 'docs/**'
       - '.github/ISSUE_TEMPLATE/**'
+      - '**/*lock*'
+      - '**/data/catalog*.json*'
+      - '**/qa-results/**'
+      - '**/*.glb'
+      - '**/*.wasm'
+      - '**/public/**/*.svg'
+      - '**/public/**/*.ico'
+      - '**/public/**/*.avif'
+      - '**/public/**/*.webp'
+      - '**/public/**/*.jpeg'
+      - '**/public/**/*.jpg'
+      - '**/public/**/*.png'
+      - '**/public/assets/**'
+      - '**/i18n/**/*.json'
   workflow_dispatch:
 
 permissions:
@@ -20,7 +48,7 @@ permissions:
   pull-requests: read
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -32,6 +60,8 @@ jobs:
     env:
       SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      SONAR_SCANNER_OPTS: -Xmx6144m
+      NODE_OPTIONS: --max-old-space-size=8192
     steps:
       - name: Check SonarQube secrets
         id: secrets
@@ -61,6 +91,7 @@ jobs:
         if: steps.secrets.outputs.configured == 'true'
         run: pnpm install --frozen-lockfile
 
+      # SonarCloud Automatic Analysis should be disabled to avoid duplicate scans.
       - name: SonarQube scan
         if: steps.secrets.outputs.configured == 'true'
         uses: SonarSource/sonarqube-scan-action@v7 # NOSONAR S7637 신뢰된 1st-party 액션

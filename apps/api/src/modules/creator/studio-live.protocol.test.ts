@@ -5,7 +5,7 @@ import {
   STUDIO_CRDT_BINARY_UPDATE_MAX_BYTES,
   encodeStudioCrdtBinaryEnvelope,
   fragmentStudioCrdtBinarySyncEnvelope,
-} from "../../../../../lib/studio-crdt-binary-envelope";
+} from "../../../../web/src/shared/lib/studio-crdt-binary-envelope";
 
 import * as gatewayCompatibility from "./studio-live.gateway";
 import * as protocol from "./studio-live.protocol";

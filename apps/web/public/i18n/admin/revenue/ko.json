@@ -1,0 +1,15 @@
+{
+  "admin.revenue.approve": "승인",
+  "admin.revenue.empty": "해당 상태의 정산 이벤트가 없어요.",
+  "admin.revenue.filterAll": "전체",
+  "admin.revenue.filterApproved": "승인",
+  "admin.revenue.filterPaid": "정산완료",
+  "admin.revenue.filterPending": "대기",
+  "admin.revenue.filterRejected": "반려",
+  "admin.revenue.filterRevoked": "취소",
+  "admin.revenue.loadError": "정산 내역을 불러오지 못했어요",
+  "admin.revenue.reject": "반려",
+  "admin.revenue.revoke": "취소",
+  "admin.revenue.settle": "정산완료",
+  "admin.revenue.summaryTitle": "정산 요약 (최근 30일)"
+}

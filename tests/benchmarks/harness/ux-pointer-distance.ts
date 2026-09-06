@@ -33,7 +33,7 @@ import { performance } from "node:perf_hooks";
 
 import { chromium, type Browser, type Page } from "playwright";
 
-import { STUDIO_POINTER_DISTANCE_BUDGETS_PX } from "../../../src/domains/creator/studio-oncanvas-command-surfaces";
+import { STUDIO_POINTER_DISTANCE_BUDGETS_PX } from "../../../apps/web/src/domains/creator/studio-oncanvas-command-surfaces";
 
 const REPO_ROOT = new URL("../../..", import.meta.url).pathname;
 const RESULTS_DIR = join(REPO_ROOT, "tests", "benchmarks", "results");

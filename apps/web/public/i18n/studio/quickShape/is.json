@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "snjöll form",
+  "studio.quickShape.description.active": "Teiknaðu rólega línur, ferninga, hringi og þríhyrninga. Ef þú sleppir takinu reddast það af sjálfu sér.",
+  "studio.quickShape.description.inactive": "Það er allt í lagi að krota það niður. Ef þú kveikir á því verður handteikningin þín betrumbætt í snyrtilegt form.",
+  "studio.quickShape.toggleHint": "Um leið og þú sleppir gróft teiknuðu formi með penna smellur það í nákvæmlega form. Jafnvel ef þú gerir hlé á meðan þú teiknar birtist forskoðun.",
+  "studio.quickShape.toggleAria.on": "Snjöll form á",
+  "studio.quickShape.toggleAria.off": "Snjöll form slökkt",
+  "studio.quickShape.matchedSuffix": " Ég finn fyrir því. Það er staðfest þegar ég slepp hendinni.",
+  "studio.quickShape.emptyStatus": "Teiknaðu formið og slepptu takinu, eða vertu bara í lokin",
+  "studio.quickShape.openTutorial": "Horfðu á snjallforma námskeiðið",
+  "studio.quickShape.notice": "Teiknaðu snjöll form, línur, hringi, ferninga o.s.frv. og fínpúsaðu þau þegar þú sleppir takinu (hlé til að forskoða)"
+}

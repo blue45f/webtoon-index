@@ -1,0 +1,14 @@
+{
+  "control.language.label": "Language",
+  "control.language.group.translated": "Translated languages",
+  "control.language.group.englishBase": "Shown in English (translation pending)",
+  "control.sound.enable": "Enable sound effects",
+  "control.sound.disable": "Disable sound effects",
+  "control.theme.dark": "Switch to light mode",
+  "control.theme.light": "Switch to dark mode",
+  "control.settings.open": "Open settings",
+  "control.settings.close": "Close settings",
+  "control.cluster.settings": "Sound, theme, language controls",
+  "control.cluster.open": "Open settings",
+  "control.cluster.tooltip": "Sound, theme, and language settings"
+}

@@ -14,7 +14,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import {
   STUDIO_WORK_ASSET_ADMISSION_OPT_IN_TOKEN,
   type StudioWorkAssetManifest,
-} from "../../../../../lib/studio-work-asset-contract";
+} from "../../../../web/src/shared/lib/studio-work-asset-contract";
 
 import {
   StudioWorkAssetCleanupOwnershipError,

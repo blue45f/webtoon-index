@@ -163,7 +163,7 @@ function ingestToFile(payload, titles) {
       `소스: ${JSON.stringify(sources)}\n` +
       `runHash: ${runHash}\n` +
       `다음 단계:\n` +
-      `  · 정적 카탈로그 재생성: pnpm catalog:gen (→ public/data/*.json)\n` +
+      `  · 정적 카탈로그 재생성: pnpm catalog:gen (→ apps/web/public/data/*.json)\n` +
       `  · 실행 중인 API 즉시 반영: POST /api/catalog/refresh (또는 파일 폴링이 ${process.env.CATALOG_REFRESH_POLL_SECONDS ?? 60}s 내 자동 반영)`
   );
 }

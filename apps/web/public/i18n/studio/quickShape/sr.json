@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "паметни облици",
+  "studio.quickShape.description.active": "Лагано цртајте линије, квадрате, кругове и троуглове. Ако пустите, средиће се само од себе.",
+  "studio.quickShape.description.inactive": "У реду је то записати. Ако га укључите, цртеж ваше руке ће бити префињен у уредан облик.",
+  "studio.quickShape.toggleHint": "Оног тренутка када пустите грубо нацртан облик оловком, он се добија тачно. Чак и ако паузирате током цртања, појавиће се преглед.",
+  "studio.quickShape.toggleAria.on": "Паметни облици укључени",
+  "studio.quickShape.toggleAria.off": "Паметни облици искључени",
+  "studio.quickShape.matchedSuffix": " Осећам то. Потврђује се када пустим руку.",
+  "studio.quickShape.emptyStatus": "Нацртајте облик и пустите, или само останите на крају",
+  "studio.quickShape.openTutorial": "Погледајте водич за паметне облике",
+  "studio.quickShape.notice": "Нацртајте паметне облике, линије, кругове, квадрате итд. и прецизирајте их када пустите (паузирајте за преглед)"
+}

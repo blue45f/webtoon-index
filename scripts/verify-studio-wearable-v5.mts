@@ -10,7 +10,7 @@ import { build } from "vite";
 const directory=resolve(".artifacts/studio-wearable-v5");
 await rm(directory,{recursive:true,force:true});await mkdir(join(directory,"screenshots"),{recursive:true});
 const entry=join(directory,"entry.ts");
-const domain=resolve("src/domains/creator");
+const domain=resolve("apps/web/src/domains/creator");
 const source=[
   "export * as THREE from 'three';",
   "export {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';",
@@ -27,8 +27,8 @@ await build({configFile:false,publicDir:false,resolve:{alias:{"@":process.cwd()}
 await copyFile("scripts/studio-wearable-review-page.mjs",join(directory,"page.mjs"));
 await copyFile("scripts/studio-wearable-frame-evidence.mjs",join(directory,"runtime/frame-evidence.mjs"));
 await writeFile(join(directory,"index.html"),'<!doctype html><html lang="en"><meta charset="utf-8"><title>Wearable production-renderer review</title><style>html,body,#root{margin:0;width:100%;height:100%;overflow:hidden}canvas{display:block}</style><div id="root"></div><script type="module" src="/page.mjs"></script></html>');
-await symlink(resolve("public/assets"),join(directory,"assets"),"dir");
-await symlink(resolve("public/vrm"),join(directory,"vrm"),"dir");
+await symlink(resolve("apps/web/public/assets"),join(directory,"assets"),"dir");
+await symlink(resolve("apps/web/public/vrm"),join(directory,"vrm"),"dir");
 const mime:Record<string,string>={".html":"text/html",".js":"application/javascript",".mjs":"application/javascript",".json":"application/json",".glb":"model/gltf-binary",".vrm":"model/gltf-binary",".png":"image/png",".jpg":"image/jpeg",".wasm":"application/wasm"};
 const server=createServer((req,res)=>{
   let file:string;
@@ -44,7 +44,7 @@ const page=await browser.newPage({viewport:{width:800,height:800},deviceScaleFac
 const pageErrors:string[]=[];page.on("pageerror",(error)=>pageErrors.push(error.message));
 interface Frame {title:string;file:string;status:string;receipt:unknown;error?:string;distinctColors?:number;nonblank?:boolean;foregroundPixels?:number;largestComponent?:number;occupiedWidth?:number;occupiedHeight?:number}
 const frames:Frame[]=[];
-const assets=JSON.parse(readFileSync("public/assets/3d/wearable-v5-manifest.json","utf8")) as {assets:{id:string;file:string;sha256:string}[]};
+const assets=JSON.parse(readFileSync("apps/web/public/assets/3d/wearable-v5-manifest.json","utf8")) as {assets:{id:string;file:string;sha256:string}[]};
 let fatal:unknown=null;
 async function inspect(){return page.evaluate(async()=>{
   // Keep pixel analysis in the browser: sending 102,400 numeric values per frame through

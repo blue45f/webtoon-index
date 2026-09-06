@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "okos formák",
+  "studio.quickShape.description.active": "Nyugodtan rajzoljon vonalakat, négyzeteket, köröket és háromszögeket. Ha elengeded, magától rendbe jön.",
+  "studio.quickShape.description.inactive": "Nem baj, ha lefirkálja. Ha bekapcsolja, kézi rajza szép formára finomodik.",
+  "studio.quickShape.toggleHint": "Abban a pillanatban, amikor elenged egy durván megrajzolt formát egy tollal, az pontos formára pattan. Még ha szünetet is tart rajzolás közben, megjelenik egy előnézet.",
+  "studio.quickShape.toggleAria.on": "Intelligens formák bekapcsolva",
+  "studio.quickShape.toggleAria.off": "Intelligens formák kikapcsolva",
+  "studio.quickShape.matchedSuffix": " érzem. Megerősítik, amikor elengedem a kezem.",
+  "studio.quickShape.emptyStatus": "Rajzolja meg az alakzatot, és engedje el, vagy maradjon a végén",
+  "studio.quickShape.openTutorial": "Tekintse meg az intelligens formák oktatóanyagát",
+  "studio.quickShape.notice": "Rajzoljon intelligens alakzatokat, vonalakat, köröket, négyzeteket stb., és finomítsa őket, amikor elengedi (szünet az előnézethez)"
+}

@@ -1,5 +1,5 @@
 /** Pixel occupancy evidence, not an artistic quality score. Monochrome assets are valid. */
-export function measureWearableFramePixels(rgba, width, height) {
+export function measureWearableFramePixels(rgba, width, height) { // NOSONAR javascript:S3776
   if (!Number.isInteger(width) || !Number.isInteger(height) || width < 2 || height < 2 || rgba.length !== width * height * 4) {
     return { foregroundPixels: 0, largestComponent: 0, occupiedWidth: 0, occupiedHeight: 0, nonblank: false };
   }

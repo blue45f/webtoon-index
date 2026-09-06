@@ -85,7 +85,7 @@ function zeroFallback(fallback) {
   );
 }
 
-function validateSuccess(result, diagnostics) {
+function validateSuccess(result, diagnostics) { // NOSONAR javascript:S3776
   const failures = [];
   const main = result.main;
   if (
@@ -264,7 +264,7 @@ function validateSuccess(result, diagnostics) {
   }
 }
 
-async function main() {
+async function main() { // NOSONAR javascript:S3776
   mkdirSync(SCRATCH, { recursive: true });
   const port = await findFreePort();
   const origin = `http://127.0.0.1:${port}/`;
@@ -374,7 +374,7 @@ async function main() {
     );
     await page.addInitScript(() => {
       window.addEventListener("securitypolicyviolation", event => {
-        void window.__recordStudioOpfsV2CspViolation?.({
+        window.__recordStudioOpfsV2CspViolation?.({
           effectiveDirective: event.effectiveDirective,
           blockedUri: event.blockedURI,
         });

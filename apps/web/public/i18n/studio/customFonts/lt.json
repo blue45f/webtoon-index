@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "mano šriftas",
+  "studio.customFonts.importButton": "Importuoti iš failo",
+  "studio.customFonts.importing": "Tikrinama…",
+  "studio.customFonts.importAria": "Importuoti šrifto failą",
+  "studio.customFonts.storageAria": "Šriftų bibliotekos naudojimas",
+  "studio.customFonts.emptyTitle": "Dar nėra įtrauktų šriftų.",
+  "studio.customFonts.unknownFileName": "Nėra failo pavadinimo",
+  "studio.customFonts.apply": "Taikyti",
+  "studio.customFonts.applyToText": "Taikyti šį šriftą pasirinktam tekstui",
+  "studio.customFonts.selectTextFirst": "Pirmiausia pasirinkite teksto arba kalbos debesėlį",
+  "studio.customFonts.delete": "ištrinti šriftą"
+}

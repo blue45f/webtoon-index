@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Hướng dẫn hình ảnh AI sáng tạo",
+  "studio.aiNotice.description": "Chức năng này tạo ra hình ảnh bằng cách sử dụng AI tổng hợp (OpenAI). Huy hiệu AI được hiển thị trên kết quả được tạo.",
+  "studio.aiNotice.ruleCopyright": "Chúng tôi không tạo ra tác phẩm, nhân vật hoặc khuôn mặt người thật của người khác.",
+  "studio.aiNotice.ruleAccuracy": "Kết quả AI có thể không chính xác hoặc khác với dự định.",
+  "studio.aiNotice.ruleResponsibility": "Bạn có trách nhiệm sử dụng hình ảnh bạn tạo ra.",
+  "studio.aiNotice.cancel": "Hủy bỏ",
+  "studio.aiNotice.confirm": "Tôi hiểu, tạo"
+}

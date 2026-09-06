@@ -1,0 +1,8 @@
+{
+  "ranking.detailTitle": "순위 세부 기여도 보기",
+  "ranking.metric.views": "조회수",
+  "ranking.why": "근거",
+  "ranking.breakdownTitle": "점수 구성",
+  "ranking.totalScore": "총점",
+  "ranking.breakdownDescription": "축 가중치와 작품별 보정치를 반영한 점수로 계산됐습니다."
+}

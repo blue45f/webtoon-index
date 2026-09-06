@@ -1,0 +1,21 @@
+{
+  "auth.menu.triggerLabel": "アカウントメニュー",
+  "auth.menu.fallbackName": "リーダー",
+  "auth.menu.adminPanel": "管理コンソール",
+  "auth.menu.profile": "私のプロフィール",
+  "auth.menu.settings": "設定",
+  "auth.menu.signOut": "サインアウト",
+  "auth.callback.error.generic": "サインインに失敗しました。",
+  "auth.callback.message.working": "サインインを完了しています…",
+  "auth.callback.error.oauthFailed": "OAuth交換に失敗しました。",
+  "auth.callback.error.accessDenied": "サインインがキャンセルされました。",
+  "auth.callback.error.noCode": "認証コードがありません。",
+  "auth.callback.error.unsupported": "サポートされていないサインイン プロバイダーです。",
+  "auth.callback.error.invalidAccess": "無効なアクセスです。",
+  "auth.callback.error.badState": "無効な状態パラメータです。",
+  "auth.callback.message.done": "サインインが完了しました。まもなくリダイレ​​クトします。",
+  "auth.callback.message.doneDemo": "デモサインインが完了しました。まもなくリダイレ​​クトします。",
+  "auth.callback.demo.message": "デモアカウントでサインインしています。一部の機能が制限される場合があります。",
+  "auth.callback.error.failed": "サインイン中にエラーが発生しました。",
+  "auth.callback.error.noUser": "ユーザー情報を確認できません。"
+}

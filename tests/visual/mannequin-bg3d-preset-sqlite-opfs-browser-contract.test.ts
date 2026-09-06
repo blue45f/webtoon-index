@@ -31,7 +31,7 @@ const RESULT_PATH = resolve(
 );
 const REPOSITORY_PATH = resolve(
   ROOT,
-  "src/domains/creator/scene-3d/studio-mannequin-bg3d-preset-sqlite-repository.ts",
+  "apps/web/src/domains/creator/scene-3d/studio-mannequin-bg3d-preset-sqlite-repository.ts",
 );
 
 function artifact(): MannequinBg3dSqliteOpfsArtifact {

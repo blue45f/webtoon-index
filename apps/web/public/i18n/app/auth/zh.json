@@ -1,0 +1,21 @@
+{
+  "auth.menu.adminPanel": "管理控制台",
+  "auth.menu.triggerLabel": "账户菜单",
+  "auth.menu.signOut": "登出",
+  "auth.menu.settings": "设置",
+  "auth.menu.profile": "我的个人资料",
+  "auth.menu.fallbackName": "读者",
+  "auth.callback.error.generic": "登录失败。",
+  "auth.callback.error.invalidAccess": "无效访问。",
+  "auth.callback.error.accessDenied": "登录已取消。",
+  "auth.callback.message.working": "正在完成登录...",
+  "auth.callback.error.badState": "状态参数无效。",
+  "auth.callback.message.done": "登录完成。很快就会重定向。",
+  "auth.callback.error.oauthFailed": "OAuth 交换失败。",
+  "auth.callback.error.noUser": "无法验证用户信息。",
+  "auth.callback.error.noCode": "缺少授权码。",
+  "auth.callback.error.failed": "登录时发生错误。",
+  "auth.callback.error.unsupported": "不支持的登录提供商。",
+  "auth.callback.demo.message": "您已使用模拟帐户登录。某些功能可能会受到限制。",
+  "auth.callback.message.doneDemo": "演示登录完成。很快就会重定向。"
+}

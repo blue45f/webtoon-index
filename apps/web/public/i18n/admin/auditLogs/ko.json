@@ -1,0 +1,15 @@
+{
+  "admin.auditLogs.close": "닫기",
+  "admin.auditLogs.desc": "관리자 권한으로 수행된 모든 주요 조치와 권한·설정 변경 이력을 추적합니다.",
+  "admin.auditLogs.empty": "기록된 감사 로그가 없습니다.",
+  "admin.auditLogs.loadError": "감사 로그를 불러오지 못했습니다.",
+  "admin.auditLogs.loading": "감사 로그를 불러오는 중...",
+  "admin.auditLogs.modalTitle": "감사 로그 상세",
+  "admin.auditLogs.searchPlaceholder": "이메일 또는 작업 검색...",
+  "admin.auditLogs.thAction": "작업",
+  "admin.auditLogs.thAdmin": "수행 관리자",
+  "admin.auditLogs.thDetail": "상세",
+  "admin.auditLogs.thTarget": "대상",
+  "admin.auditLogs.title": "관리자 감사 로그",
+  "admin.auditLogs.view": "보기"
+}

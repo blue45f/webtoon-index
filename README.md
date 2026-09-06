@@ -366,16 +366,24 @@ Studio writer를 drain해야 합니다. Render pre-deploy 등 다른 migration w
 ## 프로젝트 구조
 
 ```
-src/                 Vite 엔트리, React Router 페이지, 라우트 셸
-components/          UI 프리미티브 + 시그니처 컴포넌트
-  ui/                button, chip, stars, spectrum-bar, segmented ...
-lib/                 데이터 모델 · 런타임 카탈로그 저장소 · 검색/랭킹/추천 로직 · 스토어
-  data/              빌드 시 생성되는 정적 카탈로그 파일(public/data)
-  server/            랭킹·검색·카탈로그 수집 서버 로직
-docs/                경쟁 서비스 분석
-apps/api/            NestJS 백엔드 (catalog, ranking, auth, me, community, admin)
+apps/web/            Vite·React 브라우저 애플리케이션
+  src/app/           부트스트랩·라우팅·서비스 워커·앱 셸
+  src/domains/       creator·catalog·community·auth 등 기능 도메인
+  src/shared/        도메인 간 브라우저 서비스·계약·정적 카탈로그 런타임
+  src/components/    앱 셸·오류·브라우저 호환 컴포넌트
+  src/infrastructure/ API·클라우드 저장소 클라이언트
+  public/             브라우저 배포 자산
+apps/api/            NestJS 백엔드
 ```
 
 <br/>
 
 > **데이터 고지** — 작품 메타데이터와 공개 수치는 공개적으로 접근 가능한 소스에서 수집합니다. 평가 수·평점 분포·완독률·몰입 지수 등 플랫폼이 공개하지 않는 지표는 추정값(≈)으로 표기합니다. 표지 이미지의 저작권은 각 저작권자에게 있으며, 운영 시 플랫폼별 약관·robots·제휴 가능성을 준수합니다.
+
+## 저장소 구조 원칙
+
+브라우저 애플리케이션은 `apps/web`, NestJS 백엔드는 `apps/api`에 있습니다. 웹과 API가 함께 사용하는 계약·엔진은 `packages`에 두고, 저장소 전용 검증 코드는 `scripts`, `tools`, `e2e`, `tests`에 둡니다. 경계와 경로 규칙은 [ARCHITECTURE.md](ARCHITECTURE.md)를 참고하세요.
+
+### 런타임 소스 지도
+
+프런트엔드는 `apps/web/src/app`(부트스트랩·라우팅), `apps/web/src/domains`(기능 도메인), `apps/web/src/shared`(도메인 간 브라우저 서비스·호환 경계)를 중심으로 구성합니다. 백엔드 기능은 `apps/api/src/modules`, 외부 서비스 어댑터는 `apps/api/src/infrastructure`, 스키마·마이그레이션은 `apps/api/src/db`, 서버 유스케이스는 `apps/api/src/server`에 둡니다. 루트 `api/` 파일은 Vercel 진입점용 어댑터이며 애플리케이션 로직이 아닙니다.

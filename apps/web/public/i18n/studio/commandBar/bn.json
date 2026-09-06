@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "দ্রুত কমান্ড বার",
+  "studio.commandBar.settings": "কমান্ড বার সেটিংস",
+  "studio.commandBar.settingsDescription": "মেনু বারের নিচের কমান্ড বারের স্লট বিন্যাস ও দৃশ্যমানতা বদলান।",
+  "studio.commandBar.settingsTip": "সবচেয়ে বেশি ব্যবহৃত কমান্ডগুলো প্রথম স্লটে রাখলে দ্রুত হাতের নাগালে থাকে।",
+  "studio.commandBar.settingsClose": "কমান্ড বার সেটিংস বন্ধ করুন",
+  "studio.commandBar.settingsStorageNote": "স্লট বিন্যাস এই ব্রাউজারের ওয়ার্কস্পেস সেটিংসে সংরক্ষিত হয়।",
+  "studio.commandBar.showSlots": "কমান্ড স্লট দেখান",
+  "studio.commandBar.slot": "স্লট {index}",
+  "studio.commandBar.slotAria": "কমান্ড স্লট {index}",
+  "studio.commandBar.slotEmpty": "খালি স্লট",
+  "studio.commandBar.resetDefaults": "ডিফল্ট বিন্যাসে ফেরান",
+  "studio.commandBar.command.undo": "পূর্বাবস্থা",
+  "studio.commandBar.command.redo": "পুনরায় করুন",
+  "studio.commandBar.command.save": "খসড়া সংরক্ষণ",
+  "studio.commandBar.command.publish": "প্রকাশ করুন",
+  "studio.commandBar.command.download": "বর্তমান পৃষ্ঠা ডাউনলোড করুন",
+  "studio.commandBar.command.export-open": "এক্সপোর্ট বিকল্প",
+  "studio.commandBar.command.zoom-fit": "স্ক্রিনের প্রস্থে মানান",
+  "studio.commandBar.command.assets": "টেমপ্লেট ও অ্যাসেট",
+  "studio.commandBar.command.bubbles": "সংলাপ বাবল",
+  "studio.commandBar.command.project": "প্রজেক্ট টুল"
+}

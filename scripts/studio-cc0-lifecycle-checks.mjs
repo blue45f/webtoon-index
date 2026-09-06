@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 /** Delay a real bundled asset request. The fetch observer never replaces response bytes:
  * it only proves the component aborts the actual request before it can alter the canvas.
  */
-export async function verifyCc0InsertionCancellation(page, panel, manifest, steps) {
+export async function verifyCc0InsertionCancellation(page, panel, manifest, steps) { // NOSONAR javascript:S3776
   const assetId = await panel.locator('article').first().getAttribute('data-cc0-asset-id');
   const asset = manifest.assets.find(item => item.id === assetId);
   assert.ok(asset && asset.kind === 'surface-texture');

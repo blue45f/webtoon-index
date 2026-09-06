@@ -8,7 +8,7 @@ import {
   decodeStudioCrdtBinaryEnvelope,
   reassembleStudioCrdtBinarySyncEnvelope,
   type StudioCrdtBinaryEnvelopeKind,
-} from "../../../../../lib/studio-crdt-binary-envelope";
+} from "../../../../web/src/shared/lib/studio-crdt-binary-envelope";
 import {
   verifyStudioLiveAdmissionTicket,
   type VerifiedSessionToken,

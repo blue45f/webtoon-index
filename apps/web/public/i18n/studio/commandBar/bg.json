@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Лента за бързи команди",
+  "studio.commandBar.settings": "Настройки на лентата с команди",
+  "studio.commandBar.settingsDescription": "Променете подредбата на слотовете и видимостта на лентата с команди под лентата с менюта.",
+  "studio.commandBar.settingsTip": "Поставете най-често използваните команди в първите слотове, за да са най-бързо достъпни.",
+  "studio.commandBar.settingsClose": "Затваряне на настройките на лентата с команди",
+  "studio.commandBar.settingsStorageNote": "Подредбата на слотовете се запазва в настройките на работното пространство в този браузър.",
+  "studio.commandBar.showSlots": "Показване на слотовете с команди",
+  "studio.commandBar.slot": "Слот {index}",
+  "studio.commandBar.slotAria": "Слот за команда {index}",
+  "studio.commandBar.slotEmpty": "Празен слот",
+  "studio.commandBar.resetDefaults": "Връщане към подредбата по подразбиране",
+  "studio.commandBar.command.undo": "Отмяна",
+  "studio.commandBar.command.redo": "Повторение",
+  "studio.commandBar.command.save": "Запазване на черновата",
+  "studio.commandBar.command.publish": "Публикуване",
+  "studio.commandBar.command.download": "Изтегляне на текущата страница",
+  "studio.commandBar.command.export-open": "Опции за експортиране",
+  "studio.commandBar.command.zoom-fit": "Побиране по ширина на екрана",
+  "studio.commandBar.command.assets": "Шаблони и ресурси",
+  "studio.commandBar.command.bubbles": "Балонче с реплика",
+  "studio.commandBar.command.project": "Инструменти за проекта"
+}

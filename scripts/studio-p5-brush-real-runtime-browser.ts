@@ -1,7 +1,7 @@
 import {
   probeStudioProceduralArtisticBrushWorker,
   renderStudioProceduralArtisticBrushInWorker,
-} from "../src/domains/creator/studio-procedural-artistic-brush-worker-client";
+} from "../apps/web/src/domains/creator/studio-procedural-artistic-brush-worker-client";
 
 import {
   studioP5BrushRealRuntimeCaseEvidence,

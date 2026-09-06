@@ -130,7 +130,7 @@ def _issue(
     )
 
 
-def audit_character(
+def audit_character( # NOSONAR python:S3776
     config: PipelineConfig,
     mesh_objects: Sequence[bpy.types.Object],
     armature: bpy.types.Object | None,

@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "fontin tim",
+  "studio.customFonts.importButton": "Importo nga skedari",
+  "studio.customFonts.importing": "Po kontrollon…",
+  "studio.customFonts.importAria": "Importo skedarin e fontit",
+  "studio.customFonts.storageAria": "Përdorimi i bibliotekës së shkronjave",
+  "studio.customFonts.emptyTitle": "Nuk ka ende asnjë font të përfshirë.",
+  "studio.customFonts.unknownFileName": "Asnjë emër skedari",
+  "studio.customFonts.apply": "Aplikoni",
+  "studio.customFonts.applyToText": "Aplikoni këtë font në tekstin e zgjedhur",
+  "studio.customFonts.selectTextFirst": "Së pari zgjidhni tekstin ose flluskën e të folurit",
+  "studio.customFonts.delete": "fshini fontin"
+}

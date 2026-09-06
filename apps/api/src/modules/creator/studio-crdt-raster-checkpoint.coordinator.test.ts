@@ -6,7 +6,7 @@ import {
   STUDIO_CRDT_RASTER_SURFACES_ROOT,
   STUDIO_CRDT_RASTER_UNDO_OPERATIONS_ROOT,
   readStudioCrdtRasterDocument,
-} from "../../../../../lib/studio-crdt-raster-document-contract";
+} from "../../../../web/src/shared/lib/studio-crdt-raster-document-contract";
 import {
   STUDIO_RASTER_CRDT_VERSION,
   STUDIO_RASTER_KERNEL,
@@ -14,7 +14,7 @@ import {
   type StudioRasterAssetReference,
   type StudioRasterOperation,
   type StudioRasterUndoOperation,
-} from "../../../../../lib/studio-crdt-raster-ops";
+} from "../../../../web/src/shared/lib/studio-crdt-raster-ops";
 
 import {
   STUDIO_CRDT_SERVER_DURABLE_REPLICA_ID,

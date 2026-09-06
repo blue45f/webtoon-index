@@ -18,15 +18,15 @@ const moduleSource = readFileSync(resolve(
 ), "utf8");
 const hook = readFileSync(resolve(
   root,
-  "src/domains/market/hooks/use-market-social.ts",
+  "apps/web/src/domains/market/hooks/use-market-social.ts",
 ), "utf8");
 const comments = readFileSync(resolve(
   root,
-  "src/domains/market/components/MarketCommentsSection.tsx",
+  "apps/web/src/domains/market/components/MarketCommentsSection.tsx",
 ), "utf8");
 const reviews = readFileSync(resolve(
   root,
-  "src/domains/market/components/MarketReviewsSection.tsx",
+  "apps/web/src/domains/market/components/MarketReviewsSection.tsx",
 ), "utf8");
 const genericReviewFeed = readFileSync(resolve(
   root,

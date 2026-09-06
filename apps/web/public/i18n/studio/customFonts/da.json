@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "min skrifttype",
+  "studio.customFonts.importButton": "Importer fra fil",
+  "studio.customFonts.importing": "Tjekker...",
+  "studio.customFonts.importAria": "Importer skrifttypefil",
+  "studio.customFonts.storageAria": "Brug af skrifttypebibliotek",
+  "studio.customFonts.emptyTitle": "Der er ingen skrifttyper inkluderet endnu.",
+  "studio.customFonts.unknownFileName": "Intet filnavn",
+  "studio.customFonts.apply": "Ansøg",
+  "studio.customFonts.applyToText": "Anvend denne skrifttype på valgt tekst",
+  "studio.customFonts.selectTextFirst": "Vælg først tekst eller taleboble",
+  "studio.customFonts.delete": "slette skrifttype"
+}

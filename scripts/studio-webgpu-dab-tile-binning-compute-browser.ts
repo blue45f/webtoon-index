@@ -4,18 +4,18 @@
 import {
   planStudioGpuDabTileBinning,
   type StudioGpuDabTileBinningInput,
-} from "../src/domains/creator/render/studio-webgpu-dab-tile-binning";
+} from "../apps/web/src/domains/creator/render/studio-webgpu-dab-tile-binning";
 import {
   STUDIO_WEBGPU_DAB_TILE_BINNING_COMPUTE_WGSL,
   createStudioWebGpuDabTileBinningComputeRuntime,
   studioWebGpuDabTileBinningMatchesCpuOracle,
   type StudioWebGpuDabTileBinningComputeRuntimeStats,
-} from "../src/domains/creator/render/studio-webgpu-dab-tile-binning-compute";
+} from "../apps/web/src/domains/creator/render/studio-webgpu-dab-tile-binning-compute";
 import {
   electStudioWebGpuDabTileBinningBackend,
   type StudioWebGpuDabTileBinningBenchmarkReport,
   type StudioWebGpuDabTileBinningTimingDistribution,
-} from "../src/domains/creator/render/studio-webgpu-dab-tile-binning-election";
+} from "../apps/web/src/domains/creator/render/studio-webgpu-dab-tile-binning-election";
 
 const WARMUP_ITERATIONS = 4;
 const MEASURED_ITERATIONS = 16;

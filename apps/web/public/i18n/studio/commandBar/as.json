@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "দ্ৰুত কমাণ্ড বাৰ",
+  "studio.commandBar.settings": "কমাণ্ড বাৰ ছেটিংছ",
+  "studio.commandBar.settingsDescription": "মেনু বাৰৰ তলৰ কমাণ্ড বাৰৰ স্লট বিন্যাস আৰু দৃশ্যমানতা সলনি কৰক।",
+  "studio.commandBar.settingsTip": "সঘনাই ব্যৱহাৰ কৰা কমাণ্ডবোৰ প্ৰথম স্লটত ৰাখিলে সোনকালে পাব পাৰিব।",
+  "studio.commandBar.settingsClose": "কমাণ্ড বাৰ ছেটিংছ বন্ধ কৰক",
+  "studio.commandBar.settingsStorageNote": "স্লট বিন্যাস এই ব্ৰাউজাৰৰ কৰ্মক্ষেত্ৰ ছেটিংছত সংৰক্ষিত হয়।",
+  "studio.commandBar.showSlots": "কমাণ্ড স্লট দেখুৱাওক",
+  "studio.commandBar.slot": "স্লট {index}",
+  "studio.commandBar.slotAria": "কমাণ্ড স্লট {index}",
+  "studio.commandBar.slotEmpty": "খালী স্লট",
+  "studio.commandBar.resetDefaults": "ডিফল্ট বিন্যাসলৈ ওভতাওক",
+  "studio.commandBar.command.undo": "পূৰ্ববত কৰক",
+  "studio.commandBar.command.redo": "পুনৰ কৰক",
+  "studio.commandBar.command.save": "খচৰা সংৰক্ষণ কৰক",
+  "studio.commandBar.command.publish": "প্ৰকাশ কৰক",
+  "studio.commandBar.command.download": "বৰ্তমান পৃষ্ঠা ডাউনলোড কৰক",
+  "studio.commandBar.command.export-open": "ৰপ্তানি বিকল্প",
+  "studio.commandBar.command.zoom-fit": "পৰ্দাৰ প্ৰস্থত খাপ খুৱাওক",
+  "studio.commandBar.command.assets": "টেমপ্লেট আৰু এছেট",
+  "studio.commandBar.command.bubbles": "কথাৰ বেলুন",
+  "studio.commandBar.command.project": "প্ৰকল্প সঁজুলি"
+}

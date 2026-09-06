@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "نوار فرمان سریع",
+  "studio.commandBar.settings": "تنظیمات نوار فرمان",
+  "studio.commandBar.settingsDescription": "چیدمان جایگاه‌ها و نمایش نوار فرمان زیر نوار منو را تغییر دهید.",
+  "studio.commandBar.settingsTip": "فرمان‌هایی را که بیشتر استفاده می‌کنید در جایگاه‌های نخست بگذارید تا سریع‌تر در دسترس باشند.",
+  "studio.commandBar.settingsClose": "بستن تنظیمات نوار فرمان",
+  "studio.commandBar.settingsStorageNote": "چیدمان جایگاه‌ها در تنظیمات فضای کاری همین مرورگر ذخیره می‌شود.",
+  "studio.commandBar.showSlots": "نمایش جایگاه‌های فرمان",
+  "studio.commandBar.slot": "جایگاه {index}",
+  "studio.commandBar.slotAria": "جایگاه فرمان {index}",
+  "studio.commandBar.slotEmpty": "جایگاه خالی",
+  "studio.commandBar.resetDefaults": "بازنشانی به چیدمان پیش‌فرض",
+  "studio.commandBar.command.undo": "واگرد",
+  "studio.commandBar.command.redo": "ازنو",
+  "studio.commandBar.command.save": "ذخیره پیش‌نویس",
+  "studio.commandBar.command.publish": "انتشار",
+  "studio.commandBar.command.download": "دانلود صفحه فعلی",
+  "studio.commandBar.command.export-open": "گزینه‌های خروجی",
+  "studio.commandBar.command.zoom-fit": "متناسب با عرض صفحه",
+  "studio.commandBar.command.assets": "قالب‌ها و منابع",
+  "studio.commandBar.command.bubbles": "حباب گفتار",
+  "studio.commandBar.command.project": "ابزارهای پروژه"
+}

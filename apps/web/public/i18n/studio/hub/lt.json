@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Funkcijų mokymo programa",
+  "studio.hub.subtitle": "Viena funkcija vienu metu be jokios naštos. Pažiūrėjau {done}/{total}.",
+  "studio.hub.progressAriaLabel": "Mokymosi eiga",
+  "studio.hub.listAriaLabel": "Funkcijų sąrašas",
+  "studio.hub.checked": "pažiūrėk",
+  "studio.hub.prev": "Ankstesnis",
+  "studio.hub.next": "kitas",
+  "studio.hub.markComplete": "pažymėti kaip užbaigtą",
+  "studio.hub.completed": "Užbaigta",
+  "studio.hub.tryLabelDefault": "Sekite kartu",
+  "studio.hub.stepAriaPrefix": "žingsnis"
+}

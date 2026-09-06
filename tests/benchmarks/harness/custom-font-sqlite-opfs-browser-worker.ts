@@ -302,11 +302,11 @@ async function loadProductModules() {
     customFonts,
     assetRepository,
   ] = await Promise.all([
-    import("../../../src/domains/creator/studio-local-database"),
-    import("../../../src/domains/creator/studio-local-database-runtime"),
-    import("../../../src/domains/creator/studio-custom-font-sqlite-opfs-repository"),
-    import("../../../src/domains/creator/studio-custom-fonts"),
-    import("../../../src/domains/creator/studio-asset-library-sqlite-opfs-repository"),
+    import("../../../apps/web/src/domains/creator/studio-local-database"),
+    import("../../../apps/web/src/domains/creator/studio-local-database-runtime"),
+    import("../../../apps/web/src/domains/creator/studio-custom-font-sqlite-opfs-repository"),
+    import("../../../apps/web/src/domains/creator/studio-custom-fonts"),
+    import("../../../apps/web/src/domains/creator/studio-asset-library-sqlite-opfs-repository"),
   ]);
   return {
     localDatabase,

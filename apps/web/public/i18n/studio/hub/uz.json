@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Xususiyatlar boʻyicha qoʻllanma",
+  "studio.hub.subtitle": "Hech qanday yuksiz bir vaqtning o'zida bitta funktsiya. Men {done}/{total} ga qaradim.",
+  "studio.hub.progressAriaLabel": "O'quv jarayoni",
+  "studio.hub.listAriaLabel": "Xususiyatlar ro'yxati",
+  "studio.hub.checked": "ko'rib chiqing",
+  "studio.hub.prev": "Oldingi",
+  "studio.hub.next": "keyingi",
+  "studio.hub.markComplete": "tugallangan deb belgilang",
+  "studio.hub.completed": "Bajarildi",
+  "studio.hub.tryLabelDefault": "Kuzatib boring",
+  "studio.hub.stepAriaPrefix": "qadam"
+}

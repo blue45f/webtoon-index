@@ -38,7 +38,7 @@ const sourceCodeEntry = () => ({
   destinationPaths: ["vendor/render-core/index.ts"],
   attribution: {
     required: true,
-    noticePath: "public/legal/THIRD_PARTY_NOTICES.generated.md",
+    noticePath: "apps/web/public/legal/THIRD_PARTY_NOTICES.generated.md",
   },
 });
 
@@ -83,7 +83,7 @@ test("trademark assets require explicit brand-use permission", () => {
   entry.id = "sample-logo";
   entry.kind = "trademark-asset";
   entry.allowedUses = ["commercial-use", "redistribute", "bundle"];
-  entry.destinationPaths = ["public/brands/sample-logo.svg"];
+  entry.destinationPaths = ["apps/web/public/brands/sample-logo.svg"];
   registry.entries.push(entry);
   const issues = validateStudioThirdPartyReuseRegistry(registry);
   assert.ok(issues.some((issue) => issue.includes("brand-use")));

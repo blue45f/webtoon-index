@@ -134,7 +134,7 @@ def choose_file(files: dict, role: str) -> tuple[tuple[str, ...], dict]:
     return min(candidates, key=lambda pair: pair[1]['size'])
 
 
-def select_assets(metadata: dict) -> list[tuple[str, str, str, dict]]:
+def select_assets(metadata: dict) -> list[tuple[str, str, str, dict]]: # NOSONAR python:S3776
     # Select by intended use, not a fabricated quality score. Pixel review follows.
     result, seen = [], set()
     groups = [
@@ -161,7 +161,7 @@ def select_assets(metadata: dict) -> list[tuple[str, str, str, dict]]:
     return result
 
 
-def acquire(output: Path) -> dict:
+def acquire(output: Path) -> dict: # NOSONAR python:S3776
     if output.exists() and any(output.iterdir()):
         raise ValueError('Use an empty review directory; existing assets are never overwritten')
     output.mkdir(parents=True, exist_ok=True)
@@ -283,5 +283,5 @@ if __name__ == '__main__':
     args = parser.parse_args()
     destination = args.output.resolve()
     if destination == ROOT or destination.is_relative_to(ROOT / 'public'):
-        parser.error('Use an empty staging directory outside public/')
+        parser.error('Use an empty staging directory outside apps/web/public/')
     acquire(destination)

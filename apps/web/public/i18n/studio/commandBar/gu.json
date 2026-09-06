@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "ઝડપી કમાન્ડ બાર",
+  "studio.commandBar.settings": "કમાન્ડ બાર સેટિંગ્સ",
+  "studio.commandBar.settingsDescription": "મેનૂ બારની નીચેના કમાન્ડ બારની સ્લોટ ગોઠવણી અને દૃશ્યતા બદલો.",
+  "studio.commandBar.settingsTip": "તમે સૌથી વધુ વાપરતા હો તે કમાન્ડ પહેલી સ્લોટમાં મૂકો, જેથી ઝડપથી પહોંચી શકાય.",
+  "studio.commandBar.settingsClose": "કમાન્ડ બાર સેટિંગ્સ બંધ કરો",
+  "studio.commandBar.settingsStorageNote": "સ્લોટ ગોઠવણી આ બ્રાઉઝરના વર્કસ્પેસ સેટિંગ્સમાં સાચવાય છે.",
+  "studio.commandBar.showSlots": "કમાન્ડ સ્લોટ બતાવો",
+  "studio.commandBar.slot": "સ્લોટ {index}",
+  "studio.commandBar.slotAria": "કમાન્ડ સ્લોટ {index}",
+  "studio.commandBar.slotEmpty": "ખાલી સ્લોટ",
+  "studio.commandBar.resetDefaults": "ડિફૉલ્ટ ગોઠવણી પર પાછા લાવો",
+  "studio.commandBar.command.undo": "પૂર્વવત્ કરો",
+  "studio.commandBar.command.redo": "ફરી કરો",
+  "studio.commandBar.command.save": "ડ્રાફ્ટ સાચવો",
+  "studio.commandBar.command.publish": "પ્રકાશિત કરો",
+  "studio.commandBar.command.download": "વર્તમાન પૃષ્ઠ ડાઉનલોડ કરો",
+  "studio.commandBar.command.export-open": "નિકાસ વિકલ્પો",
+  "studio.commandBar.command.zoom-fit": "સ્ક્રીનની પહોળાઈમાં બંધબેસાડો",
+  "studio.commandBar.command.assets": "ટેમ્પ્લેટ અને એસેટ",
+  "studio.commandBar.command.bubbles": "સંવાદ બબલ",
+  "studio.commandBar.command.project": "પ્રોજેક્ટ સાધનો"
+}

@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Функция үйрөткүчү",
+  "studio.hub.subtitle": "Эч кандай жүк жок бир убакта бир функция. Мен {done}/{total} карадым.",
+  "studio.hub.progressAriaLabel": "Окутуунун жүрүшү",
+  "studio.hub.listAriaLabel": "Функциялар тизмеси",
+  "studio.hub.checked": "карап ал",
+  "studio.hub.prev": "Мурунку",
+  "studio.hub.next": "кийинки",
+  "studio.hub.markComplete": "аяктаган деп белгилөө",
+  "studio.hub.completed": "Аякталды",
+  "studio.hub.tryLabelDefault": "ээрчи",
+  "studio.hub.stepAriaPrefix": "кадам"
+}

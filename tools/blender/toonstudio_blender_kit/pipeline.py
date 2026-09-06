@@ -38,6 +38,8 @@ from .quality import QualityAudit, audit_character
 from .render import RenderResult, render_quality_views
 from .vrm import VrmExpressionBindingResult, bind_semantic_vrm1_expressions
 
+QUALITY_REPORT_FILENAME = "quality-report.json"
+
 
 @dataclass(frozen=True)
 class PipelineExecution:
@@ -133,7 +135,7 @@ def _import_blend(path: Path) -> None:
             bpy.context.scene.collection.objects.link(obj)
 
 
-def _import_source(path: Path) -> None:
+def _import_source(path: Path) -> None: # NOSONAR python:S3776
     if not path.exists() or not path.is_file():
         raise PipelineFailure(f"input character does not exist: {path}")
     suffix = path.suffix.casefold()
@@ -467,7 +469,7 @@ def _build_manifest(
             "score": report.score,
             "passed": report.passed,
             "minimumScore": config.quality.minimum_score,
-            "report": "quality-report.json",
+            "report": QUALITY_REPORT_FILENAME,
         },
         "files": files,
         "provenance": {
@@ -481,7 +483,7 @@ def _append_export_issue(issues: list[QualityIssue], code: str, message: str) ->
     issues.append(QualityIssue(code=code, severity="error", message=message))
 
 
-def run_pipeline(
+def run_pipeline( # NOSONAR python:S3776
     config: PipelineConfig,
     *,
     project_root: str | Path,
@@ -638,7 +640,7 @@ def run_pipeline(
         issues=tuple(issues),
         outputs=dict(outputs),
     )
-    write_json(output_dir / "quality-report.json", report.to_mapping())
+    write_json(output_dir / QUALITY_REPORT_FILENAME, report.to_mapping())
     manifest = _build_manifest(
         config,
         report,

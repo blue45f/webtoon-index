@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Упатство за карактеристики",
+  "studio.hub.subtitle": "Една по една функција без никаков товар. Погледнав во {done}/{total}.",
+  "studio.hub.progressAriaLabel": "Напредокот на туторијалот",
+  "studio.hub.listAriaLabel": "Список на карактеристики",
+  "studio.hub.checked": "погледнете",
+  "studio.hub.prev": "Претходна",
+  "studio.hub.next": "следно",
+  "studio.hub.markComplete": "означете како комплетно",
+  "studio.hub.completed": "Завршено",
+  "studio.hub.tryLabelDefault": "Следете го",
+  "studio.hub.stepAriaPrefix": "чекор"
+}

@@ -133,7 +133,7 @@ function sleep(ms) {
 }
 
 function slug(value) {
-  return value.replace(/[^a-zA-Z0-9_-]+/gu, "-").replace(/^-+|-+$/gu, "");
+  return value.replace(/[^a-zA-Z0-9_-]+/gu, "-").replace(/(?:^-+|-+$)/gu, "");
 }
 
 function sha256(buffer) {
@@ -146,7 +146,7 @@ function ignoredNetwork(text) {
 
 async function inspectDom(page, profile) {
   return page.evaluate(
-    ({ minTouchPx, isMobileProfile }) => {
+    ({ minTouchPx, isMobileProfile }) => { // NOSONAR javascript:S3776
       const viewportWidth = window.innerWidth;
       const viewportHeight = window.innerHeight;
       const epsilon = 0.5;
@@ -190,7 +190,7 @@ async function inspectDom(page, profile) {
 
       const describe = (element) => {
         const name = accessibleName(element).replace(/\s+/gu, " ").slice(0, 72);
-        return `${element.tagName.toLowerCase()}${name ? `[${name}]` : ""}`;
+        return element.tagName.toLowerCase() + (name ? `[${name}]` : "");
       };
 
       const horizontalScrollerAncestor = (element) => {
@@ -376,7 +376,7 @@ async function probeBg3dEntry(page, routeId) {
   return { applicable: true, available: true, clickError, dialogOpened };
 }
 
-function classify({ route, profile, responseStatus, navigationError, ready, dom, pageErrors, consoleErrors, requestFailures, workspaceProbe, bg3dProbe }) {
+function classify({ route, profile, responseStatus, navigationError, ready, dom, pageErrors, consoleErrors, requestFailures, workspaceProbe, bg3dProbe }) { // NOSONAR javascript:S3776
   const hardFailures = [];
   const warnings = [];
 

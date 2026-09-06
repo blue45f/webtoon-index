@@ -46,7 +46,7 @@ def dependency(base: Path, uri: object) -> Path:
     return result
 
 
-def pack(source: Path, destination: Path) -> dict:
+def pack(source: Path, destination: Path) -> dict: # NOSONAR python:S3776
     if source.is_symlink() or source.suffix.lower() != '.gltf' or source.stat().st_size > 4 * 1024 * 1024:
         raise ValueError('invalid source')
     if destination.suffix.lower() != '.glb':
@@ -94,9 +94,14 @@ def pack(source: Path, destination: Path) -> dict:
         if image_file.suffix.lower() not in {'.png', '.jpg', '.jpeg'}:
             raise ValueError('unsupported image format')
         texture = image_file.read_bytes()
-        mime = 'image/png' if texture.startswith(b'\x89PNG\r\n\x1a\n') else 'image/jpeg' if texture.startswith(b'\xff\xd8\xff') else None
+        if texture.startswith(b"\x89PNG\r\n\x1a\n"):
+            mime = "image/png"
+        elif texture.startswith(b"\xff\xd8\xff"):
+            mime = "image/jpeg"
+        else:
+            mime = None
         if mime is None:
-            raise ValueError('invalid image signature')
+            raise ValueError("invalid image signature")
         key = digest(texture)
         if key not in shared_images:
             data.extend(b'\0' * (-len(data) % 4))

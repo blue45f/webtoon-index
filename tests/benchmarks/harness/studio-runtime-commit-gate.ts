@@ -10,7 +10,7 @@
  *
  * This gate closes it by measuring the shipped production build in a real
  * browser with trusted input and failing when a gesture exceeds the ceilings in
- * `src/domains/creator/studio-hot-path-commit-budget.ts`.
+ * `apps/web/src/domains/creator/studio-hot-path-commit-budget.ts`.
  *
  * Two independent signals are counted per gesture:
  *   - product render counters (`studio:editor`, `studio:canvas`) emitted by
@@ -43,7 +43,7 @@ import {
   evaluateStudioHotPathBudget,
   type StudioHotPathBudgetViolation,
   type StudioHotPathGestureSample,
-} from "../../../src/domains/creator/studio-hot-path-commit-budget";
+} from "../../../apps/web/src/domains/creator/studio-hot-path-commit-budget";
 
 const REPO_ROOT = new URL("../../..", import.meta.url).pathname;
 const RESULTS_DIR = join(REPO_ROOT, "tests", "benchmarks", "results");
@@ -469,7 +469,7 @@ async function main(): Promise<void> {
 
   const report = {
     gate: "tests/benchmarks/harness/studio-runtime-commit-gate.ts",
-    contract: "src/domains/creator/studio-hot-path-commit-budget.ts",
+    contract: "apps/web/src/domains/creator/studio-hot-path-commit-budget.ts",
     generatedAt: new Date().toISOString(),
     route: studioUrl,
     build: "production dist/ served by vite preview (pnpm exec vite build)",

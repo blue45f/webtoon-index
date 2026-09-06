@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "ແຖບຄຳສັ່ງດ່ວນ",
+  "studio.commandBar.settings": "ການຕັ້ງຄ່າແຖບຄຳສັ່ງ",
+  "studio.commandBar.settingsDescription": "ປ່ຽນການຈັດວາງຊ່ອງ ແລະ ການສະແດງຂອງແຖບຄຳສັ່ງທີ່ຢູ່ໃຕ້ແຖບເມນູ.",
+  "studio.commandBar.settingsTip": "ວາງຄຳສັ່ງທີ່ໃຊ້ເລື້ອຍໆໄວ້ໃນຊ່ອງທຳອິດ ເພື່ອໃຫ້ເຂົ້າເຖິງໄດ້ໄວທີ່ສຸດ.",
+  "studio.commandBar.settingsClose": "ປິດການຕັ້ງຄ່າແຖບຄຳສັ່ງ",
+  "studio.commandBar.settingsStorageNote": "ການຈັດວາງຊ່ອງຈະຖືກບັນທຶກໄວ້ໃນການຕັ້ງຄ່າພື້ນທີ່ເຮັດວຽກຂອງເບຣົາເຊີນີ້.",
+  "studio.commandBar.showSlots": "ສະແດງຊ່ອງຄຳສັ່ງ",
+  "studio.commandBar.slot": "ຊ່ອງ {index}",
+  "studio.commandBar.slotAria": "ຊ່ອງຄຳສັ່ງ {index}",
+  "studio.commandBar.slotEmpty": "ຊ່ອງວ່າງ",
+  "studio.commandBar.resetDefaults": "ຣີເຊັດເປັນການຈັດວາງເລີ່ມຕົ້ນ",
+  "studio.commandBar.command.undo": "ຍົກເລີກ",
+  "studio.commandBar.command.redo": "ເຮັດຊ້ຳ",
+  "studio.commandBar.command.save": "ບັນທຶກສະບັບຮ່າງ",
+  "studio.commandBar.command.publish": "ເຜີຍແຜ່",
+  "studio.commandBar.command.download": "ດາວໂຫຼດໜ້າປັດຈຸບັນ",
+  "studio.commandBar.command.export-open": "ຕົວເລືອກການສົ່ງອອກ",
+  "studio.commandBar.command.zoom-fit": "ພໍດີກັບຄວາມກວ້າງໜ້າຈໍ",
+  "studio.commandBar.command.assets": "ແມ່ແບບ ແລະ ຊັບພະຍາກອນ",
+  "studio.commandBar.command.bubbles": "ບອງຄຳເວົ້າ",
+  "studio.commandBar.command.project": "ເຄື່ອງມືໂປຣເຈັກ"
+}

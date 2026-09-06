@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "クイックコマンドバー",
+  "studio.commandBar.settings": "コマンドバー設定",
+  "studio.commandBar.settingsDescription": "メニューバー下のコマンドバーのスロット構成と表示を変更します。",
+  "studio.commandBar.settingsTip": "よく使うコマンドを前のスロットに置くと、いちばん早く手が届きます。",
+  "studio.commandBar.settingsClose": "コマンドバー設定を閉じる",
+  "studio.commandBar.settingsStorageNote": "スロット構成はこのブラウザーのワークスペース設定に保存されます。",
+  "studio.commandBar.showSlots": "コマンドスロットを表示",
+  "studio.commandBar.slot": "スロット {index}",
+  "studio.commandBar.slotAria": "コマンドスロット {index}",
+  "studio.commandBar.slotEmpty": "空きスロット",
+  "studio.commandBar.resetDefaults": "既定の構成に戻す",
+  "studio.commandBar.command.undo": "元に戻す",
+  "studio.commandBar.command.redo": "やり直し",
+  "studio.commandBar.command.save": "下書きを保存",
+  "studio.commandBar.command.publish": "公開",
+  "studio.commandBar.command.download": "現在のページをダウンロード",
+  "studio.commandBar.command.export-open": "書き出しオプション",
+  "studio.commandBar.command.zoom-fit": "画面幅に合わせる",
+  "studio.commandBar.command.assets": "テンプレート・アセット",
+  "studio.commandBar.command.bubbles": "吹き出し",
+  "studio.commandBar.command.project": "プロジェクトツール"
+}

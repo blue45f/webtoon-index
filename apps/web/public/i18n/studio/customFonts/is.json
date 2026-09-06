@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "leturgerðin mín",
+  "studio.customFonts.importButton": "Flytja inn úr skrá",
+  "studio.customFonts.importing": "Athugar...",
+  "studio.customFonts.importAria": "Flytja inn leturgerð",
+  "studio.customFonts.storageAria": "Notkun leturbókasafns",
+  "studio.customFonts.emptyTitle": "Engar leturgerðir eru innifaldar ennþá.",
+  "studio.customFonts.unknownFileName": "Ekkert skráarnafn",
+  "studio.customFonts.apply": "Sækja um",
+  "studio.customFonts.applyToText": "Notaðu þessa leturgerð á valinn texta",
+  "studio.customFonts.selectTextFirst": "Veldu fyrst texta eða talbólu",
+  "studio.customFonts.delete": "eyða letri"
+}

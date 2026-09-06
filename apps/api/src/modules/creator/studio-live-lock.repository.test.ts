@@ -6,7 +6,7 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import {
   parseStudioLiveLockResourceScope,
   studioLiveLockResourcesConflict,
-} from "../../../../../lib/studio-live-lock-resource";
+} from "../../../../web/src/shared/lib/studio-live-lock-resource";
 import { db } from "../../db";
 import {
   creatorWorkLiveLockClocks,

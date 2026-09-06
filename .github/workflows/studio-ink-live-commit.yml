@@ -8,7 +8,7 @@ on:
       - "scripts/verify-inkwash-dippen-live-commit-fidelity.mts"
       - "scripts/verify-studio-long-stroke.mts"
       - "scripts/lib/studio-verify-preview-harness.mjs"
-      - "src/domains/creator/**"
+      - "apps/web/src/domains/creator/**"
   pull_request:
     branches: [main]
     paths:
@@ -16,7 +16,7 @@ on:
       - "scripts/verify-inkwash-dippen-live-commit-fidelity.mts"
       - "scripts/verify-studio-long-stroke.mts"
       - "scripts/lib/studio-verify-preview-harness.mjs"
-      - "src/domains/creator/**"
+      - "apps/web/src/domains/creator/**"
   schedule:
     # 03:23 KST. The scheduled run catches renderer drift even when a dependency or generated
     # artifact changes outside the obvious brush paths.

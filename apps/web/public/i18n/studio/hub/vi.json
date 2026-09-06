@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Hướng dẫn tính năng",
+  "studio.hub.subtitle": "Một chức năng tại một thời điểm mà không có bất kỳ gánh nặng nào. Tôi đã xem {done}/{total}.",
+  "studio.hub.progressAriaLabel": "Tiến trình hướng dẫn",
+  "studio.hub.listAriaLabel": "Danh sách tính năng",
+  "studio.hub.checked": "hãy nhìn",
+  "studio.hub.prev": "trước đó",
+  "studio.hub.next": "tiếp theo",
+  "studio.hub.markComplete": "đánh dấu là hoàn thành",
+  "studio.hub.completed": "Đã hoàn thành",
+  "studio.hub.tryLabelDefault": "Theo dõi",
+  "studio.hub.stepAriaPrefix": "bước"
+}

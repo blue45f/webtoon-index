@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Xüsusiyyət Təlimatı",
+  "studio.hub.subtitle": "Hər hansı bir yük olmadan bir funksiya. {done}/{total}-a baxdım.",
+  "studio.hub.progressAriaLabel": "Dərslikdə irəliləyiş",
+  "studio.hub.listAriaLabel": "Xüsusiyyət siyahısı",
+  "studio.hub.checked": "nəzər sal",
+  "studio.hub.prev": "Əvvəlki",
+  "studio.hub.next": "növbəti",
+  "studio.hub.markComplete": "tamamlandı kimi qeyd edin",
+  "studio.hub.completed": "Tamamlandı",
+  "studio.hub.tryLabelDefault": "İzləyin",
+  "studio.hub.stepAriaPrefix": "addım"
+}

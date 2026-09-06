@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "meine Schriftart",
+  "studio.customFonts.importButton": "Aus Datei importieren",
+  "studio.customFonts.importing": "Überprüfen…",
+  "studio.customFonts.importAria": "Schriftartdatei importieren",
+  "studio.customFonts.storageAria": "Verwendung der Schriftartenbibliothek",
+  "studio.customFonts.emptyTitle": "Es sind noch keine Schriftarten enthalten.",
+  "studio.customFonts.unknownFileName": "Kein Dateiname",
+  "studio.customFonts.apply": "Bewerben",
+  "studio.customFonts.applyToText": "Wenden Sie diese Schriftart auf den ausgewählten Text an",
+  "studio.customFonts.selectTextFirst": "Wählen Sie zunächst Text oder Sprechblase aus",
+  "studio.customFonts.delete": "Schriftart löschen"
+}

@@ -10,7 +10,7 @@ import {
   type SQL,
 } from "drizzle-orm";
 
-import { fromDb } from "../../../../lib/api-helpers";
+import { fromDb } from "../../../web/src/shared/lib/api-helpers";
 import { getTitle } from "../../../../packages/core/src/server/catalog-store";
 import { db, reviewLikes, reviews, users } from "../db";
 

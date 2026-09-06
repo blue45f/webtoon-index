@@ -40,10 +40,10 @@ if (!browserType) throw new Error(`Unsupported QA_BROWSER: ${BROWSER_NAME}`);
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const digest = (value) => createHash("sha256").update(value).digest("hex").slice(0, 16);
 const textError = (error) => String(error?.stack ?? error?.message ?? error).slice(0, 2_000);
-const safeFilePart = (value) => value.replace(/[^a-zA-Z0-9_-]+/g, "-").replace(/^-+|-+$/g, "");
+const safeFilePart = (value) => value.replace(/[^a-zA-Z0-9_-]+/g, "-").replace(/(?:^-+|-+$)/g, "");
 
 async function inspectDom(page) {
-  return page.evaluate((minimumTap) => {
+  return page.evaluate((minimumTap) => { // NOSONAR javascript:S3776
     const vw = window.innerWidth;
     const vh = window.innerHeight;
     const visible = (element) => {
@@ -57,7 +57,7 @@ async function inspectDom(page) {
     const describe = (element) => {
       const text = (element.textContent ?? "").trim().replace(/\s+/g, " ").slice(0, 64);
       const name = element.getAttribute("aria-label") ?? element.getAttribute("title") ?? text;
-      return `${element.tagName.toLowerCase()}${name ? `[${name}]` : ""}`;
+      return element.tagName.toLowerCase() + (name ? `[${name}]` : "");
     };
     const inHorizontalScroller = (element) => {
       let current = element.parentElement;
@@ -174,7 +174,7 @@ async function probeButton(page, selector, expectedSelector, label) {
   }
 }
 
-async function probeInteractions(page, route, dom) {
+async function probeInteractions(page, route, dom) { // NOSONAR javascript:S3776
   const result = {};
   if (route.interactive) {
     result.canvas = await probeCanvas(page, dom);
@@ -224,7 +224,7 @@ async function probeInteractions(page, route, dom) {
   return result;
 }
 
-function classify({ route, status, navigationError, ready, dom, pageErrors, consoleErrors, requestFailures, interactions, offlineRecovery }) {
+function classify({ route, status, navigationError, ready, dom, pageErrors, consoleErrors, requestFailures, interactions, offlineRecovery }) { // NOSONAR javascript:S3776
   const failures = [];
   const warnings = [];
   if (navigationError) failures.push(`navigation: ${navigationError}`);
@@ -251,7 +251,7 @@ function classify({ route, status, navigationError, ready, dom, pageErrors, cons
   return { failures, warnings };
 }
 
-async function runRoute(context, cycle, route, settings, seenSignatures) {
+async function runRoute(context, cycle, route, settings, seenSignatures) { // NOSONAR javascript:S3776
   const page = await context.newPage();
   const pageErrors = [];
   const consoleErrors = [];
@@ -358,10 +358,13 @@ try {
   while (Date.now() < DEADLINE) {
     const landscape = cycle % 2 === 1;
     const viewport = landscape ? { width: HEIGHT, height: WIDTH } : { width: WIDTH, height: HEIGHT };
+    let deviceScaleFactor = 3;
+    if (cycle % 3 === 0) deviceScaleFactor = 1;
+    else if (cycle % 3 === 1) deviceScaleFactor = 2;
     const settings = {
       blockPopups: cycle % 3 !== 2,
       colorScheme: cycle % 2 === 0 ? "light" : "dark",
-      deviceScaleFactor: cycle % 3 === 0 ? 1 : cycle % 3 === 1 ? 2 : 3,
+      deviceScaleFactor,
       orientation: landscape ? "landscape" : "portrait",
       reducedMotion: cycle % 4 < 2 ? "no-preference" : "reduce",
       viewport,

@@ -7,7 +7,7 @@ import { performance } from "node:perf_hooks";
 import {
   STUDIO_LISTED_ALL_BRUSH_CATALOG_ITEMS,
   type StudioBrushCatalogItem,
-} from "../src/domains/creator/brush/studio-brush-catalog";
+} from "../apps/web/src/domains/creator/brush/studio-brush-catalog";
 
 import {
   findFreePort,

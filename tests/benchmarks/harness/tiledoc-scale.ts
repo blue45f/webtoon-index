@@ -17,12 +17,12 @@ import { dirname, resolve } from "node:path";
 import { performance } from "node:perf_hooks";
 import { fileURLToPath } from "node:url";
 
-import { StudioTileDocCompositePlanner } from "../../../src/domains/creator/render/studio-tiledoc-composite-plan";
-import { STUDIO_TILEDOC_TILE_SIZE } from "../../../src/domains/creator/render/studio-tiledoc-geometry";
-import { StudioTiledDocumentStore } from "../../../src/domains/creator/render/studio-tiledoc-store";
+import { StudioTileDocCompositePlanner } from "../../../apps/web/src/domains/creator/render/studio-tiledoc-composite-plan";
+import { STUDIO_TILEDOC_TILE_SIZE } from "../../../apps/web/src/domains/creator/render/studio-tiledoc-geometry";
+import { StudioTiledDocumentStore } from "../../../apps/web/src/domains/creator/render/studio-tiledoc-store";
 
-import type { StudioTileDocCompositeLayer } from "../../../src/domains/creator/render/studio-tiledoc-composite-plan";
-import type { StudioTileDocRect } from "../../../src/domains/creator/render/studio-tiledoc-geometry";
+import type { StudioTileDocCompositeLayer } from "../../../apps/web/src/domains/creator/render/studio-tiledoc-composite-plan";
+import type { StudioTileDocRect } from "../../../apps/web/src/domains/creator/render/studio-tiledoc-geometry";
 
 const REPO_ROOT = fileURLToPath(new URL("../../..", import.meta.url));
 const RESULT_PATH = resolve(REPO_ROOT, "tests/benchmarks/results/tiledoc-scale.json");

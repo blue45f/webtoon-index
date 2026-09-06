@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { STUDIO_LIVE_AUTH_TICKET_TTL_MS } from "../../../../../lib/studio-live-auth-ticket";
+import { STUDIO_LIVE_AUTH_TICKET_TTL_MS } from "../../../../web/src/shared/lib/studio-live-auth-ticket";
 import { verifyStudioLiveAdmissionTicket } from "../../server/session";
 
 import { StudioLiveAuthTicketService } from "./studio-live-auth-ticket.service";

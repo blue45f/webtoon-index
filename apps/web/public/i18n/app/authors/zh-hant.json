@@ -1,0 +1,16 @@
+{
+  "authors.people": "",
+  "authors.eyebrow": "筆者名錄",
+  "authors.title": "作者",
+  "authors.search": "搜尋作者姓名",
+  "authors.allOf": "的",
+  "authors.works": "作品",
+  "authors.views": "意見",
+  "authors.topOf": "· 頂部",
+  "authors.noName": "創作者",
+  "authors.pencafe": "創作者粉絲咖啡館",
+  "authors.empty": "— 沒有配對的作者。",
+  "authors.desc": "作者依作品數排名。點擊一位作者即可在一個地方查看他們的標題、評分和粉絲咖啡館。",
+  "authors.error": "無法載入作者列表。",
+  "authors.stats": "{total} 位作者中排名靠前的 {shown} 位作者"
+}

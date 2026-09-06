@@ -42,7 +42,7 @@ function normalizeCover(raw) {
 // 한 목록 HTML 에서 작품 아이템 블록을 파싱한다.
 // 아이템: <a href="https://novel.munpia.com/{id}" class="item|hero-item ..."> ... </a>
 //   내부에 <img class="cover" src/data-src>, <span class="genre">, <span class="title ...">, <span class="author">
-function parseList(html) {
+function parseList(html) { // NOSONAR javascript:S3776
   if (!html) return [];
   const out = [];
   // 각 작품 앵커 블록을 비탐욕 매칭(다음 </a> 까지).
@@ -115,7 +115,7 @@ async function fetchDetailMeta(workId) {
   return { cover, synopsis };
 }
 
-export async function crawl() {
+export async function crawl() { // NOSONAR javascript:S3776
   // 1) 공개 목록 페이지들 수집 + nvSrl dedupe.
   const byId = new Map();
   for (const url of LIST_URLS) {

@@ -1,0 +1,19 @@
+{
+  "studio.mobileDock.label": "Studio mobile toolbar",
+  "studio.mobileDock.drawingTools": "Drawing tools",
+  "studio.mobileDock.workspaceTools": "Workspace",
+  "studio.mobileDock.workspaceToggle": "Tools",
+  "studio.mobileDock.expandWorkspaceTools": "Expand workspace tools",
+  "studio.mobileDock.collapseWorkspaceTools": "Collapse workspace tools",
+  "studio.mobileDock.brushSettings": "Brush settings (size, color, presets)",
+  "studio.mobileDock.tool.pixel": "piksel kalem",
+  "studio.mobileDock.tool.shape": "Şekiller",
+  "studio.mobileDock.tool.pages": "Sayfalar",
+  "studio.mobileDock.tool.export": "Export",
+  "studio.mobileDock.tool.search": "Find",
+  "studio.mobileDock.tool.search.title": "Find features & settings · also by CSP/Photoshop terms",
+  "studio.mobileDock.pagesOpen": "Sayfa listesini aç",
+  "studio.mobileDock.pagesClose": "Sayfa listesini kapat",
+  "studio.mobileDock.tool.undo": "geri almak",
+  "studio.mobileDock.tool.redo": "tekrar koş"
+}

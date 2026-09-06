@@ -202,14 +202,12 @@ function validate(result, diagnostics, lane) {
   if (!result.fixedInvariant?.exact) failures.push("fixed pigment changed under water scrub/advance");
   const selection = result.selection ?? {};
   if (
-    !(selection.fullTopMiddleLightening > selection.partialTopLeftLightening)
-    || !(selection.partialTopLeftLightening > selection.untouchedTopRightLightening + 0.1)
+    selection.fullTopMiddleLightening <= selection.partialTopLeftLightening
+    || selection.partialTopLeftLightening <= selection.untouchedTopRightLightening + 0.1
   ) failures.push("non-symmetric partial-alpha selection clear is not ordered correctly");
-  if (!(Math.abs(selection.untouchedBottomLightening) < 0.1)) {
-    failures.push("selection Y orientation cleared or painted the wrong half");
-  }
-  if (!(result.clearDarkness < 20)) failures.push("clear did not return to paper");
-  if (!(result.layering?.darkOverWhiteCenterDarkness > result.layering?.whiteCenterDarkness + 1)) {
+  if (Math.abs(selection.untouchedBottomLightening) >= 0.1) failures.push("selection Y orientation cleared or painted the wrong half");
+  if (result.clearDarkness >= 20) failures.push("clear did not return to paper");
+  if (result.layering?.darkOverWhiteCenterDarkness <= result.layering?.whiteCenterDarkness + 1) {
     failures.push("white-fix-dark transmittance layering did not darken in order");
   }
   if (!result.cancelRecovery?.rejected || !result.cancelRecovery?.exact) {
@@ -227,34 +225,34 @@ function validate(result, diagnostics, lane) {
   const quality = result.visualQuality ?? {};
   const scaledOracleExpansion = INKWASH_ORACLE.lineWashHeightExpansion
     * ((result.viewport?.height ?? 0) / INKWASH_ORACLE.viewportHeight);
-  if (!(quality.lineWashHeightExpansion >= scaledOracleExpansion)) {
+  if (quality.lineWashHeightExpansion < scaledOracleExpansion) {
     failures.push(
       `watercolour bloom expansion ${quality.lineWashHeightExpansion} is below oracle-relative ${scaledOracleExpansion}`,
     );
   }
-  if (!(quality.wetSheenAndBloomDifference >= INKWASH_ORACLE.washDifferenceMean)) {
+  if (quality.wetSheenAndBloomDifference < INKWASH_ORACLE.washDifferenceMean) {
     failures.push(
       `watercolour wash difference ${quality.wetSheenAndBloomDifference} is below oracle ${INKWASH_ORACLE.washDifferenceMean}`,
     );
   }
-  if (!(quality.paperLuminanceStandardDeviation >= INKWASH_ORACLE.paperLuminanceStandardDeviation)) {
+  if (quality.paperLuminanceStandardDeviation < INKWASH_ORACLE.paperLuminanceStandardDeviation) {
     failures.push(
       `paper texture stddev ${quality.paperLuminanceStandardDeviation} is below oracle ${INKWASH_ORACLE.paperLuminanceStandardDeviation}`,
     );
   }
   if (
-    !(quality.fiberGranulationResidual >= 2)
-    || !(quality.isolatedBloomGranulationResidual >= 1.5)
+    quality.fiberGranulationResidual < 2
+    || quality.isolatedBloomGranulationResidual < 1.5
   ) failures.push("watercolour granulation is below the reviewed visible-texture floor");
   if (!(quality.bloomEdgeConcentration >= 70 && quality.bloomEdgeConcentration <= 210)) {
     failures.push("watercolour edge deposition is flat or clipped into an artificial hard rim");
   }
   const radial = quality.isolatedBloomRadialShape ?? {};
   if (
-    !(radial.angularCoverage >= 0.95)
-    || !(radial.coefficientOfVariation <= 0.22)
-    || !(radial.maximumAdjacentJumpRatio <= 0.2)
-    || !(radial.normalizedHighFrequencyEdgeCurvature <= 0.18)
+    radial.angularCoverage < 0.95
+    || radial.coefficientOfVariation > 0.22
+    || radial.maximumAdjacentJumpRatio > 0.2
+    || radial.normalizedHighFrequencyEdgeCurvature > 0.18
   ) failures.push("isolated wash has a spoke, facet, folded wedge or discontinuous radial edge");
   if (!(radial.dominantLobeCount >= 2 && radial.dominantLobeCount <= 4)) {
     failures.push("isolated wash did not settle into two to four smooth capillary lobes");
@@ -269,28 +267,28 @@ function validate(result, diagnostics, lane) {
     failures.push("isolated wash collapsed into a square or strongly biased ellipse");
   }
   if (
-    !(quality.centralWashBandToMaximumRatio >= 0.45)
-    || !(quality.minimumWashBandToMaximumRatio >= 0.22)
+    quality.centralWashBandToMaximumRatio < 0.45
+    || quality.minimumWashBandToMaximumRatio < 0.22
   ) failures.push("watercolour line wash has a detached center lump or loses continuity at its shoulders");
   if (
-    !(quality.isolatedBloomRimMinusCenterDarkness >= -15)
-    || !(quality.isolatedBloomRimMinusCenterDarkness <= 28)
+    quality.isolatedBloomRimMinusCenterDarkness < -15
+    || quality.isolatedBloomRimMinusCenterDarkness > 28
   ) failures.push("isolated wash has a central ink dot or an artificial hollow ring");
   if (
-    !(quality.redBlueCentroidSeparationPixels >= 0.15)
-    || !(quality.redBlueCentroidSeparationPixels <= 8)
+    quality.redBlueCentroidSeparationPixels < 0.15
+    || quality.redBlueCentroidSeparationPixels > 8
   ) failures.push("chromatic separation is absent or exaggerated into a rainbow fringe");
   const continuous = quality.continuousCapsule ?? {};
   if (
-    !(continuous.normalizedHighFrequencyResidual <= 0.08)
-    || !(continuous.maximumAdjacentJumpRatio <= 0.22)
+    continuous.normalizedHighFrequencyResidual > 0.08
+    || continuous.maximumAdjacentJumpRatio > 0.22
     || !(continuous.startEndToInteriorRatio >= 0.65 && continuous.startEndToInteriorRatio <= 1.3)
-    || !(continuous.minimumToMedianRatio >= 0.55)
+    || continuous.minimumToMedianRatio < 0.55
   ) failures.push("continuous capsule exposes periodic dab seams, gaps, or start/end bulbs");
   if (!(quality.selfIntersectionLuminanceRatio >= 0.72 && quality.selfIntersectionLuminanceRatio <= 1.35)) {
     failures.push("self-intersection erases pigment or accumulates an unbounded dark knot");
   }
-  if (!(quality.whiteCenterLuminanceDeltaFromPaper <= 3)) {
+  if (quality.whiteCenterLuminanceDeltaFromPaper > 3) {
     failures.push("white gouache does not converge to paper reflectance in the isolated coverage gate");
   }
   if (

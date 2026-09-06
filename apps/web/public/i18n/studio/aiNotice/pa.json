@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "ਜਨਰੇਟਿਵ AI ਚਿੱਤਰ ਗਾਈਡ",
+  "studio.aiNotice.description": "ਇਹ ਫੰਕਸ਼ਨ ਜਨਰੇਟਿਵ AI (OpenAI) ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਚਿੱਤਰ ਬਣਾਉਂਦਾ ਹੈ। AI ਬੈਜ ਬਣਾਏ ਗਏ ਨਤੀਜਿਆਂ 'ਤੇ ਪ੍ਰਦਰਸ਼ਿਤ ਹੁੰਦੇ ਹਨ।",
+  "studio.aiNotice.ruleCopyright": "ਅਸੀਂ ਦੂਜੇ ਲੋਕਾਂ ਦੀਆਂ ਰਚਨਾਵਾਂ, ਪਾਤਰਾਂ ਜਾਂ ਅਸਲ ਲੋਕਾਂ ਦੇ ਚਿਹਰੇ ਨਹੀਂ ਬਣਾਉਂਦੇ।",
+  "studio.aiNotice.ruleAccuracy": "AI ਨਤੀਜੇ ਗਲਤ ਹੋ ਸਕਦੇ ਹਨ ਜਾਂ ਉਸ ਤੋਂ ਵੱਖਰੇ ਹੋ ਸਕਦੇ ਹਨ ਜੋ ਇਰਾਦਾ ਸੀ।",
+  "studio.aiNotice.ruleResponsibility": "ਤੁਹਾਡੇ ਦੁਆਰਾ ਬਣਾਏ ਗਏ ਚਿੱਤਰਾਂ ਦੀ ਵਰਤੋਂ ਕਰਨ ਲਈ ਤੁਸੀਂ ਜ਼ਿੰਮੇਵਾਰ ਹੋ।",
+  "studio.aiNotice.cancel": "ਰੱਦ ਕਰੋ",
+  "studio.aiNotice.confirm": "ਮੈਂ ਸਮਝਦਾ ਹਾਂ, ਪੈਦਾ ਕਰਦਾ ਹਾਂ"
+}

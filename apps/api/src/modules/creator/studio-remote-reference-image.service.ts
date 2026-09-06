@@ -12,7 +12,7 @@ import {
   UnsupportedMediaTypeException,
 } from "@nestjs/common";
 
-import { rateLimit } from "../../../../../lib/rate-limit";
+import { rateLimit } from "../../../../web/src/shared/lib/rate-limit";
 import {
   STUDIO_REMOTE_REFERENCE_IMAGE_CONTRACT_VERSION,
   STUDIO_REMOTE_REFERENCE_IMAGE_MAX_BYTES,
@@ -20,7 +20,7 @@ import {
   STUDIO_REMOTE_REFERENCE_IMAGE_TIMEOUT_MS,
   StudioRemoteReferenceImageMediaTypeSchema,
   StudioRemoteReferenceImageResponseSchema,
-} from "../../../../../lib/studio-remote-reference-image-contract";
+} from "../../../../web/src/shared/lib/studio-remote-reference-image-contract";
 
 import {
   inspectStudioRemoteReferenceImage,
@@ -43,7 +43,7 @@ import type {
 import type {
   StudioRemoteReferenceImageMediaType,
   StudioRemoteReferenceImageResponse,
-} from "../../../../../lib/studio-remote-reference-image-contract";
+} from "../../../../web/src/shared/lib/studio-remote-reference-image-contract";
 
 const REMOTE_REFERENCE_RATE_LIMIT_WINDOW_MS = 60_000;
 const REMOTE_REFERENCE_RATE_LIMIT_REQUESTS = 20;

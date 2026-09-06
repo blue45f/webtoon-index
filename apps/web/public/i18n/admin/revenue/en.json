@@ -1,0 +1,15 @@
+{
+  "admin.revenue.approve": "Approve",
+  "admin.revenue.empty": "No settlement events matching this status.",
+  "admin.revenue.filterAll": "All",
+  "admin.revenue.filterApproved": "Approved",
+  "admin.revenue.filterPaid": "Settled",
+  "admin.revenue.filterPending": "Pending",
+  "admin.revenue.filterRejected": "Rejected",
+  "admin.revenue.filterRevoked": "Cancelled",
+  "admin.revenue.loadError": "Failed to load revenue ledger",
+  "admin.revenue.reject": "Reject",
+  "admin.revenue.revoke": "Cancel",
+  "admin.revenue.settle": "Complete Settlement",
+  "admin.revenue.summaryTitle": "Settlement Summary (Last 30 Days)"
+}

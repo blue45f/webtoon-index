@@ -12,17 +12,17 @@ const evidence = path.join(root, "artifacts/studio-2d");
 await mkdir(evidence, { recursive: true });
 const fixture = await mkdtemp(path.join(root, ".studio-2d-smoke-"));
 const relative = path.basename(fixture);
-const manifest = JSON.parse(await readFile(path.join(root, "src/domains/creator/studio-2d-asset-manifest.json"), "utf8"));
+const manifest = JSON.parse(await readFile(path.join(root, "apps/web/src/domains/creator/studio-2d-asset-manifest.json"), "utf8"));
 const rooftop = manifest.assets.find((asset) => asset.id === "webtoon-rooftop-sunset");
 assert.ok(rooftop);
 await writeFile(path.join(fixture, "index.html"), `<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>2D scene regression</title></head><body><div id="root"></div><script type="module" src="/${relative}/entry.tsx"></script></body></html>`);
 await writeFile(path.join(fixture, "entry.tsx"), `import {useState} from 'react';
 import {createRoot} from 'react-dom/client';
-import {Studio2dSceneBrowser} from '../src/domains/creator/Studio2dSceneBrowser';
-import {BG_SCENES,groupBgScenes} from '../src/domains/creator/studio-bg-scenes';
-import {BG_SCENES_EXTRA} from '../src/domains/creator/studio-bg-scenes-extra';
-import {createStudio2dCanvasImage} from '../src/domains/creator/studio-2d-source-size';
-import '../src/styles/globals.css';
+import {Studio2dSceneBrowser} from '../apps/web/src/domains/creator/Studio2dSceneBrowser';
+import {BG_SCENES,groupBgScenes} from '../apps/web/src/domains/creator/studio-bg-scenes';
+import {BG_SCENES_EXTRA} from '../apps/web/src/domains/creator/studio-bg-scenes-extra';
+import {createStudio2dCanvasImage} from '../apps/web/src/domains/creator/studio-2d-source-size';
+import '../apps/web/src/styles/globals.css';
 const groups=groupBgScenes([...BG_SCENES,...BG_SCENES_EXTRA]);
 function Harness(){const[q,setQ]=useState('');const[g,setG]=useState('all');const[picks,setPicks]=useState<string[]>([]);const[placed,setPlaced]=useState('');
 return <main style={{width:'min(100%,440px)',margin:'0 auto',padding:12,boxSizing:'border-box'}}>
@@ -33,8 +33,8 @@ const results = [];
 let server;
 let browser;
 try {
-  server = await createServer({ configFile: false, root, plugins: [react()], resolve: { alias: { "@": root } },
-    server: { host: "127.0.0.1", port: 0 }, publicDir: path.join(root, "public"),
+  server = await createServer({ configFile: false, root, plugins: [react()], resolve: { alias: { "@/src": path.join(root, "apps", "web", "src"), "@/shared": path.join(root, "apps", "web", "src", "shared"), "@/domains": path.join(root, "apps", "web", "src", "domains"), "@": path.join(root, "apps", "web", "src") } },
+    server: { host: "127.0.0.1", port: 0 }, publicDir: path.join(root, "apps", "web", "public"),
     optimizeDeps: { entries: [path.join(fixture, "index.html")] } });
   await server.listen();
   const address = server.httpServer.address();

@@ -11,6 +11,10 @@
     "emitDecoratorMetadata": true,
     "verbatimModuleSyntax": false,
     "baseUrl": ".",
+    "paths": {
+      "@toonspectrum/core": ["../../packages/core/src/index.ts"],
+      "@toonspectrum/core/*": ["../../packages/core/src/*"]
+    },
     "outDir": "dist",
     "rootDir": "../..",
     "types": ["node"],

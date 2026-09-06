@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "स्मार्ट आकार",
+  "studio.quickShape.description.active": "आरामात रेषा, चौकोन, वर्तुळे आणि त्रिकोण काढा. जर तुम्ही सोडले तर ते स्वतःच व्यवस्थित होईल.",
+  "studio.quickShape.description.inactive": "ते खाली लिहिणे ठीक आहे. आपण ते चालू केल्यास, आपले हात रेखाचित्र एक व्यवस्थित आकारात परिष्कृत केले जाईल.",
+  "studio.quickShape.toggleHint": "ज्या क्षणी तुम्ही पेनने अंदाजे काढलेला आकार सोडता, तो अचूक आकारात येतो. जरी तुम्ही चित्र काढताना विराम दिला तरी पूर्वावलोकन दिसेल.",
+  "studio.quickShape.toggleAria.on": "स्मार्ट आकार चालू",
+  "studio.quickShape.toggleAria.off": "स्मार्ट आकार बंद",
+  "studio.quickShape.matchedSuffix": " मी ते अनुभवू शकतो. जेव्हा मी माझा हात सोडतो तेव्हा याची पुष्टी होते.",
+  "studio.quickShape.emptyStatus": "आकार काढा आणि जाऊ द्या, किंवा फक्त शेवटी रहा",
+  "studio.quickShape.openTutorial": "स्मार्ट आकार ट्यूटोरियल पहा",
+  "studio.quickShape.notice": "स्मार्ट आकार, रेषा, वर्तुळे, चौकोन इ. काढा आणि तुम्ही सोडल्यावर त्यांना परिष्कृत करा (पूर्वावलोकनासाठी विराम द्या)"
+}

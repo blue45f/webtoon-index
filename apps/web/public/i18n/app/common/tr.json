@@ -1,0 +1,16 @@
+{
+  "common.loading": "Yükleniyor",
+  "common.loading.short": "Loading",
+  "common.close": "Kapat",
+  "common.open": "Aç",
+  "common.search": "Ara",
+  "common.retry": "Tekrar dene",
+  "common.retry.short": "Retry",
+  "common.backToTop": "Back to top",
+  "common.backToHome": "Ana sayfaya dön",
+  "common.loading.search": "Searching…",
+  "common.notFoundWithQuery": "No results for '{query}'.",
+  "common.openSearch": "Find it in Search →",
+  "common.loading.empty": "No data returned.",
+  "common.retry.all": "Try again or go back to home."
+}

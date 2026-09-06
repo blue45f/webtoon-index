@@ -4,7 +4,7 @@ import * as Y from "yjs";
 import {
   captureStudioInkInputContractV1,
   captureStudioInkInputContractV2,
-} from "../../../../../lib/studio-ink-input-contract";
+} from "../../../../web/src/shared/lib/studio-ink-input-contract";
 
 import { hasValidStudioCrdtRootSchema } from "./studio-crdt-root-schema";
 

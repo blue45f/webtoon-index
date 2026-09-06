@@ -1,0 +1,9 @@
+{
+  "avatar.error.invalidType": "不受支持的图像类型。",
+  "avatar.processing": "加工…",
+  "avatar.select": "更改图像",
+  "avatar.remove": "删除图像",
+  "avatar.changeAria": "更改个人资料图片",
+  "avatar.error.processFailed": "处理图像失败。",
+  "avatar.uploadHint": "仅支持 JPG、PNG 和 WEBP 图像，然后进行裁剪以供预览。"
+}

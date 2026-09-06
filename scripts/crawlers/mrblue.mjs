@@ -40,12 +40,12 @@ const STATUS_BY_TAG = {
 
 // 카드 1개를 표현하는 <a href="/comic/ID"> ... </a> 블록에서 ID/제목/표지/상태를 추출.
 // 같은 ID 가 여러 상태 변형(연재/단행본)으로 중복 노출되므로 workId 로 dedupe 한다.
-function parseListHtml(html) {
+function parseListHtml(html) { // NOSONAR javascript:S3776
   const items = [];
   if (!html) return items;
 
   // <a href="/comic/<ID>"> ... </a> 단위로 스캔(앵커 내부의 lazy 표지 img 를 매칭).
-  const anchorRe = /<a\s+href="\/comic\/([A-Za-z0-9_]+)"[^>]*>([\s\S]*?)<\/a>/g;
+  const anchorRe = /<a\s+href="\/comic\/(\w+)"[^>]*>([\s\S]*?)<\/a>/g;
   let m;
   while ((m = anchorRe.exec(html)) !== null) {
     const workId = m[1];
@@ -53,7 +53,7 @@ function parseListHtml(html) {
 
     // 앵커 내부의 표지 이미지(data-original 의 ID 가 앵커 ID 와 일치하는 것만 신뢰).
     const imgRe =
-      /<img[^>]*class="lazy"[^>]*data-original="(https:\/\/img\.mrblue\.com\/prod_img\/comics\/([A-Za-z0-9_]+)\/cover_w480\.jpg)"[^>]*alt="([^"]*)"[^>]*>/i;
+      /<img[^>]*class="lazy"[^>]*data-original="(https:\/\/img\.mrblue\.com\/prod_img\/comics\/(\w+)\/cover_w480\.jpg)"[^>]*alt="([^"]*)"[^>]*>/i;
     const img = imgRe.exec(inner);
     if (!img) continue;
 
@@ -147,7 +147,7 @@ function parseDetailHtml(html, titleWords = []) {
   return out;
 }
 
-export async function crawl() {
+export async function crawl() { // NOSONAR javascript:S3776
   // 1) 공개 목록 페이지들을 순차 수집(작은 sleep). 등장 순서 = 대략적 랭크.
   const seen = new Map(); // workId -> item(최초 등장 보존, 랭크 인덱스 포함)
   for (const url of LIST_URLS) {

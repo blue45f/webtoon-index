@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "inteligentné tvary",
+  "studio.quickShape.description.active": "Pokojne kreslite čiary, štvorce, kruhy a trojuholníky. Ak ho pustíte, spraví si poriadok sám.",
+  "studio.quickShape.description.inactive": "Je v poriadku to napísať. Ak ho zapnete, vaša ručná kresba sa zjemní do úhľadného tvaru.",
+  "studio.quickShape.toggleHint": "Vo chvíli, keď pustíte nahrubo nakreslený tvar perom, zacvakne do presného tvaru. Aj keď sa pri kreslení pozastavíte, zobrazí sa náhľad.",
+  "studio.quickShape.toggleAria.on": "Inteligentné tvary zapnuté",
+  "studio.quickShape.toggleAria.off": "Inteligentné tvary vypnuté",
+  "studio.quickShape.matchedSuffix": " Cítim to. Potvrdzuje sa to, keď pustím ruku.",
+  "studio.quickShape.emptyStatus": "Nakreslite tvar a pustite ho, alebo len zostaňte na konci",
+  "studio.quickShape.openTutorial": "Pozrite si návod na inteligentné tvary",
+  "studio.quickShape.notice": "Nakreslite inteligentné tvary, čiary, kruhy, štvorce atď. a upravte ich, keď ich pustíte (pozastavte a ukážte)"
+}

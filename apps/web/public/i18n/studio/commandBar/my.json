@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "အမြန် ကွန်မန်းဘား",
+  "studio.commandBar.settings": "ကွန်မန်းဘား ဆက်တင်များ",
+  "studio.commandBar.settingsDescription": "မီနူးဘားအောက်ရှိ ကွန်မန်းဘား၏ နေရာအစီအစဉ်နှင့် ပြသမှုကို ပြောင်းပါ။",
+  "studio.commandBar.settingsTip": "အသုံးများသော ကွန်မန်းများကို ရှေ့ဆုံးနေရာများတွင် ထားပါ၊ အမြန်ဆုံး လှမ်းယူနိုင်ပါသည်။",
+  "studio.commandBar.settingsClose": "ကွန်မန်းဘား ဆက်တင်များ ပိတ်ပါ",
+  "studio.commandBar.settingsStorageNote": "နေရာအစီအစဉ်ကို ဤဘရောက်ဇာ၏ လုပ်ငန်းခွင် ဆက်တင်များတွင် သိမ်းဆည်းပါသည်။",
+  "studio.commandBar.showSlots": "ကွန်မန်း နေရာများ ပြပါ",
+  "studio.commandBar.slot": "နေရာ {index}",
+  "studio.commandBar.slotAria": "ကွန်မန်း နေရာ {index}",
+  "studio.commandBar.slotEmpty": "နေရာလွတ်",
+  "studio.commandBar.resetDefaults": "မူရင်း အစီအစဉ်သို့ ပြန်သတ်မှတ်ရန်",
+  "studio.commandBar.command.undo": "နောက်ပြန်",
+  "studio.commandBar.command.redo": "ပြန်လုပ်",
+  "studio.commandBar.command.save": "မူကြမ်း သိမ်းရန်",
+  "studio.commandBar.command.publish": "ထုတ်ဝေရန်",
+  "studio.commandBar.command.download": "လက်ရှိ စာမျက်နှာကို ဒေါင်းလုဒ်လုပ်ရန်",
+  "studio.commandBar.command.export-open": "ထုတ်ယူမှု ရွေးချယ်စရာများ",
+  "studio.commandBar.command.zoom-fit": "ဖန်သားပြင် အကျယ်နှင့် ကိုက်ညီအောင်",
+  "studio.commandBar.command.assets": "တင်းပလိတ်များနှင့် အရင်းအမြစ်များ",
+  "studio.commandBar.command.bubbles": "စကားပြော ပူဖောင်း",
+  "studio.commandBar.command.project": "ပရောဂျက် ကိရိယာများ"
+}

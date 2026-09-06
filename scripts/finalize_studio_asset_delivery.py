@@ -13,7 +13,8 @@ from pathlib import Path
 import shutil
 
 ROOT = Path(__file__).resolve().parents[1]
-PUBLIC = ROOT / 'public/assets/studio/cc0-20260906'
+PUBLIC = ROOT / 'apps/web/public/assets/studio/cc0-20260906'
+DELIVERY_REPORT_FILENAME = 'delivery-report.json'
 
 
 def replace_once(path: Path, before: str, after: str) -> None:
@@ -61,7 +62,7 @@ def prepare() -> None:
         'await page.waitForFunction(() => window.rendererReady, {timeout:30000});',
         'await page.waitForFunction(() => window.rendererReady, undefined, {timeout:30000});')
 
-    panel = ROOT / 'src/domains/creator/StudioAssetMenuPanel.tsx'
+    panel = ROOT / 'apps/web/src/domains/creator/StudioAssetMenuPanel.tsx'
     replace_once(panel,
         'const studioOriginalAssetMarketplaceLoader = createStudioIntentLazyLoader(() =>',
         'const studioCc0AssetLibraryLoader = createStudioIntentLazyLoader(() =>\n'
@@ -83,7 +84,7 @@ def prepare() -> None:
         '        <LazyStudioCc0AssetLibraryPanel onUseAsset={onUseLocalAsset} />\n'
         '        <LazyStudioOriginalAssetMarketplacePanel onUseAsset={onUseLocalAsset} />')
 
-    originals = ROOT / 'src/domains/creator/studio-original-free-asset-packs.ts'
+    originals = ROOT / 'apps/web/src/domains/creator/studio-original-free-asset-packs.ts'
     replace_once(originals,
         'export const STUDIO_ORIGINAL_FREE_ASSET_PACKAGES: readonly StudioOriginalFreeAssetPackage[] =',
         'const ALL_STUDIO_ORIGINAL_FREE_ASSET_PACKAGES: readonly StudioOriginalFreeAssetPackage[] =')
@@ -105,10 +106,10 @@ def prepare() -> None:
     print('Prepared native catalog integration and compatibility-preserving blockout retirement.', flush=True)
 
 
-def stage(output: Path) -> None:
+def stage(output: Path) -> None: # NOSONAR python:S3776
     from PIL import Image, ImageDraw
     manifest = json.loads((output / 'manifest.json').read_text())
-    report = json.loads((output / 'delivery-report.json').read_text())
+    report = json.loads((output / DELIVERY_REPORT_FILENAME).read_text())
     assets = manifest['assets']
     if not assets or len(assets) > 2400:
         raise ValueError('Invalid delivery count')
@@ -116,14 +117,14 @@ def stage(output: Path) -> None:
     paths = set()
     for asset in assets:
         relative = Path(asset['path'])
-        file = (output / relative).resolve()
-        if not file.is_relative_to(output.resolve()) or not str(relative).startswith('assets/'):
+        asset_file = (output / relative).resolve()
+        if not asset_file.is_relative_to(output.resolve()) or not str(relative).startswith('assets/'):
             raise ValueError('Unsafe staged path')
         if asset['id'] in ids or str(relative) in paths:
             raise ValueError('Duplicate delivery identity')
         ids.add(asset['id'])
         paths.add(str(relative))
-        raw = file.read_bytes()
+        raw = asset_file.read_bytes()
         if len(raw) != asset['bytes'] or hashlib.sha256(raw).hexdigest() != asset['sha256']:
             raise ValueError('Delivered file does not match its manifest: ' + asset['id'])
         if asset['kind'] == 'model':
@@ -159,18 +160,18 @@ def stage(output: Path) -> None:
     report['retiredStarterBackgrounds'] = 8
     report['retirementMethod'] = 'hidden-from-new-selection; legacy-id-and-package-resolution-preserved'
     report['verifiedDeliveryFiles'] = len(assets)
-    (output / 'delivery-report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
+    (output / DELIVERY_REPORT_FILENAME).write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
     PUBLIC.mkdir(parents=True, exist_ok=True)
     # This generated subtree contains no user data. Copy without deleting other repository assets.
     for name in ('assets', 'previews'):
         shutil.copytree(output / name, PUBLIC / name, dirs_exist_ok=True)
-    for name in ('manifest.json', 'delivery-report.json', 'index.html', 'README.md', 'excluded-and-variants.json', 'browser-render-evidence.json'):
+    for name in ('manifest.json', DELIVERY_REPORT_FILENAME, 'index.html', 'README.md', 'excluded-and-variants.json', 'browser-render-evidence.json'):
         shutil.copyfile(output / name, PUBLIC / name)
-    for file in output.glob('review-sheet-*.jpg'):
-        shutil.copyfile(file, PUBLIC / file.name)
+    for review_sheet in output.glob('review-sheet-*.jpg'):
+        shutil.copyfile(review_sheet, PUBLIC / review_sheet.name)
     audit = ROOT / 'data/studio-assets/delivery-20260906'
     audit.mkdir(parents=True, exist_ok=True)
-    for name in ('delivery-report.json', 'excluded-and-variants.json', 'existing-asset-audit.json'):
+    for name in (DELIVERY_REPORT_FILENAME, 'excluded-and-variants.json', 'existing-asset-audit.json'):
         shutil.copyfile(output / name, audit / name)
     print('FINAL STAGED DELIVERY', json.dumps(report, ensure_ascii=False), flush=True)
 

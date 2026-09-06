@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Mwongozo wa Picha wa AI wa Kuzalisha",
+  "studio.aiNotice.description": "Chaguo hili la kukokotoa huunda picha kwa kutumia AI generative (OpenAI). Beji za AI zinaonyeshwa kwenye matokeo yaliyoundwa.",
+  "studio.aiNotice.ruleCopyright": "Hatuundi kazi za watu wengine, wahusika, au nyuso za watu halisi.",
+  "studio.aiNotice.ruleAccuracy": "Matokeo ya AI yanaweza kuwa si sahihi au tofauti na yale yaliyokusudiwa.",
+  "studio.aiNotice.ruleResponsibility": "Unawajibika kutumia picha unazounda.",
+  "studio.aiNotice.cancel": "Ghairi",
+  "studio.aiNotice.confirm": "Ninaelewa, tengeneza"
+}

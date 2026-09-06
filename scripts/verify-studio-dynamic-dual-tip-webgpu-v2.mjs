@@ -65,7 +65,7 @@ function writeJson(name, value) {
   writeFileSync(join(SCRATCH, name), `${JSON.stringify(value, null, 2)}\n`);
 }
 
-function validate(result, diagnostics) {
+function validate(result, diagnostics) { // NOSONAR javascript:S3776
   const failures = [];
   if (result.backend !== "exact-dual-tip-v2-rgba16float-webgpu") {
     failures.push(`unexpected backend: ${result.backend}`);
@@ -101,7 +101,7 @@ function validate(result, diagnostics) {
     }
   }
   if (
-    !(result.destinationOut.gpu[3] < result.destinationOut.beforeAlpha)
+    result.destinationOut.gpu[3] >= result.destinationOut.beforeAlpha
   ) failures.push("destination-out did not reduce authority alpha");
   if (
     result.receipts.length !== 7

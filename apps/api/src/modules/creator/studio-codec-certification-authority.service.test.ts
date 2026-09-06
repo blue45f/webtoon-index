@@ -11,7 +11,7 @@ import {
 
 import {
   STUDIO_CODEC_PROVIDER_CONTRACT_VERSION,
-} from "../../../../../src/domains/creator/studio-codec-provider-contract";
+} from "../../../../web/src/domains/creator/studio-codec-provider-contract";
 import {
   STUDIO_PRODUCT_CODEC_CERTIFICATE_DOMAIN,
   STUDIO_PRODUCT_CODEC_CERTIFICATE_ID_DOMAIN,
@@ -21,7 +21,7 @@ import {
   serializeStudioProductCodecCertificate,
   verifyStudioProductCodecCertificate,
   type StudioProductCodecCertificate,
-} from "../../../../../src/domains/creator/studio-product-codec-certification";
+} from "../../../../web/src/domains/creator/studio-product-codec-certification";
 
 import {
   STUDIO_CODEC_CERTIFICATION_AUTHORITY_REQUEST_KIND,

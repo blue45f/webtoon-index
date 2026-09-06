@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "my font",
+  "studio.customFonts.importButton": "Import from file",
+  "studio.customFonts.importing": "Checking…",
+  "studio.customFonts.importAria": "Import font file",
+  "studio.customFonts.storageAria": "Font library usage",
+  "studio.customFonts.emptyTitle": "Det er ingen fonter inkludert ennå.",
+  "studio.customFonts.unknownFileName": "No file name",
+  "studio.customFonts.apply": "Søk",
+  "studio.customFonts.applyToText": "Bruk denne skriften på valgt tekst",
+  "studio.customFonts.selectTextFirst": "Velg først tekst eller snakkeboble",
+  "studio.customFonts.delete": "delete font"
+}

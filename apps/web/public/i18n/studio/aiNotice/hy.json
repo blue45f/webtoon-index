@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Գեներատիվ AI պատկերի ուղեցույց",
+  "studio.aiNotice.description": "Այս ֆունկցիան ստեղծում է պատկերներ՝ օգտագործելով գեներատիվ AI (OpenAI): Ստեղծված արդյունքների վրա ցուցադրվում են AI կրծքանշաններ:",
+  "studio.aiNotice.ruleCopyright": "Մենք չենք ստեղծում այլ մարդկանց գործերը, կերպարները կամ իրական մարդկանց դեմքերը:",
+  "studio.aiNotice.ruleAccuracy": "AI արդյունքները կարող են լինել ոչ ճշգրիտ կամ տարբերվել նախատեսվածից:",
+  "studio.aiNotice.ruleResponsibility": "Դուք պատասխանատու եք ձեր ստեղծած պատկերների օգտագործման համար:",
+  "studio.aiNotice.cancel": "Չեղարկել",
+  "studio.aiNotice.confirm": "Հասկանում եմ, ստեղծագործում"
+}

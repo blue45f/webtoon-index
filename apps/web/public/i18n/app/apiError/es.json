@@ -1,0 +1,9 @@
+{
+  "apiError.loginRequired": "Se requiere iniciar sesión.",
+  "apiError.adminRequired": "No se pudieron verificar los permisos de administrador.",
+  "apiError.adminOnlyPage": "Esta página está restringida a administradores.",
+  "apiError.notFound": "No se pudo encontrar el elemento solicitado.",
+  "apiError.unsupportedType": "Tipo de contenido no compatible.",
+  "apiError.inactiveAccount": "Las cuentas inactivas no pueden utilizar funciones de administrador.",
+  "apiError.settlementFailed": "Error al procesar la liquidación."
+}

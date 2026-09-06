@@ -57,7 +57,7 @@ function harnessImport(repositoryRoot: string, relativePath: string): string {
 export function createStudioTwoTabLeaderHarnessSource(repositoryRoot: string): string {
   const sessionImport = harnessImport(
     repositoryRoot,
-    "src/domains/creator/studio-autosave-opfs-session.ts",
+    "apps/web/src/domains/creator/studio-autosave-opfs-session.ts",
   );
   return `
 globalThis.__zod_globalConfig ??= {};

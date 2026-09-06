@@ -19,7 +19,7 @@ const CAMPAIGN = {
       issueQueue: [584],
       focusTerms: ["text", "font", "balloon", "lettering", "ruby", "vertical", "typography"],
       fallbackTracks: ["balloon-lettering", "multilingual-text"],
-      pathHints: ["src/domains/creator/*text*"],
+      pathHints: ["apps/web/src/domains/creator/*text*"],
     },
     {
       id: "comic-pages-panels",
@@ -27,7 +27,7 @@ const CAMPAIGN = {
       issueQueue: [585],
       focusTerms: ["panel", "page", "comic", "episode", "gutter", "template", "pagination"],
       fallbackTracks: ["panel-authoring", "episode-workflow"],
-      pathHints: ["src/domains/creator/*panel*"],
+      pathHints: ["apps/web/src/domains/creator/*panel*"],
     },
     {
       id: "three-d-rig-pose",
@@ -35,7 +35,7 @@ const CAMPAIGN = {
       issueQueue: [588],
       focusTerms: ["rig", "pose", "ik", "humanoid", "morph", "retarget", "skeleton"],
       fallbackTracks: ["pose-library", "motion-retargeting"],
-      pathHints: ["src/domains/creator/bg3d/*pose*"],
+      pathHints: ["apps/web/src/domains/creator/bg3d/*pose*"],
     },
     {
       id: "import-export",
@@ -43,7 +43,7 @@ const CAMPAIGN = {
       issueQueue: [575],
       focusTerms: ["import", "export", "psd", "archive", "format", "round-trip"],
       fallbackTracks: ["psd-round-trip", "export-quality"],
-      pathHints: ["src/domains/creator/*export*"],
+      pathHints: ["apps/web/src/domains/creator/*export*"],
     },
     {
       id: "quality-delivery",

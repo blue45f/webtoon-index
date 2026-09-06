@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "快速命令列",
+  "studio.commandBar.settings": "命令列設定",
+  "studio.commandBar.settingsDescription": "變更選單列下方命令列的插槽配置與顯示。",
+  "studio.commandBar.settingsTip": "把最常用的命令放在靠前的插槽，最容易順手點到。",
+  "studio.commandBar.settingsClose": "關閉命令列設定",
+  "studio.commandBar.settingsStorageNote": "插槽配置會儲存在此瀏覽器的工作區設定中。",
+  "studio.commandBar.showSlots": "顯示命令插槽",
+  "studio.commandBar.slot": "插槽 {index}",
+  "studio.commandBar.slotAria": "命令插槽 {index}",
+  "studio.commandBar.slotEmpty": "空插槽",
+  "studio.commandBar.resetDefaults": "還原預設配置",
+  "studio.commandBar.command.undo": "復原",
+  "studio.commandBar.command.redo": "重做",
+  "studio.commandBar.command.save": "儲存草稿",
+  "studio.commandBar.command.publish": "發布",
+  "studio.commandBar.command.download": "下載目前頁面",
+  "studio.commandBar.command.export-open": "匯出選項",
+  "studio.commandBar.command.zoom-fit": "符合螢幕寬度",
+  "studio.commandBar.command.assets": "範本與素材",
+  "studio.commandBar.command.bubbles": "對話框",
+  "studio.commandBar.command.project": "專案工具"
+}

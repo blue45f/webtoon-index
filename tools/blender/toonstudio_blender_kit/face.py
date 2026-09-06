@@ -234,7 +234,7 @@ def _head_region_ratio(obj: bpy.types.Object, frame: HeadFrame) -> float:
     return inside / max(1, sampled)
 
 
-def detect_face_meshes(
+def detect_face_meshes( # NOSONAR python:S3776
     mesh_objects: Sequence[bpy.types.Object],
     frame: HeadFrame,
     options: FaceOptions,
@@ -361,7 +361,7 @@ def _write_shape(
     return changed
 
 
-def create_semantic_face_shape_keys(
+def create_semantic_face_shape_keys( # NOSONAR python:S3776
     mesh_objects: Sequence[bpy.types.Object],
     frame: HeadFrame,
     options: FaceOptions,

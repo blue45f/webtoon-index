@@ -1,8 +1,8 @@
 import { ForbiddenException, type ExecutionContext } from "@nestjs/common";
 import { afterEach, describe, expect, it } from "vitest";
 
-import { STUDIO_RASTER_ASSET_ADMISSION_OPT_IN_TOKEN } from "../../../../../lib/studio-raster-asset-contract";
-import { STUDIO_WORK_ASSET_ADMISSION_OPT_IN_TOKEN } from "../../../../../lib/studio-work-asset-contract";
+import { STUDIO_RASTER_ASSET_ADMISSION_OPT_IN_TOKEN } from "../../../../web/src/shared/lib/studio-raster-asset-contract";
+import { STUDIO_WORK_ASSET_ADMISSION_OPT_IN_TOKEN } from "../../../../web/src/shared/lib/studio-work-asset-contract";
 
 import {
   StudioRasterAssetUploadGuard,

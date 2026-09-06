@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "آموزش ویژگی",
+  "studio.hub.subtitle": "یک عملکرد در یک زمان بدون هیچ باری. من به {done}/{total} نگاه کردم.",
+  "studio.hub.progressAriaLabel": "پیشرفت آموزش",
+  "studio.hub.listAriaLabel": "لیست ویژگی ها",
+  "studio.hub.checked": "نگاهی بینداز",
+  "studio.hub.prev": "قبلی",
+  "studio.hub.next": "بعدی",
+  "studio.hub.markComplete": "علامت گذاری به عنوان کامل",
+  "studio.hub.completed": "تکمیل شد",
+  "studio.hub.tryLabelDefault": "دنبال کنید",
+  "studio.hub.stepAriaPrefix": "گام"
+}

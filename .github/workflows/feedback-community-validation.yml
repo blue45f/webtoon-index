@@ -5,9 +5,9 @@ on:
     paths:
       - 'apps/api/src/**'
       - 'packages/core/src/**'
-      - 'src/domains/legal/**'
-      - 'components/inquiry-form.tsx'
-      - 'components/site-header*.tsx'
+      - 'apps/web/src/domains/legal/**'
+      - 'apps/web/src/shared/components/inquiry-form.tsx'
+      - 'apps/web/src/shared/components/site-header*.tsx'
       - 'e2e/feedback-community*'
       - 'scripts/verify-feedback-community-db.mts'
       - '*feedback*.ts'
@@ -54,9 +54,9 @@ jobs:
           apps/api/src/modules/feedback/feedback.controller.ts
           apps/api/src/modules/feedback/feedback.service.ts
           apps/api/src/server/feedback.ts
-          components/inquiry-form.tsx
-          components/site-header-mobile-nav.tsx
-          components/site-header.tsx
+          apps/web/src/shared/components/inquiry-form.tsx
+          apps/web/src/shared/components/site-header-mobile-nav.tsx
+          apps/web/src/shared/components/site-header.tsx
           e2e/feedback-community-harness.tsx
           e2e/feedback-community.spec.ts
           e2e/feedback-community-contract.spec.ts
@@ -69,16 +69,16 @@ jobs:
           packages/core/src/types.ts
           playwright.feedback.config.ts
           scripts/verify-feedback-community-db.mts
-          src/domains/legal/ContactPage.tsx
-          src/domains/legal/FeedbackPage.tsx
-          src/domains/legal/SitemapPage.tsx
-          src/domains/legal/feedback/FeedbackComposer.tsx
-          src/domains/legal/feedback/FeedbackPostCard.tsx
-          src/domains/legal/feedback/FeedbackThread.tsx
-          src/domains/legal/feedback/use-feedback-feed.ts
+          apps/web/src/domains/legal/ContactPage.tsx
+          apps/web/src/domains/legal/FeedbackPage.tsx
+          apps/web/src/domains/legal/SitemapPage.tsx
+          apps/web/src/domains/legal/feedback/FeedbackComposer.tsx
+          apps/web/src/domains/legal/feedback/FeedbackPostCard.tsx
+          apps/web/src/domains/legal/feedback/FeedbackThread.tsx
+          apps/web/src/domains/legal/feedback/use-feedback-feed.ts
           vite.feedback-review.config.ts
           EOF
-          tar -czf artifacts/feedback/reviewed-source.tar.gz -T /tmp/feedback-lint-files .github/workflows/feedback-community-validation.yml src/domains/legal/feedback/feedback-community.css e2e/feedback-community.html docs/feedback-community.md
+          tar -czf artifacts/feedback/reviewed-source.tar.gz -T /tmp/feedback-lint-files .github/workflows/feedback-community-validation.yml apps/web/src/domains/legal/feedback/feedback-community.css e2e/feedback-community.html docs/feedback-community.md
       - name: Upload exact source for independent review
         uses: actions/upload-artifact@v4
         with:

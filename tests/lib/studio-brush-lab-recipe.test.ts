@@ -6,9 +6,9 @@ import {
   BRUSH_LAB_HISTORY_LIMIT, BRUSH_LAB_SLOT_IDS, brushLabRecipeKey, commitBrushLabHistory,
   createBrushLabRecipe, generateBrushLabVariants, moveBrushLabHistory, parseBrushLabRecipe,
   resolveBrushLabTraits, updateBrushLabSlot,
-} from "../../src/domains/creator/brush-lab/brush-lab-recipe";
+} from "../../apps/web/src/domains/creator/brush-lab/brush-lab-recipe";
 
-import type { BrushLabHistory } from "../../src/domains/creator/brush-lab/brush-lab-recipe";
+import type { BrushLabHistory } from "../../apps/web/src/domains/creator/brush-lab/brush-lab-recipe";
 
 const base = () => createBrushLabRecipe("ink-particle", 42);
 const donors = ["watercolor", "oil", "ink-particle", "pencil"];

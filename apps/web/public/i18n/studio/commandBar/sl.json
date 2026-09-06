@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Vrstica hitrih ukazov",
+  "studio.commandBar.settings": "Nastavitve ukazne vrstice",
+  "studio.commandBar.settingsDescription": "Spremenite razporeditev mest in vidnost ukazne vrstice pod menijsko vrstico.",
+  "studio.commandBar.settingsTip": "Najpogosteje uporabljene ukaze postavite na prva mesta, da jih najhitreje dosežete.",
+  "studio.commandBar.settingsClose": "Zapri nastavitve ukazne vrstice",
+  "studio.commandBar.settingsStorageNote": "Razporeditev mest se shrani v nastavitve delovnega prostora tega brskalnika.",
+  "studio.commandBar.showSlots": "Pokaži ukazna mesta",
+  "studio.commandBar.slot": "Mesto {index}",
+  "studio.commandBar.slotAria": "Ukazno mesto {index}",
+  "studio.commandBar.slotEmpty": "Prazno mesto",
+  "studio.commandBar.resetDefaults": "Ponastavi na privzeto razporeditev",
+  "studio.commandBar.command.undo": "Razveljavi",
+  "studio.commandBar.command.redo": "Ponovi",
+  "studio.commandBar.command.save": "Shrani osnutek",
+  "studio.commandBar.command.publish": "Objavi",
+  "studio.commandBar.command.download": "Prenesi trenutno stran",
+  "studio.commandBar.command.export-open": "Možnosti izvoza",
+  "studio.commandBar.command.zoom-fit": "Prilagodi širini zaslona",
+  "studio.commandBar.command.assets": "Predloge in viri",
+  "studio.commandBar.command.bubbles": "Oblaček z besedilom",
+  "studio.commandBar.command.project": "Orodja projekta"
+}

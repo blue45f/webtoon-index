@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "fonti yangu",
+  "studio.customFonts.importButton": "Ingiza kutoka kwa faili",
+  "studio.customFonts.importing": "Inaangalia...",
+  "studio.customFonts.importAria": "Ingiza faili ya fonti",
+  "studio.customFonts.storageAria": "Matumizi ya maktaba ya fonti",
+  "studio.customFonts.emptyTitle": "Bado hakuna fonti zilizojumuishwa.",
+  "studio.customFonts.unknownFileName": "Hakuna jina la faili",
+  "studio.customFonts.apply": "Omba",
+  "studio.customFonts.applyToText": "Tumia fonti hii kwa maandishi uliyochagua",
+  "studio.customFonts.selectTextFirst": "Kwanza chagua maandishi au kiputo cha usemi",
+  "studio.customFonts.delete": "futa fonti"
+}

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { REVISION_COMPARISON_AI_PROMPT_DIGEST_SENTINEL } from "../../../../lib/revision-comparison-projection";
+import { REVISION_COMPARISON_AI_PROMPT_DIGEST_SENTINEL } from "../../../web/src/shared/lib/revision-comparison-projection";
 
 import {
   CREATOR_WORK_REVISION_RETENTION,

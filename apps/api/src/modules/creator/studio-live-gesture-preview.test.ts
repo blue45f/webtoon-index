@@ -15,7 +15,7 @@ import {
   STUDIO_LIVE_GESTURE_PREVIEW_VERSION as CLIENT_VERSION,
   parseStudioLiveGesturePreviewPayload,
   type StudioLiveGesturePreviewPayload,
-} from "../../../../../src/domains/creator/live/studio-live-gesture-preview";
+} from "../../../../web/src/domains/creator/live/studio-live-gesture-preview";
 
 import {
   STUDIO_LIVE_GESTURE_PREVIEW_BLEND_MODES,

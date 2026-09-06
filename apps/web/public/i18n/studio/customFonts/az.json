@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "mənim şriftim",
+  "studio.customFonts.importButton": "Fayldan idxal edin",
+  "studio.customFonts.importing": "Yoxlanır...",
+  "studio.customFonts.importAria": "Şrift faylını idxal edin",
+  "studio.customFonts.storageAria": "Şrift kitabxanasından istifadə",
+  "studio.customFonts.emptyTitle": "Hələ daxil heç bir şrift yoxdur.",
+  "studio.customFonts.unknownFileName": "Fayl adı yoxdur",
+  "studio.customFonts.apply": "Müraciət edin",
+  "studio.customFonts.applyToText": "Bu şrifti seçilmiş mətnə tətbiq edin",
+  "studio.customFonts.selectTextFirst": "Əvvəlcə mətn və ya nitq qabarcığını seçin",
+  "studio.customFonts.delete": "şrifti silin"
+}

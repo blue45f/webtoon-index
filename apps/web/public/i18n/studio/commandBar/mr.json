@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "जलद कमांड बार",
+  "studio.commandBar.settings": "कमांड बार सेटिंग्ज",
+  "studio.commandBar.settingsDescription": "मेनू बारखालील कमांड बारची स्लॉट मांडणी आणि दृश्यमानता बदला.",
+  "studio.commandBar.settingsTip": "सर्वाधिक वापरत असलेल्या कमांड पहिल्या स्लॉटमध्ये ठेवा, म्हणजे त्या सर्वात लवकर मिळतील.",
+  "studio.commandBar.settingsClose": "कमांड बार सेटिंग्ज बंद करा",
+  "studio.commandBar.settingsStorageNote": "स्लॉट मांडणी याच ब्राउझरच्या वर्कस्पेस सेटिंग्जमध्ये जतन होते.",
+  "studio.commandBar.showSlots": "कमांड स्लॉट दाखवा",
+  "studio.commandBar.slot": "स्लॉट {index}",
+  "studio.commandBar.slotAria": "कमांड स्लॉट {index}",
+  "studio.commandBar.slotEmpty": "रिकामा स्लॉट",
+  "studio.commandBar.resetDefaults": "डीफॉल्ट मांडणीवर परत आणा",
+  "studio.commandBar.command.undo": "पूर्ववत करा",
+  "studio.commandBar.command.redo": "पुन्हा करा",
+  "studio.commandBar.command.save": "मसुदा जतन करा",
+  "studio.commandBar.command.publish": "प्रकाशित करा",
+  "studio.commandBar.command.download": "सध्याचे पान डाउनलोड करा",
+  "studio.commandBar.command.export-open": "निर्यात पर्याय",
+  "studio.commandBar.command.zoom-fit": "स्क्रीनच्या रुंदीत बसवा",
+  "studio.commandBar.command.assets": "टेम्पलेट आणि संसाधने",
+  "studio.commandBar.command.bubbles": "संवाद फुगा",
+  "studio.commandBar.command.project": "प्रकल्प साधने"
+}

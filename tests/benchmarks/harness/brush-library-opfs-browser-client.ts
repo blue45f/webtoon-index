@@ -12,8 +12,8 @@ import {
   DEFAULT_STUDIO_BRUSH_SNAPSHOT,
   normalizeStoredBrush,
   type StudioSavedBrush,
-} from "../../../src/domains/creator/brush/studio-brush-library";
-import { createSqliteBrushLibraryRepository } from "../../../src/domains/creator/brush/studio-brush-library-sqlite-repository";
+} from "../../../apps/web/src/domains/creator/brush/studio-brush-library";
+import { createSqliteBrushLibraryRepository } from "../../../apps/web/src/domains/creator/brush/studio-brush-library-sqlite-repository";
 import {
   openStudioLocalDatabase,
   probeSqliteSupport,
@@ -22,7 +22,7 @@ import {
   STUDIO_SQLITE_OPFS_DIRECTORY,
   type StudioSqliteApiHandle,
   type StudioLocalDatabase,
-} from "../../../src/domains/creator/studio-local-database";
+} from "../../../apps/web/src/domains/creator/studio-local-database";
 
 const REPORT_SCHEMA_VERSION = 1;
 const BRUSH_COUNT = 10_000;

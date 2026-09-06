@@ -27,9 +27,7 @@ export function normalizePgConnectionStringForTls(connectionString) {
     throw new Error("Neon DATABASE_URL must not disable TLS");
   }
 
-  if (sslMode && LEGACY_FULL_VERIFICATION_SSL_MODES.has(sslMode)) {
-    parsed.searchParams.set("sslmode", "verify-full");
-  } else if (neon && !sslMode) {
+  if ((sslMode && LEGACY_FULL_VERIFICATION_SSL_MODES.has(sslMode)) || (neon && !sslMode)) {
     parsed.searchParams.set("sslmode", "verify-full");
   }
 

@@ -3,7 +3,7 @@ import { Inject, Injectable, Logger } from "@nestjs/common";
 import {
   StudioTeamCommentLiveEventSchema,
   type StudioTeamCommentLiveEvent,
-} from "../../../../../lib/studio-team-comment-live-event";
+} from "../../../../web/src/shared/lib/studio-team-comment-live-event";
 
 import { StudioLiveGateway } from "./studio-live.gateway";
 

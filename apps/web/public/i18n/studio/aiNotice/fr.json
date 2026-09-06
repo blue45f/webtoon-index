@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Guide des images d'IA générative",
+  "studio.aiNotice.description": "Cette fonction crée des images à l'aide de l'IA générative (OpenAI). Les badges IA sont affichés sur les résultats créés.",
+  "studio.aiNotice.ruleCopyright": "Nous ne créons pas les œuvres, les personnages ou les visages de personnes réelles.",
+  "studio.aiNotice.ruleAccuracy": "Les résultats de l’IA peuvent être inexacts ou différents de ce qui était prévu.",
+  "studio.aiNotice.ruleResponsibility": "Vous êtes responsable de l’utilisation des images que vous créez.",
+  "studio.aiNotice.cancel": "Annuler",
+  "studio.aiNotice.confirm": "Je comprends, crée"
+}

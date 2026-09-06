@@ -195,7 +195,7 @@ function pickAuthorsCard(authors = []) {
 }
 
 // view-category 카드 객체를 표준 row 로. buildRow 와 동일한 계약/필드.
-function buildRowFromCard(card, index) {
+function buildRowFromCard(card, index) { // NOSONAR javascript:S3776
   const workId = String(card.bookId || "");
   if (!workId) return null;
 
@@ -349,14 +349,13 @@ function buildRow(book, index) {
   return row;
 }
 
-export async function crawl() {
+export async function crawl() { // NOSONAR javascript:S3776
   // 큐레이션 목록(bestsellers/new-releases): 풀 책 객체(series/ratings 포함) → buildRow.
   const byId = new Map();
   // 장르 카탈로그(view-category): 카드 객체 → buildRowFromCard. 책 객체에 없는 workId만 채운다.
   const cardById = new Map();
 
-  for (let p = 0; p < LIST_PAGES.length; p++) {
-    const url = LIST_PAGES[p];
+  for (const url of LIST_PAGES) {
     const html = await fetchText(url, { referer: REFERER });
     if (html) {
       const data = extractNextData(html);

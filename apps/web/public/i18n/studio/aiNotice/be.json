@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Кіраўніцтва па генератыўнай выяве AI",
+  "studio.aiNotice.description": "Гэтая функцыя стварае выявы з дапамогай генератыўнага штучнага інтэлекту (OpenAI). Значкі AI адлюстроўваюцца на створаных выніках.",
+  "studio.aiNotice.ruleCopyright": "Мы не ствараем чужых твораў, герояў і твараў рэальных людзей.",
+  "studio.aiNotice.ruleAccuracy": "Вынікі штучнага інтэлекту могуць быць недакладнымі або адрознівацца ад меркаваных.",
+  "studio.aiNotice.ruleResponsibility": "Вы несяце адказнасць за выкарыстанне створаных вамі малюнкаў.",
+  "studio.aiNotice.cancel": "Адмяніць",
+  "studio.aiNotice.confirm": "Разумею, ствараю"
+}

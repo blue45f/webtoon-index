@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "ఫీచర్ ట్యుటోరియల్",
+  "studio.hub.subtitle": "ఎటువంటి భారం లేకుండా ఒకేసారి ఒక ఫంక్షన్. నేను {done}/{total}ని చూసాను.",
+  "studio.hub.progressAriaLabel": "ట్యుటోరియల్ పురోగతి",
+  "studio.hub.listAriaLabel": "ఫీచర్ జాబితా",
+  "studio.hub.checked": "ఒక లుక్ వేయండి",
+  "studio.hub.prev": "మునుపటి",
+  "studio.hub.next": "తదుపరి",
+  "studio.hub.markComplete": "పూర్తయినట్లు గుర్తు పెట్టండి",
+  "studio.hub.completed": "పూర్తయింది",
+  "studio.hub.tryLabelDefault": "వెంట అనుసరించండి",
+  "studio.hub.stepAriaPrefix": "అడుగు"
+}

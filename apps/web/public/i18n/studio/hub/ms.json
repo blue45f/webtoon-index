@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Tutorial Ciri",
+  "studio.hub.subtitle": "Satu fungsi pada satu masa tanpa sebarang beban. Saya melihat {done}/{total}.",
+  "studio.hub.progressAriaLabel": "Kemajuan tutorial",
+  "studio.hub.listAriaLabel": "Senarai ciri",
+  "studio.hub.checked": "lihatlah",
+  "studio.hub.prev": "Sebelumnya",
+  "studio.hub.next": "seterusnya",
+  "studio.hub.markComplete": "tandakan sebagai lengkap",
+  "studio.hub.completed": "Selesai",
+  "studio.hub.tryLabelDefault": "Ikut sama",
+  "studio.hub.stepAriaPrefix": "langkah"
+}

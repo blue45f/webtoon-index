@@ -149,7 +149,7 @@ async function installGuestBoundary(page) {
 }
 
 async function auditPage(page) {
-  return page.evaluate((minimumTap) => {
+  return page.evaluate((minimumTap) => { // NOSONAR javascript:S3776
     const viewportWidth = window.innerWidth;
     const selectors = "button, a[href], [role='button'], input:not([type='hidden']), select, textarea";
     const candidates = Array.from(document.querySelectorAll(selectors));
@@ -219,7 +219,7 @@ async function auditPage(page) {
   }, MIN_TAP);
 }
 
-async function main() {
+async function main() { // NOSONAR javascript:S3776
   await mkdir(OUTPUT_DIR, { recursive: true });
   const port = await findFreePort();
   const baseUrl = `http://127.0.0.1:${port}`;

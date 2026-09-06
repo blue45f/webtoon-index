@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Barra de ordes rápidas",
+  "studio.commandBar.settings": "Configuración da barra de ordes",
+  "studio.commandBar.settingsDescription": "Cambia a disposición das ranuras e a visibilidade da barra de ordes baixo a barra de menús.",
+  "studio.commandBar.settingsTip": "Pon as ordes que máis usas nas primeiras ranuras para chegar a elas máis rápido.",
+  "studio.commandBar.settingsClose": "Pechar a configuración da barra de ordes",
+  "studio.commandBar.settingsStorageNote": "A disposición das ranuras gárdase na configuración do espazo de traballo deste navegador.",
+  "studio.commandBar.showSlots": "Mostrar as ranuras de ordes",
+  "studio.commandBar.slot": "Ranura {index}",
+  "studio.commandBar.slotAria": "Ranura de orde {index}",
+  "studio.commandBar.slotEmpty": "Ranura baleira",
+  "studio.commandBar.resetDefaults": "Restablecer a disposición predeterminada",
+  "studio.commandBar.command.undo": "Desfacer",
+  "studio.commandBar.command.redo": "Refacer",
+  "studio.commandBar.command.save": "Gardar o borrador",
+  "studio.commandBar.command.publish": "Publicar",
+  "studio.commandBar.command.download": "Descargar a páxina actual",
+  "studio.commandBar.command.export-open": "Opcións de exportación",
+  "studio.commandBar.command.zoom-fit": "Axustar á largura da pantalla",
+  "studio.commandBar.command.assets": "Modelos e recursos",
+  "studio.commandBar.command.bubbles": "Bocadillo",
+  "studio.commandBar.command.project": "Ferramentas do proxecto"
+}

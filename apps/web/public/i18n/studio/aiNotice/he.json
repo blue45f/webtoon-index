@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "מדריך תמונה גנרטיבי בינה מלאכותית",
+  "studio.aiNotice.description": "פונקציה זו יוצרת תמונות באמצעות AI גנרטיבי (OpenAI). תגי AI מוצגים בתוצאות שנוצרו.",
+  "studio.aiNotice.ruleCopyright": "אנחנו לא יוצרים יצירות של אנשים אחרים, דמויות או פרצופים של אנשים אמיתיים.",
+  "studio.aiNotice.ruleAccuracy": "תוצאות AI עשויות להיות לא מדויקות או שונות ממה שהיה מיועד.",
+  "studio.aiNotice.ruleResponsibility": "אתה אחראי לשימוש בתמונות שאתה יוצר.",
+  "studio.aiNotice.cancel": "בטל",
+  "studio.aiNotice.confirm": "אני מבין, יוצר"
+}

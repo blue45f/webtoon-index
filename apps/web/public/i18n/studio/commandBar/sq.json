@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Shirit komandash të shpejta",
+  "studio.commandBar.settings": "Cilësimet e shiritit të komandave",
+  "studio.commandBar.settingsDescription": "Ndrysho renditjen e vendeve dhe dukshmërinë e shiritit të komandave nën shiritin e menysë.",
+  "studio.commandBar.settingsTip": "Vendos komandat që përdor më shpesh në vendet e para, që t'i kesh më shpejt në dorë.",
+  "studio.commandBar.settingsClose": "Mbyll cilësimet e shiritit të komandave",
+  "studio.commandBar.settingsStorageNote": "Renditja e vendeve ruhet në cilësimet e hapësirës së punës të këtij shfletuesi.",
+  "studio.commandBar.showSlots": "Shfaq vendet e komandave",
+  "studio.commandBar.slot": "Vendi {index}",
+  "studio.commandBar.slotAria": "Vendi i komandës {index}",
+  "studio.commandBar.slotEmpty": "Vend bosh",
+  "studio.commandBar.resetDefaults": "Rikthe renditjen e parazgjedhur",
+  "studio.commandBar.command.undo": "Zhbëj",
+  "studio.commandBar.command.redo": "Ribëj",
+  "studio.commandBar.command.save": "Ruaj skicën",
+  "studio.commandBar.command.publish": "Publiko",
+  "studio.commandBar.command.download": "Shkarko faqen aktuale",
+  "studio.commandBar.command.export-open": "Opsionet e eksportit",
+  "studio.commandBar.command.zoom-fit": "Përshtat sipas gjerësisë së ekranit",
+  "studio.commandBar.command.assets": "Shabllone dhe burime",
+  "studio.commandBar.command.bubbles": "Flluskë dialogu",
+  "studio.commandBar.command.project": "Mjetet e projektit"
+}

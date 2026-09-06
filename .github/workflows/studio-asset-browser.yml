@@ -3,27 +3,27 @@ on:
   push:
     branches: [main, feat/studio-asset-browser-quality-20260906]
     paths:
-      - src/domains/creator/catalog/**
-      - src/domains/creator/StudioElementsPanel*
-      - src/domains/creator/StudioAssetToolPopoverBody.tsx
-      - src/domains/creator/studio-tool-belt-lazy-ui*
-      - src/domains/creator/studio-scene-templates*
+      - apps/web/src/domains/creator/catalog/**
+      - apps/web/src/domains/creator/StudioElementsPanel*
+      - apps/web/src/domains/creator/StudioAssetToolPopoverBody.tsx
+      - apps/web/src/domains/creator/studio-tool-belt-lazy-ui*
+      - apps/web/src/domains/creator/studio-scene-templates*
       - scripts/verify-studio-catalog-browser.mjs
       - scripts/pack_studio_curated_gltf.py
       - scripts/tests/test_studio_*.py
-      - tests/browser-fixtures/studio-catalog/**
+      - apps/web/tests/browser-fixtures/studio-catalog/**
       - .github/workflows/studio-asset-browser.yml
   pull_request:
     paths:
-      - src/domains/creator/catalog/**
-      - src/domains/creator/StudioElementsPanel*
-      - src/domains/creator/StudioAssetToolPopoverBody.tsx
-      - src/domains/creator/studio-tool-belt-lazy-ui*
-      - src/domains/creator/studio-scene-templates*
+      - apps/web/src/domains/creator/catalog/**
+      - apps/web/src/domains/creator/StudioElementsPanel*
+      - apps/web/src/domains/creator/StudioAssetToolPopoverBody.tsx
+      - apps/web/src/domains/creator/studio-tool-belt-lazy-ui*
+      - apps/web/src/domains/creator/studio-scene-templates*
       - scripts/verify-studio-catalog-browser.mjs
       - scripts/pack_studio_curated_gltf.py
       - scripts/tests/test_studio_*.py
-      - tests/browser-fixtures/studio-catalog/**
+      - apps/web/tests/browser-fixtures/studio-catalog/**
       - .github/workflows/studio-asset-browser.yml
   workflow_dispatch:
 permissions:
@@ -54,7 +54,7 @@ jobs:
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: |
           set -o pipefail
-          pnpm exec vitest run src/domains/creator/catalog/ src/domains/creator/studio-tool-belt-lazy-ui-boundary.test.ts src/domains/creator/StudioElementsPanel.test.tsx src/domains/creator/studio-elements-catalog.test.ts src/domains/creator/studio-scene-templates.test.ts src/domains/creator/studio-comipo-assembly.test.ts src/domains/creator/studio-comipo-insert.test.ts 2>&1 | tee artifacts/studio-catalog-browser/tests.log
+          pnpm exec vitest run apps/web/src/domains/creator/catalog/ apps/web/src/domains/creator/studio-tool-belt-lazy-ui-boundary.test.ts apps/web/src/domains/creator/StudioElementsPanel.test.tsx apps/web/src/domains/creator/studio-elements-catalog.test.ts apps/web/src/domains/creator/studio-scene-templates.test.ts apps/web/src/domains/creator/studio-comipo-assembly.test.ts apps/web/src/domains/creator/studio-comipo-insert.test.ts 2>&1 | tee artifacts/studio-catalog-browser/tests.log
       - name: Offline asset packaging and curation unit tests
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: |
@@ -64,7 +64,7 @@ jobs:
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: |
           set -o pipefail
-          pnpm exec eslint --max-warnings=0 src/domains/creator/catalog/ src/domains/creator/StudioElementsPanel.tsx src/domains/creator/StudioAssetToolPopoverBody.tsx src/domains/creator/studio-scene-templates.ts src/domains/creator/studio-scene-templates.test.ts 2>&1 | tee artifacts/studio-catalog-browser/lint.log
+          pnpm exec eslint --max-warnings=0 apps/web/src/domains/creator/catalog/ apps/web/src/domains/creator/StudioElementsPanel.tsx apps/web/src/domains/creator/StudioAssetToolPopoverBody.tsx apps/web/src/domains/creator/studio-scene-templates.ts apps/web/src/domains/creator/studio-scene-templates.test.ts 2>&1 | tee artifacts/studio-catalog-browser/lint.log
       - name: Repository architecture validation
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: |

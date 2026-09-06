@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Mafunzo ya Kipengele",
+  "studio.hub.subtitle": "Kazi moja kwa wakati bila mzigo wowote. Niliangalia {done}/{total}.",
+  "studio.hub.progressAriaLabel": "Maendeleo ya mafunzo",
+  "studio.hub.listAriaLabel": "Orodha ya vipengele",
+  "studio.hub.checked": "angalia",
+  "studio.hub.prev": "Iliyotangulia",
+  "studio.hub.next": "ijayo",
+  "studio.hub.markComplete": "weka alama kuwa kamili",
+  "studio.hub.completed": "Imekamilika",
+  "studio.hub.tryLabelDefault": "Fuata pamoja",
+  "studio.hub.stepAriaPrefix": "hatua"
+}

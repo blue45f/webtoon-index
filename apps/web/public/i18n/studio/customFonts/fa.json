@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "فونت من",
+  "studio.customFonts.importButton": "وارد کردن از فایل",
+  "studio.customFonts.importing": "در حال بررسی…",
+  "studio.customFonts.importAria": "وارد کردن فایل فونت",
+  "studio.customFonts.storageAria": "استفاده از کتابخانه فونت",
+  "studio.customFonts.emptyTitle": "هنوز هیچ فونتی وجود ندارد.",
+  "studio.customFonts.unknownFileName": "بدون نام فایل",
+  "studio.customFonts.apply": "درخواست کنید",
+  "studio.customFonts.applyToText": "این فونت را روی متن انتخاب شده اعمال کنید",
+  "studio.customFonts.selectTextFirst": "ابتدا متن یا حباب گفتار را انتخاب کنید",
+  "studio.customFonts.delete": "حذف فونت"
+}

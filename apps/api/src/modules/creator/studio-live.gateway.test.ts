@@ -6,8 +6,8 @@ import {
   STUDIO_CRDT_BINARY_SYNC_FRAGMENT_MAX_BYTES,
   decodeStudioCrdtBinaryEnvelope,
   encodeStudioCrdtBinaryEnvelope,
-} from "../../../../../lib/studio-crdt-binary-envelope";
-import { studioLiveLockResourcesConflict } from "../../../../../lib/studio-live-lock-resource";
+} from "../../../../web/src/shared/lib/studio-crdt-binary-envelope";
+import { studioLiveLockResourcesConflict } from "../../../../web/src/shared/lib/studio-live-lock-resource";
 
 import {
   StudioCrdtBackpressureError,

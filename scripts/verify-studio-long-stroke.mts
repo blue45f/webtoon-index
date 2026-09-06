@@ -49,7 +49,7 @@ import { pathToFileURL } from "node:url";
 
 import { chromium, type Browser, type CDPSession, type Page } from "playwright";
 
-import { STUDIO_CANVAS_WIDTH } from "../src/domains/creator/canvas/studio-canvas-constants";
+import { STUDIO_CANVAS_WIDTH } from "../apps/web/src/domains/creator/canvas/studio-canvas-constants";
 
 import {
   findFreePort,
@@ -328,6 +328,7 @@ async function selectBrush(
   page: Page,
   name: string,
   operation: "paint" | "erase",
+  id: string | null = null,
 ): Promise<void> {
   await activateBrushOperation(page, operation);
   const toolbar = page.locator('[data-studio-draw-options="true"]');
@@ -345,17 +346,31 @@ async function selectBrush(
   await catalog.waitFor({ state: "visible", timeout: 15_000 });
   await catalog.getByRole("tab", { name: "전체", exact: true }).click();
   await catalog.getByRole("searchbox").fill(name);
-  const option = catalog.getByRole("button", { name: `${name} 선택`, exact: true });
+  // Preview builds pin the durable id because their production bundle cannot import the source catalogue.
+  // The displayed discovery label may differ from the legacy preset label passed in BRUSH_NAME_ENV.
+  const option = id
+    ? catalog.locator(`[data-studio-brush-select="${id}"]`)
+    : catalog.getByRole("button", { name: `${name} 선택`, exact: true });
   await option.waitFor({ state: "visible", timeout: 15_000 });
   await option.scrollIntoViewIfNeeded();
   await option.click({ force: true });
   await catalog.waitFor({ state: "detached" }).catch(() => undefined);
-  await page.waitForFunction(
-    (expected) => document.querySelector('[data-studio-brush-active-pill="true"]')
-      ?.getAttribute("aria-label")?.includes(expected) === true,
-    name,
-    { timeout: 15_000 },
-  );
+  if (id) {
+    await page.waitForFunction(
+      (expectedId) => Array.from(document.querySelectorAll("[data-studio-brush-select]"))
+        .some((node) => node.getAttribute("data-studio-brush-select") === expectedId
+          && node.getAttribute("aria-pressed") === "true"),
+      id,
+      { timeout: 15_000 },
+    );
+  } else {
+    await page.waitForFunction(
+      (expected) => document.querySelector('[data-studio-brush-active-pill="true"]')
+        ?.getAttribute("aria-label")?.includes(expected) === true,
+      name,
+      { timeout: 15_000 },
+    );
+  }
   // 데스크톱 카탈로그는 이제 상주형 플로팅 패널이라(closeOnSelection={false}) 선택만으로 닫히지
   // 않는다. 열린 채로 두면 캔버스를 덮어 제스처가 패널 위에서 시작하고, 획이 한 픽셀도 남지
   // 않는다(실측: ink-committed changedPixels=0). 명시적으로 닫고, 안 닫히면 조용히 넘어가지 않는다.
@@ -856,7 +871,7 @@ async function main(): Promise<void> {
     await dismissChrome(page);
     const brush = await resolveBrush(page);
     await activateBrushOperation(page, brush.operation);
-    if (brush.name) await selectBrush(page, brush.name, brush.operation);
+    if (brush.name) await selectBrush(page, brush.name, brush.operation, brush.id);
     log(`brush: ${brush.name ?? "(active pen)"} width ${brush.width} (${brush.source}) · webgpu flag ${WEBGPU}`);
     report.brush = brush;
     report.frameGraphDocument = await page.locator("[data-studio-frame-graph-document]").first()

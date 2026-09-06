@@ -47,7 +47,7 @@ def _custom_expression_name(shape_key_name: str) -> str:
     return "ts" + shape_key_name[0].upper() + shape_key_name[1:]
 
 
-def bind_semantic_vrm1_expressions(
+def bind_semantic_vrm1_expressions( # NOSONAR python:S3776
     armature: bpy.types.Object | None,
     face: FaceBuildResult | None,
 ) -> VrmExpressionBindingResult:

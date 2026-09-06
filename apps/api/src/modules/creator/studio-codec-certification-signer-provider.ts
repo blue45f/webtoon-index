@@ -10,7 +10,7 @@ import { z } from "zod";
 
 import {
   STUDIO_PRODUCT_CODEC_CERTIFICATION_LIMITS,
-} from "../../../../../src/domains/creator/studio-product-codec-certification";
+} from "../../../../web/src/domains/creator/studio-product-codec-certification";
 
 import type {
   StudioCodecCertificationAuthorityAlgorithm,

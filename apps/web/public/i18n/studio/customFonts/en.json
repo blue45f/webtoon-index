@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "Custom fonts",
+  "studio.customFonts.importButton": "Import font file",
+  "studio.customFonts.importing": "Importing font…",
+  "studio.customFonts.importAria": "Choose a custom font file",
+  "studio.customFonts.storageAria": "Custom font storage usage",
+  "studio.customFonts.emptyTitle": "No custom fonts yet",
+  "studio.customFonts.unknownFileName": "Unknown file",
+  "studio.customFonts.apply": "Apply",
+  "studio.customFonts.applyToText": "Apply this font to the selected text",
+  "studio.customFonts.selectTextFirst": "Select text or a speech bubble first",
+  "studio.customFonts.delete": "Delete font"
+}

@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Generativ AI billedguide",
+  "studio.aiNotice.description": "Denne funktion opretter billeder ved hjælp af generativ AI (OpenAI). AI-badges vises på de oprettede resultater.",
+  "studio.aiNotice.ruleCopyright": "Vi skaber ikke andres værker, karakterer eller ansigter af rigtige mennesker.",
+  "studio.aiNotice.ruleAccuracy": "AI-resultater kan være unøjagtige eller forskellige fra det tilsigtede.",
+  "studio.aiNotice.ruleResponsibility": "Du er ansvarlig for at bruge de billeder, du laver.",
+  "studio.aiNotice.cancel": "Annuller",
+  "studio.aiNotice.confirm": "Jeg forstår, skab"
+}

@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "මගේ අකුරු",
+  "studio.customFonts.importButton": "ගොනුවෙන් ආයාත කරන්න",
+  "studio.customFonts.importing": "පරීක්ෂා කරමින්...",
+  "studio.customFonts.importAria": "අකුරු ගොනුව ආයාත කරන්න",
+  "studio.customFonts.storageAria": "අකුරු පුස්තකාල භාවිතය",
+  "studio.customFonts.emptyTitle": "තවමත් අකුරු ඇතුළත් කර නැත.",
+  "studio.customFonts.unknownFileName": "ගොනු නාමයක් නැත",
+  "studio.customFonts.apply": "අයදුම් කරන්න",
+  "studio.customFonts.applyToText": "තෝරාගත් පෙළට මෙම අකුරු යොදන්න",
+  "studio.customFonts.selectTextFirst": "පළමුව පෙළ හෝ කථන බුබුල තෝරන්න",
+  "studio.customFonts.delete": "අකුරු මකන්න"
+}

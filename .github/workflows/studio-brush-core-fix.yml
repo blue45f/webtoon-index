@@ -67,7 +67,7 @@ jobs:
         run: pnpm install --frozen-lockfile --ignore-scripts
       - name: Source regression, lint and typecheck
         run: |
-          pnpm exec vitest run src/domains/creator/brush/studio-brush-browser-harness-boundary.test.ts
+          pnpm exec vitest run apps/web/src/domains/creator/brush/studio-brush-browser-harness-boundary.test.ts
           pnpm exec eslint --max-warnings=0 scripts/verify-studio-brushes.mts
           pnpm exec tsc -p tsconfig.json --pretty false --noEmit
       - name: Build production bundle

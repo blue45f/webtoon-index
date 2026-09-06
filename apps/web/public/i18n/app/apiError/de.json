@@ -1,0 +1,9 @@
+{
+  "apiError.loginRequired": "Anmeldung erforderlich.",
+  "apiError.adminRequired": "Administratorrechte konnten nicht verifiziert werden.",
+  "apiError.adminOnlyPage": "Diese Seite ist Administratoren vorbehalten.",
+  "apiError.notFound": "Das angeforderte Element konnte nicht gefunden werden.",
+  "apiError.unsupportedType": "Nicht unterstützter Inhaltstyp.",
+  "apiError.inactiveAccount": "Inaktive Konten können keine Administratorfunktionen nutzen.",
+  "apiError.settlementFailed": "Abrechnungsverarbeitung fehlgeschlagen."
+}

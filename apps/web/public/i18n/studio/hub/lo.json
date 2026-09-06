@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "ແນະນຳຄຸນສົມບັດ",
+  "studio.hub.subtitle": "ຫນ້າທີ່ຫນຶ່ງໃນເວລາໂດຍບໍ່ມີພາລະໃດໆ. ຂ້ອຍເບິ່ງຢູ່ {done}/{total}.",
+  "studio.hub.progressAriaLabel": "ຄວາມຄືບໜ້າການສອນ",
+  "studio.hub.listAriaLabel": "ບັນຊີລາຍຊື່ຄຸນສົມບັດ",
+  "studio.hub.checked": "ລອງເບິ່ງ",
+  "studio.hub.prev": "ທີ່ຜ່ານມາ",
+  "studio.hub.next": "ຕໍ່ໄປ",
+  "studio.hub.markComplete": "ໝາຍວ່າສົມບູນ",
+  "studio.hub.completed": "ສຳເລັດແລ້ວ",
+  "studio.hub.tryLabelDefault": "ປະຕິບັດຕາມ",
+  "studio.hub.stepAriaPrefix": "ຂັ້ນ​ຕອນ​"
+}

@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Ominaisuuden opetusohjelma",
+  "studio.hub.subtitle": "Yksi toiminto kerrallaan ilman taakkaa. Katsoin {done}/{total}.",
+  "studio.hub.progressAriaLabel": "Opetusohjelman edistyminen",
+  "studio.hub.listAriaLabel": "Ominaisuusluettelo",
+  "studio.hub.checked": "katsomaan",
+  "studio.hub.prev": "Edellinen",
+  "studio.hub.next": "seuraavaksi",
+  "studio.hub.markComplete": "merkitse valmiiksi",
+  "studio.hub.completed": "Valmis",
+  "studio.hub.tryLabelDefault": "Seuraa mukana",
+  "studio.hub.stepAriaPrefix": "askel"
+}

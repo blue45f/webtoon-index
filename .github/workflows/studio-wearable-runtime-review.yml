@@ -29,22 +29,22 @@ jobs:
           export * as React from 'react';
           export { createRoot } from 'react-dom/client';
           export { Canvas, useFrame, useThree } from '@react-three/fiber';
-          export * from '../src/domains/creator/vrm/studio-vrm-wardrobe';
-          export * from '../src/domains/creator/vrm/studio-vrm-props';
-          export * from '../src/domains/creator/vrm/studio-vrm-prop-rig';
-          export * from '../src/domains/creator/vrm/studio-vrm-skinned-garment';
-          export * from '../src/domains/creator/vrm/studio-vrm-poser-utils';
-          export * from '../src/domains/creator/vrm/studio-vrm-costume-runtime';
-          export * from '../src/domains/creator/vrm/StudioVrmWardrobePropsProjection';
-          export * from '../src/domains/creator/studio-pose-presets';
+          export * from '../apps/web/src/domains/creator/vrm/studio-vrm-wardrobe';
+          export * from '../apps/web/src/domains/creator/vrm/studio-vrm-props';
+          export * from '../apps/web/src/domains/creator/vrm/studio-vrm-prop-rig';
+          export * from '../apps/web/src/domains/creator/vrm/studio-vrm-skinned-garment';
+          export * from '../apps/web/src/domains/creator/vrm/studio-vrm-poser-utils';
+          export * from '../apps/web/src/domains/creator/vrm/studio-vrm-costume-runtime';
+          export * from '../apps/web/src/domains/creator/vrm/StudioVrmWardrobePropsProjection';
+          export * from '../apps/web/src/domains/creator/studio-pose-presets';
           EOF
           node --input-type=module <<'EOF'
           import {build} from 'vite';
           await build({configFile:false,publicDir:false,resolve:{alias:{'@':process.cwd()}},build:{outDir:'wearable-runtime-review/runtime',lib:{entry:'.wearable-review/entry.ts',formats:['es'],fileName:()=> 'runtime.mjs'},minify:false,sourcemap:false},define:{'process.env.NODE_ENV':JSON.stringify('production')}});
           EOF
           mkdir -p wearable-runtime-review/vrm wearable-runtime-review/browser-harnesses
-          cp public/vrm/sample.vrm public/vrm/AvatarSample_B.vrm public/vrm/LICENSES.md wearable-runtime-review/vrm/
-          cp tools/browser-harnesses/props-compare-main.ts tools/browser-harnesses/props-compare.html wearable-runtime-review/browser-harnesses/
+          cp apps/web/public/vrm/sample.vrm apps/web/public/vrm/AvatarSample_B.vrm apps/web/public/vrm/LICENSES.md wearable-runtime-review/vrm/
+          cp apps/web/tools/browser-harnesses/props-compare-main.ts apps/web/tools/browser-harnesses/props-compare.html wearable-runtime-review/browser-harnesses/
           git rev-parse HEAD > wearable-runtime-review/commit.txt
       - uses: actions/upload-artifact@v4
         with:

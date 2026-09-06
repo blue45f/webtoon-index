@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "matalinong mga hugis",
+  "studio.quickShape.description.active": "Malayang gumuhit ng mga linya, parisukat, bilog, at tatsulok. Kung bibitawan mo, mag-iisa itong mag-aayos.",
+  "studio.quickShape.description.inactive": "Okay lang na isulat ito. Kung bubuksan mo ito, ang iyong pagguhit ng kamay ay magiging maayos na hugis.",
+  "studio.quickShape.toggleHint": "Sa sandaling bitawan mo ang isang halos iginuhit na hugis gamit ang isang panulat, ito ay magiging isang eksaktong hugis. Kahit na mag-pause ka habang nagdo-drawing, may lalabas na preview.",
+  "studio.quickShape.toggleAria.on": "Naka-on ang mga matalinong hugis",
+  "studio.quickShape.toggleAria.off": "Mga matalinong hugis",
+  "studio.quickShape.matchedSuffix": " ramdam ko. Confirmed nung binitawan ko yung kamay ko.",
+  "studio.quickShape.emptyStatus": "Iguhit ang hugis at bitawan, o manatili lamang sa dulo",
+  "studio.quickShape.openTutorial": "Panoorin ang tutorial ng matalinong mga hugis",
+  "studio.quickShape.notice": "Gumuhit ng mga matalinong hugis, linya, bilog, parisukat, atbp. at pinuhin ang mga ito kapag binitawan mo (i-pause para i-preview)"
+}

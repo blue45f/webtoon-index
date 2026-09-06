@@ -1,0 +1,20 @@
+{
+  "admin.reports.title": "User Reports & Dispute Moderation Queue",
+  "admin.reports.desc": "Review reports for posts, comments, reviews, and infringement to take action.",
+  "admin.reports.filterPending": "Pending",
+  "admin.reports.filterResolved": "Action Taken",
+  "admin.reports.filterDismissed": "Dismissed",
+  "admin.reports.filterAll": "All",
+  "admin.reports.loadError": "Failed to load reports",
+  "admin.reports.loading": "Loading report items...",
+  "admin.reports.empty": "No report items matching these criteria.",
+  "admin.reports.statusPending": "Pending Review",
+  "admin.reports.statusResolved": "Action Taken",
+  "admin.reports.statusDismissed": "Dismissed",
+  "admin.reports.approveAction": "Approve Action",
+  "admin.reports.dismissAction": "Dismiss",
+  "admin.reports.reporter": "Reporter:",
+  "admin.reports.reason": "Reason:",
+  "admin.reports.adminNote": "Admin Note:",
+  "admin.reports.createdAt": "Reported At:"
+}

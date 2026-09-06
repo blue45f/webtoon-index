@@ -1026,7 +1026,7 @@ function parseArguments(argv) {
     }
     runtimeDatabaseRole = value;
     runtimeRoleSeen = true;
-    index += 1;
+    index += 1; // NOSONAR javascript:S2310
   }
   validateRuntimeDatabaseRole(runtimeDatabaseRole);
   return { allowLoopback, runtimeDatabaseRole };

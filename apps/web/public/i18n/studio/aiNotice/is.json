@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Generative AI Image Guide",
+  "studio.aiNotice.description": "Þessi aðgerð býr til myndir með því að nota generative AI (OpenAI). Gervigreindarmerki eru sýnd á tilbúnum niðurstöðum.",
+  "studio.aiNotice.ruleCopyright": "Við búum ekki til verk annarra, persónur eða andlit raunverulegs fólks.",
+  "studio.aiNotice.ruleAccuracy": "Niðurstöður gervigreindar geta verið ónákvæmar eða aðrar en ætlað var.",
+  "studio.aiNotice.ruleResponsibility": "Þú berð ábyrgð á því að nota myndirnar sem þú býrð til.",
+  "studio.aiNotice.cancel": "Hætta við",
+  "studio.aiNotice.confirm": "Ég skil, skapa"
+}

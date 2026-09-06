@@ -2,7 +2,7 @@ import { expect, test } from "@playwright/test";
 
 import {
   creatorMarketplaceJsonByteSize,
-} from "../lib/creator-marketplace-resource-contract";
+} from "../apps/web/src/shared/lib/creator-marketplace-resource-contract";
 
 const canonicalUnmappedBrushProperty = (base: number, min: number, max: number) => ({
   base,

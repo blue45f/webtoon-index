@@ -9,7 +9,7 @@
 import {
   createStudioAnimaticSqlitePersistence,
   STUDIO_ANIMATIC_SQLITE_NAMESPACE,
-} from "../../../src/domains/creator/studio-animatic-sqlite-persistence";
+} from "../../../apps/web/src/domains/creator/studio-animatic-sqlite-persistence";
 import {
   exportStudioAnimaticDocument,
   importStudioAnimaticDocument,
@@ -22,7 +22,7 @@ import {
   studioAnimaticStorageKey,
   type StudioAnimaticDocument,
   type StudioAnimaticSegment,
-} from "../../../src/domains/creator/studio-animatic-timeline";
+} from "../../../apps/web/src/domains/creator/studio-animatic-timeline";
 import {
   openStudioLocalDatabase,
   probeSqliteSupport,
@@ -33,7 +33,7 @@ import {
   type StudioSqliteApiHandle,
   type StudioSqliteDatabaseHandle,
   type StudioSqlitePoolUtilHandle,
-} from "../../../src/domains/creator/studio-local-database";
+} from "../../../apps/web/src/domains/creator/studio-local-database";
 
 const REPORT_SCHEMA_VERSION = 1;
 const SAVE_SAMPLE_COUNT = 120;

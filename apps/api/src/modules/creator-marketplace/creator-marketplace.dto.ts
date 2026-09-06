@@ -19,7 +19,7 @@ import {
   CreatorMarketplaceResourceSearchQuerySchema,
   CreatorMarketplaceResourceSortSchema,
   CreatorMarketplaceResourceTagQuerySchema,
-} from "../../../../../lib/creator-marketplace-resource-contract";
+} from "../../../../web/src/shared/lib/creator-marketplace-resource-contract";
 
 export const CreatorMarketplaceResourceListQuerySchema = z
   .object({

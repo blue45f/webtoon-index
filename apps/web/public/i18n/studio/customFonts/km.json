@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "ពុម្ពអក្សររបស់ខ្ញុំ",
+  "studio.customFonts.importButton": "នាំចូលពីឯកសារ",
+  "studio.customFonts.importing": "កំពុងពិនិត្យ...",
+  "studio.customFonts.importAria": "នាំចូលឯកសារពុម្ពអក្សរ",
+  "studio.customFonts.storageAria": "ការប្រើប្រាស់បណ្ណាល័យពុម្ពអក្សរ",
+  "studio.customFonts.emptyTitle": "មិន​ទាន់​មាន​បញ្ចូល​ពុម្ព​អក្សរ​នៅ​ឡើយ​ទេ។",
+  "studio.customFonts.unknownFileName": "គ្មានឈ្មោះឯកសារ",
+  "studio.customFonts.apply": "អនុវត្ត",
+  "studio.customFonts.applyToText": "អនុវត្តពុម្ពអក្សរនេះទៅអត្ថបទដែលបានជ្រើសរើស",
+  "studio.customFonts.selectTextFirst": "ដំបូង​ត្រូវ​ជ្រើសរើស​អត្ថបទ ឬ​ពពុះ​សំឡេង",
+  "studio.customFonts.delete": "លុបពុម្ពអក្សរ"
+}

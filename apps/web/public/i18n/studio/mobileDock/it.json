@@ -1,0 +1,19 @@
+{
+  "studio.mobileDock.label": "Studio mobile toolbar",
+  "studio.mobileDock.drawingTools": "Drawing tools",
+  "studio.mobileDock.workspaceTools": "Workspace",
+  "studio.mobileDock.workspaceToggle": "Tools",
+  "studio.mobileDock.expandWorkspaceTools": "Expand workspace tools",
+  "studio.mobileDock.collapseWorkspaceTools": "Collapse workspace tools",
+  "studio.mobileDock.brushSettings": "Brush settings (size, color, presets)",
+  "studio.mobileDock.tool.pixel": "penna pixel",
+  "studio.mobileDock.tool.shape": "Forme",
+  "studio.mobileDock.tool.pages": "Pagine",
+  "studio.mobileDock.tool.export": "Export",
+  "studio.mobileDock.tool.search": "Find",
+  "studio.mobileDock.tool.search.title": "Find features & settings · also by CSP/Photoshop terms",
+  "studio.mobileDock.pagesOpen": "Apri l'elenco delle pagine",
+  "studio.mobileDock.pagesClose": "Chiudi l'elenco delle pagine",
+  "studio.mobileDock.tool.undo": "annullare",
+  "studio.mobileDock.tool.redo": "correre di nuovo"
+}

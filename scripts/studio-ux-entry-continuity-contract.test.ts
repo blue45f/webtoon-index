@@ -68,7 +68,7 @@ describe("Studio conditional-entry continuity contract", () => {
 
   it("reports the exact dead-end checkpoint when reentry disappears", () => {
     const sources = new Map(sourceMap());
-    const inspectorPath = "src/domains/creator/StudioInspectorDrawingSection.tsx";
+    const inspectorPath = "apps/web/src/domains/creator/StudioInspectorDrawingSection.tsx";
     sources.set(
       inspectorPath,
       sources.get(inspectorPath)!.replace(

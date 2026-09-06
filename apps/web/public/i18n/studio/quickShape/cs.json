@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "chytré tvary",
+  "studio.quickShape.description.active": "Neváhejte kreslit čáry, čtverce, kruhy a trojúhelníky. Pokud pustíte, uklidí se to samo.",
+  "studio.quickShape.description.inactive": "Je v pořádku to načmárat. Pokud jej zapnete, vaše ruční kresba se zjemní do úhledného tvaru.",
+  "studio.quickShape.toggleHint": "Ve chvíli, kdy pustíte nahrubo narýsovaný tvar perem, zacvakne do přesného tvaru. I když se při kreslení pozastavíte, zobrazí se náhled.",
+  "studio.quickShape.toggleAria.on": "Chytré tvary zapnuty",
+  "studio.quickShape.toggleAria.off": "Chytré tvary vypnuty",
+  "studio.quickShape.matchedSuffix": " Cítím to. Potvrzuje se to, když pustím ruku.",
+  "studio.quickShape.emptyStatus": "Nakreslete tvar a pusťte se, nebo prostě zůstaňte na konci",
+  "studio.quickShape.openTutorial": "Podívejte se na výukový program pro chytré tvary",
+  "studio.quickShape.notice": "Nakreslete chytré tvary, čáry, kruhy, čtverce atd. a upřesněte je, když je pustíte (pauza pro zobrazení náhledu)"
+}

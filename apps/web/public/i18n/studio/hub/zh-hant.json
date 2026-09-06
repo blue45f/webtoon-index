@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "功能教學",
+  "studio.hub.subtitle": "一次只執行一項功能，沒有任何負擔。我查看了{done}/{total}。",
+  "studio.hub.progressAriaLabel": "教學進度",
+  "studio.hub.listAriaLabel": "功能列表",
+  "studio.hub.checked": "看看",
+  "studio.hub.prev": "上一頁",
+  "studio.hub.next": "下一個",
+  "studio.hub.markComplete": "標記為完成",
+  "studio.hub.completed": "已完成",
+  "studio.hub.tryLabelDefault": "跟隨",
+  "studio.hub.stepAriaPrefix": "步驟"
+}

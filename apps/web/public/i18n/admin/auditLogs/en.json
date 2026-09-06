@@ -1,0 +1,15 @@
+{
+  "admin.auditLogs.close": "Close",
+  "admin.auditLogs.desc": "Track every administrative action, permission change, and configuration update.",
+  "admin.auditLogs.empty": "No audit logs have been recorded.",
+  "admin.auditLogs.loadError": "Failed to load audit logs.",
+  "admin.auditLogs.loading": "Loading audit logs...",
+  "admin.auditLogs.modalTitle": "Audit Log Details",
+  "admin.auditLogs.searchPlaceholder": "Search by email or action...",
+  "admin.auditLogs.thAction": "Action",
+  "admin.auditLogs.thAdmin": "Administrator",
+  "admin.auditLogs.thDetail": "Details",
+  "admin.auditLogs.thTarget": "Target",
+  "admin.auditLogs.title": "Admin Audit Logs",
+  "admin.auditLogs.view": "View"
+}

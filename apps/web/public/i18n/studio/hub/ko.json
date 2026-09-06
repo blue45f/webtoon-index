@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "기능 튜토리얼",
+  "studio.hub.subtitle": "부담 없이 한 기능씩. {done}/{total}개 살펴봤어요.",
+  "studio.hub.progressAriaLabel": "튜토리얼 진행",
+  "studio.hub.listAriaLabel": "기능 목록",
+  "studio.hub.checked": "살펴봄",
+  "studio.hub.prev": "이전",
+  "studio.hub.next": "다음",
+  "studio.hub.markComplete": "완료로 표시",
+  "studio.hub.completed": "완료됨",
+  "studio.hub.tryLabelDefault": "따라 해보기",
+  "studio.hub.stepAriaPrefix": "단계"
+}

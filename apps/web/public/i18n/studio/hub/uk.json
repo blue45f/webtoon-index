@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Навчальний посібник із функцій",
+  "studio.hub.subtitle": "Одна функція за раз без жодних навантажень. Я подивився на {done}/{total}.",
+  "studio.hub.progressAriaLabel": "Прогрес підручника",
+  "studio.hub.listAriaLabel": "Список функцій",
+  "studio.hub.checked": "погляньте",
+  "studio.hub.prev": "Попередній",
+  "studio.hub.next": "наступний",
+  "studio.hub.markComplete": "позначити як завершене",
+  "studio.hub.completed": "Виконано",
+  "studio.hub.tryLabelDefault": "Дотримуйтесь",
+  "studio.hub.stepAriaPrefix": "крок"
+}

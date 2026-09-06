@@ -14,32 +14,32 @@ import {
   STUDIO_DEFAULT_QUALITY_BRUSH_CATALOG_ITEMS,
   STUDIO_LISTED_ALL_BRUSH_CATALOG_ITEMS,
   type StudioBrushCatalogItem,
-} from "../src/domains/creator/brush/studio-brush-catalog";
+} from "../apps/web/src/domains/creator/brush/studio-brush-catalog";
 import {
   studioBrushDynamicsSettingsForBrushId,
   type StudioBrushDynamicsSettings,
-} from "../src/domains/creator/brush/studio-brush-dynamics";
+} from "../apps/web/src/domains/creator/brush/studio-brush-dynamics";
 import {
   listStudioBrushMaterialNearestPairs,
   profileStudioBrushMaterialDistinctness,
   type StudioBrushMaterialDistinctnessProfile,
-} from "../src/domains/creator/brush/studio-brush-material-distinctness";
-import { studioBrushPackDescriptorById } from "../src/domains/creator/brush/studio-brush-pack-index";
-import { materializeStudioBrushPackSelection } from "../src/domains/creator/brush/studio-brush-pack-runtime";
+} from "../apps/web/src/domains/creator/brush/studio-brush-material-distinctness";
+import { studioBrushPackDescriptorById } from "../apps/web/src/domains/creator/brush/studio-brush-pack-index";
+import { materializeStudioBrushPackSelection } from "../apps/web/src/domains/creator/brush/studio-brush-pack-runtime";
 import {
   STUDIO_BRUSH_HAND_FEEL_PROFILES,
   STUDIO_BRUSH_TEXTURE_PROFILES,
-} from "../src/domains/creator/brush/studio-brush-quality-foundation";
+} from "../apps/web/src/domains/creator/brush/studio-brush-quality-foundation";
 import {
   STUDIO_BRUSH_QUALITY_PORTFOLIO,
-} from "../src/domains/creator/brush/studio-brush-quality-portfolio";
+} from "../apps/web/src/domains/creator/brush/studio-brush-quality-portfolio";
 import {
   resolveStudioBrushRuntimeContract,
-} from "../src/domains/creator/brush/studio-brush-runtime-contract";
+} from "../apps/web/src/domains/creator/brush/studio-brush-runtime-contract";
 import {
   auditStudioBrushSemanticClaims,
   type StudioBrushSemanticAuditResult,
-} from "../src/domains/creator/brush/studio-brush-semantic-quality";
+} from "../apps/web/src/domains/creator/brush/studio-brush-semantic-quality";
 
 const CHECK = process.argv.includes("--check");
 const OUT_DIR_ARGUMENT = process.argv.find((argument) => argument.startsWith("--out-dir="));

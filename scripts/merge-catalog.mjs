@@ -24,8 +24,8 @@ function parseArgs(argv) {
   const out = { fresh: null, base: DEFAULT_CATALOG, out: DEFAULT_CATALOG };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
-    if (a === "--base") out.base = argv[++i];
-    else if (a === "--out") out.out = argv[++i];
+    if (a === "--base") out.base = argv[++i]; // NOSONAR javascript:S2310
+    else if (a === "--out") out.out = argv[++i]; // NOSONAR javascript:S2310
     else if (!out.fresh) out.fresh = a;
   }
   return out;

@@ -10,7 +10,7 @@ import { runInNewContext } from "node:vm";
 
 const require = createRequire(import.meta.url);
 const ts = require("typescript");
-const source = readFileSync(process.argv[2] ?? new URL("../src/domains/creator/promo/PromoPreview.tsx", import.meta.url), "utf8");
+const source = readFileSync(process.argv[2] ?? new URL("../apps/web/src/domains/creator/promo/PromoPreview.tsx", import.meta.url), "utf8");
 const { outputText, diagnostics } = ts.transpileModule(source, {
   fileName: "PromoPreview.tsx",
   compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.CommonJS, jsx: ts.JsxEmit.ReactJSX },

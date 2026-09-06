@@ -2,7 +2,7 @@ import type {
   CreatorCollaborationRole,
   CreatorCollaborationStatus,
 } from "./creator-collaboration.policy";
-import type { StudioLinked3dPassAssetRow } from "../../../../../lib/studio-linked-3d-pass-asset-fence";
+import type { StudioLinked3dPassAssetRow } from "../../../../web/src/shared/lib/studio-linked-3d-pass-asset-fence";
 import type { CreatorWorkRevisionSnapshot } from "../../server/creator-work-revisions";
 
 export type CreatorCollaborationInvitationAction = "accept" | "decline";

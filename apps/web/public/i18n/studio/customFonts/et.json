@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "minu font",
+  "studio.customFonts.importButton": "Import failist",
+  "studio.customFonts.importing": "Kontrollimine…",
+  "studio.customFonts.importAria": "Importige fondifail",
+  "studio.customFonts.storageAria": "Fonditeegi kasutamine",
+  "studio.customFonts.emptyTitle": "Ühtegi fonti pole veel lisatud.",
+  "studio.customFonts.unknownFileName": "Faili nime pole",
+  "studio.customFonts.apply": "Rakenda",
+  "studio.customFonts.applyToText": "Rakenda see font valitud tekstile",
+  "studio.customFonts.selectTextFirst": "Esmalt valige tekst või kõnemull",
+  "studio.customFonts.delete": "kustuta font"
+}

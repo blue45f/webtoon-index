@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "ፈጣን የትእዛዝ አሞሌ",
+  "studio.commandBar.settings": "የትእዛዝ አሞሌ ቅንብሮች",
+  "studio.commandBar.settingsDescription": "ከምናሌ አሞሌው በታች ያለውን የትእዛዝ አሞሌ የቦታ አደራደርና ታይነት ይቀይሩ።",
+  "studio.commandBar.settingsTip": "በብዛት የሚጠቀሙባቸውን ትእዛዞች በፊተኞቹ ቦታዎች ላይ ያስቀምጡ፤ በፍጥነት ይደርሱባቸዋል።",
+  "studio.commandBar.settingsClose": "የትእዛዝ አሞሌ ቅንብሮችን ዝጋ",
+  "studio.commandBar.settingsStorageNote": "የቦታ አደራደሩ በዚህ አሳሽ የሥራ ቦታ ቅንብሮች ውስጥ ይቀመጣል።",
+  "studio.commandBar.showSlots": "የትእዛዝ ቦታዎችን አሳይ",
+  "studio.commandBar.slot": "ቦታ {index}",
+  "studio.commandBar.slotAria": "የትእዛዝ ቦታ {index}",
+  "studio.commandBar.slotEmpty": "ባዶ ቦታ",
+  "studio.commandBar.resetDefaults": "ወደ ነባሪ አደራደር መልስ",
+  "studio.commandBar.command.undo": "ቀልብስ",
+  "studio.commandBar.command.redo": "እንደገና አድርግ",
+  "studio.commandBar.command.save": "ረቂቅ አስቀምጥ",
+  "studio.commandBar.command.publish": "አትም",
+  "studio.commandBar.command.download": "የአሁኑን ገጽ አውርድ",
+  "studio.commandBar.command.export-open": "የመላክ አማራጮች",
+  "studio.commandBar.command.zoom-fit": "ከማያ ገጽ ስፋት ጋር አስማማ",
+  "studio.commandBar.command.assets": "አብነቶችና ንብረቶች",
+  "studio.commandBar.command.bubbles": "የንግግር አረፋ",
+  "studio.commandBar.command.project": "የፕሮጀክት መሣሪያዎች"
+}

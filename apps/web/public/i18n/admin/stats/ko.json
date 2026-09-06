@@ -1,0 +1,12 @@
+{
+  "admin.stats.activeVisitors": "5분 활성 방문자",
+  "admin.stats.degraded": "저하됨",
+  "admin.stats.health": "시스템 헬스",
+  "admin.stats.healthy": "정상 작동 중",
+  "admin.stats.maintenance": "점검 모드 상태",
+  "admin.stats.maintenanceOff": "정상 운영 중 (OFF)",
+  "admin.stats.maintenanceOn": "비상 점검 중 (ON)",
+  "admin.stats.revenueEvents": "누적 결제/정산 건수",
+  "admin.stats.usersCommunity": "총 회원 / 커뮤니티",
+  "admin.stats.views5m": "5분 페이지뷰"
+}

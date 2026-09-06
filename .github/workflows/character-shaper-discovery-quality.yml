@@ -4,9 +4,9 @@ on:
   pull_request:
     branches: [main]
     paths:
-      - "src/domains/creator/character-shaper/**"
-      - "src/domains/creator/studio-router/**"
-      - "src/domains/creator/studio-production/**"
+      - "apps/web/src/domains/creator/character-shaper/**"
+      - "apps/web/src/domains/creator/studio-router/**"
+      - "apps/web/src/domains/creator/studio-production/**"
       - ".github/workflows/character-shaper-discovery-quality.yml"
       - "package.json"
       - "pnpm-lock.yaml"
@@ -46,34 +46,34 @@ jobs:
         run: |
           set -euo pipefail
           pnpm exec eslint --max-warnings=0 \
-            src/domains/creator/character-shaper/CharacterShaperShelf.tsx \
-            src/domains/creator/character-shaper/CharacterShaperShelf.discovery.test.tsx \
-            src/domains/creator/character-shaper/CharacterSlotCard.tsx \
-            src/domains/creator/character-shaper/CharacterSlotCard.accessibility.test.tsx \
-            src/domains/creator/character-shaper/character-shaper-discovery.ts \
-            src/domains/creator/character-shaper/character-shaper-discovery.test.ts \
-            src/domains/creator/character-shaper/character-shaper-favorites.ts \
-            src/domains/creator/character-shaper/character-shaper-favorites.test.ts \
-            src/domains/creator/character-shaper/character-shaper-favorites-recovery.test.ts \
-            src/domains/creator/character-shaper/useCharacterShaperFavorites.ts \
-            src/domains/creator/character-shaper/CharacterShaperControls.tsx \
-            src/domains/creator/character-shaper/CharacterShaperControls.precision.test.tsx \
-            src/domains/creator/character-shaper/CharacterShaperControls.lifecycle.test.tsx \
-            src/domains/creator/character-shaper/character-shaper-precision.ts \
-            src/domains/creator/character-shaper/character-shaper-precision.test.ts \
-            src/domains/creator/studio-router/StudioRouteCollaborationGateway.test.tsx
+            apps/web/src/domains/creator/character-shaper/CharacterShaperShelf.tsx \
+            apps/web/src/domains/creator/character-shaper/CharacterShaperShelf.discovery.test.tsx \
+            apps/web/src/domains/creator/character-shaper/CharacterSlotCard.tsx \
+            apps/web/src/domains/creator/character-shaper/CharacterSlotCard.accessibility.test.tsx \
+            apps/web/src/domains/creator/character-shaper/character-shaper-discovery.ts \
+            apps/web/src/domains/creator/character-shaper/character-shaper-discovery.test.ts \
+            apps/web/src/domains/creator/character-shaper/character-shaper-favorites.ts \
+            apps/web/src/domains/creator/character-shaper/character-shaper-favorites.test.ts \
+            apps/web/src/domains/creator/character-shaper/character-shaper-favorites-recovery.test.ts \
+            apps/web/src/domains/creator/character-shaper/useCharacterShaperFavorites.ts \
+            apps/web/src/domains/creator/character-shaper/CharacterShaperControls.tsx \
+            apps/web/src/domains/creator/character-shaper/CharacterShaperControls.precision.test.tsx \
+            apps/web/src/domains/creator/character-shaper/CharacterShaperControls.lifecycle.test.tsx \
+            apps/web/src/domains/creator/character-shaper/character-shaper-precision.ts \
+            apps/web/src/domains/creator/character-shaper/character-shaper-precision.test.ts \
+            apps/web/src/domains/creator/studio-router/StudioRouteCollaborationGateway.test.tsx
       - name: Run the existing Character Shaper Vitest suite
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
-        run: pnpm exec vitest run src/domains/creator/character-shaper
+        run: pnpm exec vitest run apps/web/src/domains/creator/character-shaper
       - name: Verify production review routing and asset guidance regressions
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         shell: bash
         run: |
           set -euo pipefail
           pnpm exec vitest run \
-            src/domains/creator/studio-router/StudioRouteCollaborationGateway.test.tsx \
-            src/domains/creator/studio-router/StudioRouteFallbacks.test.tsx \
-            src/domains/creator/studio-router/studio-route-manifest.test.ts
+            apps/web/src/domains/creator/studio-router/StudioRouteCollaborationGateway.test.tsx \
+            apps/web/src/domains/creator/studio-router/StudioRouteFallbacks.test.tsx \
+            apps/web/src/domains/creator/studio-router/studio-route-manifest.test.ts
       - name: Typecheck the complete frontend
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: pnpm exec tsc -p tsconfig.json

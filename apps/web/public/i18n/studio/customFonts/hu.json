@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "a betűtípusom",
+  "studio.customFonts.importButton": "Importálás fájlból",
+  "studio.customFonts.importing": "Ellenőrzés…",
+  "studio.customFonts.importAria": "Betűtípusfájl importálása",
+  "studio.customFonts.storageAria": "Betűkészlet-használat",
+  "studio.customFonts.emptyTitle": "Még nincsenek betűtípusok.",
+  "studio.customFonts.unknownFileName": "Nincs fájlnév",
+  "studio.customFonts.apply": "Alkalmazni",
+  "studio.customFonts.applyToText": "Alkalmazza ezt a betűtípust a kijelölt szövegre",
+  "studio.customFonts.selectTextFirst": "Először válassza ki a szöveget vagy a szövegbuborékot",
+  "studio.customFonts.delete": "betűtípus törlése"
+}

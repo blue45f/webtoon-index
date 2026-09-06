@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "ma police",
+  "studio.customFonts.importButton": "Importer à partir d'un fichier",
+  "studio.customFonts.importing": "Vérification…",
+  "studio.customFonts.importAria": "Importer un fichier de police",
+  "studio.customFonts.storageAria": "Utilisation de la bibliothèque de polices",
+  "studio.customFonts.emptyTitle": "Aucune police n'est encore incluse.",
+  "studio.customFonts.unknownFileName": "Pas de nom de fichier",
+  "studio.customFonts.apply": "Postuler",
+  "studio.customFonts.applyToText": "Appliquer cette police au texte sélectionné",
+  "studio.customFonts.selectTextFirst": "Sélectionnez d’abord du texte ou une bulle",
+  "studio.customFonts.delete": "supprimer la police"
+}

@@ -1,6 +1,6 @@
 import { createResourceEngine } from "../apps/api/src/modules/creator-resources/resource-engine";
-import { mergeCreatorWorkspaces, parseProviderAvailability, providerAvailability, selectBoardResources, upstreamRetrySeconds } from "../lib/creator-resource-workflow";
-import { emptyWorkspace, parseResource, parseSearchResult } from "../lib/creator-resources";
+import { mergeCreatorWorkspaces, parseProviderAvailability, providerAvailability, selectBoardResources, upstreamRetrySeconds } from "../apps/web/src/shared/lib/creator-resource-workflow";
+import { emptyWorkspace, parseResource, parseSearchResult } from "../apps/web/src/shared/lib/creator-resources";
 
 interface WorkflowCase { name: string; run: () => void | Promise<void> }
 function ok(value: unknown, message = "expected truthy value"): asserts value { if (!value) throw new Error(message); }

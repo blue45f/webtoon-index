@@ -22,13 +22,16 @@ Requirements: Blender 5.2+, VRM Add-on for Blender 4.5+.
 import bpy
 
 
+HEAD_BONE_NAME = "mixamorig:Head"
+EYE_BONE_PREFIX = "TS_OrionEye."
+
 SOURCE_PATH = bpy.context.scene.get(
     "toonspectrum_orion_source_path",
     bpy.path.abspath("//scripts/blender/source_assets/Avatar_Orion_vrm0_source.vrm"),
 )
 OUTPUT_PATH = bpy.context.scene.get(
     "toonspectrum_orion_output_path",
-    bpy.path.abspath("//public/vrm/Avatar_Orion.vrm"),
+    bpy.path.abspath("//apps/web/public/vrm/Avatar_Orion.vrm"),
 )
 
 
@@ -37,9 +40,9 @@ HUMAN_BONE_MAP = {
     "spine": "mixamorig:Spine",
     "chest": "mixamorig:Spine2",
     "neck": "mixamorig:Neck",
-    "head": "mixamorig:Head",
-    "left_eye": "TS_OrionEye.L",
-    "right_eye": "TS_OrionEye.R",
+    "head": HEAD_BONE_NAME,
+    "left_eye": EYE_BONE_PREFIX + "L",
+    "right_eye": EYE_BONE_PREFIX + "R",
     "left_upper_leg": "mixamorig:LeftUpLeg",
     "left_lower_leg": "mixamorig:LeftLeg",
     "left_foot": "mixamorig:LeftFoot",
@@ -127,9 +130,9 @@ def add_eye_bones(armature):
     bpy.context.view_layer.objects.active = armature
     armature.select_set(True)
     bpy.ops.object.mode_set(mode="EDIT")
-    head_bone = armature.data.edit_bones["mixamorig:Head"]
+    head_bone = armature.data.edit_bones[HEAD_BONE_NAME]
     for suffix, sign in (("L", 1.0), ("R", -1.0)):
-        bone = armature.data.edit_bones.new("TS_OrionEye." + suffix)
+        bone = armature.data.edit_bones.new(EYE_BONE_PREFIX + suffix)
         bone.head = (0.017 * sign, -0.125, 1.610)
         bone.tail = (0.017 * sign, -0.125, 1.630)
         bone.parent = head_bone
@@ -202,7 +205,7 @@ def add_face_rig(armature):
         eye.name = "TS_Orion_EyePanel_" + suffix
         eye.scale = (0.0135, 0.0040, 0.0055)
         bpy.ops.object.transform_apply(location=False, rotation=False, scale=True)
-        rig_primitive(eye, armature, "TS_OrionEye." + suffix, eye_material)
+        rig_primitive(eye, armature, EYE_BONE_PREFIX + suffix, eye_material)
         add_shape_key(eye, "Blink", lambda coordinate: setattr(coordinate, "z", coordinate.z * 0.08))
         add_shape_key(eye, "Wide", lambda coordinate: setattr(coordinate, "z", coordinate.z * 1.34))
         add_shape_key(eye, "Squint", lambda coordinate: setattr(coordinate, "z", coordinate.z * 0.48))
@@ -217,7 +220,7 @@ def add_face_rig(armature):
         pupil.name = "TS_Orion_Pupil_" + suffix
         pupil.scale = (0.0032, 0.0020, 0.0032)
         bpy.ops.object.transform_apply(location=False, rotation=False, scale=True)
-        rig_primitive(pupil, armature, "TS_OrionEye." + suffix, pupil_material)
+        rig_primitive(pupil, armature, EYE_BONE_PREFIX + suffix, pupil_material)
 
         bpy.ops.mesh.primitive_uv_sphere_add(
             segments=16,
@@ -228,7 +231,7 @@ def add_face_rig(armature):
         brow.name = "TS_Orion_Brow_" + suffix
         brow.scale = (0.0145, 0.0030, 0.0022)
         bpy.ops.object.transform_apply(location=False, rotation=False, scale=True)
-        rig_primitive(brow, armature, "mixamorig:Head", brow_material)
+        rig_primitive(brow, armature, HEAD_BONE_NAME, brow_material)
         add_shape_key(brow, "HappyBrow", lambda coordinate: setattr(coordinate, "z", coordinate.z + abs(coordinate.x) * 0.14))
         add_shape_key(brow, "SadBrow", lambda coordinate: setattr(coordinate, "z", coordinate.z - abs(coordinate.x) * 0.16))
         add_shape_key(brow, "AngryBrow", lambda coordinate, direction=sign: setattr(coordinate, "z", coordinate.z - direction * coordinate.x * 0.20))

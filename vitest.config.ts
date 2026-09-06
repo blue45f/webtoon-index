@@ -14,7 +14,7 @@ const root = fileURLToPath(new URL("./", import.meta.url));
 // 남은 글롭이 조용히 더 적은 파일을 수집하고 스위트는 그대로 초록으로 통과한다. 수집 루트를
 // 명시해두면 트리 이동(예: src/ -> apps/web)이 이 목록 수정을 강제하고, 빠뜨린 경우
 // scripts/verify-toolchain-coverage.mjs 의 수집 파일 수 floor 가 게이트를 터뜨린다.
-const TEST_ROOTS = ["apps", "components", "deploy", "lib", "packages", "scripts", "src", "tests"];
+const TEST_ROOTS = ["apps", "deploy", "packages", "scripts", "tests"];
 
 // Read .env.local only as a last candidate. resolveVitestDatabaseTarget accepts
 // it only when it is loopback; a Neon/production URL is never inherited by the
@@ -43,7 +43,9 @@ process.env.DATABASE_URL = testDatabaseTarget.databaseUrl;
 export default defineConfig({
   resolve: {
     alias: {
-      "@": root,
+      "@/shared": path.resolve(root, "apps/web/src/shared"),
+      "@/domains": path.resolve(root, "apps/web/src/domains"),
+      "@": path.resolve(root, "apps/web"),
     },
   },
   test: {

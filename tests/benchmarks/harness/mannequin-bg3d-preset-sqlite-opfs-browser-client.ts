@@ -11,7 +11,7 @@ import {
   STUDIO_BG3D_LT_PRESET_VERSION,
   serializeStudioBg3dLtPresetPayload,
   type StudioBg3dLtPresetPayload,
-} from "../../../src/domains/creator/bg3d/studio-bg3d-lt-presets";
+} from "../../../apps/web/src/domains/creator/bg3d/studio-bg3d-lt-presets";
 import {
   createStudioBg3dLtPresetSqliteRepository,
   createStudioMannequinStateSqliteRepository,
@@ -21,7 +21,7 @@ import {
   STUDIO_BG3D_LT_PRESET_SQLITE_NAMESPACE,
   STUDIO_MANNEQUIN_STATE_SQLITE_KEY,
   STUDIO_MANNEQUIN_STATE_SQLITE_NAMESPACE,
-} from "../../../src/domains/creator/scene-3d/studio-mannequin-bg3d-preset-sqlite-repository";
+} from "../../../apps/web/src/domains/creator/scene-3d/studio-mannequin-bg3d-preset-sqlite-repository";
 import {
   STUDIO_MANNEQUIN_JOINT_IDS,
   STUDIO_MANNEQUIN_JOINT_LIMITS,
@@ -29,11 +29,11 @@ import {
   clampStudioMannequinJointRotation,
   type StudioMannequinJointId,
   type StudioMannequinVec3,
-} from "../../../src/domains/creator/scene-3d/studio-mannequin-model";
+} from "../../../apps/web/src/domains/creator/scene-3d/studio-mannequin-model";
 import {
   serializeStudioMannequinState,
   type StudioMannequinPersistentState,
-} from "../../../src/domains/creator/scene-3d/studio-mannequin-poses";
+} from "../../../apps/web/src/domains/creator/scene-3d/studio-mannequin-poses";
 import {
   openStudioLocalDatabase,
   probeSqliteSupport,
@@ -44,11 +44,11 @@ import {
   type StudioSqliteApiHandle,
   type StudioSqliteDatabaseHandle,
   type StudioSqlitePoolUtilHandle,
-} from "../../../src/domains/creator/studio-local-database";
+} from "../../../apps/web/src/domains/creator/studio-local-database";
 import {
   acquireStudioLocalDatabase,
   closeStudioLocalDatabaseRuntime,
-} from "../../../src/domains/creator/studio-local-database-runtime";
+} from "../../../apps/web/src/domains/creator/studio-local-database-runtime";
 
 const REPORT_SCHEMA_VERSION = 1;
 const SAVE_SAMPLE_COUNT = 100;

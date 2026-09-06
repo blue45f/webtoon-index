@@ -9,7 +9,7 @@ import { describe, expect, it, vi } from "vitest";
 
 import {
   creatorMarketplacePackageIdentityPreimage,
-} from "../../../../../lib/creator-marketplace-cloud-library-contract";
+} from "../../../../web/src/shared/lib/creator-marketplace-cloud-library-contract";
 
 import {
   CreatorMarketplaceLibraryAcquisitionRejectedError,

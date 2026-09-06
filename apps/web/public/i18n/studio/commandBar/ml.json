@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "ദ്രുത കമാൻഡ് ബാർ",
+  "studio.commandBar.settings": "കമാൻഡ് ബാർ ക്രമീകരണങ്ങൾ",
+  "studio.commandBar.settingsDescription": "മെനു ബാറിനു താഴെയുള്ള കമാൻഡ് ബാറിന്റെ സ്ലോട്ട് ക്രമവും ദൃശ്യതയും മാറ്റുക.",
+  "studio.commandBar.settingsTip": "ഏറ്റവും കൂടുതൽ ഉപയോഗിക്കുന്ന കമാൻഡുകൾ ആദ്യ സ്ലോട്ടുകളിൽ വെച്ചാൽ വേഗം എത്തിപ്പിടിക്കാം.",
+  "studio.commandBar.settingsClose": "കമാൻഡ് ബാർ ക്രമീകരണങ്ങൾ അടയ്ക്കുക",
+  "studio.commandBar.settingsStorageNote": "സ്ലോട്ട് ക്രമം ഈ ബ്രൗസറിന്റെ വർക്ക്‌സ്‌പേസ് ക്രമീകരണങ്ങളിൽ സൂക്ഷിക്കും.",
+  "studio.commandBar.showSlots": "കമാൻഡ് സ്ലോട്ടുകൾ കാണിക്കുക",
+  "studio.commandBar.slot": "സ്ലോട്ട് {index}",
+  "studio.commandBar.slotAria": "കമാൻഡ് സ്ലോട്ട് {index}",
+  "studio.commandBar.slotEmpty": "ശൂന്യ സ്ലോട്ട്",
+  "studio.commandBar.resetDefaults": "സ്ഥിരസ്ഥിതി ക്രമത്തിലേക്ക് പുനഃസജ്ജമാക്കുക",
+  "studio.commandBar.command.undo": "പഴയപടിയാക്കുക",
+  "studio.commandBar.command.redo": "വീണ്ടും ചെയ്യുക",
+  "studio.commandBar.command.save": "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക",
+  "studio.commandBar.command.publish": "പ്രസിദ്ധീകരിക്കുക",
+  "studio.commandBar.command.download": "നിലവിലെ പേജ് ഡൗൺലോഡ് ചെയ്യുക",
+  "studio.commandBar.command.export-open": "എക്‌സ്‌പോർട്ട് ഓപ്ഷനുകൾ",
+  "studio.commandBar.command.zoom-fit": "സ്ക്രീൻ വീതിയിലേക്ക് ഒതുക്കുക",
+  "studio.commandBar.command.assets": "ടെംപ്ലേറ്റുകളും അസറ്റുകളും",
+  "studio.commandBar.command.bubbles": "സംഭാഷണ ബബിൾ",
+  "studio.commandBar.command.project": "പ്രോജക്ട് ടൂളുകൾ"
+}

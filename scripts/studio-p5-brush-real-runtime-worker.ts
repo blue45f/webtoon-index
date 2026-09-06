@@ -2,7 +2,7 @@
 
 import {
   createStudioP5BrushStandaloneAdapterLoader,
-} from "../src/domains/creator/brush/studio-p5-brush-standalone-runtime-adapter";
+} from "../apps/web/src/domains/creator/brush/studio-p5-brush-standalone-runtime-adapter";
 
 
 import {
@@ -16,7 +16,7 @@ import type {
 import type {
   StudioProceduralArtisticBrushAdapterInput,
   StudioProceduralArtisticOffscreenWebGl2Surface,
-} from "../src/domains/creator/studio-procedural-artistic-brush-provider";
+} from "../apps/web/src/domains/creator/studio-procedural-artistic-brush-provider";
 
 const CONTEXT_ATTRIBUTES = Object.freeze({
   alpha: true,

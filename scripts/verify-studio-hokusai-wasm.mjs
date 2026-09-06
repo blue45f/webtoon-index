@@ -177,7 +177,7 @@ export function assertSafeHokusaiWasmBinary(
   }
 }
 
-export function verifyCheckedInHokusaiArtifacts({
+export function verifyCheckedInHokusaiArtifacts({ // NOSONAR javascript:S3776
   packageDirectory = HOKUSAI_PACKAGE_DIRECTORY,
   pkgDirectory = HOKUSAI_PKG_DIRECTORY,
   integrityManifestPath = HOKUSAI_INTEGRITY_MANIFEST_PATH,

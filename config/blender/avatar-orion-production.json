@@ -4,7 +4,7 @@
   "characterId": "avatar-orion-authored",
   "displayName": "Avatar Orion · Authored Toon",
   "mode": "upgrade",
-  "inputPath": "public/vrm/Avatar_Orion.vrm",
+  "inputPath": "apps/web/public/vrm/Avatar_Orion.vrm",
   "outputDir": "batch_generated/blender-character",
   "strict": true,
   "hair": {
@@ -73,7 +73,7 @@
     "minimumScore": 86
   },
   "provenance": {
-    "source": "public/vrm/Avatar_Orion.vrm",
+    "source": "apps/web/public/vrm/Avatar_Orion.vrm",
     "sourceGitBlob": "b244cf74aa845e75b33a4e48a962ebd880ec2210",
     "sourceAuthor": "Polygonal Mind",
     "sourceLicense": "CC0",

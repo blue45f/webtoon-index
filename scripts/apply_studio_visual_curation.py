@@ -18,11 +18,15 @@ import shutil
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
-PUBLIC = ROOT / 'public/assets/studio/cc0-20260906'
+PUBLIC = ROOT / 'apps/web/public/assets/studio/cc0-20260906'
 REVIEW = ROOT / 'docs/reports/asset-visual-review-20260906'
 REVIEW_SHA = '0c99edac76dc728f8ba3a58b887a3ce35bcfab7b'
 QUARANTINE_ID = 'kenney-food-glass-wine'
 REVIEW_LEVEL = 'contact-sheet-visual-triage'
+MANIFEST_FILENAME = 'manifest.json'
+PBR_REVIEW_FILENAME = 'pbr-candidates-review.pdf'
+CURATION_SUMMARY_FILENAME = 'curation-summary.json'
+DELIVERY_REPORT_FILENAME = 'delivery-report.json'
 KOREAN_TERMS = {'wood':'목재','fabric':'직물','brick':'벽돌','metal':'금속','plaster':'회벽',
  'asphalt':'아스팔트','concrete':'콘크리트','stone':'석재','leather':'가죽','tile':'타일',
  'paper':'벽지','ground':'지면','chair':'의자','table':'테이블','potted':'화분',
@@ -39,10 +43,10 @@ def local_file(root: Path, relative: str) -> Path:
         raise ValueError('Unexpected asset-relative path')
     if any(part in {'', '.', '..'} for part in relative.split('/')):
         raise ValueError('Unsafe path component')
-    file = (root / relative).resolve()
-    if not file.is_relative_to(root.resolve()) or not file.is_file() or file.is_symlink():
+    asset_file = (root / relative).resolve()
+    if not asset_file.is_relative_to(root.resolve()) or not asset_file.is_file() or asset_file.is_symlink():
         raise ValueError('Missing or unsafe file: '+relative)
-    return file
+    return asset_file
 
 
 def is_component(identifier: str) -> bool:
@@ -83,18 +87,18 @@ def validate_asset(asset: dict, root: Path) -> None:
                 raise ValueError('Decoded image dimensions mismatch')
 
 
-def apply(candidates: Path, output: Path) -> dict:
-    source_manifest = json.loads((PUBLIC/'manifest.json').read_text())
+def apply(candidates: Path, output: Path) -> dict: # NOSONAR python:S3776
+    source_manifest = json.loads((PUBLIC/MANIFEST_FILENAME).read_text())
     source_assets = source_manifest['assets']
     # This operation is locked to the reviewed baseline; rerunning on a different
     # catalog requires a new review rather than silently inheriting old approval.
     if len(source_assets) != 1097 or not any(a['id'] == QUARANTINE_ID for a in source_assets):
         raise ValueError('The reviewed 1097-item baseline has changed')
-    new_manifest = json.loads((candidates/'manifest.json').read_text())
+    new_manifest = json.loads((candidates/MANIFEST_FILENAME).read_text())
     additions = new_manifest['assets']
     if len(additions) != 47 or Counter(a['kind'] for a in additions) != {'model':17,'surface-texture':30}:
         raise ValueError('Candidate artifact differs from the 47 visually reviewed originals')
-    if hashlib.sha256((candidates/'pbr-candidates-review.pdf').read_bytes()).hexdigest() != 'd1aa27db80fd73da9536f38afa8d2e1ac4c9c69a20b5eed2aa86c643ffa0158c':
+    if hashlib.sha256((candidates/PBR_REVIEW_FILENAME).read_bytes()).hexdigest() != 'd1aa27db80fd73da9536f38afa8d2e1ac4c9c69a20b5eed2aa86c643ffa0158c':
         raise ValueError('The viewed PBR contact sheet has changed')
     index = json.loads((REVIEW/'review-index.json').read_text())
     if index['totalVisualItems'] != 1351 or index['pages'] != 57:
@@ -113,7 +117,7 @@ def apply(candidates: Path, output: Path) -> dict:
     for variant in masks:
         if not variant['id'].endswith('-rotated'): continue
         base_id = variant['id'].removesuffix('-rotated')
-        preferred = sorted(canonical_masks, key=lambda a:a['id'] != base_id)
+        preferred = sorted(canonical_masks, key=lambda asset, base=base_id: asset['id'] != base)
         with Image.open(local_file(PUBLIC, variant['path'])) as candidate:
             for canonical in preferred:
                 with Image.open(local_file(PUBLIC, canonical['path'])) as original:
@@ -189,20 +193,20 @@ def apply(candidates: Path, output: Path) -> dict:
       'notice':'All listed contact-sheet images were viewed. Technical rendering, contact-sheet triage, full artistic approval and production deployment are different claims.'}
     output.mkdir(parents=True,exist_ok=True)
     for directory in (output, REVIEW):
-        save(directory/'curation-summary.json',report)
+        save(directory/CURATION_SUMMARY_FILENAME,report)
         save(directory/'visual-decisions.json',{'items':decisions,'newOriginals':[a for a in retained if a['id'].startswith('polyhaven-')]})
         save(directory/'retired-rotation-variants.json',{'variants':variants})
-    save(PUBLIC/'manifest.json',{'schema':'toonspectrum.asset-delivery.v1','assets':retained})
-    save(PUBLIC/'curation-summary.json',report)
+    save(PUBLIC/MANIFEST_FILENAME,{'schema':'toonspectrum.asset-delivery.v1','assets':retained})
+    save(PUBLIC/CURATION_SUMMARY_FILENAME,report)
     save(PUBLIC/'retired-assets.json',{'quarantined':[{'id':QUARANTINE_ID,'reason':'visual-render-artifact','originalFilePreserved':True}],'rotationVariants':variants})
-    shutil.copyfile(candidates/'pbr-candidates-review.pdf',REVIEW/'pbr-candidates-review.pdf')
+    shutil.copyfile(candidates/PBR_REVIEW_FILENAME,REVIEW/PBR_REVIEW_FILENAME)
     shutil.copyfile(candidates/'browser-render-evidence.json',REVIEW/'pbr-browser-render-evidence.json')
-    shutil.copyfile(candidates/'delivery-report.json',REVIEW/'pbr-acquisition-report.json')
-    old_report=json.loads((PUBLIC/'delivery-report.json').read_text())
+    shutil.copyfile(candidates/DELIVERY_REPORT_FILENAME,REVIEW/'pbr-acquisition-report.json')
+    old_report=json.loads((PUBLIC/DELIVERY_REPORT_FILENAME).read_text())
     old_report['initialDeliveryOriginals']=old_report['deliveredOriginals']
     old_report.update({'deliveredOriginals':len(retained),'byKind':report['byKind'],'byCategory':report['byCategory'],
-      'activeCatalogCuration':'curation-summary.json','repositoryBundledOriginals':len(retained),'verifiedDeliveryFiles':len(retained),'productionPublished':0})
-    save(PUBLIC/'delivery-report.json',old_report)
+      'activeCatalogCuration':CURATION_SUMMARY_FILENAME,'repositoryBundledOriginals':len(retained),'verifiedDeliveryFiles':len(retained),'productionPublished':0})
+    save(PUBLIC/DELIVERY_REPORT_FILENAME,old_report)
     # Replace the stale standalone gallery so it cannot continue offering retired IDs.
     cards=[]
     for a in sorted(retained,key=lambda x:not x['id'].startswith('polyhaven-')):

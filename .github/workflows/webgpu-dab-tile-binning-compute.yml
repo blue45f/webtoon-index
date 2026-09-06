@@ -5,25 +5,25 @@ on:
     branches:
       - main
     paths:
-      - "src/domains/creator/render/studio-webgpu-dab-tile-binning.ts"
-      - "src/domains/creator/render/studio-webgpu-dab-tile-binning.test.ts"
-      - "src/domains/creator/render/studio-webgpu-dab-tile-binning-compute.ts"
-      - "src/domains/creator/render/studio-webgpu-dab-tile-binning-compute.test.ts"
-      - "src/domains/creator/render/studio-webgpu-dab-tile-binning-wgsl-compat.test.ts"
-      - "src/domains/creator/render/studio-webgpu-sparse-brush-compute-runtime.ts"
-      - "src/domains/creator/render/studio-webgpu-sparse-brush-compute-runtime.test.ts"
+      - "apps/web/src/domains/creator/render/studio-webgpu-dab-tile-binning.ts"
+      - "apps/web/src/domains/creator/render/studio-webgpu-dab-tile-binning.test.ts"
+      - "apps/web/src/domains/creator/render/studio-webgpu-dab-tile-binning-compute.ts"
+      - "apps/web/src/domains/creator/render/studio-webgpu-dab-tile-binning-compute.test.ts"
+      - "apps/web/src/domains/creator/render/studio-webgpu-dab-tile-binning-wgsl-compat.test.ts"
+      - "apps/web/src/domains/creator/render/studio-webgpu-sparse-brush-compute-runtime.ts"
+      - "apps/web/src/domains/creator/render/studio-webgpu-sparse-brush-compute-runtime.test.ts"
       - "scripts/studio-webgpu-dab-tile-binning-compute-browser.ts"
       - "scripts/verify-studio-webgpu-dab-tile-binning-compute.mjs"
       - ".github/workflows/webgpu-dab-tile-binning-compute.yml"
   pull_request:
     paths:
-      - "src/domains/creator/render/studio-webgpu-dab-tile-binning.ts"
-      - "src/domains/creator/render/studio-webgpu-dab-tile-binning.test.ts"
-      - "src/domains/creator/render/studio-webgpu-dab-tile-binning-compute.ts"
-      - "src/domains/creator/render/studio-webgpu-dab-tile-binning-compute.test.ts"
-      - "src/domains/creator/render/studio-webgpu-dab-tile-binning-wgsl-compat.test.ts"
-      - "src/domains/creator/render/studio-webgpu-sparse-brush-compute-runtime.ts"
-      - "src/domains/creator/render/studio-webgpu-sparse-brush-compute-runtime.test.ts"
+      - "apps/web/src/domains/creator/render/studio-webgpu-dab-tile-binning.ts"
+      - "apps/web/src/domains/creator/render/studio-webgpu-dab-tile-binning.test.ts"
+      - "apps/web/src/domains/creator/render/studio-webgpu-dab-tile-binning-compute.ts"
+      - "apps/web/src/domains/creator/render/studio-webgpu-dab-tile-binning-compute.test.ts"
+      - "apps/web/src/domains/creator/render/studio-webgpu-dab-tile-binning-wgsl-compat.test.ts"
+      - "apps/web/src/domains/creator/render/studio-webgpu-sparse-brush-compute-runtime.ts"
+      - "apps/web/src/domains/creator/render/studio-webgpu-sparse-brush-compute-runtime.test.ts"
       - "scripts/studio-webgpu-dab-tile-binning-compute-browser.ts"
       - "scripts/verify-studio-webgpu-dab-tile-binning-compute.mjs"
       - ".github/workflows/webgpu-dab-tile-binning-compute.yml"
@@ -63,19 +63,19 @@ jobs:
       - name: Focused unit tests
         run: >-
           pnpm exec vitest run
-          src/domains/creator/render/studio-webgpu-dab-tile-binning.test.ts
-          src/domains/creator/render/studio-webgpu-dab-tile-binning-compute.test.ts
-          src/domains/creator/render/studio-webgpu-dab-tile-binning-wgsl-compat.test.ts
-          src/domains/creator/render/studio-webgpu-sparse-brush-compute-runtime.test.ts
+          apps/web/src/domains/creator/render/studio-webgpu-dab-tile-binning.test.ts
+          apps/web/src/domains/creator/render/studio-webgpu-dab-tile-binning-compute.test.ts
+          apps/web/src/domains/creator/render/studio-webgpu-dab-tile-binning-wgsl-compat.test.ts
+          apps/web/src/domains/creator/render/studio-webgpu-sparse-brush-compute-runtime.test.ts
 
       - name: Focused lint
         run: >-
           pnpm exec eslint --max-warnings=0
-          src/domains/creator/render/studio-webgpu-dab-tile-binning-compute.ts
-          src/domains/creator/render/studio-webgpu-dab-tile-binning-compute.test.ts
-          src/domains/creator/render/studio-webgpu-dab-tile-binning-wgsl-compat.test.ts
-          src/domains/creator/render/studio-webgpu-sparse-brush-compute-runtime.ts
-          src/domains/creator/render/studio-webgpu-sparse-brush-compute-runtime.test.ts
+          apps/web/src/domains/creator/render/studio-webgpu-dab-tile-binning-compute.ts
+          apps/web/src/domains/creator/render/studio-webgpu-dab-tile-binning-compute.test.ts
+          apps/web/src/domains/creator/render/studio-webgpu-dab-tile-binning-wgsl-compat.test.ts
+          apps/web/src/domains/creator/render/studio-webgpu-sparse-brush-compute-runtime.ts
+          apps/web/src/domains/creator/render/studio-webgpu-sparse-brush-compute-runtime.test.ts
 
       - name: Typecheck
         env:

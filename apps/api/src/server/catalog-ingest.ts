@@ -17,7 +17,7 @@ import {
 } from "./catalog-file";
 import { buildCatalogSourcePlan, parseCatalogSourceIds } from "./catalog-sources";
 
-import type { Title } from "../../../../lib/types";
+import type { Title } from "../../../web/src/shared/lib/types";
 
 
 const execFileAsync = promisify(execFile);

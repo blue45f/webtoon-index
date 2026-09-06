@@ -6,17 +6,17 @@ on:
     paths:
       - ".github/workflows/studio-editor-client-runtime.yml"
       - "packages/studio-command-registry/src/**"
-      - "src/domains/creator/editor-client/**"
-      - "src/domains/creator/studio-cuttoon-editor/StudioCuttoonEditorWorkspace.tsx"
-      - "src/domains/creator/studio-left-tool-rail-boundary.test.ts"
+      - "apps/web/src/domains/creator/editor-client/**"
+      - "apps/web/src/domains/creator/studio-cuttoon-editor/StudioCuttoonEditorWorkspace.tsx"
+      - "apps/web/src/domains/creator/studio-left-tool-rail-boundary.test.ts"
   push:
     branches: [main]
     paths:
       - ".github/workflows/studio-editor-client-runtime.yml"
       - "packages/studio-command-registry/src/**"
-      - "src/domains/creator/editor-client/**"
-      - "src/domains/creator/studio-cuttoon-editor/StudioCuttoonEditorWorkspace.tsx"
-      - "src/domains/creator/studio-left-tool-rail-boundary.test.ts"
+      - "apps/web/src/domains/creator/editor-client/**"
+      - "apps/web/src/domains/creator/studio-cuttoon-editor/StudioCuttoonEditorWorkspace.tsx"
+      - "apps/web/src/domains/creator/studio-left-tool-rail-boundary.test.ts"
   workflow_dispatch:
 
 permissions:
@@ -47,19 +47,19 @@ jobs:
         run: >-
           pnpm exec vitest run
           packages/studio-command-registry/src/__tests__/editor-client-runtime.test.ts
-          src/domains/creator/editor-client/studio-left-tool-rail-client.test.ts
-          src/domains/creator/studio-left-tool-rail-boundary.test.ts
+          apps/web/src/domains/creator/editor-client/studio-left-tool-rail-client.test.ts
+          apps/web/src/domains/creator/studio-left-tool-rail-boundary.test.ts
       - name: Strict focused lint
         run: >-
           pnpm exec eslint --max-warnings=0
           packages/studio-command-registry/src/editor-client-runtime.ts
           packages/studio-command-registry/src/__tests__/editor-client-runtime.test.ts
           packages/studio-command-registry/src/index.ts
-          src/domains/creator/editor-client/index.ts
-          src/domains/creator/editor-client/studio-left-tool-rail-client.ts
-          src/domains/creator/editor-client/studio-left-tool-rail-client.test.ts
-          src/domains/creator/studio-cuttoon-editor/StudioCuttoonEditorWorkspace.tsx
-          src/domains/creator/studio-left-tool-rail-boundary.test.ts
+          apps/web/src/domains/creator/editor-client/index.ts
+          apps/web/src/domains/creator/editor-client/studio-left-tool-rail-client.ts
+          apps/web/src/domains/creator/editor-client/studio-left-tool-rail-client.test.ts
+          apps/web/src/domains/creator/studio-cuttoon-editor/StudioCuttoonEditorWorkspace.tsx
+          apps/web/src/domains/creator/studio-left-tool-rail-boundary.test.ts
       - name: Command registry package typecheck
         run: pnpm exec tsc -p packages/studio-command-registry/tsconfig.json
       - name: Studio app typecheck

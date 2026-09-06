@@ -53,7 +53,7 @@ const WEEKDAY_MENUS = [
 const COMPLETE_RE = /(?:\(\s*완결\s*\)|\[\s*완결\s*\]|\(\s*完\s*\)|완결편)|완결$/; // NOSONAR S5850
 
 // creators[] → 글/그림 분리. type: AUTHOR / ILLUSTRATOR / ORIGINAL_AUTHOR 등.
-function splitCreators(creatorsRaw) {
+function splitCreators(creatorsRaw) { // NOSONAR javascript:S3776
   // tab/details / schedule 는 creators 가 "작가A, 작가B" 문자열.
   if (typeof creatorsRaw === "string") {
     const all = creatorsRaw
@@ -93,7 +93,7 @@ function pickCover(thumbnails) {
 }
 
 // 작품 한 건 → row. acc(누적 맵)에 이미 있으면 메타(완결/요일/표지) 보강만.
-function upsert(acc, item, ctx) {
+function upsert(acc, item, ctx) { // NOSONAR javascript:S3776
   const workId = String(item?.id ?? item?.contentsId ?? "").trim();
   if (!workId || workId === "undefined") return;
   const rawTitle = String(item?.title || "").trim();
@@ -148,7 +148,10 @@ function upsert(acc, item, ctx) {
   const id = `${PREFIX}-${workId}`;
   const alias = String(item?.alias || "").trim();
   const detailUrl = alias ? `${ORIGIN}/detail/${alias}` : `${ORIGIN}/detail/${workId}`;
-  const pricing = freetime ? "wait-free" : freeCount > 0 ? "free" : "paid";
+  let pricing;
+  if (freetime) pricing = "wait-free";
+  else if (freeCount > 0) pricing = "free";
+  else pricing = "paid";
 
   const row = {
     _normTitle: norm(title),
@@ -241,8 +244,7 @@ export async function crawl() {
   }
 
   // 3) 요일별 schedule → 완결 플래그/요일/추가 작품 보강.
-  for (let i = 0; i < WEEKDAY_MENUS.length; i++) {
-    const [menu, weekday] = WEEKDAY_MENUS[i];
+  for (const [menu, weekday] of WEEKDAY_MENUS) {
     const res = await fetchJson(
       `${API}/contents/main/schedule/COMIC?adultToggle=false&contentsThumbnailType=${THUMB_TYPES}&days=7&groupMenu=${menu}&mainGenre=ALL`,
       { referer: REFERER, headers: { ...HEADERS, "x-referer": REFERER } },

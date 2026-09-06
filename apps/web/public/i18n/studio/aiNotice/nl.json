@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Generatieve AI-beeldgids",
+  "studio.aiNotice.description": "Deze functie maakt afbeeldingen met behulp van generatieve AI (OpenAI). AI-badges worden weergegeven op de gemaakte resultaten.",
+  "studio.aiNotice.ruleCopyright": "We creëren geen werken, karakters of gezichten van echte mensen van anderen.",
+  "studio.aiNotice.ruleAccuracy": "AI-resultaten kunnen onnauwkeurig zijn of afwijken van de bedoeling.",
+  "studio.aiNotice.ruleResponsibility": "U bent verantwoordelijk voor het gebruik van de afbeeldingen die u maakt.",
+  "studio.aiNotice.cancel": "Annuleer",
+  "studio.aiNotice.confirm": "Ik begrijp het, creëer"
+}

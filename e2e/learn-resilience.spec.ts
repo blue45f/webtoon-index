@@ -2,7 +2,7 @@ import { readFile } from "node:fs/promises";
 
 import { expect, test } from "@playwright/test";
 
-import { EMPTY_LESSON, STORAGE_KEY } from "../src/domains/learn/learning-model";
+import { EMPTY_LESSON, STORAGE_KEY } from "../apps/web/src/domains/learn/learning-model";
 
 test.beforeEach(async ({ page }) => {
   await page.addInitScript(() => sessionStorage.setItem("toonspectrum-compat-dismissed", "true"));

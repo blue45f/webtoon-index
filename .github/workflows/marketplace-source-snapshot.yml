@@ -45,7 +45,7 @@ jobs:
             --exclude=playwright-report \
             --exclude=artifacts \
             --exclude=qa-results \
-            --exclude=public/data \
+            --exclude=apps/web/public/data \
             -czf /tmp/toonspectrum-market-source.tgz \
             "${paths[@]}"
 

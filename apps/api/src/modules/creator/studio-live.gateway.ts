@@ -103,7 +103,7 @@ import type {
   StudioLiveVoiceSignalInput,
   StudioLiveVoiceStateInput,
 } from "./studio-live.protocol";
-import type { StudioTeamCommentLiveEvent } from "../../../../../lib/studio-team-comment-live-event";
+import type { StudioTeamCommentLiveEvent } from "../../../../web/src/shared/lib/studio-team-comment-live-event";
 import type { Namespace } from "socket.io";
 
 export {

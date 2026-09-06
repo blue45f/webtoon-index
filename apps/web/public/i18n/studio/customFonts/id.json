@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "font saya",
+  "studio.customFonts.importButton": "Impor dari file",
+  "studio.customFonts.importing": "Memeriksa…",
+  "studio.customFonts.importAria": "Impor file font",
+  "studio.customFonts.storageAria": "Penggunaan perpustakaan font",
+  "studio.customFonts.emptyTitle": "Belum ada font yang disertakan.",
+  "studio.customFonts.unknownFileName": "Tidak ada nama file",
+  "studio.customFonts.apply": "Terapkan",
+  "studio.customFonts.applyToText": "Terapkan font ini ke teks yang dipilih",
+  "studio.customFonts.selectTextFirst": "Pertama pilih teks atau gelembung ucapan",
+  "studio.customFonts.delete": "hapus font"
+}

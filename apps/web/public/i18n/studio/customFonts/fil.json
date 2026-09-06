@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "ang font ko",
+  "studio.customFonts.importButton": "Mag-import mula sa file",
+  "studio.customFonts.importing": "Sinusuri…",
+  "studio.customFonts.importAria": "Mag-import ng font file",
+  "studio.customFonts.storageAria": "Paggamit ng font library",
+  "studio.customFonts.emptyTitle": "Wala pang mga font na kasama.",
+  "studio.customFonts.unknownFileName": "Walang pangalan ng file",
+  "studio.customFonts.apply": "Mag-apply",
+  "studio.customFonts.applyToText": "Ilapat ang font na ito sa napiling teksto",
+  "studio.customFonts.selectTextFirst": "Pumili muna ng text o speech bubble",
+  "studio.customFonts.delete": "tanggalin ang font"
+}

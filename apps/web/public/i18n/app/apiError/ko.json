@@ -1,0 +1,9 @@
+{
+  "apiError.loginRequired": "로그인이 필요해요.",
+  "apiError.adminRequired": "관리자 권한을 확인할 수 없습니다.",
+  "apiError.adminOnlyPage": "관리자 전용 페이지입니다.",
+  "apiError.notFound": "대상 대상을 찾을 수 없어요.",
+  "apiError.unsupportedType": "지원하지 않는 콘텐츠 타입이에요.",
+  "apiError.inactiveAccount": "비활성 계정은 관리자 권한을 사용할 수 없습니다.",
+  "apiError.settlementFailed": "정산 처리에 실패했습니다."
+}

@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "ನನ್ನ ಫಾಂಟ್",
+  "studio.customFonts.importButton": "ಫೈಲ್‌ನಿಂದ ಆಮದು ಮಾಡಿ",
+  "studio.customFonts.importing": "ಪರಿಶೀಲಿಸಲಾಗುತ್ತಿದೆ...",
+  "studio.customFonts.importAria": "ಫಾಂಟ್ ಫೈಲ್ ಅನ್ನು ಆಮದು ಮಾಡಿ",
+  "studio.customFonts.storageAria": "ಫಾಂಟ್ ಲೈಬ್ರರಿ ಬಳಕೆ",
+  "studio.customFonts.emptyTitle": "ಇನ್ನೂ ಯಾವುದೇ ಫಾಂಟ್‌ಗಳನ್ನು ಸೇರಿಸಲಾಗಿಲ್ಲ.",
+  "studio.customFonts.unknownFileName": "ಫೈಲ್ ಹೆಸರು ಇಲ್ಲ",
+  "studio.customFonts.apply": "ಅನ್ವಯಿಸು",
+  "studio.customFonts.applyToText": "ಆಯ್ದ ಪಠ್ಯಕ್ಕೆ ಈ ಫಾಂಟ್ ಅನ್ನು ಅನ್ವಯಿಸಿ",
+  "studio.customFonts.selectTextFirst": "ಮೊದಲು ಪಠ್ಯ ಅಥವಾ ಮಾತಿನ ಬಬಲ್ ಆಯ್ಕೆಮಾಡಿ",
+  "studio.customFonts.delete": "ಫಾಂಟ್ ಅಳಿಸಿ"
+}

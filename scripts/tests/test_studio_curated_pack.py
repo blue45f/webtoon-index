@@ -8,6 +8,8 @@ import unittest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from pack_studio_curated_gltf import pack
 
+A_IMAGE = 'a.png'
+
 
 class PackTests(unittest.TestCase):
     def setUp(self):
@@ -18,8 +20,8 @@ class PackTests(unittest.TestCase):
         self.output = self.root / 'model.glb'
         self.image = b'\x89PNG\r\n\x1a\nsynthetic-image-signature-only'
         (self.root / 'a.bin').write_bytes(b'1234')
-        (self.root / 'a.png').write_bytes(self.image)
-        self.doc = {'asset': {'version': '2.0'}, 'buffers': [{'uri': 'a.bin', 'byteLength': 4}], 'bufferViews': [{'buffer': 0, 'byteLength': 4}], 'images': [{'uri': 'a.png'}], 'nodes': [], 'meshes': [], 'materials': [{'doubleSided': True}]}
+        (self.root / A_IMAGE).write_bytes(self.image)
+        self.doc = {'asset': {'version': '2.0'}, 'buffers': [{'uri': 'a.bin', 'byteLength': 4}], 'bufferViews': [{'buffer': 0, 'byteLength': 4}], 'images': [{'uri': A_IMAGE}], 'nodes': [], 'meshes': [], 'materials': [{'doubleSided': True}]}
         self.save()
 
     def save(self):
@@ -43,7 +45,7 @@ class PackTests(unittest.TestCase):
         self.assertTrue(report['geometryBytesPreserved'])
 
     def test_deduplicates_identical_images_inside_one_glb(self):
-        self.doc['images'].append({'uri': 'a.png'})
+        self.doc['images'].append({'uri': A_IMAGE})
         self.save()
         pack(self.source, self.output)
         raw = self.output.read_bytes(); n = struct.unpack_from('<I', raw, 12)[0]
@@ -58,7 +60,7 @@ class PackTests(unittest.TestCase):
                     pack(self.source, self.output)
 
     def test_symlink_rejected(self):
-        (self.root / 'link.png').symlink_to(self.root / 'a.png')
+        (self.root / 'link.png').symlink_to(self.root / A_IMAGE)
         self.doc['images'][0]['uri'] = 'link.png'; self.save()
         with self.assertRaises(ValueError): pack(self.source, self.output)
 

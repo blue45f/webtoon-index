@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "мой шрыфт",
+  "studio.customFonts.importButton": "Імпарт з файла",
+  "studio.customFonts.importing": "Ідзе праверка…",
+  "studio.customFonts.importAria": "Імпарт файла шрыфта",
+  "studio.customFonts.storageAria": "Выкарыстанне бібліятэкі шрыфтоў",
+  "studio.customFonts.emptyTitle": "Шрыфты пакуль не ўключаны.",
+  "studio.customFonts.unknownFileName": "Няма імя файла",
+  "studio.customFonts.apply": "Ужыць",
+  "studio.customFonts.applyToText": "Прымяніць гэты шрыфт да вылучанага тэксту",
+  "studio.customFonts.selectTextFirst": "Спачатку выберыце тэкст або бурбалку з прамовай",
+  "studio.customFonts.delete": "выдаліць шрыфт"
+}

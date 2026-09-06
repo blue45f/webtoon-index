@@ -1,7 +1,7 @@
 import { BadRequestException, ForbiddenException, Injectable, NotFoundException, UnauthorizedException } from "@nestjs/common";
 
-import { parseCommunitySort } from "../../../../../lib/community-ui";
-import { GENRES } from "../../../../../lib/taxonomy";
+import { parseCommunitySort } from "../../../../web/src/shared/lib/community-ui";
+import { GENRES } from "../../../../web/src/shared/lib/taxonomy";
 import {
   createCafe,
   createFanPost,
@@ -29,7 +29,7 @@ import {
 } from "../../server/community";
 import { getReviewsData } from "../../server/reviews";
 
-import type { CommunityCafe, FanCafePost, FanCafeReply, ReviewReply } from "../../../../../lib/types";
+import type { CommunityCafe, FanCafePost, FanCafeReply, ReviewReply } from "../../../../web/src/shared/lib/types";
 
 interface PostQuery {
   scope?: string | null;

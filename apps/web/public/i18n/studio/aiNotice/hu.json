@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Generatív AI képútmutató",
+  "studio.aiNotice.description": "Ez a funkció generatív AI (OpenAI) segítségével hoz létre képeket. A létrehozott eredményeken AI jelvények jelennek meg.",
+  "studio.aiNotice.ruleCopyright": "Nem készítünk mások műveit, karaktereit vagy valódi emberek arcát.",
+  "studio.aiNotice.ruleAccuracy": "Az AI eredmények pontatlanok lehetnek, vagy eltérhetnek a tervezetttől.",
+  "studio.aiNotice.ruleResponsibility": "Ön felelős az Ön által létrehozott képek felhasználásáért.",
+  "studio.aiNotice.cancel": "Mégse",
+  "studio.aiNotice.confirm": "Értem, teremts"
+}

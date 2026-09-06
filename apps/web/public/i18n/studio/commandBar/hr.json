@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Traka brzih naredbi",
+  "studio.commandBar.settings": "Postavke naredbene trake",
+  "studio.commandBar.settingsDescription": "Promijenite raspored utora i vidljivost naredbene trake ispod trake izbornika.",
+  "studio.commandBar.settingsTip": "Naredbe koje najčešće koristite stavite u prve utore da vam budu najbrže nadohvat ruke.",
+  "studio.commandBar.settingsClose": "Zatvori postavke naredbene trake",
+  "studio.commandBar.settingsStorageNote": "Raspored utora sprema se u postavke radnog prostora ovog preglednika.",
+  "studio.commandBar.showSlots": "Prikaži utore naredbi",
+  "studio.commandBar.slot": "Utor {index}",
+  "studio.commandBar.slotAria": "Utor naredbe {index}",
+  "studio.commandBar.slotEmpty": "Prazan utor",
+  "studio.commandBar.resetDefaults": "Vrati na zadani raspored",
+  "studio.commandBar.command.undo": "Poništi",
+  "studio.commandBar.command.redo": "Ponovi",
+  "studio.commandBar.command.save": "Spremi skicu",
+  "studio.commandBar.command.publish": "Objavi",
+  "studio.commandBar.command.download": "Preuzmi trenutnu stranicu",
+  "studio.commandBar.command.export-open": "Mogućnosti izvoza",
+  "studio.commandBar.command.zoom-fit": "Prilagodi širini zaslona",
+  "studio.commandBar.command.assets": "Predlošci i resursi",
+  "studio.commandBar.command.bubbles": "Oblačić za govor",
+  "studio.commandBar.command.project": "Alati projekta"
+}

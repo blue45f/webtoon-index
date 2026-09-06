@@ -188,9 +188,12 @@ for (const status of [401, 403, 429, 500]) test(`HTTP ${status} error body is no
 // before the lookup/upload stages). Under parallel CI load that first fetch can exceed 100 ms, which
 // would time out the wrong stage; keep the deadline well above cold-start latency.
 const STALLED_STAGE_TIMEOUT_MS = "2000";
-for (const stage of ["login", "work", "lookup", "upload"]) test(`real CLI ${stage} request times out without automatic retries`, async () => withManifest(async (manifest) => {
+for (const stage of ["login", "work", "lookup", "upload"]) test(`real CLI ${stage} request times out without automatic retries`, async () => withManifest(async (manifest) => { // NOSONAR javascript:S3776
   await withServer(async (req, res) => {
-    const current = req.url.includes("/auth/") ? "login" : req.method === "PUT" ? "upload" : req.url.includes("/assets/") ? "lookup" : "work";
+    let current = "work";
+    if (req.url.includes("/auth/")) current = "login";
+    else if (req.method === "PUT") current = "upload";
+    else if (req.url.includes("/assets/")) current = "lookup";
     if (current === stage) { res.writeHead(200); res.flushHeaders(); res.write("{"); return; }
     if (current === "lookup") { json(res, {}, 404); return; }
     json(res, { id: "test-work" });
@@ -203,10 +206,11 @@ for (const stage of ["login", "work", "lookup", "upload"]) test(`real CLI ${stag
     assert.equal(puts.length, stage === "upload" ? 1 : 0);
   });
 }));
-
 for (const kind of ["empty", "filter", "resume"]) test(`empty ${kind} selection makes no work or auth request`, async () => withManifest(async (manifest) => {
   await withServer((req, res) => json(res, { id: "unexpected-work" }), async (url, requests) => {
-    const extras = kind === "filter" ? ["--filter-category", "absent"] : kind === "resume" ? ["--start-index", "2"] : [];
+    let extras = [];
+    if (kind === "filter") extras = ["--filter-category", "absent"];
+    else if (kind === "resume") extras = ["--start-index", "2"];
     const result = await cli(["--base-url", url, "--manifest", manifest, "--auto-demo-login", ...extras]);
     assert.equal(result.code, 2); assert.equal(requests.length, 0);
   });

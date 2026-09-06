@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Thanh lệnh nhanh",
+  "studio.commandBar.settings": "Cài đặt thanh lệnh",
+  "studio.commandBar.settingsDescription": "Đổi cách sắp xếp ô lệnh và hiển thị của thanh lệnh dưới thanh menu.",
+  "studio.commandBar.settingsTip": "Đặt những lệnh dùng nhiều nhất vào các ô đầu để với tới nhanh nhất.",
+  "studio.commandBar.settingsClose": "Đóng cài đặt thanh lệnh",
+  "studio.commandBar.settingsStorageNote": "Cách sắp xếp ô lệnh được lưu trong cài đặt không gian làm việc của trình duyệt này.",
+  "studio.commandBar.showSlots": "Hiển thị ô lệnh",
+  "studio.commandBar.slot": "Ô {index}",
+  "studio.commandBar.slotAria": "Ô lệnh {index}",
+  "studio.commandBar.slotEmpty": "Ô trống",
+  "studio.commandBar.resetDefaults": "Đặt lại về cách sắp xếp mặc định",
+  "studio.commandBar.command.undo": "Hoàn tác",
+  "studio.commandBar.command.redo": "Làm lại",
+  "studio.commandBar.command.save": "Lưu bản nháp",
+  "studio.commandBar.command.publish": "Đăng",
+  "studio.commandBar.command.download": "Tải xuống trang hiện tại",
+  "studio.commandBar.command.export-open": "Tùy chọn xuất",
+  "studio.commandBar.command.zoom-fit": "Vừa chiều rộng màn hình",
+  "studio.commandBar.command.assets": "Mẫu và tài nguyên",
+  "studio.commandBar.command.bubbles": "Bong bóng thoại",
+  "studio.commandBar.command.project": "Công cụ dự án"
+}

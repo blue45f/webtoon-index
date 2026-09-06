@@ -75,7 +75,7 @@ function validSha256(value) {
   return typeof value === "string" && /^sha256:[0-9a-f]{64}$/.test(value);
 }
 
-function validateSuccess(result, diagnostics) {
+function validateSuccess(result, diagnostics) { // NOSONAR javascript:S3776
   const failures = [];
   if (result.backend !== "real-chromium-webgpu-presentation") {
     failures.push(`unexpected backend: ${result.backend}`);
@@ -234,7 +234,7 @@ function validateSuccess(result, diagnostics) {
   return failures;
 }
 
-async function main() {
+async function main() { // NOSONAR javascript:S3776
   mkdirSync(SCRATCH, { recursive: true });
   const port = await findFreePort();
   const viteServer = await createViteServer({

@@ -1,10 +1,10 @@
-// 정적 카탈로그 생성기 — 커밋된 gz 스냅샷을 읽어 public/data/*.json 을 만든다.
+// 정적 카탈로그 생성기 — 커밋된 gz 스냅샷을 읽어 apps/web/public/data/*.json 을 만든다.
 //
-//   pnpm catalog:gen                       # apps/api/data/catalog.json.gz → public/data/*
+//   pnpm catalog:gen                       # apps/api/data/catalog.json.gz → apps/web/public/data/*
 //   WEBDEX_CATALOG_GZ=path pnpm catalog:gen
 //
 // 카탈로그 읽기에 Neon/DB 를 전혀 쓰지 않는다(순수 함수만). 리뷰·북마크·인증은 런타임 /api 담당.
-// public/data 는 빌드 산출물(.gitignore) — git 소스는 2.3MB gz 하나만 유지한다.
+// apps/web/public/data 는 빌드 산출물(.gitignore) — git 소스는 2.3MB gz 하나만 유지한다.
 import { existsSync, mkdirSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -18,26 +18,26 @@ import {
   toCalendarTitle,
   toListTitle,
   type DetailShardFile,
-} from "../lib/catalog-slim";
-import { PLATFORM_LIST } from "../lib/platforms";
-import { rankBy, RANK_AXES } from "../lib/ranking";
-import { sortTitles } from "../lib/search";
-import { getCalendarData } from "../lib/server/calendar";
+} from "../apps/web/src/shared/lib/catalog-slim";
+import { PLATFORM_LIST } from "../apps/web/src/shared/lib/platforms";
+import { rankBy, RANK_AXES } from "../apps/web/src/shared/lib/ranking";
+import { sortTitles } from "../apps/web/src/shared/lib/search";
+import { getCalendarData } from "../apps/web/src/shared/lib/server/calendar";
 import {
   activeTags,
   adaptationsOf,
   getAuthorDirectory,
   replaceCatalogData,
   TITLES,
-} from "../lib/server/catalog-store";
-import { getInsightsData } from "../lib/server/insights";
-import { getRankingData } from "../lib/server/ranking-service";
-import { GENRES, WEEK_DAYS } from "../lib/taxonomy";
-import { kstDayOfWeek } from "../lib/utils";
+} from "../apps/web/src/shared/lib/server/catalog-store";
+import { getInsightsData } from "../apps/web/src/shared/lib/server/insights";
+import { getRankingData } from "../apps/web/src/shared/lib/server/ranking-service";
+import { GENRES, WEEK_DAYS } from "../apps/web/src/shared/lib/taxonomy";
+import { kstDayOfWeek } from "../apps/web/src/shared/lib/utils";
 
 import { readFileIfExists, writeNews } from "./news-gen";
 
-import type { Title } from "../lib/types";
+import type { Title } from "../apps/web/src/shared/lib/types";
 
 const RANK_TYPES = ["all", "webtoon", "webnovel"];
 
@@ -73,7 +73,7 @@ function loadRelatedInfoSnapshot(): RelatedSnapshot {
 }
 
 // 상세 전용 필드(시놉시스 원문·보러가기 URL·평점분포·관련 정보)를 해시 버킷 샤드로 분리 —
-// 상세/비교 화면이 작은 샤드 1개만 추가로 받아 병합한다(src/catalog-static-engine.ts).
+// 상세/비교 화면이 작은 샤드 1개만 추가로 받아 병합한다(src/shared/catalog/catalog-static-engine.ts).
 function buildDetailShards(titles: readonly Title[]): { files: DetailShardFile[]; entryCount: number } {
   const files: DetailShardFile[] = Array.from({ length: DETAIL_SHARD_COUNT }, () => ({}));
   const related = loadRelatedInfoSnapshot();
@@ -96,7 +96,7 @@ const SRC_GZ =
   process.env.WEBDEX_CATALOG_FILE ??
   process.env.WEBDEX_CATALOG_GZ ??
   path.join(ROOT, "apps/api/data/catalog.json.gz");
-const OUT = path.join(ROOT, "public", "data");
+const OUT = path.join(ROOT, "apps", "web", "public", "data");
 
 function loadTitles(): Title[] {
   if (!existsSync(SRC_GZ)) {
@@ -213,8 +213,8 @@ async function main(): Promise<void> {
   console.log("완료.");
 }
 
-// SEO 사이트맵 — 정적 라우트 + 품질 작품 상세 URL. public/ 루트에 써서 /sitemap.xml 로 서빙.
-// (public/sitemap.xml 은 빌드 산출물이라 .gitignore. robots.txt 가 이 위치를 가리킨다.)
+// SEO 사이트맵 — 정적 라우트 + 품질 작품 상세 URL. apps/web/public/ 루트에 써서 /sitemap.xml 로 서빙.
+// (apps/web/public/sitemap.xml 은 빌드 산출물이라 .gitignore. robots.txt 가 이 위치를 가리킨다.)
 function writeSitemap(): void {
   const BASE = "https://www.toonstudio.cloud";
   const STATIC_ROUTES = [
@@ -242,7 +242,7 @@ function writeSitemap(): void {
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
     urls.join("\n") +
     `\n</urlset>\n`;
-  const file = path.join(ROOT, "public", "sitemap.xml");
+  const file = path.join(ROOT, "apps", "web", "public", "sitemap.xml");
   writeFileSync(file, xml);
   console.log(`  sitemap.xml      ${(statSync(file).size / 1024).toFixed(0).padStart(5)} KB (${urls.length} URLs)`);
 }

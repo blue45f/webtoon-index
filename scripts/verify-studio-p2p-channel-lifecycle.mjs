@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { bindStudioLiveP2pChannelLifecycle } from "../src/domains/creator/live/studio-live-p2p-channel-lifecycle.ts";
+import { bindStudioLiveP2pChannelLifecycle } from "../apps/web/src/domains/creator/live/studio-live-p2p-channel-lifecycle.ts";
 
 class Channel {
   readyState = "connecting";

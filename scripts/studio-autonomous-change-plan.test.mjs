@@ -48,8 +48,8 @@ test("WebGPU renderer changes always inherit the canvas risk contract", () => {
 
 test("OPFS and recovery-journal changes trigger storage and browser gates", () => {
   const classification = classifyStudioChanges([
-    "src/domains/creator/persistence/studio-recovery-journal.ts",
-    "components/studio/runtime/studio-autosave-opfs-worker.ts",
+    "apps/web/src/domains/creator/persistence/studio-recovery-journal.ts",
+    "apps/web/src/domains/creator/studio/components/runtime/studio-autosave-opfs-worker.ts",
   ]);
 
   assert.equal(classification.categories.storage, true);
@@ -72,7 +72,7 @@ test("command registry and undo stack changes trigger history and browser gates"
 
 test("inspector-only UI changes request browser and build validation without inventing storage risk", () => {
   const classification = classifyStudioChanges([
-    "src/domains/creator/inspector/StudioInspectorPanel.tsx",
+    "apps/web/src/domains/creator/inspector/StudioInspectorPanel.tsx",
   ]);
 
   assert.equal(classification.categories.ui, true);
@@ -112,14 +112,14 @@ test("control-plane workflow changes do not impersonate a runtime deployment", (
 test("paths are normalized, deduplicated, and sorted deterministically", () => {
   const classification = classifyStudioChanges([
     ".\\src\\domains\\creator\\canvas\\StudioCanvas.tsx",
-    "src/domains/creator/canvas/StudioCanvas.tsx",
+    "apps/web/src/domains/creator/canvas/StudioCanvas.tsx",
     "  components/studio/brush/studio-brush-runtime.ts  ",
     "",
   ]);
 
   assert.deepEqual(classification.paths, [
-    "components/studio/brush/studio-brush-runtime.ts",
-    "src/domains/creator/canvas/StudioCanvas.tsx",
+    "apps/web/src/domains/creator/studio/components/brush/studio-brush-runtime.ts",
+    "apps/web/src/domains/creator/canvas/StudioCanvas.tsx",
   ]);
   assert.equal(classification.changedCount, 2);
   assert.equal(classification.categories.canvas, true);

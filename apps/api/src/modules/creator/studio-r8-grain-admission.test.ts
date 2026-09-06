@@ -9,7 +9,7 @@ import {
 } from "./studio-r8-grain-admission";
 
 import type { StudioWorkAssetContent } from "./studio-work-asset.repository";
-import type { StudioBrushR8TextureGrainSource } from "../../../../../lib/studio-brush-r8-grain-asset-contract";
+import type { StudioBrushR8TextureGrainSource } from "../../../../web/src/shared/lib/studio-brush-r8-grain-asset-contract";
 
 function sha256(bytes: Uint8Array): string {
   return createHash("sha256").update(bytes).digest("hex");

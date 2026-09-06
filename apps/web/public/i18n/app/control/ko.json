@@ -1,0 +1,14 @@
+{
+  "control.language.label": "언어 선택",
+  "control.language.group.translated": "번역된 언어",
+  "control.language.group.englishBase": "영어로 표시됨 (번역 준비 중)",
+  "control.sound.enable": "효과음 켜기",
+  "control.sound.disable": "효과음 끄기",
+  "control.theme.dark": "야간 모드 전환",
+  "control.theme.light": "주간 모드 전환",
+  "control.settings.open": "설정 열기",
+  "control.settings.close": "설정 닫기",
+  "control.cluster.settings": "사운드·테마·언어 설정",
+  "control.cluster.open": "설정 열기",
+  "control.cluster.tooltip": "사운드·테마·언어 설정"
+}

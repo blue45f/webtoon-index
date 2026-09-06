@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Panduan Imej AI Generatif",
+  "studio.aiNotice.description": "Fungsi ini mencipta imej menggunakan AI generatif (OpenAI). Lencana AI dipaparkan pada hasil yang dibuat.",
+  "studio.aiNotice.ruleCopyright": "Kami tidak mencipta karya orang lain, watak, atau wajah orang sebenar.",
+  "studio.aiNotice.ruleAccuracy": "Keputusan AI mungkin tidak tepat atau berbeza daripada yang dimaksudkan.",
+  "studio.aiNotice.ruleResponsibility": "Anda bertanggungjawab untuk menggunakan imej yang anda cipta.",
+  "studio.aiNotice.cancel": "Batal",
+  "studio.aiNotice.confirm": "Saya faham, cipta"
+}

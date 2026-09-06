@@ -1,0 +1,19 @@
+{
+  "studio.mobileDock.label": "Studio mobile toolbar",
+  "studio.mobileDock.drawingTools": "Drawing tools",
+  "studio.mobileDock.workspaceTools": "Workspace",
+  "studio.mobileDock.workspaceToggle": "Tools",
+  "studio.mobileDock.expandWorkspaceTools": "Expand workspace tools",
+  "studio.mobileDock.collapseWorkspaceTools": "Collapse workspace tools",
+  "studio.mobileDock.brushSettings": "Brush settings (size, color, presets)",
+  "studio.mobileDock.tool.pixel": "පික්සල් පෑන",
+  "studio.mobileDock.tool.shape": "හැඩතල",
+  "studio.mobileDock.tool.pages": "පිටු",
+  "studio.mobileDock.tool.export": "Export",
+  "studio.mobileDock.tool.search": "Find",
+  "studio.mobileDock.tool.search.title": "Find features & settings · also by CSP/Photoshop terms",
+  "studio.mobileDock.pagesOpen": "Open page list",
+  "studio.mobileDock.pagesClose": "Close page list",
+  "studio.mobileDock.tool.undo": "අහෝසි කරන්න",
+  "studio.mobileDock.tool.redo": "නැවත දුවන්න"
+}

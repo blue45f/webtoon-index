@@ -111,7 +111,6 @@ def _configure_render(scene: bpy.types.Scene, options: RenderOptions) -> None:
     scene.render.use_file_extension = True
     scene.render.use_overwrite = True
     scene.render.use_placeholder = False
-    scene.render.engine = scene.render.engine
     # Blender 5.2 shortened AgX look identifiers, while older releases used the
     # prefixed spelling. Prefer the older label first so the same kit remains backward compatible.
     for look in ("AgX - Medium High Contrast", "Medium High Contrast"):
@@ -142,7 +141,7 @@ def _is_generated_shape_key(obj: bpy.types.Object, key_name: str) -> bool:
     return bool(obj.get(marker, False))
 
 
-def _set_expression(objects: Sequence[bpy.types.Object], expression: str) -> dict[tuple[str, str], float]:
+def _set_expression(objects: Sequence[bpy.types.Object], expression: str) -> dict[tuple[str, str], float]: # NOSONAR python:S3776
     snapshot: dict[tuple[str, str], float] = {}
     aliases = _EXPRESSION_ALIASES.get(expression, ())
     for obj in objects:

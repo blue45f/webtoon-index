@@ -1,0 +1,21 @@
+{
+  "auth.menu.triggerLabel": "帳戶選單",
+  "auth.menu.adminPanel": "管理控制台",
+  "auth.menu.profile": "我的個人資料",
+  "auth.menu.settings": "設定",
+  "auth.menu.signOut": "登出",
+  "auth.menu.fallbackName": "讀者",
+  "auth.callback.error.badState": "狀態參數無效。",
+  "auth.callback.error.accessDenied": "登入已取消。",
+  "auth.callback.error.generic": "登入失敗。",
+  "auth.callback.error.failed": "登入時發生錯誤。",
+  "auth.callback.error.unsupported": "不支援的登入提供者。",
+  "auth.callback.error.noUser": "無法驗證用戶資訊。",
+  "auth.callback.error.oauthFailed": "OAuth 交換失敗。",
+  "auth.callback.error.noCode": "缺少授權碼。",
+  "auth.callback.error.invalidAccess": "無效訪問。",
+  "auth.callback.message.working": "正在完成登入...",
+  "auth.callback.message.done": "登入完成。很快就會重定向。",
+  "auth.callback.message.doneDemo": "演示登入完成。很快就會重定向。",
+  "auth.callback.demo.message": "您已使用模擬帳號登入。某些功能可能會受到限制。"
+}

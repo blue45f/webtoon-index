@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "el meu tipus de lletra",
+  "studio.customFonts.importButton": "Importa des del fitxer",
+  "studio.customFonts.importing": "S'està comprovant…",
+  "studio.customFonts.importAria": "Importa un fitxer de tipus de lletra",
+  "studio.customFonts.storageAria": "Ús de la biblioteca de fonts",
+  "studio.customFonts.emptyTitle": "Encara no hi ha tipus de lletra incloses.",
+  "studio.customFonts.unknownFileName": "Sense nom de fitxer",
+  "studio.customFonts.apply": "Aplicar",
+  "studio.customFonts.applyToText": "Apliqueu aquest tipus de lletra al text seleccionat",
+  "studio.customFonts.selectTextFirst": "Primer seleccioneu text o bombolla de parla",
+  "studio.customFonts.delete": "esborra el tipus de lletra"
+}

@@ -1,14 +1,14 @@
 import {
   StudioHokusaiLiveOverlayRenderer,
-} from "../src/domains/creator/render/studio-hokusai-live-brush-overlay";
+} from "../apps/web/src/domains/creator/render/studio-hokusai-live-brush-overlay";
 import {
   StudioHokusaiLiveBrushProvider,
   type StudioHokusaiLiveFrame,
-} from "../src/domains/creator/render/studio-hokusai-live-brush-runtime";
+} from "../apps/web/src/domains/creator/render/studio-hokusai-live-brush-runtime";
 
 import type {
   StudioHokusaiLiveSampleLike,
-} from "../src/domains/creator/render/studio-hokusai-live-brush-protocol";
+} from "../apps/web/src/domains/creator/render/studio-hokusai-live-brush-protocol";
 
 declare global {
   interface Window {

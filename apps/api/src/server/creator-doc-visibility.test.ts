@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 import {
   appendStudioAiOperation,
   createEmptyStudioAiProvenanceDocument,
-} from "../../../../src/domains/creator/ai/studio-ai-provenance";
+} from "../../../web/src/domains/creator/ai/studio-ai-provenance";
 
 import { toPublicCreatorDoc } from "./creator-doc-visibility";
 

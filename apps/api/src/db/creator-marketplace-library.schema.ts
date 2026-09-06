@@ -14,7 +14,7 @@ import {
   CREATOR_MARKETPLACE_LEGACY_SEMVER_POSTGRES_PATTERN,
   CREATOR_MARKETPLACE_SEMVER_MAX_CHARACTERS,
   CREATOR_MARKETPLACE_SEMVER_POSTGRES_PATTERN,
-} from "../../../../lib/creator-marketplace-semver";
+} from "../../../web/src/shared/lib/creator-marketplace-semver";
 
 import { creatorMarketplaceResources } from "./creator-marketplace-resource.schema";
 import { bytea, users } from "./schema";

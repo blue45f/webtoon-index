@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Esercitazione sulle funzionalità",
+  "studio.hub.subtitle": "Una funzione alla volta senza alcun onere. Ho guardato {done}/{total}.",
+  "studio.hub.progressAriaLabel": "Avanzamento dell'esercitazione",
+  "studio.hub.listAriaLabel": "Elenco delle funzionalità",
+  "studio.hub.checked": "dai un'occhiata",
+  "studio.hub.prev": "Precedente",
+  "studio.hub.next": "successivo",
+  "studio.hub.markComplete": "contrassegnare come completo",
+  "studio.hub.completed": "Completato",
+  "studio.hub.tryLabelDefault": "Seguimi",
+  "studio.hub.stepAriaPrefix": "passo"
+}

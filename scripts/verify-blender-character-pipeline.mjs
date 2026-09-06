@@ -16,7 +16,7 @@ const required = [
   "config/blender/reference-character.json",
   "config/blender/avatar-orion-production.json",
   "config/blender/toonstudio-character-pipeline.schema.json",
-  "src/domains/creator/vrm/studio-vrm-blender-character-package.ts",
+  "apps/web/src/domains/creator/vrm/studio-vrm-blender-character-package.ts",
 ];
 for (const relative of required) {
   const target = path.join(root, relative);
@@ -44,7 +44,7 @@ const reference = JSON.parse(await readFile(path.join(root, "config/blender/refe
 const orion = JSON.parse(await readFile(path.join(root, "config/blender/avatar-orion-production.json"), "utf8"));
 if (reference.mode !== "reference" || reference.export.vrm !== false) throw new Error("reference config boundary changed");
 if (orion.mode !== "upgrade" || orion.export.vrm !== true) throw new Error("production VRM config boundary changed");
-if (orion.inputPath !== "public/vrm/Avatar_Orion.vrm") {
+if (orion.inputPath !== "apps/web/public/vrm/Avatar_Orion.vrm") {
   throw new Error("Orion production source must be the repaired VRM 1.0 asset");
 }
 if (orion.provenance.sourceGitBlob !== "b244cf74aa845e75b33a4e48a962ebd880ec2210") {

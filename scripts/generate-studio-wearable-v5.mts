@@ -16,7 +16,7 @@ import { mergeGeometries, mergeVertices } from "three/examples/jsm/utils/BufferG
 type Point = readonly [number, number, number];
 type Material = T.MeshStandardMaterial;
 const PI = Math.PI;
-const output = resolve(process.argv[2] ?? "public/assets/3d");
+const output = resolve(process.argv[2] ?? "apps/web/public/assets/3d");
 
 // GLTFExporter only needs these two asynchronous Blob reads in the texture-free Node path.
 class BlobReader {
@@ -379,10 +379,10 @@ for(const asset of [microphone(),cap(),beret(),sunglasses(),headphones(),ribbon(
 await writeFile(resolve(output,"wearable-v5-manifest.json"),`${JSON.stringify({version:5,assets:manifest},null,2)}\n`);
 // Public asset URLs are immutable for one year. Keep the request revision tied to the actual bytes.
 // Alternate export directories must not mutate the application's committed revision module.
-if (output === resolve("public/assets/3d")) {
+if (output === resolve("apps/web/public/assets/3d")) {
   const revisions = Object.fromEntries(manifest.map((asset) => [`/assets/3d/${asset.file}`, asset.sha256]));
   await writeFile(
-    resolve("src/domains/creator/vrm/studio-vrm-prop-asset-revisions.ts"),
+    resolve("apps/web/src/domains/creator/vrm/studio-vrm-prop-asset-revisions.ts"),
     "/** Generated from wearable-v5-manifest.json; regenerate with generate-studio-wearable-v5.mts. */\n"
       + `export const STUDIO_VRM_PROP_ASSET_REVISIONS: Readonly<Record<string, string>> = Object.freeze(${JSON.stringify(revisions, null, 2)});\n`,
   );

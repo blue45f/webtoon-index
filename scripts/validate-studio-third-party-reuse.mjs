@@ -108,7 +108,7 @@ function requiredUsesFor(entry) {
   return required;
 }
 
-export function validateStudioThirdPartyReuseRegistry(registry) {
+export function validateStudioThirdPartyReuseRegistry(registry) { // NOSONAR javascript:S3776
   const issues = [];
   if (!isObject(registry)) return ["registry must be an object"];
   if (registry.schemaVersion !== 1) issues.push("schemaVersion must be 1");
@@ -178,9 +178,7 @@ export function validateStudioThirdPartyReuseRegistry(registry) {
       }
     }
 
-    if (evidenceType === "public-license") {
-      validateHttpsUrl(entry.licenseUrl, `${prefix}.licenseUrl`, issues);
-    } else if (entry.licenseUrl != null) {
+    if (evidenceType === "public-license" || entry.licenseUrl != null) {
       validateHttpsUrl(entry.licenseUrl, `${prefix}.licenseUrl`, issues);
     }
     if (

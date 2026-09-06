@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "formes intelligentes",
+  "studio.quickShape.description.active": "Dessinez tranquillement des lignes, des carrés, des cercles et des triangles. Si vous le lâchez, il se rangera tout seul.",
+  "studio.quickShape.description.inactive": "C'est normal de le griffonner. Si vous l'allumez, votre dessin à la main sera affiné en une forme soignée.",
+  "studio.quickShape.toggleHint": "Dès que vous lâchez une forme grossièrement dessinée avec un stylo, elle prend une forme exacte. Même si vous faites une pause pendant le dessin, un aperçu apparaîtra.",
+  "studio.quickShape.toggleAria.on": "Formes intelligentes activées",
+  "studio.quickShape.toggleAria.off": "Formes intelligentes désactivées",
+  "studio.quickShape.matchedSuffix": " Je peux le sentir. Cela se confirme lorsque je relâche ma main.",
+  "studio.quickShape.emptyStatus": "Dessinez la forme et lâchez prise, ou restez simplement à la fin",
+  "studio.quickShape.openTutorial": "Regardez le tutoriel sur les formes intelligentes",
+  "studio.quickShape.notice": "Dessinez des formes intelligentes, des lignes, des cercles, des carrés, etc. et affinez-les lorsque vous lâchez prise (pause pour prévisualiser)"
+}

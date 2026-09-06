@@ -10,11 +10,11 @@ import { basename, dirname, join, relative } from "node:path";
 
 import { decodePng } from "image-js";
 
-import { studioBrushPresetUsesIntentionalDiscreteCarrier } from "../src/domains/creator/brush/studio-brush-carrier-quality";
+import { studioBrushPresetUsesIntentionalDiscreteCarrier } from "../apps/web/src/domains/creator/brush/studio-brush-carrier-quality";
 import {
   STUDIO_LISTED_ALL_BRUSH_CATALOG_ITEMS,
   type StudioBrushCatalogItem,
-} from "../src/domains/creator/brush/studio-brush-catalog";
+} from "../apps/web/src/domains/creator/brush/studio-brush-catalog";
 import {
   STUDIO_BRUSH_GPU_QUALITY_RENDER_CONTRACT_VERSION,
   electStudioBrushGpuQuality,
@@ -23,15 +23,15 @@ import {
   type StudioBrushGpuQualityPolicyKind,
   type StudioBrushLongStrokePerformanceEvidence,
   type StudioBrushLongStrokeQualityEvidence,
-} from "../src/domains/creator/brush/studio-brush-gpu-quality-election";
+} from "../apps/web/src/domains/creator/brush/studio-brush-gpu-quality-election";
 import {
   STUDIO_BRUSH_GPU_QUALITY_EVIDENCE_MAX_AGE_MS,
-} from "../src/domains/creator/brush/studio-brush-gpu-quality-evidence";
-import { studioBrushPackDescriptorById } from "../src/domains/creator/brush/studio-brush-pack-index";
-import { materializeStudioBrushCatalogSelection } from "../src/domains/creator/brush/studio-brush-selection";
-import { classifyStudioDryMediaCatalogIdV1 } from "../src/domains/creator/brush/studio-dry-media-anisotropic-grain-v1";
-import { studioWetInkBrushDepositsPigment } from "../src/domains/creator/brush/studio-wet-ink-brush-runtime";
-import { studioCc0MypaintPresetUsesIntentionalDiscreteCarrier } from "../src/domains/creator/studio-cc0-mypaint-preset-import-v1";
+} from "../apps/web/src/domains/creator/brush/studio-brush-gpu-quality-evidence";
+import { studioBrushPackDescriptorById } from "../apps/web/src/domains/creator/brush/studio-brush-pack-index";
+import { materializeStudioBrushCatalogSelection } from "../apps/web/src/domains/creator/brush/studio-brush-selection";
+import { classifyStudioDryMediaCatalogIdV1 } from "../apps/web/src/domains/creator/brush/studio-dry-media-anisotropic-grain-v1";
+import { studioWetInkBrushDepositsPigment } from "../apps/web/src/domains/creator/brush/studio-wet-ink-brush-runtime";
+import { studioCc0MypaintPresetUsesIntentionalDiscreteCarrier } from "../apps/web/src/domains/creator/studio-cc0-mypaint-preset-import-v1";
 
 import {
   classifyStudioLongBrushQualityPolicy,
@@ -42,7 +42,7 @@ const INPUT_ROOT = process.env.TOONSPECTRUM_ALL_BRUSH_INPUT_DIR
 const OUTPUT_ROOT = process.env.TOONSPECTRUM_ALL_BRUSH_AGGREGATE_DIR
   ?? "artifacts/all-brush-long-stroke-aggregate";
 const GENERATED_EVIDENCE_PATH = process.env.TOONSPECTRUM_GPU_EVIDENCE_OUTPUT
-  ?? "src/domains/creator/brush/studio-brush-gpu-quality-evidence.generated.ts";
+  ?? "apps/web/src/domains/creator/brush/studio-brush-gpu-quality-evidence.generated.ts";
 const PIXEL_THRESHOLD = 8;
 const PROFILE_BINS = 64;
 const HISTOGRAM_BINS = 32;

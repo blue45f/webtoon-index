@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "ਫੀਚਰ ਟਿਊਟੋਰਿਅਲ",
+  "studio.hub.subtitle": "ਬਿਨਾਂ ਕਿਸੇ ਬੋਝ ਦੇ ਇੱਕ ਸਮੇਂ ਵਿੱਚ ਇੱਕ ਫੰਕਸ਼ਨ। ਮੈਂ {done}/{total} ਨੂੰ ਦੇਖਿਆ।",
+  "studio.hub.progressAriaLabel": "ਟਿਊਟੋਰਿਅਲ ਪ੍ਰਗਤੀ",
+  "studio.hub.listAriaLabel": "ਵਿਸ਼ੇਸ਼ਤਾ ਸੂਚੀ",
+  "studio.hub.checked": "ਇੱਕ ਨਜ਼ਰ ਮਾਰੋ",
+  "studio.hub.prev": "ਪਿਛਲਾ",
+  "studio.hub.next": "ਅਗਲਾ",
+  "studio.hub.markComplete": "ਮੁਕੰਮਲ ਵਜੋਂ ਮਾਰਕ ਕਰੋ",
+  "studio.hub.completed": "ਪੂਰਾ ਹੋਇਆ",
+  "studio.hub.tryLabelDefault": "ਨਾਲ ਪਾਲਣਾ ਕਰੋ",
+  "studio.hub.stepAriaPrefix": "ਕਦਮ"
+}

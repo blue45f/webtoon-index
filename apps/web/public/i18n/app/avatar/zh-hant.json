@@ -1,0 +1,9 @@
+{
+  "avatar.processing": "加工…",
+  "avatar.remove": "刪除影像",
+  "avatar.changeAria": "更改個人資料圖片",
+  "avatar.select": "更改圖像",
+  "avatar.uploadHint": "僅支援 JPG、PNG 和 WEBP 影像，然後進行裁剪以供預覽。",
+  "avatar.error.processFailed": "處理影像失敗。",
+  "avatar.error.invalidType": "不受支援的圖像類型。"
+}

@@ -43,7 +43,7 @@ function createFixture({
   );
   write(
     join(root, "pnpm-workspace.yaml"),
-    `packages:\n  - "."\nauditConfig:\n  ignoreGhsas:\n${ignoredGhsas.map((ghsa) => `    - ${ghsa}`).join("\n")}\n`,
+    `packages:\n  - "."\nauditConfig:\n  ignoreGhsas:\n${ignoredGhsas.map((ghsa) => "    - " + ghsa).join("\n")}\n`,
   );
   if (withLockfile) {
     write(

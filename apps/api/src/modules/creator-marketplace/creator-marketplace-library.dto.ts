@@ -8,7 +8,7 @@ import {
   CreatorMarketplaceCloudLibraryViewSchema,
   CreatorMarketplaceLogicalPackIdSchema,
   SetCreatorMarketplaceLibraryArchiveSchema,
-} from "../../../../../lib/creator-marketplace-cloud-library-contract";
+} from "../../../../web/src/shared/lib/creator-marketplace-cloud-library-contract";
 
 export const CreatorMarketplaceLibraryListQuerySchema = z
   .object({

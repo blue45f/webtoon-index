@@ -20,11 +20,11 @@ import {
 } from "@nestjs/common";
 import { eq } from "drizzle-orm";
 
-import { hashPassword, verifyPassword } from "../../../../../lib/auth-crypto";
+import { hashPassword, verifyPassword } from "../../../../web/src/shared/lib/auth-crypto";
 import {
   resolveSignupAvatar,
   resolveSignupAvatarImage,
-} from "../../../../../lib/avatar";
+} from "../../../../web/src/shared/lib/avatar";
 import { ZodValidationPipe } from "../../common/zod-validation.pipe";
 import { db, users } from "../../db";
 import { StudioRealtimeRevocationService } from "../../infrastructure/studio-realtime-revocation/studio-realtime-revocation.client";

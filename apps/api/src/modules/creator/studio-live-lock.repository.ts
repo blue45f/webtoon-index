@@ -1,6 +1,6 @@
 import { and, asc, eq, gt, lte, sql } from "drizzle-orm";
 
-import { studioLiveLockResourcesConflict } from "../../../../../lib/studio-live-lock-resource";
+import { studioLiveLockResourcesConflict } from "../../../../web/src/shared/lib/studio-live-lock-resource";
 import {
   creatorWorkLiveLockClocks,
   creatorWorkLiveLocks,

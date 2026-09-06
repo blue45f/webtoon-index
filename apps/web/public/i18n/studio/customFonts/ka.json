@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "ჩემი შრიფტი",
+  "studio.customFonts.importButton": "იმპორტი ფაილიდან",
+  "studio.customFonts.importing": "მიმდინარეობს შემოწმება…",
+  "studio.customFonts.importAria": "შრიფტის ფაილის იმპორტი",
+  "studio.customFonts.storageAria": "შრიფტის ბიბლიოთეკის გამოყენება",
+  "studio.customFonts.emptyTitle": "ჯერ არ არის ჩართული შრიფტები.",
+  "studio.customFonts.unknownFileName": "ფაილის სახელი არ არის",
+  "studio.customFonts.apply": "მიმართეთ",
+  "studio.customFonts.applyToText": "გამოიყენეთ ეს შრიფტი არჩეულ ტექსტზე",
+  "studio.customFonts.selectTextFirst": "ჯერ აირჩიეთ ტექსტის ან მეტყველების ბუშტი",
+  "studio.customFonts.delete": "შრიფტის წაშლა"
+}

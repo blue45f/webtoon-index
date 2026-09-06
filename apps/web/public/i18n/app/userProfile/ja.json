@@ -1,0 +1,23 @@
+{
+  "userProfile.tabs.series": "シリーズ",
+  "userProfile.tabs.reviews": "レビュー",
+  "userProfile.authorFallback": "ユーザー",
+  "userProfile.following": "続く",
+  "userProfile.follow": "フォローする",
+  "userProfile.stat.followers": "フォロワー",
+  "userProfile.stat.totalReviews": "レビュー",
+  "userProfile.stat.series": "シリーズ",
+  "userProfile.refresh": "リフレッシュ",
+  "userProfile.stat.avgRating": "平均評価",
+  "userProfile.series.empty": "このユーザーにはまだシリーズがありません。",
+  "userProfile.works.empty": "このユーザーにはまだ公開作品がありません。",
+  "userProfile.emptyReviews": "このユーザーによって公開されたレビューはまだありません。",
+  "userProfile.bioFallback": "読者プロフィールと掲載作品",
+  "userProfile.followHint": "サインインした後、ユーザーをフォローできます。",
+  "userProfile.fetchError": "プロファイルをロードできません。",
+  "userProfile.stat.works": "制作した作品",
+  "userProfile.eyebrow": "読者プロフィール",
+  "userProfile.metaTemplate": "{author} プロフィール · {reviews} レビュー · {works} 作品 · 平均評価 {avg} — ToonSpectrum。",
+  "userProfile.tabsLabel": "プロフィールの内容",
+  "userProfile.tabs.works": "制作した作品"
+}

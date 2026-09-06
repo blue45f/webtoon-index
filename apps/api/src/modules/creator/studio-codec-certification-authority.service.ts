@@ -13,7 +13,7 @@ import { z } from "zod";
 import {
   STUDIO_CODEC_PROVIDER_CONTRACT_VERSION,
   STUDIO_CODEC_PROVIDER_LIMITS,
-} from "../../../../../src/domains/creator/studio-codec-provider-contract";
+} from "../../../../web/src/domains/creator/studio-codec-provider-contract";
 import {
   STUDIO_PRODUCT_CODEC_CERTIFICATE_DOMAIN,
   STUDIO_PRODUCT_CODEC_CERTIFICATE_ID_DOMAIN,
@@ -21,7 +21,7 @@ import {
   STUDIO_PRODUCT_CODEC_CERTIFICATE_VERSION,
   STUDIO_PRODUCT_CODEC_CERTIFICATION_CLAIMS,
   STUDIO_PRODUCT_CODEC_CERTIFICATION_LIMITS,
-} from "../../../../../src/domains/creator/studio-product-codec-certification";
+} from "../../../../web/src/domains/creator/studio-product-codec-certification";
 
 const TEXT_DECODER = new TextDecoder("utf-8", {
   fatal: true,

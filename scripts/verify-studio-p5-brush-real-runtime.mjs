@@ -94,7 +94,7 @@ function validatePixelEvidence(caseId, label, evidence, failures) {
   }
 }
 
-function validateSuccess(result, contextAffinityStress, diagnostics) {
+function validateSuccess(result, contextAffinityStress, diagnostics) { // NOSONAR javascript:S3776
   const failures = [];
   if (result.backend !== "p5.brush/standalone-offscreen-webgl2") {
     failures.push(`unexpected backend: ${String(result.backend)}`);

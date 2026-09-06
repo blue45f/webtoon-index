@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Учебное пособие по функциям",
+  "studio.hub.subtitle": "Одна функция за раз без какой-либо нагрузки. Я посмотрел на {done}/{total}.",
+  "studio.hub.progressAriaLabel": "Ход обучения",
+  "studio.hub.listAriaLabel": "Список функций",
+  "studio.hub.checked": "взгляни",
+  "studio.hub.prev": "Предыдущий",
+  "studio.hub.next": "следующий",
+  "studio.hub.markComplete": "отметить как завершенное",
+  "studio.hub.completed": "Завершено",
+  "studio.hub.tryLabelDefault": "Следуйте за",
+  "studio.hub.stepAriaPrefix": "шаг"
+}

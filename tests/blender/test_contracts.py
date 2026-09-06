@@ -38,7 +38,7 @@ class ContractTests(unittest.TestCase):
         config = load_config(ROOT / "config/blender/avatar-orion-production.json")
         self.assertEqual(config.mode, "upgrade")
         self.assertTrue(config.export.vrm)
-        self.assertEqual(config.input_path, "public/vrm/Avatar_Orion.vrm")
+        self.assertEqual(config.input_path, "apps/web/public/vrm/Avatar_Orion.vrm")
         self.assertEqual(
             config.provenance["sourceGitBlob"],
             "b244cf74aa845e75b33a4e48a962ebd880ec2210",

@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "របារពាក្យបញ្ជារហ័ស",
+  "studio.commandBar.settings": "ការកំណត់របារពាក្យបញ្ជា",
+  "studio.commandBar.settingsDescription": "ប្តូរការរៀបចំរន្ធ និងការបង្ហាញរបារពាក្យបញ្ជាខាងក្រោមរបារម៉ឺនុយ។",
+  "studio.commandBar.settingsTip": "ដាក់ពាក្យបញ្ជាដែលអ្នកប្រើញឹកញាប់នៅរន្ធដំបូង ដើម្បីឱ្យងាយស្រួលចូលដល់បំផុត។",
+  "studio.commandBar.settingsClose": "បិទការកំណត់របារពាក្យបញ្ជា",
+  "studio.commandBar.settingsStorageNote": "ការរៀបចំរន្ធត្រូវបានរក្សាទុកក្នុងការកំណត់តំបន់ធ្វើការរបស់កម្មវិធីរុករកនេះ។",
+  "studio.commandBar.showSlots": "បង្ហាញរន្ធពាក្យបញ្ជា",
+  "studio.commandBar.slot": "រន្ធ {index}",
+  "studio.commandBar.slotAria": "រន្ធពាក្យបញ្ជា {index}",
+  "studio.commandBar.slotEmpty": "រន្ធទំនេរ",
+  "studio.commandBar.resetDefaults": "កំណត់ឡើងវិញទៅការរៀបចំលំនាំដើម",
+  "studio.commandBar.command.undo": "មិនធ្វើវិញ",
+  "studio.commandBar.command.redo": "ធ្វើវិញ",
+  "studio.commandBar.command.save": "រក្សាទុកសេចក្តីព្រាង",
+  "studio.commandBar.command.publish": "បោះពុម្ពផ្សាយ",
+  "studio.commandBar.command.download": "ទាញយកទំព័របច្ចុប្បន្ន",
+  "studio.commandBar.command.export-open": "ជម្រើសនាំចេញ",
+  "studio.commandBar.command.zoom-fit": "សម​នឹង​ទទឹង​អេក្រង់",
+  "studio.commandBar.command.assets": "គំរូ និងធនធាន",
+  "studio.commandBar.command.bubbles": "ប៉ោងសម្តី",
+  "studio.commandBar.command.project": "ឧបករណ៍គម្រោង"
+}

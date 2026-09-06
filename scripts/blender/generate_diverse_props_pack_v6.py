@@ -17,7 +17,7 @@ import os
 import bpy
 from mathutils import Vector
 
-OUT_DIR = bpy.path.abspath("//public/assets/3d")
+OUT_DIR = bpy.path.abspath("//apps/web/public/assets/3d")
 GENERATOR = "scripts/blender/generate_diverse_props_pack_v6.py"
 
 
@@ -107,7 +107,7 @@ def cone(name, r, depth, loc, material, verts=32, rot=(0, 0, 0)):
     return o
 
 
-def export(name, filename):
+def export(filename):
     bpy.ops.object.select_all(action="SELECT")
     bpy.ops.export_scene.gltf(
         filepath=os.path.join(OUT_DIR, filename),
@@ -138,13 +138,12 @@ def build_ramen_bowl():
     bpy.ops.object.mode_set(mode="EDIT")
     bpy.ops.mesh.select_all(action="DESELECT")
     bpy.ops.object.mode_set(mode="OBJECT")
-    top = [v for v in bowl.data.vertices if v.co.z > 0.048]
-    bmesh_del = bmesh_top_delete(bowl, top)
+    bmesh_top_delete(bowl)
     solidify(bowl, 0.004)
     bowl.data.materials.append(bowl_m)
 
     torus("Bowl_Rim", 0.054, 0.004, (0, 0, 0.058), rim_m)
-    disc = cyl("Broth_Surface", 0.05, 0.002, (0, 0, 0.05), broth_m, verts=48)
+    cyl("Broth_Surface", 0.05, 0.002, (0, 0, 0.05), broth_m, verts=48)
     for i in range(7):
         a = i / 7 * math.tau
         n = cyl(f"Noodle_{i}", 0.0035, 0.09, (math.cos(a) * 0.02, math.sin(a) * 0.02, 0.052), noodle_m, verts=8,
@@ -153,10 +152,10 @@ def build_ramen_bowl():
     half = sphere("Egg_Half", 0.017, (0.028, 0.01, 0.058), egg_m, seg=24, ring=12)
     half.scale = (1, 1, 0.55)
     box("Nori_Sheet", (0.03, 0.001, 0.045), (-0.03, -0.015, 0.07), nori_m, rot=(0.12, 0.1, 0))
-    export("ramen_bowl", "ramen_bowl.glb")
+    export("ramen_bowl.glb")
 
 
-def bmesh_top_delete(obj, verts):
+def bmesh_top_delete(obj):
     import bmesh
     bm = bmesh.new()
     bm.from_mesh(obj.data)
@@ -189,7 +188,7 @@ def build_ice_cream_cone():
     s3 = sphere("Scoop_Mint", 0.023, (-0.006, -0.004, 0.205), mint_m, seg=28, ring=14)
     s3.scale = (1, 1, 0.85)
     sphere("Cherry_Top", 0.011, (0, 0, 0.232), cherry_m, seg=20, ring=10)
-    export("ice_cream_cone", "ice_cream_cone.glb")
+    export("ice_cream_cone.glb")
 
 
 def build_bubble_tea():
@@ -210,7 +209,7 @@ def build_bubble_tea():
     cyl("Cup_Lid", 0.033, 0.002, (0, 0, 0.131), lid_m, verts=40)
     st = cyl("Straw_Body", 0.005, 0.09, (0.008, 0, 0.165), straw_m, verts=16)
     st.rotation_euler = (0.12, 0.06, 0)
-    export("bubble_tea", "bubble_tea.glb")
+    export("bubble_tea.glb")
 
 
 def build_paper_lantern():
@@ -225,10 +224,10 @@ def build_paper_lantern():
     cyl("Lantern_BottomCap", 0.02, 0.012, (0, 0, 0.018), cap_m, verts=24)
     for rib_i in range(6):
         a = rib_i / 6 * math.pi
-        t = torus(f"Lantern_Rib_{rib_i}", 0.052 * math.sin(max(a, 0.25)), 0.0015, (0, 0, 0.09), cap_m,
+        torus(f"Lantern_Rib_{rib_i}", 0.052 * math.sin(max(a, 0.25)), 0.0015, (0, 0, 0.09), cap_m,
                   rot=(a, 0, 0))
     cyl("Lantern_Tassel", 0.006, 0.05, (0, 0, -0.012), tassel_m, verts=12)
-    export("paper_lantern", "paper_lantern.glb")
+    export("paper_lantern.glb")
 
 
 def build_potted_monstera():
@@ -257,7 +256,7 @@ def build_potted_monstera():
         leaf = sphere(f"Monstera_Leaf_{i}", 0.05, (x, 0, 0.11 + z_leaf), leaf_m, seg=20, ring=12)
         leaf.scale = (1.15, 0.75, 0.12)
         leaf.rotation_euler = (tilt, yaw, 0)
-    export("potted_monstera", "potted_monstera.glb")
+    export("potted_monstera.glb")
 
 
 def build_bonsai_tree():
@@ -267,14 +266,14 @@ def build_bonsai_tree():
     foliage_m = mat("FoliageDeep", (0.12, 0.32, 0.18), roughness=0.55)
 
     box("Bonsai_Pot", (0.16, 0.11, 0.045), (0, 0, 0.0225), pot_m)
-    trunk = cyl("Bonsai_Trunk", 0.016, 0.14, (0.01, 0, 0.1), trunk_m, verts=12, rot=(0, 0.18, 0))
-    branch = cyl("Bonsai_Branch", 0.008, 0.09, (-0.045, 0.01, 0.15), trunk_m, verts=10, rot=(0, 1.1, 0))
+    cyl("Bonsai_Trunk", 0.016, 0.14, (0.01, 0, 0.1), trunk_m, verts=12, rot=(0, 0.18, 0))
+    cyl("Bonsai_Branch", 0.008, 0.09, (-0.045, 0.01, 0.15), trunk_m, verts=10, rot=(0, 1.1, 0))
     blob_positions = ((0.02, 0, 0.2, 0.055), (-0.07, 0.01, 0.175, 0.042), (0.07, -0.01, 0.185, 0.04),
                       (0.0, 0.03, 0.235, 0.036))
     for i, (x, y, z, r) in enumerate(blob_positions):
         b = sphere(f"Bonsai_Foliage_{i}", r, (x, y, z), foliage_m, seg=20, ring=12)
         b.scale = (1.2, 1.0, 0.7)
-    export("bonsai_tree", "bonsai_tree.glb")
+    export("bonsai_tree.glb")
 
 
 def build_street_food_cart():
@@ -300,7 +299,7 @@ def build_street_food_cart():
     roof.name = "Cart_Roof"
     for x in (-0.3, 0.0, 0.3):
         sphere(f"Cart_Lantern_{x:.1f}", 0.028, (x, -0.2, 1.42), glow_m, seg=16, ring=10)
-    export("street_food_cart", "street_food_cart.glb")
+    export("street_food_cart.glb")
 
 
 def build_traffic_light():
@@ -318,7 +317,7 @@ def build_traffic_light():
     cyl("Signal_Lens_Amber", 0.05, 0.02, (0, -0.06, 2.5), amber_m, verts=24, rot=(math.pi / 2, 0, 0))
     cyl("Signal_Lens_Green", 0.05, 0.02, (0, -0.06, 2.34), green_m, verts=24, rot=(math.pi / 2, 0, 0))
     cyl("Signal_Arm", 0.025, 0.5, (0.25, 0, 2.62), pole_m, verts=12, rot=(0, math.pi / 2, 0))
-    export("traffic_light", "traffic_light.glb")
+    export("traffic_light.glb")
 
 
 def build_mailbox():
@@ -331,12 +330,12 @@ def build_mailbox():
     smooth(body, 2)
     half = bpy.data.objects.new("Mailbox_Door", None)
     bpy.data.objects.remove(half)
-    d = cyl("Mailbox_DoorFace", 0.088, 0.015, (0.172, 0, 0.85), door_m, verts=28, rot=(0, math.pi / 2, 0))
-    slot = box("Mailbox_Slot", (0.004, 0.11, 0.018), (0.181, 0, 0.88), door_m)
-    flag = box("Mailbox_Flag", (0.008, 0.03, 0.12), (-0.05, -0.095, 0.98), door_m, rot=(0, 0, 0.2))
+    cyl("Mailbox_DoorFace", 0.088, 0.015, (0.172, 0, 0.85), door_m, verts=28, rot=(0, math.pi / 2, 0))
+    box("Mailbox_Slot", (0.004, 0.11, 0.018), (0.181, 0, 0.88), door_m)
+    box("Mailbox_Flag", (0.008, 0.03, 0.12), (-0.05, -0.095, 0.98), door_m, rot=(0, 0, 0.2))
     for x in (-0.08, 0.08):
         cyl(f"Mailbox_Leg_{x:.2f}", 0.012, 0.68, (x, 0, 0.34), leg_m, verts=10)
-    export("mailbox", "mailbox.glb")
+    export("mailbox.glb")
 
 
 def build_grandfather_clock():
@@ -348,16 +347,16 @@ def build_grandfather_clock():
     pend_m = mat("PendulumBrass", (0.9, 0.75, 0.35), metallic=0.95, roughness=0.15)
 
     box("Clock_Body", (0.42, 0.26, 1.9), (0, 0, 0.95), wood_m)
-    crown = box("Clock_Crown", (0.48, 0.3, 0.08), (0, 0, 1.94), wood_m)
+    box("Clock_Crown", (0.48, 0.3, 0.08), (0, 0, 1.94), wood_m)
     box("Clock_Base", (0.46, 0.3, 0.1), (0, 0, 0.05), wood_m)
-    face = cyl("Clock_FaceDisc", 0.155, 0.02, (0, -0.135, 1.62), face_m, verts=48, rot=(math.pi / 2, 0, 0))
+    cyl("Clock_FaceDisc", 0.155, 0.02, (0, -0.135, 1.62), face_m, verts=48, rot=(math.pi / 2, 0, 0))
     torus("Clock_FaceRing", 0.157, 0.012, (0, -0.135, 1.62), gold_m, rot=(0, 0, 0))
-    hour = box("Clock_HandHour", (0.012, 0.004, 0.07), (0, -0.148, 1.655), gold_m, rot=(0, 0.6, 0))
-    minute = box("Clock_HandMinute", (0.008, 0.004, 0.12), (0, -0.148, 1.69), gold_m, rot=(0, -0.25, 0))
+    box("Clock_HandHour", (0.012, 0.004, 0.07), (0, -0.148, 1.655), gold_m, rot=(0, 0.6, 0))
+    box("Clock_HandMinute", (0.008, 0.004, 0.12), (0, -0.148, 1.69), gold_m, rot=(0, -0.25, 0))
     cyl("Clock_PendulumRod", 0.004, 0.7, (0, -0.05, 0.85), gold_m, verts=8)
-    disc = cyl("Clock_PendulumBob", 0.055, 0.008, (0, -0.05, 0.5), pend_m, verts=32, rot=(math.pi / 2, 0, 0))
-    pane = box("Clock_GlassPane", (0.3, 0.004, 1.0), (0, -0.132, 0.85), glass_m)
-    export("grandfather_clock", "grandfather_clock.glb")
+    cyl("Clock_PendulumBob", 0.055, 0.008, (0, -0.05, 0.5), pend_m, verts=32, rot=(math.pi / 2, 0, 0))
+    box("Clock_GlassPane", (0.3, 0.004, 1.0), (0, -0.132, 0.85), glass_m)
+    export("grandfather_clock.glb")
 
 
 def build_fireplace():
@@ -379,7 +378,7 @@ def build_fireplace():
         f.scale = (0.7, 0.7, 1.6)
     for i, x in enumerate((-0.16, 0.02, 0.14)):
         cyl(f"Fireplace_Log_{i}", 0.035, 0.5, (x, -0.02, 0.09), log_m, verts=12, rot=(math.pi / 2, 0, 0))
-    export("fireplace", "fireplace.glb")
+    export("fireplace.glb")
 
 
 def build_bathtub():
@@ -408,12 +407,12 @@ def build_bathtub():
     tub.data.materials.append(porcelain_m)
     smooth(tub, 2)
 
-    w = box("Bathtub_WaterSurface", (0.74, 0.36, 0.01), (0, 0, 0.42), water_m)
+    box("Bathtub_WaterSurface", (0.74, 0.36, 0.01), (0, 0, 0.42), water_m)
     cyl("Bathtub_FaucetBase", 0.02, 0.03, (0.36, 0, 0.57), faucet_m, verts=16)
-    spout = cyl("Bathtub_FaucetSpout", 0.014, 0.16, (0.29, 0, 0.6), faucet_m, verts=14, rot=(0, 1.35, 0))
+    cyl("Bathtub_FaucetSpout", 0.014, 0.16, (0.29, 0, 0.6), faucet_m, verts=14, rot=(0, 1.35, 0))
     for x in (-0.3, 0.3):
         sphere(f"Bathtub_Foot_{x:.1f}", 0.035, (x, 0, 0.035), faucet_m, seg=16, ring=10)
-    export("bathtub", "bathtub.glb")
+    export("bathtub.glb")
 
 
 def build_kitchen_stove():
@@ -427,13 +426,13 @@ def build_kitchen_stove():
     box("Stove_Body", (0.6, 0.6, 0.85), (0, 0, 0.425), body_m)
     box("Stove_Cooktop", (0.62, 0.62, 0.04), (0, 0, 0.87), top_m)
     box("Stove_OvenDoor", (0.5, 0.02, 0.45), (0, -0.31, 0.38), top_m)
-    handle = cyl("Stove_OvenHandle", 0.012, 0.5, (0, -0.33, 0.63), top_m, verts=12, rot=(0, math.pi / 2, 0))
+    cyl("Stove_OvenHandle", 0.012, 0.5, (0, -0.33, 0.63), top_m, verts=12, rot=(0, math.pi / 2, 0))
     for i, (x, y) in enumerate(((-0.15, 0.15), (0.15, 0.15), (-0.15, -0.15), (0.15, -0.15))):
         cyl(f"Stove_Burner_{i}", 0.07, 0.012, (x, y, 0.895), burner_m, verts=24)
         torus(f"Stove_Grate_{i}", 0.06, 0.006, (x, y, 0.905), grate_m)
     for i, x in enumerate((-0.18, -0.06, 0.06, 0.18)):
-        k = cyl(f"Stove_Knob_{i}", 0.02, 0.02, (x, -0.315, 0.79), knob_m, verts=16, rot=(math.pi / 2, 0, 0))
-    export("kitchen_stove", "kitchen_stove.glb")
+        cyl(f"Stove_Knob_{i}", 0.02, 0.02, (x, -0.315, 0.79), knob_m, verts=16, rot=(math.pi / 2, 0, 0))
+    export("kitchen_stove.glb")
 
 
 def build_campfire():
@@ -450,9 +449,9 @@ def build_campfire():
     for i in range(5):
         a = i / 5 * math.pi
         cyl(f"Campfire_Log_{i}", 0.045, 0.55, (0, 0, 0.07), log_m, verts=10, rot=(math.pi / 2 - 0.25, 0, a))
-    big = cone("Campfire_FlameOuter", 0.16, 0.42, (0, 0, 0.24), flame_m, verts=16)
-    small = cone("Campfire_FlameInner", 0.09, 0.26, (0, 0, 0.2), flame_core_m, verts=12)
-    export("campfire", "campfire.glb")
+    cone("Campfire_FlameOuter", 0.16, 0.42, (0, 0, 0.24), flame_m, verts=16)
+    cone("Campfire_FlameInner", 0.09, 0.26, (0, 0, 0.2), flame_core_m, verts=12)
+    export("campfire.glb")
 
 
 def build_wishing_well():
@@ -464,17 +463,17 @@ def build_wishing_well():
     bucket_m = mat("WellBucket", (0.45, 0.32, 0.2), roughness=0.6)
     water_m = mat("WellWater", (0.2, 0.45, 0.6), roughness=0.1)
 
-    wall = cyl("Well_StoneRing", 0.55, 0.7, (0, 0, 0.35), stone_m, verts=36)
-    inner = cyl("Well_Hollow", 0.42, 0.72, (0, 0, 0.35), stone_m, verts=32)
+    cyl("Well_StoneRing", 0.55, 0.7, (0, 0, 0.35), stone_m, verts=36)
+    cyl("Well_Hollow", 0.42, 0.72, (0, 0, 0.35), stone_m, verts=32)
     cyl("Well_WaterSurface", 0.43, 0.01, (0, 0, 0.62), water_m, verts=32)
     for x in (-0.5, 0.5):
         cyl(f"Well_Post_{x:.1f}", 0.05, 1.5, (x, 0, 1.45), wood_m, verts=12)
-    axle = cyl("Well_Axle", 0.04, 1.1, (0, 0, 2.1), wood_m, verts=14, rot=(0, math.pi / 2, 0))
-    roof = cone("Well_Roof", 0.85, 0.45, (0, 0, 2.5), roof_m, verts=4, rot=(0, 0, math.pi / 4))
+    cyl("Well_Axle", 0.04, 1.1, (0, 0, 2.1), wood_m, verts=14, rot=(0, math.pi / 2, 0))
+    cone("Well_Roof", 0.85, 0.45, (0, 0, 2.5), roof_m, verts=4, rot=(0, 0, math.pi / 4))
     cyl("Well_RopeLine", 0.008, 0.75, (0, 0, 1.72), rope_m, verts=6)
-    b = cyl("Well_Bucket", 0.11, 0.14, (0, 0, 1.28), bucket_m, verts=20)
+    cyl("Well_Bucket", 0.11, 0.14, (0, 0, 1.28), bucket_m, verts=20)
     torus("Well_BucketHandle", 0.11, 0.008, (0, 0, 1.35), rope_m, rot=(0, 0, 0))
-    export("wishing_well", "wishing_well.glb")
+    export("wishing_well.glb")
 
 
 def build_robot_pet():
@@ -489,17 +488,17 @@ def build_robot_pet():
     body = sphere("RobotPet_Body", 0.11, (0, 0, 0.15), shell_m, seg=28, ring=16)
     body.scale = (1.25, 1, 0.85)
     for i, x in enumerate((-0.05, 0.05)):
-        e = sphere(f"RobotPet_Eye_{i}", 0.016, (x, -0.082, 0.33), eye_m, seg=14, ring=8)
-    nose = sphere("RobotPet_Nose", 0.014, (0, -0.095, 0.28), accent_m, seg=12, ring=8)
+        sphere(f"RobotPet_Eye_{i}", 0.016, (x, -0.082, 0.33), eye_m, seg=14, ring=8)
+    sphere("RobotPet_Nose", 0.014, (0, -0.095, 0.28), accent_m, seg=12, ring=8)
     for i, (x, y) in enumerate(((-0.06, -0.06), (0.06, -0.06), (-0.06, 0.06), (0.06, 0.06))):
-        leg = cyl(f"RobotPet_Leg_{i}", 0.018, 0.09, (x, y, 0.045), joint_m, verts=10)
+        cyl(f"RobotPet_Leg_{i}", 0.018, 0.09, (x, y, 0.045), joint_m, verts=10)
         foot = sphere(f"RobotPet_Foot_{i}", 0.024, (x, y, 0.012), joint_m, seg=12, ring=8)
         foot.scale = (1, 1.2, 0.5)
-    tail_seg = cyl("RobotPet_Tail", 0.012, 0.1, (0, 0.13, 0.2), joint_m, verts=8, rot=(1.0, 0, 0))
-    tip = sphere("RobotPet_TailTip", 0.02, (0, 0.17, 0.26), accent_m, seg=12, ring=8)
+    cyl("RobotPet_Tail", 0.012, 0.1, (0, 0.13, 0.2), joint_m, verts=8, rot=(1.0, 0, 0))
+    sphere("RobotPet_TailTip", 0.02, (0, 0.17, 0.26), accent_m, seg=12, ring=8)
     for i, x in enumerate((-0.045, 0.045)):
-        ear = cone(f"RobotPet_Ear_{i}", 0.025, 0.05, (x, 0, 0.41), accent_m, verts=12)
-    export("robot_pet", "robot_pet.glb")
+        cone(f"RobotPet_Ear_{i}", 0.025, 0.05, (x, 0, 0.41), accent_m, verts=12)
+    export("robot_pet.glb")
 
 
 def build_mech_turret():
@@ -508,17 +507,17 @@ def build_mech_turret():
     dark_m = mat("TurretDark", (0.15, 0.16, 0.18), metallic=0.5, roughness=0.5)
     energy_m = mat("TurretEnergy", (0.2, 0.9, 1.0), emission=(0.2, 0.85, 1.0), emission_strength=5.0)
 
-    base = cyl("Turret_Base", 0.28, 0.12, (0, 0, 0.06), dark_m, verts=32)
+    cyl("Turret_Base", 0.28, 0.12, (0, 0, 0.06), dark_m, verts=32)
     dome = sphere("Turret_Dome", 0.2, (0, 0, 0.16), armor_m, seg=28, ring=16)
     dome.scale = (1, 1, 0.6)
-    turret_ring = cyl("Turret_Ring", 0.14, 0.1, (0, 0, 0.28), dark_m, verts=24)
-    barrel = cyl("Turret_Barrel", 0.035, 0.55, (0, -0.3, 0.36), armor_m, verts=16, rot=(math.pi / 2 - 0.12, 0, 0))
-    muzzle = cyl("Turret_Muzzle", 0.05, 0.06, (0, -0.56, 0.42), dark_m, verts=16, rot=(math.pi / 2 - 0.12, 0, 0))
-    core = sphere("Turret_EnergyCore", 0.05, (0, -0.1, 0.4), energy_m, seg=16, ring=10)
+    cyl("Turret_Ring", 0.14, 0.1, (0, 0, 0.28), dark_m, verts=24)
+    cyl("Turret_Barrel", 0.035, 0.55, (0, -0.3, 0.36), armor_m, verts=16, rot=(math.pi / 2 - 0.12, 0, 0))
+    cyl("Turret_Muzzle", 0.05, 0.06, (0, -0.56, 0.42), dark_m, verts=16, rot=(math.pi / 2 - 0.12, 0, 0))
+    sphere("Turret_EnergyCore", 0.05, (0, -0.1, 0.4), energy_m, seg=16, ring=10)
     for i, a in enumerate((0.8, 2.4, 4.0)):
-        sensor = cyl(f"Turret_Sensor_{i}", 0.012, 0.1, (math.cos(a) * 0.12, math.sin(a) * 0.12, 0.34), energy_m, verts=8,
+        cyl(f"Turret_Sensor_{i}", 0.012, 0.1, (math.cos(a) * 0.12, math.sin(a) * 0.12, 0.34), energy_m, verts=8,
                      rot=(0.5, 0, a))
-    export("mech_turret", "mech_turret.glb")
+    export("mech_turret.glb")
 
 
 def build_fox_mask():
@@ -529,17 +528,17 @@ def build_fox_mask():
 
     face = sphere("FoxMask_Face", 0.105, (0, 0, 0), fur_m, seg=32, ring=20)
     face.scale = (1, 0.55, 1.15)
-    snout = cone("FoxMask_Snout", 0.035, 0.07, (0, -0.055, -0.045), cream_m, verts=16, rot=(-1.9, 0, 0))
-    nose = sphere("FoxMask_NoseTip", 0.014, (0, -0.075, -0.075), ink_m, seg=12, ring=8)
+    cone("FoxMask_Snout", 0.035, 0.07, (0, -0.055, -0.045), cream_m, verts=16, rot=(-1.9, 0, 0))
+    sphere("FoxMask_NoseTip", 0.014, (0, -0.075, -0.075), ink_m, seg=12, ring=8)
     for i, x in enumerate((-0.055, 0.055)):
-        ear = cone(f"FoxMask_Ear_{i}", 0.032, 0.09, (x, 0, 0.12), fur_m, verts=12, rot=(0, 0.12 if x > 0 else -0.12, 0))
-        inner = cone(f"FoxMask_EarInner_{i}", 0.018, 0.05, (x, -0.008, 0.115), cream_m, verts=10,
+        cone(f"FoxMask_Ear_{i}", 0.032, 0.09, (x, 0, 0.12), fur_m, verts=12, rot=(0, 0.12 if x > 0 else -0.12, 0))
+        cone(f"FoxMask_EarInner_{i}", 0.018, 0.05, (x, -0.008, 0.115), cream_m, verts=10,
                      rot=(0, 0.12 if x > 0 else -0.12, 0))
     for i, x in enumerate((-0.042, 0.042)):
         eye = sphere(f"FoxMask_Eye_{i}", 0.016, (x, -0.052, 0.015), ink_m, seg=12, ring=8)
         eye.scale = (1, 0.5, 1.4)
-    whisker_marks = box("FoxMask_WhiskerMark", (0.05, 0.004, 0.008), (0, -0.058, -0.03), ink_m)
-    export("fox_mask", "fox_mask.glb")
+    box("FoxMask_WhiskerMark", (0.05, 0.004, 0.008), (0, -0.058, -0.03), ink_m)
+    export("fox_mask.glb")
 
 
 def build_wizard_hat():
@@ -556,11 +555,11 @@ def build_wizard_hat():
     cone_obj.rotation_euler = (0.1, 0.08, 0)
     cone_obj.data.materials.append(cloth_m)
     smooth(cone_obj, 2)
-    bend = cone("WizardHat_Tip", 0.02, 0.08, (0.035, 0.03, 0.36), cloth_m, verts=12, rot=(0.5, 0.4, 0))
+    cone("WizardHat_Tip", 0.02, 0.08, (0.035, 0.03, 0.36), cloth_m, verts=12, rot=(0.5, 0.4, 0))
     torus("WizardHat_Band", 0.107, 0.012, (0, 0, 0.045), band_m)
     for i, (x, y, z) in enumerate(((0.05, 0.04, 0.14), (-0.05, 0.02, 0.2), (0.02, -0.05, 0.26))):
-        star = sphere(f"WizardHat_Star_{i}", 0.012, (x, y, z), star_m, seg=10, ring=6)
-    export("wizard_hat", "wizard_hat.glb")
+        sphere(f"WizardHat_Star_{i}", 0.012, (x, y, z), star_m, seg=10, ring=6)
+    export("wizard_hat.glb")
 
 
 def build_tea_set():
@@ -572,15 +571,15 @@ def build_tea_set():
     box("TeaSet_Tray", (0.34, 0.22, 0.015), (0, 0, 0.0075), tray_m)
     pot_body = sphere("Teapot_Body", 0.06, (-0.09, 0, 0.075), porcelain_m, seg=32, ring=18)
     pot_body.scale = (1.1, 1, 0.85)
-    spout = cyl("Teapot_Spout", 0.012, 0.08, (-0.16, 0, 0.09), porcelain_m, verts=10, rot=(0, 1.0, 0))
-    handle = torus("Teapot_Handle", 0.035, 0.007, (-0.02, 0, 0.08), porcelain_m, rot=(0, 1.57, 0))
-    lid = cyl("Teapot_Lid", 0.032, 0.015, (-0.09, 0, 0.128), porcelain_m, verts=24)
-    knob = sphere("Teapot_Knob", 0.012, (-0.09, 0, 0.142), porcelain_m, seg=12, ring=8)
+    cyl("Teapot_Spout", 0.012, 0.08, (-0.16, 0, 0.09), porcelain_m, verts=10, rot=(0, 1.0, 0))
+    torus("Teapot_Handle", 0.035, 0.007, (-0.02, 0, 0.08), porcelain_m, rot=(0, 1.57, 0))
+    cyl("Teapot_Lid", 0.032, 0.015, (-0.09, 0, 0.128), porcelain_m, verts=24)
+    sphere("Teapot_Knob", 0.012, (-0.09, 0, 0.142), porcelain_m, seg=12, ring=8)
     for i, x in enumerate((0.04, 0.12)):
         cup = cyl(f"Teacup_{i}_Body", 0.032, 0.045, (x, 0, 0.045), porcelain_m, verts=28)
         smooth(cup, 1)
         cyl(f"Teacup_{i}_Tea", 0.027, 0.004, (x, 0, 0.062), tea_m, verts=24)
-    export("tea_set", "tea_set.glb")
+    export("tea_set.glb")
 
 
 def build_hanging_sign():
@@ -589,13 +588,13 @@ def build_hanging_sign():
     chain_m = mat("ChainIron", (0.3, 0.3, 0.32), metallic=0.85, roughness=0.4)
     paint_m = mat("SignPaint", (0.85, 0.75, 0.5), roughness=0.5)
 
-    bar = cyl("Sign_BracketBar", 0.015, 0.5, (0.25, 0, 0), chain_m, verts=10, rot=(0, math.pi / 2, 0))
+    cyl("Sign_BracketBar", 0.015, 0.5, (0.25, 0, 0), chain_m, verts=10, rot=(0, math.pi / 2, 0))
     for x in (0.05, 0.45):
         cyl(f"Sign_Chain_{x:.2f}", 0.006, 0.22, (x, 0, -0.11), chain_m, verts=6)
-    board = box("Sign_Board", (0.44, 0.03, 0.2), (0.25, 0, -0.32), wood_m)
-    frame = box("Sign_Frame", (0.47, 0.02, 0.23), (0.25, -0.012, -0.32), wood_m)
-    plate = box("Sign_Plate", (0.36, 0.005, 0.12), (0.25, -0.022, -0.32), paint_m)
-    export("hanging_sign", "hanging_sign.glb")
+    box("Sign_Board", (0.44, 0.03, 0.2), (0.25, 0, -0.32), wood_m)
+    box("Sign_Frame", (0.47, 0.02, 0.23), (0.25, -0.012, -0.32), wood_m)
+    box("Sign_Plate", (0.36, 0.005, 0.12), (0.25, -0.022, -0.32), paint_m)
+    export("hanging_sign.glb")
 
 
 # ─────────────────── legacy furniture quality upgrades ───────────────────
@@ -609,7 +608,7 @@ def build_blackboard_upgrade():
     tray_m = mat("TrayAlu", (0.75, 0.76, 0.78), metallic=0.8, roughness=0.35)
     leg_m = mat("LegSteel", (0.4, 0.42, 0.45), metallic=0.85, roughness=0.3)
 
-    board = box("Blackboard_Surface", (1.8, 0.05, 1.1), (0, 0, 1.45), slate_m)
+    box("Blackboard_Surface", (1.8, 0.05, 1.1), (0, 0, 1.45), slate_m)
     box("Blackboard_FrameTop", (1.9, 0.08, 0.06), (0, 0, 2.03), frame_m)
     box("Blackboard_FrameBottom", (1.9, 0.08, 0.06), (0, 0, 0.87), frame_m)
     for x in (-0.92, 0.92):
@@ -617,11 +616,11 @@ def build_blackboard_upgrade():
     box("Blackboard_ChalkTray", (1.7, 0.12, 0.03), (0, -0.06, 0.83), tray_m)
     for i, x in enumerate((-0.5, -0.3)):
         cyl(f"Blackboard_Chalk_{i}", 0.008, 0.06, (x, -0.06, 0.855), chalk_m, verts=8, rot=(0, math.pi / 2, 0))
-    eraser = box("Blackboard_Eraser", (0.12, 0.05, 0.03), (0.4, -0.06, 0.855), frame_m)
+    box("Blackboard_Eraser", (0.12, 0.05, 0.03), (0.4, -0.06, 0.855), frame_m)
     for x in (-0.7, 0.7):
-        leg = cyl(f"Blackboard_Leg_{x:.2f}", 0.025, 0.9, (x, 0, 0.45), leg_m, verts=12)
-        foot = cyl(f"Blackboard_Foot_{x:.2f}", 0.05, 0.03, (x, 0, 0.015), leg_m, verts=12)
-    export("blackboard", "blackboard.glb")
+        cyl(f"Blackboard_Leg_{x:.2f}", 0.025, 0.9, (x, 0, 0.45), leg_m, verts=12)
+        cyl(f"Blackboard_Foot_{x:.2f}", 0.05, 0.03, (x, 0, 0.015), leg_m, verts=12)
+    export("blackboard.glb")
 
 
 def build_desk_upgrade():
@@ -631,17 +630,17 @@ def build_desk_upgrade():
     drawer_m = mat("DrawerFront", (0.55, 0.39, 0.24), roughness=0.45)
     handle_m = mat("HandleChrome", (0.8, 0.82, 0.85), metallic=0.9, roughness=0.2)
 
-    top = box("Desk_Tabletop", (1.2, 0.6, 0.04), (0, 0, 0.73), top_m)
+    box("Desk_Tabletop", (1.2, 0.6, 0.04), (0, 0, 0.73), top_m)
     box("Desk_ModestyPanel", (1.1, 0.02, 0.3), (0, 0.24, 0.55), top_m)
     for x in (-0.55, 0.55):
         for y in (-0.25, 0.25):
             cyl(f"Desk_Leg_{x:.2f}_{y:.2f}", 0.022, 0.71, (x, y, 0.355), leg_m, verts=14)
-    unit = box("Desk_DrawerUnit", (0.35, 0.5, 0.5), (0.38, 0, 0.48), drawer_m)
+    box("Desk_DrawerUnit", (0.35, 0.5, 0.5), (0.38, 0, 0.48), drawer_m)
     for i in range(3):
-        front = box(f"Desk_DrawerFront_{i}", (0.33, 0.02, 0.13), (0.38, -0.26, 0.31 + i * 0.17), drawer_m)
-        h = cyl(f"Desk_DrawerHandle_{i}", 0.008, 0.12, (0.38, -0.275, 0.31 + i * 0.17), handle_m, verts=8,
+        box(f"Desk_DrawerFront_{i}", (0.33, 0.02, 0.13), (0.38, -0.26, 0.31 + i * 0.17), drawer_m)
+        cyl(f"Desk_DrawerHandle_{i}", 0.008, 0.12, (0.38, -0.275, 0.31 + i * 0.17), handle_m, verts=8,
                 rot=(0, math.pi / 2, 0))
-    export("desk", "desk.glb")
+    export("desk.glb")
 
 
 def build_chair_upgrade():
@@ -650,17 +649,17 @@ def build_chair_upgrade():
     frame_m = mat("ChairFrameWood", (0.5, 0.34, 0.2), roughness=0.55)
     leg_m = mat("ChairLegWood", (0.45, 0.3, 0.18), roughness=0.5)
 
-    seat = box("Chair_SeatPan", (0.42, 0.4, 0.05), (0, 0, 0.45), seat_m)
-    back = box("Chair_Backrest", (0.4, 0.04, 0.45), (0, 0.19, 0.72), seat_m)
-    back_top = box("Chair_BackrestCap", (0.42, 0.06, 0.04), (0, 0.19, 0.955), frame_m)
+    box("Chair_SeatPan", (0.42, 0.4, 0.05), (0, 0, 0.45), seat_m)
+    box("Chair_Backrest", (0.4, 0.04, 0.45), (0, 0.19, 0.72), seat_m)
+    box("Chair_BackrestCap", (0.42, 0.06, 0.04), (0, 0.19, 0.955), frame_m)
     for x in (-0.18, 0.18):
-        post = cyl(f"Chair_BackPost_{x:.2f}", 0.018, 0.5, (x, 0.17, 0.7), frame_m, verts=12, rot=(0.12, 0, 0))
+        cyl(f"Chair_BackPost_{x:.2f}", 0.018, 0.5, (x, 0.17, 0.7), frame_m, verts=12, rot=(0.12, 0, 0))
     for x in (-0.18, 0.18):
         for y in (-0.17, 0.17):
             leg = cyl(f"Chair_Leg_{x:.2f}_{y:.2f}", 0.018, 0.45, (x, y, 0.225), leg_m, verts=12)
             leg.rotation_euler = (0.06 if y < 0 else -0.06, 0.06 if x < 0 else -0.06, 0)
-    stretcher = box("Chair_Stretcher", (0.36, 0.02, 0.02), (0, 0, 0.14), frame_m)
-    export("chair", "chair.glb")
+    box("Chair_Stretcher", (0.36, 0.02, 0.02), (0, 0, 0.14), frame_m)
+    export("chair.glb")
 
 
 def build_round_table_upgrade():
@@ -671,15 +670,15 @@ def build_round_table_upgrade():
 
     top = cyl("RoundTable_Tabletop", 0.55, 0.045, (0, 0, 0.73), top_m, verts=64)
     smooth(top, 2)
-    apron = cyl("RoundTable_Apron", 0.5, 0.06, (0, 0, 0.68), top_m, verts=48)
-    column = cyl("RoundTable_Column", 0.06, 0.66, (0, 0, 0.37), leg_m, verts=24)
+    cyl("RoundTable_Apron", 0.5, 0.06, (0, 0, 0.68), top_m, verts=48)
+    cyl("RoundTable_Column", 0.06, 0.66, (0, 0, 0.37), leg_m, verts=24)
     foot = cone("RoundTable_Foot", 0.3, 0.08, (0, 0, 0.04), base_m, verts=48)
     smooth(foot, 1)
     for i in range(4):
         a = i / 4 * math.tau + 0.4
-        spoke = box(f"RoundTable_Spoke_{i}", (0.26, 0.04, 0.03), (math.cos(a) * 0.15, math.sin(a) * 0.15, 0.05),
+        box(f"RoundTable_Spoke_{i}", (0.26, 0.04, 0.03), (math.cos(a) * 0.15, math.sin(a) * 0.15, 0.05),
                     base_m, rot=(0, 0, a))
-    export("round_table", "round_table.glb")
+    export("round_table.glb")
 
 
 def build_sofa_upgrade():
@@ -688,17 +687,17 @@ def build_sofa_upgrade():
     cushion_m = mat("SofaCushion", (0.34, 0.36, 0.4), roughness=0.9)
     leg_m = mat("SofaLegBrass", (0.75, 0.6, 0.3), metallic=0.9, roughness=0.3)
 
-    base = box("Sofa_Base", (1.8, 0.8, 0.25), (0, 0, 0.225), fabric_m)
-    back = box("Sofa_Backrest", (1.8, 0.22, 0.55), (0, 0.3, 0.62), fabric_m)
+    box("Sofa_Base", (1.8, 0.8, 0.25), (0, 0, 0.225), fabric_m)
+    box("Sofa_Backrest", (1.8, 0.22, 0.55), (0, 0.3, 0.62), fabric_m)
     for x in (-0.83, 0.83):
-        arm = box(f"Sofa_Armrest_{x:.2f}", (0.18, 0.8, 0.35), (x, 0, 0.52), fabric_m)
+        box(f"Sofa_Armrest_{x:.2f}", (0.18, 0.8, 0.35), (x, 0, 0.52), fabric_m)
     for i in range(3):
-        sc = box(f"Sofa_SeatCushion_{i}", (0.53, 0.62, 0.14), (-0.59 + i * 0.59, -0.04, 0.42), cushion_m)
-        bc = box(f"Sofa_BackCushion_{i}", (0.53, 0.14, 0.4), (-0.59 + i * 0.59, 0.26, 0.68), cushion_m)
+        box(f"Sofa_SeatCushion_{i}", (0.53, 0.62, 0.14), (-0.59 + i * 0.59, -0.04, 0.42), cushion_m)
+        box(f"Sofa_BackCushion_{i}", (0.53, 0.14, 0.4), (-0.59 + i * 0.59, 0.26, 0.68), cushion_m)
     for x in (-0.8, -0.27, 0.27, 0.8):
         for y in (-0.32, 0.32):
-            leg = cyl(f"Sofa_Leg_{x:.2f}_{y:.2f}", 0.025, 0.1, (x, y, 0.05), leg_m, verts=12)
-    export("sofa", "sofa.glb")
+            cyl(f"Sofa_Leg_{x:.2f}_{y:.2f}", 0.025, 0.1, (x, y, 0.05), leg_m, verts=12)
+    export("sofa.glb")
 
 
 BUILDERS = {

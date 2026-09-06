@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "แถบคำสั่งด่วน",
+  "studio.commandBar.settings": "การตั้งค่าแถบคำสั่ง",
+  "studio.commandBar.settingsDescription": "เปลี่ยนการจัดวางช่องและการแสดงผลของแถบคำสั่งใต้แถบเมนู",
+  "studio.commandBar.settingsTip": "วางคำสั่งที่ใช้บ่อยไว้ในช่องแรก ๆ เพื่อให้เอื้อมถึงได้เร็วที่สุด",
+  "studio.commandBar.settingsClose": "ปิดการตั้งค่าแถบคำสั่ง",
+  "studio.commandBar.settingsStorageNote": "การจัดวางช่องจะถูกบันทึกไว้ในการตั้งค่าพื้นที่ทำงานของเบราว์เซอร์นี้",
+  "studio.commandBar.showSlots": "แสดงช่องคำสั่ง",
+  "studio.commandBar.slot": "ช่อง {index}",
+  "studio.commandBar.slotAria": "ช่องคำสั่ง {index}",
+  "studio.commandBar.slotEmpty": "ช่องว่าง",
+  "studio.commandBar.resetDefaults": "รีเซ็ตเป็นการจัดวางเริ่มต้น",
+  "studio.commandBar.command.undo": "เลิกทำ",
+  "studio.commandBar.command.redo": "ทำซ้ำ",
+  "studio.commandBar.command.save": "บันทึกฉบับร่าง",
+  "studio.commandBar.command.publish": "เผยแพร่",
+  "studio.commandBar.command.download": "ดาวน์โหลดหน้าปัจจุบัน",
+  "studio.commandBar.command.export-open": "ตัวเลือกการส่งออก",
+  "studio.commandBar.command.zoom-fit": "พอดีความกว้างหน้าจอ",
+  "studio.commandBar.command.assets": "เทมเพลตและแอสเซท",
+  "studio.commandBar.command.bubbles": "ช่องคำพูด",
+  "studio.commandBar.command.project": "เครื่องมือโปรเจกต์"
+}

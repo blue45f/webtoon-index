@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Водич за функције",
+  "studio.hub.subtitle": "Једна по једна функција без икаквог оптерећења. Погледао сам __ПХ0__/__ПХ1__.",
+  "studio.hub.progressAriaLabel": "Напредак туторијала",
+  "studio.hub.listAriaLabel": "Листа функција",
+  "studio.hub.checked": "погледајте",
+  "studio.hub.prev": "Претходни",
+  "studio.hub.next": "следећи",
+  "studio.hub.markComplete": "означи као комплетан",
+  "studio.hub.completed": "Завршено",
+  "studio.hub.tryLabelDefault": "Пратите нас",
+  "studio.hub.stepAriaPrefix": "корак"
+}

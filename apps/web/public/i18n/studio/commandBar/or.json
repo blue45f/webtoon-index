@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "ଦ୍ରୁତ କମାଣ୍ଡ ବାର୍",
+  "studio.commandBar.settings": "କମାଣ୍ଡ ବାର୍ ସେଟିଂସ",
+  "studio.commandBar.settingsDescription": "ମେନୁ ବାର୍ ତଳେ ଥିବା କମାଣ୍ଡ ବାର୍‌ର ସ୍ଲଟ୍ ସଜ୍ଜା ଓ ଦୃଶ୍ୟମାନତା ବଦଳାନ୍ତୁ।",
+  "studio.commandBar.settingsTip": "ଆପଣ ସବୁଠାରୁ ଅଧିକ ବ୍ୟବହାର କରୁଥିବା କମାଣ୍ଡଗୁଡ଼ିକୁ ପ୍ରଥମ ସ୍ଲଟରେ ରଖନ୍ତୁ, ସେଥିରେ ସବୁଠାରୁ ଶୀଘ୍ର ପହଞ୍ଚିପାରିବେ।",
+  "studio.commandBar.settingsClose": "କମାଣ୍ଡ ବାର୍ ସେଟିଂସ ବନ୍ଦ କରନ୍ତୁ",
+  "studio.commandBar.settingsStorageNote": "ସ୍ଲଟ୍ ସଜ୍ଜା ଏହି ବ୍ରାଉଜରର କାର୍ଯ୍ୟକ୍ଷେତ୍ର ସେଟିଂସରେ ସଞ୍ଚିତ ହୁଏ।",
+  "studio.commandBar.showSlots": "କମାଣ୍ଡ ସ୍ଲଟ୍ ଦେଖାନ୍ତୁ",
+  "studio.commandBar.slot": "ସ୍ଲଟ୍ {index}",
+  "studio.commandBar.slotAria": "କମାଣ୍ଡ ସ୍ଲଟ୍ {index}",
+  "studio.commandBar.slotEmpty": "ଖାଲି ସ୍ଲଟ୍",
+  "studio.commandBar.resetDefaults": "ପୂର୍ବନିର୍ଦ୍ଧାରିତ ସଜ୍ଜାକୁ ଫେରାନ୍ତୁ",
+  "studio.commandBar.command.undo": "ପୂର୍ବବତ୍ କରନ୍ତୁ",
+  "studio.commandBar.command.redo": "ପୁଣି କରନ୍ତୁ",
+  "studio.commandBar.command.save": "ଡ୍ରାଫ୍ଟ ସଞ୍ଚୟ କରନ୍ତୁ",
+  "studio.commandBar.command.publish": "ପ୍ରକାଶ କରନ୍ତୁ",
+  "studio.commandBar.command.download": "ବର୍ତ୍ତମାନ ପୃଷ୍ଠା ଡାଉନଲୋଡ୍ କରନ୍ତୁ",
+  "studio.commandBar.command.export-open": "ରପ୍ତାନି ବିକଳ୍ପ",
+  "studio.commandBar.command.zoom-fit": "ସ୍କ୍ରିନର ଓସାରକୁ ମେଳାନ୍ତୁ",
+  "studio.commandBar.command.assets": "ଟେମ୍ପଲେଟ୍ ଓ ସମ୍ପଦ",
+  "studio.commandBar.command.bubbles": "କଥାର ବୁଦବୁଦ",
+  "studio.commandBar.command.project": "ପ୍ରକଳ୍ପ ଉପକରଣ"
+}

@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "nutikad kujundid",
+  "studio.quickShape.description.active": "Joonistage rahulikult jooni, ruute, ringe ja kolmnurki. Kui lahti lased, saab see ise korda.",
+  "studio.quickShape.description.inactive": "See on sobilik alla kritseldada. Kui lülitate selle sisse, viimistletakse teie käsitsi tehtud joonistus kenaks.",
+  "studio.quickShape.toggleHint": "Hetkel, kui lasete pliiatsiga jämedalt joonistatud kujundi lahti, muutub see täpseks kujundiks. Isegi kui teete joonistamise ajal pausi, kuvatakse eelvaade.",
+  "studio.quickShape.toggleAria.on": "Nutikad kujundid peal",
+  "studio.quickShape.toggleAria.off": "Nutikad kujundid välja lülitatud",
+  "studio.quickShape.matchedSuffix": " Ma tunnen seda. See on kinnitatud, kui ma oma käe vabastan.",
+  "studio.quickShape.emptyStatus": "Joonistage kujund ja laske lahti või jääge lihtsalt lõppu",
+  "studio.quickShape.openTutorial": "Vaadake nutikate kujundite õpetust",
+  "studio.quickShape.notice": "Joonistage nutikaid kujundeid, jooni, ringe, ruute jne ning viimistlege neid lahtilaskmisel (eelvaate kuvamiseks peatage)"
+}

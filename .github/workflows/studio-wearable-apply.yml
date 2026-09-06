@@ -46,11 +46,11 @@ jobs:
       - name: Lint reviewed production changes and regressions
         run: |
           set -o pipefail
-          pnpm exec eslint --fix --max-warnings=0 src/domains/creator/vrm/studio-vrm-head-surface.ts src/domains/creator/vrm/studio-vrm-head-surface.test.ts src/domains/creator/vrm/studio-vrm-prop-rig.ts src/domains/creator/vrm/studio-vrm-props.ts src/domains/creator/vrm/studio-vrm-prop-quality-policy.ts src/domains/creator/vrm/StudioVrmPropPanel.tsx src/domains/creator/vrm/StudioVrmPropPanel.quality.test.tsx src/domains/creator/vrm/useStudioVrmPoserRuntimeE.ts src/domains/creator/vrm/studio-vrm-prop-asset-runtime.ts src/domains/creator/vrm/studio-vrm-prop-asset-revisions.ts src/domains/creator/vrm/studio-vrm-prop-asset-revisions.test.ts 2>&1 | tee wearable-release-evidence/lint.log
+          pnpm exec eslint --fix --max-warnings=0 apps/web/src/domains/creator/vrm/studio-vrm-head-surface.ts apps/web/src/domains/creator/vrm/studio-vrm-head-surface.test.ts apps/web/src/domains/creator/vrm/studio-vrm-prop-rig.ts apps/web/src/domains/creator/vrm/studio-vrm-props.ts apps/web/src/domains/creator/vrm/studio-vrm-prop-quality-policy.ts apps/web/src/domains/creator/vrm/StudioVrmPropPanel.tsx apps/web/src/domains/creator/vrm/StudioVrmPropPanel.quality.test.tsx apps/web/src/domains/creator/vrm/useStudioVrmPoserRuntimeE.ts apps/web/src/domains/creator/vrm/studio-vrm-prop-asset-runtime.ts apps/web/src/domains/creator/vrm/studio-vrm-prop-asset-revisions.ts apps/web/src/domains/creator/vrm/studio-vrm-prop-asset-revisions.test.ts 2>&1 | tee wearable-release-evidence/lint.log
       - name: Complete VRM regressions, real fixtures, legacy props and cache request contracts
         run: |
           set -o pipefail
-          pnpm exec vitest run src/domains/creator/vrm src/domains/creator/studio-everyday-props-pack-v4.test.ts --reporter=default 2>&1 | tee wearable-release-evidence/tests.log
+          pnpm exec vitest run apps/web/src/domains/creator/vrm apps/web/src/domains/creator/studio-everyday-props-pack-v4.test.ts --reporter=default 2>&1 | tee wearable-release-evidence/tests.log
       - name: Stage only reviewed paths and prove every binary against its manifest
         run: |
           node --input-type=module <<'EOF'
@@ -58,16 +58,16 @@ jobs:
           import {createHash} from 'node:crypto';
           import {execFileSync} from 'node:child_process';
           import validator from 'gltf-validator';
-          const manifestPath='public/assets/3d/wearable-v5-manifest.json';
+          const manifestPath='apps/web/public/assets/3d/wearable-v5-manifest.json';
           const assets=JSON.parse(fs.readFileSync(manifestPath,'utf8')).assets;
           if(assets.length!==12||assets.some(a=>!/^[-a-z0-9_]+\.glb$/.test(a.file)))throw new Error('Unexpected generated assets');
-          const paths=[manifestPath,...assets.map(a=>'public/assets/3d/'+a.file),
+          const paths=[manifestPath,...assets.map(a=>'apps/web/public/assets/3d/'+a.file),
             'scripts/generate-studio-wearable-v5.mts','scripts/verify-studio-wearable-v5.mts','scripts/studio-wearable-fit.patch',
-            ...['studio-vrm-head-surface.ts','studio-vrm-head-surface.test.ts','studio-vrm-prop-rig.ts','studio-vrm-props.ts','studio-vrm-prop-quality-policy.ts','StudioVrmPropPanel.tsx','StudioVrmPropPanel.quality.test.tsx','useStudioVrmPoserRuntimeE.ts','studio-vrm-prop-asset-runtime.ts','studio-vrm-prop-asset-revisions.ts','studio-vrm-prop-asset-revisions.test.ts'].map(p=>'src/domains/creator/vrm/'+p)];
+            ...['studio-vrm-head-surface.ts','studio-vrm-head-surface.test.ts','studio-vrm-prop-rig.ts','studio-vrm-props.ts','studio-vrm-prop-quality-policy.ts','StudioVrmPropPanel.tsx','StudioVrmPropPanel.quality.test.tsx','useStudioVrmPoserRuntimeE.ts','studio-vrm-prop-asset-runtime.ts','studio-vrm-prop-asset-revisions.ts','studio-vrm-prop-asset-revisions.test.ts'].map(p=>'apps/web/src/domains/creator/vrm/'+p)];
           execFileSync('git',['add','-A','--',...paths],{stdio:'inherit'});
           const reports=[];
           for(const a of assets){
-            const bytes=execFileSync('git',['show',':public/assets/3d/'+a.file],{maxBuffer:16*1024*1024});
+            const bytes=execFileSync('git',['show',':apps/web/public/assets/3d/'+a.file],{maxBuffer:16*1024*1024});
             if(createHash('sha256').update(bytes).digest('hex')!==a.sha256)throw new Error('Staged GLB mismatch: '+a.id);
             const result=await validator.validateBytes(new Uint8Array(bytes),{uri:a.file,maxIssues:30});
             reports.push({id:a.id,issues:result.issues});
@@ -84,7 +84,7 @@ jobs:
         run: |
           mkdir -p wearable-release-evidence
           git rev-parse HEAD > wearable-release-evidence/commit.txt
-          tar -czf wearable-release-evidence/source.tar.gz src/domains/creator/vrm public/assets/3d scripts/generate-studio-wearable-v5.mts scripts/verify-studio-wearable-v5.mts
+          tar -czf wearable-release-evidence/source.tar.gz apps/web/src/domains/creator/vrm apps/web/public/assets/3d scripts/generate-studio-wearable-v5.mts scripts/verify-studio-wearable-v5.mts
       - uses: actions/upload-artifact@v4
         if: always()
         with:

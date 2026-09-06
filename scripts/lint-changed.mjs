@@ -29,11 +29,10 @@ function gitLines(gitArgs) {
   return result.stdout.split("\0").filter(Boolean);
 }
 
-const diffArgs = staged
-  ? ["diff", "--cached", "--name-only", "--diff-filter=ACMR", "-z", "--"]
-  : base
-    ? ["diff", "--name-only", "--diff-filter=ACMR", "-z", `${base}...HEAD`, "--"]
-    : ["diff", "--name-only", "--diff-filter=ACMR", "-z", "HEAD", "--"];
+let diffArgs;
+if (staged) diffArgs = ["diff", "--cached", "--name-only", "--diff-filter=ACMR", "-z", "--"];
+else if (base) diffArgs = ["diff", "--name-only", "--diff-filter=ACMR", "-z", `${base}...HEAD`, "--"];
+else diffArgs = ["diff", "--name-only", "--diff-filter=ACMR", "-z", "HEAD", "--"];
 
 const candidates = new Set(gitLines(diffArgs));
 if (staged) {
@@ -47,8 +46,9 @@ if (staged) {
     .filter((file) => worktreeChanges.has(file))
     .sort((left, right) => left.localeCompare(right, "en"));
   if (partiallyStaged.length > 0) {
+    const partiallyStagedText = partiallyStaged.map((file) => `  ${file}`).join("\n");
     process.stderr.write(
-      `lint:quick:staged — 부분 스테이징 파일은 작업 트리와 인덱스 내용이 다릅니다:\n${partiallyStaged.map((file) => `  ${file}`).join("\n")}\n` +
+      `lint:quick:staged — 부분 스테이징 파일은 작업 트리와 인덱스 내용이 다릅니다:\n${partiallyStagedText}\n` +
       "커밋 검증에는 lint-staged를 사용하거나, 변경을 완전히 스테이징한 뒤 다시 실행하세요.\n"
     );
     process.exit(2);

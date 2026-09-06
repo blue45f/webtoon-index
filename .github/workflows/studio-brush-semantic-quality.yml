@@ -7,30 +7,30 @@ on:
     paths:
       - "scripts/audit-studio-brush-pressure-curves.mts"
       - "scripts/audit-studio-brush-semantic-quality.mts"
-      - "src/domains/creator/StudioActiveBrushSummary.test.tsx"
-      - "src/domains/creator/StudioActiveBrushSummary.tsx"
-      - "src/domains/creator/brush/StudioBrushEngineMixer.test.tsx"
-      - "src/domains/creator/brush/StudioBrushEngineMixer.tsx"
-      - "src/domains/creator/brush/StudioBrushEngineProgramControls.test.tsx"
-      - "src/domains/creator/brush/StudioBrushEngineProgramControls.tsx"
-      - "src/domains/creator/brush/studio-brush-catalog.ts"
-      - "src/domains/creator/brush/studio-brush-engine-mix.test.ts"
-      - "src/domains/creator/brush/studio-brush-engine-mix.ts"
-      - "src/domains/creator/brush/studio-brush-material-distinctness.test.ts"
-      - "src/domains/creator/brush/studio-brush-material-distinctness.ts"
-      - "src/domains/creator/brush/studio-brush-pressure-curve-quality.test.ts"
-      - "src/domains/creator/brush/studio-brush-pressure-curve-quality.ts"
-      - "src/domains/creator/brush/studio-brush-semantic-quality.test.ts"
-      - "src/domains/creator/brush/studio-brush-semantic-quality.ts"
+      - "apps/web/src/domains/creator/StudioActiveBrushSummary.test.tsx"
+      - "apps/web/src/domains/creator/StudioActiveBrushSummary.tsx"
+      - "apps/web/src/domains/creator/brush/StudioBrushEngineMixer.test.tsx"
+      - "apps/web/src/domains/creator/brush/StudioBrushEngineMixer.tsx"
+      - "apps/web/src/domains/creator/brush/StudioBrushEngineProgramControls.test.tsx"
+      - "apps/web/src/domains/creator/brush/StudioBrushEngineProgramControls.tsx"
+      - "apps/web/src/domains/creator/brush/studio-brush-catalog.ts"
+      - "apps/web/src/domains/creator/brush/studio-brush-engine-mix.test.ts"
+      - "apps/web/src/domains/creator/brush/studio-brush-engine-mix.ts"
+      - "apps/web/src/domains/creator/brush/studio-brush-material-distinctness.test.ts"
+      - "apps/web/src/domains/creator/brush/studio-brush-material-distinctness.ts"
+      - "apps/web/src/domains/creator/brush/studio-brush-pressure-curve-quality.test.ts"
+      - "apps/web/src/domains/creator/brush/studio-brush-pressure-curve-quality.ts"
+      - "apps/web/src/domains/creator/brush/studio-brush-semantic-quality.test.ts"
+      - "apps/web/src/domains/creator/brush/studio-brush-semantic-quality.ts"
       - ".github/workflows/studio-brush-semantic-quality.yml"
   push:
     branches: [main]
     paths:
       - "scripts/audit-studio-brush-pressure-curves.mts"
       - "scripts/audit-studio-brush-semantic-quality.mts"
-      - "src/domains/creator/StudioActiveBrushSummary.test.tsx"
-      - "src/domains/creator/StudioActiveBrushSummary.tsx"
-      - "src/domains/creator/brush/**"
+      - "apps/web/src/domains/creator/StudioActiveBrushSummary.test.tsx"
+      - "apps/web/src/domains/creator/StudioActiveBrushSummary.tsx"
+      - "apps/web/src/domains/creator/brush/**"
       - ".github/workflows/studio-brush-semantic-quality.yml"
   workflow_dispatch:
 
@@ -67,14 +67,14 @@ jobs:
       - name: Verify runtime-grounded brush semantics and engine composition
         run: >-
           pnpm exec vitest run
-          src/domains/creator/brush/studio-brush-semantic-quality.test.ts
-          src/domains/creator/brush/studio-brush-material-distinctness.test.ts
-          src/domains/creator/brush/studio-brush-pressure-curve-quality.test.ts
-          src/domains/creator/StudioActiveBrushSummary.test.tsx
-          src/domains/creator/brush/studio-brush-catalog-lazy-boundary.test.ts
-          src/domains/creator/brush/studio-brush-engine-mix.test.ts
-          src/domains/creator/brush/StudioBrushEngineMixer.test.tsx
-          src/domains/creator/brush/StudioBrushEngineProgramControls.test.tsx
+          apps/web/src/domains/creator/brush/studio-brush-semantic-quality.test.ts
+          apps/web/src/domains/creator/brush/studio-brush-material-distinctness.test.ts
+          apps/web/src/domains/creator/brush/studio-brush-pressure-curve-quality.test.ts
+          apps/web/src/domains/creator/StudioActiveBrushSummary.test.tsx
+          apps/web/src/domains/creator/brush/studio-brush-catalog-lazy-boundary.test.ts
+          apps/web/src/domains/creator/brush/studio-brush-engine-mix.test.ts
+          apps/web/src/domains/creator/brush/StudioBrushEngineMixer.test.tsx
+          apps/web/src/domains/creator/brush/StudioBrushEngineProgramControls.test.tsx
 
       - name: Audit every listed name and material response
         run: >-
@@ -93,21 +93,21 @@ jobs:
           pnpm exec eslint --max-warnings=0
           scripts/audit-studio-brush-pressure-curves.mts
           scripts/audit-studio-brush-semantic-quality.mts
-          src/domains/creator/StudioActiveBrushSummary.test.tsx
-          src/domains/creator/StudioActiveBrushSummary.tsx
-          src/domains/creator/brush/StudioBrushEngineMixer.test.tsx
-          src/domains/creator/brush/StudioBrushEngineMixer.tsx
-          src/domains/creator/brush/StudioBrushEngineProgramControls.test.tsx
-          src/domains/creator/brush/StudioBrushEngineProgramControls.tsx
-          src/domains/creator/brush/studio-brush-catalog.ts
-          src/domains/creator/brush/studio-brush-engine-mix.test.ts
-          src/domains/creator/brush/studio-brush-engine-mix.ts
-          src/domains/creator/brush/studio-brush-material-distinctness.test.ts
-          src/domains/creator/brush/studio-brush-material-distinctness.ts
-          src/domains/creator/brush/studio-brush-pressure-curve-quality.test.ts
-          src/domains/creator/brush/studio-brush-pressure-curve-quality.ts
-          src/domains/creator/brush/studio-brush-semantic-quality.test.ts
-          src/domains/creator/brush/studio-brush-semantic-quality.ts
+          apps/web/src/domains/creator/StudioActiveBrushSummary.test.tsx
+          apps/web/src/domains/creator/StudioActiveBrushSummary.tsx
+          apps/web/src/domains/creator/brush/StudioBrushEngineMixer.test.tsx
+          apps/web/src/domains/creator/brush/StudioBrushEngineMixer.tsx
+          apps/web/src/domains/creator/brush/StudioBrushEngineProgramControls.test.tsx
+          apps/web/src/domains/creator/brush/StudioBrushEngineProgramControls.tsx
+          apps/web/src/domains/creator/brush/studio-brush-catalog.ts
+          apps/web/src/domains/creator/brush/studio-brush-engine-mix.test.ts
+          apps/web/src/domains/creator/brush/studio-brush-engine-mix.ts
+          apps/web/src/domains/creator/brush/studio-brush-material-distinctness.test.ts
+          apps/web/src/domains/creator/brush/studio-brush-material-distinctness.ts
+          apps/web/src/domains/creator/brush/studio-brush-pressure-curve-quality.test.ts
+          apps/web/src/domains/creator/brush/studio-brush-pressure-curve-quality.ts
+          apps/web/src/domains/creator/brush/studio-brush-semantic-quality.test.ts
+          apps/web/src/domains/creator/brush/studio-brush-semantic-quality.ts
 
       - name: Typecheck
         run: pnpm exec tsc -p tsconfig.json --noEmit --incremental false

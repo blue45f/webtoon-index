@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "ብልጥ ቅርጾች",
+  "studio.quickShape.description.active": "በእረፍት ጊዜ መስመሮችን፣ ካሬዎችን፣ ክበቦችን እና ትሪያንግሎችን ይሳሉ። ከለቀቁት በራሱ ያጸዳል።",
+  "studio.quickShape.description.inactive": "እሱን መፃፍ ምንም ችግር የለውም። ካበሩት የእጅዎ ስዕል ወደ ንጹህ ቅርጽ ይጣራል.",
+  "studio.quickShape.toggleHint": "በግምት የተሳለ ቅርጽ በብዕር ለለቀቁት ቅጽበት ወደ ትክክለኛ ቅርጽ ይሄዳል። እየሳሉ ለአፍታ ቢያቆሙም ቅድመ እይታ ይታያል።",
+  "studio.quickShape.toggleAria.on": "ብልህ ቅርጾች በርተዋል።",
+  "studio.quickShape.toggleAria.off": "ብልህ ቅርጾች ጠፍተዋል።",
+  "studio.quickShape.matchedSuffix": " ይሰማኛል. እጄን ስፈታ ይረጋገጣል.",
+  "studio.quickShape.emptyStatus": "ቅርጹን ይሳሉ እና ይልቀቁ, ወይም መጨረሻ ላይ ብቻ ይቆዩ",
+  "studio.quickShape.openTutorial": "የስማርት ቅርጾች አጋዥ ስልጠናውን ይመልከቱ",
+  "studio.quickShape.notice": "ብልጥ ቅርጾችን፣ መስመሮችን፣ ክበቦችን፣ ካሬዎችን፣ ወዘተ ይሳሉ እና ሲለቁ ያጣሩዋቸው (ለቅድመ እይታ ለአፍታ ያቁሙ)"
+}

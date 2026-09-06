@@ -22,24 +22,24 @@ import {
   CreatorMarketplaceResourceRecordSchema,
   canonicalizeCreatorMarketplaceJson,
   creatorMarketplaceJsonByteSize,
-} from "../../lib/creator-marketplace-resource-contract";
+} from "../../apps/web/src/shared/lib/creator-marketplace-resource-contract";
 import {
   STUDIO_BG3D_PROCEDURAL_STARTER_PACK,
   STUDIO_BG3D_PROCEDURAL_STARTER_PACK_ID,
-} from "../../src/domains/creator/bg3d/studio-bg3d-procedural-starter-pack";
+} from "../../apps/web/src/domains/creator/bg3d/studio-bg3d-procedural-starter-pack";
 import {
   DEFAULT_STUDIO_BRUSH_SNAPSHOT,
-} from "../../src/domains/creator/brush/studio-brush-library";
+} from "../../apps/web/src/domains/creator/brush/studio-brush-library";
 import {
   projectCreatorMarketplaceRecordToAssets,
   projectCreatorMarketplaceRecordToStudioPack,
-} from "../../src/domains/creator/studio-community-marketplace";
+} from "../../apps/web/src/domains/creator/studio-community-marketplace";
 import {
   validateStudioCreatorPack,
-} from "../../src/domains/creator/studio-creator-pack-runtime";
+} from "../../apps/web/src/domains/creator/studio-creator-pack-runtime";
 import {
   findStudioOriginalFreeAsset,
-} from "../../src/domains/creator/studio-original-free-asset-packs";
+} from "../../apps/web/src/domains/creator/studio-original-free-asset-packs";
 import {
   startIsolatedMarketApi,
   stopIsolatedMarketApi,
@@ -59,7 +59,7 @@ import type {
   CreatorMarketplaceResourceListPage,
   CreatorMarketplaceResourceManifest,
   CreatorMarketplaceResourceRecord,
-} from "../../lib/creator-marketplace-resource-contract";
+} from "../../apps/web/src/shared/lib/creator-marketplace-resource-contract";
 import type { ChildProcess } from "node:child_process";
 
 const MEDIA_TYPE_BY_KIND = {

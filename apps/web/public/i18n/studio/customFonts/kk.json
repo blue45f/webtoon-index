@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "менің қаріпім",
+  "studio.customFonts.importButton": "Файлдан импорттау",
+  "studio.customFonts.importing": "Тексерілуде…",
+  "studio.customFonts.importAria": "Қаріп файлын импорттау",
+  "studio.customFonts.storageAria": "Қаріптер кітапханасын пайдалану",
+  "studio.customFonts.emptyTitle": "Қаріптер әлі қосылмаған.",
+  "studio.customFonts.unknownFileName": "Файл атауы жоқ",
+  "studio.customFonts.apply": "Қолдану",
+  "studio.customFonts.applyToText": "Бұл қаріпті таңдалған мәтінге қолданыңыз",
+  "studio.customFonts.selectTextFirst": "Алдымен мәтінді немесе сөйлеу көпіршігін таңдаңыз",
+  "studio.customFonts.delete": "қаріпті жою"
+}

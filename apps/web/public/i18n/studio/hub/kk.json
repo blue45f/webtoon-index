@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Мүмкіндік оқулығы",
+  "studio.hub.subtitle": "Ешбір жүктемесіз бір уақытта бір функция. Мен {done}/{total} қарадым.",
+  "studio.hub.progressAriaLabel": "Оқулық барысы",
+  "studio.hub.listAriaLabel": "Мүмкіндіктер тізімі",
+  "studio.hub.checked": "қараңызшы",
+  "studio.hub.prev": "Алдыңғы",
+  "studio.hub.next": "келесі",
+  "studio.hub.markComplete": "аяқталған деп белгілеңіз",
+  "studio.hub.completed": "Аяқталды",
+  "studio.hub.tryLabelDefault": "Ары қарай жүріңіз",
+  "studio.hub.stepAriaPrefix": "қадам"
+}

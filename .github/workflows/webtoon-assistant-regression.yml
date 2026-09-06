@@ -4,24 +4,24 @@ on:
   pull_request:
     branches: [main]
     paths:
-      - "src/domains/creator/assistant/**"
-      - "src/domains/creator/StudioCompanionAssistantDisplay*"
-      - "src/domains/creator/StudioReferencePanel*"
-      - "src/domains/creator/studio-reference-import*"
-      - "src/domains/creator/studio-workbench-*"
-      - "src/domains/creator/use-studio-copy-feedback*"
-      - "src/domains/creator/studio-panel-ui*"
-      - "src/domains/creator/studio-sfx-lettering*"
+      - "apps/web/src/domains/creator/assistant/**"
+      - "apps/web/src/domains/creator/StudioCompanionAssistantDisplay*"
+      - "apps/web/src/domains/creator/StudioReferencePanel*"
+      - "apps/web/src/domains/creator/studio-reference-import*"
+      - "apps/web/src/domains/creator/studio-workbench-*"
+      - "apps/web/src/domains/creator/use-studio-copy-feedback*"
+      - "apps/web/src/domains/creator/studio-panel-ui*"
+      - "apps/web/src/domains/creator/studio-sfx-lettering*"
       - "package.json"
       - "pnpm-lock.yaml"
       - ".github/workflows/webtoon-assistant-regression.yml"
   push:
     branches: [main]
     paths:
-      - "src/domains/creator/assistant/**"
-      - "src/domains/creator/StudioCompanionAssistantDisplay*"
-      - "src/domains/creator/StudioReferencePanel*"
-      - "src/domains/creator/studio-reference-import*"
+      - "apps/web/src/domains/creator/assistant/**"
+      - "apps/web/src/domains/creator/StudioCompanionAssistantDisplay*"
+      - "apps/web/src/domains/creator/StudioReferencePanel*"
+      - "apps/web/src/domains/creator/studio-reference-import*"
       - ".github/workflows/webtoon-assistant-regression.yml"
 
 permissions:
@@ -76,12 +76,12 @@ jobs:
         run: |
           set +e
           pnpm exec vitest run \
-            src/domains/creator/assistant \
-            src/domains/creator/StudioCompanionAssistantDisplay.test.tsx \
-            src/domains/creator/StudioReferencePanel.test.tsx \
-            src/domains/creator/studio-reference-import \
-            src/domains/creator/studio-workbench-tabs.test.tsx \
-            src/domains/creator/studio-sfx-lettering.test.ts \
+            apps/web/src/domains/creator/assistant \
+            apps/web/src/domains/creator/StudioCompanionAssistantDisplay.test.tsx \
+            apps/web/src/domains/creator/StudioReferencePanel.test.tsx \
+            apps/web/src/domains/creator/studio-reference-import \
+            apps/web/src/domains/creator/studio-workbench-tabs.test.tsx \
+            apps/web/src/domains/creator/studio-sfx-lettering.test.ts \
             --reporter=json \
             --outputFile="$RUNNER_TEMP/webtoon-assistant-results.json" \
             > "$RUNNER_TEMP/webtoon-assistant-tests.log" 2>&1

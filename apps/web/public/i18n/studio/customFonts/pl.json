@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "moja czcionka",
+  "studio.customFonts.importButton": "Importuj z pliku",
+  "studio.customFonts.importing": "Sprawdzam…",
+  "studio.customFonts.importAria": "Importuj plik czcionki",
+  "studio.customFonts.storageAria": "Użycie biblioteki czcionek",
+  "studio.customFonts.emptyTitle": "Nie ma jeszcze żadnych czcionek.",
+  "studio.customFonts.unknownFileName": "Brak nazwy pliku",
+  "studio.customFonts.apply": "Zastosuj",
+  "studio.customFonts.applyToText": "Zastosuj tę czcionkę do zaznaczonego tekstu",
+  "studio.customFonts.selectTextFirst": "Najpierw zaznacz tekst lub dymek",
+  "studio.customFonts.delete": "usuń czcionkę"
+}

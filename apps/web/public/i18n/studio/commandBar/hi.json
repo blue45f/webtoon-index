@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "त्वरित कमांड बार",
+  "studio.commandBar.settings": "कमांड बार सेटिंग्स",
+  "studio.commandBar.settingsDescription": "मेन्यू बार के नीचे कमांड बार का स्लॉट क्रम और दृश्यता बदलें।",
+  "studio.commandBar.settingsTip": "सबसे ज़्यादा इस्तेमाल होने वाले कमांड पहले स्लॉट में रखें ताकि वे सबसे जल्दी मिलें।",
+  "studio.commandBar.settingsClose": "कमांड बार सेटिंग्स बंद करें",
+  "studio.commandBar.settingsStorageNote": "स्लॉट क्रम इसी ब्राउज़र की वर्कस्पेस सेटिंग्स में सहेजा जाता है।",
+  "studio.commandBar.showSlots": "कमांड स्लॉट दिखाएँ",
+  "studio.commandBar.slot": "स्लॉट {index}",
+  "studio.commandBar.slotAria": "कमांड स्लॉट {index}",
+  "studio.commandBar.slotEmpty": "खाली स्लॉट",
+  "studio.commandBar.resetDefaults": "डिफ़ॉल्ट क्रम पर लौटाएँ",
+  "studio.commandBar.command.undo": "पूर्ववत करें",
+  "studio.commandBar.command.redo": "फिर से करें",
+  "studio.commandBar.command.save": "ड्राफ़्ट सहेजें",
+  "studio.commandBar.command.publish": "प्रकाशित करें",
+  "studio.commandBar.command.download": "मौजूदा पेज डाउनलोड करें",
+  "studio.commandBar.command.export-open": "एक्सपोर्ट विकल्प",
+  "studio.commandBar.command.zoom-fit": "स्क्रीन की चौड़ाई में फ़िट करें",
+  "studio.commandBar.command.assets": "टेम्प्लेट और एसेट",
+  "studio.commandBar.command.bubbles": "संवाद बुलबुला",
+  "studio.commandBar.command.project": "प्रोजेक्ट टूल"
+}

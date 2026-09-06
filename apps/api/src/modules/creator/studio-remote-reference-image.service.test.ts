@@ -7,7 +7,7 @@ import {
 } from "@nestjs/common";
 import { afterEach, describe, expect, it, vi } from "vitest";
 
-import { STUDIO_REMOTE_REFERENCE_IMAGE_MAX_BYTES } from "../../../../../lib/studio-remote-reference-image-contract";
+import { STUDIO_REMOTE_REFERENCE_IMAGE_MAX_BYTES } from "../../../../web/src/shared/lib/studio-remote-reference-image-contract";
 
 import { StudioRemoteReferenceImageService } from "./studio-remote-reference-image.service";
 

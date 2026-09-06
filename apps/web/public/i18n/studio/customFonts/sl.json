@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "moja pisava",
+  "studio.customFonts.importButton": "Uvoz iz datoteke",
+  "studio.customFonts.importing": "Preverjanje ...",
+  "studio.customFonts.importAria": "Uvozi datoteko s pisavami",
+  "studio.customFonts.storageAria": "Uporaba knjižnice pisav",
+  "studio.customFonts.emptyTitle": "Vključene še niso nobene pisave.",
+  "studio.customFonts.unknownFileName": "Brez imena datoteke",
+  "studio.customFonts.apply": "Prijavite se",
+  "studio.customFonts.applyToText": "Uporabi to pisavo za izbrano besedilo",
+  "studio.customFonts.selectTextFirst": "Najprej izberite besedilo ali govorni oblaček",
+  "studio.customFonts.delete": "izbriši pisavo"
+}

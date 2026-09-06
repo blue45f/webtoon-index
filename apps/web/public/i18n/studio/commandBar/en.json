@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Quick command bar",
+  "studio.commandBar.settings": "Command bar settings",
+  "studio.commandBar.settingsDescription": "Change the slot layout and visibility of the command bar below the menu bar.",
+  "studio.commandBar.settingsTip": "Put the commands you use most in the first slots so they are quickest to reach.",
+  "studio.commandBar.settingsClose": "Close command bar settings",
+  "studio.commandBar.settingsStorageNote": "The slot layout is saved in this browser's workspace settings.",
+  "studio.commandBar.showSlots": "Show command slots",
+  "studio.commandBar.slot": "Slot {index}",
+  "studio.commandBar.slotAria": "Command slot {index}",
+  "studio.commandBar.slotEmpty": "Empty slot",
+  "studio.commandBar.resetDefaults": "Reset to the default layout",
+  "studio.commandBar.command.undo": "Undo",
+  "studio.commandBar.command.redo": "Redo",
+  "studio.commandBar.command.save": "Save draft",
+  "studio.commandBar.command.publish": "Publish",
+  "studio.commandBar.command.download": "Download current page",
+  "studio.commandBar.command.export-open": "Export options",
+  "studio.commandBar.command.zoom-fit": "Fit to screen width",
+  "studio.commandBar.command.assets": "Templates & assets",
+  "studio.commandBar.command.bubbles": "Speech bubble",
+  "studio.commandBar.command.project": "Project center"
+}

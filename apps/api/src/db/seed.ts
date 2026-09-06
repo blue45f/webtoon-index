@@ -55,7 +55,7 @@ async function main() {
 
   const { db } = await import("./index");
   const s = await import("./schema");
-  const { hashPassword } = await import("../../../../lib/auth-crypto");
+  const { hashPassword } = await import("../../../web/src/shared/lib/auth-crypto");
 
   const titleIds = await resolveTitleIds();
   const T = (i: number) => titleIds[i % titleIds.length];

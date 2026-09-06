@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "mening shriftim",
+  "studio.customFonts.importButton": "Fayldan import qilish",
+  "studio.customFonts.importing": "Tekshirilmoqda…",
+  "studio.customFonts.importAria": "Shrift faylini import qilish",
+  "studio.customFonts.storageAria": "Shrift kutubxonasidan foydalanish",
+  "studio.customFonts.emptyTitle": "Hozircha shriftlar kiritilmagan.",
+  "studio.customFonts.unknownFileName": "Fayl nomi yo'q",
+  "studio.customFonts.apply": "Murojaat qiling",
+  "studio.customFonts.applyToText": "Ushbu shriftni tanlangan matnga qo'llang",
+  "studio.customFonts.selectTextFirst": "Avval matn yoki nutq pufakchasini tanlang",
+  "studio.customFonts.delete": "shriftni o'chirish"
+}

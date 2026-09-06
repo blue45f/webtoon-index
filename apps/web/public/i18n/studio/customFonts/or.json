@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "ମୋ ଫଣ୍ଟ",
+  "studio.customFonts.importButton": "ଫାଇଲରୁ ଆମଦାନୀ କରନ୍ତୁ |",
+  "studio.customFonts.importing": "ଯାଞ୍ଚ…",
+  "studio.customFonts.importAria": "ଫଣ୍ଟ ଫାଇଲ୍ ଆମଦାନୀ କରନ୍ତୁ |",
+  "studio.customFonts.storageAria": "ଫଣ୍ଟ ଲାଇବ୍ରେରୀ ବ୍ୟବହାର |",
+  "studio.customFonts.emptyTitle": "ଏପର୍ଯ୍ୟନ୍ତ କ font ଣସି ଫଣ୍ଟ ଅନ୍ତର୍ଭୂକ୍ତ କରାଯାଇ ନାହିଁ |",
+  "studio.customFonts.unknownFileName": "କ file ଣସି ଫାଇଲ ନାମ ନାହିଁ |",
+  "studio.customFonts.apply": "ପ୍ରୟୋଗ କରନ୍ତୁ |",
+  "studio.customFonts.applyToText": "ମନୋନୀତ ପାଠ୍ୟରେ ଏହି ଫଣ୍ଟକୁ ପ୍ରୟୋଗ କରନ୍ତୁ |",
+  "studio.customFonts.selectTextFirst": "ପ୍ରଥମେ ଟେକ୍ସଟ୍ କିମ୍ବା ସ୍ପିଚ୍ ବବୁଲ୍ ଚୟନ କରନ୍ତୁ |",
+  "studio.customFonts.delete": "ଫଣ୍ଟ ଡିଲିଟ୍ କରନ୍ତୁ |"
+}

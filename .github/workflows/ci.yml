@@ -65,6 +65,8 @@ jobs:
           cache: "pnpm"
       - run: pnpm install --frozen-lockfile
       - run: pnpm run validate:architecture
+      - run: pnpm run verify:csp
+      - run: pnpm run verify:toolchain-coverage
       - run: pnpm run lint
 
   typecheck:

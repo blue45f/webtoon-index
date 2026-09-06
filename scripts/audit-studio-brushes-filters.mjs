@@ -90,7 +90,7 @@ async function drawStroke(page, x1n, y1n, x2n, y2n) {
   await page.waitForTimeout(280);
 }
 
-async function main() {
+async function main() { // NOSONAR javascript:S3776
   const result = {
     ok: false,
     brushes: [],

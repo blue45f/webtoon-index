@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "빠른 명령 바",
+  "studio.commandBar.settings": "명령 바 설정",
+  "studio.commandBar.settingsDescription": "메뉴바 아래 명령 바의 슬롯 구성과 표시 여부를 바꿉니다.",
+  "studio.commandBar.settingsTip": "자주 쓰는 명령을 앞쪽 슬롯에 두면 손이 가장 빨리 닿아요.",
+  "studio.commandBar.settingsClose": "명령 바 설정 닫기",
+  "studio.commandBar.settingsStorageNote": "슬롯 구성은 이 브라우저의 작업공간 설정에 저장돼요.",
+  "studio.commandBar.showSlots": "명령 슬롯 표시",
+  "studio.commandBar.slot": "슬롯 {index}",
+  "studio.commandBar.slotAria": "명령 슬롯 {index}",
+  "studio.commandBar.slotEmpty": "빈 슬롯",
+  "studio.commandBar.resetDefaults": "기본 구성으로 되돌리기",
+  "studio.commandBar.command.undo": "실행취소",
+  "studio.commandBar.command.redo": "다시실행",
+  "studio.commandBar.command.save": "임시저장",
+  "studio.commandBar.command.publish": "게시하기",
+  "studio.commandBar.command.download": "현재 페이지 다운로드",
+  "studio.commandBar.command.export-open": "내보내기 옵션",
+  "studio.commandBar.command.zoom-fit": "화면 폭 맞춤",
+  "studio.commandBar.command.assets": "템플릿·에셋",
+  "studio.commandBar.command.bubbles": "말풍선",
+  "studio.commandBar.command.project": "프로젝트 센터"
+}

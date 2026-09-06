@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "ميزة البرنامج التعليمي",
+  "studio.hub.subtitle": "وظيفة واحدة في كل مرة دون أي عبء. نظرت إلى {done}/{total}.",
+  "studio.hub.progressAriaLabel": "تقدم البرنامج التعليمي",
+  "studio.hub.listAriaLabel": "قائمة الميزات",
+  "studio.hub.checked": "نلقي نظرة",
+  "studio.hub.prev": "السابق",
+  "studio.hub.next": "التالي",
+  "studio.hub.markComplete": "وضع علامة على أنها كاملة",
+  "studio.hub.completed": "مكتمل",
+  "studio.hub.tryLabelDefault": "اتبع على طول",
+  "studio.hub.stepAriaPrefix": "خطوة"
+}

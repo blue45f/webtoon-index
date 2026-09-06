@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Ātro komandu josla",
+  "studio.commandBar.settings": "Komandu joslas iestatījumi",
+  "studio.commandBar.settingsDescription": "Mainiet izvēlņu joslas apakšā esošās komandu joslas vietu izkārtojumu un redzamību.",
+  "studio.commandBar.settingsTip": "Visbiežāk lietotās komandas ievieto pirmajās vietās, lai tās būtu visātrāk sasniedzamas.",
+  "studio.commandBar.settingsClose": "Aizvērt komandu joslas iestatījumus",
+  "studio.commandBar.settingsStorageNote": "Vietu izkārtojums tiek saglabāts šīs pārlūkprogrammas darbvietas iestatījumos.",
+  "studio.commandBar.showSlots": "Rādīt komandu vietas",
+  "studio.commandBar.slot": "{index}. vieta",
+  "studio.commandBar.slotAria": "{index}. komandas vieta",
+  "studio.commandBar.slotEmpty": "Tukša vieta",
+  "studio.commandBar.resetDefaults": "Atiestatīt uz noklusējuma izkārtojumu",
+  "studio.commandBar.command.undo": "Atsaukt",
+  "studio.commandBar.command.redo": "Atkārtot",
+  "studio.commandBar.command.save": "Saglabāt melnrakstu",
+  "studio.commandBar.command.publish": "Publicēt",
+  "studio.commandBar.command.download": "Lejupielādēt pašreizējo lapu",
+  "studio.commandBar.command.export-open": "Eksportēšanas opcijas",
+  "studio.commandBar.command.zoom-fit": "Pielāgot ekrāna platumam",
+  "studio.commandBar.command.assets": "Veidnes un resursi",
+  "studio.commandBar.command.bubbles": "Runas burbulis",
+  "studio.commandBar.command.project": "Projekta rīki"
+}

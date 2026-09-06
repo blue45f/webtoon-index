@@ -7,7 +7,7 @@ import {
   STUDIO_BG3D_DEPTH_FLOAT32_PROFILE,
   STUDIO_BG3D_NORMAL_PROFILE,
   STUDIO_BG3D_STABLE_ID_PROFILE,
-} from "../src/domains/creator/bg3d/studio-bg3d-artifact-capture-v2";
+} from "../apps/web/src/domains/creator/bg3d/studio-bg3d-artifact-capture-v2";
 
 import {
   BABYLON_ALIGNED_RASTER_SMOKE_SIZE,
@@ -46,7 +46,7 @@ const verifierSource = readFileSync(
   "utf8",
 );
 const magicProductionProofSource = readFileSync(
-  new URL("../src/domains/creator/bg3d/studio-bg3d-magic-production-proof.ts",
+  new URL("../apps/web/src/domains/creator/bg3d/studio-bg3d-magic-production-proof.ts",
     import.meta.url,
   ),
   "utf8",

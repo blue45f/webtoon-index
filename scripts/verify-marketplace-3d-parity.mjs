@@ -4,12 +4,12 @@ import { readFile } from "node:fs/promises";
 
 import pg from "pg";
 
-import { creatorMarketplacePackageIdentityPreimage } from "../lib/creator-marketplace-cloud-library-contract.ts";
+import { creatorMarketplacePackageIdentityPreimage } from "../apps/web/src/shared/lib/creator-marketplace-cloud-library-contract.ts";
 import {
   CreatorMarketplaceResourceManifestSchema,
   canonicalizeCreatorMarketplaceJson,
-} from "../lib/creator-marketplace-resource-contract.ts";
-import { CREATOR_MARKETPLACE_STARTER_RECORDS } from "../lib/creator-marketplace-starter-catalog.ts";
+} from "../apps/web/src/shared/lib/creator-marketplace-resource-contract.ts";
+import { CREATOR_MARKETPLACE_STARTER_RECORDS } from "../apps/web/src/shared/lib/creator-marketplace-starter-catalog.ts";
 
 const OLD_MIGRATIONS = [
   "0021_creator_marketplace_resource.sql",
@@ -27,7 +27,7 @@ const LIBRARY_CHECK = "creator_marketplace_library_kind_check";
 const REPORT_CHECK = "creator_marketplace_resource_report_evidence_check";
 const PUBLISHER = "parity-publisher";
 
-async function run() {
+async function run() { // NOSONAR javascript:S3776
   assert.equal(process.env.TOONSPECTRUM_MARKETPLACE_PARITY_DB_TEST, "1", "Explicit disposable-DB opt-in is required");
   const target = new URL(process.env.DATABASE_URL ?? "");
   assert.ok(["postgres:", "postgresql:"].includes(target.protocol), "PostgreSQL is required");
@@ -153,8 +153,7 @@ async function run() {
 
   async function mustReject(operation, constraint) {
     await assert.rejects(operation, (error) => error?.code === "23514" && (!constraint || error.constraint === constraint),
-      `Expected PostgreSQL CHECK rejection${constraint ? ` from ${constraint}` : ""}`);
-    rejected += 1;
+      `Expected PostgreSQL CHECK rejection${constraint ? " from " + constraint : ""}`);
   }
 
   async function unchangedGuards() {

@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Жылдам пәрмен жолағы",
+  "studio.commandBar.settings": "Пәрмен жолағы параметрлері",
+  "studio.commandBar.settingsDescription": "Мәзір жолағының астындағы пәрмен жолағының ұя орналасуы мен көрінуін өзгертіңіз.",
+  "studio.commandBar.settingsTip": "Жиі қолданатын пәрмендерді алдыңғы ұяларға қойсаңыз, оларға ең жылдам жетесіз.",
+  "studio.commandBar.settingsClose": "Пәрмен жолағы параметрлерін жабу",
+  "studio.commandBar.settingsStorageNote": "Ұя орналасуы осы браузердің жұмыс кеңістігі параметрлерінде сақталады.",
+  "studio.commandBar.showSlots": "Пәрмен ұяларын көрсету",
+  "studio.commandBar.slot": "{index}-ұя",
+  "studio.commandBar.slotAria": "{index}-пәрмен ұясы",
+  "studio.commandBar.slotEmpty": "Бос ұя",
+  "studio.commandBar.resetDefaults": "Әдепкі орналасуға қайтару",
+  "studio.commandBar.command.undo": "Болдырмау",
+  "studio.commandBar.command.redo": "Қайталау",
+  "studio.commandBar.command.save": "Жобаны сақтау",
+  "studio.commandBar.command.publish": "Жариялау",
+  "studio.commandBar.command.download": "Ағымдағы бетті жүктеп алу",
+  "studio.commandBar.command.export-open": "Экспорт параметрлері",
+  "studio.commandBar.command.zoom-fit": "Экран еніне сыйдыру",
+  "studio.commandBar.command.assets": "Үлгілер мен ресурстар",
+  "studio.commandBar.command.bubbles": "Сөйлеу көпіршігі",
+  "studio.commandBar.command.project": "Жоба құралдары"
+}

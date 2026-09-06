@@ -66,7 +66,7 @@ class SourceContractTests(unittest.TestCase):
             self.assertNotIn("..", Path(raw["outputDir"]).parts)
 
     def test_typescript_package_parser_pins_hash_and_path_safety(self) -> None:
-        source = (ROOT / "src/domains/creator/vrm/studio-vrm-blender-character-package.ts").read_text()
+        source = (ROOT / "apps/web/src/domains/creator/vrm/studio-vrm-blender-character-package.ts").read_text()
         self.assertRegex(source, re.compile(r"\^\[0-9a-f\]\{64\}\$"))
         self.assertIn('part === ".."', source)
         self.assertIn("quality.passed", source)

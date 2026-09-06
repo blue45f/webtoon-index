@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "benim yazı tipim",
+  "studio.customFonts.importButton": "Dosyadan içe aktar",
+  "studio.customFonts.importing": "Kontrol ediliyor…",
+  "studio.customFonts.importAria": "Yazı tipi dosyasını içe aktar",
+  "studio.customFonts.storageAria": "Yazı tipi kitaplığı kullanımı",
+  "studio.customFonts.emptyTitle": "Henüz yazı tipi eklenmemiş.",
+  "studio.customFonts.unknownFileName": "Dosya adı yok",
+  "studio.customFonts.apply": "Uygula",
+  "studio.customFonts.applyToText": "Bu yazı tipini seçilen metne uygula",
+  "studio.customFonts.selectTextFirst": "İlk önce metni veya konuşma balonunu seçin",
+  "studio.customFonts.delete": "yazı tipini sil"
+}

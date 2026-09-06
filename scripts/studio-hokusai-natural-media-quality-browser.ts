@@ -2,19 +2,19 @@ import {
   planStudioHokusaiNaturalMediaRender,
   type StudioHokusaiNaturalMediaPresetId,
   type StudioHokusaiNaturalMediaRenderPlan,
-} from "../src/domains/creator/render/studio-hokusai-natural-media-contract";
+} from "../apps/web/src/domains/creator/render/studio-hokusai-natural-media-contract";
 import {
   studioHokusaiNaturalMediaPresetJson,
-} from "../src/domains/creator/render/studio-hokusai-natural-media-presets";
+} from "../apps/web/src/domains/creator/render/studio-hokusai-natural-media-presets";
 import {
   applyStudioHokusaiNaturalMediaTextureV2,
-} from "../src/domains/creator/render/studio-hokusai-natural-media-texture-v2";
+} from "../apps/web/src/domains/creator/render/studio-hokusai-natural-media-texture-v2";
 import {
   STUDIO_HOKUSAI_WORKER_PROTOCOL_VERSION,
   type StudioHokusaiWorkerOutboundMessage,
-} from "../src/domains/creator/render/studio-hokusai-natural-media-worker-protocol";
+} from "../apps/web/src/domains/creator/render/studio-hokusai-natural-media-worker-protocol";
 
-import type { DrawEl } from "../src/domains/creator/studio-element-model";
+import type { DrawEl } from "../apps/web/src/domains/creator/studio-element-model";
 
 interface DecodedRender {
   readonly pixels: Uint8ClampedArray;
@@ -592,7 +592,7 @@ async function render(
     expectedTick = now + 4;
   }, 4);
   const worker = new Worker(
-    new URL("../src/domains/creator/render/studio-hokusai-natural-media.worker.ts",
+    new URL("../apps/web/src/domains/creator/render/studio-hokusai-natural-media.worker.ts",
       import.meta.url,
     ),
     { type: "module", name: "studio-hokusai-quality-browser" },

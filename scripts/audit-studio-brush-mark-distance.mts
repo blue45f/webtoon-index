@@ -38,10 +38,10 @@
  * Run: pnpm run audit:studio-brush-mark-distance [--limit 8] [--threshold 0.12]
  * Output is a report, never a gate — every cut still needs an owner-auditable ledger entry.
  */
-import { STUDIO_BRUSH_PACK_DESCRIPTORS } from "../src/domains/creator/brush/studio-brush-pack-index";
-import { materializeStudioBrushPackDynamics } from "../src/domains/creator/brush/studio-brush-pack-runtime";
-import { isStudioBrushQuarantinedPresetId } from "../src/domains/creator/brush/studio-brush-quarantine";
-import { buildStudioBrushTipAlphaMap } from "../src/domains/creator/brush/studio-brush-tip-stamp";
+import { STUDIO_BRUSH_PACK_DESCRIPTORS } from "../apps/web/src/domains/creator/brush/studio-brush-pack-index";
+import { materializeStudioBrushPackDynamics } from "../apps/web/src/domains/creator/brush/studio-brush-pack-runtime";
+import { isStudioBrushQuarantinedPresetId } from "../apps/web/src/domains/creator/brush/studio-brush-quarantine";
+import { buildStudioBrushTipAlphaMap } from "../apps/web/src/domains/creator/brush/studio-brush-tip-stamp";
 
 const SCALAR_CHANNELS = [
   "spacingRatio",

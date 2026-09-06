@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "pametni oblici",
+  "studio.quickShape.description.active": "Lagano crtajte crte, kvadrate, krugove i trokute. Ako ga pustite, pospremit će se sam.",
+  "studio.quickShape.description.inactive": "U redu je naškrabati ga. Ako ga uključite, crtež vaše ruke bit će dotjeran u uredan oblik.",
+  "studio.quickShape.toggleHint": "U trenutku kada olovkom otpustite grubo nacrtan oblik, on će se postaviti u točan oblik. Čak i ako zastanete tijekom crtanja, pojavit će se pregled.",
+  "studio.quickShape.toggleAria.on": "Pametni oblici uključeni",
+  "studio.quickShape.toggleAria.off": "Pametni oblici isključeni",
+  "studio.quickShape.matchedSuffix": " Osjećam to. Potvrđeno je kad pustim ruku.",
+  "studio.quickShape.emptyStatus": "Nacrtajte oblik i pustite ga ili samo ostanite na kraju",
+  "studio.quickShape.openTutorial": "Pogledajte vodič za pametne oblike",
+  "studio.quickShape.notice": "Crtajte pametne oblike, linije, krugove, kvadrate itd. i pročistite ih kada pustite (pauzirajte za pregled)"
+}

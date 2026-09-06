@@ -5,11 +5,11 @@ import * as ts from "typescript";
 import { describe, expect, it } from "vitest";
 
 const MODEL_PATHS = [
-  "src/domains/creator/bg3d/studio-bg3d-production-workflow.ts",
-  "src/domains/creator/bg3d/studio-bg3d-production-pass-readiness.ts",
-  "src/domains/creator/bg3d/studio-bg3d-production-multipass.ts",
+  "apps/web/src/domains/creator/bg3d/studio-bg3d-production-workflow.ts",
+  "apps/web/src/domains/creator/bg3d/studio-bg3d-production-pass-readiness.ts",
+  "apps/web/src/domains/creator/bg3d/studio-bg3d-production-multipass.ts",
 ];
-const CONTEXT_PATH = "src/domains/creator/bg3d/studio-bg3d-pro-suite-runtime-context.tsx";
+const CONTEXT_PATH = "apps/web/src/domains/creator/bg3d/studio-bg3d-pro-suite-runtime-context.tsx";
 const GROUP_PATHS = [...MODEL_PATHS, CONTEXT_PATH];
 
 function parseFile(file: string): ts.SourceFile {
@@ -103,7 +103,7 @@ describe("Studio startup capability chunk boundary", () => {
   });
 
   it("keeps the initial tool model free from database, panel and engine runtime imports", () => {
-    const file = "src/domains/creator/studio-initial-primary-tool.ts";
+    const file = "apps/web/src/domains/creator/studio-initial-primary-tool.ts";
     const emitted = ts.transpileModule(parseFile(file).text, {
       compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ESNext },
     }).outputText;

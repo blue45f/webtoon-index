@@ -1,13 +1,13 @@
 import {
   CREATOR_MARKETPLACE_MAX_RELEASE_ORDINAL,
-} from "../../../../../lib/creator-marketplace-resource-contract";
+} from "../../../../web/src/shared/lib/creator-marketplace-resource-contract";
 import {
   compareCreatorMarketplaceSemver,
   isCreatorMarketplaceSemver,
   normalizeCreatorMarketplaceLegacySemver,
-} from "../../../../../lib/creator-marketplace-semver";
+} from "../../../../web/src/shared/lib/creator-marketplace-semver";
 
-export { CREATOR_MARKETPLACE_MAX_RELEASE_ORDINAL } from "../../../../../lib/creator-marketplace-resource-contract";
+export { CREATOR_MARKETPLACE_MAX_RELEASE_ORDINAL } from "../../../../web/src/shared/lib/creator-marketplace-resource-contract";
 
 export type CreatorMarketplaceReleaseAdmission =
   | Readonly<{

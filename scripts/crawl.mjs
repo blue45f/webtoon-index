@@ -57,7 +57,7 @@ function readEnvLocalValue(key) {
     try {
       const txt = readFileSync(new URL(rel, import.meta.url), "utf8");
       const m = txt.match(new RegExp(`^\\s*${key}\\s*=\\s*(.+?)\\s*$`, "m"));
-      if (m) return m[1].replace(/^['"]|['"]$/g, "").trim();
+      if (m) return m[1].replace(/(?:^['"]|['"]$)/g, "").trim();
     } catch {
       /* 파일 없음 — 다음 후보 */
     }
@@ -429,20 +429,20 @@ async function crawlWebtoons() {
       // 인기 순서를 보존한다. rank 1 ≈ 6천만, rank 200 ≈ 약 100만(연재) — 순위 단조감소 곡선.
       const realRank = t._rankUser; // 연재 인기 실순위(있으면 popular 신호로 사용)
       const viewsFromRank = (rank, base) => Math.max(50_000, Math.round(base * Math.pow(rank, -0.8)));
-      const views =
-        t.viewCount > 0
-          ? t.viewCount
-          : realRank
-            ? viewsFromRank(realRank, 60_000_000)
-            : t._rankDownload
-              ? viewsFromRank(t._rankDownload, 12_000_000)
-              : 0;
+      let views = 0;
+      if (t.viewCount > 0) views = t.viewCount;
+      else if (realRank) views = viewsFromRank(realRank, 60_000_000);
+      else if (t._rankDownload) views = viewsFromRank(t._rankDownload, 12_000_000);
       const fav = info?.favoriteCount ?? t.favoriteCount ?? Math.round(views * 0.045);
       const genres = mapWGenres(genreTypes, curation);
       const originAuthors = names(t.novelOriginAuthors);
       const ratingAvg = Math.round((star / 2) * 10) / 10;
       const ratingCount = Math.max(50, Math.round(fav * 0.32));
       const tags = [...new Set([...curation.map((c) => c.replace(/^#/, "")), ...(originAuthors.length ? ["원작소설"] : [])])].slice(0, 6);
+      let status;
+      if (finished) status = "completed";
+      else if (t.rest) status = "hiatus";
+      else status = "ongoing";
       return {
         id: `nw-${t.titleId}`,
         slug: `nw-${t.titleId}`,
@@ -455,7 +455,7 @@ async function crawlWebtoons() {
         synopsis: (info?.synopsis ?? "").trim().replace(/\s+/g, " ").slice(0, 280) || `${t.titleName} · 네이버 웹툰 연재작.`,
         cover: coverGradient(String(t.titleId), genres),
         coverImage: proxied(t.thumbnailUrl),
-        status: finished ? "completed" : t.rest ? "hiatus" : "ongoing",
+        status,
         ageRating: mapAge(info?.age?.type, t.adult),
         releaseYear: shouldFetchDetail ? year : 2024,
         updateDays: !finished && updateDays.length ? updateDays : undefined,
@@ -678,9 +678,11 @@ async function crawlLezhinCatalog() {
   // filter=all(완결 포함 전체 랭킹) + filter=publishing(연재중 — 연재요일 schedule 이 풍부).
   // realtime 랭킹은 완결작 비중이 커 연재 캘린더 커버리지가 낮아, publishing 패스로 연재중 작품을 보강한다.
   const filters = ["all", "publishing"];
-  outer: for (const filter of filters) {
+  let budgetExceeded = false;
+  for (const filter of filters) {
     for (const genre of genreScopes) {
-      if (overBudget()) break outer;
+      if (budgetExceeded) break;
+      if (overBudget()) { budgetExceeded = true; break; }
       const page = await getJSON(
         `https://api.lezhin.com/v2/content-list/ranking?filter=${filter}&rankType=realtime&limit=${limit}&offset=0&genres=${encodeURIComponent(genre)}`,
         HL
@@ -691,9 +693,10 @@ async function crawlLezhinCatalog() {
           if (item?.id && !out.has(item.id)) out.set(item.id, item);
         }
       }
-      if (LEZHIN_CAP && out.size >= LEZHIN_CAP) break outer;
+      if (LEZHIN_CAP && out.size >= LEZHIN_CAP) { budgetExceeded = true; break; }
       await sleep(MIN_CRAWL_DELAY_MS);
     }
+    if (budgetExceeded) break;
   }
 
   const rows = applyLimit([...out.values()], LEZHIN_CAP);
@@ -777,7 +780,7 @@ async function crawlKakaoWebtoon() {
           if (!map.has(c.id)) map.set(c.id, c);
           if (ko) {
             let ds = dayMap.get(c.id);
-            if (!ds) dayMap.set(c.id, (ds = new Set()));
+            if (!ds) { ds = new Set(); dayMap.set(c.id, ds); }
             ds.add(ko); // mon→sun 순회라 Set 삽입 순서가 곧 주간 순서
           }
         }
@@ -866,21 +869,21 @@ function clean(t) {
 const num = (v) => (Number.isFinite(Number(v)) ? Number(v) : 0);
 function normalizeStats(t, idx) {
   const s = t.stats || (t.stats = {});
-  if (!(num(s.views) > 0)) {
+  if (num(s.views) <= 0) {
     const jitter = hashInt(t.id || t.slug || t.title || String(idx));
     const ratingAvg = num(s.ratingAvg) > 0 ? num(s.ratingAvg) : 4.0;
     // 별점·해시 기반 결정적 추정(평점 높을수록 ↑). 50k~약 3.5M 범위.
     s.views = Math.max(50_000, Math.round((ratingAvg - 2.8) * 900_000 + (jitter % 1_800_000)));
     t.statsEstimated = true;
   }
-  if (!(num(s.likes) > 0)) s.likes = Math.max(50, Math.round(s.views * 0.04));
-  if (!(num(s.bookmarks) > 0)) s.bookmarks = s.likes;
-  if (!(num(s.ratingAvg) > 0)) s.ratingAvg = 4.2;
-  if (!(num(s.ratingCount) > 0)) s.ratingCount = Math.max(50, Math.round(s.likes * 0.3));
+  if (num(s.likes) <= 0) s.likes = Math.max(50, Math.round(s.views * 0.04));
+  if (num(s.bookmarks) <= 0) s.bookmarks = s.likes;
+  if (num(s.ratingAvg) <= 0) s.ratingAvg = 4.2;
+  if (num(s.ratingCount) <= 0) s.ratingCount = Math.max(50, Math.round(s.likes * 0.3));
   if (!Array.isArray(s.ratingDist) || s.ratingDist.length !== 5) s.ratingDist = synthDist(s.ratingAvg, s.ratingCount);
-  if (!(num(s.trendingScore) > 0)) s.trendingScore = Math.max(35, Math.min(99, 90 - (idx % 60)));
-  if (!(num(s.completionRate) > 0)) s.completionRate = t.status === "completed" ? 88 : 72;
-  if (!(num(s.bingeIndex) > 0)) s.bingeIndex = Math.min(96, Math.round(60 + s.ratingAvg * 7));
+  if (num(s.trendingScore) <= 0) s.trendingScore = Math.max(35, Math.min(99, 90 - (idx % 60)));
+  if (num(s.completionRate) <= 0) s.completionRate = t.status === "completed" ? 88 : 72;
+  if (num(s.bingeIndex) <= 0) s.bingeIndex = Math.min(96, Math.round(60 + s.ratingAvg * 7));
   if (typeof s.rankDelta !== "number") s.rankDelta = 0;
   return t;
 }
@@ -1062,8 +1065,9 @@ async function main() {
     await new Promise((resolve) => process.stdout.write(`${JSON.stringify(result)}\n`, resolve));
   }
 
+  const extraCountsSummary = Object.entries(extraCounts).map(([k, v]) => k + " " + v).join(", ");
   log(
-    `완료: ${all.length}편 — 네이버웹툰 ${webtoons.length}, 웹소설 ${novels.length}, 카카오웹툰 신규 ${kakaoNew.length}(+교차연결 ${crossLinked}), 레진 신규 ${lezhinNew.length}(+교차연결 ${lezhinCrossLinked}), 어댑테이션 ${linked}, 중소형 신규 ${extraNew.length} [${Object.entries(extraCounts).map(([k, v]) => `${k} ${v}`).join(", ")}]`
+    `완료: ${all.length}편 — 네이버웹툰 ${webtoons.length}, 웹소설 ${novels.length}, 카카오웹툰 신규 ${kakaoNew.length}(+교차연결 ${crossLinked}), 레진 신규 ${lezhinNew.length}(+교차연결 ${lezhinCrossLinked}), 어댑테이션 ${linked}, 중소형 신규 ${extraNew.length} [${extraCountsSummary}]`
   );
 
   // 보너스 소스의 in-flight fetch 타이머가 이벤트 루프를 붙잡아 종료가 지연(→ 외부 타임아웃)되는 것을 막는다.

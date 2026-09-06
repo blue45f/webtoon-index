@@ -22,7 +22,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { exportPageToSvg } from "../../../src/domains/creator/export/studio-svg-export";
+import { exportPageToSvg } from "../../../apps/web/src/domains/creator/export/studio-svg-export";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../../..");
 const RESULTS = resolve(ROOT, "tests/benchmarks/results");

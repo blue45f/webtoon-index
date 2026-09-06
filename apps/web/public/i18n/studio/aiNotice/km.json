@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "ការណែនាំរូបភាព AI ជំនាន់",
+  "studio.aiNotice.description": "មុខងារនេះបង្កើតរូបភាពដោយប្រើ AI ជំនាន់ថ្មី (OpenAI)។ ផ្លាកសញ្ញា AI ត្រូវបានបង្ហាញនៅលើលទ្ធផលដែលបានបង្កើត។",
+  "studio.aiNotice.ruleCopyright": "យើងមិនបង្កើតស្នាដៃ តួអង្គ ឬមុខមនុស្សពិតរបស់អ្នកដទៃទេ។",
+  "studio.aiNotice.ruleAccuracy": "លទ្ធផល AI អាចមានភាពមិនត្រឹមត្រូវ ឬខុសពីអ្វីដែលបានគ្រោងទុក។",
+  "studio.aiNotice.ruleResponsibility": "អ្នកទទួលខុសត្រូវចំពោះការប្រើប្រាស់រូបភាពដែលអ្នកបង្កើត។",
+  "studio.aiNotice.cancel": "បោះបង់",
+  "studio.aiNotice.confirm": "ខ្ញុំយល់, បង្កើត"
+}

@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Greitųjų komandų juosta",
+  "studio.commandBar.settings": "Komandų juostos nustatymai",
+  "studio.commandBar.settingsDescription": "Pakeiskite meniu juostos apačioje esančios komandų juostos vietų išdėstymą ir matomumą.",
+  "studio.commandBar.settingsTip": "Dažniausiai naudojamas komandas dėkite į pirmąsias vietas – jas pasieksite greičiausiai.",
+  "studio.commandBar.settingsClose": "Uždaryti komandų juostos nustatymus",
+  "studio.commandBar.settingsStorageNote": "Vietų išdėstymas išsaugomas šios naršyklės darbo srities nustatymuose.",
+  "studio.commandBar.showSlots": "Rodyti komandų vietas",
+  "studio.commandBar.slot": "{index} vieta",
+  "studio.commandBar.slotAria": "{index} komandos vieta",
+  "studio.commandBar.slotEmpty": "Tuščia vieta",
+  "studio.commandBar.resetDefaults": "Atkurti numatytąjį išdėstymą",
+  "studio.commandBar.command.undo": "Anuliuoti",
+  "studio.commandBar.command.redo": "Grąžinti",
+  "studio.commandBar.command.save": "Įrašyti juodraštį",
+  "studio.commandBar.command.publish": "Paskelbti",
+  "studio.commandBar.command.download": "Atsisiųsti dabartinį puslapį",
+  "studio.commandBar.command.export-open": "Eksporto parinktys",
+  "studio.commandBar.command.zoom-fit": "Pritaikyti prie ekrano pločio",
+  "studio.commandBar.command.assets": "Šablonai ir ištekliai",
+  "studio.commandBar.command.bubbles": "Kalbos burbulas",
+  "studio.commandBar.command.project": "Projekto įrankiai"
+}

@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "slim vorms",
+  "studio.quickShape.description.active": "Trek rustig lyne, vierkante, sirkels en driehoeke. As jy los, sal dit vanself opruim.",
+  "studio.quickShape.description.inactive": "Dit is reg om dit neer te krap. As jy dit aanskakel, sal jou handtekening in 'n netjiese vorm verfyn word.",
+  "studio.quickShape.toggleHint": "Die oomblik wat jy 'n rofgetekende vorm met 'n pen los, snap dit in 'n presiese vorm. Selfs as jy onderbreek terwyl jy teken, sal 'n voorskou verskyn.",
+  "studio.quickShape.toggleAria.on": "Slim vorms aan",
+  "studio.quickShape.toggleAria.off": "Slim vorms af",
+  "studio.quickShape.matchedSuffix": " Ek kan dit voel. Dit word bevestig wanneer ek my hand los.",
+  "studio.quickShape.emptyStatus": "Teken die vorm en laat gaan, of bly net aan die einde",
+  "studio.quickShape.openTutorial": "Kyk na die slim vorms-tutoriaal",
+  "studio.quickShape.notice": "Teken slim vorms, lyne, sirkels, vierkante, ens. en verfyn dit wanneer jy laat gaan (pouse om te voorskou)"
+}

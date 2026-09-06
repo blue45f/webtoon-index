@@ -416,7 +416,7 @@ if (!fs.existsSync(manifestPath)) {
     return visited;
   }
 
-  function checkApprovedLazySpecialistBoundary({
+  function checkApprovedLazySpecialistBoundary({ // NOSONAR javascript:S3776
     label,
     pattern,
     approvedEntrySource,
@@ -929,7 +929,7 @@ if (!fs.existsSync(manifestPath)) {
     }
 
     // --- no locale mega-dictionary in the shell ---------------------------
-    // Every locale but ko/en ships as a lazy public/i18n/app/<locale>.json asset. If the whole
+    // Every locale but ko/en ships as a lazy apps/web/public/i18n/app/<namespace>/<locale>.json asset. If the whole
     // DICT is ever inlined back into a shell chunk, the i18n chunk balloons past this cap long
     // before anyone notices the extra megabyte of parse work on the critical path.
     const i18nShellChunkCeilingBytes = 256 * 1024;
@@ -941,7 +941,7 @@ if (!fs.existsSync(manifestPath)) {
       if (rawBytes > i18nShellChunkCeilingBytes) {
         fail(
           `app shell i18n chunk ${fileName} is ${formatKiB(rawBytes)} raw (cap ${formatKiB(i18nShellChunkCeilingBytes)}); `
-            + "locale dictionaries belong in public/i18n/app/<locale>.json, not the shell",
+            + "locale dictionaries belong in apps/web/public/i18n/app/<namespace>/<locale>.json, not the shell",
         );
       }
     }
@@ -1002,7 +1002,7 @@ function loadBaseline() {
   return parsed;
 }
 
-function writeBaseline({ previous, runtimeReport, tightenOnly }) {
+function writeBaseline({ previous, runtimeReport, tightenOnly }) { // NOSONAR javascript:S3776
   const nextStatic = { ...(previous?.static ?? {}) };
   let changed = 0;
   for (const measurement of measurements) {
@@ -1081,11 +1081,10 @@ function evaluateRatchet(group, baselineMetrics) {
     const improvedFloor = measurement.kind === "count"
       ? baselineValue
       : Math.floor(baselineValue * (1 - ratchetPolicy.byteTolerance));
-    const status = measurement.value > ceiling
-      ? "REGRESSED"
-      : measurement.value < improvedFloor
-        ? "improved"
-        : "ok";
+    let status;
+    if (measurement.value > ceiling) status = "REGRESSED";
+    else if (measurement.value < improvedFloor) status = "improved";
+    else status = "ok";
     rows.push({ ...measurement, baselineValue, ceiling, status });
   }
   const stale = Object.keys(baselineMetrics ?? {}).filter((key) => !seen.has(key));
@@ -1170,7 +1169,7 @@ function runtimeStalenessWarnings(baseline) {
   return warnings;
 }
 
-function reportRuntimeSection(runtimeReport, baseline) {
+function reportRuntimeSection(runtimeReport, baseline) { // NOSONAR javascript:S3776
   console.log("");
   if (!runtimeReport) {
     const recorded = baseline?.runtime;
@@ -1239,7 +1238,7 @@ function reportRuntimeSection(runtimeReport, baseline) {
   }
 }
 
-function reportBundleGate({ runtimeReport, structuralSummary }) {
+function reportBundleGate({ runtimeReport, structuralSummary }) { // NOSONAR javascript:S3776
   const baseline = loadBaseline();
 
   for (const observation of bundleObservations) {

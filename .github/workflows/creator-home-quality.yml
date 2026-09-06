@@ -5,13 +5,13 @@ on:
   pull_request:
     branches: [main]
     paths:
-      - 'src/domains/marketing/**'
-      - 'components/site-header*'
-      - 'components/site-footer.tsx'
-      - 'src/app/AppShell.tsx'
-      - 'src/app/routes/**'
-      - 'public/brand/**'
-      - 'public/i18n/app/**'
+      - 'apps/web/src/domains/marketing/**'
+      - 'apps/web/src/shared/components/site-header*'
+      - 'apps/web/src/shared/components/site-footer.tsx'
+      - 'apps/web/src/app/AppShell.tsx'
+      - 'apps/web/src/app/routes/**'
+      - 'apps/web/public/brand/**'
+      - 'apps/web/public/i18n/app/**'
       - 'media/brand-film/**'
       - 'automation/n8n/**'
       - 'scripts/verify-creator-home.mjs'
@@ -39,9 +39,9 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: |
-          pnpm exec eslint src/domains/marketing components/site-header.tsx components/site-header-mobile-nav.tsx components/site-footer.tsx scripts/verify-creator-home.mjs scripts/verify-creator-film-upgrades.mjs scripts/verify-creator-home-navigation.mjs scripts/creator-film-automation.test.mjs media/brand-film/src media/brand-film/render.mjs --max-warnings=0
+          pnpm exec eslint apps/web/src/domains/marketing apps/web/src/shared/components/site-header.tsx apps/web/src/shared/components/site-header-mobile-nav.tsx apps/web/src/shared/components/site-footer.tsx scripts/verify-creator-home.mjs scripts/verify-creator-film-upgrades.mjs scripts/verify-creator-home-navigation.mjs scripts/creator-film-automation.test.mjs media/brand-film/src media/brand-film/render.mjs --max-warnings=0
           pnpm run typecheck
-          pnpm exec vitest run src/domains/marketing scripts/creator-film-automation.test.mjs
+          pnpm exec vitest run apps/web/src/domains/marketing scripts/creator-film-automation.test.mjs
           node --test scripts/creator-film-automation.test.mjs
           pnpm run build:bundle
       - run: |

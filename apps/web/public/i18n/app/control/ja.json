@@ -1,0 +1,12 @@
+{
+  "control.language.label": "言語",
+  "control.theme.dark": "ライトモードに切り替える",
+  "control.settings.close": "設定を閉じる",
+  "control.settings.open": "設定を開く",
+  "control.theme.light": "ダークモードに切り替える",
+  "control.cluster.open": "設定を開く",
+  "control.sound.disable": "効果音を無効にする",
+  "control.sound.enable": "効果音を有効にする",
+  "control.cluster.tooltip": "サウンド、テーマ、言語の設定",
+  "control.cluster.settings": "サウンド、テーマ、言語コントロール"
+}

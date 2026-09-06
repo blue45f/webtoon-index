@@ -6,7 +6,7 @@ import { join } from "node:path";
 
 import { chromium } from "playwright";
 
-import { STUDIO_FILTER_DIALOG_CATALOG } from "../src/domains/creator/filter/studio-filter-catalog";
+import { STUDIO_FILTER_DIALOG_CATALOG } from "../apps/web/src/domains/creator/filter/studio-filter-catalog";
 
 import { findFreePort, spawnVitePreview, stopChildProcess, waitForServer } from "./lib/studio-verify-preview-harness.mjs";
 
@@ -27,9 +27,9 @@ writeFileSync(html, '<!doctype html><html lang="ko" class="dark"><head><meta cha
 writeFileSync(entry, `
 import {useState} from "react";
 import {createRoot} from "react-dom/client";
-import "./src/styles/globals.css";
-import {StudioSubToolPalette} from "./src/domains/creator/brush/StudioSubToolPalette";
-import {studioSubToolPaletteCategoryIdForBrushId} from "./src/domains/creator/brush/studio-sub-tool-palette-data";
+import "../apps/web/src/styles/globals.css";
+import {StudioSubToolPalette} from "../apps/web/src/domains/creator/brush/StudioSubToolPalette";
+import {studioSubToolPaletteCategoryIdForBrushId} from "../apps/web/src/domains/creator/brush/studio-sub-tool-palette-data";
 function App(){
   const [category,setCategory]=useState("pen");
   const [selected,setSelected]=useState("gpen");

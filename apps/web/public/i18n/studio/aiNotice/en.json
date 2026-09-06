@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Generative AI image notice",
+  "studio.aiNotice.description": "This feature creates images with generative AI (OpenAI). A badge is shown on generated results.",
+  "studio.aiNotice.ruleCopyright": "Do not create others' copyrighted works, characters, or living people’s faces.",
+  "studio.aiNotice.ruleAccuracy": "AI outputs can be inaccurate and may differ from your intent.",
+  "studio.aiNotice.ruleResponsibility": "You are responsible for how you use generated images.",
+  "studio.aiNotice.cancel": "Cancel",
+  "studio.aiNotice.confirm": "Understood, generate"
+}

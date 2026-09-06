@@ -1,0 +1,16 @@
+{
+  "authors.title": "作者",
+  "authors.people": "",
+  "authors.search": "搜索作者姓名",
+  "authors.allOf": "的",
+  "authors.topOf": "· 顶部",
+  "authors.works": "作品",
+  "authors.views": "意见",
+  "authors.noName": "创作者",
+  "authors.error": "无法加载作者列表。",
+  "authors.empty": "— 没有匹配的作者。",
+  "authors.eyebrow": "作者名录",
+  "authors.pencafe": "创作者粉丝咖啡馆",
+  "authors.desc": "作者按作品数量排名。点击一位作者即可在一个地方查看他们的标题、评分和粉丝咖啡馆。",
+  "authors.stats": "{total} 位作者中排名靠前的 {shown} 位作者"
+}

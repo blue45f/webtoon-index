@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 import {
   CREATOR_MARKETPLACE_RESOURCE_QUERY_SEARCH_MAX_CHARACTERS,
   CREATOR_MARKETPLACE_RESOURCE_QUERY_TAG_MAX_CHARACTERS,
-} from "../../../../../lib/creator-marketplace-resource-contract";
+} from "../../../../web/src/shared/lib/creator-marketplace-resource-contract";
 
 import {
   CreatorMarketplaceModerationQuerySchema,

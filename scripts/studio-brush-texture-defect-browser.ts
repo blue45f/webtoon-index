@@ -15,17 +15,17 @@ import { createElement } from "react";
 import { createRoot, type Root } from "react-dom/client";
 import { Layer, Stage } from "react-konva/lib/ReactKonvaCore";
 
-import { studioBrushDynamicsSettingsForBrushId } from "../src/domains/creator/brush/studio-brush-dynamics";
-import { DEFAULT_STUDIO_BRUSH_SNAPSHOT } from "../src/domains/creator/brush/studio-brush-library";
+import { studioBrushDynamicsSettingsForBrushId } from "../apps/web/src/domains/creator/brush/studio-brush-dynamics";
+import { DEFAULT_STUDIO_BRUSH_SNAPSHOT } from "../apps/web/src/domains/creator/brush/studio-brush-library";
 import {
   resolveStudioStampBrushKind,
   STUDIO_STAMP_BRUSH_DEFAULTS,
-} from "../src/domains/creator/brush/studio-brush-stamp-engine";
-import { planStudioDrawPointerStart } from "../src/domains/creator/brush/studio-draw-pointer-start-plan";
-import { StudioDrawNode } from "../src/domains/creator/brush/StudioDrawNode";
-import "../src/domains/creator/render/studio-konva-runtime.ts";
+} from "../apps/web/src/domains/creator/brush/studio-brush-stamp-engine";
+import { planStudioDrawPointerStart } from "../apps/web/src/domains/creator/brush/studio-draw-pointer-start-plan";
+import { StudioDrawNode } from "../apps/web/src/domains/creator/brush/StudioDrawNode";
+import "../apps/web/src/domains/creator/render/studio-konva-runtime.ts";
 
-import type { DrawEl } from "../src/domains/creator/studio-element-model";
+import type { DrawEl } from "../apps/web/src/domains/creator/studio-element-model";
 
 export interface StudioBrushDefectLaneRequest {
   readonly key: string;

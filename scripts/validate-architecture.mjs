@@ -21,6 +21,7 @@ const issues = [];
 //  are not committed — so they are NOT validated here.)
 const requiredPaths = [
   "README.md",
+  "ARCHITECTURE.md",
   "PRODUCT.md",
   "DESIGN.md",
   "docs/ranking-architecture.md",
@@ -36,11 +37,11 @@ const requiredPaths = [
   "deploy/oci/crawl-update.sh",
   "scripts/vercel-workflow-policy.mjs",
   "scripts/vercel-workflow-policy.test.mjs",
-  "src/app/routes/app-route-definition.ts",
-  "src/app/routes/groups/app-routes.tsx",
-  "src/domains/creator/studio-router/routes/StudioEditorRoute.tsx",
-  "src/domains/creator/studio-router/routes/StudioPublishRoute.tsx",
-  "src/domains/creator/studio-cuttoon-editor/runtime/useStudioDocumentAccessRuntime.ts",
+  "apps/web/src/app/routes/app-route-definition.ts",
+  "apps/web/src/app/routes/groups/app-routes.tsx",
+  "apps/web/src/domains/creator/studio-router/routes/StudioEditorRoute.tsx",
+  "apps/web/src/domains/creator/studio-router/routes/StudioPublishRoute.tsx",
+  "apps/web/src/domains/creator/studio-cuttoon-editor/runtime/useStudioDocumentAccessRuntime.ts",
   ".husky/pre-commit",
   ".husky/commit-msg",
 ];
@@ -49,34 +50,47 @@ for (const file of requiredPaths) {
 }
 
 // Root Vite app entry points (index.html -> src/app/main.tsx).
-const requiredEntries = ["index.html", "src/app/main.tsx", "vite.config.ts"];
+const requiredEntries = [
+  "apps/web/index.html",
+  "apps/web/public",
+  "apps/web/src/app/main.tsx",
+  "apps/web/config/vite-manual-chunks.ts",
+  "apps/web/tests/browser-fixtures/studio-catalog/index.html",
+  "apps/web/tools/browser-harnesses/hybrid-dcc-e2e.html",
+  "vite.config.ts",
+];
 for (const entry of requiredEntries) {
   if (!exists(entry)) issues.push(`missing app entry: ${entry}`);
 }
 
 // 앱 진입점은 정확히 하나(index.html -> src/app/main.tsx)여야 한다. 실험용 브라우저 하네스가
 // src 루트에 `*-main.ts(x)` 로, 그 페이지가 레포 루트에 `*.html` 로 눌러앉으면 "앱 소스"와
-// "일회성 실험"이 같은 트리에서 구분되지 않는다. 하네스의 집은 tools/browser-harnesses/ 다.
+// "일회성 실험"이 같은 트리에서 구분되지 않는다. 하네스의 집은 apps/web/tools/browser-harnesses/다.
 const SRC_ROOT_ENTRY_PATTERN = /(?:^|-)main\.tsx?$/;
-if (exists("src")) {
-  for (const entry of fs.readdirSync(path.join(ROOT, "src"), { withFileTypes: true })) {
+if (exists("apps/web/src")) {
+  for (const entry of fs.readdirSync(path.join(ROOT, "apps/web/src"), { withFileTypes: true })) {
     if (!entry.isFile() || !SRC_ROOT_ENTRY_PATTERN.test(entry.name)) continue;
     issues.push(
-      `entry-shaped module at the src root: src/${entry.name}`
-      + ` (the app entry is src/app/main.tsx; browser harnesses belong in tools/browser-harnesses/)`,
+      `entry-shaped module at the src root: apps/web/src/${entry.name}`
+      + ` (the app entry is apps/web/src/app/main.tsx; browser harnesses belong in apps/web/tools/browser-harnesses/)`,
     );
   }
 }
 for (const entry of fs.readdirSync(ROOT, { withFileTypes: true })) {
   if (!entry.isFile() || !entry.name.endsWith(".html")) continue;
-  if (entry.name === "index.html") continue;
   issues.push(
     `stray HTML entry at the repo root: ${entry.name}`
-    + ` (only index.html may live here; harness pages belong in tools/browser-harnesses/)`,
+    + ` (only apps/web/index.html is the application entry; harness pages belong in apps/web/tools/browser-harnesses/)`,
   );
 }
-if (!exists("tools/browser-harnesses")) {
-  issues.push("missing harness home: tools/browser-harnesses/");
+if (!exists("apps/web/tools/browser-harnesses")) {
+  issues.push("missing harness home: apps/web/tools/browser-harnesses/");
+}
+if (exists("tools/browser-harnesses")) {
+  issues.push("legacy browser harness directory at repository root: tools/browser-harnesses/");
+}
+if (exists("tests/browser-fixtures/studio-catalog")) {
+  issues.push("duplicate Studio catalog fixture at repository root: tests/browser-fixtures/studio-catalog/");
 }
 
 // 린트 예외 원장 + 그 원장과 호스트 결합도를 지키는 두 래칫 테스트. 이 셋 중 하나라도
@@ -97,10 +111,15 @@ if (!exists(LEGACY_EXCEPTIONS_LEDGER)) {
   }
 }
 for (const guard of [
-  "src/domains/creator/studio-host-architecture-ratchet.test.ts",
+  "apps/web/src/domains/creator/studio-host-architecture-ratchet.test.ts",
   "scripts/eslint-legacy-exceptions.test.mjs",
 ]) {
   if (!exists(guard)) issues.push(`missing architecture guard test: ${guard}`);
+}
+
+// Frontend code belongs under apps/web; keep the repository root limited to workspace infrastructure.
+for (const legacyRoot of ["components", "hooks", "lib", "public", "shared", "src", "styles"]) {
+  if (exists(legacyRoot)) issues.push("legacy frontend directory at repository root: " + legacyRoot + "/");
 }
 
 // Root scripts wired into the build/lint/test chain.
@@ -117,7 +136,7 @@ for (const forbidden of forbiddenParallelPaths) {
 
 // One-off QA receipts are execution artifacts, not maintained source. Keeping dated trigger notes
 // in the tree makes repository search noisy and gives transient evidence the same status as ADRs.
-for (const receiptDir of [".github/qa", "scripts/qa/runs"]) {
+for (const receiptDir of [".github/qa", "qa-results", "scripts/qa/runs"]) {
   if (exists(receiptDir)) {
     issues.push(`ephemeral QA receipt directory belongs in Actions artifacts: ${receiptDir}`);
   }
@@ -140,11 +159,41 @@ const requiredScripts = [
   "test",
   "check:studio-bundle",
   "validate:architecture",
+  "verify:csp",
+  "verify:toolchain-coverage",
   "verify:studio-menus",
   "verify:studio-icons",
 ];
 for (const script of requiredScripts) {
   if (!scripts[script]) issues.push(`missing script: ${script}`);
+}
+
+const expectedCspCommand = "node scripts/verify-vercel-csp.mjs apps/web/index.html";
+if (scripts["verify:csp"] !== expectedCspCommand) {
+  issues.push(`verify:csp must target the canonical entry: ${expectedCspCommand}`);
+}
+
+const canonicalWorkflowReferences = [
+  {
+    file: ".github/workflows/studio-asset-browser.yml",
+    required: "      - apps/web/tests/browser-fixtures/studio-catalog/**",
+    forbidden: "\n      - tests/browser-fixtures/studio-catalog/**",
+  },
+  {
+    file: ".github/workflows/studio-promo-video.yml",
+    required: "apps/web/tools/browser-harnesses/promo-e2e.html",
+    forbidden: "\n      - 'tools/browser-harnesses/promo-e2e.html'",
+  },
+  {
+    file: ".github/workflows/studio-wearable-runtime-review.yml",
+    required: "cp apps/web/tools/browser-harnesses/props-compare-main.ts",
+    forbidden: "cp tools/browser-harnesses/props-compare-main.ts",
+  },
+];
+for (const { file, required, forbidden } of canonicalWorkflowReferences) {
+  const source = read(file);
+  if (!source.includes(required)) issues.push(`${file}: missing canonical web path ${required.trim()}`);
+  if (source.includes(forbidden)) issues.push(`${file}: stale root path ${forbidden.trim()}`);
 }
 
 // pnpm workspace members declared in pnpm-workspace.yaml must exist on disk.

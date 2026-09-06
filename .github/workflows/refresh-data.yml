@@ -3,7 +3,7 @@ name: Refresh data
 # 배포된 Nest API의 인증 ingest 엔드포인트(POST /catalog/ingest/run)를 호출해
 # DB catalog_snapshot 을 12시간마다 갱신한다. 서버가 크롤+필드검증+해시 dedup+품질게이트+스냅샷
 # 영속을 담당하므로(apps/api/src/server/catalog-ingest.ts), 워크플로는 트리거+결과 검증만 한다.
-# (마이그레이션으로 lib/data/titles.ts 파일 경로는 폐기됨 — 더 이상 파일을 커밋하지 않는다)
+# (마이그레이션으로 apps/web/src/shared/lib/data/titles.ts 파일 경로는 폐기됨 — 더 이상 파일을 커밋하지 않는다)
 #
 # 필요한 GitHub Secrets:
 #   WEBDEX_INGEST_URL            배포된 ingest 엔드포인트 전체 URL (예: https://<api-host>/catalog/ingest/run)

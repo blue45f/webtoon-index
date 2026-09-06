@@ -8,23 +8,23 @@
 import {
   parseStudioCanonicalBrushPlan,
   type StudioCanonicalBrushPlan,
-} from "../src/domains/creator/studio-canonical-brush-plan";
+} from "../apps/web/src/domains/creator/studio-canonical-brush-plan";
 import {
   buildStudioDynamicDualTipPlan,
   type StudioDynamicDualTipBlendFamily,
   type StudioDynamicDualTipExtension,
   type StudioDynamicDualTipPlan,
-} from "../src/domains/creator/studio-dynamic-dual-tip-plan";
+} from "../apps/web/src/domains/creator/studio-dynamic-dual-tip-plan";
 import {
   createStudioDynamicDualTipWebGpuRuntime,
   type StudioDynamicDualTipWebGpuReceipt,
   type StudioDynamicDualTipWebGpuRuntime,
-} from "../src/domains/creator/studio-dynamic-dual-tip-webgpu-runtime";
+} from "../apps/web/src/domains/creator/studio-dynamic-dual-tip-webgpu-runtime";
 import {
   parseStudioProfessionalBrushDynamicsPlan,
   type StudioProfessionalBrushDynamicsPlan,
-} from "../src/domains/creator/studio-professional-brush-dynamics";
-import { sha256HexPortable } from "../src/domains/creator/studio-sha256";
+} from "../apps/web/src/domains/creator/studio-professional-brush-dynamics";
+import { sha256HexPortable } from "../apps/web/src/domains/creator/studio-sha256";
 
 const WIDTH = 64;
 const HEIGHT = 48;

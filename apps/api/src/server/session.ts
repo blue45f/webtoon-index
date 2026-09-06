@@ -3,7 +3,7 @@ import { createHmac, randomUUID, timingSafeEqual } from "crypto";
 import {
   STUDIO_LIVE_AUTH_TICKET_MAX_CODE_UNITS,
   STUDIO_LIVE_AUTH_TICKET_TTL_MS,
-} from "../../../../lib/studio-live-auth-ticket";
+} from "../../../web/src/shared/lib/studio-live-auth-ticket";
 
 // 서명 세션 토큰 — HttpOnly 쿠키(및 마이그레이션 기간의 x-user-id 헤더)를 서버 비밀로 검증한다.
 //

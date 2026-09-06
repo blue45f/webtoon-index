@@ -1,0 +1,15 @@
+{
+  "admin.campaigns.count": "{count} Creator Campaigns",
+  "admin.campaigns.new": "New Campaign",
+  "admin.campaigns.edit": "Edit Campaign",
+  "admin.campaigns.empty": "No registered campaigns. Click New Campaign to add one.",
+  "admin.campaigns.inputTitle": "Title *",
+  "admin.campaigns.inputCreatorId": "Creator ID *",
+  "admin.campaigns.inputPlanId": "Plan ID (Optional)",
+  "admin.campaigns.inputTitleId": "Title ID (Optional)",
+  "admin.campaigns.inputDesc": "Description",
+  "admin.campaigns.inputTargetWon": "Target Amount (KRW)",
+  "admin.campaigns.inputRaisedWon": "Raised Amount (KRW)",
+  "admin.campaigns.inputStartsAt": "Start Date",
+  "admin.campaigns.inputEndsAt": "End Date"
+}

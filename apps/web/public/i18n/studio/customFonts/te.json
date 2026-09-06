@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "నా ఫాంట్",
+  "studio.customFonts.importButton": "ఫైల్ నుండి దిగుమతి చేయండి",
+  "studio.customFonts.importing": "తనిఖీ చేస్తోంది...",
+  "studio.customFonts.importAria": "ఫాంట్ ఫైల్‌ను దిగుమతి చేయండి",
+  "studio.customFonts.storageAria": "ఫాంట్ లైబ్రరీ వినియోగం",
+  "studio.customFonts.emptyTitle": "ఇంకా ఫాంట్‌లు ఏవీ చేర్చబడలేదు.",
+  "studio.customFonts.unknownFileName": "ఫైల్ పేరు లేదు",
+  "studio.customFonts.apply": "దరఖాస్తు చేసుకోండి",
+  "studio.customFonts.applyToText": "ఎంచుకున్న వచనానికి ఈ ఫాంట్‌ని వర్తింపజేయండి",
+  "studio.customFonts.selectTextFirst": "ముందుగా టెక్స్ట్ లేదా స్పీచ్ బబుల్‌ని ఎంచుకోండి",
+  "studio.customFonts.delete": "ఫాంట్‌ను తొలగించండి"
+}

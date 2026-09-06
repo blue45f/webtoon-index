@@ -14,20 +14,20 @@ import {
   STUDIO_DEFAULT_QUALITY_BRUSH_CATALOG_ITEMS,
   STUDIO_LISTED_ALL_BRUSH_CATALOG_ITEMS,
   type StudioBrushCatalogItem,
-} from "../src/domains/creator/brush/studio-brush-catalog";
+} from "../apps/web/src/domains/creator/brush/studio-brush-catalog";
 import {
   studioBrushDynamicsSettingsForBrushId,
   type NormalizedStudioBrushDynamicsSettings,
-} from "../src/domains/creator/brush/studio-brush-dynamics";
-import { studioBrushPackDescriptorById } from "../src/domains/creator/brush/studio-brush-pack-index";
-import { materializeStudioBrushPackSelection } from "../src/domains/creator/brush/studio-brush-pack-runtime";
+} from "../apps/web/src/domains/creator/brush/studio-brush-dynamics";
+import { studioBrushPackDescriptorById } from "../apps/web/src/domains/creator/brush/studio-brush-pack-index";
+import { materializeStudioBrushPackSelection } from "../apps/web/src/domains/creator/brush/studio-brush-pack-runtime";
 import {
   profileStudioBrushPressureCurve,
   STUDIO_BRUSH_PRESSURE_MAX_STEP_SHARE,
   STUDIO_BRUSH_PRESSURE_MIN_DISTINCT_STATES,
   STUDIO_BRUSH_PRESSURE_PROBE_LEVELS,
   type StudioBrushPressureCurveProfile,
-} from "../src/domains/creator/brush/studio-brush-pressure-curve-quality";
+} from "../apps/web/src/domains/creator/brush/studio-brush-pressure-curve-quality";
 
 const CHECK = process.argv.includes("--check");
 const OUT_DIR_ARGUMENT = process.argv.find((argument) => argument.startsWith("--out-dir="));

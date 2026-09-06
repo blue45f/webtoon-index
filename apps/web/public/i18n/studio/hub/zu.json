@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Okokufundisa kwesici",
+  "studio.hub.subtitle": "Umsebenzi owodwa ngesikhathi ngaphandle komthwalo. Ngibheke ku-{done}/{total}.",
+  "studio.hub.progressAriaLabel": "Inqubekelaphambili yokufunda",
+  "studio.hub.listAriaLabel": "Uhlu lwesici",
+  "studio.hub.checked": "bheka",
+  "studio.hub.prev": "Ngaphambilini",
+  "studio.hub.next": "okulandelayo",
+  "studio.hub.markComplete": "maka njengokuqediwe",
+  "studio.hub.completed": "Kuqediwe",
+  "studio.hub.tryLabelDefault": "Landelani",
+  "studio.hub.stepAriaPrefix": "isinyathelo"
+}

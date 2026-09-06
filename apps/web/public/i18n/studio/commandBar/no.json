@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Hurtigkommandolinje",
+  "studio.commandBar.settings": "Kommandolinjeinnstillinger",
+  "studio.commandBar.settingsDescription": "Endre plassoppsettet og synligheten til kommandolinjen under menylinjen.",
+  "studio.commandBar.settingsTip": "Legg kommandoene du bruker mest i de første plassene, så er de raskest å nå.",
+  "studio.commandBar.settingsClose": "Lukk kommandolinjeinnstillinger",
+  "studio.commandBar.settingsStorageNote": "Plassoppsettet lagres i denne nettleserens arbeidsområdeinnstillinger.",
+  "studio.commandBar.showSlots": "Vis kommandoplasser",
+  "studio.commandBar.slot": "Plass {index}",
+  "studio.commandBar.slotAria": "Kommandoplass {index}",
+  "studio.commandBar.slotEmpty": "Tom plass",
+  "studio.commandBar.resetDefaults": "Tilbakestill til standardoppsett",
+  "studio.commandBar.command.undo": "Angre",
+  "studio.commandBar.command.redo": "Gjør om",
+  "studio.commandBar.command.save": "Lagre utkast",
+  "studio.commandBar.command.publish": "Publiser",
+  "studio.commandBar.command.download": "Last ned gjeldende side",
+  "studio.commandBar.command.export-open": "Eksportalternativer",
+  "studio.commandBar.command.zoom-fit": "Tilpass til skjermbredden",
+  "studio.commandBar.command.assets": "Maler og ressurser",
+  "studio.commandBar.command.bubbles": "Snakkeboble",
+  "studio.commandBar.command.project": "Prosjektverktøy"
+}

@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Лента со брзи команди",
+  "studio.commandBar.settings": "Поставки за лентата со команди",
+  "studio.commandBar.settingsDescription": "Променете го распоредот на местата и видливоста на лентата со команди под менито.",
+  "studio.commandBar.settingsTip": "Ставете ги најчесто користените команди на првите места за да ви бидат најбрзо при рака.",
+  "studio.commandBar.settingsClose": "Затвори ги поставките за лентата со команди",
+  "studio.commandBar.settingsStorageNote": "Распоредот на местата се зачувува во поставките за работниот простор на овој прелистувач.",
+  "studio.commandBar.showSlots": "Прикажи ги местата за команди",
+  "studio.commandBar.slot": "Место {index}",
+  "studio.commandBar.slotAria": "Место за команда {index}",
+  "studio.commandBar.slotEmpty": "Празно место",
+  "studio.commandBar.resetDefaults": "Врати на стандардниот распоред",
+  "studio.commandBar.command.undo": "Врати",
+  "studio.commandBar.command.redo": "Повтори",
+  "studio.commandBar.command.save": "Зачувај нацрт",
+  "studio.commandBar.command.publish": "Објави",
+  "studio.commandBar.command.download": "Преземи ја тековната страница",
+  "studio.commandBar.command.export-open": "Опции за извоз",
+  "studio.commandBar.command.zoom-fit": "Прилагоди на ширината на екранот",
+  "studio.commandBar.command.assets": "Шаблони и ресурси",
+  "studio.commandBar.command.bubbles": "Балонче за говор",
+  "studio.commandBar.command.project": "Алатки за проектот"
+}

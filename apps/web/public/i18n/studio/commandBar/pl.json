@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Pasek szybkich poleceń",
+  "studio.commandBar.settings": "Ustawienia paska poleceń",
+  "studio.commandBar.settingsDescription": "Zmień układ slotów i widoczność paska poleceń pod paskiem menu.",
+  "studio.commandBar.settingsTip": "Najczęściej używane polecenia umieść w pierwszych slotach — będą najszybciej pod ręką.",
+  "studio.commandBar.settingsClose": "Zamknij ustawienia paska poleceń",
+  "studio.commandBar.settingsStorageNote": "Układ slotów jest zapisywany w ustawieniach obszaru roboczego tej przeglądarki.",
+  "studio.commandBar.showSlots": "Pokaż sloty poleceń",
+  "studio.commandBar.slot": "Slot {index}",
+  "studio.commandBar.slotAria": "Slot polecenia {index}",
+  "studio.commandBar.slotEmpty": "Pusty slot",
+  "studio.commandBar.resetDefaults": "Przywróć domyślny układ",
+  "studio.commandBar.command.undo": "Cofnij",
+  "studio.commandBar.command.redo": "Ponów",
+  "studio.commandBar.command.save": "Zapisz wersję roboczą",
+  "studio.commandBar.command.publish": "Opublikuj",
+  "studio.commandBar.command.download": "Pobierz bieżącą stronę",
+  "studio.commandBar.command.export-open": "Opcje eksportu",
+  "studio.commandBar.command.zoom-fit": "Dopasuj do szerokości ekranu",
+  "studio.commandBar.command.assets": "Szablony i zasoby",
+  "studio.commandBar.command.bubbles": "Dymek dialogowy",
+  "studio.commandBar.command.project": "Narzędzia projektu"
+}

@@ -14,14 +14,14 @@ import {
   CREATOR_MARKETPLACE_RESOURCE_MAX_MANIFEST_BYTES,
   CREATOR_MARKETPLACE_RESOURCE_MODERATION_NOTE_MAX_CHARACTERS,
   CREATOR_MARKETPLACE_RESOURCE_REPORT_DETAILS_MAX_CHARACTERS,
-} from "../../../../lib/creator-marketplace-resource-contract";
+} from "../../../web/src/shared/lib/creator-marketplace-resource-contract";
 
 import { creatorMarketplaceResources } from "./creator-marketplace-resource.schema";
 import { bytea, users } from "./schema";
 
 import type {
   CreatorMarketplaceResourceReportEvidence,
-} from "../../../../lib/creator-marketplace-resource-contract";
+} from "../../../web/src/shared/lib/creator-marketplace-resource-contract";
 
 const CREATOR_MARKETPLACE_RESOURCE_MAX_MANIFEST_BYTES_SQL = sql.raw(
   String(CREATOR_MARKETPLACE_RESOURCE_MAX_MANIFEST_BYTES)

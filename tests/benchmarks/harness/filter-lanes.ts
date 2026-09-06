@@ -43,16 +43,16 @@ import { Worker } from "node:worker_threads";
 import {
   planStudioGpuFilterChain,
   isStudioGpuFilterChainEligible,
-} from "../../../src/domains/creator/render/studio-gpu-filter-apply";
+} from "../../../apps/web/src/domains/creator/render/studio-gpu-filter-apply";
 import {
   applyImageFilters,
   buildImageFilters,
   registerStudioKonvaFilters,
   type KonvaLike,
-} from "../../../src/domains/creator/render/studio-konva-filters";
-import { STUDIO_IMAGE_FILTER_WORKER_PROTOCOL_VERSION } from "../../../src/domains/creator/studio-image-filter-worker-protocol";
+} from "../../../apps/web/src/domains/creator/render/studio-konva-filters";
+import { STUDIO_IMAGE_FILTER_WORKER_PROTOCOL_VERSION } from "../../../apps/web/src/domains/creator/studio-image-filter-worker-protocol";
 
-import type { ImageFilterFields } from "../../../src/domains/creator/render/studio-konva-filter-fields";
+import type { ImageFilterFields } from "../../../apps/web/src/domains/creator/render/studio-konva-filter-fields";
 
 const REPO_ROOT = new URL("../../..", import.meta.url);
 const RESULTS_DIR = join(REPO_ROOT.pathname, "tests", "benchmarks", "results");
@@ -300,7 +300,7 @@ function runKonvaLane(
 // 계산·에러 직렬화)은 손대지 않는다.
 // ---------------------------------------------------------------------------
 
-const WORKER_MODULE_URL = new URL("src/domains/creator/studio-image-filter.worker.ts",
+const WORKER_MODULE_URL = new URL("apps/web/src/domains/creator/studio-image-filter.worker.ts",
   REPO_ROOT,
 ).href;
 
@@ -655,7 +655,7 @@ async function main(): Promise<void> {
     },
     lanes: {
       "worker-cpu":
-        "src/domains/creator/studio-image-filter.worker.ts 원본 모듈 + 상주 원본 프로토콜"
+        "apps/web/src/domains/creator/studio-image-filter.worker.ts 원본 모듈 + 상주 원본 프로토콜"
         + " (load-source 1회 → run-source tick → 결과 transfer), node worker_threads 실행",
       "direct-cpu":
         "studio-image-filter-worker-client.ts runImageFilterDirect 와 동일 구성"

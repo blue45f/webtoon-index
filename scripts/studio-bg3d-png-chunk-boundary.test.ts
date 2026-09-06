@@ -4,8 +4,8 @@ import { resolve } from "node:path";
 import * as ts from "typescript";
 import { describe, expect, it } from "vitest";
 
-const ENCODER = "src/domains/creator/bg3d/studio-bg3d-model-thumbnail-encode.ts";
-const CLIENT = "src/domains/creator/bg3d/studio-bg3d-shot-png-worker-client.ts";
+const ENCODER = "apps/web/src/domains/creator/bg3d/studio-bg3d-model-thumbnail-encode.ts";
+const CLIENT = "apps/web/src/domains/creator/bg3d/studio-bg3d-shot-png-worker-client.ts";
 
 function parseFile(path: string): ts.SourceFile {
   return ts.createSourceFile(path, readFileSync(resolve(process.cwd(), path), "utf8"), ts.ScriptTarget.Latest, true);

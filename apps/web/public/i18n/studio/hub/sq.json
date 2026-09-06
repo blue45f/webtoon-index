@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Tutorial i veçorive",
+  "studio.hub.subtitle": "Një funksion në një kohë pa asnjë ngarkesë. Shikova {done}/{total}.",
+  "studio.hub.progressAriaLabel": "Përparimi i tutorialit",
+  "studio.hub.listAriaLabel": "Lista e veçorive",
+  "studio.hub.checked": "hidhni një sy",
+  "studio.hub.prev": "E mëparshme",
+  "studio.hub.next": "tjetër",
+  "studio.hub.markComplete": "shënoni si të plotë",
+  "studio.hub.completed": "E përfunduar",
+  "studio.hub.tryLabelDefault": "Ndiqni së bashku",
+  "studio.hub.stepAriaPrefix": "hap"
+}

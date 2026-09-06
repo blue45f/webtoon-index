@@ -33,7 +33,7 @@ jobs:
         run: |
           git rev-parse HEAD
           set +e
-          pnpm exec vitest run src/domains/creator/brush/studio-brush-catalog-names.test.ts src/domains/creator/brush/studio-sub-tool-palette-data.test.ts src/domains/creator/brush/StudioSubToolPalette.discovery.test.tsx src/domains/creator/brush/studio-brush-discovery.test.ts src/domains/creator/filter/studio-filter-discovery.test.ts --reporter=json --outputFile=/tmp/studio-discovery-contracts.json
+          pnpm exec vitest run apps/web/src/domains/creator/brush/studio-brush-catalog-names.test.ts apps/web/src/domains/creator/brush/studio-sub-tool-palette-data.test.ts apps/web/src/domains/creator/brush/StudioSubToolPalette.discovery.test.tsx apps/web/src/domains/creator/brush/studio-brush-discovery.test.ts apps/web/src/domains/creator/filter/studio-filter-discovery.test.ts --reporter=json --outputFile=/tmp/studio-discovery-contracts.json
           result=$?
           python3 - <<'PY'
           import json

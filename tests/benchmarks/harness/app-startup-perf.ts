@@ -153,7 +153,7 @@ function staticClosureFileNames(): { files: Set<string>; studioChunks: number; a
     visit(entryKey);
     return visited;
   };
-  const studioKeys = closure("src/domains/creator/StudioPage.tsx");
+  const studioKeys = closure("apps/web/src/domains/creator/StudioPage.tsx");
   const appKeys = closure("index.html");
   const files = new Set(
     [...studioKeys, ...appKeys].map((key) => manifest[key]!.file.split("/").pop()!),
@@ -693,7 +693,7 @@ function staticManifestClosure() {
     }
     return raw;
   };
-  const studioKeys = closure("src/domains/creator/StudioPage.tsx");
+  const studioKeys = closure("apps/web/src/domains/creator/StudioPage.tsx");
   const appKeys = closure("index.html");
   return {
     studioChunkCount: studioKeys.size,

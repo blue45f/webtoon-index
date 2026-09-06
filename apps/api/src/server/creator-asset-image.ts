@@ -1,10 +1,10 @@
 import { createHash } from "node:crypto";
 
-import { CREATOR_ASSET_PREVIEW_MAX_DATA_URL_CHARACTERS } from "../../../../lib/creator-asset-contract";
+import { CREATOR_ASSET_PREVIEW_MAX_DATA_URL_CHARACTERS } from "../../../web/src/shared/lib/creator-asset-contract";
 import {
   inspectStrictJpegDimensions,
   inspectStrictStaticWebpDimensions,
-} from "../../../../lib/strict-raster-image-inspector";
+} from "../../../web/src/shared/lib/strict-raster-image-inspector";
 
 export const CREATOR_ASSET_MAX_ENCODED_BYTES = 2_250_000;
 export const CREATOR_ASSET_MAX_DIMENSION = 4096;

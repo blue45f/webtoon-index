@@ -2,9 +2,9 @@ import {
   STUDIO_REMOTE_REFERENCE_IMAGE_MAX_AXIS,
   STUDIO_REMOTE_REFERENCE_IMAGE_MAX_DECODED_RGBA_BYTES,
   STUDIO_REMOTE_REFERENCE_IMAGE_MAX_PIXELS,
-} from "../../../../../lib/studio-remote-reference-image-contract";
+} from "../../../../web/src/shared/lib/studio-remote-reference-image-contract";
 
-import type { StudioRemoteReferenceImageMediaType } from "../../../../../lib/studio-remote-reference-image-contract";
+import type { StudioRemoteReferenceImageMediaType } from "../../../../web/src/shared/lib/studio-remote-reference-image-contract";
 
 const PNG_SIGNATURE = [0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a] as const;
 const JPEG_START_OF_FRAME_MARKERS = new Set([

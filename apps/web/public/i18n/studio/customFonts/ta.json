@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "என் எழுத்துரு",
+  "studio.customFonts.importButton": "கோப்பிலிருந்து இறக்குமதி",
+  "studio.customFonts.importing": "சரிபார்க்கிறது…",
+  "studio.customFonts.importAria": "எழுத்துரு கோப்பை இறக்குமதி செய்யவும்",
+  "studio.customFonts.storageAria": "எழுத்துரு நூலகத்தின் பயன்பாடு",
+  "studio.customFonts.emptyTitle": "இதுவரை எழுத்துருக்கள் எதுவும் சேர்க்கப்படவில்லை.",
+  "studio.customFonts.unknownFileName": "கோப்பு பெயர் இல்லை",
+  "studio.customFonts.apply": "விண்ணப்பிக்கவும்",
+  "studio.customFonts.applyToText": "தேர்ந்தெடுக்கப்பட்ட உரைக்கு இந்த எழுத்துருவைப் பயன்படுத்தவும்",
+  "studio.customFonts.selectTextFirst": "முதலில் உரை அல்லது பேச்சு குமிழியைத் தேர்ந்தெடுக்கவும்",
+  "studio.customFonts.delete": "எழுத்துருவை நீக்கு"
+}

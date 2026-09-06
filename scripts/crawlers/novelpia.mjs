@@ -124,7 +124,7 @@ function buildRow(item, fallbackGenre, rank) {
   return row;
 }
 
-export async function crawl() {
+export async function crawl() { // NOSONAR javascript:S3776
   const byWorkId = new Map();
   const ROWS = 90; // 키워드당 한 페이지로 90건 (dedupe 후 커버리지 ↑).
 

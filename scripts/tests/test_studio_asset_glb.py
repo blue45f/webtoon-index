@@ -9,6 +9,8 @@ import unittest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import normalize_studio_asset_glb as n
 
+COLOR_IMAGE = 'color.png'
+
 
 class GlbTests(unittest.TestCase):
     def setUp(self):
@@ -18,10 +20,10 @@ class GlbTests(unittest.TestCase):
         self.source = self.root / 'source.glb'
         self.out = self.root / 'result.glb'
         self.texture = b'\x89PNG\r\n\x1a\nsynthetic-signature-only'
-        (self.root / 'color.png').write_bytes(self.texture)
+        (self.root / COLOR_IMAGE).write_bytes(self.texture)
         self.doc = {'asset': {'version': '2.0'}, 'buffers': [{'byteLength': 4}],
                     'bufferViews': [{'buffer': 0, 'byteOffset': 0, 'byteLength': 4}],
-                    'images': [{'uri': 'color.png'}], 'nodes': [], 'meshes': []}
+                    'images': [{'uri': COLOR_IMAGE}], 'nodes': [], 'meshes': []}
         self.save()
 
     def save(self):
@@ -58,14 +60,14 @@ class GlbTests(unittest.TestCase):
                 self.assertFalse(self.out.exists())
 
     def test_texture_symlink_rejected(self):
-        (self.root / 'link.png').symlink_to(self.root / 'color.png')
+        (self.root / 'link.png').symlink_to(self.root / COLOR_IMAGE)
         self.doc['images'][0]['uri'] = 'link.png'
         self.save()
         with self.assertRaises(ValueError):
             n.normalize(self.source, self.out)
 
     def test_font_or_unknown_image_signature_rejected(self):
-        (self.root / 'color.png').write_bytes(b'not-an-image')
+        (self.root / COLOR_IMAGE).write_bytes(b'not-an-image')
         with self.assertRaises(ValueError):
             n.normalize(self.source, self.out)
 

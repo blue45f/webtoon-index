@@ -119,8 +119,8 @@ export const STUDIO_RENDERER_ROLE_LEDGER: readonly RendererRoleEntry[] =
         "selection-transform-chrome" as const,
       ]),
       evidence: Object.freeze([
-        "src/domains/creator/canvas/StudioCanvasViewport.tsx",
-        "src/domains/creator/canvas/StudioCanvasViewportStageHost.tsx",
+        "apps/web/src/domains/creator/canvas/StudioCanvasViewport.tsx",
+        "apps/web/src/domains/creator/canvas/StudioCanvasViewportStageHost.tsx",
       ]),
       moduleSpecifiers: Object.freeze(["konva", "react-konva"]),
       adr: "docs/adr/0018-no-automatic-engine-fallback-vello-primary.md",
@@ -135,9 +135,9 @@ export const STUDIO_RENDERER_ROLE_LEDGER: readonly RendererRoleEntry[] =
       role: "primary" as const,
       authorities: Object.freeze(["raster-brush-commit" as const]),
       evidence: Object.freeze([
-        "src/domains/creator/brush/StudioDrawNode.tsx",
-        "src/domains/creator/brush/studio-stroke-route-tournament.ts",
-        "src/domains/creator/brush/studio-stroke-surface-route.ts",
+        "apps/web/src/domains/creator/brush/StudioDrawNode.tsx",
+        "apps/web/src/domains/creator/brush/studio-stroke-route-tournament.ts",
+        "apps/web/src/domains/creator/brush/studio-stroke-surface-route.ts",
       ]),
       moduleSpecifiers: Object.freeze([]),
       note:
@@ -153,9 +153,9 @@ export const STUDIO_RENDERER_ROLE_LEDGER: readonly RendererRoleEntry[] =
       targetRole: "primary" as const,
       authorities: Object.freeze([]),
       evidence: Object.freeze([
-        "src/domains/creator/render/studio-engine-webgpu-brush-runtime.ts",
-        "src/domains/creator/render/studio-engine-vnext-brush-provider-gpu-boundary.ts",
-        "src/domains/creator/render/studio-engine-webgpu-tile-provider-v1.ts",
+        "apps/web/src/domains/creator/render/studio-engine-webgpu-brush-runtime.ts",
+        "apps/web/src/domains/creator/render/studio-engine-vnext-brush-provider-gpu-boundary.ts",
+        "apps/web/src/domains/creator/render/studio-engine-webgpu-tile-provider-v1.ts",
       ]),
       moduleSpecifiers: Object.freeze([]),
       candidateId: "E28",
@@ -172,8 +172,8 @@ export const STUDIO_RENDERER_ROLE_LEDGER: readonly RendererRoleEntry[] =
       authorities: Object.freeze(["natural-media" as const]),
       evidence: Object.freeze([
         "packages/studio-hokusai-wasm",
-        "src/domains/creator/render/studio-hokusai-natural-media.worker.ts",
-        "src/domains/creator/render/studio-hokusai-live-brush.worker.ts",
+        "apps/web/src/domains/creator/render/studio-hokusai-natural-media.worker.ts",
+        "apps/web/src/domains/creator/render/studio-hokusai-live-brush.worker.ts",
       ]),
       moduleSpecifiers: Object.freeze(["@toonspectrum/studio-hokusai-wasm"]),
       candidateId: "E12",
@@ -195,7 +195,7 @@ export const STUDIO_RENDERER_ROLE_LEDGER: readonly RendererRoleEntry[] =
       productSymbols: Object.freeze(["loadLibMypaint"]),
       candidateId: "E11",
       note:
-        "Hokusai 자연매체 dab 수학의 parity/golden 기준. `src/` 에서 "
+        "Hokusai 자연매체 dab 수학의 parity/golden 기준. `apps/web/src/` 에서 "
         + "`loadLibMypaint` 호출부는 0건이고, src 의 libmypaint 언급은 커널 출처 "
         + "문자열(.myb 레시피 attribution)뿐이다.",
     }),
@@ -205,9 +205,9 @@ export const STUDIO_RENDERER_ROLE_LEDGER: readonly RendererRoleEntry[] =
       role: "primary" as const,
       authorities: Object.freeze(["path-ops-quality" as const]),
       evidence: Object.freeze([
-        "src/domains/creator/render/studio-canvaskit-adapter.ts",
-        "src/domains/creator/render/studio-canvaskit-quality-engine.ts",
-        "src/domains/creator/studio-quality-worker-entry.ts",
+        "apps/web/src/domains/creator/render/studio-canvaskit-adapter.ts",
+        "apps/web/src/domains/creator/render/studio-canvaskit-quality-engine.ts",
+        "apps/web/src/domains/creator/studio-quality-worker-entry.ts",
       ]),
       moduleSpecifiers: Object.freeze(["canvaskit-wasm"]),
       candidateId: "E01",
@@ -241,10 +241,10 @@ export const STUDIO_RENDERER_ROLE_LEDGER: readonly RendererRoleEntry[] =
       role: "primary" as const,
       authorities: Object.freeze(["document-vector-island" as const]),
       evidence: Object.freeze([
-        "src/domains/creator/render/studio-vello-hub.ts",
-        "src/domains/creator/render/studio-vello-hub-capability.ts",
-        "src/domains/creator/render/studio-vello-hub-surface.tsx",
-        "src/domains/creator/render/studio-vello-hub-canvas-target.ts",
+        "apps/web/src/domains/creator/render/studio-vello-hub.ts",
+        "apps/web/src/domains/creator/render/studio-vello-hub-capability.ts",
+        "apps/web/src/domains/creator/render/studio-vello-hub-surface.tsx",
+        "apps/web/src/domains/creator/render/studio-vello-hub-canvas-target.ts",
       ]),
       moduleSpecifiers: Object.freeze([]),
       candidateId: "E02",
@@ -263,7 +263,7 @@ export const STUDIO_RENDERER_ROLE_LEDGER: readonly RendererRoleEntry[] =
       role: "lab" as const,
       authorities: Object.freeze([]),
       evidence: Object.freeze([
-        "src/domains/creator/render/studio-vello-hub-capability.ts",
+        "apps/web/src/domains/creator/render/studio-vello-hub-capability.ts",
       ]),
       moduleSpecifiers: Object.freeze(["vello_hybrid"]),
       candidateId: "E03",
@@ -287,7 +287,7 @@ export const STUDIO_RENDERER_ROLE_LEDGER: readonly RendererRoleEntry[] =
       candidateId: "E14",
       note:
         "Rust `lottie` feature 가 Lottie JSON 을 Vello scene 으로 낮추고 TS 가 "
-        + "`renderLottieToPixelsGpu()` 를 export 하지만, 비테스트 `src/`·`apps/` 에 "
+        + "`renderLottieToPixelsGpu()` 를 export 하지만, 비테스트 `apps/web/src/`·`apps/` 에 "
         + "호출부가 0건이다. 현재 Studio Lottie 표면은 Velato 를 쓰지 않는다.",
     }),
     Object.freeze({
@@ -302,7 +302,7 @@ export const STUDIO_RENDERER_ROLE_LEDGER: readonly RendererRoleEntry[] =
       productSymbols: Object.freeze(["compileWeslVariant"]),
       note:
         "`compileWeslVariant()` 가 `*.wesl?raw`, `link()`, `@if`, virtual schedule "
-        + "module 로 WGSL variant 를 만들지만 비테스트 `src/` 호출부가 0건이다. "
+        + "module 로 WGSL variant 를 만들지만 비테스트 `apps/web/src/` 호출부가 0건이다. "
         + "제품 shader 기본은 정적 WGSL / 기존 생성기다.",
     }),
     Object.freeze({
@@ -311,8 +311,8 @@ export const STUDIO_RENDERER_ROLE_LEDGER: readonly RendererRoleEntry[] =
       role: "primary" as const,
       authorities: Object.freeze(["selection-overlay-island" as const]),
       evidence: Object.freeze([
-        "src/domains/creator/render/studio-pixi-scene-provider.ts",
-        "src/domains/creator/StudioPixiSceneOverlayHost.tsx",
+        "apps/web/src/domains/creator/render/studio-pixi-scene-provider.ts",
+        "apps/web/src/domains/creator/StudioPixiSceneOverlayHost.tsx",
       ]),
       moduleSpecifiers: Object.freeze(["pixi.js"]),
       adr: "docs/adr/0018-no-automatic-engine-fallback-vello-primary.md",
@@ -329,8 +329,8 @@ export const STUDIO_RENDERER_ROLE_LEDGER: readonly RendererRoleEntry[] =
       role: "provider" as const,
       authorities: Object.freeze([]),
       evidence: Object.freeze([
-        "src/domains/creator/brush/studio-p5-brush-standalone-runtime-adapter.ts",
-        "src/domains/creator/studio-procedural-artistic-brush-provider.ts",
+        "apps/web/src/domains/creator/brush/studio-p5-brush-standalone-runtime-adapter.ts",
+        "apps/web/src/domains/creator/studio-procedural-artistic-brush-provider.ts",
       ]),
       moduleSpecifiers: Object.freeze(["p5.brush"]),
       note:
@@ -345,8 +345,8 @@ export const STUDIO_RENDERER_ROLE_LEDGER: readonly RendererRoleEntry[] =
       role: "primary" as const,
       authorities: Object.freeze(["stroke-geometry" as const]),
       evidence: Object.freeze([
-        "src/domains/creator/studio-perfect-freehand.ts",
-        "src/domains/creator/hybrid-dcc/studio-hybrid-brush-filter-edit-runtime.ts",
+        "apps/web/src/domains/creator/studio-perfect-freehand.ts",
+        "apps/web/src/domains/creator/hybrid-dcc/studio-hybrid-brush-filter-edit-runtime.ts",
       ]),
       moduleSpecifiers: Object.freeze(["perfect-freehand"]),
       candidateId: "E10",
@@ -360,8 +360,8 @@ export const STUDIO_RENDERER_ROLE_LEDGER: readonly RendererRoleEntry[] =
       role: "primary" as const,
       authorities: Object.freeze(["shape-sketch" as const]),
       evidence: Object.freeze([
-        "src/domains/creator/studio-rough-shape.ts",
-        "src/domains/creator/studio-rough-svg-parity.ts",
+        "apps/web/src/domains/creator/studio-rough-shape.ts",
+        "apps/web/src/domains/creator/studio-rough-svg-parity.ts",
       ]),
       moduleSpecifiers: Object.freeze(["roughjs"]),
       note:
@@ -375,7 +375,7 @@ export const STUDIO_RENDERER_ROLE_LEDGER: readonly RendererRoleEntry[] =
       role: "provider" as const,
       authorities: Object.freeze([]),
       evidence: Object.freeze([
-        "src/domains/creator/render/studio-engine-vector-geometry-provider.ts",
+        "apps/web/src/domains/creator/render/studio-engine-vector-geometry-provider.ts",
       ]),
       moduleSpecifiers: Object.freeze(["paper"]),
       note:
@@ -391,9 +391,9 @@ export const STUDIO_RENDERER_ROLE_LEDGER: readonly RendererRoleEntry[] =
       role: "primary" as const,
       authorities: Object.freeze(["scene-3d" as const]),
       evidence: Object.freeze([
-        "src/domains/creator/vrm",
-        "src/domains/creator/bg3d",
-        "src/domains/creator/studio-background-3d-model.ts",
+        "apps/web/src/domains/creator/vrm",
+        "apps/web/src/domains/creator/bg3d",
+        "apps/web/src/domains/creator/studio-background-3d-model.ts",
       ]),
       moduleSpecifiers: Object.freeze([
         "three",
@@ -411,9 +411,9 @@ export const STUDIO_RENDERER_ROLE_LEDGER: readonly RendererRoleEntry[] =
       role: "primary" as const,
       authorities: Object.freeze(["scene-3d-specialist" as const]),
       evidence: Object.freeze([
-        "src/domains/creator/bg3d/studio-bg3d-babylon-specialist-entry.ts",
-        "src/domains/creator/bg3d/studio-bg3d-babylon-normal-capture.ts",
-        "src/domains/creator/bg3d/studio-bg3d-babylon-artifact-capture.ts",
+        "apps/web/src/domains/creator/bg3d/studio-bg3d-babylon-specialist-entry.ts",
+        "apps/web/src/domains/creator/bg3d/studio-bg3d-babylon-normal-capture.ts",
+        "apps/web/src/domains/creator/bg3d/studio-bg3d-babylon-artifact-capture.ts",
       ]),
       moduleSpecifiers: Object.freeze(["@babylonjs/core", "@babylonjs/loaders"]),
       adr: "docs/adr/0018-no-automatic-engine-fallback-vello-primary.md",
@@ -716,7 +716,7 @@ export function renderRendererRoleLedgerMarkdown(
     ``,
     `1. 모든 권위는 정확히 하나의 \`primary\` 소유자를 가진다(아래 "소유자 없는 권위" 예외).`,
     `2. \`provider\`/\`reference\`/\`lab\` 은 권위를 가질 수 없다.`,
-    `3. \`lab\` 엔진의 모듈 지정자·심볼은 \`src/\`, \`apps/\` 비테스트 소스에 0건이어야 한다.`,
+    `3. \`lab\` 엔진의 모듈 지정자·심볼은 \`apps/web/src/\`, \`apps/\` 비테스트 소스에 0건이어야 한다.`,
     `4. 모든 근거 경로는 디스크에 실제로 존재해야 한다.`,
     ``,
     `## 원장`,
@@ -774,7 +774,7 @@ export function renderRendererRoleLedgerMarkdown(
     lines.push(`\`lab\` 엔진이 없다.`);
   } else {
     lines.push(
-      `아래 지정자·심볼은 \`src/\`, \`apps/\` 의 비테스트 \`.ts\`/\`.tsx\`/\`.mts\` 에서`,
+      `아래 지정자·심볼은 \`apps/web/src/\`, \`apps/\` 의 비테스트 \`.ts\`/\`.tsx\`/\`.mts\` 에서`,
       `0건이어야 한다. 위반은 테스트가 파일 단위로 보고한다.`,
       ``,
       `| id | 모듈 지정자 | 제품 심볼 |`,

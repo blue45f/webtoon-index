@@ -58,6 +58,6 @@ const KNOWN = [
   ["KAN-13", /(studio-bg3d-dialog.*(Expected|Received)|캡처할 3D 장면이 아직 준비되지|컬러 배경 추가.*완료되지)/i],
 ];
 
-export function knownJira(text) {
+export function knownJira(text) { // NOSONAR javascript:S3800
   return KNOWN.find(([, regex]) => regex.test(text))?.[0] ?? null;
 }

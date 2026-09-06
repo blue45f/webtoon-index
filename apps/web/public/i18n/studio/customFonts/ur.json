@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "میرا فونٹ",
+  "studio.customFonts.importButton": "فائل سے درآمد کریں۔",
+  "studio.customFonts.importing": "چیک کیا جا رہا ہے…",
+  "studio.customFonts.importAria": "فونٹ فائل درآمد کریں۔",
+  "studio.customFonts.storageAria": "فونٹ لائبریری کا استعمال",
+  "studio.customFonts.emptyTitle": "ابھی تک کوئی فونٹ شامل نہیں ہیں۔",
+  "studio.customFonts.unknownFileName": "فائل کا کوئی نام نہیں۔",
+  "studio.customFonts.apply": "لگائیں",
+  "studio.customFonts.applyToText": "اس فونٹ کو منتخب متن پر لگائیں۔",
+  "studio.customFonts.selectTextFirst": "سب سے پہلے متن یا اسپیچ ببل کو منتخب کریں۔",
+  "studio.customFonts.delete": "فونٹ کو حذف کریں"
+}

@@ -28,7 +28,7 @@ import {
   STUDIO_ERASER_BRUSH_CATALOG_ITEMS,
   STUDIO_LISTED_ALL_BRUSH_CATALOG_ITEMS,
   type StudioBrushCatalogItem,
-} from "../src/domains/creator/brush/studio-brush-catalog";
+} from "../apps/web/src/domains/creator/brush/studio-brush-catalog";
 
 const MINUTES = Math.max(1, Number(process.env.TOONSPECTRUM_SOAK_MINUTES ?? "20") || 20);
 const SEED = Number(process.env.TOONSPECTRUM_SOAK_SEED ?? "1") || 1;

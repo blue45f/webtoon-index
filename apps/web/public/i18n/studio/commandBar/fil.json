@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Mabilisang command bar",
+  "studio.commandBar.settings": "Mga setting ng command bar",
+  "studio.commandBar.settingsDescription": "Baguhin ang ayos ng slot at pagpapakita ng command bar sa ilalim ng menu bar.",
+  "studio.commandBar.settingsTip": "Ilagay sa unang mga slot ang mga command na madalas mong gamitin para pinakamabilis maabot.",
+  "studio.commandBar.settingsClose": "Isara ang mga setting ng command bar",
+  "studio.commandBar.settingsStorageNote": "Naka-save ang ayos ng slot sa workspace settings ng browser na ito.",
+  "studio.commandBar.showSlots": "Ipakita ang mga command slot",
+  "studio.commandBar.slot": "Slot {index}",
+  "studio.commandBar.slotAria": "Command slot {index}",
+  "studio.commandBar.slotEmpty": "Walang laman na slot",
+  "studio.commandBar.resetDefaults": "I-reset sa default na ayos",
+  "studio.commandBar.command.undo": "I-undo",
+  "studio.commandBar.command.redo": "I-redo",
+  "studio.commandBar.command.save": "I-save ang draft",
+  "studio.commandBar.command.publish": "I-publish",
+  "studio.commandBar.command.download": "I-download ang kasalukuyang pahina",
+  "studio.commandBar.command.export-open": "Mga opsyon sa pag-export",
+  "studio.commandBar.command.zoom-fit": "Ikasya sa lapad ng screen",
+  "studio.commandBar.command.assets": "Mga template at asset",
+  "studio.commandBar.command.bubbles": "Speech bubble",
+  "studio.commandBar.command.project": "Mga tool ng proyekto"
+}

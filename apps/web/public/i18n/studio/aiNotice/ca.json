@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Guia d'imatges d'IA generativa",
+  "studio.aiNotice.description": "Aquesta funció crea imatges mitjançant IA generativa (OpenAI). Les insígnies d'IA es mostren als resultats creats.",
+  "studio.aiNotice.ruleCopyright": "No creem obres d'altres persones, personatges o cares de persones reals.",
+  "studio.aiNotice.ruleAccuracy": "Els resultats de la IA poden ser inexactes o diferents del que es pretenia.",
+  "studio.aiNotice.ruleResponsibility": "Sou responsable d'utilitzar les imatges que creeu.",
+  "studio.aiNotice.cancel": "Cancel·la",
+  "studio.aiNotice.confirm": "Entenc, crea"
+}

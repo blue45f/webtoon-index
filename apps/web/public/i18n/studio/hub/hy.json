@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Առանձնահատկությունների ձեռնարկ",
+  "studio.hub.subtitle": "Առանց որևէ ծանրաբեռնվածության մեկ գործառույթ: Ես նայեցի {done}/{total}-ին:",
+  "studio.hub.progressAriaLabel": "Ուսուցման առաջընթաց",
+  "studio.hub.listAriaLabel": "Առանձնահատկությունների ցանկ",
+  "studio.hub.checked": "նայիր",
+  "studio.hub.prev": "Նախորդ",
+  "studio.hub.next": "հաջորդ",
+  "studio.hub.markComplete": "նշել որպես ամբողջական",
+  "studio.hub.completed": "Ավարտված",
+  "studio.hub.tryLabelDefault": "Հետևեք",
+  "studio.hub.stepAriaPrefix": "քայլ"
+}

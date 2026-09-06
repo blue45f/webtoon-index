@@ -1,0 +1,8 @@
+{
+  "review.progress.complete": "완독",
+  "review.progress.binge": "정주행중",
+  "review.progress.upcoming": "정주행 예정",
+  "review.progress.abandoned": "하차",
+  "review.progress.unknown": "진행 상태 미공개",
+  "review.spoilerRevealLabel": "스포일러 보기"
+}

@@ -4,7 +4,7 @@
  * Proves that the test runner and the type checker are still LOOKING AT the code.
  *
  * `vitest.config.ts` pins an explicit `TEST_ROOTS` list precisely so that moving a tree
- * (`src/` -> `apps/web/`, say) forces someone to edit that list. Its own comment then promises
+ * (`apps/web/src/` -> `apps/web/`, say) forces someone to edit that list. Its own comment then promises
  * that "scripts/verify-toolchain-coverage.mjs 의 수집 파일 수 floor 가 게이트를 터뜨린다" if the
  * edit is forgotten. That script did not exist. The comment described a guard nobody had built,
  * which is worse than no comment at all: every reader since has believed they were covered.
@@ -27,8 +27,8 @@
  * deliberate `--update` with the drop visible in the commit, never a silent slide.
  */
 import { execFileSync } from "node:child_process";
-import { existsSync, readFileSync, writeFileSync } from "node:fs";
-import { join, relative } from "node:path";
+import { existsSync, readFileSync, statSync, writeFileSync } from "node:fs";
+import { isAbsolute, join, relative, resolve, sep } from "node:path";
 
 import { REPO_ROOT } from "./lib/repo-paths.mjs";
 
@@ -73,7 +73,7 @@ function countTestFilesByRoot(roots) {
     ["ls-files", "--cached", "--others", "--exclude-standard"],
     { cwd: REPO_ROOT, encoding: "utf8", maxBuffer: 64 * 1024 * 1024 },
   );
-  const testFile = /\.(test|spec)\.(c|m)?[jt]sx?$/;
+  const testFile = /\.(test|spec)\.[cm]?[jt]sx?$/;
   const counts = Object.fromEntries(roots.map((root) => [root, 0]));
   for (const line of stdout.split("\n")) {
     const file = line.trim();
@@ -92,7 +92,8 @@ function countTestFilesByRoot(roots) {
  * Asks the compiler itself what it is compiling. `--listFilesOnly` reports the resolved input set,
  * which is the only honest answer — reading the `include` globs would just re-derive the
  * assumption this gate is supposed to test. Declaration files and anything resolved out of
- * node_modules are excluded so the number tracks first-party source.
+ * node_modules are excluded so the number tracks first-party source. Only existing files inside
+ * the repository are counted, and a Set removes duplicate compiler output or package-manager chatter.
  */
 function countTypecheckedFiles(project) {
   const configPath = join(REPO_ROOT, project);
@@ -101,7 +102,7 @@ function countTypecheckedFiles(project) {
   try {
     stdout = execFileSync(
       "pnpm",
-      ["exec", "tsc", "-p", project, "--listFilesOnly"],
+      ["exec", "tsc", "-p", project, "--listFilesOnly", "--incremental", "false", "--pretty", "false"],
       { cwd: REPO_ROOT, encoding: "utf8", maxBuffer: 256 * 1024 * 1024 },
     );
   } catch (error) {
@@ -110,13 +111,24 @@ function countTypecheckedFiles(project) {
     stdout = error.stdout ?? "";
     if (!stdout) return null;
   }
-  let count = 0;
+  const files = new Set();
   for (const line of stdout.split("\n")) {
-    const file = line.trim();
-    if (!file || file.endsWith(".d.ts") || file.includes("/node_modules/")) continue;
-    count += 1;
+    const candidate = line.trim();
+    if (!candidate || candidate.endsWith(".d.ts")) continue;
+    const file = isAbsolute(candidate) ? candidate : resolve(REPO_ROOT, candidate);
+    if (!existsSync(file) || !statSync(file).isFile()) continue;
+    const repoRelative = relative(REPO_ROOT, file);
+    if (
+      repoRelative === ".."
+      || repoRelative.startsWith(`..${sep}`)
+      || isAbsolute(repoRelative)
+      || repoRelative.split(sep).includes("node_modules")
+    ) {
+      continue;
+    }
+    files.add(repoRelative);
   }
-  return count;
+  return files.size;
 }
 
 function loadBaseline() {
@@ -124,7 +136,7 @@ function loadBaseline() {
   return JSON.parse(readFileSync(BASELINE_PATH, "utf8"));
 }
 
-function main() {
+function main() { // NOSONAR javascript:S3776
   const update = process.argv.includes("--update");
   const roots = readTestRoots();
   const testCounts = countTestFilesByRoot(roots);

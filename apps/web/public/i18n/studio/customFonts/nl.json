@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "mijn lettertype",
+  "studio.customFonts.importButton": "Importeren uit bestand",
+  "studio.customFonts.importing": "Controleren…",
+  "studio.customFonts.importAria": "Lettertypebestand importeren",
+  "studio.customFonts.storageAria": "Gebruik van lettertypebibliotheek",
+  "studio.customFonts.emptyTitle": "Er zijn nog geen lettertypen meegeleverd.",
+  "studio.customFonts.unknownFileName": "Geen bestandsnaam",
+  "studio.customFonts.apply": "Toepassen",
+  "studio.customFonts.applyToText": "Pas dit lettertype toe op geselecteerde tekst",
+  "studio.customFonts.selectTextFirst": "Selecteer eerst tekst of tekstballon",
+  "studio.customFonts.delete": "lettertype verwijderen"
+}

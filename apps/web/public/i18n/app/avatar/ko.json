@@ -1,0 +1,9 @@
+{
+  "avatar.error.invalidType": "지원되지 않는 이미지 형식입니다.",
+  "avatar.error.processFailed": "이미지를 처리하지 못했습니다.",
+  "avatar.processing": "처리 중…",
+  "avatar.select": "이미지 변경",
+  "avatar.remove": "이미지 삭제",
+  "avatar.uploadHint": "JPG/PNG/WEBP 이미지만 사용 가능하며 크롭 후 미리보기가 표시됩니다.",
+  "avatar.changeAria": "프로필 이미지 변경"
+}

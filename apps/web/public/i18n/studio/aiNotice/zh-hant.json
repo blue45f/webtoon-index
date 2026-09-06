@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "生成 AI 圖像指南",
+  "studio.aiNotice.description": "此函數使用生成式 AI (OpenAI) 創建圖像。 AI 徽章顯示在已建立的結果上。",
+  "studio.aiNotice.ruleCopyright": "我們不創造他人的作品、角色或真人的臉。",
+  "studio.aiNotice.ruleAccuracy": "人工智慧結果可能不準確或與預期不同。",
+  "studio.aiNotice.ruleResponsibility": "您有責任使用您創建的圖像。",
+  "studio.aiNotice.cancel": "取消",
+  "studio.aiNotice.confirm": "我理解，創造"
+}

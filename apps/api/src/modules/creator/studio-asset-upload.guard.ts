@@ -5,8 +5,8 @@ import {
   type ExecutionContext,
 } from "@nestjs/common";
 
-import { isStudioRasterAssetAdmissionOptedIn } from "../../../../../lib/studio-raster-asset-contract";
-import { isStudioWorkAssetAdmissionOptedIn } from "../../../../../lib/studio-work-asset-contract";
+import { isStudioRasterAssetAdmissionOptedIn } from "../../../../web/src/shared/lib/studio-raster-asset-contract";
+import { isStudioWorkAssetAdmissionOptedIn } from "../../../../web/src/shared/lib/studio-work-asset-contract";
 
 interface StudioAssetUploadRequest {
   headers?: Record<string, string | string[] | undefined>;

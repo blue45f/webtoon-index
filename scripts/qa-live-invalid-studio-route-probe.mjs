@@ -32,7 +32,7 @@ const results = [];
 
 try {
   for (const profile of profiles) {
-    for (let round = 1; round <= rounds; round += 1) {
+    for (let round = 1; round <= rounds; round++) {
       const context = await browser.newContext({
         userAgent: profile.userAgent,
         viewport: profile.viewport,

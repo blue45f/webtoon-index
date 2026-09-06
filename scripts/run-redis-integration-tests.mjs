@@ -67,12 +67,9 @@ async function connectWhenReady(redisUrl) {
       await client.quit();
       return;
     } catch (error) {
-      lastFailure =
-        error && typeof error === "object" && "code" in error
-          ? String(error.code)
-          : error instanceof Error
-            ? error.name
-            : "unknown";
+      if (error && typeof error === "object" && "code" in error) lastFailure = String(error.code);
+      else if (error instanceof Error) lastFailure = error.name;
+      else lastFailure = "unknown";
       if (client.isOpen) client.destroy();
       await delay(100);
     }
@@ -132,7 +129,7 @@ async function main() {
     }
   };
   const interrupt = () => {
-    void cleanup().finally(() => {
+    cleanup().finally(() => {
       process.exitCode = 130;
       process.exit();
     });

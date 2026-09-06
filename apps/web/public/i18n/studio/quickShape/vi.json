@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "hình dạng thông minh",
+  "studio.quickShape.description.active": "Nhàn nhã vẽ các đường, hình vuông, hình tròn và hình tam giác. Nếu bạn buông tay, nó sẽ tự dọn dẹp.",
+  "studio.quickShape.description.inactive": "Bạn có thể viết nguệch ngoạc nó xuống. Nếu bạn bật nó lên, bản vẽ tay của bạn sẽ được tinh chỉnh thành hình khối gọn gàng.",
+  "studio.quickShape.toggleHint": "Khoảnh khắc bạn buông một hình vẽ thô bằng bút, nó sẽ tạo thành một hình dạng chính xác. Ngay cả khi bạn tạm dừng trong khi vẽ, bản xem trước sẽ xuất hiện.",
+  "studio.quickShape.toggleAria.on": "Hình dạng thông minh đang bật",
+  "studio.quickShape.toggleAria.off": "Tắt hình dạng thông minh",
+  "studio.quickShape.matchedSuffix": " Tôi có thể cảm nhận được nó. Nó được xác nhận khi tôi thả tay ra.",
+  "studio.quickShape.emptyStatus": "Vẽ hình và bỏ đi, hoặc chỉ ở lại cuối",
+  "studio.quickShape.openTutorial": "Xem hướng dẫn về hình dạng thông minh",
+  "studio.quickShape.notice": "Vẽ các hình dạng, đường thẳng, hình tròn, hình vuông, v.v. thông minh và tinh chỉnh chúng khi bạn buông tay (tạm dừng để xem trước)"
+}

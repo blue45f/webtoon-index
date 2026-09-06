@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Barra dei comandi rapidi",
+  "studio.commandBar.settings": "Impostazioni della barra dei comandi",
+  "studio.commandBar.settingsDescription": "Cambia la disposizione degli slot e la visibilità della barra dei comandi sotto la barra dei menu.",
+  "studio.commandBar.settingsTip": "Metti i comandi che usi di più nei primi slot: saranno i più rapidi da raggiungere.",
+  "studio.commandBar.settingsClose": "Chiudi le impostazioni della barra dei comandi",
+  "studio.commandBar.settingsStorageNote": "La disposizione degli slot viene salvata nelle impostazioni dell'area di lavoro di questo browser.",
+  "studio.commandBar.showSlots": "Mostra gli slot dei comandi",
+  "studio.commandBar.slot": "Slot {index}",
+  "studio.commandBar.slotAria": "Slot comando {index}",
+  "studio.commandBar.slotEmpty": "Slot vuoto",
+  "studio.commandBar.resetDefaults": "Ripristina la disposizione predefinita",
+  "studio.commandBar.command.undo": "Annulla",
+  "studio.commandBar.command.redo": "Ripristina",
+  "studio.commandBar.command.save": "Salva bozza",
+  "studio.commandBar.command.publish": "Pubblica",
+  "studio.commandBar.command.download": "Scarica la pagina corrente",
+  "studio.commandBar.command.export-open": "Opzioni di esportazione",
+  "studio.commandBar.command.zoom-fit": "Adatta alla larghezza dello schermo",
+  "studio.commandBar.command.assets": "Modelli e risorse",
+  "studio.commandBar.command.bubbles": "Fumetto",
+  "studio.commandBar.command.project": "Strumenti del progetto"
+}

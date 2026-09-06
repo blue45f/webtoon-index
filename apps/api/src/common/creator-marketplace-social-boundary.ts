@@ -3,7 +3,7 @@ import { and, inArray, like } from "drizzle-orm";
 import {
   CREATOR_MARKETPLACE_SOCIAL_THREAD_PREFIX,
   isCreatorMarketplaceSocialInteractionId,
-} from "../../../../lib/creator-marketplace-social-namespace";
+} from "../../../web/src/shared/lib/creator-marketplace-social-namespace";
 import { db, reviewReplies, reviews } from "../db";
 
 const INTERACTION_LOOKUP_BATCH_SIZE = 400;

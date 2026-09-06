@@ -1,19 +1,19 @@
-import { planDialogueVerticalRubyOverlayPlacements } from "../../../src/domains/creator/lettering/studio-dialogue-ruby-layout";
+import { planDialogueVerticalRubyOverlayPlacements } from "../../../apps/web/src/domains/creator/lettering/studio-dialogue-ruby-layout";
 import {
   classifyVerticalPunctuation,
   isVerticalNoBreakAfter,
   isVerticalNoBreakBefore,
   layoutVerticalText,
   verticalTextItemGeometry,
-} from "../../../src/domains/creator/studio-vertical-text";
+} from "../../../apps/web/src/domains/creator/studio-vertical-text";
 
-import type { StudioRubySpanInput } from "../../../src/domains/creator/lettering/studio-dialogue-ruby-layout";
+import type { StudioRubySpanInput } from "../../../apps/web/src/domains/creator/lettering/studio-dialogue-ruby-layout";
 import type {
   VerticalTextItem,
   VerticalTextLayout,
   VerticalTextLayoutInput,
   VerticalTextMeasurer,
-} from "../../../src/domains/creator/studio-vertical-text";
+} from "../../../apps/web/src/domains/creator/studio-vertical-text";
 
 const FONT_FAMILY = "ToonVerticalCjkVisual";
 const FONT_ROUTE = "/__toon_text_vertical_quality_cjk.ttf";

@@ -3,14 +3,14 @@ import * as Y from "yjs";
 
 import {
   STUDIO_CRDT_RASTER_SURFACES_ROOT,
-} from "../../../../../lib/studio-crdt-raster-document-contract";
+} from "../../../../web/src/shared/lib/studio-crdt-raster-document-contract";
 import {
   canonicalStudioRasterJson,
-} from "../../../../../lib/studio-crdt-raster-ops";
+} from "../../../../web/src/shared/lib/studio-crdt-raster-ops";
 import {
   createStudioFilterMaskSurfaceId,
   createStudioFilterMaskSurfaceSpec,
-} from "../../../../../lib/studio-filter-mask-surface-contract";
+} from "../../../../web/src/shared/lib/studio-filter-mask-surface-contract";
 
 import {
   hasValidStudioCrdtRootSchema,

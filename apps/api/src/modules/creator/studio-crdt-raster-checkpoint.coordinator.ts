@@ -8,18 +8,18 @@ import {
   type StudioRasterCompactionCheckpoint,
   type StudioRasterCompactionOrderKey,
   type StudioRasterCheckpointTile,
-} from "../../../../../lib/studio-crdt-raster-compaction";
+} from "../../../../web/src/shared/lib/studio-crdt-raster-compaction";
 import {
   STUDIO_CRDT_RASTER_CHECKPOINTS_ROOT,
   STUDIO_CRDT_RASTER_OPERATIONS_ROOT,
   readStudioCrdtRasterDocument,
-} from "../../../../../lib/studio-crdt-raster-document-contract";
+} from "../../../../web/src/shared/lib/studio-crdt-raster-document-contract";
 import {
   STUDIO_RASTER_CRDT_VERSION,
   canonicalStudioRasterJson,
   compareStudioRasterEventOrder,
   createStudioRasterOperationLog,
-} from "../../../../../lib/studio-crdt-raster-ops";
+} from "../../../../web/src/shared/lib/studio-crdt-raster-ops";
 
 import {
   STUDIO_CRDT_RASTER_CHECKPOINT_REPOSITORY,
@@ -38,7 +38,7 @@ import type {
 } from "./studio-crdt.repository";
 import type {
   StudioRasterOperationLog,
-} from "../../../../../lib/studio-crdt-raster-ops";
+} from "../../../../web/src/shared/lib/studio-crdt-raster-ops";
 
 export const STUDIO_CRDT_RASTER_CHECKPOINT_COORDINATOR_OPTIONS = Symbol(
   "STUDIO_CRDT_RASTER_CHECKPOINT_COORDINATOR_OPTIONS"

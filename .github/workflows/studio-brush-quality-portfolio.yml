@@ -6,23 +6,23 @@ on:
     branches: [main]
     paths:
       - "scripts/audit-studio-brush-quality-portfolio.mts"
-      - "src/domains/creator/brush/StudioBrushLibrarySheet.test.tsx"
-      - "src/domains/creator/brush/studio-brush-catalog-core.ts"
-      - "src/domains/creator/brush/studio-brush-catalog.ts"
-      - "src/domains/creator/brush/studio-brush-listed-uniqueness.test.ts"
-      - "src/domains/creator/brush/studio-brush-quality-foundation.ts"
-      - "src/domains/creator/brush/studio-brush-quality-portfolio-counts.ts"
-      - "src/domains/creator/brush/studio-brush-quality-portfolio-data.ts"
-      - "src/domains/creator/brush/studio-brush-quality-portfolio.test.ts"
-      - "src/domains/creator/brush/studio-brush-quality-portfolio.ts"
-      - "src/domains/creator/brush/studio-sub-tool-palette-data.test.ts"
-      - "src/domains/creator/brush/studio-sub-tool-palette-data.ts"
+      - "apps/web/src/domains/creator/brush/StudioBrushLibrarySheet.test.tsx"
+      - "apps/web/src/domains/creator/brush/studio-brush-catalog-core.ts"
+      - "apps/web/src/domains/creator/brush/studio-brush-catalog.ts"
+      - "apps/web/src/domains/creator/brush/studio-brush-listed-uniqueness.test.ts"
+      - "apps/web/src/domains/creator/brush/studio-brush-quality-foundation.ts"
+      - "apps/web/src/domains/creator/brush/studio-brush-quality-portfolio-counts.ts"
+      - "apps/web/src/domains/creator/brush/studio-brush-quality-portfolio-data.ts"
+      - "apps/web/src/domains/creator/brush/studio-brush-quality-portfolio.test.ts"
+      - "apps/web/src/domains/creator/brush/studio-brush-quality-portfolio.ts"
+      - "apps/web/src/domains/creator/brush/studio-sub-tool-palette-data.test.ts"
+      - "apps/web/src/domains/creator/brush/studio-sub-tool-palette-data.ts"
       - ".github/workflows/studio-brush-quality-portfolio.yml"
   push:
     branches: [main]
     paths:
       - "scripts/audit-studio-brush-quality-portfolio.mts"
-      - "src/domains/creator/brush/**"
+      - "apps/web/src/domains/creator/brush/**"
       - ".github/workflows/studio-brush-quality-portfolio.yml"
   workflow_dispatch:
 
@@ -59,14 +59,14 @@ jobs:
       - name: Verify quality-first catalogue contracts
         run: >-
           pnpm exec vitest run
-          src/domains/creator/brush/studio-brush-quality-portfolio.test.ts
-          src/domains/creator/brush/studio-brush-listed-uniqueness.test.ts
-          src/domains/creator/brush/studio-brush-catalog-contract.test.ts
-          src/domains/creator/brush/studio-brush-catalog-core.test.ts
-          src/domains/creator/brush/studio-sub-tool-palette-data.test.ts
-          src/domains/creator/brush/StudioBrushLibrarySheet.test.tsx
-          src/domains/creator/brush/StudioBrushTray.test.tsx
-          src/domains/creator/brush/studio-brush-browser-harness-boundary.test.ts
+          apps/web/src/domains/creator/brush/studio-brush-quality-portfolio.test.ts
+          apps/web/src/domains/creator/brush/studio-brush-listed-uniqueness.test.ts
+          apps/web/src/domains/creator/brush/studio-brush-catalog-contract.test.ts
+          apps/web/src/domains/creator/brush/studio-brush-catalog-core.test.ts
+          apps/web/src/domains/creator/brush/studio-sub-tool-palette-data.test.ts
+          apps/web/src/domains/creator/brush/StudioBrushLibrarySheet.test.tsx
+          apps/web/src/domains/creator/brush/StudioBrushTray.test.tsx
+          apps/web/src/domains/creator/brush/studio-brush-browser-harness-boundary.test.ts
 
       - name: Run static texture and hand-feel audit
         env:
@@ -77,17 +77,17 @@ jobs:
         run: >-
           pnpm exec eslint --max-warnings=0
           scripts/audit-studio-brush-quality-portfolio.mts
-          src/domains/creator/brush/StudioBrushLibrarySheet.test.tsx
-          src/domains/creator/brush/studio-brush-catalog-core.ts
-          src/domains/creator/brush/studio-brush-catalog.ts
-          src/domains/creator/brush/studio-brush-listed-uniqueness.test.ts
-          src/domains/creator/brush/studio-brush-quality-foundation.ts
-          src/domains/creator/brush/studio-brush-quality-portfolio-counts.ts
-          src/domains/creator/brush/studio-brush-quality-portfolio-data.ts
-          src/domains/creator/brush/studio-brush-quality-portfolio.test.ts
-          src/domains/creator/brush/studio-brush-quality-portfolio.ts
-          src/domains/creator/brush/studio-sub-tool-palette-data.test.ts
-          src/domains/creator/brush/studio-sub-tool-palette-data.ts
+          apps/web/src/domains/creator/brush/StudioBrushLibrarySheet.test.tsx
+          apps/web/src/domains/creator/brush/studio-brush-catalog-core.ts
+          apps/web/src/domains/creator/brush/studio-brush-catalog.ts
+          apps/web/src/domains/creator/brush/studio-brush-listed-uniqueness.test.ts
+          apps/web/src/domains/creator/brush/studio-brush-quality-foundation.ts
+          apps/web/src/domains/creator/brush/studio-brush-quality-portfolio-counts.ts
+          apps/web/src/domains/creator/brush/studio-brush-quality-portfolio-data.ts
+          apps/web/src/domains/creator/brush/studio-brush-quality-portfolio.test.ts
+          apps/web/src/domains/creator/brush/studio-brush-quality-portfolio.ts
+          apps/web/src/domains/creator/brush/studio-sub-tool-palette-data.test.ts
+          apps/web/src/domains/creator/brush/studio-sub-tool-palette-data.ts
 
       - name: Typecheck
         run: pnpm exec tsc -p tsconfig.json --noEmit --incremental false

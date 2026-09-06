@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "τη γραμματοσειρά μου",
+  "studio.customFonts.importButton": "Εισαγωγή από αρχείο",
+  "studio.customFonts.importing": "Έλεγχος…",
+  "studio.customFonts.importAria": "Εισαγωγή αρχείου γραμματοσειράς",
+  "studio.customFonts.storageAria": "Χρήση βιβλιοθήκης γραμματοσειρών",
+  "studio.customFonts.emptyTitle": "Δεν περιλαμβάνονται ακόμη γραμματοσειρές.",
+  "studio.customFonts.unknownFileName": "Χωρίς όνομα αρχείου",
+  "studio.customFonts.apply": "Εφαρμόστε",
+  "studio.customFonts.applyToText": "Εφαρμόστε αυτήν τη γραμματοσειρά στο επιλεγμένο κείμενο",
+  "studio.customFonts.selectTextFirst": "Πρώτα επιλέξτε το συννεφάκι κειμένου ή ομιλίας",
+  "studio.customFonts.delete": "διαγραφή γραμματοσειράς"
+}

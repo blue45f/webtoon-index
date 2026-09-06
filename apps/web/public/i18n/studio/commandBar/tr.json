@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Hızlı komut çubuğu",
+  "studio.commandBar.settings": "Komut çubuğu ayarları",
+  "studio.commandBar.settingsDescription": "Menü çubuğunun altındaki komut çubuğunun yuva düzenini ve görünürlüğünü değiştirin.",
+  "studio.commandBar.settingsTip": "En sık kullandığınız komutları ilk yuvalara koyarsanız en hızlı ulaşırsınız.",
+  "studio.commandBar.settingsClose": "Komut çubuğu ayarlarını kapat",
+  "studio.commandBar.settingsStorageNote": "Yuva düzeni bu tarayıcının çalışma alanı ayarlarında saklanır.",
+  "studio.commandBar.showSlots": "Komut yuvalarını göster",
+  "studio.commandBar.slot": "Yuva {index}",
+  "studio.commandBar.slotAria": "Komut yuvası {index}",
+  "studio.commandBar.slotEmpty": "Boş yuva",
+  "studio.commandBar.resetDefaults": "Varsayılan düzene sıfırla",
+  "studio.commandBar.command.undo": "Geri al",
+  "studio.commandBar.command.redo": "Yinele",
+  "studio.commandBar.command.save": "Taslağı kaydet",
+  "studio.commandBar.command.publish": "Yayımla",
+  "studio.commandBar.command.download": "Geçerli sayfayı indir",
+  "studio.commandBar.command.export-open": "Dışa aktarma seçenekleri",
+  "studio.commandBar.command.zoom-fit": "Ekran genişliğine sığdır",
+  "studio.commandBar.command.assets": "Şablonlar ve varlıklar",
+  "studio.commandBar.command.bubbles": "Konuşma balonu",
+  "studio.commandBar.command.project": "Proje araçları"
+}

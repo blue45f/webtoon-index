@@ -12,7 +12,7 @@ import {
   isCreatorAssetReportReason,
   normalizeCreatorAssetTags,
   parseCreatorAssetCatalogSort,
-} from "../../../../../lib/creator-asset-contract";
+} from "../../../../web/src/shared/lib/creator-asset-contract";
 import { creatorAssetReports, creatorAssets, db, users } from "../../db";
 import {
   assertCreatorAssetPersistedIntegrity,
@@ -37,7 +37,7 @@ import type {
   CreatorAssetLicenseId,
   CreatorAssetModerationStatus,
   CreatorAssetReportReason,
-} from "../../../../../lib/creator-asset-contract";
+} from "../../../../web/src/shared/lib/creator-asset-contract";
 import type { SQL } from "drizzle-orm";
 
 // ── 공유 에셋(회원이 사이트에 올려 모두가 재사용) ──────────────────────

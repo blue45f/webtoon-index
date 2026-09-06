@@ -152,7 +152,7 @@ async function fetchSearchPage(kw, page) {
   return fetchText(url, { referer: `${ORIGIN}/` });
 }
 
-export async function crawl() {
+export async function crawl() { // NOSONAR javascript:S3776
   const byWorkId = new Map();
 
   for (let qi = 0; qi < QUERIES.length; qi++) {

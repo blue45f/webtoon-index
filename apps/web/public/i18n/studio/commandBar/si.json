@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "ඉක්මන් විධාන තීරුව",
+  "studio.commandBar.settings": "විධාන තීරු සැකසුම්",
+  "studio.commandBar.settingsDescription": "මෙනු තීරුවට පහළින් ඇති විධාන තීරුවේ තව් සැකැස්ම සහ දෘශ්‍යතාව වෙනස් කරන්න.",
+  "studio.commandBar.settingsTip": "වැඩිපුරම භාවිත කරන විධාන මුල් තව්වල තැබුවොත් ඉක්මනින්ම ළඟා විය හැකියි.",
+  "studio.commandBar.settingsClose": "විධාන තීරු සැකසුම් වසන්න",
+  "studio.commandBar.settingsStorageNote": "තව් සැකැස්ම මෙම බ්‍රවුසරයේ කාර්යාවකාශ සැකසුම්වල සුරැකේ.",
+  "studio.commandBar.showSlots": "විධාන තව් පෙන්වන්න",
+  "studio.commandBar.slot": "තව {index}",
+  "studio.commandBar.slotAria": "විධාන තව {index}",
+  "studio.commandBar.slotEmpty": "හිස් තව",
+  "studio.commandBar.resetDefaults": "සුපුරුදු සැකැස්මට යළි සකසන්න",
+  "studio.commandBar.command.undo": "පෙරසේ",
+  "studio.commandBar.command.redo": "යළි කරන්න",
+  "studio.commandBar.command.save": "කෙටුම්පත සුරකින්න",
+  "studio.commandBar.command.publish": "ප්‍රකාශ කරන්න",
+  "studio.commandBar.command.download": "වත්මන් පිටුව බාගන්න",
+  "studio.commandBar.command.export-open": "නිර්යාත විකල්ප",
+  "studio.commandBar.command.zoom-fit": "තිරයේ පළලට ගළපන්න",
+  "studio.commandBar.command.assets": "අච්චු සහ සම්පත්",
+  "studio.commandBar.command.bubbles": "කථන බුබුළ",
+  "studio.commandBar.command.project": "ව්‍යාපෘති මෙවලම්"
+}

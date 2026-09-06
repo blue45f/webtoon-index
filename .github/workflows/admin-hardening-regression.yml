@@ -4,7 +4,7 @@ on:
   pull_request:
     branches: [main]
     paths:
-      - 'src/domains/admin/**'
+      - 'apps/web/src/domains/admin/**'
       - 'apps/api/src/modules/admin/**'
       - 'scripts/seed/admin-qa*'
       - 'scripts/verify-admin-qa-live.mjs'
@@ -12,7 +12,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'src/domains/admin/**'
+      - 'apps/web/src/domains/admin/**'
       - 'apps/api/src/modules/admin/**'
       - 'scripts/seed/admin-qa*'
       - 'scripts/verify-admin-qa-live.mjs'
@@ -62,7 +62,7 @@ jobs:
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: >-
           pnpm exec eslint --max-warnings=0
-          src/domains/admin apps/api/src/modules/admin
+          apps/web/src/domains/admin apps/api/src/modules/admin
           scripts/seed/admin-qa-seed.mjs scripts/verify-admin-qa-live.mjs
       - name: Full frontend and API type checks
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
@@ -81,8 +81,8 @@ jobs:
       - name: Actual repository admin regression suite
         if: ${{ !cancelled() && steps.bootstrap.outcome == 'success' }}
         run: >-
-          pnpm exec vitest run src/domains/admin apps/api/src/modules/admin
-          lib/__tests__/admin-emails.test.ts lib/__tests__/admin-security.test.ts
+          pnpm exec vitest run apps/web/src/domains/admin apps/api/src/modules/admin
+          apps/web/src/shared/lib/__tests__/admin-emails.test.ts apps/web/src/shared/lib/__tests__/admin-security.test.ts
           --maxWorkers=2 --reporter=default --reporter=json
           --outputFile=test-results/admin-hardening/vitest.json
       - name: Verify isolated accounts and real session APIs

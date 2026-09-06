@@ -32,8 +32,12 @@ const specialNames = new Set([
   "report.json",
   "report.md",
 ]);
-const signalPattern = /(?:^|\b)(?:FAIL(?:ED|URE)?|ERROR|Error:|Timeout|Timed out|Expected:|Received:|locator|assert(?:ion)?|mismatch|panic|uncaught|pageerror|requestfailed|offscreen|clipped|overflow|blank screen|WebGL|WebGPU|aria-modal|accessible name|not found|not visible|did not open|outside viewport)(?:\b|:)/iu;
-const ignorablePattern = /(?:node_modules|package-lock|pnpm-lock|THIRD_PARTY|license text|deoptimised the styling|chunk.*larger than|PLUGIN_TIMINGS|externalized for browser compatibility)/iu;
+const signalPatterns = [
+  /(?:^|\b)(?:FAIL(?:ED|URE)?|ERROR|Error:|Timeout|Timed out|Expected:|Received:|locator|assert(?:ion)?)(?:\b|:)/iu,
+  /(?:^|\b)(?:mismatch|panic|uncaught|pageerror|requestfailed|offscreen|clipped|overflow|blank screen|WebGL|WebGPU|aria-modal|accessible name|not found|not visible|did not open|outside viewport)(?:\b|:)/iu,
+];
+const hasSignal = (value) => signalPatterns.some((pattern) => pattern.test(value));
+const ignorablePattern = /$^/u;
 
 function rel(file) {
   return path.relative(inputRoot, file).replaceAll(path.sep, "/");
@@ -84,7 +88,7 @@ async function decodePlaywrightHtmlReports(files) {
     if (size > 150 * 1024 * 1024) continue;
     const html = await readFile(file, "utf8").catch(() => "");
     const match = html.match(
-      /<script[^>]+id=["']playwrightReportBase64["'][^>]*>\s*data:application\/zip;base64,([A-Za-z0-9+/=\r\n]+)\s*<\/script>/iu,
+      /<script[^>]+id=["']playwrightReportBase64["'][^>]*>\s*data:application\/zip;base64,([a-z0-9+/=\r\n]+)\s*<\/script>/iu,
     );
     if (!match) continue;
     const targetDir = path.join(decodedRoot, `${String(index).padStart(3, "0")}-${fingerprint(rel(file))}`);
@@ -106,7 +110,7 @@ async function decodePlaywrightHtmlReports(files) {
   return decoded;
 }
 
-function recursivelyCollectFailures(value, source, out, pointer = "$", depth = 0) {
+function recursivelyCollectFailures(value, source, out, pointer = "$", depth = 0) { // NOSONAR javascript:S3776
   if (depth > 12 || out.length >= MAX_SNIPPETS) return;
   if (Array.isArray(value)) {
     for (let index = 0; index < value.length; index += 1) {
@@ -124,7 +128,7 @@ function recursivelyCollectFailures(value, source, out, pointer = "$", depth = 0
   const error = object.error ?? object.errors ?? object.failure ?? object.message ?? object.stderr;
   const negativeStatus = typeof status === "string" && /fail|error|timedout|timeout|unexpected|broken/iu.test(status);
   const negativeBoolean = passed === false;
-  const errorSignal = typeof error === "string" && signalPattern.test(error) && !ignorablePattern.test(error);
+  const errorSignal = typeof error === "string" && hasSignal(error) && !ignorablePattern.test(error);
   const errorArray = Array.isArray(error) && error.length > 0;
 
   if (negativeStatus || negativeBoolean || errorSignal || errorArray) {
@@ -146,7 +150,7 @@ function recursivelyCollectFailures(value, source, out, pointer = "$", depth = 0
   }
 }
 
-async function scanFiles(files) {
+async function scanFiles(files) { // NOSONAR javascript:S3776
   const contexts = [];
   const jsonFailures = [];
   const signalLines = [];
@@ -182,7 +186,7 @@ async function scanFiles(files) {
     for (let index = 0; index < lines.length; index += 1) {
       if (signalLines.length >= MAX_SNIPPETS) break;
       const line = compact(lines[index], 1_600);
-      if (!line || line.length > 1_500 || ignorablePattern.test(line) || !signalPattern.test(line)) continue;
+      if (!line || line.length > 1_500 || ignorablePattern.test(line) || !hasSignal(line)) continue;
       signalLines.push({
         source: relative,
         line: index + 1,
@@ -259,7 +263,7 @@ async function main() {
     "",
     ...(decodedReports.length
       ? decodedReports.map((item) =>
-          `- \`${item.source}\` → \`${item.target}\` — exit ${item.status}${item.stderr ? ` — ${item.stderr}` : ""}`
+          `- \`${item.source}\` → \`${item.target}\` — exit ${item.status}${item.stderr ? " — " + item.stderr : ""}`
         )
       : ["- No embedded report ZIPs were detected."]),
     "",

@@ -2,12 +2,12 @@ import { expect, test } from "@playwright/test";
 
 import {
   creatorMarketplaceJsonByteSize,
-} from "../lib/creator-marketplace-resource-contract";
+} from "../apps/web/src/shared/lib/creator-marketplace-resource-contract";
 
 import type {
   CreatorMarketplaceResourceKind,
   CreatorMarketplaceResourceRecord,
-} from "../lib/creator-marketplace-resource-contract";
+} from "../apps/web/src/shared/lib/creator-marketplace-resource-contract";
 
 /**
  * 창작 마켓 E2E 테스트 — 공개 라우트, 인터랙티브 프리뷰(브러시, 팔레트, 필터, 템플릿, 3D), 스튜디오 딥링크 연동을 철저히 검증한다.

@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Kiirkäsuriba",
+  "studio.commandBar.settings": "Käsuriba sätted",
+  "studio.commandBar.settingsDescription": "Muuda menüüriba all oleva käsuriba pesade paigutust ja nähtavust.",
+  "studio.commandBar.settingsTip": "Pane kõige sagedamini kasutatavad käsud esimestesse pesadesse, siis on need kõige kiiremini käepärast.",
+  "studio.commandBar.settingsClose": "Sulge käsuriba sätted",
+  "studio.commandBar.settingsStorageNote": "Pesade paigutus salvestatakse selle brauseri tööruumi sätetesse.",
+  "studio.commandBar.showSlots": "Kuva käsupesad",
+  "studio.commandBar.slot": "Pesa {index}",
+  "studio.commandBar.slotAria": "Käsupesa {index}",
+  "studio.commandBar.slotEmpty": "Tühi pesa",
+  "studio.commandBar.resetDefaults": "Lähtesta vaikepaigutusele",
+  "studio.commandBar.command.undo": "Võta tagasi",
+  "studio.commandBar.command.redo": "Tee uuesti",
+  "studio.commandBar.command.save": "Salvesta mustand",
+  "studio.commandBar.command.publish": "Avalda",
+  "studio.commandBar.command.download": "Laadi praegune leht alla",
+  "studio.commandBar.command.export-open": "Ekspordi valikud",
+  "studio.commandBar.command.zoom-fit": "Sobita ekraani laiusega",
+  "studio.commandBar.command.assets": "Mallid ja materjalid",
+  "studio.commandBar.command.bubbles": "Kõnemull",
+  "studio.commandBar.command.project": "Projekti tööriistad"
+}

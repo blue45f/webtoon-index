@@ -1,0 +1,8 @@
+{
+  "ranking.metric.views": "ビュー",
+  "ranking.why": "なぜ",
+  "ranking.breakdownTitle": "スコアの内訳",
+  "ranking.breakdownDescription": "軸の重みとタイトル固有の正規化を使用して計算されます。",
+  "ranking.totalScore": "合計スコア",
+  "ranking.detailTitle": "スコアの内訳を表示する"
+}

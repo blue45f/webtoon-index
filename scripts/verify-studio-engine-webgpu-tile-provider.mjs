@@ -100,7 +100,7 @@ function persistVisualEvidence(result) {
   );
 }
 
-function validateSuccess(result, diagnostics) {
+function validateSuccess(result, diagnostics) { // NOSONAR javascript:S3776
   const failures = [];
   if (result.backend !== "webgpu-rgba16float-tile-provider-v1") {
     failures.push(`unexpected backend: ${result.backend}`);

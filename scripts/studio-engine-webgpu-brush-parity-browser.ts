@@ -26,22 +26,22 @@ import {
   type StudioEngineWebGpuBrushReceipt,
   type StudioEngineWebGpuBrushRuntime,
   type StudioEngineWebGpuBrushSurface,
-} from "../src/domains/creator/render/studio-engine-webgpu-brush-runtime";
+} from "../apps/web/src/domains/creator/render/studio-engine-webgpu-brush-runtime";
 import {
   parseStudioCanonicalBrushPlan,
   type StudioCanonicalBrushAffineTransform,
-} from "../src/domains/creator/studio-canonical-brush-plan";
+} from "../apps/web/src/domains/creator/studio-canonical-brush-plan";
 import {
   lowerStudioCanonicalBrushPlanToWebGpuDabs,
   type StudioCanonicalWebGpuAnalyticDab,
   type StudioCanonicalWebGpuAnalyticShape,
   type StudioCanonicalWebGpuPorterDuff,
-} from "../src/domains/creator/studio-canonical-brush-webgpu-lowering";
+} from "../apps/web/src/domains/creator/studio-canonical-brush-webgpu-lowering";
 
 import type {
   StudioGpuDab,
   StudioGpuDabRenderUpdate,
-} from "../src/domains/creator/render/studio-webgpu-dab-plan-contract";
+} from "../apps/web/src/domains/creator/render/studio-webgpu-dab-plan-contract";
 
 const WIDTH = 96;
 const HEIGHT = 72;

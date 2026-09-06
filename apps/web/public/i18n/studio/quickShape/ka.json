@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "ჭკვიანი ფორმები",
+  "studio.quickShape.description.active": "დროულად დახაზეთ ხაზები, კვადრატები, წრეები და სამკუთხედები. თუ გაუშვი, თავისით მოწესრიგდება.",
+  "studio.quickShape.description.inactive": "კარგია მისი ჩაწერა. თუ ჩართავთ, თქვენი ხელით ნახატი დახვეწილი გახდება.",
+  "studio.quickShape.toggleHint": "იმ მომენტში, როცა კალმით უხეშად დახატულ ფორმას უშვებთ, ის ზუსტ ფორმას იღებს. მაშინაც კი, თუ ხატვისას შეაჩერებთ, გადახედვა გამოჩნდება.",
+  "studio.quickShape.toggleAria.on": "ჭკვიანი ფორმები ჩართულია",
+  "studio.quickShape.toggleAria.off": "ჭკვიანი ფორმები გამორთულია",
+  "studio.quickShape.matchedSuffix": " ვგრძნობ. ეს დასტურდება, როცა ხელს გავუშვი.",
+  "studio.quickShape.emptyStatus": "დახაზეთ ფორმა და გაუშვით, ან უბრალოდ დარჩით ბოლოს",
+  "studio.quickShape.openTutorial": "უყურეთ ჭკვიანი ფორმების გაკვეთილს",
+  "studio.quickShape.notice": "დახაზეთ ჭკვიანი ფორმები, ხაზები, წრეები, კვადრატები და ა.შ."
+}

@@ -11,10 +11,10 @@ import type {
 import type {
   StudioProceduralArtisticBrushArtifact,
   StudioProceduralArtisticBrushParameter,
-} from "../src/domains/creator/studio-procedural-artistic-brush-provider";
+} from "../apps/web/src/domains/creator/studio-procedural-artistic-brush-provider";
 import type {
   StudioProceduralArtisticBrushWorkerRequest,
-} from "../src/domains/creator/studio-procedural-artistic-brush-worker-protocol";
+} from "../apps/web/src/domains/creator/studio-procedural-artistic-brush-worker-protocol";
 
 
 export const STUDIO_P5_BRUSH_REAL_RUNTIME_ENGINE_EPOCH = 9_501;

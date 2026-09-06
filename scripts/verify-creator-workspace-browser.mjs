@@ -36,8 +36,8 @@ try {
       const require=(request)=>{const parts=name.split('/');parts.pop();for(const part of request.split('/')){if(part==='..')parts.pop();else if(part!=='.')parts.push(part);}return load(parts.join('/')+'.js');};
       new Function('require','module','exports',sources[name])(require,mod,mod.exports);return mod.exports;
     }
-    globalThis.testLibrary=load('lib/creator-workspace-persistence.js');
-    globalThis.contracts=load('lib/creator-resources.js');
+    globalThis.testLibrary=load('apps/web/src/shared/lib/creator-workspace-persistence.js');
+    globalThis.contracts=load('apps/web/src/shared/lib/creator-resources.js');
     globalThis.cases=[...load('tests/creator-resources-cases.js').creatorResourceCases,...load('tests/creator-resource-workflow-cases.js').creatorResourceWorkflowCases,...load('tests/creator-workspace-persistence-cases.js').creatorWorkspacePersistenceCases];
     globalThis.store=globalThis.testLibrary.createCreatorWorkspaceStorage({storage:()=>localStorage,withLock:globalThis.testLibrary.browserWorkspaceLock(navigator.locks)});`;
   const html = `<!doctype html><meta charset="utf-8"><title>Creator workspace test harness</title><h1>Storage and Web Locks verification</h1><p>This is an isolated test harness, not the ToonStudio UI.</p><script>${boot}</script>`;

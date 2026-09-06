@@ -9,11 +9,11 @@ import {
   type StudioSqliteApiHandle,
   type StudioSqliteDatabaseHandle,
   type StudioSqlitePoolUtilHandle,
-} from "../../../src/domains/creator/studio-local-database";
+} from "../../../apps/web/src/domains/creator/studio-local-database";
 import {
   acquireStudioLocalDatabase,
   closeStudioLocalDatabaseRuntime,
-} from "../../../src/domains/creator/studio-local-database-runtime";
+} from "../../../apps/web/src/domains/creator/studio-local-database-runtime";
 import {
   createStudioVrmAssetSqliteOpfsRepository,
   STUDIO_VRM_ASSET_OPFS_ROOT,
@@ -23,11 +23,11 @@ import {
   type SaveStudioVrmModelAssetInput,
   type StudioVrmAssetHash,
   type StudioVrmAssetSqliteOpfsRepository,
-} from "../../../src/domains/creator/vrm/studio-vrm-asset-sqlite-opfs-repository";
+} from "../../../apps/web/src/domains/creator/vrm/studio-vrm-asset-sqlite-opfs-repository";
 import {
   createStudioVrmTexturePaintArtifact,
   type StudioVrmTexturePaintArtifactMetadata,
-} from "../../../src/domains/creator/vrm/studio-vrm-texture-paint-artifact";
+} from "../../../apps/web/src/domains/creator/vrm/studio-vrm-texture-paint-artifact";
 
 const REPORT_SCHEMA_VERSION = 1;
 const SMALL_MODEL_BYTES = 1 * 1024 * 1024;

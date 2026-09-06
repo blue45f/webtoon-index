@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "ထူးခြားချက် ကျူတိုရီရယ်",
+  "studio.hub.subtitle": "ဝန်ထုပ်ဝန်ပိုးမရှိဘဲ တစ်ကြိမ်လျှင် လုပ်ဆောင်မှုတစ်ခု။ {done}/{total} ကို ကြည့်ခဲ့တယ်။",
+  "studio.hub.progressAriaLabel": "ကျူတိုရီရယ်တိုးတက်မှု",
+  "studio.hub.listAriaLabel": "ထူးခြားချက်စာရင်း",
+  "studio.hub.checked": "ကြည့်ပါ။",
+  "studio.hub.prev": "အရင်",
+  "studio.hub.next": "နောက်တစ်ခု",
+  "studio.hub.markComplete": "ပြီးကြောင်း အမှတ်အသားပြုပါ။",
+  "studio.hub.completed": "ပြီးသွားပြီ",
+  "studio.hub.tryLabelDefault": "လိုက်လျှောက်ပါ။",
+  "studio.hub.stepAriaPrefix": "ခြေလှမ်း"
+}

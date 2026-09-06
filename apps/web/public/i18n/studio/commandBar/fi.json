@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Pikakomentopalkki",
+  "studio.commandBar.settings": "Komentopalkin asetukset",
+  "studio.commandBar.settingsDescription": "Muuta valikkorivin alla olevan komentopalkin paikkajärjestystä ja näkyvyyttä.",
+  "studio.commandBar.settingsTip": "Sijoita eniten käyttämäsi komennot ensimmäisiin paikkoihin, niin ne ovat nopeimmin ulottuvilla.",
+  "studio.commandBar.settingsClose": "Sulje komentopalkin asetukset",
+  "studio.commandBar.settingsStorageNote": "Paikkajärjestys tallennetaan tämän selaimen työtila-asetuksiin.",
+  "studio.commandBar.showSlots": "Näytä komentopaikat",
+  "studio.commandBar.slot": "Paikka {index}",
+  "studio.commandBar.slotAria": "Komentopaikka {index}",
+  "studio.commandBar.slotEmpty": "Tyhjä paikka",
+  "studio.commandBar.resetDefaults": "Palauta oletusjärjestys",
+  "studio.commandBar.command.undo": "Kumoa",
+  "studio.commandBar.command.redo": "Tee uudelleen",
+  "studio.commandBar.command.save": "Tallenna luonnos",
+  "studio.commandBar.command.publish": "Julkaise",
+  "studio.commandBar.command.download": "Lataa nykyinen sivu",
+  "studio.commandBar.command.export-open": "Vientiasetukset",
+  "studio.commandBar.command.zoom-fit": "Sovita näytön leveyteen",
+  "studio.commandBar.command.assets": "Mallit ja materiaalit",
+  "studio.commandBar.command.bubbles": "Puhekupla",
+  "studio.commandBar.command.project": "Projektityökalut"
+}

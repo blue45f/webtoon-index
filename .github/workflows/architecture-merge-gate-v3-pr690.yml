@@ -79,14 +79,14 @@ jobs:
           import sys
 
           main = sys.argv[1]
-          host = Path("src/domains/creator/StudioCuttoonEditorHost.tsx")
-          ratchet = Path("src/domains/creator/studio-host-architecture-ratchet.test.ts")
+          host = Path("apps/web/src/domains/creator/StudioCuttoonEditorHost.tsx")
+          ratchet = Path("apps/web/src/domains/creator/studio-host-architecture-ratchet.test.ts")
           if not host.exists() or not ratchet.exists():
               raise SystemExit("required Studio architecture files are missing")
           candidate = len(host.read_text(encoding="utf-8").splitlines())
           main_lines = len(
               subprocess.check_output(
-                  ["git", "show", f"{main}:src/domains/creator/StudioCuttoonEditorHost.tsx"],
+                  ["git", "show", f"{main}:apps/web/src/domains/creator/StudioCuttoonEditorHost.tsx"],
                   text=True,
               ).splitlines()
           )
@@ -106,9 +106,9 @@ jobs:
           ratchet.write_text(source, encoding="utf-8")
 
           limits = {
-              "src/app/routes/AppRouter.tsx": 220,
-              "src/domains/creator/studio-router/StudioRouter.tsx": 200,
-              "src/domains/creator/studio-host-architecture-ratchet.test.ts": 2200,
+              "apps/web/src/app/routes/AppRouter.tsx": 220,
+              "apps/web/src/domains/creator/studio-router/StudioRouter.tsx": 200,
+              "apps/web/src/domains/creator/studio-host-architecture-ratchet.test.ts": 2200,
               "scripts/validate-architecture.mjs": 2400,
           }
           failures = []
@@ -125,7 +125,7 @@ jobs:
           print(f"Studio host main={main_lines}, candidate={candidate}")
           PY
           if ! git diff --quiet; then
-            git add src/domains/creator/studio-host-architecture-ratchet.test.ts
+            git add apps/web/src/domains/creator/studio-host-architecture-ratchet.test.ts
             git commit -m "test(architecture): ratchet synchronized studio host size"
           fi
           echo "main_sha=$MAIN_SHA" >> "$GITHUB_OUTPUT"
@@ -159,10 +159,10 @@ jobs:
       - name: Focused architecture and route regressions
         run: |
           pnpm exec vitest run \
-            src/domains/creator/studio-host-architecture-ratchet.test.ts \
-            src/domains/creator/studio-router/StudioRouter.canonical-redirect.test.tsx \
-            src/domains/creator/studio-router/StudioDocumentRuntimeBoundary.test.tsx \
-            src/app/routes/app-route-title-ownership.test.ts \
+            apps/web/src/domains/creator/studio-host-architecture-ratchet.test.ts \
+            apps/web/src/domains/creator/studio-router/StudioRouter.canonical-redirect.test.tsx \
+            apps/web/src/domains/creator/studio-router/StudioDocumentRuntimeBoundary.test.tsx \
+            apps/web/src/app/routes/app-route-title-ownership.test.ts \
             --passWithNoTests
 
       - name: Production build and Studio bundle budget

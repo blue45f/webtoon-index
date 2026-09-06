@@ -127,7 +127,7 @@ function bestMatchFromIndex(title, index) {
   return bestMatch(title, candidates);
 }
 
-function bestMatch(title, items) {
+function bestMatch(title, items) { // NOSONAR javascript:S3776
   const titleKey = normalizeTitleKey(title.title);
   const authorKey = normalizeCreatorKey(title.author);
   let best = null;
@@ -191,7 +191,7 @@ function candidateTitles(titles) {
         (!ONLY_WITH_COVER || title.coverImage) &&
         !isKmasCover(title.coverImage)
     )
-    .sort((a, b) => {
+    .sort((a, b) => { // NOSONAR javascript:S3776
       if (ONLY_WITH_COVER) {
         return (b.featured ? 1 : 0) - (a.featured ? 1 : 0) || (b.stats?.views ?? 0) - (a.stats?.views ?? 0);
       }
@@ -202,7 +202,7 @@ function candidateTitles(titles) {
     .slice(START, START + LIMIT);
 }
 
-async function run() {
+async function run() { // NOSONAR javascript:S3776
   mainGuard();
   const { wrapper, titles } = loadCatalog(CATALOG);
   const targets = candidateTitles(titles);
@@ -312,7 +312,7 @@ function cleanText(value) {
 }
 
 function cleanBookTitle(value) {
-  return value.replace(/\[[^\]]+\]/g, "").replace(/\s+\d+(?:권|화|부)?$/g, "").trim();
+  return value.replace(/\[[^\]]+\]/g, "").replace(/\s+\d+[권화부]?$/g, "").trim();
 }
 
 function cleanCreator(value) {

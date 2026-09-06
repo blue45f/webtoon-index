@@ -15,7 +15,7 @@ import {
   settlePigmentOnPaper,
   type PaperGrainKind,
   type PaperHeightField,
-} from "../../src/domains/creator/brush/studio-paper-texture";
+} from "../../apps/web/src/domains/creator/brush/studio-paper-texture";
 import { GRAIN_BANDS, grainMetrics } from "../benchmarks/harness/brush-texture-lab";
 
 /**

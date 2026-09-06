@@ -1,0 +1,17 @@
+{
+  "home.hero.eyebrow": "WEBTOON × WEBNOVEL",
+  "home.hero.titleLine1": "흩어진 이야기를,",
+  "home.hero.titleShimmer": "한 권의 색인",
+  "home.hero.titleSuffix": "으로.",
+  "home.hero.description": "네이버 웹툰·시리즈와 카카오웹툰을 가로질러 검색하고, 실시간 신호와 독자 취향을 함께 읽어 무엇을 볼지 빠르게 좁힙니다.",
+  "home.hero.searchButton": "작품·작가·태그 검색",
+  "home.hero.rankingButton": "통합 랭킹 보기",
+  "home.hero.studioLink": "창작 스튜디오",
+  "home.hero.createLink": "창작 게시판",
+  "home.hero.stats.titles": "수록 작품",
+  "home.hero.stats.platforms": "연재 플랫폼",
+  "home.hero.stats.genres": "장르 스펙트럼",
+  "home.hero.stats.reviews": "독자 리뷰",
+  "home.loadError": "홈 데이터를 불러오지 못했습니다.",
+  "home.creatorTitle": "아이디어를 첫 장면으로"
+}

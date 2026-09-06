@@ -3,11 +3,11 @@ on:
   pull_request:
     branches: [main]
     paths:
-      - 'src/domains/creator/promo/**'
-      - 'src/app/routes/groups/creator.routes.tsx'
-      - 'src/domains/creator/ai/StudioAiProductionLaunchpad.tsx'
+      - 'apps/web/src/domains/creator/promo/**'
+      - 'apps/web/src/app/routes/groups/creator.routes.tsx'
+      - 'apps/web/src/domains/creator/ai/StudioAiProductionLaunchpad.tsx'
       - 'e2e/studio-promo.spec.ts'
-      - 'tools/browser-harnesses/promo-e2e.html'
+      - 'apps/web/tools/browser-harnesses/promo-e2e.html'
       - 'tools/verify-studio-promo-recording.mjs'
       - 'tools/verify-studio-promo-preview.mjs'
       - 'tools/verify-studio-promo-output.py'
@@ -37,8 +37,8 @@ jobs:
           node tools/verify-studio-promo-recording.mjs
           node tools/verify-studio-promo-preview.mjs
           python3 tools/verify-studio-promo-output.py --self-test
-      - run: pnpm exec vitest run src/domains/creator/promo/promo-model.test.ts
-      - run: pnpm exec eslint src/domains/creator/promo src/app/routes/groups/creator.routes.tsx src/domains/creator/ai/StudioAiProductionLaunchpad.tsx e2e/studio-promo.spec.ts --max-warnings=0
+      - run: pnpm exec vitest run apps/web/src/domains/creator/promo/promo-model.test.ts
+      - run: pnpm exec eslint apps/web/src/domains/creator/promo apps/web/src/app/routes/groups/creator.routes.tsx apps/web/src/domains/creator/ai/StudioAiProductionLaunchpad.tsx e2e/studio-promo.spec.ts --max-warnings=0
       - run: pnpm exec playwright install --with-deps chromium
       - run: sudo apt-get update && sudo apt-get install -y fonts-noto-cjk ffmpeg
       - run: pnpm exec playwright test e2e/studio-promo.spec.ts --project=chromium

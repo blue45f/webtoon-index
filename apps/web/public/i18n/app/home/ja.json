@@ -1,0 +1,17 @@
+{
+  "home.hero.titleSuffix": "。",
+  "home.hero.stats.titles": "タイトル",
+  "home.hero.titleShimmer": "単一のインデックス",
+  "home.hero.stats.reviews": "読者レビュー",
+  "home.hero.stats.platforms": "出版プラットフォーム",
+  "home.hero.studioLink": "クリエイタースタジオ",
+  "home.hero.stats.genres": "ジャンルの範囲",
+  "home.hero.createLink": "クリエイターボード",
+  "home.hero.rankingButton": "統一ランキングを見る",
+  "home.hero.titleLine1": "散りばめられた物語、",
+  "home.hero.eyebrow": "ウェブトゥーン×ウェブノベル",
+  "home.hero.searchButton": "タイトル、作成者、タグを検索",
+  "home.hero.description": "Naver Webtoon、シリーズ、Kakao Webtoon を横断して検索し、リアルタイムのシグナルと読者の好みを使用して読む内容をすばやく絞り込みます。",
+  "home.loadError": "ホームデータを読み込めませんでした。",
+  "home.creatorTitle": "From an idea to your first scene"
+}

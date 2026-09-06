@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "내 글꼴",
+  "studio.customFonts.importButton": "파일에서 가져오기",
+  "studio.customFonts.importing": "확인 중…",
+  "studio.customFonts.importAria": "글꼴 파일 가져오기",
+  "studio.customFonts.storageAria": "글꼴 보관함 사용량",
+  "studio.customFonts.emptyTitle": "아직 담은 글꼴이 없어요",
+  "studio.customFonts.unknownFileName": "파일 이름 없음",
+  "studio.customFonts.apply": "적용",
+  "studio.customFonts.applyToText": "선택한 글자에 이 글꼴 적용",
+  "studio.customFonts.selectTextFirst": "먼저 글자나 말풍선을 선택하세요",
+  "studio.customFonts.delete": "글꼴 삭제"
+}

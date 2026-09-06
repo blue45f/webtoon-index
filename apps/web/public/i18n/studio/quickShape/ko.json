@@ -1,0 +1,12 @@
+{
+  "studio.quickShape.title": "스마트 도형",
+  "studio.quickShape.description.active": "선·네모·원·삼각을 느긋하게 그어요. 손을 떼면 알아서 단정해집니다.",
+  "studio.quickShape.description.inactive": "끄적여도 괜찮아요. 켜 두면 손그림이 깔끔한 도형으로 다듬어집니다.",
+  "studio.quickShape.toggleHint": "펜으로 대충 그린 도형을 손을 떼는 순간 정확한 도형으로 스냅합니다. 그리는 중 잠시 멈춰도 미리보기가 뜹니다",
+  "studio.quickShape.toggleAria.on": "스마트 도형 켜짐",
+  "studio.quickShape.toggleAria.off": "스마트 도형 꺼짐",
+  "studio.quickShape.matchedSuffix": " 느낌이 나요 · 손을 떼면 확정",
+  "studio.quickShape.emptyStatus": "도형을 그리고 손을 떼거나, 끝에서 잠깐만 머물러 보세요",
+  "studio.quickShape.openTutorial": "스마트 도형 튜토리얼 보기",
+  "studio.quickShape.notice": "스마트 도형 · 선·원·네모 등을 그리고 손을 떼면 다듬어요 (잠시 멈추면 미리보기)"
+}

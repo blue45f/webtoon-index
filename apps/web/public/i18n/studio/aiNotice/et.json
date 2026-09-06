@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Generatiivne AI pildijuhend",
+  "studio.aiNotice.description": "See funktsioon loob pilte generatiivse AI (OpenAI) abil. Loodud tulemustel kuvatakse AI märgid.",
+  "studio.aiNotice.ruleCopyright": "Me ei loo teiste inimeste töid, tegelasi ega päris inimeste nägusid.",
+  "studio.aiNotice.ruleAccuracy": "AI tulemused võivad olla ebatäpsed või erineda kavandatust.",
+  "studio.aiNotice.ruleResponsibility": "Teie vastutate loodud piltide kasutamise eest.",
+  "studio.aiNotice.cancel": "Tühista",
+  "studio.aiNotice.confirm": "Saan aru, loon"
+}

@@ -3,10 +3,10 @@ name: Marketplace authoring
 on:
   pull_request:
     paths:
-      - "lib/creator-marketplace-authoring-workshop*"
-      - "src/domains/market/**"
-      - "src/domains/creator/MarketplaceBrush*"
-      - "src/domains/creator/**/StudioBrushStudio.tsx"
+      - "apps/web/src/shared/lib/creator-marketplace-authoring-workshop*"
+      - "apps/web/src/domains/market/**"
+      - "apps/web/src/domains/creator/MarketplaceBrush*"
+      - "apps/web/src/domains/creator/**/StudioBrushStudio.tsx"
       - "e2e/marketplace-authoring-*.spec.ts"
       - "marketplace-benchmark/**"
       - ".github/workflows/marketplace-authoring.yml"
@@ -14,10 +14,10 @@ on:
     branches:
       - main
     paths:
-      - "lib/creator-marketplace-authoring-workshop*"
-      - "src/domains/market/**"
-      - "src/domains/creator/MarketplaceBrush*"
-      - "src/domains/creator/**/StudioBrushStudio.tsx"
+      - "apps/web/src/shared/lib/creator-marketplace-authoring-workshop*"
+      - "apps/web/src/domains/market/**"
+      - "apps/web/src/domains/creator/MarketplaceBrush*"
+      - "apps/web/src/domains/creator/**/StudioBrushStudio.tsx"
       - "e2e/marketplace-authoring-*.spec.ts"
       - ".github/workflows/marketplace-authoring.yml"
   workflow_dispatch:
@@ -49,9 +49,9 @@ jobs:
       - name: Authoring contract and component tests
         run: >-
           pnpm exec vitest run
-          lib/creator-marketplace-authoring-workshop.test.ts
-          src/domains/market/components/MarketplaceAuthoringWorkshop.test.tsx
-          src/domains/market/components/MarketplaceBrushRecipeAccelerator.test.tsx
+          apps/web/src/shared/lib/creator-marketplace-authoring-workshop.test.ts
+          apps/web/src/domains/market/components/MarketplaceAuthoringWorkshop.test.tsx
+          apps/web/src/domains/market/components/MarketplaceBrushRecipeAccelerator.test.tsx
           --reporter=verbose
       - run: pnpm exec tsc -p tsconfig.json --noEmit
       - run: pnpm run lint:quick

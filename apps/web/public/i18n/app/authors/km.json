@@ -1,0 +1,16 @@
+{
+  "authors.eyebrow": "AUTHOR DIRECTORY",
+  "authors.title": "Authors",
+  "authors.desc": "Authors ranked by number of works. Tap an author to see their titles, ratings, and fan cafe in one place.",
+  "authors.search": "Search author name",
+  "authors.error": "Couldn't load the author list.",
+  "authors.empty": " — no matching author.",
+  "authors.allOf": "of",
+  "authors.topOf": "· top",
+  "authors.people": "",
+  "authors.works": " works",
+  "authors.views": "views",
+  "authors.pencafe": "Creator fan cafe",
+  "authors.stats": "Top {shown} out of {total} authors",
+  "authors.noName": "Creator"
+}

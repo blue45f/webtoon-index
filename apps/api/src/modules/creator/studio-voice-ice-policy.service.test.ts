@@ -6,7 +6,7 @@ import {
 } from "@nestjs/common";
 import { describe, expect, it, vi } from "vitest";
 
-import { StudioVoiceIcePolicyResponseSchema } from "../../../../../lib/studio-voice-ice-policy-contract";
+import { StudioVoiceIcePolicyResponseSchema } from "../../../../web/src/shared/lib/studio-voice-ice-policy-contract";
 
 import { CreatorService } from "./creator.service";
 import {

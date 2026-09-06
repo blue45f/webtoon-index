@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Панель быстрых команд",
+  "studio.commandBar.settings": "Настройки панели команд",
+  "studio.commandBar.settingsDescription": "Измените расположение слотов и видимость панели команд под строкой меню.",
+  "studio.commandBar.settingsTip": "Поместите самые нужные команды в первые слоты — до них рука дотянется быстрее всего.",
+  "studio.commandBar.settingsClose": "Закрыть настройки панели команд",
+  "studio.commandBar.settingsStorageNote": "Расположение слотов сохраняется в настройках рабочего пространства этого браузера.",
+  "studio.commandBar.showSlots": "Показать слоты команд",
+  "studio.commandBar.slot": "Слот {index}",
+  "studio.commandBar.slotAria": "Слот команды {index}",
+  "studio.commandBar.slotEmpty": "Пустой слот",
+  "studio.commandBar.resetDefaults": "Вернуть расположение по умолчанию",
+  "studio.commandBar.command.undo": "Отменить",
+  "studio.commandBar.command.redo": "Повторить",
+  "studio.commandBar.command.save": "Сохранить черновик",
+  "studio.commandBar.command.publish": "Опубликовать",
+  "studio.commandBar.command.download": "Скачать текущую страницу",
+  "studio.commandBar.command.export-open": "Параметры экспорта",
+  "studio.commandBar.command.zoom-fit": "По ширине экрана",
+  "studio.commandBar.command.assets": "Шаблоны и ресурсы",
+  "studio.commandBar.command.bubbles": "Речевое облачко",
+  "studio.commandBar.command.project": "Инструменты проекта"
+}

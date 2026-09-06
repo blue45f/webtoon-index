@@ -5,26 +5,26 @@ on:
     branches:
       - feat/webgpu-brush-phase2-sparse-tiles-20260904
     paths:
-      - "src/domains/creator/render/studio-webgpu-dab-tile-binning.ts"
-      - "src/domains/creator/render/studio-webgpu-dab-tile-binning.test.ts"
-      - "src/domains/creator/render/studio-webgpu-sparse-tile-atlas.ts"
-      - "src/domains/creator/render/studio-webgpu-sparse-tile-atlas.test.ts"
-      - "src/domains/creator/render/studio-webgpu-sparse-brush-frame.ts"
-      - "src/domains/creator/render/studio-webgpu-sparse-brush-frame.test.ts"
-      - "src/domains/creator/render/studio-webgpu-sparse-brush-atlas-runtime.ts"
-      - "src/domains/creator/render/studio-webgpu-sparse-brush-atlas-runtime.test.ts"
+      - "apps/web/src/domains/creator/render/studio-webgpu-dab-tile-binning.ts"
+      - "apps/web/src/domains/creator/render/studio-webgpu-dab-tile-binning.test.ts"
+      - "apps/web/src/domains/creator/render/studio-webgpu-sparse-tile-atlas.ts"
+      - "apps/web/src/domains/creator/render/studio-webgpu-sparse-tile-atlas.test.ts"
+      - "apps/web/src/domains/creator/render/studio-webgpu-sparse-brush-frame.ts"
+      - "apps/web/src/domains/creator/render/studio-webgpu-sparse-brush-frame.test.ts"
+      - "apps/web/src/domains/creator/render/studio-webgpu-sparse-brush-atlas-runtime.ts"
+      - "apps/web/src/domains/creator/render/studio-webgpu-sparse-brush-atlas-runtime.test.ts"
       - "scripts/studio-webgpu-phase2-topology-benchmark.mts"
       - ".github/workflows/webgpu-brush-phase2.yml"
   pull_request:
     paths:
-      - "src/domains/creator/render/studio-webgpu-dab-tile-binning.ts"
-      - "src/domains/creator/render/studio-webgpu-dab-tile-binning.test.ts"
-      - "src/domains/creator/render/studio-webgpu-sparse-tile-atlas.ts"
-      - "src/domains/creator/render/studio-webgpu-sparse-tile-atlas.test.ts"
-      - "src/domains/creator/render/studio-webgpu-sparse-brush-frame.ts"
-      - "src/domains/creator/render/studio-webgpu-sparse-brush-frame.test.ts"
-      - "src/domains/creator/render/studio-webgpu-sparse-brush-atlas-runtime.ts"
-      - "src/domains/creator/render/studio-webgpu-sparse-brush-atlas-runtime.test.ts"
+      - "apps/web/src/domains/creator/render/studio-webgpu-dab-tile-binning.ts"
+      - "apps/web/src/domains/creator/render/studio-webgpu-dab-tile-binning.test.ts"
+      - "apps/web/src/domains/creator/render/studio-webgpu-sparse-tile-atlas.ts"
+      - "apps/web/src/domains/creator/render/studio-webgpu-sparse-tile-atlas.test.ts"
+      - "apps/web/src/domains/creator/render/studio-webgpu-sparse-brush-frame.ts"
+      - "apps/web/src/domains/creator/render/studio-webgpu-sparse-brush-frame.test.ts"
+      - "apps/web/src/domains/creator/render/studio-webgpu-sparse-brush-atlas-runtime.ts"
+      - "apps/web/src/domains/creator/render/studio-webgpu-sparse-brush-atlas-runtime.test.ts"
       - "scripts/studio-webgpu-phase2-topology-benchmark.mts"
       - ".github/workflows/webgpu-brush-phase2.yml"
   workflow_dispatch:
@@ -63,22 +63,22 @@ jobs:
       - name: Focused unit tests
         run: >-
           pnpm exec vitest run
-          src/domains/creator/render/studio-webgpu-dab-tile-binning.test.ts
-          src/domains/creator/render/studio-webgpu-sparse-tile-atlas.test.ts
-          src/domains/creator/render/studio-webgpu-sparse-brush-frame.test.ts
-          src/domains/creator/render/studio-webgpu-sparse-brush-atlas-runtime.test.ts
+          apps/web/src/domains/creator/render/studio-webgpu-dab-tile-binning.test.ts
+          apps/web/src/domains/creator/render/studio-webgpu-sparse-tile-atlas.test.ts
+          apps/web/src/domains/creator/render/studio-webgpu-sparse-brush-frame.test.ts
+          apps/web/src/domains/creator/render/studio-webgpu-sparse-brush-atlas-runtime.test.ts
 
       - name: Focused lint
         run: >-
           pnpm exec eslint --max-warnings=0
-          src/domains/creator/render/studio-webgpu-dab-tile-binning.ts
-          src/domains/creator/render/studio-webgpu-dab-tile-binning.test.ts
-          src/domains/creator/render/studio-webgpu-sparse-tile-atlas.ts
-          src/domains/creator/render/studio-webgpu-sparse-tile-atlas.test.ts
-          src/domains/creator/render/studio-webgpu-sparse-brush-frame.ts
-          src/domains/creator/render/studio-webgpu-sparse-brush-frame.test.ts
-          src/domains/creator/render/studio-webgpu-sparse-brush-atlas-runtime.ts
-          src/domains/creator/render/studio-webgpu-sparse-brush-atlas-runtime.test.ts
+          apps/web/src/domains/creator/render/studio-webgpu-dab-tile-binning.ts
+          apps/web/src/domains/creator/render/studio-webgpu-dab-tile-binning.test.ts
+          apps/web/src/domains/creator/render/studio-webgpu-sparse-tile-atlas.ts
+          apps/web/src/domains/creator/render/studio-webgpu-sparse-tile-atlas.test.ts
+          apps/web/src/domains/creator/render/studio-webgpu-sparse-brush-frame.ts
+          apps/web/src/domains/creator/render/studio-webgpu-sparse-brush-frame.test.ts
+          apps/web/src/domains/creator/render/studio-webgpu-sparse-brush-atlas-runtime.ts
+          apps/web/src/domains/creator/render/studio-webgpu-sparse-brush-atlas-runtime.test.ts
           scripts/studio-webgpu-phase2-topology-benchmark.mts
 
       - name: Typecheck

@@ -18,17 +18,17 @@ import {
   type StudioEngineWebGpuBrushReceipt,
   type StudioEngineWebGpuBrushRuntime,
   type StudioEngineWebGpuBrushSurface,
-} from "../src/domains/creator/render/studio-engine-webgpu-brush-runtime";
+} from "../apps/web/src/domains/creator/render/studio-engine-webgpu-brush-runtime";
 import {
   resolveStudioProfessionalBristleDynamics,
   type StudioProfessionalBristleResolveResult,
-} from "../src/domains/creator/studio-professional-bristle-dynamics";
+} from "../apps/web/src/domains/creator/studio-professional-bristle-dynamics";
 import {
   lowerStudioProfessionalBristleToWebGpu,
   STUDIO_PROFESSIONAL_BRISTLE_WEBGPU_EXTENSION_V1,
   type StudioProfessionalBristleWebGpuCapabilityReceipt,
   type StudioProfessionalBristleWebGpuLoweringResult,
-} from "../src/domains/creator/studio-professional-bristle-webgpu-lowering";
+} from "../apps/web/src/domains/creator/studio-professional-bristle-webgpu-lowering";
 
 const WIDTH = 128;
 const HEIGHT = 96;

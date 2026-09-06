@@ -4,18 +4,18 @@ on:
   pull_request:
     branches: [main]
     paths:
-      - 'src/domains/creator/studio-smudge-worker-*.ts'
-      - 'src/domains/creator/studio-retouch-worker-*.ts'
-      - 'src/domains/creator/studio-raster-worker-*.ts'
-      - 'src/domains/creator/studio-abortable-serial-queue.ts'
+      - 'apps/web/src/domains/creator/studio-smudge-worker-*.ts'
+      - 'apps/web/src/domains/creator/studio-retouch-worker-*.ts'
+      - 'apps/web/src/domains/creator/studio-raster-worker-*.ts'
+      - 'apps/web/src/domains/creator/studio-abortable-serial-queue.ts'
       - '.github/workflows/studio-raster-snapshot-stability.yml'
   push:
     branches: [main]
     paths:
-      - 'src/domains/creator/studio-smudge-worker-*.ts'
-      - 'src/domains/creator/studio-retouch-worker-*.ts'
-      - 'src/domains/creator/studio-raster-worker-*.ts'
-      - 'src/domains/creator/studio-abortable-serial-queue.ts'
+      - 'apps/web/src/domains/creator/studio-smudge-worker-*.ts'
+      - 'apps/web/src/domains/creator/studio-retouch-worker-*.ts'
+      - 'apps/web/src/domains/creator/studio-raster-worker-*.ts'
+      - 'apps/web/src/domains/creator/studio-abortable-serial-queue.ts'
       - '.github/workflows/studio-raster-snapshot-stability.yml'
   workflow_dispatch:
 
@@ -52,23 +52,23 @@ jobs:
       - name: Existing raster behavior and new admission regressions
         run: |
           pnpm exec vitest run \
-            src/domains/creator/studio-smudge-worker-client.test.ts \
-            src/domains/creator/studio-retouch-worker-client.test.ts \
-            src/domains/creator/studio-raster-worker-queue-stability.test.ts \
-            src/domains/creator/studio-raster-worker-idle-stability.test.ts \
-            src/domains/creator/studio-raster-worker-request-snapshot.test.ts \
+            apps/web/src/domains/creator/studio-smudge-worker-client.test.ts \
+            apps/web/src/domains/creator/studio-retouch-worker-client.test.ts \
+            apps/web/src/domains/creator/studio-raster-worker-queue-stability.test.ts \
+            apps/web/src/domains/creator/studio-raster-worker-idle-stability.test.ts \
+            apps/web/src/domains/creator/studio-raster-worker-request-snapshot.test.ts \
             --reporter=default --reporter=json \
             --outputFile.json=/tmp/studio-raster-snapshot-evidence/vitest.json
       - name: Strict lint of affected sources and tests
         run: |
           set -o pipefail
           pnpm exec eslint --max-warnings=0 \
-            src/domains/creator/studio-smudge-worker-client.ts \
-            src/domains/creator/studio-retouch-worker-client.ts \
-            src/domains/creator/studio-abortable-serial-queue.ts \
-            src/domains/creator/studio-raster-worker-queue-stability.test.ts \
-            src/domains/creator/studio-raster-worker-idle-stability.test.ts \
-            src/domains/creator/studio-raster-worker-request-snapshot.test.ts \
+            apps/web/src/domains/creator/studio-smudge-worker-client.ts \
+            apps/web/src/domains/creator/studio-retouch-worker-client.ts \
+            apps/web/src/domains/creator/studio-abortable-serial-queue.ts \
+            apps/web/src/domains/creator/studio-raster-worker-queue-stability.test.ts \
+            apps/web/src/domains/creator/studio-raster-worker-idle-stability.test.ts \
+            apps/web/src/domains/creator/studio-raster-worker-request-snapshot.test.ts \
             2>&1 | tee /tmp/studio-raster-snapshot-evidence/lint.log
       - name: Full frontend TypeScript check
         run: |

@@ -2,14 +2,14 @@ import { fromUint8Array, toUint8Array } from "js-base64";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import * as Y from "yjs";
 
-import { compactStudioRasterOperationLog } from "../../../../../lib/studio-crdt-raster-compaction";
+import { compactStudioRasterOperationLog } from "../../../../web/src/shared/lib/studio-crdt-raster-compaction";
 import {
   STUDIO_CRDT_RASTER_CHECKPOINTS_ROOT,
   STUDIO_CRDT_RASTER_OPERATIONS_ROOT,
   STUDIO_CRDT_RASTER_SURFACES_ROOT,
   STUDIO_CRDT_RASTER_UNDO_ACKS_ROOT,
   STUDIO_CRDT_RASTER_UNDO_OPERATIONS_ROOT,
-} from "../../../../../lib/studio-crdt-raster-document-contract";
+} from "../../../../web/src/shared/lib/studio-crdt-raster-document-contract";
 import {
   STUDIO_RASTER_CRDT_VERSION,
   STUDIO_RASTER_KERNEL,
@@ -19,17 +19,17 @@ import {
   type StudioRasterOperation,
   type StudioRasterUndoAcknowledgement,
   type StudioRasterUndoOperation,
-} from "../../../../../lib/studio-crdt-raster-ops";
+} from "../../../../web/src/shared/lib/studio-crdt-raster-ops";
 import {
   studioBrushDynamicsSettingsForBrushId,
-} from "../../../../../src/domains/creator/brush/studio-brush-dynamics";
+} from "../../../../web/src/domains/creator/brush/studio-brush-dynamics";
 import {
   isStudioStrokePaintModelCompatible as hasValidBrowserStrokePaintContract,
-} from "../../../../../src/domains/creator/brush/studio-stroke-paint-model";
+} from "../../../../web/src/domains/creator/brush/studio-stroke-paint-model";
 import {
   BRUSH_PRESETS,
   STUDIO_BRUSH_RENDER_FAMILY,
-} from "../../../../../src/domains/creator/studio-brush";
+} from "../../../../web/src/domains/creator/studio-brush";
 
 import { StudioCrdtRasterCheckpointCoordinator } from "./studio-crdt-raster-checkpoint.coordinator";
 import {
@@ -74,7 +74,7 @@ import type {
   StudioCrdtUpdateRecord,
   ValidateStudioCrdtAppend,
 } from "./studio-crdt.repository";
-import type { StudioWorkAssetReference } from "../../../../../lib/studio-work-asset-contract";
+import type { StudioWorkAssetReference } from "../../../../web/src/shared/lib/studio-work-asset-contract";
 
 function copyBytes(value: Uint8Array): Uint8Array {
   return Uint8Array.from(value);

@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Генеративті AI кескін нұсқаулығы",
+  "studio.aiNotice.description": "Бұл функция генеративті AI (OpenAI) көмегімен кескіндерді жасайды. Жасалған нәтижелерде AI белгілері көрсетіледі.",
+  "studio.aiNotice.ruleCopyright": "Біз бөтен шығармаларды, кейіпкерлерді немесе шынайы адамдардың келбетін жасамаймыз.",
+  "studio.aiNotice.ruleAccuracy": "AI нәтижелері дәл емес немесе жоспарланғаннан басқаша болуы мүмкін.",
+  "studio.aiNotice.ruleResponsibility": "Сіз жасаған кескіндерді пайдалануға жауаптысыз.",
+  "studio.aiNotice.cancel": "Болдырмау",
+  "studio.aiNotice.confirm": "Түсінемін, жасаймын"
+}

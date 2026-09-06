@@ -1,5 +1,5 @@
 // 웹툰·웹소설 뉴스 생성기 — Google News RSS(공개)에서 카테고리별 헤드라인을 수집해
-// public/data/news.json 으로 저장한다. build-static-catalog.ts 가 호출하며, 단독 실행도 지원:
+// apps/web/public/data/news.json 으로 저장한다. build-static-catalog.ts 가 호출하며, 단독 실행도 지원:
 //
 //   pnpm exec tsx scripts/news-gen.ts            # apps/api/data/catalog.json.gz 기준 관련작품 매칭 포함
 //   WEBDEX_CATALOG_GZ=path pnpm exec tsx scripts/news-gen.ts
@@ -534,7 +534,7 @@ async function runCli(): Promise<void> {
     process.env.WEBDEX_CATALOG_FILE ??
     process.env.WEBDEX_CATALOG_GZ ??
     path.join(ROOT, "apps/api/data/catalog.json.gz");
-  const outFile = path.join(ROOT, "public", "data", "news.json");
+  const outFile = path.join(ROOT, "apps", "web", "public", "data", "news.json");
   const titles = existsSync(gzPath) ? loadCatalogEntries(gzPath) : [];
   console.log(`뉴스 생성: ${NEWS_QUERIES.length}개 쿼리 (작품 매칭 카탈로그 ${titles.length}편)`);
   const payload = await writeNews({ outFile, titles, fallbackRaw: readFileIfExists(outFile) });

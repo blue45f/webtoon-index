@@ -7,7 +7,7 @@ import {
   evaluateStudioAiQualityRun,
   formatStudioAiQualityEvaluationMarkdown,
   type StudioAiQualityRun,
-} from "../src/domains/creator/ai/studio-ai-quality-benchmark";
+} from "../apps/web/src/domains/creator/ai/studio-ai-quality-benchmark";
 
 function argument(name: string): string | undefined {
   const index = process.argv.indexOf(name);

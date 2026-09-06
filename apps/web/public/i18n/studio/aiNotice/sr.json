@@ -1,0 +1,9 @@
+{
+  "studio.aiNotice.title": "Водич за генеративне АИ слике",
+  "studio.aiNotice.description": "Ова функција креира слике користећи генеративни АИ (ОпенАИ). АИ значке се приказују на креираним резултатима.",
+  "studio.aiNotice.ruleCopyright": "Ми не стварамо туђа дела, ликове или лица стварних људи.",
+  "studio.aiNotice.ruleAccuracy": "АИ резултати могу бити нетачни или различити од онога што је требало.",
+  "studio.aiNotice.ruleResponsibility": "Ви сте одговорни за коришћење слика које креирате.",
+  "studio.aiNotice.cancel": "Откажи",
+  "studio.aiNotice.confirm": "Разумем, стварам"
+}

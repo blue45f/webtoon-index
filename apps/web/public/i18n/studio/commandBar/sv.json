@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Snabbkommandofält",
+  "studio.commandBar.settings": "Inställningar för kommandofältet",
+  "studio.commandBar.settingsDescription": "Ändra platsordningen och synligheten för kommandofältet under menyraden.",
+  "studio.commandBar.settingsTip": "Lägg kommandona du använder mest i de första platserna, så når du dem snabbast.",
+  "studio.commandBar.settingsClose": "Stäng inställningarna för kommandofältet",
+  "studio.commandBar.settingsStorageNote": "Platsordningen sparas i den här webbläsarens arbetsyteinställningar.",
+  "studio.commandBar.showSlots": "Visa kommandoplatser",
+  "studio.commandBar.slot": "Plats {index}",
+  "studio.commandBar.slotAria": "Kommandoplats {index}",
+  "studio.commandBar.slotEmpty": "Tom plats",
+  "studio.commandBar.resetDefaults": "Återställ standardordningen",
+  "studio.commandBar.command.undo": "Ångra",
+  "studio.commandBar.command.redo": "Gör om",
+  "studio.commandBar.command.save": "Spara utkast",
+  "studio.commandBar.command.publish": "Publicera",
+  "studio.commandBar.command.download": "Ladda ned aktuell sida",
+  "studio.commandBar.command.export-open": "Exportalternativ",
+  "studio.commandBar.command.zoom-fit": "Anpassa till skärmbredden",
+  "studio.commandBar.command.assets": "Mallar och resurser",
+  "studio.commandBar.command.bubbles": "Pratbubbla",
+  "studio.commandBar.command.project": "Projektverktyg"
+}

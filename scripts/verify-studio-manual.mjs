@@ -92,7 +92,8 @@ try {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.locator(".manual-mobile-contents > summary").click();
   await page.locator(".manual-mobile-contents").getByRole("link", { name: "기본 단축키 찾아보기", exact: true }).click();
-  await page.getByRole("heading", { name: "기본 단축키 찾아보기", exact: true }).waitFor();
+  await page.waitForURL("**/studio/manual/shortcuts");
+  await page.getByRole("heading", { name: "기본 단축키 찾아보기", exact: true, level: 1 }).waitFor();
   assert.equal(await page.locator(".manual-mobile-contents").getAttribute("open"), null);
   assert.equal(await page.locator("tbody tr").count(), 14);
   assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), "Page must not overflow horizontally");

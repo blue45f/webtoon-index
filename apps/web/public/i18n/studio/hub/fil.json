@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Tutorial sa Tampok",
+  "studio.hub.subtitle": "Isang function sa isang pagkakataon nang walang anumang pasanin. Napatingin ako kay {done}/{total}.",
+  "studio.hub.progressAriaLabel": "Pag-unlad ng tutorial",
+  "studio.hub.listAriaLabel": "Listahan ng tampok",
+  "studio.hub.checked": "tingnan mo",
+  "studio.hub.prev": "Nakaraang",
+  "studio.hub.next": "susunod",
+  "studio.hub.markComplete": "markahan bilang kumpleto",
+  "studio.hub.completed": "Nakumpleto",
+  "studio.hub.tryLabelDefault": "Sumunod kayo",
+  "studio.hub.stepAriaPrefix": "hakbang"
+}

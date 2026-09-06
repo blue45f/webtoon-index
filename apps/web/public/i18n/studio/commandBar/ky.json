@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Ыкчам буйрук панели",
+  "studio.commandBar.settings": "Буйрук панелинин жөндөөлөрү",
+  "studio.commandBar.settingsDescription": "Меню тилкесинин астындагы буйрук панелинин уячалар жайгашуусун жана көрүнүшүн өзгөртүңүз.",
+  "studio.commandBar.settingsTip": "Көп колдонгон буйруктарды алдыңкы уячаларга койсоңуз, аларга эң тез жетесиз.",
+  "studio.commandBar.settingsClose": "Буйрук панелинин жөндөөлөрүн жабуу",
+  "studio.commandBar.settingsStorageNote": "Уячалардын жайгашуусу ушул браузердин иш мейкиндиги жөндөөлөрүндө сакталат.",
+  "studio.commandBar.showSlots": "Буйрук уячаларын көрсөтүү",
+  "studio.commandBar.slot": "{index}-уяча",
+  "studio.commandBar.slotAria": "{index}-буйрук уячасы",
+  "studio.commandBar.slotEmpty": "Бош уяча",
+  "studio.commandBar.resetDefaults": "Демейки жайгашууга кайтаруу",
+  "studio.commandBar.command.undo": "Кайтаруу",
+  "studio.commandBar.command.redo": "Кайталоо",
+  "studio.commandBar.command.save": "Долбоорду сактоо",
+  "studio.commandBar.command.publish": "Жарыялоо",
+  "studio.commandBar.command.download": "Учурдагы баракты жүктөп алуу",
+  "studio.commandBar.command.export-open": "Экспорт жөндөөлөрү",
+  "studio.commandBar.command.zoom-fit": "Экрандын туурасына ылайыкташтыруу",
+  "studio.commandBar.command.assets": "Шаблондор жана ресурстар",
+  "studio.commandBar.command.bubbles": "Сүйлөө көбүкчөсү",
+  "studio.commandBar.command.project": "Долбоор куралдары"
+}

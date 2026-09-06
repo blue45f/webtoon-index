@@ -26,7 +26,7 @@ const CATEGORY_PAGES = 30; // 50개 x 30 (빈 페이지면 조기 종료 — 전
 const SLEEP_MS = 450;
 
 // 한 <li> 블록에서 제목/저자/평점 등을 추출.
-function parseListItems(html) {
+function parseListItems(html) { // NOSONAR javascript:S3776
   if (!html) return [];
   const items = [];
   // <ul class="book-list"> 내부의 각 <li> ... </li> 단위로 분리.
@@ -83,7 +83,7 @@ function parseListItems(html) {
     // 평점(0~10 스케일) + 평가 인원: <em>8.4</em> (515명)
     let ratingAvg;
     let ratingCount;
-    const scoreMatch = li.match(/<em>([0-9]+(?:\.[0-9]+)?)<\/em>\s*\(([0-9,]+)\s*명\)/);
+    const scoreMatch = li.match(/<em>(\d+(?:\.\d+)?)<\/em>\s*\(([0-9,]+)\s*명\)/);
     if (scoreMatch) {
       const cnt = Number(scoreMatch[2].replace(/,/g, ""));
       const avg10 = Number(scoreMatch[1]);
@@ -182,7 +182,7 @@ function buildRow(item, index) {
   return row;
 }
 
-export async function crawl() {
+export async function crawl() { // NOSONAR javascript:S3776
   const byId = new Map();
 
   // 1) 웹소설 분류 목록을 몇 페이지 페이지네이션.

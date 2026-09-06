@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Ezaugarrien Tutoriala",
+  "studio.hub.subtitle": "Funtzio bat aldi berean inolako zamarik gabe. {done}/{total} begiratu nuen.",
+  "studio.hub.progressAriaLabel": "Tutoretzaren aurrerapena",
+  "studio.hub.listAriaLabel": "Ezaugarrien zerrenda",
+  "studio.hub.checked": "begirada bat bota",
+  "studio.hub.prev": "Aurrekoa",
+  "studio.hub.next": "hurrengoa",
+  "studio.hub.markComplete": "markatu osatu gisa",
+  "studio.hub.completed": "Osatua",
+  "studio.hub.tryLabelDefault": "Jarraitu",
+  "studio.hub.stepAriaPrefix": "urratsa"
+}

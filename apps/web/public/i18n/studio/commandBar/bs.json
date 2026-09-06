@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Brza komandna traka",
+  "studio.commandBar.settings": "Postavke komandne trake",
+  "studio.commandBar.settingsDescription": "Promijenite raspored slotova i vidljivost komandne trake ispod trake menija.",
+  "studio.commandBar.settingsTip": "Stavite komande koje najčešće koristite u prve slotove kako bi vam bile najbrže pri ruci.",
+  "studio.commandBar.settingsClose": "Zatvori postavke komandne trake",
+  "studio.commandBar.settingsStorageNote": "Raspored slotova sprema se u postavke radnog prostora ovog preglednika.",
+  "studio.commandBar.showSlots": "Prikaži slotove komandi",
+  "studio.commandBar.slot": "Slot {index}",
+  "studio.commandBar.slotAria": "Slot komande {index}",
+  "studio.commandBar.slotEmpty": "Prazan slot",
+  "studio.commandBar.resetDefaults": "Vrati na zadani raspored",
+  "studio.commandBar.command.undo": "Poništi",
+  "studio.commandBar.command.redo": "Ponovi",
+  "studio.commandBar.command.save": "Sačuvaj nacrt",
+  "studio.commandBar.command.publish": "Objavi",
+  "studio.commandBar.command.download": "Preuzmi trenutnu stranicu",
+  "studio.commandBar.command.export-open": "Opcije izvoza",
+  "studio.commandBar.command.zoom-fit": "Prilagodi širini ekrana",
+  "studio.commandBar.command.assets": "Predlošci i resursi",
+  "studio.commandBar.command.bubbles": "Oblačić za govor",
+  "studio.commandBar.command.project": "Alati projekta"
+}

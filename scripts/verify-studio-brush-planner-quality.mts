@@ -2,15 +2,15 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 
-import { STUDIO_BRUSH_CATALOG_COUNTS } from "../src/domains/creator/brush/studio-brush-catalog-core";
-import { STUDIO_BRUSH_PACK_DESCRIPTORS } from "../src/domains/creator/brush/studio-brush-pack-index";
-import { materializeAllStudioBrushPackSelections } from "../src/domains/creator/brush/studio-brush-pack-runtime";
+import { STUDIO_BRUSH_CATALOG_COUNTS } from "../apps/web/src/domains/creator/brush/studio-brush-catalog-core";
+import { STUDIO_BRUSH_PACK_DESCRIPTORS } from "../apps/web/src/domains/creator/brush/studio-brush-pack-index";
+import { materializeAllStudioBrushPackSelections } from "../apps/web/src/domains/creator/brush/studio-brush-pack-runtime";
 import {
   auditStudioBrushPlannerQualityCatalogue,
   type StudioBrushPlannerQualityCandidate,
-} from "../src/domains/creator/brush/studio-brush-planner-quality-audit";
-import { studioCoreBrushCatalogSelection } from "../src/domains/creator/brush/studio-brush-selection";
-import { BRUSH_PRESETS } from "../src/domains/creator/studio-brush";
+} from "../apps/web/src/domains/creator/brush/studio-brush-planner-quality-audit";
+import { studioCoreBrushCatalogSelection } from "../apps/web/src/domains/creator/brush/studio-brush-selection";
+import { BRUSH_PRESETS } from "../apps/web/src/domains/creator/studio-brush";
 
 import {
   benchmarkStudioCompetitiveBrushQuality,

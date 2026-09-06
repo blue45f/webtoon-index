@@ -1,0 +1,23 @@
+{
+  "studio.commandBar.aria": "Barra d'ordres ràpides",
+  "studio.commandBar.settings": "Configuració de la barra d'ordres",
+  "studio.commandBar.settingsDescription": "Canvia la disposició de ranures i la visibilitat de la barra d'ordres sota la barra de menús.",
+  "studio.commandBar.settingsTip": "Posa les ordres que més uses a les primeres ranures perquè hi arribis més de pressa.",
+  "studio.commandBar.settingsClose": "Tanca la configuració de la barra d'ordres",
+  "studio.commandBar.settingsStorageNote": "La disposició de ranures es desa a la configuració de l'espai de treball d'aquest navegador.",
+  "studio.commandBar.showSlots": "Mostra les ranures d'ordres",
+  "studio.commandBar.slot": "Ranura {index}",
+  "studio.commandBar.slotAria": "Ranura d'ordres {index}",
+  "studio.commandBar.slotEmpty": "Ranura buida",
+  "studio.commandBar.resetDefaults": "Restableix la disposició predeterminada",
+  "studio.commandBar.command.undo": "Desfés",
+  "studio.commandBar.command.redo": "Refés",
+  "studio.commandBar.command.save": "Desa l'esborrany",
+  "studio.commandBar.command.publish": "Publica",
+  "studio.commandBar.command.download": "Baixa la pàgina actual",
+  "studio.commandBar.command.export-open": "Opcions d'exportació",
+  "studio.commandBar.command.zoom-fit": "Ajusta a l'amplada de la pantalla",
+  "studio.commandBar.command.assets": "Plantilles i recursos",
+  "studio.commandBar.command.bubbles": "Bafarada",
+  "studio.commandBar.command.project": "Eines del projecte"
+}

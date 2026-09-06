@@ -1,0 +1,12 @@
+{
+  "admin.tabs.dashboard": "Dashboard",
+  "admin.tabs.plans": "Plans",
+  "admin.tabs.revenue": "Settlement",
+  "admin.tabs.promos": "Promotions",
+  "admin.tabs.announcements": "Announcements & Banners",
+  "admin.tabs.reports": "Reports & Moderation",
+  "admin.tabs.security": "Security & IP",
+  "admin.tabs.audit": "Audit Logs",
+  "admin.tabs.campaigns": "Campaigns",
+  "admin.tabs.ops": "Operations"
+}

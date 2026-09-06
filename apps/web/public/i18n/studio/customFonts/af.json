@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "my lettertipe",
+  "studio.customFonts.importButton": "Voer in vanaf lêer",
+  "studio.customFonts.importing": "Kontroleer tans …",
+  "studio.customFonts.importAria": "Voer lettertipelêer in",
+  "studio.customFonts.storageAria": "Font biblioteek gebruik",
+  "studio.customFonts.emptyTitle": "Daar is nog geen lettertipes ingesluit nie.",
+  "studio.customFonts.unknownFileName": "Geen lêernaam nie",
+  "studio.customFonts.apply": "Doen aansoek",
+  "studio.customFonts.applyToText": "Pas hierdie lettertipe toe op geselekteerde teks",
+  "studio.customFonts.selectTextFirst": "Kies eers teks of spraakborrel",
+  "studio.customFonts.delete": "skrap lettertipe"
+}

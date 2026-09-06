@@ -1,7 +1,7 @@
 import { Body, Controller, Get, Header, Headers, HttpCode, HttpException, Module, Post, Req, Res } from "@nestjs/common";
 
-import { composeMusic, MusicError, musicStatus } from "../../../../../lib/server/studio-music-core";
-import { MUSIC_TERMS_URL } from "../../../../../lib/studio-music";
+import { composeMusic, MusicError, musicStatus } from "../../server/studio-music-core";
+import { MUSIC_TERMS_URL } from "@toonspectrum/core/studio-music";
 
 import type { Request, Response } from "express";
 

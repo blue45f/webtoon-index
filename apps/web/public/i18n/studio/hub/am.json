@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "የባህሪ አጋዥ ስልጠና",
+  "studio.hub.subtitle": "ያለምንም ሸክም አንድ ተግባር በአንድ ጊዜ. {done}/{total}ን ተመለከትኩ።",
+  "studio.hub.progressAriaLabel": "የመማሪያ ሂደት",
+  "studio.hub.listAriaLabel": "የባህሪ ዝርዝር",
+  "studio.hub.checked": "ተመልከት",
+  "studio.hub.prev": "ቀዳሚ",
+  "studio.hub.next": "ቀጥሎ",
+  "studio.hub.markComplete": "እንደተጠናቀቀ ምልክት አድርግበት",
+  "studio.hub.completed": "ተጠናቀቀ",
+  "studio.hub.tryLabelDefault": "ተከታተሉት።",
+  "studio.hub.stepAriaPrefix": "ደረጃ"
+}

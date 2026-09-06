@@ -6,7 +6,7 @@ import { performance } from "node:perf_hooks";
 import {
   planStudioGpuDabTileBinning,
   studioGpuDabIndicesForTile,
-} from "../src/domains/creator/render/studio-webgpu-dab-tile-binning";
+} from "../apps/web/src/domains/creator/render/studio-webgpu-dab-tile-binning";
 
 interface BenchmarkDab {
   readonly x: number;

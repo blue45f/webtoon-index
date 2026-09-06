@@ -1,0 +1,13 @@
+{
+  "studio.hub.title": "Özellik Eğitimi",
+  "studio.hub.subtitle": "Herhangi bir yük olmadan aynı anda tek işlev. {done}/{total}'e baktım.",
+  "studio.hub.progressAriaLabel": "Öğretici ilerlemesi",
+  "studio.hub.listAriaLabel": "Özellik listesi",
+  "studio.hub.checked": "bir göz at",
+  "studio.hub.prev": "Önceki",
+  "studio.hub.next": "sonraki",
+  "studio.hub.markComplete": "tamamlandı olarak işaretle",
+  "studio.hub.completed": "Tamamlandı",
+  "studio.hub.tryLabelDefault": "Takip edin",
+  "studio.hub.stepAriaPrefix": "adım"
+}

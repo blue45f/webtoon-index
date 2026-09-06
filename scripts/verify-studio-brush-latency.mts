@@ -23,7 +23,7 @@ import { chromium, type Browser, type Page } from "playwright";
 import {
   STUDIO_ALL_BRUSH_CATALOG_ITEMS,
   type StudioBrushCatalogItem,
-} from "../src/domains/creator/brush/studio-brush-catalog";
+} from "../apps/web/src/domains/creator/brush/studio-brush-catalog";
 
 import {
   cleanScratchDir,

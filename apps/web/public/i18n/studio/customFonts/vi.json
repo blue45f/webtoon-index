@@ -1,0 +1,13 @@
+{
+  "studio.customFonts.title": "phông chữ của tôi",
+  "studio.customFonts.importButton": "Nhập từ tập tin",
+  "studio.customFonts.importing": "Đang kiểm tra…",
+  "studio.customFonts.importAria": "Nhập tập tin phông chữ",
+  "studio.customFonts.storageAria": "Sử dụng thư viện phông chữ",
+  "studio.customFonts.emptyTitle": "Chưa có phông chữ nào được bao gồm.",
+  "studio.customFonts.unknownFileName": "Không có tên tập tin",
+  "studio.customFonts.apply": "Áp dụng",
+  "studio.customFonts.applyToText": "Áp dụng phông chữ này cho văn bản đã chọn",
+  "studio.customFonts.selectTextFirst": "Đầu tiên hãy chọn bong bóng văn bản hoặc lời nói",
+  "studio.customFonts.delete": "xóa phông chữ"
+}
